@@ -18,21 +18,25 @@ Learn what's new in Cloud Data Sense.
 // tag::whats-new[]
 == 1 August 2022 (version 1.15)
 
-=== Five new types of personal data from New Zealand can be identified by Data Sense
+=== Five new types of personal data from New Zealand are identified by Data Sense
 
 Data Sense can identify and categorize files that contain the following types of data:
 
 * New Zealand Bank Account Number
-* New Zealand Driver’s License Number 
+* New Zealand Driver’s License Number
 * New Zealand IRD Number (Tax ID)
 * New Zealand NHI (National Health Index) Number 
 * New Zealand Passport Number
 
 link:reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
 
+=== Personal data and Sensitive Personal data found in your Directories are shown in Investigation results
+
+The Data Investigation page now shows results for Personal data and Sensitive Personal data found within your directories (folders and shares).
+
 === more
 
-more
+sdfsdf
 
 == 6 July 2022 (version 1.14)
 
