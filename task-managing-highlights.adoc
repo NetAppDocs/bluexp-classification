@@ -179,6 +179,8 @@ Note that some of the usual Cloud Sync operations are disabled when it is invoke
 
 You can move source files that Data Sense is scanning to any NFS share. The NFS share doesn't need to be integrated with Data Sense (see link:task-scanning-file-shares.html[Scanning file shares]).
 
+Optionally, you can leave a breadcrumb file in the location of the moved file. A breadcrumb file helps your users understand why a file was moved from its original location. For each moved file, the system creates a breadcrumb file in the source location named '<filename>-breadcrumb-<date>.txt'. The file shows the location where the file was moved and the user who moved the file.
+
 If a file with the same name exists in the destination location, the file will not be moved.
 
 TIP: You can't move files that reside in databases.
@@ -198,13 +200,17 @@ image:screenshot_compliance_move_multi_files.png["A screenshot showing how to se
 +
 * To select individual files, check the box for each file (image:button_backup_1_volume.png[]).
 * To select all files on the current page, check the box in the title row (image:button_select_all_files.png[]).
-// * To select all files on all pages, check the box in the title row (image:button_select_all_files.png[]), and then in the pop-up message image:screenshot_select_all_items.png[], click *Select all items in list (xxx items)*.
+* To select all files on all pages, check the box in the title row (image:button_select_all_files.png[]), and then in the pop-up message image:screenshot_select_all_items.png[], click *Select all items in list (xxx items)*.
 
 . From the button bar, click *Move*.
 +
 image:screenshot_compliance_move_files_dialog.png[A screenshot showing the Move Files dialog so you can specify the name of the NFS share where all selected files will be moved.]
 
-. In the _Move Files_ dialog, enter the name of the NFS share where all selected files will be moved in the format `<host_name>:/<share_path>`, and click *Move Files*.
+. In the _Move Files_ dialog, enter the name of the NFS share where all selected files will be moved in the format `<host_name>:/<share_path>`.
+
+. If you want to leave a breadcrumb file, check the _Leave breadcrumb_ box. You can upload the contents of a text file that is appended to the breadcrumb file to indicate the reason the file was moved; for example, a legal explanation regarding the policy that required the file to be moved.
+
+. Click *Move Files*.
 
 Note that you can also move an individual file when viewing the metadata details for a file. Just click *Move File*.
 

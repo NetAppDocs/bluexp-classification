@@ -17,9 +17,9 @@ You can manage the data that is being scanned in each of your working environmen
 
 Some of the things you can change are whether a repository is scanned or not, and whether Data Sense is performing a link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[mapping scan or a mapping & classification scan]. You can also pause and resume scanning, for example, if you need to stop scanning a volume for a certain period of time.
 
-== Viewing the repositories that are being scanned
+== Viewing scan status for repositories that are being scanned
 
-You can view the individual repositories that Data Sense is scanning for each working environment and data source.
+You can view the individual repositories that Data Sense is scanning (volumes, buckets, etc.) for each working environment and data source. Additionally, you can see how many have been "Mapped", and how many have been "Classified". Classification takes much longer as the full AI identification is being performed on all data.
 
 .Steps
 
@@ -36,7 +36,7 @@ image:screenshot_compliance_repo_scan_settings.png[]
 
 You can start or stop mapping-only scans, or mapping and classification scans, in a working environment at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa.
 
-TIP: Databases can't be set to mapping-only scans. Database scanning can be Off or On; which is equivalent to Map & Classify.
+TIP: Databases can't be set to mapping-only scans. Database scanning can be Off or On; where On is equivalent to Map & Classify.
 
 .Steps
 

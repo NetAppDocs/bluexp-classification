@@ -30,13 +30,17 @@ Data Sense can identify and categorize files that contain the following types of
 
 link:reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
 
+=== Ability to add a breadcrumb file to indicate why a file was moved
+
+When you use the Data Sense feature to move source files to an NFS share, now you can leave a breadcrumb file in the location of the moved file. A breadcrumb file helps your users understand why a file was moved from its original location. For each moved file, the system creates a breadcrumb file in the source location named `<filename>-breadcrumb-<date>.txt` to show the location where the file was moved and the user who moved the file. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more^].
+
 === Personal data and Sensitive Personal data found in your Directories are shown in Investigation results
 
 The Data Investigation page now shows results for Personal data and Sensitive Personal data found within your directories (folders and shares).
 
-=== more
+=== View the status of how many volumes, buckets, etc. have been successfully classified
 
-sdfsdf
+When viewing the individual repositories that Data Sense is scanning (volumes, buckets, etc.), now you can see how many have been "Mapped", and how many have been "Classified". Classification takes longer as the full AI identification is being performed on all data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#viewing-scan-status-for-repositories-that-are-being-scanned[See how to view this information^].
 
 == 6 July 2022 (version 1.14)
 
