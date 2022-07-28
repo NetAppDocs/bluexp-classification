@@ -16,7 +16,7 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 1 August 2022 (version 1.15)
+== 3 August 2022 (version 1.15)
 
 === Five new types of personal data from New Zealand are identified by Data Sense
 
@@ -36,11 +36,11 @@ When you use the Data Sense feature to move source files to an NFS share, now yo
 
 === Personal data and Sensitive Personal data found in your Directories are shown in Investigation results
 
-The Data Investigation page now shows results for Personal data and Sensitive Personal data found within your directories (folders and shares).
+The Data Investigation page now shows results for Personal data and Sensitive Personal data found within your directories (folders and shares). https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-files-that-contain-personal-data[See an example here^].
 
 === View the status of how many volumes, buckets, etc. have been successfully classified
 
-When viewing the individual repositories that Data Sense is scanning (volumes, buckets, etc.), now you can see how many have been "Mapped", and how many have been "Classified". Classification takes longer as the full AI identification is being performed on all data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#viewing-scan-status-for-repositories-that-are-being-scanned[See how to view this information^].
+When viewing the individual repositories that Data Sense is scanning (volumes, buckets, etc.), now you can see how many have been "Mapped", and how many have been "Classified". Classification takes longer as the full AI identification is being performed on all data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#viewing-the-scan-status-for-your-repositories[See how to view this information^].
 
 == 6 July 2022 (version 1.14)
 

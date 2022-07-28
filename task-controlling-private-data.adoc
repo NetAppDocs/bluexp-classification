@@ -47,7 +47,7 @@ image:screenshot_personal_files.gif[A screenshot of the personal files dialog bo
 
 . Investigate the data by searching, sorting, expanding details for a specific file, clicking *Investigate Results* to see masked information, or by downloading the file list.
 +
-The screenshots below show personal data found in individual files, and found in files within directories (shares and folders). You can also select the *Structured* tab to view personal data found in databases.
+The 2 screenshots below show personal data found in individual files, and found in files within directories (shares and folders). You can also select the *Structured* tab to view personal data found in databases.
 +
 image:screenshot_compliance_investigation_page.png[A screenshot of details information found in files after clicking Investigate Results.]
 +
