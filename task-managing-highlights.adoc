@@ -179,7 +179,7 @@ Note that some of the usual Cloud Sync operations are disabled when it is invoke
 
 You can move source files that Data Sense is scanning to any NFS share. The NFS share doesn't need to be integrated with Data Sense (see link:task-scanning-file-shares.html[Scanning file shares]).
 
-Optionally, you can leave a breadcrumb file in the location of the moved file. A breadcrumb file helps your users understand why a file was moved from its original location. For each moved file, the system creates a breadcrumb file in the source location named '<filename>-breadcrumb-<date>.txt'. The file shows the location where the file was moved and the user who moved the file.
+Optionally, you can leave a breadcrumb file in the location of the moved file. A breadcrumb file helps your users understand why a file was moved from its original location. For each moved file, the system creates a breadcrumb file in the source location named '<filename>-breadcrumb-<date>.txt'. You can add text in the dialog box to indicate the location where the file was moved and the user who moved the file.
 
 If a file with the same name exists in the destination location, the file will not be moved.
 
@@ -208,7 +208,7 @@ image:screenshot_compliance_move_files_dialog.png[A screenshot showing the Move 
 
 . In the _Move Files_ dialog, enter the name of the NFS share where all selected files will be moved in the format `<host_name>:/<share_path>`.
 
-. If you want to leave a breadcrumb file, check the _Leave breadcrumb_ box. You can upload the contents of a text file that is appended to the breadcrumb file to indicate the reason the file was moved; for example, a legal explanation regarding the policy that required the file to be moved.
+. If you want to leave a breadcrumb file, check the _Leave breadcrumb_ box. You can enter text in the dialog box to indicate the location where the file was moved and the user who moved the file, and any other information, such as the reason the file was moved.
 
 . Click *Move Files*.
 
