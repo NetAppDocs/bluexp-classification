@@ -5,7 +5,7 @@ keywords: compliance, stop scan, start scan, map scan, classify scan, data sense
 summary: You can manage the data that is being scanned in each of your working environments and data sources. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
 ---
 
-= Changing the scanning settings for your repositories
+= Changing the scan settings for your repositories
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,9 +17,9 @@ You can manage the data that is being scanned in each of your working environmen
 
 Some of the things you can change are whether a repository is scanned or not, and whether Data Sense is performing a link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[mapping scan or a mapping & classification scan]. You can also pause and resume scanning, for example, if you need to stop scanning a volume for a certain period of time.
 
-== Viewing the repositories that are being scanned
+== Viewing the scan status for your repositories
 
-You can view the individual repositories that Data Sense is scanning for each working environment and data source.
+You can view the individual repositories that Data Sense is scanning (volumes, buckets, etc.) for each working environment and data source. Additionally, you can see how many have been "Mapped", and how many have been "Classified". Classification takes a longer time as the full AI identification is being performed on all data.
 
 .Steps
 
@@ -29,14 +29,15 @@ image:screenshot_compliance_config_button.png[A screenshot showing how to click 
 
 . In the Scan Configuration page you can view the scan settings for all repositories.
 +
-image:screenshot_compliance_repo_scan_settings.png[]
+image:screenshot_compliance_repo_scan_settings.png["A screenshot showing whether your buckets are being scanned, and the current scan status."]
 
+You can hover your cursor over the chart in the _Scan Status_ column to see the number of files that remain to be mapped or classified in each repository (bucket in this example).
 
 == Changing the type of scanning for a repository
 
 You can start or stop mapping-only scans, or mapping and classification scans, in a working environment at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa.
 
-TIP: Databases can't be set to mapping-only scans. Database scanning can be Off or On; which is equivalent to Map & Classify.
+TIP: Databases can't be set to mapping-only scans. Database scanning can be Off or On; where On is equivalent to Map & Classify.
 
 .Steps
 

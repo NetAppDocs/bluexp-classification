@@ -16,6 +16,32 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 7 August 2022 (version 1.15)
+
+=== Five new types of personal data from New Zealand are identified by Data Sense
+
+Data Sense can identify and categorize files that contain the following types of data:
+
+* New Zealand Bank Account Number
+* New Zealand Driver’s License Number
+* New Zealand IRD Number (Tax ID)
+* New Zealand NHI (National Health Index) Number 
+* New Zealand Passport Number
+
+link:reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
+
+=== Ability to add a breadcrumb file to indicate why a file was moved
+
+When you use the Data Sense feature to move source files to an NFS share, now you can leave a breadcrumb file in the location of the moved file. A breadcrumb file helps your users understand why a file was moved from its original location. For each moved file, the system creates a breadcrumb file in the source location named `<filename>-breadcrumb-<date>.txt` to show the location where the file was moved and the user who moved the file. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more^].
+
+=== Personal data and Sensitive Personal data found in your Directories are shown in Investigation results
+
+The Data Investigation page now shows results for Personal data and Sensitive Personal data found within your directories (folders and shares). https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-files-that-contain-personal-data[See an example here^].
+
+=== View the status of how many volumes, buckets, etc. have been successfully classified
+
+When viewing the individual repositories that Data Sense is scanning (volumes, buckets, etc.), now you can see how many have been "Mapped", and how many have been "Classified". Classification takes longer as the full AI identification is being performed on all data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#viewing-the-scan-status-for-your-repositories[See how to view this information^].
+
 == 6 July 2022 (version 1.14)
 
 === Now you can view the users and groups who have access to your directories
@@ -63,6 +89,7 @@ https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-
 === Now you can edit existing policies that you created
 
 If you need to make a change to a custom policy that you created in the past, now you can edit the policy instead of creating a new policy. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#editing-policies[See how to edit a policy].
+// end::whats-new[]
 
 == 11 May 2022 (version 1.12.1)
 
@@ -86,7 +113,6 @@ As part the Data Sense permissions capabilities, now you can view the list of us
 * The "User / Group Permissions" filter enables you to list the files, folders, and shares that a specific user or a group has read and/or write permissions to. You can select multiple users and/or group names - or enter a partial name. T
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
-// end::whats-new[]
 
 == 5 April 2022 (version 1.11.1)
 

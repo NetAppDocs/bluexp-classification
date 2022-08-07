@@ -37,8 +37,8 @@ Note that you can add to the list of personal data that is found in your files i
 | IP address | No
 | Password | Yes
 
-.45+| National Identifiers | Australian TFN (Tax File Number) | Yes
-| Australian Driver’s License Number | Yes
+.50+| National Identifiers | Australian TFN (Tax File Number) | Yes
+| Australian Driver’s License | Yes
 | Australian Medicare Number | Yes
 | Australian Passport Number | Yes
 | Austrian SSN | Yes
@@ -72,6 +72,11 @@ Note that you can add to the list of personal data that is found in your files i
 | Maltese ID | Yes
 | National Health Service (NHS) Number | Yes
 | New York Driver's License | Yes
+| New Zealand Bank Account | Yes
+| New Zealand Driver’s License | Yes
+| New Zealand IRD Number (Tax ID) | Yes
+| New Zealand NHI (National Health Index) Number | Yes
+| New Zealand Passport Number | Yes
 | Polish ID (PESEL) | Yes
 | Portuguese Tax Identification Number (NIF) | Yes
 | Romanian ID (CNP) | Yes
