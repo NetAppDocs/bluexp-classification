@@ -90,10 +90,6 @@ Once the files of interest are found, characteristics can be listed, including t
 
 Data sources can be represented visually, and relationships defined and depicted graphically. For example, admins can see all stale, duplicate, and non-business-related data across data sources throughout the enterprise (on-premises systems, databases, cloud file shares, S3 stores, OneDrive, etc.). They can then move, delete, and manage data to optimize storage costs and reduce risk. Users can reduce risk by seeing what sensitive data might be exposed, and they can create jobs to manage permissions for strong data protection. The Cloud Data Sense service also classifies all the different types of data, so admins can investigate data by type and see what actions have been taken on the data, and when.
 
-=== What deployment models does Cloud Data Sense support?
-
-Cloud Data Sense is normally deployed using a SaaS model, in which the service is enabled via the Cloud Manager interface. Cloud Data Sense can be deployed to scan and report on systems virtually anywhere, including on-premises, cloud, and hybrid environments. For secure installations, Cloud Manager and Cloud Data Sense can be deployed in a “dark site” model, which is installed as a package on premises and requires no external network connections.
-
 === Does Cloud Data Sense offer reports?
 
 Yes. The information offered by Cloud Data Sense can be relevant to other stakeholders in your organizations, so we enable you to generate reports to share the insights. The following reports are available for Data Sense:
@@ -182,7 +178,7 @@ The following questions relate to the types of storage that can be scanned, and 
 
 === What sources of data can be scanned with Data Sense?
 
-Cloud Data Sense can scan data from working environments that you've added to the Cloud Manager Canvas and from many types of data sources that Data Sense can access over your networks.
+Cloud Data Sense can scan data from working environments that you've added to the Cloud Manager Canvas and from many types of structured and unstructured data sources that Data Sense can access over your networks.
 
 *Working environments:*
 
