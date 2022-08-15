@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept-cloud-compliance.html
-keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, azure netapp files, amazon fsx for ontap, fsx, cloud volumes ontap, Amazon S3, database, onedrive, sharepoint, google drive, on-prem ontap, file shares, object storage, aip labels, governance, data sense
+keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, aip labels, governance, data sense, privacy control, classification, optimization
 summary: Cloud Data Sense is a data governance service for Cloud Manager that scans your corporate on-premises and cloud data sources and working environments to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
 ---
 
@@ -19,24 +19,44 @@ https://cloud.netapp.com/netapp-cloud-data-sense[Learn about the use cases for C
 
 == Features
 
-Cloud Data Sense provides several tools that can help you with your compliance efforts. You can use Data Sense to:
+Cloud Data Sense uses artificial intelligence (AI), natural language processing (NLP), and machine learning (ML) to understand the content that it scans in order to extract entities and categorize the content accordingly. This allows Data Sense to provide the following areas of functionality.
 
-* Identify Personal Identifiable Information (PII)
-* Identify a wide scope of sensitive information as required by GDPR, CCPA, PCI, and HIPAA privacy regulations
-* Respond to Data Subject Access Requests (DSAR)
-* Notify Cloud Manager users through email when files contain certain PII (you define this criteria using link:task-org-private-data.html#controlling-your-data-using-policies[Policies^])
-* View and modify link:https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP) labels^] in your files
-* Add custom tags to files (for example, "needs to be moved") and assign a Cloud Manager user so that person can own updates to the files
-* Copy, move, and delete files
+=== Maintain compliance
 
-Cloud Data Sense also provides tools that can help with your governance efforts. You can use Cloud Data Sense to:
+Data Sense provides several tools that can help with your compliance efforts. You can use Data Sense to:
 
-* Identify the stale data, non-business data, duplicate files, files with open permissions, and very large files in your systems.
-+
-You can use this information to decide whether you want to move, delete, or tier some files to less expensive object storage.
+* Identify Personal Identifiable Information (PII).
+* Identify a wide scope of sensitive personal information as required by GDPR, CCPA, PCI, and HIPAA privacy regulations.
+* Respond to Data Subject Access Requests (DSAR) based on name or email address.
+* Identify whether unique identifiers from your databases are found in files in other repositories - basically making your own list of "personal data" that is identified in Data Sense scans.
+* Notify Cloud Manager users through email when files contain certain PII (you define this criteria using link:task-org-private-data.html#controlling-your-data-using-policies[Policies^]) so you can decide on an action plan.
+
+=== Strengthen security
+
+Data Sense can identify data that is potentially at risk for being accessed for criminal purposes. You can use Data Sense to:
+
+* Identify all the files and directories (shares and folders) with open permissions that are exposed to your entire organization or to the public.
+* Identify sensitive data that resides outside of the initial, dedicated location.
+* Comply with data retention policies.
+* Use _Policies_ to automatically notify security staff of new security issues so they can take action immediately.
+* Add custom tags to files (for example, "needs to be moved") and assign a Cloud Manager user so that person can own updates to the files.
+* View and modify link:https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP) labels^] in your files.
+
+=== Optimize storage usage
+
+Data Sense provides tools that can help with your storage total cost of ownership (TCO). You can use Data Sense to:
+
+* Increase storage efficiency by identifying duplicate or non-business-related data. You can use this information to decide whether you want to move or delete certain files.
+* Delete files that seem insecure or too risky to leave in your storage system, or that you have identified as duplicate. You can use _Policies_ to automatically delete files that match certain criteria.
+* Save storage costs by identifying inactive data that you can tier to less expensive object storage. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html[Learn more about tiering^].
+
+=== Accelerate data migration
+
+Data Sense can be used to scan your on-premises data before migrating it to the public or private cloud. You can use Data Sense to:
+
 * View the size of data and whether any of the data contains sensitive information prior to moving it.
-+
-This is useful if you are planning to migrate data from on-premises locations to the cloud.
+* Filter the source data (based on over 25 types of criteria) so you can move only the required files to the destination - unnecessary data is not moved.
+* Automatically and continually move, copy, or sync only the required data into the cloud repository.
 
 == Supported working environments and data sources
 
