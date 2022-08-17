@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: concept-cloud-compliance.html
 keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, aip labels, governance, data sense, privacy control, classification, optimization
-summary: Cloud Data Sense is a data governance service for Cloud Manager that scans your corporate on-premises and cloud data sources and working environments to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
+summary: Cloud Data Sense is a data governance service for Cloud Manager that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
 ---
 
 = Learn about Cloud Data Sense
@@ -13,7 +13,7 @@ summary: Cloud Data Sense is a data governance service for Cloud Manager that sc
 :imagesdir: ./media/
 
 [.lead]
-Cloud Data Sense is a data governance service for Cloud Manager that scans your corporate on-premises and cloud data sources and working environments to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
+Cloud Data Sense is a data governance service for Cloud Manager that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
 
 https://cloud.netapp.com/netapp-cloud-data-sense[Learn about the use cases for Cloud Data Sense^].
 
@@ -58,26 +58,44 @@ Data Sense can be used to scan your on-premises data before migrating it to the 
 * Filter the source data (based on over 25 types of criteria) so you can move only the required files to the destination - unnecessary data is not moved.
 * Automatically and continually move, copy, or sync only the required data into the cloud repository.
 
-== Supported working environments and data sources
+== Supported data sources
 
-Cloud Data Sense can scan data from the following types of working environments and data sources:
+Cloud Data Sense can scan and analyze structured and unstructured data from the following types of data sources:
 
-*Working environments:*
+*NetApp:*
 
 * Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP)
 * On-premises ONTAP clusters
+* StorageGRID
 * Azure NetApp Files
 * Amazon FSx for ONTAP
+* Cloud Volumes Service for Google Cloud
+
+*Non-NetApp:*
+
+* Dell EMC Isilon
+*	Pure Storage
+*	Nutanix
+*	Any other storage vendor
+
+*Cloud:*
+
 * Amazon S3
+* Azure Blob
+*	Google Cloud Storage
+* OneDrive
+* SharePoint Online
+* Google Drive
 
-*Data sources:*
+*Databases:*
 
-* Non-NetApp file shares
-* Object storage (that uses S3 protocol)
-* Databases
-* OneDrive accounts
-* SharePoint accounts
-* Google Drive accounts
+* Amazon Relational Database Service (Amazon RDS)
+* MongoDB
+* MySQL
+* Oracle
+* PostgreSQL
+* SAP HANA
+* SQL Server (MSSQL)
 
 Data Sense supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
 
@@ -150,7 +168,7 @@ When deploying Data Sense on-premises, just use a Linux host with the smaller sp
 At a high-level, Cloud Data Sense works like this:
 
 . You deploy an instance of Data Sense in Cloud Manager.
-. You enable high-level mapping or deep-level scanning on one or more working environments or data sources.
+. You enable high-level mapping or deep-level scanning on one or more data sources.
 . Data Sense scans the data using an AI learning process.
 . You use the provided dashboards and reporting tools to help in your compliance and governance efforts.
 
@@ -168,7 +186,7 @@ You can enable and disable scans at the volume level, at the bucket level, at th
 
 === What's the difference between Mapping and Classification scans
 
-Cloud Data Sense enables you to run a general "mapping" scan on selected working environments and data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
+Cloud Data Sense enables you to run a general "mapping" scan on selected data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
 
 Many users like this functionality because they want to quickly scan their data to identify the data sources that require more research - and then they can enable classification scans only on those required data sources or volumes.
 

@@ -57,7 +57,7 @@ Cloud Data Sense supports AIP labels within the following file types: .DOC, .DOC
 
 === Integrating AIP labels in your workspace
 
-Before you can manage AIP labels, you need to integrate the AIP label functionality into Cloud Data Sense by signing into your existing Azure account. Once enabled, you can manage AIP labels within files for all link:concept-cloud-compliance.html#supported-working-environments-and-data-sources[working environments and data sources^] in your Cloud Manager workspace.
+Before you can manage AIP labels, you need to integrate the AIP label functionality into Cloud Data Sense by signing into your existing Azure account. Once enabled, you can manage AIP labels within files for all link:concept-cloud-compliance.html#supported-data-sources[data sources^] in your Cloud Manager workspace.
 
 .Requirements
 
