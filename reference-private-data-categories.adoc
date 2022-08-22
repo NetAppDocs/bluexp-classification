@@ -37,7 +37,7 @@ Note that you can add to the list of personal data that is found in your files i
 | IP address | No
 | Password | Yes
 
-.50+| National Identifiers | Australian TFN (Tax File Number) | Yes
+.51+| National Identifiers | Australian TFN (Tax File Number) | Yes
 | Australian Driver’s License | Yes
 | Australian Medicare Number | Yes
 | Australian Passport Number | Yes
@@ -84,6 +84,7 @@ Note that you can add to the list of personal data that is found in your files i
 | South African ID | Yes
 | Spanish Tax Identification Number | Yes
 | Swedish ID | Yes
+| Swedish Social Security Number | Yes
 | Texas Driver's License | Yes
 | U.K. ID (NINO) | Yes
 | USA Social Security Number (SSN) | Yes

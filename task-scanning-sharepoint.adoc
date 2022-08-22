@@ -15,6 +15,8 @@ summary: Complete a few steps to start scanning files in your SharePoint account
 [.lead]
 Complete a few steps to start scanning files in your SharePoint accounts with Cloud Data Sense.
 
+Data Sense can scan both SharePoint Online accounts and SharePoint On-Premises accounts (SharePoint Server).
+
 == Quick start
 
 Get started quickly by following these steps, or scroll down to the remaining sections for full details.
@@ -44,17 +46,19 @@ Add the list of SharePoint site URLs that you want to scan in the SharePoint acc
 Review the following prerequisites to make sure you are ready to enable Cloud Data Sense on a SharePoint account.
 
 * You must have the Admin login credentials for the SharePoint account that provides read access to all SharePoint sites.
+* For SharePoint On-Premises, you'll also need the Domain Name and IP address of the SharePoint server.
 * You will need a line-separated list of the SharePoint site URLs for all the data you want to scan.
 
 == Deploying the Cloud Data Sense instance
 
 Deploy Cloud Data Sense if there isn't already an instance deployed.
 
-Data Sense can be link:task-deploy-cloud-compliance.html[deployed in the cloud^] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^].
+* For SharePoint Online, Data Sense can be link:task-deploy-cloud-compliance.html[deployed in the cloud^] or link:task-deploy-compliance-onprem.html[installed in an on-premises location that has internet access^].
+* For SharePoint On-Premises, Data Sense can be installed link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^] or link:task-deploy-compliance-dark-site.html[in an on-premises location that does not have internet access^]. When installed in a site without internet access, the Cloud Manager Connector also must be installed in that same site without internet access. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[Learn more^].
 
 Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
-
-Data Sense can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local SharePoint files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
+//
+//Data Sense can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local SharePoint files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
 
 == Adding the SharePoint account
 
