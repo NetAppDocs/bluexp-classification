@@ -45,19 +45,19 @@ For example, the following lines from the log file show a successful copy operat
 
 The audit log is located on the Data Sense machine in: `/opt/netapp/audit_logs/<date>/DataSense_audit_log_<date>_<process_name>.log`
 
-For on-premises deployments you can navigate directly to the log files.
+When Data Sense is installed on your premises, you can navigate directly to the log files.
 
-When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance. You can SSH to the system by entering the user and password, or by using the SSH key you provided during the Cloud Manager Connector installation. The SSH command is:
+When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the Cloud Manager Connector installation. The SSH command is:
 
  ssh -i <path to the ssh key> <machine user>@<datasense ip>
 
 * <path to the ssh key> = location of ssh authentication keys
 * <machine user>:
 
-** For AWS = use the <ec2-user>
+** For AWS: use the <ec2-user>
 ** For Azure: use the user created for the Cloud Manager instance
 ** For GCP: use the user created for the Cloud Manager instance
 
-* <data sense ip> = IP address of the virtual machine instance
+* <datasense ip> = IP address of the virtual machine instance
 
 Note that you'll need to modify the security group inbound rules to access the system. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-cloud-manager.html#ports-and-security-groups[Ports and security groups^] for more information.
