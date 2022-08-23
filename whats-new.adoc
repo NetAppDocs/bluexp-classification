@@ -42,6 +42,10 @@ The Data Investigation page now shows results for Personal data and Sensitive Pe
 
 When viewing the individual repositories that Data Sense is scanning (volumes, buckets, etc.), now you can see how many have been "Mapped", and how many have been "Classified". Classification takes longer as the full AI identification is being performed on all data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#viewing-the-scan-status-for-your-repositories[See how to view this information^].
 
+=== Now you can add custom patterns that Data Sense will identify in your data
+
+You can add a personal pattern to identify specific information in your data using a custom regular expression (regex). The regex is added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the Personal patterns section. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html#creating-custom-personal-data-identifiers-using-a-regex[Learn more^].
+
 == 6 July 2022 (version 1.14)
 
 === Now you can view the users and groups who have access to your directories
