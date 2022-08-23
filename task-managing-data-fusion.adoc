@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-managing-data-fusion.html
 keywords: data identifiers, personal data, sensitive personal data, compliance, data fusion, data sense
-summary: A feature we call "Data Fusion" allows you to scan your organizations' data to identify whether unique identifiers from your databases are found in files or other databases - basically making your own list of "personal data" that is identified in Cloud Data Sense scans. This gives you the full picture about where potentially sensitive data resides in all your files.
+summary: Data Sense provides two ways for you to add a custom list of "personal data" that Data Sense will identify in future scans, giving you the full picture about where potentially sensitive data resides in all your organizations' files.
 ---
 
-= Adding personal data identifiers using Data Fusion
+= Adding personal data identifiers to your Data Sense scans
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,19 +13,22 @@ summary: A feature we call "Data Fusion" allows you to scan your organizations' 
 :imagesdir: ./media/
 
 [.lead]
-A feature we call _Data Fusion_ allows you to scan your organizations' data to identify whether unique identifiers from your databases are found in files or other databases - basically making your own list of "personal data" that is identified in Cloud Data Sense scans. This gives you the full picture about where potentially sensitive data resides in _all_ your files.
+Data Sense provides two ways for you to add a custom list of "personal data" that Data Sense will identify in future scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
 
-Since you are scanning your own databases, whatever language your data is stored in will be used to identify data in future Cloud Data Sense scans.
+* You can add unique identifiers based on specific columns in databases you are scanning.
+* You can add a personal pattern using a regular expression (regex) -- the regex is added to the existing predefined patterns.
 
 NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
 
 == Creating custom personal data identifiers from your databases
 
-You can choose the additional identifiers that Cloud Data Sense will look for in its' scans by selecting a specific column, or columns, in a database table. For example, the diagram below shows how data fusion is used to scan your volumes, buckets, and databases for occurrences of all your Customer IDs from your Oracle database.
+A feature we call _Data Fusion_ allows you to scan your organizations' data to identify whether unique identifiers from your databases are found in files or other databases. You can choose the additional identifiers that Cloud Data Sense will look for in its' scans by selecting a specific column, or columns, in a database table. For example, the diagram below shows how data fusion is used to scan your volumes, buckets, and databases for occurrences of all your Customer IDs from your Oracle database.
 
 image:diagram_compliance_data_fusion.png[A diagram showing how content from your databases can be used as a source to identify files that contain the same data.]
 
 As you can see, two unique Customer IDs have been found in two volumes and in one S3 bucket. Any matches in database tables will also be identified.
+
+Note that since you are scanning your own databases, whatever language your data is stored in will be used to identify data in future Cloud Data Sense scans.
 
 .Steps
 
@@ -53,10 +56,85 @@ The Data Fusion inventory page displays the database source columns that you hav
 image:screenshot_compliance_data_fusion_list.png[A screenshot of all the data source references you have configured with Data Fusion.]
 
 .Results
-After the next scan, the results will include this new information in the Dashboard under the "Personal" results section, and in the Investigation page in the "Personal Data" filter. Each source column you added appears in the filter list as "Table.Column", for example `Customers.Customer ID`.
+After the next scan, the results will include this new information in the Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter. Each source column you added appears in the filter list in the format "Table.Column", for example `Customers.CustomerID`.
 
-== Deleting a Data Fusion source
+image:screenshot_add_data_fusion_result.png[A screenshot showing an example of Data Fusion results in the Investigation Results pane.]
+
+=== Deleting a Data Fusion source
 
 If at some point you decide not to scan your files using a certain Data Fusion source, you can select the source row from the Data Fusion inventory page and click *Delete Data Fusion Source*.
 
 image:screenshot_compliance_delete_data_fusion.png[A screenshot showing how to remove a data fusion source.]
+
+== Creating custom personal data identifiers using a regex
+
+You can add a personal pattern to identify specific information in your data using a custom regular expression (regex). The regex is added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the personal patterns section. 
+
+For example, you may want to see where your internal Product IDs are mentioned in all of your files. If the Product ID has a clear structure, for example, it is a 12-digit number that starts with 201, you can use the custom regex feature to search for it in your files.
+
+=== Accessing the command line
+
+You'll need to access the Data Sense system in order to initiate the command to add a regex.
+
+When Data Sense is installed on your premises, you can access the command line directly.
+
+When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the Cloud Manager Connector installation. The SSH command is:
+
+ ssh -i <path to the ssh key> <machine user>@<datasense ip>
+
+* <path to the ssh key> = location of ssh authentication keys
+* <machine user>:
+
+** For AWS: use the <ec2-user>
+** For Azure: use the user created for the Cloud Manager instance
+** For GCP: use the user created for the Cloud Manager instance
+
+* <datasense ip> = IP address of the virtual machine instance
+
+Note that you'll need to modify the security group inbound rules to access the system. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-cloud-manager.html#ports-and-security-groups[Ports and security groups^] for more information.
+
+=== Command syntax to add the regex
+
+The command syntax to add a custom regex is:
+
+ sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "<pattern name>" -r "<regular expression>"
+
+* <pattern name> = This is the name that will appear in the Data Sense UI. Make sure the name identifies what the regex is designed to find. The name must contain at least one letter, and it can be up to 70 characters in length.
+* <regular expression> = This can be any legal regular expression.
+
+Note that we test each new regex to verify if it is too broad and it would return too many matches. If that's the case, then the following log message will appear: 
+
+ log v1.0 | 2022-08-17 07:24:19,585 | ERROR | ds_logger | custom_regex | 119 | 1 | None | custom_regex_119 | The regex has high risk to identify false positives. Please narrow the regular expression and try again. To add it anyway, use the force flag (-f) at the end 
+
+You can use the *-f* at the end of the command line if you want to forcefully add the regex to Data Sense.
+
+=== Example
+
+The Product ID is a 12-digit number that starts with 201; so the regular expression is *\b201\d{9}\b*. And you want to the text in the Data Sense UI to identify this pattern as *Internal Product ID*. 
+
+To see where your internal Product IDs are mentioned in all of your files, enter the following commands.
+
+[source,cli]
+[user ~]$ cd /opt/netapp/Datasense/
+[user Datasense]$ sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "Internal Product ID" -r "\b201\d{9}\b"
+
+ [+] Adding Custom Regex to Data Sense
+ log v1.0 | 2022-08-23 13:19:01,476 | INFO | ds_logger | custom_regex | 154 | 1 | None | custom_regex_154 | A pattern named 'Internal Product ID' was added successfully to Data Sense
+
+.Results
+After the next scan, the results will include this new information in the Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
+
+image:screenshot_add_regex_result.png[A screenshot showing an example of custom regex results in the Investigation Results pane.]
+
+=== Deactivating the custom regex
+
+If you decide at some later point that you don't need Data Sense to identify the custom patterns you entered as a regex, use the following command to remove each regex.
+
+ sudo bash tools/datascience/custom_regex/custom_regex.sh -s deactivate -n "<pattern name>" 
+
+For example, to remove the *Internal Product ID* regex:
+
+[source,cli]
+[user Datasense]$ sudo bash tools/datascience/custom_regex/custom_regex.sh -s deactivate -n "Internal Product ID"
+
+ log v1.0 | 2022-08-17 09:13:15,431 | INFO | ds_logger | custom_regex | 31 | 1 | None | custom_regex_31 | A pattern named 'Internal Product ID' was deactivated successfully 
