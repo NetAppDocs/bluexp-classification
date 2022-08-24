@@ -203,8 +203,9 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | Details
 
 | Policies | Select a policy or policies. Go link:task-org-private-data.html#controlling-your-data-using-policies[here^] to view the list of existing policies and to create your own custom policies.
+| Analysis Status | Select an option to show the list of files that are Pending First Scan, Completed being scanned, Pending Rescan, or that have Failed to be scanned. 
 | Open Permissions | Select the type of permissions within the data and within folders/shares
-| Number of users with access | Select a category to show which files are open to a certain number of users
+// | Number of users with access | Select a category to show which files are open to a certain number of users
 | User / Group Permissions | Select one or multiple user names and/or group names, or enter a partial name
 | File Owner | Enter the file owner name
 | Label | Select link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP labels] that are assigned to your files
