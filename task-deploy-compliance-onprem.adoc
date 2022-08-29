@@ -89,6 +89,8 @@ Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, bu
 ** Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
 ** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
 
+NOTE: The IP address of the Data Sense host system can't be changed after installation.
+
 == Verify Cloud Manager and Data Sense prerequisites
 
 Review the following prerequisites to make sure that you have a supported configuration before you deploy Cloud Data Sense on a Linux system.
