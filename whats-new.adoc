@@ -16,6 +16,32 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 5 September 2022 (version 1.16)
+
+=== Support for scanning SharePoint On-Premises accounts
+
+Data Sense now can scan both SharePoint Online accounts and SharePoint On-Premises accounts (SharePoint Server). If you need to install SharePoint on your own servers, or in sites without internet access, now you can have Data Sense scan the user files in those accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html#adding-a-sharepoint-on-premise-account[Learn more^].
+
+=== Ability to rescan a repository immediately to reflect changes in files
+
+If you need to rescan a particular repository immediately so that changes are reflected in the system, you can select the repository and rescan it. This allows you to prioritize rescanning of certain data before other data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#rescanning-data-for-an-existing-repository[See how to rescan a directory^].
+
+=== New Filter for the status of Data Sense scanning in the Data Investigation page
+
+The “Analysis Status” filter enables you to list the files that are in a specific stage of Data Sense scanning. You can select an option to show the list of files that are *Pending First Scan*, *Completed* being scanned, *Pending Rescan*, or that have *Failed* to be scanned.
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data^].
+
+=== Data Subjects are now considered part of "personal data" found in scans
+
+Data Sense now recognizes Data Subjects as part of the Personal Results that appear in the Compliance Dashboard. Additionally, when performing a search in the Investigation page, you can select "Data Subjects" under "Personal Data" to view only files that contain data subjects.
+
+=== Data Sense Breadcrumb files are now considered part of "Categories" found in scans
+
+Data Sense now recognizes Breadcrumb files as part of the Categories that appear in the Compliance Dashboard. These are files Data Sense creates when moving files from the source location to an NFS share. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more about how breadcrumb files are created^].
+
+Additionally, when performing a search in the Investigation page, you can select "Data Sense Breadcrumbs" under "Category" to view only Data Sense breadcrumb files.
+
 == 7 August 2022 (version 1.15)
 
 === Five new types of personal data from New Zealand are identified by Data Sense
@@ -67,6 +93,7 @@ In the past when you created a custom Policy, the results showed the files that 
 === Data Sense can move up to 100,000 files at a time now
 
 If you plan to use Data Sense to move files from a scanned data source to an NFS share, the maximum number of files has been increased to 100,000 files. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[See how to move files using Data Sense].
+// end::whats-new[]
 
 == 12 June 2022 (version 1.13.1)
 
@@ -93,7 +120,6 @@ https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-
 === Now you can edit existing policies that you created
 
 If you need to make a change to a custom policy that you created in the past, now you can edit the policy instead of creating a new policy. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#editing-policies[See how to edit a policy].
-// end::whats-new[]
 
 == 11 May 2022 (version 1.12.1)
 
