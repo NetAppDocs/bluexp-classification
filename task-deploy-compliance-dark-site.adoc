@@ -19,14 +19,15 @@ Note that you can also link:task-deploy-compliance-onprem.html[deploy Data Sense
 
 == Supported data sources
 
-When installed in this manner (sometimes called an "offline" or "dark" site), Data Sense can only scan data from data sources that are also local to the on-premises site. At this time, Data Sense can scan the following local data sources:
+When installed in this manner (sometimes called an "offline" or "dark" site), Data Sense can only scan data from data sources that are also local to the on-premises site. At this time, Data Sense can scan the following *local* data sources:
 
 * On-premises ONTAP systems
 * Database schemas
+* SharePoint On-Premises accounts (SharePoint Server)
 * Non-NetApp NFS or CIFS file shares
 * Object Storage that uses the Simple Storage Service (S3) protocol
 
-For special situations where you need a very secure Cloud Manager installation, but you also want to scan local data from OneDrive accounts or SharePoint accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <<SharePoint and OneDrive special requirements,SharePoint and OneDrive special requirements>> for details.
+For special situations where you need a very secure Cloud Manager installation, but you also want to scan local data from OneDrive accounts or SharePoint Online accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <<SharePoint and OneDrive special requirements,SharePoint and OneDrive special requirements>> for details.
 
 There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, AWS S3, or Google Drive accounts when Data Sense is deployed in a dark site.
 
@@ -35,9 +36,9 @@ There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Fil
 Most Data Sense features work when it is deployed in a site with no internet access. However, certain features that require internet access are not supported, for example:
 
 * Managing Microsoft Azure Information Protection (AIP) labels
-*	Sending email alerts to Cloud Manager users when certain critical Policies return results
-*	Setting Cloud Manager roles for different users (for example, Account Admin or Compliance Viewer)
-*	Copying and synchronizing source files using Cloud Sync
+* Sending email alerts to Cloud Manager users when certain critical Policies return results
+* Setting Cloud Manager roles for different users (for example, Account Admin or Compliance Viewer)
+* Copying and synchronizing source files using Cloud Sync
 * Receiving user feedback
 * Automated software upgrades from Cloud Manager
 +
@@ -111,7 +112,7 @@ The Data Sense instance uses a private IP address to ensure that the indexed dat
 
 == SharePoint and OneDrive special requirements
 
-When Cloud Manager and Data Sense are deployed in a site with no internet access, you can scan local files in SharePoint and OneDrive accounts by providing internet access to a few select endpoints.
+When Cloud Manager and Data Sense are deployed in a site with no internet access, you can scan local files in SharePoint Online and OneDrive accounts by providing internet access to a few select endpoints. SharePoint On-Premises accounts can be scanned without providing any internet access.
 
 [cols="50,50",options="header"]
 |===
