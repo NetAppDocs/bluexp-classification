@@ -85,7 +85,7 @@ Cloud Data Sense can scan and analyze structured and unstructured data from the 
 * Google Cloud Storage
 * OneDrive
 * SharePoint Online
-* SharePoint On-premises (SharePoint Server)
+//* SharePoint On-premises (SharePoint Server)
 * Google Drive
 
 *Databases:*
