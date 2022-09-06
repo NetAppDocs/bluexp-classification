@@ -16,7 +16,7 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 5 September 2022 (version 1.16)
+== 6 September 2022 (version 1.16)
 
 === Support for scanning SharePoint On-Premises accounts
 
@@ -26,7 +26,7 @@ Data Sense now can scan both SharePoint Online accounts and SharePoint On-Premis
 
 If you need to rescan a particular repository immediately so that changes are reflected in the system, you can select the repository and rescan it. This allows you to prioritize rescanning of certain data before other data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#rescanning-data-for-an-existing-repository[See how to rescan a directory^].
 
-=== New Filter for the status of Data Sense scanning in the Data Investigation page
+=== New filter for the status of Data Sense scanning in the Data Investigation page
 
 The “Analysis Status” filter enables you to list the files that are in a specific stage of Data Sense scanning. You can select an option to show the list of files that are *Pending First Scan*, *Completed* being scanned, *Pending Rescan*, or that have *Failed* to be scanned.
 
@@ -36,9 +36,9 @@ https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-
 
 Data Sense now recognizes Data Subjects as part of the Personal Results that appear in the Compliance Dashboard. Additionally, when performing a search in the Investigation page, you can select "Data Subjects" under "Personal Data" to view only files that contain data subjects.
 
-=== Data Sense Breadcrumb files are now considered part of "Categories" found in scans
+=== Data Sense breadcrumb files are now considered part of "Categories" found in scans
 
-Data Sense now recognizes Breadcrumb files as part of the Categories that appear in the Compliance Dashboard. These are files Data Sense creates when moving files from the source location to an NFS share. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more about how breadcrumb files are created^].
+Data Sense now recognizes breadcrumb files as part of the Categories that appear in the Compliance Dashboard. These are files Data Sense creates when moving files from the source location to an NFS share. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more about how breadcrumb files are created^].
 
 Additionally, when performing a search in the Investigation page, you can select "Data Sense Breadcrumbs" under "Category" to view only Data Sense breadcrumb files.
 

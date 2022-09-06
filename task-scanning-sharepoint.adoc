@@ -15,7 +15,7 @@ summary: Complete a few steps to start scanning files in your SharePoint account
 [.lead]
 Complete a few steps to start scanning files in your SharePoint accounts with Cloud Data Sense.
 
-Data Sense can scan both SharePoint Online accounts and SharePoint On-Premises accounts (SharePoint Server).
+Data Sense can scan both SharePoint Online accounts and SharePoint On-Premise accounts (SharePoint Server).
 
 == Quick start
 
@@ -46,7 +46,7 @@ Add the list of SharePoint site URLs that you want to scan in the SharePoint acc
 Review the following prerequisites to make sure you are ready to activate Cloud Data Sense on a SharePoint account.
 
 * You must have the Admin login credentials for the SharePoint account that provides read access to all SharePoint sites.
-* For SharePoint On-Premises, you'll also need the URL of the SharePoint Server.
+* For SharePoint On-Premise, you'll also need the URL of the SharePoint Server.
 * You will need a line-separated list of the SharePoint site URLs for all the data you want to scan.
 
 == Deploying the Cloud Data Sense instance
@@ -88,7 +88,7 @@ Add the SharePoint On-premise account where the user files reside.
 +
 image:screenshot_compliance_add_sharepoint_onprem_button.png[A screenshot of the Configuration page where you can click the Add SharePoint On-premise button.]
 
-. In the Insert Admin Credentials dialog, enter the following information:
+. In the Log into the SharePoint On-Premise Server dialog, enter the following information:
 * Admin user in the format "domain/user" or "user@domain", and admin password
 * URL of the SharePoint Server
 +
