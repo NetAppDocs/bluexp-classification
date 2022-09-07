@@ -102,11 +102,13 @@ The command syntax to add a custom regex is:
 * <pattern name> = This is the name that will appear in the Data Sense UI. Make sure the name identifies what the regex is designed to find. The name must contain at least one letter, and it can be up to 70 characters in length.
 * <regular expression> = This can be any legal regular expression.
 
+You run the command from the path */opt/netapp/Datasense/*.
+
 Note that we test each new regex to verify if it is too broad and it would return too many matches. If that's the case, then the following log message will appear: 
 
  log v1.0 | 2022-08-17 07:24:19,585 | ERROR | ds_logger | custom_regex | 119 | 1 | None | custom_regex_119 | The regex has high risk to identify false positives. Please narrow the regular expression and try again. To add it anyway, use the force flag (-f) at the end 
 
-You can use the *-f* at the end of the command line if you want to forcefully add the regex to Data Sense.
+You can use the *-f* option at the end of the command line if you want to forcefully add the regex to Data Sense - even if we think it is too broad.
 
 === Example
 
@@ -126,15 +128,16 @@ After the next scan, the results will include this new information in the Compli
 
 image:screenshot_add_regex_result.png[A screenshot showing an example of custom regex results in the Investigation Results pane.]
 
-=== Deactivating the custom regex
+=== Deactivating a custom regex
 
-If you decide at some later point that you don't need Data Sense to identify the custom patterns you entered as a regex, use the following command to remove each regex.
+If you decide at some later point that you don't need Data Sense to identify the custom patterns you entered as a regex, use the *deactivate* option in the command to remove each regex.
 
  sudo bash tools/datascience/custom_regex/custom_regex.sh -s deactivate -n "<pattern name>" 
 
 For example, to remove the *Internal Product ID* regex:
 
 [source,cli]
+[user ~]$ cd /opt/netapp/Datasense/
 [user Datasense]$ sudo bash tools/datascience/custom_regex/custom_regex.sh -s deactivate -n "Internal Product ID"
 
  log v1.0 | 2022-08-17 09:13:15,431 | INFO | ds_logger | custom_regex | 31 | 1 | None | custom_regex_31 | A pattern named 'Internal Product ID' was deactivated successfully 
