@@ -74,17 +74,18 @@ Cloud Data Sense can scan and analyze structured and unstructured data from the 
 *Non-NetApp:*
 
 * Dell EMC Isilon
-*	Pure Storage
-*	Nutanix
-*	Any other storage vendor
+* Pure Storage
+* Nutanix
+* Any other storage vendor
 
 *Cloud:*
 
 * Amazon S3
 * Azure Blob
-*	Google Cloud Storage
+* Google Cloud Storage
 * OneDrive
 * SharePoint Online
+//* SharePoint On-premises (SharePoint Server)
 * Google Drive
 
 *Databases:*

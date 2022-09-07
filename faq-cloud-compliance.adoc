@@ -183,7 +183,8 @@ Cloud Data Sense can scan data from working environments that you've added to th
 * Object storage (that uses S3 protocol)
 * Databases (Amazon RDS, MongoDB, MySQL, Oracle, PostgreSQL, SAP HANA, SQL Server)
 * OneDrive accounts
-* SharePoint accounts
+* SharePoint Online accounts
+//* SharePoint Online and On-Premises accounts
 * Google Drive accounts
 
 Data Sense supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.

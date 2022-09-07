@@ -31,8 +31,9 @@ Note that you can add to the list of personal data that is found in your files i
 | Identifier
 | Proximity validation?
 
-.5+| General | Email address | No
+.6+| General | Email address | No
 | Credit card number | No
+| Data Subjects | No
 | IBAN number (International Bank Account Number) | No
 | IP address | No
 | Password | Yes
@@ -84,6 +85,7 @@ Note that you can add to the list of personal data that is found in your files i
 | South African ID | Yes
 | Spanish Tax Identification Number | Yes
 | Swedish ID | Yes
+// | Swedish Social Security Number | Yes
 | Texas Driver's License | Yes
 | U.K. ID (NINO) | Yes
 | USA Social Security Number (SSN) | Yes
@@ -157,6 +159,7 @@ The following Metadata is also categorized, and are identified in the same suppo
 * Code
 * Corrupted
 * Database and index files
+* Data Sense Breadcrumbs
 * Design Files
 * Email Application Data
 * Encrypted
