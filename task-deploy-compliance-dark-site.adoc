@@ -138,7 +138,11 @@ Access to _cloudmanager.cloud.netapp.com_ is required only during the initial co
 
 For typical configurations you'll install the software on a single host system. link:task-deploy-compliance-dark-site.html#single-host-installation-for-typical-configurations[See those steps here].
 
+image:diagram_deploy_onprem_single_host_no_internet.png[A diagram showing the location of the data sources you can scan when using a single Data Sense instance deployed on-prem without internet access.]
+
 For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. link:task-deploy-compliance-dark-site.html#multi-host-installation-for-large-configurations[See those steps here].
+
+image:diagram_deploy_onprem_multi_host_no_internet.png[A diagram showing the location of the data sources you can scan when using multiple Data Sense instances deployed on-prem without internet access.]
 
 === Single-host installation for typical configurations
 
