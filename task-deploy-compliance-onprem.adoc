@@ -135,7 +135,7 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 |===
 
 Ensure that Cloud Manager has the required permissions::
-Ensure that Cloud Manager has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest Cloud Manager permissions in https://mysupport.netapp.com/site/info/cloud-manager-policies[the policies provided by NetApp^].
+Ensure that Cloud Manager has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest Cloud Manager permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 
 Ensure that the Cloud Manager Connector can access Cloud Data Sense::
 Ensure connectivity between the Connector and the Cloud Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
@@ -156,7 +156,11 @@ The Data Sense instance uses a private IP address to ensure that the indexed dat
 
 For typical configurations you'll install the software on a single host system. <<Single-host installation for typical configurations,See those steps here>>.
 
+image:diagram_deploy_onprem_single_host_internet.png[A diagram showing the location of the data sources you can scan when using a single Data Sense instance deployed on-prem with internet access.]
+
 For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. <<Multi-host installation for large configurations,See those steps here>>.
+
+image:diagram_deploy_onprem_multi_host_internet.png[A diagram showing the location of the data sources you can scan when using multiple Data Sense instances deployed on-prem with internet access.]
 
 See <<Prepare the Linux host system,Preparing the Linux host system>> and <<Verify Cloud Manager and Data Sense prerequisites,Reviewing prerequisites>> for the full list of requirements before you deploy Cloud Data Sense.
 
