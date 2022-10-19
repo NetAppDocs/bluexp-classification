@@ -58,7 +58,7 @@ If you don't already have a Connector installed at your offline on-premises site
 [role="quick-margin-para"]
 Ensure that your Linux system meets the <<Prepare the Linux host system,host requirements>>, that it has all required software installed, and that your offline environment meets the required <<Verify Cloud Manager and Data Sense prerequisites,permissions and connectivity>>.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy Data Sense
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Download and deploy Data Sense
 
 [role="quick-margin-para"]
 Download the Cloud Data Sense software from the NetApp Support Site and copy the installer file to the Linux host you plan to use. Then launch the installation wizard and follow the prompts to deploy the Cloud Data Sense instance.
@@ -164,9 +164,9 @@ Follow these steps when installing Data Sense software on a single on-premises h
 . Unzip the installer bundle on the host machine, for example:
 +
 [source,cli]
-tar -xzf DataSense-offline-bundle-v1.14.0.tar.gz
+tar -xzf DataSense-offline-bundle-v1.16.1.tar.gz
 +
-This extracts required software and the actual installation file *cc_onprem_installer_<version>.tar.gz*.
+This extracts required software and the actual installation file *DATASENSE-INSTALLER-V1.16.1.tar.gz*.
 
 . Launch Cloud Manager and click the *Data Sense* tab.
 
@@ -185,7 +185,7 @@ image:screenshot_cloud_compliance_deploy_darksite.png[A screenshot of selecting 
 . Unzip the installation file on the host machine, for example:
 +
 [source,cli]
-tar -xzf cc_onprem_installer_1.14.0.tar.gz
+tar -xzf DATASENSE-INSTALLER-V1.16.1.tar.gz
 
 . When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer:
 
@@ -270,7 +270,7 @@ For example, this command adds 3 scanner nodes:
 `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212`
 
 . On *each* scanner node host:
-.. Copy the Data Sense installer file (*cc_onprem_installer_<version>.tar.gz*) to the host machine.
+.. Copy the Data Sense installer file (*DATASENSE-INSTALLER-<version>.tar.gz*) to the host machine.
 .. Unzip the installer file.
 .. Paste and run the command that you copied in step 3.
 +
@@ -291,7 +291,7 @@ Since Data Sense software is updated with new features on a regular basis, you s
 
 .Before you begin
 
-* Data Sense software can be upgraded one major version at a time. For example, if you have version 1.14.x installed, you can upgrade only to 1.15.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
+* Data Sense software can be upgraded one major version at a time. For example, if you have version 1.15.x installed, you can upgrade only to 1.16.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
 * Verify that your on-prem Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access[See the Connector upgrade steps^].
 
 .Steps
@@ -303,14 +303,14 @@ Since Data Sense software is updated with new features on a regular basis, you s
 . Unzip the software bundle on the host machine, for example:
 +
 [source,cli]
-tar -xvf DataSense-offline-bundle-v1.14.0.tar.gz
+tar -xvf DataSense-offline-bundle-v1.16.1.tar.gz
 +
-This extracts the installation file *cc_onprem_installer_<version>.tar.gz*.
+This extracts the installation file *DATASENSE-INSTALLER-V1.16.1.tar.gz*.
 
 . Unzip the installation file on the host machine, for example:
 +
 [source,cli]
-tar -xzf cc_onprem_installer_1.14.0.tar.gz
+tar -xzf DATASENSE-INSTALLER-V1.16.1.tar.gz
 +
 This extracts the upgrade script *start_darksite_upgrade.sh* and any required third-party software.
 
