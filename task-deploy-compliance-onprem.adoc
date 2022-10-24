@@ -66,6 +66,8 @@ Note that you can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/t
 
 As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Connectors].
 
+You'll need the IP address or host name of the Connector system when installing Data Sense. You'll have this information if you installed the Connector in your premises. If the Connector is deployed in the cloud, you can find this information from the Cloud Manager console: click the Help icon, select *Support* and click *Connector*.
+
 == Prepare the Linux host system
 
 Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.
