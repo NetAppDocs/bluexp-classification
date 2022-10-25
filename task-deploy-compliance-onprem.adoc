@@ -34,7 +34,7 @@ You can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-instal
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review prerequisites
 
 [role="quick-margin-para"]
-Ensure that your environment can meet the prerequisites. This includes outbound internet access for the instance, connectivity between the Connector and Cloud Data Sense over port 443, and more. <<Verify Cloud Manager and Data Sense prerequisites,See the complete list>>.
+Ensure that your environment can meet the prerequisites. This includes outbound internet access for the instance, connectivity between the Connector and Cloud Data Sense over port 443, and more. <<Verify BlueXP and Data Sense prerequisites,See the complete list>>.
 
 [role="quick-margin-para"]
 You also need a Linux system that meets the <<Prepare the Linux host system,following requirements>>.
@@ -47,11 +47,11 @@ Download the Cloud Data Sense software from the NetApp Support Site and copy the
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the Cloud Data Sense service
 
 [role="quick-margin-para"]
-The first 1 TB of data that Cloud Data Sense scans in Cloud Manager is free. A subscription to your cloud provider Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point.
+The first 1 TB of data that Cloud Data Sense scans in BlueXP is free. A subscription to your cloud provider Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point.
 
 == Create a Connector
 
-If you don't already have a Connector, create a Connector in your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^] or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^]. In most cases you will probably have a Connector set up before you attempt to activate Cloud Data Sense because most https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-a-connector-is-required[Cloud Manager features require a Connector], but there are cases where you'll you need to set one up now.
+If you don't already have a Connector, create a Connector in your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^] or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^]. In most cases you will probably have a Connector set up before you attempt to activate Cloud Data Sense because most https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-a-connector-is-required[BlueXP features require a Connector], but there are cases where you'll you need to set one up now.
 
 There are some scenarios where you have to use a Connector that's deployed in a specific cloud provider:
 
@@ -91,7 +91,7 @@ Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, bu
 
 NOTE: The IP address of the Data Sense host system can't be changed after installation.
 
-== Verify Cloud Manager and Data Sense prerequisites
+== Verify BlueXP and Data Sense prerequisites
 
 Review the following prerequisites to make sure that you have a supported configuration before you deploy Cloud Data Sense on a Linux system.
 
@@ -103,13 +103,13 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 | Endpoints
 | Purpose
 
-| \https://cloudmanager.cloud.netapp.com | Communication with the Cloud Manager service, which includes NetApp accounts.
+| \https://cloudmanager.cloud.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
 
 |
 \https://netapp-cloud-account.auth0.com
 \https://auth0.com
 
-| Communication with NetApp Cloud Central for centralized user authentication.
+| Communication with the NetApp BlueXP website for centralized user authentication.
 
 |
 \https://support.compliance.cloudmanager.cloud.netapp.com/
@@ -134,23 +134,23 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 | Provides prerequisite packages for installation.
 |===
 
-Ensure that Cloud Manager has the required permissions::
-Ensure that Cloud Manager has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest Cloud Manager permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
+Ensure that BlueXP has the required permissions::
+Ensure that BlueXP has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 
-Ensure that the Cloud Manager Connector can access Cloud Data Sense::
+Ensure that the BlueXP Connector can access Cloud Data Sense::
 Ensure connectivity between the Connector and the Cloud Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
 +
 This connection enables deployment of the Data Sense instance and enables you to view information in the Compliance and Governance tabs.
 +
-Make sure port 8080 is open so you can see the installation progress in Cloud Manager.
+Make sure port 8080 is open so you can see the installation progress in BlueXP.
 
 Ensure that you can keep Cloud Data Sense running::
 The Cloud Data Sense instance needs to stay on to continuously scan your data.
 
 Ensure web browser connectivity to Cloud Data Sense::
-After Cloud Data Sense is enabled, ensure that users access the Cloud Manager interface from a host that has a connection to the Data Sense instance.
+After Cloud Data Sense is enabled, ensure that users access the BlueXP interface from a host that has a connection to the Data Sense instance.
 +
-The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to the internet. As a result, the web browser that you use to access Cloud Manager must have a connection to that private IP address. That connection can come from a direct connection to your cloud provider (for example, a VPN), or from a host that's inside the same network as the Data Sense instance.
+The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to the internet. As a result, the web browser that you use to access BlueXP must have a connection to that private IP address. That connection can come from a direct connection to your cloud provider (for example, a VPN), or from a host that's inside the same network as the Data Sense instance.
 
 == Deploy Data Sense on premises
 
@@ -162,7 +162,7 @@ For very large configurations where you'll be scanning petabytes of data, you ca
 
 image:diagram_deploy_onprem_multi_host_internet.png[A diagram showing the location of the data sources you can scan when using multiple Data Sense instances deployed on-prem with internet access.]
 
-See <<Prepare the Linux host system,Preparing the Linux host system>> and <<Verify Cloud Manager and Data Sense prerequisites,Reviewing prerequisites>> for the full list of requirements before you deploy Cloud Data Sense.
+See <<Prepare the Linux host system,Preparing the Linux host system>> and <<Verify BlueXP and Data Sense prerequisites,Reviewing prerequisites>> for the full list of requirements before you deploy Cloud Data Sense.
 
 Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
 
@@ -178,7 +178,7 @@ Follow these steps when installing Data Sense software on a single on-premises h
 * (Optional) Verify that the system has the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the system.
 * Make sure you have root privileges on the Linux system.
 * If you are using a proxy, and it is performing TLS interception, you'll need to know the path on the Data Sense Linux system where the TLS CA certificates are stored.
-* Verify that your offline environment meets the required <<Verify Cloud Manager and Data Sense prerequisites,permissions and connectivity>>.
+* Verify that your offline environment meets the required <<Verify BlueXP and Data Sense prerequisites,permissions and connectivity>>.
 
 .Steps
 
@@ -186,7 +186,7 @@ Follow these steps when installing Data Sense software on a single on-premises h
 
 . Copy the installer file to the Linux host you plan to use (using `scp` or some other method).
 
-. In Cloud Manager, click *Data Sense*.
+. In BlueXP, select *Governance > Classification*.
 
 . Click *Activate Data Sense*.
 +
@@ -217,8 +217,8 @@ tar -xzf DATASENSE-INSTALLER-V1.16.1.tar.gz
 a. Paste the information you copied from step 6:
 `sudo ./install.sh -a <account_id> -c <agent_id> -t <token>`
 b. Enter the IP address or host name of the Data Sense host machine so it can be accessed by the Connector instance.
-c. Enter the IP address or host name of the Cloud Manager Connector host machine so it can be accessed by the Data Sense instance.
-d. Enter proxy details as prompted. If your Cloud Manager already uses a proxy, there is no need to enter this information again here since Data Sense will automatically use the proxy used by Cloud Manager.
+c. Enter the IP address or host name of the BlueXP Connector host machine so it can be accessed by the Data Sense instance.
+d. Enter proxy details as prompted. If your BlueXP Connector already uses a proxy, there is no need to enter this information again here since Data Sense will automatically use the proxy used by the Connector.
 | Alternatively, you can create the whole command in advance, providing the necessary host and proxy parameters:
 `sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --manager-host <cm_host> --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password> --cacert-folder-path <ca_cert_dir>`
 
@@ -231,7 +231,7 @@ Variable values:
 * _agent_id_ = Connector ID
 * _token_ = jwt user token
 * _ds_host_ = IP address or host name of the Data Sense Linux system.
-* _cm_host_ = IP address or host name of the Cloud Manager Connector system.
+* _cm_host_ = IP address or host name of the BlueXP Connector system.
 * _proxy_host_ = IP or host name of the proxy server if the host is behind a proxy server.
 * _proxy_port_ = Port to connect to the proxy server (default 80).
 * _proxy_scheme_ = Connection scheme: https or http (default http).
@@ -243,7 +243,7 @@ Variable values:
 
 The Cloud Data Sense installer installs packages, installs docker, registers the installation, and installs Data Sense. Installation can take 10 to 20 minutes.
 
-If there is connectivity over port 8080 between the host machine and the Connector instance, you will see the installation progress in the Data Sense tab in Cloud Manager.
+If there is connectivity over port 8080 between the host machine and the Connector instance, you will see the installation progress in the Data Sense tab in BlueXP.
 
 .What's Next
 From the Configuration page you can select the data sources that you want to scan.
@@ -261,7 +261,7 @@ Follow these steps when installing Data Sense software on multiple on-premises h
 * Verify that all your Linux systems for the Manager and Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
 * (Optional) Verify that the systems have the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the systems.
 * Make sure you have root privileges on the Linux systems.
-* Verify that your environment meets the required <<Verify Cloud Manager and Data Sense prerequisites,permissions and connectivity>>.
+* Verify that your environment meets the required <<Verify BlueXP and Data Sense prerequisites,permissions and connectivity>>.
 * You must have the IP addresses of the scanner node hosts that you plan to use.
 * The following ports and protocols must be enabled on all hosts:
 +

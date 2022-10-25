@@ -45,11 +45,11 @@ Launch the installation wizard to deploy the Cloud Data Sense instance in the cl
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the Cloud Data Sense service
 
 [role="quick-margin-para"]
-The first 1 TB of data that Cloud Data Sense scans in Cloud Manager is free. A Cloud Manager subscription through your cloud provider Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point.
+The first 1 TB of data that Cloud Data Sense scans in BlueXP is free. A Cloud Manager subscription through your cloud provider Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point.
 
 == Create a Connector
 
-If you don't already have a Connector, create a Connector in your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^] or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^]. In most cases you will probably have a Connector set up before you attempt to activate Cloud Data Sense because most https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-a-connector-is-required[Cloud Manager features require a Connector], but there are cases where you'll you need to set one up now.
+If you don't already have a Connector, create a Connector in your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^] or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^]. In most cases you will probably have a Connector set up before you attempt to activate Cloud Data Sense because most https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-a-connector-is-required[BlueXP features require a Connector], but there are cases where you'll you need to set one up now.
 
 There are some scenarios where you have to use a Connector that's deployed in a specific cloud provider:
 
@@ -87,13 +87,13 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 | Endpoints
 | Purpose
 
-| \https://cloudmanager.cloud.netapp.com | Communication with the Cloud Manager service, which includes NetApp accounts.
+| \https://cloudmanager.cloud.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
 
 |
 \https://netapp-cloud-account.auth0.com
 \https://auth0.com
 
-| Communication with NetApp Cloud Central for centralized user authentication.
+| Communication with the NetApp BlueXP website for centralized user authentication.
 
 |
 \https://cloud-compliance-support-netapp.s3.us-west-2.amazonaws.com
@@ -124,13 +124,13 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 | Endpoints
 | Purpose
 
-| \https://cloudmanager.cloud.netapp.com | Communication with the Cloud Manager service, which includes NetApp accounts.
+| \https://cloudmanager.cloud.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
 
 |
 \https://netapp-cloud-account.auth0.com
 \https://auth0.com
 
-| Communication with NetApp Cloud Central for centralized user authentication.
+| Communication with the NetApp BlueXP website for centralized user authentication.
 
 |
 \https://support.compliance.cloudmanager.cloud.netapp.com/
@@ -147,11 +147,11 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 
 |===
 
-Ensure that Cloud Manager has the required permissions::
-Ensure that Cloud Manager has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest Cloud Manager permissions in https://mysupport.netapp.com/site/info/cloud-manager-policies[the policies provided by NetApp^].
+Ensure that BlueXP has the required permissions::
+Ensure that BlueXP has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 
 Check your vCPU limits::
-Ensure that your cloud provider's vCPU limit allows for the deployment of an instance with 16 cores. You'll need to verify the vCPU limit for the relevant instance family in the region where Cloud Manager is running. link:concept-cloud-compliance.html#the-cloud-data-sense-instance[See the required instance types].
+Ensure that your cloud provider's vCPU limit allows for the deployment of an instance with 16 cores. You'll need to verify the vCPU limit for the relevant instance family in the region where BlueXP is running. link:concept-cloud-compliance.html#the-cloud-data-sense-instance[See the required instance types].
 +
 See the following links for more details on vCPU limits:
 +
@@ -161,7 +161,7 @@ See the following links for more details on vCPU limits:
 +
 Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
-Ensure that the Cloud Manager Connector can access Cloud Data Sense::
+Ensure that the BlueXP Connector can access Cloud Data Sense::
 Ensure connectivity between the Connector and the Cloud Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance. This connection enables deployment of the Data Sense instance and enables you to view information in the Compliance and Governance tabs. Cloud Data Sense is supported in Government regions in AWS and Azure.
 +
 Additional inbound and outbound security group rules are required for AWS and AWS GovCloud deployments. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html[Rules for the Connector in AWS^] for details.
@@ -172,9 +172,9 @@ Ensure that you can keep Cloud Data Sense running::
 The Cloud Data Sense instance needs to stay on to continuously scan your data.
 
 Ensure web browser connectivity to Cloud Data Sense::
-After Cloud Data Sense is enabled, ensure that users access the Cloud Manager interface from a host that has a connection to the Data Sense instance.
+After Cloud Data Sense is enabled, ensure that users access the BlueXP interface from a host that has a connection to the Data Sense instance.
 +
-The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to the internet. As a result, the web browser that you use to access Cloud Manager must have a connection to that private IP address. That connection can come from a direct connection to your cloud provider (for example, a VPN), or from a host that's inside the same network as the Data Sense instance.
+The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to the internet. As a result, the web browser that you use to access BlueXP must have a connection to that private IP address. That connection can come from a direct connection to your cloud provider (for example, a VPN), or from a host that's inside the same network as the Data Sense instance.
 
 == Deploy Data Sense in the cloud
 
@@ -182,7 +182,7 @@ Follow these steps to deploy an instance of Cloud Data Sense in the cloud.
 
 .Steps
 
-. From the Cloud Manager left navigation menu, click *Data Sense*.
+. From the BlueXP left navigation menu, click *Governance > Classification*.
 
 . Click *Activate Data Sense*.
 +
@@ -200,7 +200,7 @@ image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Cloud Dat
 
 .Result
 
-Cloud Manager deploys the Cloud Data Sense instance in your cloud provider.
+BlueXP deploys the Cloud Data Sense instance in your cloud provider.
 
 .What's Next
 From the Configuration page you can select the data sources that you want to scan.

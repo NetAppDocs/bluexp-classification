@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: concept-cloud-compliance.html
 keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, aip labels, governance, data sense, privacy control, classification, optimization
-summary: Cloud Data Sense is a data governance service for Cloud Manager that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
+summary: Cloud Data Sense is a data governance service for BlueXP that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
 ---
 
 = Learn about Cloud Data Sense
@@ -13,7 +13,7 @@ summary: Cloud Data Sense is a data governance service for Cloud Manager that sc
 :imagesdir: ./media/
 
 [.lead]
-Cloud Data Sense is a data governance service for Cloud Manager that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
+Cloud Data Sense is a data governance service for BlueXP (formerly Cloud Manager) that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
 
 https://cloud.netapp.com/netapp-cloud-data-sense[Learn about the use cases for Cloud Data Sense^].
 
@@ -29,7 +29,7 @@ Data Sense provides several tools that can help with your compliance efforts. Yo
 * Identify a wide scope of sensitive personal information as required by GDPR, CCPA, PCI, and HIPAA privacy regulations.
 * Respond to Data Subject Access Requests (DSAR) based on name or email address.
 * Identify whether unique identifiers from your databases are found in files in other repositories - basically making your own list of "personal data" that is identified in Data Sense scans.
-* Notify Cloud Manager users through email when files contain certain PII (you define this criteria using link:task-org-private-data.html#controlling-your-data-using-policies[Policies^]) so you can decide on an action plan.
+* Notify BlueXP users through email when files contain certain PII (you define this criteria using link:task-org-private-data.html#controlling-your-data-using-policies[Policies^]) so you can decide on an action plan.
 
 === Strengthen security
 
@@ -39,7 +39,7 @@ Data Sense can identify data that is potentially at risk for being accessed for 
 * Identify sensitive data that resides outside of the initial, dedicated location.
 * Comply with data retention policies.
 * Use _Policies_ to automatically notify security staff of new security issues so they can take action immediately.
-* Add custom tags to files (for example, "needs to be moved") and assign a Cloud Manager user so that person can own updates to the files.
+* Add custom tags to files (for example, "needs to be moved") and assign a BlueXP user so that person can own updates to the files.
 * View and modify link:https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP) labels^] in your files.
 
 === Optimize storage usage
@@ -102,13 +102,13 @@ Data Sense supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 
 
 == Cost
 
-* The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a Cloud Manager workspace is free. This includes all data from all working environments and data sources. A subscription to the AWS, Azure, or GCP Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point. See https://cloud.netapp.com/netapp-cloud-data-sense[pricing^] for details.
+* The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a BlueXP workspace is free. This includes all data from all working environments and data sources. A subscription to the AWS, Azure, or GCP Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point. See https://cloud.netapp.com/netapp-cloud-data-sense[pricing^] for details.
 +
 link:task-licensing-datasense.html[Learn how to license Cloud Data Sense^].
 
 * Installing Cloud Data Sense in the cloud requires deploying a cloud instance, which results in charges from the cloud provider where it is deployed. See <<The Cloud Data Sense instance,the type of instance that is deployed for each cloud provider>>. There is no cost if you install Data Sense on an on-premises system.
 
-* Cloud Data Sense requires that you have deployed a Cloud Manager Connector. In many cases you already have a Connector because of other storage and services you are using in Cloud Manager. The Connector instance results in charges from the cloud provider where it is deployed. See the https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[type of instance that is deployed for each cloud provider^]. There is no cost if you install the Connector on an on-premises system.
+* Cloud Data Sense requires that you have deployed a BlueXP Connector. In many cases you already have a Connector because of other storage and services you are using in BlueXP. The Connector instance results in charges from the cloud provider where it is deployed. See the https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[type of instance that is deployed for each cloud provider^]. There is no cost if you install the Connector on an on-premises system.
 
 === Data transfer costs
 
@@ -120,11 +120,11 @@ Data transfer costs depend on your setup. If the Cloud Data Sense instance and d
 
 == The Cloud Data Sense instance
 
-When you deploy Data Sense in the cloud, Cloud Manager deploys the instance in the same subnet as the Connector. https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html[Learn more about Connectors.^]
+When you deploy Data Sense in the cloud, BlueXP deploys the instance in the same subnet as the Connector. https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html[Learn more about Connectors.^]
 
 NOTE: If the Connector is installed on-prem, it deploys the Cloud Data Sense instance in same VPC or VNet as the first Cloud Volumes ONTAP system in the request. You can install Data Sense on-prem as well.
 
-image:diagram_cloud_compliance_instance.png[A diagram that shows a Cloud Manager instance and a Cloud Data Sense instance running in your cloud provider.]
+image:diagram_cloud_compliance_instance.png[A diagram that shows a BlueXP instance and a Cloud Data Sense instance running in your cloud provider.]
 
 Note the following about the default instance:
 
@@ -168,7 +168,7 @@ When deploying Data Sense on-premises, just use a Linux host with the smaller sp
 
 At a high-level, Cloud Data Sense works like this:
 
-. You deploy an instance of Data Sense in Cloud Manager.
+. You deploy an instance of Data Sense in BlueXP.
 . You enable high-level mapping or deep-level scanning on one or more data sources.
 . Data Sense scans the data using an AI learning process.
 . You use the provided dashboards and reporting tools to help in your compliance and governance efforts.
@@ -179,7 +179,7 @@ After you enable Cloud Data Sense and select the volumes, buckets, database sche
 
 Data Sense connects to the data like any other client by mounting NFS and CIFS volumes. NFS volumes are automatically accessed as read-only, while you need to provide Active Directory credentials to scan CIFS volumes.
 
-image:diagram_cloud_compliance_scan.png["A diagram that shows a Cloud Manager instance and a Cloud Data Sense instance running in your cloud provider. The Data Sense instance connects to NFS and CIFS volumes, S3 buckets, OneDrive accounts, and databases to scan them."]
+image:diagram_cloud_compliance_scan.png["A diagram that shows a BlueXP instance and a Cloud Data Sense instance running in your cloud provider. The Data Sense instance connects to NFS and CIFS volumes, S3 buckets, OneDrive accounts, and databases to scan them."]
 
 After the initial scan, Data Sense continuously scans your data to detect incremental changes (this is why it's important to keep the instance running).
 
@@ -231,9 +231,9 @@ Cloud Data Sense uses AI to extract natural persons’ names from documents. lin
 
 == Networking overview
 
-Cloud Manager deploys the Cloud Data Sense instance with a security group that enables inbound HTTP connections from the Connector instance.
+BlueXP deploys the Cloud Data Sense instance with a security group that enables inbound HTTP connections from the Connector instance.
 
-When using Cloud Manager in SaaS mode, the connection to Cloud Manager is served over HTTPS, and the private data sent between your browser and the Data Sense instance are secured with end-to-end encryption, which means NetApp and third parties can’t read it.
+When using BlueXP in SaaS mode, the connection to BlueXP is served over HTTPS, and the private data sent between your browser and the Data Sense instance are secured with end-to-end encryption, which means NetApp and third parties can’t read it.
 
 Outbound rules are completely open. Internet access is needed to install and upgrade the Data Sense software and to send usage metrics.
 
@@ -241,12 +241,12 @@ If you have strict networking requirements, link:task-deploy-cloud-compliance.ht
 
 == User access to compliance information
 
-The role each user has been assigned provides different capabilities within Cloud Manager and within Cloud Data Sense:
+The role each user has been assigned provides different capabilities within BlueXP and within Cloud Data Sense:
 
 * An *Account Admin* can manage compliance settings and view compliance information for all working environments.
 
-* A *Workspace Admin* can manage compliance settings and view compliance information only for systems that they have permissions to access. If a Workspace Admin can't access a working environment in Cloud Manager, then they can't see any compliance information for the working environment in the Data Sense tab.
+* A *Workspace Admin* can manage compliance settings and view compliance information only for systems that they have permissions to access. If a Workspace Admin can't access a working environment in BlueXP, then they can't see any compliance information for the working environment in the Data Sense tab.
 
 * Users with the *Compliance Viewer* role can only view compliance information and generate reports for systems that they have permission to access. These users cannot enable/disable scanning of volumes, buckets, or database schemas. These users can't copy, move, or delete files either.
 
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-user-roles.html[Learn more about Cloud Manager roles^] and how to https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-netapp-accounts.html#adding-users[add users with specific roles^].
+https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-user-roles.html[Learn more about BlueXP roles^] and how to https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-netapp-accounts.html#adding-users[add users with specific roles^].

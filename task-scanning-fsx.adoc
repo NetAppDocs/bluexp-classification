@@ -39,7 +39,7 @@ Before you can scan FSx for ONTAP volumes, https://docs.netapp.com/us-en/cloud-m
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
 
 [role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense in Cloud Manager^] if there isn't already an instance deployed.
+link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense in BlueXP^] if there isn't already an instance deployed.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Enable Cloud Data Sense and select the volumes to scan
 
@@ -68,9 +68,9 @@ Select or deselect the volumes you want to scan and Cloud Data Sense will start 
 
 == Discovering the FSx for ONTAP file system that you want to scan
 
-If the FSx for ONTAP file system you want to scan is not already in Cloud Manager as a working environment, you can add it to the canvas at this time.
+If the FSx for ONTAP file system you want to scan is not already in BlueXP as a working environment, you can add it to the canvas at this time.
 
-https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html[See how to discover or create the FSx for ONTAP file system in Cloud Manager^].
+https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html[See how to discover or create the FSx for ONTAP file system in BlueXP^].
 
 == Deploying the Cloud Data Sense instance
 
@@ -86,7 +86,7 @@ Upgrades to Data Sense software is automated as long as the instance has interne
 
 You can enable Cloud Data Sense for FSx for ONTAP volumes.
 
-. From the Cloud Manager left navigation menu, click *Data Sense* and then select the *Configuration* tab.
+. From the BlueXP left navigation menu, click *Governance > Classification* and then select the *Configuration* tab.
 +
 image:screenshot_fsx_scanning_activate.png[A screenshot of the Configuration tab immediately after deploying the Cloud Data Sense instance.]
 
@@ -120,7 +120,7 @@ image:screenshot_fsx_scanning_no_network_error.png["A screenshot of the View Det
 
 . Make sure there's a network connection between the Cloud Data Sense instance and each network that includes volumes for FSx for ONTAP.
 +
-NOTE: For FSx for ONTAP, Cloud Data Sense can scan volumes only in the same region as Cloud Manager.
+NOTE: For FSx for ONTAP, Cloud Data Sense can scan volumes only in the same region as BlueXP.
 
 . Ensure the following ports are open to the Data Sense instance.
 ** For NFS – ports 111 and 2049.
@@ -130,9 +130,7 @@ NOTE: For FSx for ONTAP, Cloud Data Sense can scan volumes only in the same regi
 
 . If you use CIFS, provide Data Sense with Active Directory credentials so it can scan CIFS volumes.
 
-.. At the top of Cloud Manager, click *Data Sense*.
-
-.. Click the *Configuration* tab.
+.. From the BlueXP left navigation menu, click *Governance > Classification* and then select the *Configuration* tab.
 
 .. For each working environment, click *Edit CIFS Credentials* and enter the user name and password that Data Sense needs to access CIFS volumes on the system.
 +
