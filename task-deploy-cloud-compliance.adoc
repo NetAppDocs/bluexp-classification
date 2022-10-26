@@ -93,7 +93,7 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 \https://netapp-cloud-account.auth0.com
 \https://auth0.com
 
-| Communication with the NetApp BlueXP website for centralized user authentication.
+| Communication with the BlueXP website for centralized user authentication.
 
 |
 \https://cloud-compliance-support-netapp.s3.us-west-2.amazonaws.com
@@ -130,7 +130,7 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 \https://netapp-cloud-account.auth0.com
 \https://auth0.com
 
-| Communication with the NetApp BlueXP website for centralized user authentication.
+| Communication with the BlueXP website for centralized user authentication.
 
 |
 \https://support.compliance.cloudmanager.cloud.netapp.com/

@@ -109,7 +109,7 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 \https://netapp-cloud-account.auth0.com
 \https://auth0.com
 
-| Communication with the NetApp BlueXP website for centralized user authentication.
+| Communication with the BlueXP website for centralized user authentication.
 
 |
 \https://support.compliance.cloudmanager.cloud.netapp.com/
