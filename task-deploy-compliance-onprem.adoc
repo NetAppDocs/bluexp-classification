@@ -312,3 +312,112 @@ The Cloud Data Sense installer finishes installing packages, docker, and registe
 From the Configuration page you can select the data sources that you want to scan.
 
 You can also link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until the amount of data exceeds 1 TB.
+
+=== Add scanner nodes to an existing Data Sense deployment
+
+You can add more scanner nodes if you find that you need more scanning processing power to scan your data sources. You can add the scanner nodes immediately after installing the manager node, or you can add a scanner node later. For example, if you realize that the amount of data in one of your data sources has doubled or tripled in size after 6 months, you can add a new scanner node to assist with data scanning. 
+
+There are two ways in which you can add additional scanner nodes:
+
+* add a node to assist with scanning all data sources
+* add a node to assist with scanning a specific data source, or a specific group of data sources
+
+By default, any new scanner nodes you add are added to the general pool of scanning resources. This is called the "default scanner group". In the image below, there is one Manager node and 3 Scanner nodes in the "default" group that are all scanning data from all 6 data sources.
+
+image:diagram_onprem_scanner_groups_default.png[A diagram of how Data Sense scanners scan data sources when in the default scanner group.]
+
+If you have certain data sources that you want to be scanned by scanner nodes that are physically closer to the data sources, you can define a scanner node, or group of scanner nodes, to scan a specific data source, or group of data sources. In the image below, there is one Manager node and 3 Scanner nodes. 
+
+* The Manager node is in the "default" group, and it is scanning 1 data source
+* Scanner node 1 is in the "united_states" group, and it is scanning 2 data sources
+* Scanner nodes 2 and 3 are in the "europe" group, and they share the scanning tasks for 3 data sources
+
+image:diagram_onprem_scanner_groups.png[A diagram of how Data Sense scanners scan data sources when assigned to different scanner groups.]
+
+Data Sense scanner groups are defined as separate geographic areas where your data is stored. You can deploy multiple Data Sense scanner nodes around the world and choose a scanner group for each node. In that way, each scanner node will scan the data that is the closest to it. The closer the scanner node is to the data, the better because it reduces network latency as much as possible while scanning data. You can choose which scanner groups to add to Data Sense and you can choose their names. Data Sense does not enforce that a node mapped to a scanner group named "europe" will be deployed in Europe.
+
+You'll follow these steps to install additional Data Sense scanner nodes:
+
+. Prepare the Linux host systems that will act as the Scanner nodes
+. Download the Data Sense software to these Linux systems
+. Run a command on the Manager node to identify the Scanner nodes
+. Follow the steps to deploy the software on the Scanner nodes (and to optionally define a "scanner group" for each Scanner node)
+. If you defined a scanner group, on the Manager node:
+.. Open the file /opt/netapp/Datasense/working_environment_to_scanner_group_config.yml and define the working environments that will be scanned by each scanner group
+.. Run the following script to register this information with all Scanner nodes: /opt/netapp/Datasense/tools/update_we_scanner_group_from_config_file.sh
+
+.What you'll need
+
+* Verify that all your Linux systems for Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
+* (Optional) Verify that the systems have the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the systems.
+* Make sure you have root privileges on the Linux systems.
+* Verify that your environment meets the required <<Verify Cloud Manager and Data Sense prerequisites,permissions and connectivity>>.
+* You must have the IP addresses of the scanner node hosts that you plan to use.
+* The following ports and protocols must be enabled on all hosts:
++
+[cols="15,20,55",options="header"]
+|===
+| Port
+| Protocols
+| Description
+
+|2377 | TCP | Cluster management communications
+|7946 | TCP, UDP | Inter-node communication
+|4789 | UDP | Overlay network traffic
+|50 | ESP | Encrypted IPsec overlay network (ESP) traffic
+|111 | TCP, UDP | NFS Server for sharing files between the hosts (needed from each scanner node to manager node)
+|2049 | TCP, UDP | NFS Server for sharing files between the hosts (needed from each scanner node to manager node)
+
+|===
+
+.Steps
+
+. On the Data Sense Manager node, run the script "add_scanner_node.sh". For example, this command adds 2 scanner nodes:
++
+`sudo ./add_scanner_node.sh -a <account_id> -c <agent_id> -m <cm_host> -h <ds_manager_ip> *-n <node_private_ip_1,node_private_ip_2>* -t <user_token>`
++
+Variable values:
+
+* _account_id_ = NetApp Account ID
+* _agent_id_ = Connector ID
+* _user_token_ = jwt user token
+* _ds_manager_ip_ = Private IP address of the Data Sense Manager Linux system
+* _cm_host_ = IP address or host name of the Connector system
+
+. Before the scanner node installation script completes, a dialog displays the installation command needed for the scanner nodes. Copy the command and save it in a text file. For example:
++
+`sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF1s35212 -u red95467j`
+
+. On *each* scanner node host:
+.. Copy the Data Sense installer file (*DATASENSE-INSTALLER-<version>.tar.gz*) to the host machine (using `scp` or some other method).
+.. Unzip the installer file.
+.. Paste and execute the command that you copied in step 2.
+.. If you want to add a scanner node into a "scanner group", add the parameter "-r <scanner_group_name>" to the command. Otherwise the scanner node is added to the "default" group.
++
+When the installation finishes on all scanner nodes and they have been joined to the manager node, the "add_scanner_node.sh" finishes as well.
+
+. If you added any scanner nodes into a scanner group, return to the Manager node and perform the following 2 tasks:
+.. Open the file "/opt/netapp/Datasense/working_environment_to_scanner_group_config.yml" and enter a mapping for which scanner groups will scan specific working environments. For example, 
++
+ scanner group:
+  europe:
+    - "WorkingEnvironment-1"
+    - "WorkingEnvironment-2"
+  united_states:
+    - "WorkingEnvironment-3"
+    - "WorkingEnvironment-4"
++
+You can make an HTTP request to get the working environment id:
+https://cloudmanager.cloud.netapp.com/account/<account_id>/providers/cloudmanager_compliance/api/v1.27/working_environment/scan_status
+
+.. Run the following script to register this mapping information with all Scanner nodes: 
+`/opt/netapp/Datasense/tools/update_we_scanner_group_from_config_file.sh`
+
+.Result
+
+The Cloud Data Sense installer finishes installing packages, docker, and registers the installation. Installation can take 10 to 20 minutes.
+
+.What's Next
+From the Configuration page you can select the data sources that you want to scan.
+
+You can also link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until the amount of data exceeds 1 TB.
