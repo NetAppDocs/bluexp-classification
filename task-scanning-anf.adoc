@@ -13,7 +13,7 @@ summary: Complete a few steps to get started with Cloud Data Sense for Azure Net
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to get started with Cloud Data Sense for  Azure NetApp Files.
+Complete a few steps to get started with Cloud Data Sense for Azure NetApp Files.
 
 == Quick start
 
@@ -22,12 +22,12 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Discover the Azure NetApp Files systems you want to scan
 
 [role="quick-margin-para"]
-Before you can scan Azure NetApp Files volumes, https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html[Cloud Manager must be set up to discover the configuration^].
+Before you can scan Azure NetApp Files volumes, https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html[BlueXP must be set up to discover the configuration^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
 
 [role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense in Cloud Manager^] if there isn't already an instance deployed.
+link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense in BlueXP^] if there isn't already an instance deployed.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Enable Cloud Data Sense and select the volumes to scan
 
@@ -56,9 +56,9 @@ Select or deselect the volumes that you want to scan and Cloud Data Sense will s
 
 == Discovering the Azure NetApp Files system that you want to scan
 
-If the Azure NetApp Files system you want to scan is not already in Cloud Manager as a working environment, you can add it to the canvas at this time.
+If the Azure NetApp Files system you want to scan is not already in BlueXP as a working environment, you can add it to the canvas at this time.
 
-https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html[See how to discover the Azure NetApp Files system in Cloud Manager^].
+https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html[See how to discover the Azure NetApp Files system in BlueXP^].
 
 == Deploying the Cloud Data Sense instance
 
@@ -74,7 +74,7 @@ Upgrades to Data Sense software is automated as long as the instance has interne
 
 You can enable Cloud Data Sense on your Azure NetApp Files volumes.
 
-. From the Cloud Manager left navigation menu, click *Data Sense* and then select the *Configuration* tab.
+. From the BlueXP left navigation menu, click *Governance > Classification* and then select the *Configuration* tab.
 +
 image:screenshot_cloud_compliance_anf_scan_config.png[A screenshot of the Configuration tab immediately after deploying the Cloud Data Sense instance.]
 
@@ -100,7 +100,7 @@ Make sure that Cloud Data Sense can access volumes by checking your networking, 
 
 . Make sure that there's a network connection between the Cloud Data Sense instance and each network that includes volumes for Azure NetApp Files.
 +
-NOTE: For Azure NetApp Files, Cloud Data Sense can only scan volumes that are in the same region as Cloud Manager.
+NOTE: For Azure NetApp Files, Cloud Data Sense can only scan volumes that are in the same region as BlueXP.
 
 . Ensure the following ports are open to the Data Sense instance:
 ** For NFS – ports 111 and 2049.
@@ -110,9 +110,7 @@ NOTE: For Azure NetApp Files, Cloud Data Sense can only scan volumes that are in
 
 . If you use CIFS, provide Data Sense with Active Directory credentials so it can scan CIFS volumes.
 
-.. At the top of Cloud Manager, click *Data Sense*.
-
-.. Click the *Configuration* tab.
+.. From the BlueXP left navigation menu, click *Governance > Classification* and then select the *Configuration* tab.
 +
 image:screenshot_cifs_credentials.gif[A screenshot of the Compliance tab that shows the Scan Status button that's available in the top right of the content pane.]
 
