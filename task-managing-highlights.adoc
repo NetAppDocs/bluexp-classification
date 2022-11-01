@@ -160,7 +160,7 @@ image:screenshot_compliance_sync_files_dialog.png[A screenshot showing the Copy 
 
 . If you are sure that you want to sync the selected files to a destination location, click *OK*.
 +
-The Cloud Sync UI is opened in Cloud Manager.
+The Cloud Sync UI is opened in BlueXP.
 +
 You are prompted to define the sync relationship. The Source system is pre-populated based on the repository and files you already selected in Data Sense.
 

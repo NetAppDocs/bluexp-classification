@@ -22,11 +22,11 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Discover the data sources that you want to scan
 
 [role="quick-margin-para"]
-Before you can scan volumes, you must add the systems as working environments in Cloud Manager:
+Before you can scan volumes, you must add the systems as working environments in BlueXP:
 
 [role="quick-margin-list"]
-* For Cloud Volumes ONTAP systems, these working environments should already be available in Cloud Manager
-* For on-premises ONTAP systems, https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html[Cloud Manager must discover the ONTAP clusters^]
+* For Cloud Volumes ONTAP systems, these working environments should already be available in BlueXP
+* For on-premises ONTAP systems, https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html[BlueXP must discover the ONTAP clusters^]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
 
@@ -61,9 +61,9 @@ Select or deselect the volumes that you want to scan and Cloud Data Sense will s
 
 == Discovering the data sources that you want to scan
 
-If the data sources you want to scan are not already in your Cloud Manager environment, you can add them to the canvas at this time.
+If the data sources you want to scan are not already in your BlueXP environment, you can add them to the canvas at this time.
 
-Your Cloud Volumes ONTAP systems should already be available in the Canvas in Cloud Manager. For on-premises ONTAP systems, you'll need to have https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html[Cloud Manager discover these clusters^].
+Your Cloud Volumes ONTAP systems should already be available in the Canvas in BlueXP. For on-premises ONTAP systems, you'll need to have https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html[BlueXP discover these clusters^].
 
 == Deploying the Cloud Data Sense instance
 
@@ -71,7 +71,7 @@ Deploy Cloud Data Sense if there isn't already an instance deployed.
 
 If you are scanning Cloud Volumes ONTAP and on-premises ONTAP systems that are accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy Cloud Data Sense in the cloud^] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^].
 
-If you are scanning on-premises ONTAP systems that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy Cloud Data Sense in the same on-premises location that has no internet access^]. This also requires that the Cloud Manager Connector is deployed in that same on-premises location.
+If you are scanning on-premises ONTAP systems that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy Cloud Data Sense in the same on-premises location that has no internet access^]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
 
 Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
 
@@ -79,7 +79,7 @@ Upgrades to Data Sense software is automated as long as the instance has interne
 
 You can enable Cloud Data Sense on Cloud Volumes ONTAP systems in any supported cloud provider, and on on-premises ONTAP clusters.
 
-. From the Cloud Manager left navigation menu, click *Data Sense* and then select the *Configuration* tab.
+. From the BlueXP left navigation menu, click *Governance > Classification* and then select the *Configuration* tab.
 +
 image:screenshot_cloud_compliance_we_scan_config.png[A screenshot of the Configuration tab immediately after deploying the Cloud Data Sense instance.]
 
@@ -117,9 +117,7 @@ You can either open the security group for traffic from the IP address of the Da
 
 . If you use CIFS, provide Data Sense with Active Directory credentials so it can scan CIFS volumes.
 
-.. At the top of Cloud Manager, click *Data Sense*.
-
-.. Click the *Configuration* tab.
+.. From the BlueXP left navigation menu, click *Governance > Classification* and then select the *Configuration* tab.
 +
 image:screenshot_cifs_credentials.gif[A screenshot of the Compliance tab that shows the Scan Status button that's available in the top right of the content pane.]
 

@@ -46,7 +46,7 @@ The following requirements are specific to scanning S3 buckets.
 [[policy-requirements]]
 
 Set up an IAM role for the Cloud Data Sense instance::
-Cloud Data Sense needs permissions to connect to the S3 buckets in your account and to scan them. Set up an IAM role that includes the permissions listed below. Cloud Manager prompts you to select an IAM role when you enable Data Sense on the Amazon S3 working environment.
+Cloud Data Sense needs permissions to connect to the S3 buckets in your account and to scan them. Set up an IAM role that includes the permissions listed below. BlueXP prompts you to select an IAM role when you enable Data Sense on the Amazon S3 working environment.
 +
 [source,json]
 {
@@ -89,9 +89,9 @@ NOTE: You can't use a proxy to get to S3 over the internet.
 
 == Deploying the Cloud Data Sense instance
 
-link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense in Cloud Manager^] if there isn't already an instance deployed.
+link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense in BlueXP^] if there isn't already an instance deployed.
 
-You need to deploy the instance using a Connector deployed in AWS so that Cloud Manager automatically discovers the S3 buckets in this AWS account and displays them in an Amazon S3 working environment.
+You need to deploy the instance using a Connector deployed in AWS so that BlueXP automatically discovers the S3 buckets in this AWS account and displays them in an Amazon S3 working environment.
 
 *Note:* Deploying Cloud Data Sense in an on-premises location is not currently supported when scanning S3 buckets.
 
@@ -103,7 +103,7 @@ Enable Cloud Data Sense on Amazon S3 after you verify the prerequisites.
 
 .Steps
 
-. From the Cloud Manager left navigation menu, click *Canvas*.
+. From the BlueXP left navigation menu, click *Storage > Canvas*.
 
 . Select the Amazon S3 working environment.
 +
@@ -123,13 +123,13 @@ TIP: You can also enable compliance scans for a working environment from the Con
 
 .Result
 
-Cloud Manager assigns the IAM role to the instance.
+BlueXP assigns the IAM role to the instance.
 
 == Enabling and disabling compliance scans on S3 buckets
 
-After Cloud Manager enables Cloud Data Sense on Amazon S3, the next step is to configure the buckets that you want to scan.
+After BlueXP enables Cloud Data Sense on Amazon S3, the next step is to configure the buckets that you want to scan.
 
-When Cloud Manager is running in the AWS account that has the S3 buckets you want to scan, it discovers those buckets and displays them in an Amazon S3 working environment.
+When BlueXP is running in the AWS account that has the S3 buckets you want to scan, it discovers those buckets and displays them in an Amazon S3 working environment.
 
 Cloud Data Sense can also <<Scanning buckets from additional AWS accounts,scan S3 buckets that are in different AWS accounts>>.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-licensing-datasense.html
 keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, data sense, cloud data sense
-summary: The first 1 TB of data that Cloud Data Sense scans in a Cloud Manager workspace is free. A BYOL license from NetApp, or a Cloud Manager subscription from your cloud provider Marketplace, is required to continue scanning data after that point.
+summary: The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspace is free. A BYOL license from NetApp, or a subscription from your cloud provider Marketplace, is required to continue scanning data after that point.
 ---
 
 = Set up licensing for Cloud Data Sense
@@ -13,7 +13,7 @@ summary: The first 1 TB of data that Cloud Data Sense scans in a Cloud Manager w
 :imagesdir: ./media/
 
 [.lead]
-The first 1 TB of data that Cloud Data Sense scans in a Cloud Manager workspace is free. A BYOL license from NetApp, or a Cloud Manager subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
+The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspace is free. A BYOL license from NetApp, or a subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
 
 A few notes before you read any further:
 
@@ -36,9 +36,9 @@ image:screenshot_compliance_subscribe.png[A screenshot showing how much data is 
 
 These steps must be completed by a user who has the _Account Admin_ role.
 
-. In the upper right of the Cloud Manager console, click the Settings icon, and select *Credentials*.
+. In the upper right of the BlueXP console, click the Settings icon, and select *Credentials*.
 +
-image:screenshot_settings_icon.gif[A screenshot of Cloud Manager's top right banner where you can select the Settings icon.]
+image:screenshot_settings_icon.gif[A screenshot of BlueXP's top right banner where you can select the Settings icon.]
 
 . Find the credentials for the AWS Instance Profile, Azure Managed Service Identity, or Google Project.
 +
@@ -73,15 +73,15 @@ Bring-your-own licenses from NetApp provide 1-, 2-, or 3-year terms. The BYOL *C
 If you don't have a Cloud Data Sense license, contact us to purchase one:
 
 * mailto:ng-contact-data-sense@netapp.com?subject=Licensing[Send email to purchase a license].
-* Click the chat icon in the lower-right of Cloud Manager to request a license.
+* Click the chat icon in the lower-right of BlueXP to request a license.
 
 Optionally, if you have an unassigned node-based license for Cloud Volumes ONTAP that you won't be using, you can convert it to a Cloud Data Sense license with the same dollar-equivalence and the same expiration date. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses[Go here for details^].
 
-You use the Digital Wallet page in Cloud Manager to manage Cloud Data Sense BYOL licenses. You can add new licenses and update existing licenses.
+You use the Digital Wallet page in BlueXP to manage Cloud Data Sense BYOL licenses. You can add new licenses and update existing licenses.
 
 === Obtain your Cloud Data Sense license file
 
-After you have purchased your Cloud Data Sense license, you activate the license in Cloud Manager by entering the Cloud Data Sense serial number and NSS account, or by uploading the NLF license file. The steps below show how to get the NLF license file if you plan to use that method.
+After you have purchased your Cloud Data Sense license, you activate the license in BlueXP by entering the Cloud Data Sense serial number and NSS account, or by uploading the NLF license file. The steps below show how to get the NLF license file if you plan to use that method.
 
 If you've deployed Cloud Data Sense on a host in an on-premises site that doesn’t have internet access, you'll need to obtain the license file from an internet-connected system. Activating the license using the serial number and NSS account is not available for dark site installations.
 
@@ -95,19 +95,19 @@ image:screenshot_cloud_tiering_license_step1.gif[A screenshot that shows a table
 
 . Under *License Key*, click *Get NetApp License File*.
 
-. Enter your Cloud Manager Account ID (this is called a Tenant ID on the support site) and click *Submit* to download the license file.
+. Enter your BlueXP Account ID (this is called a Tenant ID on the support site) and click *Submit* to download the license file.
 +
 image:screenshot_cloud_tiering_license_step2.gif[A screenshot that shows the get license dialog box where you enter your tenant ID and then click Submit to download the license file.]
 +
-You can find your Cloud Manager Account ID by selecting the *Account* drop-down from the top of Cloud Manager, and then clicking *Manage Account* next to your account. Your Account ID is in the Overview tab.
+You can find your BlueXP Account ID by selecting the *Account* drop-down from the top of BlueXP, and then clicking *Manage Account* next to your account. Your Account ID is in the Overview tab.
 
 === Add Cloud Data Sense BYOL licenses to your account
 
-After you purchase a Cloud Data Sense license for your Cloud Manager account, you need to add the license to Cloud Manager to use the Data Sense service.
+After you purchase a Cloud Data Sense license for your BlueXP account, you need to add the license to BlueXP to use the Data Sense service.
 
 .Steps
 
-. From the Cloud Manager left navigation menu, click *Digital Wallet* and then select the *Data Services Licenses* tab.
+. From the BlueXP left navigation menu, click *Governance > Digital wallet* and then select the *Data Services Licenses* tab.
 
 . Click *Add License*.
 
@@ -115,14 +115,14 @@ After you purchase a Cloud Data Sense license for your Cloud Manager account, yo
 +
 * If you have the Data Sense license serial number and know your NSS account, select the *Enter Serial Number* option and enter that information.
 +
-If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html[add the NSS account to Cloud Manager^].
+If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html[add the NSS account to BlueXP^].
 * If you have the Data Sense license file (required when installed in a dark site), select the *Upload License File* option and follow the prompts to attach the file.
 +
 image:screenshot_services_license_add.png[A screenshot that shows the page to add the Cloud Data Sense BYOL license.]
 
 .Result
 
-Cloud Manager adds the license so that your Cloud Data Sense service is active.
+BlueXP adds the license so that your Cloud Data Sense service is active.
 
 === Update a Cloud Data Sense BYOL license
 
@@ -138,11 +138,11 @@ You can update your Cloud Data Sense license before it expires so that there is 
 
 .Steps
 
-. Click the chat icon in the lower-right of Cloud Manager to request an extension to your term or additional capacity to your Cloud Data Sense license for the particular serial number. You can also mailto:ng-contact-data-sense@netapp.com?subject=Licensing[send an email to request an update to your license].
+. Click the chat icon in the lower-right of BlueXP to request an extension to your term or additional capacity to your Cloud Data Sense license for the particular serial number. You can also mailto:ng-contact-data-sense@netapp.com?subject=Licensing[send an email to request an update to your license].
 +
-After you pay for the license and it is registered with the NetApp Support Site, Cloud Manager automatically updates the license in the Digital Wallet and the Data Services Licenses page will reflect the change in 5 to 10 minutes.
+After you pay for the license and it is registered with the NetApp Support Site, BlueXP automatically updates the license in the Digital Wallet and the Data Services Licenses page will reflect the change in 5 to 10 minutes.
 
-. If Cloud Manager can't automatically update the license (for example, when installed in a dark site), then you’ll need to manually upload the license file.
+. If BlueXP can't automatically update the license (for example, when installed in a dark site), then you’ll need to manually upload the license file.
 .. You can <<Obtain your Cloud Data Sense license file,obtain the license file from the NetApp Support Site>>.
 .. On the Digital Wallet page in the _Data Services Licenses_ tab, click image:screenshot_horizontal_more_button.gif[More icon] for the service serial number you are updating, and click *Update License*.
 +
@@ -151,19 +151,19 @@ image:screenshot_services_license_update.png[A screenshot of selecting the Updat
 
 .Result
 
-Cloud Manager updates the license so that your Cloud Data Sense service continues to be active.
+BlueXP updates the license so that your Cloud Data Sense service continues to be active.
 
 === BYOL license considerations
 
-When using a Cloud Data Sense BYOL license, Cloud Manager displays a warning in the Data Sense UI and in the Digital Wallet UI when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. You receive these warnings:
+When using a Cloud Data Sense BYOL license, BlueXP displays a warning in the Data Sense UI and in the Digital Wallet UI when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. You receive these warnings:
 
 * When the amount of data you are scanning has reached 80% of licensed capacity, and again when you have reached the limit
 * 30 days before a license is due to expire, and again when the license expires
 
-Use the chat icon in the lower right of the Cloud Manager interface to renew your license when you see these warnings.
+Use the chat icon in the lower right of the BlueXP interface to renew your license when you see these warnings.
 
 If your license expires, Data Sense continues to run, but access to the Dashboards is blocked so that you can't view information about any of your scanned data. Only the _Configuration_ page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit.
 
-Once you renew your BYOL license, Cloud Manager automatically updates the license in the Digital Wallet and provides full access to all Dashboards. If Cloud Manager can't access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to Cloud Manager. For instructions, see <<Update a Cloud Data Sense BYOL license,how to update a Cloud Data Sense license>>.
+Once you renew your BYOL license, BlueXP automatically updates the license in the Digital Wallet and provides full access to all Dashboards. If BlueXP can't access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to BlueXP. For instructions, see <<Update a Cloud Data Sense BYOL license,how to update a Cloud Data Sense license>>.
 
 TIP: If the account you are using has both a BYOL license and a PAYGO subscription, Data Sense _will not_ shift over to the PAYGO subscription when the BYOL license expires. You must renew the BYOL license.

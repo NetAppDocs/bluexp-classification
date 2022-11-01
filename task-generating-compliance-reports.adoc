@@ -39,11 +39,11 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. From the Cloud Manager left navigation menu, click *Data Sense*.
+. From the BlueXP left navigation menu, click *Governance > Classification*.
 
 . Click *Compliance*, and then click the download icon next to *Privacy Risk Assessment* under *Reports*.
 +
-image:screenshot_privacy_risk_assessment.gif[A screen shot of the Compliance tab in Cloud Manager that shows the Reports pane where you can click Privacy Risk Assessment.]
+image:screenshot_privacy_risk_assessment.gif[A screen shot of the Compliance tab in BlueXP that shows the Reports pane where you can click Privacy Risk Assessment.]
 
 .Result
 
@@ -99,11 +99,11 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. From the Cloud Manager left navigation menu, click *Data Sense*.
+. From the BlueXP left navigation menu, click *Governance > Classification*.
 
 . Click *Compliance*, and then click the download icon next to *PCI DSS Report* under *Reports*.
 +
-image:screenshot_pci_dss.gif[A screen shot of the Compliance tab in Cloud Manager that shows the Reports pane where you can click Privacy Risk Assessment.]
+image:screenshot_pci_dss.gif[A screen shot of the Compliance tab in BlueXP that shows the Reports pane where you can click Privacy Risk Assessment.]
 
 .Result
 
@@ -137,11 +137,11 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. From the Cloud Manager left navigation menu, click *Data Sense*.
+. From the BlueXP left navigation menu, click *Governance > Classification*.
 
 . Click *Compliance*, and then click the download icon next to *HIPAA Report* under *Reports*.
 +
-image:screenshot_hipaa.gif[A screen shot of the Compliance tab in Cloud Manager that shows the Reports pane where you can click HIPAA.]
+image:screenshot_hipaa.gif[A screen shot of the Compliance tab in BlueXP that shows the Reports pane where you can click HIPAA.]
 
 .Result
 
@@ -168,7 +168,7 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. From the Cloud Manager left navigation menu, click *Data Sense*.
+. From the BlueXP left navigation menu, click *Governance > Classification*.
 
 . Click *Governance*, and then click the *Full Data Mapping Overview Report* button from the Governance Dashboard.
 +

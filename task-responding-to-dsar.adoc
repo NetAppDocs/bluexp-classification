@@ -39,7 +39,7 @@ NOTE: English, German, and Spanish are supported when searching for the names of
 
 .Steps
 
-. From the Cloud Manager left navigation menu, click *Data Sense*.
+. From the BlueXP left navigation menu, click *Governance > Classification*.
 
 . Click *Data Subjects*.
 
