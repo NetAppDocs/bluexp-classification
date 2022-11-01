@@ -27,7 +27,7 @@ When installed in this manner (sometimes called an "offline" or "dark" site), Da
 * Non-NetApp NFS or CIFS file shares
 * Object Storage that uses the Simple Storage Service (S3) protocol
 
-For special situations where you need a very secure Cloud Manager installation, but you also want to scan local data from OneDrive accounts or SharePoint Online accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <<SharePoint and OneDrive special requirements,SharePoint and OneDrive special requirements>> for details.
+For special situations where you need a very secure BlueXP installation, but you also want to scan local data from OneDrive accounts or SharePoint Online accounts, you can use the Data Sense offline installer and provide internet access to a few select endpoints. See <<SharePoint and OneDrive special requirements,SharePoint and OneDrive special requirements>> for details.
 
 There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, AWS S3, or Google Drive accounts when Data Sense is deployed in a dark site.
 
@@ -36,19 +36,19 @@ There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Fil
 Most Data Sense features work when it is deployed in a site with no internet access. However, certain features that require internet access are not supported, for example:
 
 * Managing Microsoft Azure Information Protection (AIP) labels
-* Sending email alerts to Cloud Manager users when certain critical Policies return results
-* Setting Cloud Manager roles for different users (for example, Account Admin or Compliance Viewer)
+* Sending email alerts to BlueXP users when certain critical Policies return results
+* Setting BlueXP roles for different users (for example, Account Admin or Compliance Viewer)
 * Copying and synchronizing source files using Cloud Sync
 * Receiving user feedback
-* Automated software upgrades from Cloud Manager
+* Automated software upgrades from BlueXP
 +
-Both the Cloud Manager Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the link:whats-new.html[Cloud Data Sense Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to <<Upgrade Data Sense software,upgrade your Data Sense software>>.
+Both the BlueXP Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the link:whats-new.html[Cloud Data Sense Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to <<Upgrade Data Sense software,upgrade your Data Sense software>>.
 
 == Quick start
 
 Get started quickly by following these steps, or scroll down to the remaining sections for full details.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the Cloud Manager Connector
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the BlueXP Connector
 
 [role="quick-margin-para"]
 If you don't already have a Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector^] on a Linux host now.
@@ -56,7 +56,7 @@ If you don't already have a Connector installed at your offline on-premises site
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review Data Sense prerequisites
 
 [role="quick-margin-para"]
-Ensure that your Linux system meets the <<Prepare the Linux host system,host requirements>>, that it has all required software installed, and that your offline environment meets the required <<Verify Cloud Manager and Data Sense prerequisites,permissions and connectivity>>.
+Ensure that your Linux system meets the <<Prepare the Linux host system,host requirements>>, that it has all required software installed, and that your offline environment meets the required <<Verify BlueXP and Data Sense prerequisites,permissions and connectivity>>.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Download and deploy Data Sense
 
@@ -66,11 +66,11 @@ Download the Cloud Data Sense software from the NetApp Support Site and copy the
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the Cloud Data Sense service
 
 [role="quick-margin-para"]
-The first 1 TB of data that Cloud Data Sense scans in Cloud Manager is free. A BYOL license from NetApp is required to continue scanning data after that point.
+The first 1 TB of data that Cloud Data Sense scans in BlueXP is free. A BYOL license from NetApp is required to continue scanning data after that point.
 
-== Install the Cloud Manager Connector
+== Install the BlueXP Connector
 
-If you don't already have a Cloud Manager Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector^] on a Linux host in your offline site.
+If you don't already have a BlueXP Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector^] on a Linux host in your offline site.
 
 == Prepare the Linux host system
 
@@ -95,24 +95,24 @@ You must install the following software on the host before you install Data Sens
 
 NOTE: The IP address of the Data Sense host system can't be changed after installation.
 
-== Verify Cloud Manager and Data Sense prerequisites
+== Verify BlueXP and Data Sense prerequisites
 
 Review the following prerequisites to make sure that you have a supported configuration before you deploy Cloud Data Sense.
 
-* Ensure that Cloud Manager has permissions to deploy resources and create security groups for the Cloud Data Sense instance.
-* Ensure that the Cloud Manager Connector can access the Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
+* Ensure that BlueXP has permissions to deploy resources and create security groups for the Cloud Data Sense instance.
+* Ensure that the BlueXP Connector can access the Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
 +
 This connection enables deployment of the Data Sense instance and enables you to view compliance and governance information.
 +
-Make sure port 8080 is open so you can see the installation progress in Cloud Manager.
+Make sure port 8080 is open so you can see the installation progress in BlueXP.
 * Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense instance needs to stay on to continuously scan your data.
-* Ensure web browser connectivity to Cloud Data Sense. After Cloud Data Sense is enabled, ensure that users access the Cloud Manager interface from a host that has a connection to the Data Sense instance.
+* Ensure web browser connectivity to Cloud Data Sense. After Cloud Data Sense is enabled, ensure that users access the BlueXP interface from a host that has a connection to the Data Sense instance.
 +
-The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to others. As a result, the web browser that you use to access Cloud Manager must have a connection to that private IP address. That connection can come from a host that's inside the same network as the Data Sense instance.
+The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to others. As a result, the web browser that you use to access BlueXP must have a connection to that private IP address. That connection can come from a host that's inside the same network as the Data Sense instance.
 
 == SharePoint and OneDrive special requirements
 
-When Cloud Manager and Data Sense are deployed in a site with no internet access, you can scan files in SharePoint Online and OneDrive accounts by providing internet access to a few select endpoints. 
+When BlueXP and Data Sense are deployed in a site with no internet access, you can scan files in SharePoint Online and OneDrive accounts by providing internet access to a few select endpoints. 
 //SharePoint On-Premises accounts can be scanned without providing any internet access.
 
 [cols="50,50",options="header"]
@@ -128,7 +128,7 @@ When Cloud Manager and Data Sense are deployed in a site with no internet access
 
 | \https://cloudmanager.cloud.netapp.com
 
-| Communication with the Cloud Manager service, which includes NetApp accounts.
+| Communication with the BlueXP service, which includes NetApp accounts.
 
 |===
 
@@ -153,7 +153,7 @@ Follow these steps when installing Data Sense software on a single on-premises h
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
 * Verify that you have installed the two prerequisite software packages (Docker Engine and Python 3).
 * Make sure you have root privileges on the Linux system.
-* Verify that your offline environment meets the required <<Verify Cloud Manager and Data Sense prerequisites,permissions and connectivity>>.
+* Verify that your offline environment meets the required <<Verify BlueXP and Data Sense prerequisites,permissions and connectivity>>.
 
 .Steps
 
@@ -168,7 +168,7 @@ tar -xzf DataSense-offline-bundle-v1.16.1.tar.gz
 +
 This extracts required software and the actual installation file *DATASENSE-INSTALLER-V1.16.1.tar.gz*.
 
-. Launch Cloud Manager and click the *Data Sense* tab.
+. Launch BlueXP and select *Governance > Classification*.
 
 . Click *Activate Data Sense*.
 +
@@ -199,7 +199,7 @@ tar -xzf DATASENSE-INSTALLER-V1.16.1.tar.gz
 a. Paste the information you copied from step 7:
 `sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --darksite`
 b. Enter the IP address or host name of the Data Sense host machine so it can be accessed by the Connector instance.
-c. Enter the IP address or host name of the Cloud Manager Connector host machine so it can be accessed by the Data Sense instance.
+c. Enter the IP address or host name of the BlueXP Connector host machine so it can be accessed by the Data Sense instance.
 | Alternatively, you can create the whole command in advance, providing the necessary host parameters:
 `sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --manager-host <cm_host> --no-proxy --darksite`
 |===
@@ -211,13 +211,13 @@ Variable values:
 * _agent_id_ = Connector ID
 * _token_ = jwt user token
 * _ds_host_ = IP address or host name of the Data Sense Linux system.
-* _cm_host_ = IP address or host name of the Cloud Manager Connector system.
+* _cm_host_ = IP address or host name of the BlueXP Connector system.
 
 .Result
 
 The Data Sense installer installs packages, registers the installation, and installs Data Sense. Installation can take 10 to 20 minutes.
 
-If there is connectivity over port 8080 between the host machine and the Connector instance, you will see the installation progress in the Data Sense tab in Cloud Manager.
+If there is connectivity over port 8080 between the host machine and the Connector instance, you will see the installation progress in the Data Sense tab in BlueXP.
 
 .What's Next
 From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and link:task-scanning-databases.html[databases] that you want to scan.
@@ -235,7 +235,7 @@ Follow these steps when installing Data Sense software on multiple on-premises h
 * Verify that all your Linux systems for the Manager and Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
 * Verify that you have installed the two prerequisite software packages (Docker Engine and Python 3).
 * Make sure you have root privileges on the Linux systems.
-* Verify that your offline environment meets the required <<Verify Cloud Manager and Data Sense prerequisites,permissions and connectivity>>.
+* Verify that your offline environment meets the required <<Verify BlueXP and Data Sense prerequisites,permissions and connectivity>>.
 * You must have the IP addresses of the scanner node hosts that you plan to use.
 * The following ports and protocols must be enabled on all hosts:
 +

@@ -47,7 +47,7 @@ The audit log is located on the Data Sense machine in: `/opt/netapp/audit_logs/<
 
 When Data Sense is installed on your premises, you can navigate directly to the log files.
 
-When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the Cloud Manager Connector installation. The SSH command is:
+When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
 
  ssh -i <path to the ssh key> <machine user>@<datasense ip>
 
@@ -55,8 +55,8 @@ When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance
 * <machine user>:
 
 ** For AWS: use the <ec2-user>
-** For Azure: use the user created for the Cloud Manager instance
-** For GCP: use the user created for the Cloud Manager instance
+** For Azure: use the user created for the BlueXP instance
+** For GCP: use the user created for the BlueXP instance
 
 * <datasense ip> = IP address of the virtual machine instance
 
