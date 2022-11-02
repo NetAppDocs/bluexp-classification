@@ -144,9 +144,9 @@ Depending on whether a label is already applied to a file, and the classificatio
 
 | Has no label | The label is added
 | Has an existing label of a lower level of classification | The higher level label is added
-| Has an existing label of a higher level of classification |	The higher level label is retained
+| Has an existing label of a higher level of classification | The higher level label is retained
 | Is assigned a label both manually and by a Policy | The higher level label is added
-| Is assigned two different labels by two Policies |	The higher level label is added
+| Is assigned two different labels by two Policies | The higher level label is added
 
 |===
 

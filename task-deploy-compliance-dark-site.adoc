@@ -23,7 +23,7 @@ When installed in this manner (sometimes called an "offline" or "dark" site), Da
 
 * On-premises ONTAP systems
 * Database schemas
-//* SharePoint On-Premises accounts (SharePoint Server)
+* SharePoint On-Premises accounts (SharePoint Server)
 * Non-NetApp NFS or CIFS file shares
 * Object Storage that uses the Simple Storage Service (S3) protocol
 
@@ -113,7 +113,8 @@ The Data Sense instance uses a private IP address to ensure that the indexed dat
 == SharePoint and OneDrive special requirements
 
 When BlueXP and Data Sense are deployed in a site with no internet access, you can scan files in SharePoint Online and OneDrive accounts by providing internet access to a few select endpoints. 
-//SharePoint On-Premises accounts can be scanned without providing any internet access.
+
+SharePoint On-Premises accounts can be scanned without providing any internet access.
 
 [cols="50,50",options="header"]
 |===

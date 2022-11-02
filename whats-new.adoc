@@ -16,12 +16,18 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 7 November 2022 (version 1.17)
+
+=== Support for scanning SharePoint On-Premises accounts
+
+Data Sense now can scan both SharePoint Online accounts and SharePoint On-Premises accounts (SharePoint Server). If you need to install SharePoint on your own servers, or in sites without internet access, now you can have Data Sense scan the user files in those accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html#adding-a-sharepoint-on-premise-account[Learn more^].
+
+=== Ability to rescan multiple directories (folders or shares) 
+
+Now you can rescan multiple directories (folders or shares) immediately so that changes are reflected in the system. This allows you to prioritize rescanning of certain data before other data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#rescanning-data-for-an-existing-repository[See how to rescan a directory^].
+
 == 6 September 2022 (version 1.16)
 
-//=== Support for scanning SharePoint On-Premises accounts
-//
-//Data Sense now can scan both SharePoint Online accounts and SharePoint On-Premises accounts (SharePoint Server). If you need to install SharePoint on your own servers, or in sites without internet access, now you can have Data Sense scan the user files in those accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html#adding-a-sharepoint-on-premise-account[Learn more^].
-//
 === Ability to rescan a repository immediately to reflect changes in files
 
 If you need to rescan a particular repository immediately so that changes are reflected in the system, you can select the repository and rescan it. This allows you to prioritize rescanning of certain data before other data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#rescanning-data-for-an-existing-repository[See how to rescan a directory^].
@@ -71,6 +77,7 @@ When viewing the individual repositories that Data Sense is scanning (volumes, b
 === Now you can add custom patterns that Data Sense will identify in your data
 
 You can add a personal pattern to identify specific information in your data using a custom regular expression (regex). The regex is added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the Personal patterns section. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html#creating-custom-personal-data-identifiers-using-a-regex[Learn more^].
+// end::whats-new[]
 
 == 6 July 2022 (version 1.14)
 
@@ -93,7 +100,6 @@ In the past when you created a custom Policy, the results showed the files that 
 === Data Sense can move up to 100,000 files at a time now
 
 If you plan to use Data Sense to move files from a scanned data source to an NFS share, the maximum number of files has been increased to 100,000 files. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[See how to move files using Data Sense].
-// end::whats-new[]
 
 == 12 June 2022 (version 1.13.1)
 
