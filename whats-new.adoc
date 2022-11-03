@@ -26,6 +26,12 @@ Data Sense now can scan both SharePoint Online accounts and SharePoint On-Premis
 
 Now you can rescan multiple directories (folders or shares) immediately so that changes are reflected in the system. This allows you to prioritize rescanning of certain data before other data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#rescanning-data-for-an-existing-repository[See how to rescan a directory^].
 
+=== Ability to add additional on-premises "scanner" nodes to scan specific data sources
+
+If you have installed Data Sense in an on-premises location, and you find that you need more scanning processing power to scan your data sources, you can add more "scanner" nodes. You can add the scanner nodes immediately after installing the manager node, or you can add a scanner node later. For example, if you realize that the amount of data in one of your data sources has tripled in size after 1 year, you can add a new scanner node to assist with data scanning.
+
+If necessary, the scanner nodes can be installed on host systems that are physically closer to the data sources that you are scanning. The closer the scanner node is to the data, the better, because it reduces network latency as much as possible while scanning data. 
+
 == 6 September 2022 (version 1.16)
 
 === Ability to rescan a repository immediately to reflect changes in files
