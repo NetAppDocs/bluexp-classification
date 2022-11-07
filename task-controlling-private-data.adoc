@@ -135,7 +135,7 @@ When viewing the details for a single file there are a few actions you can take 
 
 == Viewing permissions for files and directories
 
-To view a list of all users or groups who have access to a file or to a directory, and the types of permissions they have, click *View all Permissions*. This button is available only for data in CIFS shares, SharePoint, and OneDrive.
+To view a list of all users or groups who have access to a file or to a directory, and the types of permissions they have, click *View all Permissions*. This button is available only for data in CIFS shares, SharePoint Online, SharePoint On-Premise, and OneDrive.
 
 Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into Data Sense. link:task-add-active-directory-datasense.html[See how to do this].
 
