@@ -39,7 +39,7 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification*.
+. From the BlueXP menu, click *Governance > Classification*.
 
 . Click *Compliance*, and then click the download icon next to *Privacy Risk Assessment* under *Reports*.
 +
@@ -66,15 +66,15 @@ The logic used to determine the score is as follows:
 | Logic
 
 | 0 | All three variables are exactly 0%
-| 1 |	One of the variables are larger than 0%
-| 2 |	One of the variables are larger than 3%
-| 3 |	Two of the variables are larger than 3%
-| 4 |	Three of the variables are larger than 3%
-| 5 |	One of the variables are larger than 6%
-| 6 |	Two of the variables are larger than 6%
-| 7 |	Three of the variables are larger than 6%
-| 8 |	One of the variables are larger than 15%
-| 9 |	Two of the variables are larger than 15%
+| 1 | One of the variables are larger than 0%
+| 2 | One of the variables are larger than 3%
+| 3 | Two of the variables are larger than 3%
+| 4 | Three of the variables are larger than 3%
+| 5 | One of the variables are larger than 6%
+| 6 | Two of the variables are larger than 6%
+| 7 | Three of the variables are larger than 6%
+| 8 | One of the variables are larger than 15%
+| 9 | Two of the variables are larger than 15%
 | 10 | Three of the variables are larger than 15%
 
 |===
@@ -99,7 +99,7 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification*.
+. From the BlueXP menu, click *Governance > Classification*.
 
 . Click *Compliance*, and then click the download icon next to *PCI DSS Report* under *Reports*.
 +
@@ -137,7 +137,7 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification*.
+. From the BlueXP menu, click *Governance > Classification*.
 
 . Click *Compliance*, and then click the download icon next to *HIPAA Report* under *Reports*.
 +
@@ -168,7 +168,7 @@ Go to the Data Sense tab to generate the report.
 
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification*.
+. From the BlueXP menu, click *Governance > Classification*.
 
 . Click *Governance*, and then click the *Full Data Mapping Overview Report* button from the Governance Dashboard.
 +

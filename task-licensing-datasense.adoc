@@ -107,7 +107,7 @@ After you purchase a Cloud Data Sense license for your BlueXP account, you need 
 
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Digital wallet* and then select the *Data Services Licenses* tab.
+. From the BlueXP menu, click *Governance > Digital wallet* and then select the *Data Services Licenses* tab.
 
 . Click *Add License*.
 
