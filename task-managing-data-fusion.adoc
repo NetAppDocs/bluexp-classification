@@ -72,6 +72,8 @@ You can add a personal pattern to identify specific information in your data usi
 
 For example, you may want to see where your internal Product IDs are mentioned in all of your files. If the Product ID has a clear structure, for example, it is a 12-digit number that starts with 201, you can use the custom regex feature to search for it in your files.
 
+After adding the regex, Data Sense will restart scanning all data sources - the new results will appear in Data Sense after the scan has completed.
+
 === Accessing the command line
 
 You'll need to access the Data Sense system in order to initiate the command to add a regex.
@@ -141,3 +143,69 @@ For example, to remove the *Internal Product ID* regex:
 [user Datasense]$ sudo bash tools/datascience/custom_regex/custom_regex.sh -s deactivate -n "Internal Product ID"
 
  log v1.0 | 2022-08-17 09:13:15,431 | INFO | ds_logger | custom_regex | 31 | 1 | None | custom_regex_31 | A pattern named 'Internal Product ID' was deactivated successfully 
+
+== Adding custom keyword patterns to Data Sense scans
+
+You can add custom keyword patterns to Data Sense so that it will identify specific information in your data. You add the patterns from a file that you define. The patterns are added to the existing predefined keywords that Data Sense already uses, and the results will be visible under the personal patterns section. 
+
+For example, you may want to see where your internal Product IDs are mentioned in all of your files. If the Product ID has a clear structure, for example, it is a 12-digit number that starts with 201, you can use the custom regex feature to search for it in your files.
+
+After updating the custom keywords, Data Sense will restart scanning all data sources - the new results will appear in Data Sense after the scan has completed.
+
+You must add, or create, the text files that include the custom keyword patterns in the following location:
+
+ /opt/netapp/Datasense/tools/datascience/custom_keywords/keywords_sets
+ 
+=== Command syntax to add the custom keyword patterns
+
+You'll need to access the Data Sense system in order to add the file that contains the custom keyword patterns, and to initiate the command to add the custom keywords. <<Accessing the command line,See how to access the command line>> whether you have installed Data Sense in your premises, or you have deployed it in the cloud.
+
+The command syntax to add a custom keyword pattern file is:
+
+ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s activate -f <file_name>.txt 
+
+* <file_name> = This is the name of the file that contains the keyword patterns.
+
+You run the command from the path */opt/netapp/Datasense/*.
+
+If you have created many files that contain custom keywords, you can add the keywords from all the files at once using this command:
+
+ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s activate
+
+Note the following requirements:
+
+* The file name should not contain digits.
+* Each file can contain a maximum of 100,000 words. If there are more words, only the first 100,000 are added.
+* Each word must be at least 3 characters long. Shorter words will be ignored.
+* Duplicate words are only added once.
+
+=== Example
+
+The Product ID is a 12-digit number that starts with 201; so the regular expression is *\b201\d{9}\b*. And you want to the text in the Data Sense UI to identify this pattern as *Internal Product ID*. 
+
+To see where your internal Product IDs are mentioned in all of your files, enter the following commands.
+
+[source,cli]
+[user ~]$ cd /opt/netapp/Datasense/
+[user Datasense]$ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s activate -f sample.txt 
+
+ log v1.0 | 2022-08-24 08:16:25,332 | INFO | ds_logger | upload_custom_keywords | 126 | 1 | None | upload_custom_keywords_126 | All legal keywords were successfully inserted
+
+.Results
+After the next scan, the results will include this new information in the Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
+
+image:screenshot_add_regex_result.png[A screenshot showing an example of custom regex results in the Investigation Results pane.]
+
+=== Deactivating custom keyword patterns
+
+If you decide at some later point that you don't need Data Sense to identify certain custom keyword patterns that you previously added, use the *deactivate* option in the command to remove the keyword patterns that are defined in the text file.
+
+ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s deactivate -f <file_name>.txt 
+
+For example, to remove the keyword patterns defined in the file *sample.txt*:
+
+[source,cli]
+[user ~]$ cd /opt/netapp/Datasense/
+[user Datasense]$ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s deactivate -f sample.txt 
+
+ log v1.0 | 2022-08-24 08:16:25,332 | INFO | ds_logger | upload_custom_keywords | 87 | 1 | None | upload_custom_keywords_87 | Deactivated keyword pattern from sample.txt successfully 
