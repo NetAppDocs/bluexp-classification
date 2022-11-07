@@ -376,7 +376,7 @@ When the installation finishes on all scanner nodes and they have been joined to
     - "working_environment_id3"
     - "working_environment_id4"
 +
-Any working environment that is not added to the list is scanned by the "default" group - if a scanner node exists for the "default" group.
+Any working environment that is not added to the list is scanned by the "default" group - you must have at least one scanner node in the "default" group.
 //+
 //You can make an HTTP request to get the working environment id:
 //https://cloudmanager.cloud.netapp.com/account/<account_id>/providers/cloudmanager_compliance/api/v1.27/working_environment/scan_status
