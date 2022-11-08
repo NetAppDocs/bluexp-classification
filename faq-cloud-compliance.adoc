@@ -22,7 +22,7 @@ The following questions provide a general understanding of Cloud Data Sense.
 
 === What is Cloud Data Sense?
 
-Cloud Data Sense is a cloud offering that uses Artificial Intelligence (AI) driven technology to help you understand data context and identify sensitive data across your storage systems. The systems can be working environments that you've added to the BlueXP Canvas and many types of data sources that Data Sense can access over your networks. <<What sources of data can be scanned with Data Sense,See the full list below>>.
+Cloud Data Sense is a cloud offering that uses Artificial Intelligence (AI) driven technology to help you understand data context and identify sensitive data across your storage systems. The systems can be working environments that you've added to the BlueXP Canvas and many types of data sources that Data Sense can access over your networks. link:faq-cloud-compliance.html#what-sources-of-data-can-be-scanned-with-data-sense[See the full list below].
 
 Cloud Data Sense provides pre-defined parameters (such as sensitive information types and categories) to address new data compliance regulations for data privacy and sensitivity, such as GDPR, CCPA, HIPAA, and more.
 
@@ -41,7 +41,7 @@ link:concept-cloud-compliance.html[Learn more about how Cloud Data Sense works^]
 * Migrate data from legacy systems to the cloud.
 * Comply with data retention policies.
 
-https://cloud.netapp.com/cloud-compliance[Learn more about the use cases for Cloud Data Sense^].
+https://cloud.netapp.com/netapp-cloud-data-sense[Learn more about the use cases for Cloud Data Sense^].
 
 === What about the architecture of Cloud Data Sense?
 
@@ -69,7 +69,7 @@ Data changes frequently, so Cloud Data Sense scans your data continuously with n
 
 link:concept-cloud-compliance.html#how-scans-work[Learn how scans work].
 
-Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans. link:task-managing-compliance.html#reducing-the-data-sense-scan-speed[See how to reduce the scan speed].
+Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans. link:task-reduce-scan-speed.html[See how to reduce the scan speed].
 
 === Can I search my data using Cloud Data Sense?
 
@@ -127,9 +127,13 @@ NOTE: To completely remove the Cloud Data Sense instance, you can manually remov
 
 Cloud Data Sense provides out-of-the-box insights to your data. These insights can be extracted and used for your organization's needs.
 
-Additionally, you can use the *Data Fusion* capability to have Data Sense scan all your data based on criteria found in specific columns in databases you are scanning -- essentially allowing you to make your own custom personal data types.
+Additionally, Data Sense provides many ways for you to add a custom list of "personal data" that Data Sense will identify in scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
 
-link:task-managing-data-fusion.html#creating-custom-personal-data-identifiers-from-your-databases[Learn more^].
+* You can add unique identifiers based on specific columns in databases you are scanning -- we call this *Data Fusion*.
+* You can add custom keywords from a text file.
+* You can add custom patterns using a regular expression (regex).
+
+link:task-managing-data-fusion.html[Learn more^].
 
 === Can I limit Cloud Data Sense information to specific users?
 
@@ -201,6 +205,7 @@ Data Sense can only scan data from data sources that are local to the on-premise
 
 * On-premises ONTAP systems
 * Database schemas
+* SharePoint On-Premises accounts (SharePoint Server)
 * Non-NetApp NFS or CIFS file shares
 * Object Storage that uses the Simple Storage Service (S3) protocol
 
@@ -267,7 +272,7 @@ Yes. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-instal
 
 === What about secure sites without internet access?
 
-Yes, that's also supported. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector on an on-premises Linux host that doesn’t have internet access]. Then you can discover on-premises ONTAP clusters and other local data sources and scan the data using Data Sense.
+Yes, that's also supported. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector on an on-premises Linux host that doesn’t have internet access^]. Then you can discover on-premises ONTAP clusters and other local data sources and scan the data using Data Sense.
 
 == Data Sense deployment
 
