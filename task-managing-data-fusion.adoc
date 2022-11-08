@@ -82,6 +82,7 @@ You must add, or create, the text files that include the custom keywords in the 
 You can create a single file with multiple keywords, or you can add many files that each contain certain keywords. The format for the file is one word on each line, for example:
 
 _internal_product_names.txt_
+
  barred
  barn
  horned
@@ -111,13 +112,13 @@ When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance
 
 Note that you'll need to modify the security group inbound rules to access the system. For details, see: 
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html[Security group rules in AWS^].
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html[Security group rules in Azure^].
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html[Firewall rules in Google Cloud^].
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html[Security group rules in AWS^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html[Security group rules in Azure^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html[Firewall rules in Google Cloud^]
 
 === Command syntax to add custom keywords
 
-The command syntax to add a custom keyword file is:
+The command syntax to add custom keywords from a file is:
 
  sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s activate -f <file_name>.txt 
 
@@ -151,7 +152,7 @@ To see where your internal Product Names are mentioned in all of your files, ent
 .Results
 After the next scan, the results will include this new information in the Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
 
-image:screenshot_add_regex_result.png[A screenshot showing an example of custom keyword results in the Investigation Results pane.]
+image:screenshot_add_keywords_result.png[A screenshot showing an example of custom keyword results in the Investigation Results pane.]
 
 === Deactivate custom keywords
 
