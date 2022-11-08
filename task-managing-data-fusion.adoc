@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-managing-data-fusion.html
 keywords: data identifiers, personal data, sensitive personal data, compliance, data fusion, data sense
-summary: Data Sense provides two ways for you to add a custom list of "personal data" that Data Sense will identify in future scans, giving you the full picture about where potentially sensitive data resides in all your organizations' files.
+summary: Data Sense provides many ways for you to add a custom list of "personal data" that Data Sense will identify in future scans, giving you the full picture about where potentially sensitive data resides in all your organizations' files.
 ---
 
 = Adding personal data identifiers to your Data Sense scans
@@ -13,26 +13,27 @@ summary: Data Sense provides two ways for you to add a custom list of "personal 
 :imagesdir: ./media/
 
 [.lead]
-Data Sense provides two ways for you to add a custom list of "personal data" that Data Sense will identify in future scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
+Data Sense provides many ways for you to add a custom list of "personal data" that Data Sense will identify in future scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
 
 * You can add unique identifiers based on specific columns in databases you are scanning.
+* You can add custom keywords from a text file -- these words are identified within your data.
 * You can add a personal pattern using a regular expression (regex) -- the regex is added to the existing predefined patterns.
 
 NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
 
-== Creating custom personal data identifiers from your databases
+== Add custom personal data identifiers from your databases
 
-A feature we call _Data Fusion_ allows you to scan your organizations' data to identify whether unique identifiers from your databases are found in files or other databases. You can choose the additional identifiers that Cloud Data Sense will look for in its' scans by selecting a specific column, or columns, in a database table. For example, the diagram below shows how data fusion is used to scan your volumes, buckets, and databases for occurrences of all your Customer IDs from your Oracle database.
+A feature we call _Data Fusion_ allows you to scan your organizations' data to identify whether unique identifiers from your databases are found in any of your other data sources. You can choose the additional identifiers that Data Sense will look for in its' scans by selecting a specific column, or columns, in a database table. For example, the diagram below shows how data fusion is used to scan your volumes, buckets, and databases for occurrences of all your Customer IDs from your Oracle database.
 
 image:diagram_compliance_data_fusion.png[A diagram showing how content from your databases can be used as a source to identify files that contain the same data.]
 
 As you can see, two unique Customer IDs have been found in two volumes and in one S3 bucket. Any matches in database tables will also be identified.
 
-Note that since you are scanning your own databases, whatever language your data is stored in will be used to identify data in future Cloud Data Sense scans.
+Note that since you're scanning your own databases, whatever language your data is stored in will be used to identify data in future Data Sense scans.
 
 .Steps
 
-You must have link:task-scanning-databases.html#adding-the-database-server[added at least one database server^] to Cloud Data Sense before you can add data fusion sources.
+You must have link:task-scanning-databases.html#adding-the-database-server[added at least one database server^] to Data Sense before you can add data fusion sources.
 
 . In the Configuration page, click *Manage Data Fusion* in the database where the source data resides.
 +
@@ -51,7 +52,7 @@ image:screenshot_compliance_add_data_fusion.png[A screenshot of identifying the 
 
 . Click *Add Data Fusion Source*.
 +
-The Data Fusion inventory page displays the database source columns that you have configured for Cloud Data Sense to scan.
+The Data Fusion inventory page displays the database source columns that you have configured Data Sense to scan.
 +
 image:screenshot_compliance_data_fusion_list.png[A screenshot of all the data source references you have configured with Data Fusion.]
 
@@ -60,47 +61,131 @@ After the next scan, the results will include this new information in the Compli
 
 image:screenshot_add_data_fusion_result.png[A screenshot showing an example of Data Fusion results in the Investigation Results pane.]
 
-=== Deleting a Data Fusion source
+=== Delete a Data Fusion source
 
 If at some point you decide not to scan your files using a certain Data Fusion source, you can select the source row from the Data Fusion inventory page and click *Delete Data Fusion Source*.
 
 image:screenshot_compliance_delete_data_fusion.png[A screenshot showing how to remove a data fusion source.]
 
-== Creating custom personal data identifiers using a regex
+== Add custom keywords from a text file
 
-You can add a personal pattern to identify specific information in your data using a custom regular expression (regex). The regex is added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the personal patterns section. 
+You can add custom keywords to Data Sense so that it will identify specific information in your data. You add the keywords from a text file that you define. The keywords are added to the existing predefined keywords that Data Sense already uses, and the results will be visible under the personal patterns section. 
 
-For example, you may want to see where your internal Product IDs are mentioned in all of your files. If the Product ID has a clear structure, for example, it is a 12-digit number that starts with 201, you can use the custom regex feature to search for it in your files.
+For example, you may want to see where internal Product Names are mentioned in all of your files to make sure these names are not accessible in locations that are not secure.
+
+After updating the custom keywords, Data Sense will restart scanning all data sources - the new results will appear in Data Sense after the scan has completed.
+
+You must add, or create, the text files that include the custom keywords in the following location on the Data Sense system:
+
+ /opt/netapp/Datasense/tools/datascience/custom_keywords/keywords_sets
+ 
+You can create a single file with multiple keywords, or you can add many files that each contain certain keywords. The format for the file is one word on each line, for example:
+
+_internal_product_names.txt_
+
+ barred
+ barn
+ horned
+ snowy
+ screech
+
+The Data Sense search for these items is not case sensitive.
 
 === Accessing the command line
 
-You'll need to access the Data Sense system in order to initiate the command to add a regex.
+You'll need to access the Data Sense system in order to initiate the command to add custom keywords.
 
 When Data Sense is installed on your premises, you can access the command line directly.
 
 When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
 
- ssh -i <path to the ssh key> <machine user>@<datasense ip>
+ ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
 
-* <path to the ssh key> = location of ssh authentication keys
-* <machine user>:
+* <path_to_the_ssh_key> = location of ssh authentication keys
+* <machine_user>:
 
 ** For AWS: use the <ec2-user>
 ** For Azure: use the user created for the BlueXP instance
 ** For GCP: use the user created for the BlueXP instance
 
-* <datasense ip> = IP address of the virtual machine instance
+* <datasense_ip> = IP address of the virtual machine instance
 
-Note that you'll need to modify the security group inbound rules to access the system. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-cloud-manager.html#ports-and-security-groups[Ports and security groups^] for more information.
+Note that you'll need to modify the security group inbound rules to access the system. For details, see: 
+
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html[Security group rules in AWS^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html[Security group rules in Azure^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html[Firewall rules in Google Cloud^]
+
+=== Command syntax to add custom keywords
+
+The command syntax to add custom keywords from a file is:
+
+ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s activate -f <file_name>.txt 
+
+* <file_name> = This is the name of the file that contains the keywords.
+
+You run the command from the path */opt/netapp/Datasense/*.
+
+If you have created many files that contain custom keywords, you can add the keywords from all the files at once using this command:
+
+ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s activate
+
+Note the following requirements:
+
+* The file name should not contain digits.
+* Each file can contain a maximum of 100,000 words. If there are more words, only the first 100,000 are added.
+* Each word must be at least 3 characters long. Shorter words are ignored.
+* Duplicate words are only added once.
+
+=== Example
+
+The internal Product Names for your company are based on types of owls, as shown above. 
+
+To see where your internal Product Names are mentioned in all of your files, enter the following command.
+
+[source,cli]
+[user ~]$ cd /opt/netapp/Datasense/
+[user Datasense]$ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s activate -f internal_product_names.txt 
+
+ log v1.0 | 2022-08-24 08:16:25,332 | INFO | ds_logger | upload_custom_keywords | 126 | 1 | None | upload_custom_keywords_126 | All legal keywords were successfully inserted
+
+.Results
+After the next scan, the results will include this new information in the Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
+
+image:screenshot_add_keywords_result.png[A screenshot showing an example of custom keyword results in the Investigation Results pane.]
+
+=== Deactivate custom keywords
+
+If you decide at some later point that you don't need Data Sense to identify certain custom keywords that you previously added, use the *deactivate* option in the command to remove the keywords that are defined in the text file.
+
+ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s deactivate -f <file_name>.txt 
+
+For example, to remove the keyword patterns defined in the file *internal_product_names*:
+
+[source,cli]
+[user ~]$ cd /opt/netapp/Datasense/
+[user Datasense]$ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s deactivate -f internal_product_names 
+
+ log v1.0 | 2022-08-24 08:16:25,332 | INFO | ds_logger | upload_custom_keywords | 87 | 1 | None | upload_custom_keywords_87 | Deactivated keyword pattern from internal_product_names.txt successfully 
+
+== Add custom personal data identifiers using a regex
+
+You can add a personal pattern to identify specific information in your data using a custom regular expression (regex). The regex is added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the personal patterns section. 
+
+For example, you may want to see where your internal Product IDs are mentioned in all of your files. If the Product ID has a clear structure, for example, it is a 12-digit number that starts with 201, you can use the custom regex feature to search for it in your files.
+
+After adding the regex, Data Sense will restart scanning all data sources - the new results will appear in Data Sense after the scan has completed.
 
 === Command syntax to add the regex
 
+You'll need to access the Data Sense system in order to add the file that contains the custom keyword patterns, and to initiate the command to add the custom keywords. <<Accessing the command line,See how to access the command line>> whether you have installed Data Sense in your premises, or you have deployed it in the cloud.
+
 The command syntax to add a custom regex is:
 
- sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "<pattern name>" -r "<regular expression>"
+ sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "<pattern_name>" -r "<regular_expression>"
 
-* <pattern name> = This is the name that will appear in the Data Sense UI. Make sure the name identifies what the regex is designed to find. The name must contain at least one letter, and it can be up to 70 characters in length.
-* <regular expression> = This can be any legal regular expression.
+* <pattern_name> = This is the name that will appear in the Data Sense UI. Make sure the name identifies what the regex is designed to find. The name must contain at least one letter, and it can be up to 70 characters in length.
+* <regular_expression> = This can be any legal regular expression.
 
 You run the command from the path */opt/netapp/Datasense/*.
 
@@ -128,7 +213,7 @@ After the next scan, the results will include this new information in the Compli
 
 image:screenshot_add_regex_result.png[A screenshot showing an example of custom regex results in the Investigation Results pane.]
 
-=== Deactivating a custom regex
+=== Deactivate a custom regex
 
 If you decide at some later point that you don't need Data Sense to identify the custom patterns you entered as a regex, use the *deactivate* option in the command to remove each regex.
 
@@ -141,3 +226,4 @@ For example, to remove the *Internal Product ID* regex:
 [user Datasense]$ sudo bash tools/datascience/custom_regex/custom_regex.sh -s deactivate -n "Internal Product ID"
 
  log v1.0 | 2022-08-17 09:13:15,431 | INFO | ds_logger | custom_regex | 31 | 1 | None | custom_regex_31 | A pattern named 'Internal Product ID' was deactivated successfully 
+
