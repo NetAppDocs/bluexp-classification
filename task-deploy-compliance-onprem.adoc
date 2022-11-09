@@ -267,7 +267,7 @@ By default, any new scanner nodes you add are added to the general pool of scann
 
 image:diagram_onprem_scanner_groups_default.png[A diagram of how Data Sense scanners scan data sources when in the default scanner group.]
 
-If you have certain data sources that you want to be scanned by scanner nodes that are physically closer to the data sources, you can define a scanner node, or group of scanner nodes, to scan a specific data source, or group of data sources. In the image below, there is one Manager node and 3 Scanner nodes. 
+If you have certain data sources that you want to be scanned by scanner nodes that are physically closer to the data sources, you can define a scanner node, or group of scanner nodes, to scan a specific data source, or group of data sources. In the image below, there is 1 Manager node and 3 Scanner nodes. 
 
 * The Manager node is in the "default" group, and it is scanning 1 data source
 * Scanner node 1 is in the "united_states" group, and it is scanning 2 data sources
@@ -361,7 +361,7 @@ Variable values:
 .. Copy the Data Sense installer file (*DATASENSE-INSTALLER-<version>.tar.gz*) to the host machine (using `scp` or some other method).
 .. Unzip the installer file.
 .. Paste and execute the command that you copied in step 2.
-.. If you want to add a scanner node into a "scanner group", add the parameter "-r <scanner_group_name>" to the command. Otherwise the scanner node is added to the "default" group.
+.. If you want to add a scanner node into a "scanner group", add the parameter *-r <scanner_group_name>* to the command. Otherwise, the scanner node is added to the "default" group.
 +
 When the installation finishes on all scanner nodes and they have been joined to the manager node, the "add_scanner_node.sh" script finishes as well. The installation can take 10 to 20 minutes.
 
@@ -376,7 +376,7 @@ When the installation finishes on all scanner nodes and they have been joined to
     - "working_environment_id3"
     - "working_environment_id4"
 +
-Any working environment that is not added to the list is scanned by the "default" group - you must have at least one scanner node in the "default" group.
+Any working environment that is not added to the list is scanned by the "default" group - you must have at least one manager or scanner node in the "default" group.
 //+
 //You can make an HTTP request to get the working environment id:
 //https://cloudmanager.cloud.netapp.com/account/<account_id>/providers/cloudmanager_compliance/api/v1.27/working_environment/scan_status
