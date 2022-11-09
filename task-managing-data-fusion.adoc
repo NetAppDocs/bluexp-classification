@@ -79,7 +79,7 @@ You must add, or create, the text files that include the custom keywords in the 
 
  /opt/netapp/Datasense/tools/datascience/custom_keywords/keywords_sets
  
-You can create a single file with multiple keywords, or you can add many files that each contain certain keywords. The format for the file is one word on each line, for example:
+You can create a single file with multiple keywords, or you can add many files that each contain certain keywords. The format for the file is one word on each line, for example, internal Product Names which are types of owls are listed below:
 
 _internal_product_names.txt_
 
@@ -90,6 +90,13 @@ _internal_product_names.txt_
  screech
 
 The Data Sense search for these items is not case sensitive.
+
+Note the following requirements:
+
+* The file name should not contain digits.
+* Each file can contain a maximum of 100,000 words. If there are more words, only the first 100,000 are added.
+* Each word must be at least 3 characters long. Shorter words are ignored.
+* Duplicate words are only added once.
 
 === Accessing the command line
 
@@ -130,16 +137,7 @@ If you have created many files that contain custom keywords, you can add the key
 
  sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s activate
 
-Note the following requirements:
-
-* The file name should not contain digits.
-* Each file can contain a maximum of 100,000 words. If there are more words, only the first 100,000 are added.
-* Each word must be at least 3 characters long. Shorter words are ignored.
-* Duplicate words are only added once.
-
 === Example
-
-The internal Product Names for your company are based on types of owls, as shown above. 
 
 To see where your internal Product Names are mentioned in all of your files, enter the following command.
 
@@ -154,17 +152,19 @@ After the next scan, the results will include this new information in the Compli
 
 image:screenshot_add_keywords_result.png[A screenshot showing an example of custom keyword results in the Investigation Results pane.]
 
+As you can see, the name of the text file is used as the name in the Personal Results panel. In this manner you can activate keywords from different text files and see the results for each type of keyword.
+
 === Deactivate custom keywords
 
 If you decide at some later point that you don't need Data Sense to identify certain custom keywords that you previously added, use the *deactivate* option in the command to remove the keywords that are defined in the text file.
 
  sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s deactivate -f <file_name>.txt 
 
-For example, to remove the keyword patterns defined in the file *internal_product_names*:
+For example, to remove the keywords defined in the file *internal_product_names.txt*:
 
 [source,cli]
 [user ~]$ cd /opt/netapp/Datasense/
-[user Datasense]$ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s deactivate -f internal_product_names 
+[user Datasense]$ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s deactivate -f internal_product_names.txt
 
  log v1.0 | 2022-08-24 08:16:25,332 | INFO | ds_logger | upload_custom_keywords | 87 | 1 | None | upload_custom_keywords_87 | Deactivated keyword pattern from internal_product_names.txt successfully 
 
