@@ -104,7 +104,7 @@ You'll need to access the Data Sense system in order to initiate the command to 
 
 When Data Sense is installed on your premises, you can access the command line directly.
 
-When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
+When Data Sense is deployed in the cloud, you need to SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
 
  ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
 
@@ -117,7 +117,7 @@ When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance
 
 * <datasense_ip> = IP address of the virtual machine instance
 
-Note that you'll need to modify the security group inbound rules to access the system. For details, see: 
+Note that you'll need to modify the security group inbound rules to access the system on the cloud. For details, see: 
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html[Security group rules in AWS^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html[Security group rules in Azure^]

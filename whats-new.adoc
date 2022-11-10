@@ -30,7 +30,7 @@ Now you can rescan multiple directories (folders or shares) immediately so that 
 
 If you have installed Data Sense in an on-premises location, and you find that you need more scanning processing power to scan your data sources, you can add more "scanner" nodes. You can add the scanner nodes immediately after installing the manager node, or you can add a scanner node later. For example, if you realize that the amount of data in one of your data sources has tripled in size after 1 year, you can add a new scanner node to assist with data scanning.
 
-If necessary, the scanner nodes can be installed on host systems that are physically closer to the data sources that you are scanning. The closer the scanner node is to the data, the better, because it reduces network latency as much as possible while scanning data. 
+If necessary, the scanner nodes can be installed on host systems that are physically closer to the data sources that you are scanning. The closer the scanner node is to the data, the better, because it reduces network latency as much as possible while scanning data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html#add-scanner-nodes-to-an-existing-deployment[See how to install scanner nodes to scan additional data sources^].
 
 == 6 September 2022 (version 1.16)
 
@@ -82,7 +82,12 @@ When viewing the individual repositories that Data Sense is scanning (volumes, b
 
 === Now you can add custom patterns that Data Sense will identify in your data
 
-You can add a personal pattern to identify specific information in your data using a custom regular expression (regex). The regex is added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the Personal patterns section. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html#creating-custom-personal-data-identifiers-using-a-regex[Learn more^].
+There are two ways that you can add custom "personal data" that Data Sense will identify in future scans. This allows you to see the full picture about where potentially sensitive data resides in all your organizations' files.
+
+* You can add custom keywords from a text file.
+* You can add a personal pattern using a regular expression (regex).
+
+These keywords and patterns are added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the Personal patterns section. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html[Learn more^].
 // end::whats-new[]
 
 == 6 July 2022 (version 1.14)
