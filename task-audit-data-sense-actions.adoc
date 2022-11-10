@@ -17,39 +17,39 @@ Data Sense logs management activities that have been performed on files from all
 
 For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
 
-The audit log is rotated every day.
-
 == Log file contents
 
 Each line in the audit log contains information in this format:
 
 `<full date> | <status> | datasense_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
 
-* Date and time – full timestamp for the event
+* Date and time - full timestamp for the event
 * Status - INFO, WARNING
 * Action type (delete, copy, move, create policy, update policy, download JSON report, etc.)
 * File name (if the action is relevant to a file)
-* Details for the action – what was done: depends on the action
+* Details for the action - what was done: depends on the action
 
 ** Policy name
 ** For move - Source and destination
 ** For copy - Source and destination
-** For tag – tag name
-** For assign to – user name
-** For email alert – email address / account
+** For tag - tag name
+** For assign to - user name
+** For email alert - email address / account
 
 For example, the following lines from the log file show a successful copy operation and a failed copy operation.
 
- 2022-06-06 15:23:08,910 | INFO | datasense_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) – SUCCESS
+ 2022-06-06 15:23:08,910 | INFO | datasense_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
  2022-06-06 15:23:08,968 | WARNING | datasense_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
 
 == Accessing the log file
 
-The audit log is located on the Data Sense machine in: `/opt/netapp/audit_logs/DataSense_audit.log`
+The audit log files are located on the Data Sense machine in: `/opt/netapp/audit_logs/`
+
+Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - old log files are deleted automatically after the maximum has been reached.
 
 When Data Sense is installed on your premises, you can navigate directly to the log file.
 
-When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
+When Data Sense is deployed in the cloud, you need to SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
 
  ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
 
@@ -62,7 +62,7 @@ When Data Sense is deployed in the cloud, you can SSH to the Data Sense instance
 
 * <datasense_ip> = IP address of the virtual machine instance
 
-Note that you'll need to modify the security group inbound rules to access the system. For details, see: 
+Note that you'll need to modify the security group inbound rules to access the system in the cloud. For details, see: 
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html[Security group rules in AWS^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html[Security group rules in Azure^]
