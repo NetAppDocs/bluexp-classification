@@ -16,7 +16,7 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 7 November 2022 (version 1.17)
+== 13 November 2022 (version 1.17)
 
 === Support for scanning SharePoint On-Premises accounts
 
@@ -28,9 +28,13 @@ Now you can rescan multiple directories (folders or shares) immediately so that 
 
 === Ability to add additional on-premises "scanner" nodes to scan specific data sources
 
-If you have installed Data Sense in an on-premises location, and you find that you need more scanning processing power to scan your data sources, you can add more "scanner" nodes. You can add the scanner nodes immediately after installing the manager node, or you can add a scanner node later. For example, if you realize that the amount of data in one of your data sources has tripled in size after 1 year, you can add a new scanner node to assist with data scanning.
+If you have installed Data Sense in an on-premises location, and you find that you need more scanning processing power to scan certain data sources, you can add more "scanner" nodes and assign them to scan those data sources. You can add the scanner nodes immediately after installing the manager node, or you can add a scanner node later.
 
 If necessary, the scanner nodes can be installed on host systems that are physically closer to the data sources that you are scanning. The closer the scanner node is to the data, the better, because it reduces network latency as much as possible while scanning data. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html#add-scanner-nodes-to-an-existing-deployment[See how to install scanner nodes to scan additional data sources^].
+
+=== On-premises installers now perform a pre-check before starting the installation
+
+When installing Data Sense on a Linux system, the installer checks whether the system meets all the necessary requirements (CPU, RAM, capacity, networking, etc.) before starting the actual installation. This helps catch issues *before* you spend time on the installation.
 
 == 6 September 2022 (version 1.16)
 
@@ -188,7 +192,7 @@ Data Sense can read the permissions that exist for files that are being scanned 
 
 === Support for scanning OneDrive and SharePoint data when deployed in a dark site
 
-When you've deployed Cloud Data Sense on a host in an on-premises site that doesn’t have internet access, now you can scan local data from OneDrive accounts or SharePoint accounts. link:task-deploy-compliance-dark-site.html#sharepoint_and_onedrive_special_requirements[You'll need to allow access to the following endpoints.]
+When you've deployed Cloud Data Sense on a host in an on-premises site that doesn’t have internet access, now you can scan local data from OneDrive accounts or SharePoint accounts. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[You'll need to allow access to the following endpoints.]
 
 === The Beta capability to use Cloud Data Sense to scan your Cloud Backup files has been discontinued in this release
 
@@ -252,7 +256,7 @@ The https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/clo
 
 When you run an action from the Investigation Results pane across many files, for example, deleting 50 files, the process can take some time. Now you can monitor the status of these asynchronous actions so you’ll know when it has been applied to all files.
 
-link:task-managing-highlights.html#viewing-the-status-of-your-compliance-actions[See how to view the status of your ongoing compliance actions].
+link:task-view-compliance-actions.html[See how to view the status of your ongoing compliance actions].
 
 === Two additional types of personal data can be identified by Data Sense
 
@@ -350,38 +354,8 @@ Some users with smaller scanning requirements have asked to be able to use a sma
 
 === Ability to perform slow scans
 
-Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans now. link:task-managing-compliance.html#reducing-the-data-sense-scan-speed[See how].
+Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans now. link:task-reduce-scan-speed.html[See how].
 
 === Data Sense tracks the last time a file has been accessed
 
 The Last Accessed Time value has been added to the File Details page and to reports that you output in CSV format so you can see when users have last accessed the file.
-
-== 7 June 2021
-
-=== Cloud Compliance has been renamed as *Cloud Data Sense*.
-
-Cloud Compliance has been renamed as *Cloud Data Sense* as of this release. With all the new Governance and other capabilities that have been included in the product, the Compliance name was not promoting the full set of capabilities.
-
-=== New "Full Data Mapping" report is available from the Governance Dashboard
-
-A new _Full Data Mapping_ report is available from the Governance Dashboard to provide an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes.
-
-The report provides overview pages that summarize all your working environments and data sources, and then provides a breakdown for each working environment. link:task-generating-compliance-reports.html#generating-the-data-mapping-report[Go here] for more details.
-
-=== New filter in the Investigation page to view all duplicated files
-
-A new filter in the Data Investigation page enables you to view a list of all files that are duplicated across your storage systems. This is helpful to identify areas where you can save storage space, or identify files that have specific permissions or sensitive information that you do not want duplicated across your storage. link:task-controlling-private-data.html#viewing-all-duplicated-files[See how to viewing all duplicated files].
-
-=== Data Sense can add custom Tags to files for organization
-
-You can add a custom Tags to files that Data Sense is scanning. The Tag is not added to the file in the same way as AIP Labels are added. The Tag is just seen by Cloud Manager users so you can indicate if a file needs to be deleted, or checked for some reason. link:task-org-private-data.html#applying-tags-to-manage-your-scanned-files[See how to apply and view Tags in your files].
-
-A new Filter in the Investigation page enables you to easily view all files that have a Tag assigned.
-
-=== Ability to scan .DCM and .DICOM files
-
-Cloud Data Sense can scan for Personal Identifiable Information (PII) in two additional types of files: .DCM and .DICOM.
-
-=== Data Sense now tracks additional attributes of files
-
-The File Size, Created Date, and Last Modified Date values have been added to reports that you output in CSV format. Created Date is also a new Filter you can use to narrow down Investigation page search results.

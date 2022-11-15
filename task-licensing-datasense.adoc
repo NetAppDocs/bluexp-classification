@@ -17,7 +17,7 @@ The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspace is free
 
 A few notes before you read any further:
 
-* If you've already subscribed to the Cloud Manager pay-as-you-go (PAYGO) subscription in your cloud provider's marketplace, then you're automatically subscribed to Cloud Data Sense as well. You won’t need to subscribe again.
+* If you've already subscribed to the BlueXP pay-as-you-go (PAYGO) subscription in your cloud provider's marketplace, then you're automatically subscribed to Cloud Data Sense as well. You won’t need to subscribe again.
 // You'll see an active subscription in the Digital Wallet.
 
 * The Cloud Data Sense bring-your-own-license (BYOL) is a _floating_ license that you can use across all the working environments and data sources in the workspace that you plan to scan. You'll see an active subscription in the Digital Wallet.
@@ -44,7 +44,7 @@ image:screenshot_settings_icon.gif[A screenshot of BlueXP's top right banner whe
 +
 The subscription must be added to the Instance Profile, Managed Service Identity, or Google Project. Charging won't work otherwise.
 +
-If you already have a subscription (shown below for AWS), then you're all set--there's nothing else that you need to do.
+If you already have a BlueXP subscription (shown below for AWS), then you're all set--there's nothing else that you need to do.
 +
 image:screenshot_profile_subscription.gif[A screenshot from the Credentials page that shows the Instance Profile with an active subscription.]
 

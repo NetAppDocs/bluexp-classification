@@ -240,7 +240,7 @@ The following questions relate to licensing and costs to use Cloud Data Sense.
 
 The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a BlueXP workspace is free. After reaching that limit, you'll need one of the following to continue scanning data over 1 TB:
 
-* A subscription to the Cloud Manager Marketplace listing from your cloud provider, or
+* A subscription to the BlueXP Marketplace listing from your cloud provider, or
 * A Bring-your-own-license (BYOL) from NetApp
 
 See https://cloud.netapp.com/netapp-cloud-data-sense#Pricing[pricing^] for details.

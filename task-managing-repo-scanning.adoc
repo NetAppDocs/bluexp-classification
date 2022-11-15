@@ -83,6 +83,7 @@ Data Sense supports scanning directories on all data source types except for Ama
 
 * When rescanning a directory, all the files within the directory are rescanned, but sub-folders within the directory are not rescanned.
 * When rescanning a share, only the share's metadata is rescanned.
+* A maximum of 1K items can be rescanned at a time.
 
 .Steps
 
