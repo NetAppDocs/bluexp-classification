@@ -21,11 +21,11 @@ For example, you can see what request was issued, the time of the request, and d
 
 Each line in the audit log contains information in this format:
 
-`<full date> | <status> | datasense_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
+`<full date> | <status> | ds_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
 
 * Date and time - full timestamp for the event
 * Status - INFO, WARNING
-* Action type (delete, copy, move, create policy, update policy, download JSON report, etc.)
+* Action type (delete, copy, move, create policy, update policy, rescan files, download JSON report, etc.)
 * File name (if the action is relevant to a file)
 * Details for the action - what was done: depends on the action
 
@@ -38,8 +38,8 @@ Each line in the audit log contains information in this format:
 
 For example, the following lines from the log file show a successful copy operation and a failed copy operation.
 
- 2022-06-06 15:23:08,910 | INFO | datasense_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
- 2022-06-06 15:23:08,968 | WARNING | datasense_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
+ 2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
+ 2022-06-06 15:23:08,968 | WARNING | ds_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
 
 == Accessing the log file
 

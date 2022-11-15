@@ -202,7 +202,7 @@ When selecting a .JSON report, enter the name of the NFS share where the report 
 
 A dialog displays a message that the reports are being downloaded.
 
-You can view the progress of JSON report generation in the <<Viewing the status of your compliance actions,Actions Status pane>>.
+You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
 
 === What’s included in each Data Investigation Report
 
