@@ -53,13 +53,16 @@ The first 1 TB of data that Cloud Data Sense scans in BlueXP is free. A subscrip
 
 == Create a Connector
 
-If you don't already have a Connector, create a Connector in your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^] or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^]. In most cases you will probably have a Connector set up before you attempt to activate Cloud Data Sense because most https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-a-connector-is-required[BlueXP features require a Connector], but there are cases where you'll you need to set one up now.
+ A BlueXP Connector is required before you can install and use Data Sense. In most cases you'll probably have a Connector set up before you attempt to activate Cloud Data Sense because most https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-a-connector-is-required[BlueXP features require a Connector], but there are cases where you'll you need to set one up now.
+ 
+ To create one in your cloud provider environment, see https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^]. 
 
 There are some scenarios where you have to use a Connector that's deployed in a specific cloud provider:
 
 * When scanning data in Cloud Volumes ONTAP in AWS, Amazon FSx for ONTAP, or in AWS S3 buckets, you use a connector in AWS.
 * When scanning data in Cloud Volumes ONTAP in Azure or in Azure NetApp Files, you use a connector in Azure.
-** For Azure NetApp Files, it must be deployed in the same region as the volumes you wish to scan.
++
+For Azure NetApp Files, it must be deployed in the same region as the volumes you wish to scan.
 * When scanning data in Cloud Volumes ONTAP in GCP, you use a connector in GCP.
 
 On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts can be scanned using any of these cloud Connectors.
@@ -76,7 +79,7 @@ Data Sense software must run on a host that meets specific operating system requ
 
 * Operating system: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.6
 ** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
-** The OS must be capable of installing the docker engine (for example, disable the _firewalld_ service if needed)
+** The OS must be capable of installing the docker engine
 * Disk: SSD with 500 GiB available on /, or
 ** 100 GiB available on /opt
 ** 400 GiB available on /var
@@ -86,12 +89,25 @@ Data Sense software must run on a host that meets specific operating system requ
 +
 Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
-* A Red Hat Enterprise Linux system must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd party software during installation.
+* Red Hat Subscription Management: A Red Hat Enterprise Linux system must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd party software during installation.
 
-* The following software must be installed on the host. If it doesn't already exist on the host, then the installer will install the software for you:
+* Additional software: The following software must be installed on the host. If it doesn't already exist on the host, then the installer will install the software for you:
 
 ** Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
 ** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
+
+* Firewalld considerations: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Sense. Run the following commands to configure `firewalld` for Data Sense:
++
+ firewall-cmd --permanent --add-service=http
+ firewall-cmd --permanent --add-service=https
+ firewall-cmd --permanent --add-port=80/tcp
+ firewall-cmd --permanent --add-port=8080/tcp
+ firewall-cmd --permanent --add-port=443/tcp
+ firewall-cmd --permanent --add-port=9000/tcp
+ firewall-cmd --permanent --add-port=9060/tcp
+ firewall-cmd --reload
++
+If you enable `firewalld` after installing Data Sense, you must restart docker.
 
 NOTE: The IP address of the Data Sense host system can't be changed after installation.
 
@@ -287,10 +303,10 @@ You'll follow these steps to install additional Data Sense scanner nodes:
 . Prepare the Linux host systems that will act as the Scanner nodes
 . Download the Data Sense software to these Linux systems
 . Run a command on the Manager node to identify the Scanner nodes
-. Follow the steps to deploy the software on the Scanner nodes (and to optionally define a "scanner group" for each Scanner node)
+. Follow the steps to deploy the software on the Scanner nodes (and to optionally define a "scanner group" for certain Scanner nodes)
 . If you defined a scanner group, on the Manager node:
 .. Open the file "working_environment_to_scanner_group_config.yml" and define the working environments that will be scanned by each scanner group
-.. Run the following script to register this mapping information with all Scanner nodes: "update_we_scanner_group_from_config_file.sh"
+.. Run the following script to register this mapping information with all Scanner nodes: `update_we_scanner_group_from_config_file.sh`
 
 .What you'll need
 
@@ -300,8 +316,8 @@ You'll follow these steps to install additional Data Sense scanner nodes:
 * Verify that your environment meets the required <<Verify BlueXP and Data Sense prerequisites,permissions and connectivity>>.
 * You must have the IP addresses of the Scanner node hosts that you are adding.
 * You must have the IP address of the Data Sense Manager node host system
-* You must have the IP address or host name of the Connector system, your NetApp Account ID, Connector Client ID, and user access token. See _Prerequisite steps_ below to get this information.
-* You'll need to know the _working environment ID_ for each data source in your account. Contact NetApp at ng-contact-data-sense@netapp.com with your request.
+* You must have the IP address or host name of the Connector system, your NetApp Account ID, Connector Client ID, and user access token. If you're planning to use scanner groups, you'll need to know the Working Environment ID for each data source in your account. See _Prerequisite steps_ below to get this information.
+//* You'll need to know the _working environment ID_ for each data source in your account. Contact NetApp at ng-contact-data-sense@netapp.com with your request.
 * The following ports and protocols must be enabled on all hosts:
 +
 [cols="15,20,55",options="header"]
@@ -334,6 +350,10 @@ image:screenshot_account_id.png[A screenshot of the BlueXP Account details.]
 image:screenshot_connector_client_id.png[A screenshot of the BlueXP Connector configuration settings.]
 
 . Copy the connector _Client ID_ and the _Server Name_.
+
+. If you're planning to use scanner groups, from the Data Sense Configuration tab, copy the Working Environment ID for each working environment that you plan to add to a scanner group.
++
+image:screenshot_work_env_id[A screenshot of the Working Environment ID from the Data Sense Configuration page.]
 
 . Go to the https://services.cloud.netapp.com/developer-hub[API Documentation Developer Hub^] and click *Learn how to authenticate*.
 +
@@ -369,7 +389,7 @@ Variable values:
 When the installation finishes on all scanner nodes and they have been joined to the manager node, the "add_scanner_node.sh" script finishes as well. The installation can take 10 to 20 minutes.
 
 . If you added any scanner nodes into a scanner group, return to the Manager node and perform the following 2 tasks:
-.. Open the file "/opt/netapp/Datasense/working_environment_to_scanner_group_config.yml" and enter the mapping for which scanner groups will scan specific working environments. You'll need to get the _working environment ID_ for each data source from NetApp (email ng-contact-data-sense@netapp.com). For example, the following entries add 2 working environments into 2 scanner groups:
+.. Open the file "/opt/netapp/Datasense/working_environment_to_scanner_group_config.yml" and enter the mapping for which scanner groups will scan specific working environments. You'll need to have the _Working Environment ID_ for each data source. For example, the following entries add 2 working environments into 2 scanner groups:
 +
  scanner group:
   europe:
@@ -380,9 +400,6 @@ When the installation finishes on all scanner nodes and they have been joined to
     - "working_environment_id4"
 +
 Any working environment that is not added to the list is scanned by the "default" group - you must have at least one manager or scanner node in the "default" group.
-//+
-//You can make an HTTP request to get the working environment id:
-//https://cloudmanager.cloud.netapp.com/account/<account_id>/providers/cloudmanager_compliance/api/v1.27/working_environment/scan_status
 
 .. Run the following script to register this mapping information with all Scanner nodes: 
 `/opt/netapp/Datasense/tools/update_we_scanner_group_from_config_file.sh`
@@ -392,7 +409,7 @@ Any working environment that is not added to the list is scanned by the "default
 Data Sense is set up with Manager and Scanner nodes to scan all your data sources.
 
 .What's Next
-From the Configuration page you can select the data sources that you want to scan - if you haven't already done that. If you created scanner groups, each data source is scanned by the Scanner nodes in the respective group.
+From the Configuration page you can select the data sources that you want to scan - if you haven't already done that. If you created scanner groups, each data source is scanned by the Scanner nodes in the respective group. You can see the Scanner Group name for each working environment in the Configuration page.
 
 You can also link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until the amount of data exceeds 1 TB.
 
