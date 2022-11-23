@@ -353,7 +353,7 @@ image:screenshot_connector_client_id.png[A screenshot of the BlueXP Connector co
 
 . If you're planning to use scanner groups, from the Data Sense Configuration tab, copy the Working Environment ID for each working environment that you plan to add to a scanner group.
 +
-image:screenshot_work_env_id[A screenshot of the Working Environment ID from the Data Sense Configuration page.]
+image:screenshot_work_env_id.png[A screenshot of the Working Environment ID from the Data Sense Configuration page.]
 
 . Go to the https://services.cloud.netapp.com/developer-hub[API Documentation Developer Hub^] and click *Learn how to authenticate*.
 +
