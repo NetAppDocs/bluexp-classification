@@ -127,7 +127,7 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 | Endpoints
 | Purpose
 
-| \https://cloudmanager.cloud.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
+| \https://api.bluexp.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
 
 |
 \https://netapp-cloud-account.auth0.com
@@ -136,7 +136,7 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 | Communication with the BlueXP website for centralized user authentication.
 
 |
-\https://support.compliance.cloudmanager.cloud.netapp.com/
+\https://support.compliance.api.bluexp.netapp.com/
 \https://hub.docker.com
 \https://auth.docker.io
 \https://registry-1.docker.io
@@ -146,7 +146,7 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 
 | Provides access to software images, manifests, templates, and to send logs and metrics.
 
-| \https://support.compliance.cloudmanager.cloud.netapp.com/ | Enables NetApp to stream data from audit records.
+| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
 
 |
 \https://github.com/docker

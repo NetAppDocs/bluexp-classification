@@ -87,7 +87,7 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 | Endpoints
 | Purpose
 
-| \https://cloudmanager.cloud.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
+| \https://api.bluexp.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
 
 |
 \https://netapp-cloud-account.auth0.com
@@ -124,7 +124,7 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 | Endpoints
 | Purpose
 
-| \https://cloudmanager.cloud.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
+| \https://api.bluexp.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
 
 |
 \https://netapp-cloud-account.auth0.com
@@ -133,7 +133,7 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 | Communication with the BlueXP website for centralized user authentication.
 
 |
-\https://support.compliance.cloudmanager.cloud.netapp.com/
+\https://support.compliance.api.bluexp.netapp.com/
 \https://hub.docker.com
 \https://auth.docker.io
 \https://registry-1.docker.io
@@ -143,7 +143,7 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 
 | Provides access to software images, manifests, templates, and to send logs and metrics.
 
-| \https://support.compliance.cloudmanager.cloud.netapp.com/ | Enables NetApp to stream data from audit records.
+| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
 
 |===
 

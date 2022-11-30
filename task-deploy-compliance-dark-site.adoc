@@ -127,13 +127,13 @@ SharePoint On-Premises accounts can be scanned without providing any internet ac
 
 | Communication with Microsoft servers to log in to the selected online service.
 
-| \https://cloudmanager.cloud.netapp.com
+| \https://api.bluexp.netapp.com
 
 | Communication with the BlueXP service, which includes NetApp accounts.
 
 |===
 
-Access to _cloudmanager.cloud.netapp.com_ is required only during the initial connections to these external services.
+Access to _api.bluexp.netapp.com_ is required only during the initial connections to these external services.
 
 == Deploy Data Sense
 
