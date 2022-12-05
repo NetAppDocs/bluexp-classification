@@ -76,22 +76,36 @@ If you don't already have a BlueXP Connector installed at your offline on-premis
 
 Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.
 
-* Operating system: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.6
+* *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.6
 ** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
-** The OS must be capable of installing the Docker Engine (for example, disable the _firewalld_ service if needed)
-* Disk: SSD with 500 GiB available on /, or
+** The OS must be capable of installing the Docker Engine
+* *Disk*: SSD with 500 GiB available on /, or
 ** 100 GiB available on /opt
 ** 400 GiB available on /var
 ** 5 GiB on /tmp
-* RAM: 64 GB (swap memory must be disabled on the host)
-* CPU: 16 cores
+* *RAM*: 64 GB (swap memory must be disabled on the host)
+* *CPU*: 16 cores
 +
 Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
-You must install the following software on the host before you install Data Sense:
+* *Additional software*: You must install the following software on the host before you install Data Sense:
 
-* Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
-* Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
+** Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
+** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
+
+* *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Sense. Run the following commands to configure `firewalld` so that it is compatible with Data Sense:
++
+ firewall-cmd --permanent --add-service=http
+ firewall-cmd --permanent --add-service=https
+ firewall-cmd --permanent --add-service=mysql
+ firewall-cmd --permanent --add-port=80/tcp
+ firewall-cmd --permanent --add-port=8080/tcp
+ firewall-cmd --permanent --add-port=443/tcp
+ firewall-cmd --permanent --add-port=555/tcp
+ firewall-cmd --permanent --add-port=3306/tcp
+ firewall-cmd --reload
++
+If you enable `firewalld` after installing Data Sense, you must restart docker.
 
 NOTE: The IP address of the Data Sense host system can't be changed after installation.
 
@@ -105,6 +119,7 @@ Review the following prerequisites to make sure that you have a supported config
 This connection enables deployment of the Data Sense instance and enables you to view compliance and governance information.
 +
 Make sure port 8080 is open so you can see the installation progress in BlueXP.
+* Depending on the types of data sources you plan to scan, additional ports must be open to the Data Sense instance. See the details for each data source you plan to scan.
 * Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense instance needs to stay on to continuously scan your data.
 * Ensure web browser connectivity to Cloud Data Sense. After Cloud Data Sense is enabled, ensure that users access the BlueXP interface from a host that has a connection to the Data Sense instance.
 +
@@ -114,7 +129,7 @@ The Data Sense instance uses a private IP address to ensure that the indexed dat
 
 When BlueXP and Data Sense are deployed in a site with no internet access, you can scan files in SharePoint Online and OneDrive accounts by providing internet access to a few select endpoints. 
 
-SharePoint On-Premises accounts can be scanned without providing any internet access.
+Locally installed SharePoint On-Premises accounts can be scanned without providing any internet access.
 
 [cols="50,50",options="header"]
 |===

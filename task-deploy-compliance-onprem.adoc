@@ -168,6 +168,9 @@ This connection enables deployment of the Data Sense instance and enables you to
 +
 Make sure port 8080 is open so you can see the installation progress in BlueXP.
 
+Ensure that required ports are open for access to your data sources::
+Depending on the types of data sources you plan to scan, additional ports must be open to the Data Sense instance. See the details for each data source you plan to scan.
+
 Ensure that you can keep Cloud Data Sense running::
 The Cloud Data Sense instance needs to stay on to continuously scan your data.
 
