@@ -113,17 +113,51 @@ NOTE: The IP address of the Data Sense host system can't be changed after instal
 
 Review the following prerequisites to make sure that you have a supported configuration before you deploy Cloud Data Sense.
 
-* Ensure that BlueXP has permissions to deploy resources and create security groups for the Cloud Data Sense instance.
-* Ensure that the BlueXP Connector can access the Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
-+
-This connection enables deployment of the Data Sense instance and enables you to view compliance and governance information.
-+
-Make sure port 8080 is open so you can see the installation progress in BlueXP.
-* Depending on the types of data sources you plan to scan, additional ports must be open to the Data Sense instance. See the details for each data source you plan to scan.
+* Ensure that the Connector has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 * Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense instance needs to stay on to continuously scan your data.
 * Ensure web browser connectivity to Cloud Data Sense. After Cloud Data Sense is enabled, ensure that users access the BlueXP interface from a host that has a connection to the Data Sense instance.
 +
 The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to others. As a result, the web browser that you use to access BlueXP must have a connection to that private IP address. That connection can come from a host that's inside the same network as the Data Sense instance.
+
+== Verify that all required ports are enabled
+
+You must ensure that all required ports are open for communication between the Connector, Data Sense, Active Directory, and your data sources.
+
+[cols="25,25,50",options="header"]
+|===
+| Connection Type
+| Ports
+| Description
+
+|Connector <> Data Sense | 8080 (TCP), 443 (TCP), and 80 | The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
+
+Make sure port 8080 is open so you can see the installation progress in BlueXP.
+|Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
+
+* The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined security group.
+* The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Connector host.
+|Data Sense <> ONTAP cluster  a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
+* For CIFS - 139 (TCP\UDP) and 445(TCP\UDP) a| Data Sense needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Security groups for Cloud Volumes ONTAP must allow inbound connections from the Data Sense instance. 
+
+Make sure these ports are open to the Data Sense instance:
+
+* For NFS - 111 and 2049
+* For CIFS - 139 and 445
+
+NFS volume export policies must allow access from the Data Sense instance.
+|Data Sense <> Active Directory | 389 (TCP & UDP), 636 (TCP), 3268 (TCP), and 3269 (TCP) a| You must have an Active Directory already set up for the users in your company. Additionally, Data Sense needs Active Directory credentials to scan CIFS volumes.
+
+You must have the information for the Active Directory:
+
+* DNS Server IP Address, or multiple IP Addresses
+* User Name and Password for the server
+* Domain Name (Active Directory Name)
+* Whether you are using secure LDAP (LDAPS) or not
+* LDAP Server Port (typically 389 for LDAP, and 636 for secure LDAP)
+
+|===
+
+If you are using multiple Data Sense hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-dark-site.html#multi-host-installation-for-large-configurations[See the additional port requirements].
 
 == SharePoint and OneDrive special requirements
 
