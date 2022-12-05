@@ -16,6 +16,12 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 7 December 2022 (version 1.18)
+
+=== On-premises installation program enhancements
+
+Some additional prerequisites are now checked before the installation on an on-premises host. This helps to make sure your host system is 100% ready to have Data Sense software installed. Additionally, the Working Environments page now displays the _Working Environment ID_ and the _Scanner Group_ name. This information is needed if you plan to use multiple Data Sense hosts to provide additional processing power to scan your data sources.
+
 == 13 November 2022 (version 1.17)
 
 === Support for scanning SharePoint On-Premises accounts
@@ -57,6 +63,7 @@ Data Sense now recognizes Data Subjects as part of the Personal Results that app
 Data Sense now recognizes breadcrumb files as part of the Categories that appear in the Compliance Dashboard. These are files Data Sense creates when moving files from the source location to an NFS share. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more about how breadcrumb files are created^].
 
 Additionally, when performing a search in the Investigation page, you can select "Data Sense Breadcrumbs" under "Category" to view only Data Sense breadcrumb files.
+// end::whats-new[]
 
 == 7 August 2022 (version 1.15)
 
@@ -92,7 +99,6 @@ There are two ways that you can add custom "personal data" that Data Sense will 
 * You can add a personal pattern using a regular expression (regex).
 
 These keywords and patterns are added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the Personal patterns section. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html[Learn more^].
-// end::whats-new[]
 
 == 6 July 2022 (version 1.14)
 
