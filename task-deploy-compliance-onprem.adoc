@@ -17,6 +17,10 @@ Complete a few steps to deploy Cloud Data Sense on a Linux host in your network,
 
 The on-prem installation may be a good option if you prefer to scan on-premises ONTAP systems using a Data Sense instance that's also located on premises -- but this is not a requirement. The software functions exactly the same way regardless of which installation method you choose.
 
+The typical on-prem installation has the following components and connections.
+
+image:diagram_deploy_onprem_overview.png[A diagram of the required BlueXP and network components, and the related connections.]
+
 For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the Manager node, and the additional systems that provide extra processing power are called Scanner nodes.
 
 Note that you can also link:task-deploy-compliance-dark-site.html[deploy Data Sense in an on-premises site that doesn't have internet access] for completely secure sites.
@@ -28,10 +32,10 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Create a Connector
 
 [role="quick-margin-para"]
-If you don't already have a Connector, create a Connector now. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^].
+If you don't already have a Connector, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network or in the cloud.
 
 [role="quick-margin-para"]
-You can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network or in the cloud.
+You can also create a Connector with your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review prerequisites
 
@@ -75,7 +79,7 @@ You'll need the IP address or host name of the Connector system when installing 
 
 == Prepare the Linux host system
 
-Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.
+Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. The Linux host can be in your network, or in the cloud. Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.
 
 * *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.6
 ** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
@@ -162,7 +166,7 @@ Ensure that the BlueXP Connector has the required permissions::
 Ensure that the Connector has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 
 Ensure that you can keep Cloud Data Sense running::
-The Cloud Data Sense instance needs to stay on to continuously scan your data.
+The Cloud Data Sense machine needs to stay on to continuously scan your data.
 
 Ensure web browser connectivity to Cloud Data Sense::
 After Cloud Data Sense is enabled, ensure that users access the BlueXP interface from a host that has a connection to the Data Sense instance.
