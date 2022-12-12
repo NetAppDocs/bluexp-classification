@@ -155,7 +155,7 @@ You can deploy Data Sense on a system with fewer CPUs and less RAM, but there ar
 | System size
 | Specs
 | Limitations
-| Extra Large (default) | 16 CPUs, 64 GB RAM, 500 GB SSD | None
+| Large (default) | 16 CPUs, 64 GB RAM, 500 GB SSD | None
 | Medium | 8 CPUs, 32 GB RAM, 200 GB SSD | Slower scanning, and can only scan up to 1 million files.
 | Small | 8 CPUs, 16 GB RAM, 100 GB SSD | Same limitations as "Medium", plus the ability to identify link:task-responding-to-dsar.html[data subject names] inside files is disabled.
 |===

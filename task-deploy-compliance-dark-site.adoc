@@ -76,22 +76,36 @@ If you don't already have a BlueXP Connector installed at your offline on-premis
 
 Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.
 
-* Operating system: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.6
+* *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.6
 ** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
-** The OS must be capable of installing the Docker Engine (for example, disable the _firewalld_ service if needed)
-* Disk: SSD with 500 GiB available on /, or
+** The OS must be capable of installing the Docker Engine
+* *Disk*: SSD with 500 GiB available on /, or
 ** 100 GiB available on /opt
 ** 400 GiB available on /var
 ** 5 GiB on /tmp
-* RAM: 64 GB (swap memory must be disabled on the host)
-* CPU: 16 cores
+* *RAM*: 64 GB (swap memory must be disabled on the host)
+* *CPU*: 16 cores
 +
 Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
-You must install the following software on the host before you install Data Sense:
+* *Additional software*: You must install the following software on the host before you install Data Sense:
 
-* Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
-* Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
+** Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
+** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
+
+* *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Sense. Run the following commands to configure `firewalld` so that it is compatible with Data Sense:
++
+ firewall-cmd --permanent --add-service=http
+ firewall-cmd --permanent --add-service=https
+ firewall-cmd --permanent --add-service=mysql
+ firewall-cmd --permanent --add-port=80/tcp
+ firewall-cmd --permanent --add-port=8080/tcp
+ firewall-cmd --permanent --add-port=443/tcp
+ firewall-cmd --permanent --add-port=555/tcp
+ firewall-cmd --permanent --add-port=3306/tcp
+ firewall-cmd --reload
++
+If you enable `firewalld` after installing Data Sense, you must restart docker.
 
 NOTE: The IP address of the Data Sense host system can't be changed after installation.
 
@@ -99,22 +113,57 @@ NOTE: The IP address of the Data Sense host system can't be changed after instal
 
 Review the following prerequisites to make sure that you have a supported configuration before you deploy Cloud Data Sense.
 
-* Ensure that BlueXP has permissions to deploy resources and create security groups for the Cloud Data Sense instance.
-* Ensure that the BlueXP Connector can access the Data Sense instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
-+
-This connection enables deployment of the Data Sense instance and enables you to view compliance and governance information.
-+
-Make sure port 8080 is open so you can see the installation progress in BlueXP.
+* Ensure that the Connector has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 * Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense instance needs to stay on to continuously scan your data.
 * Ensure web browser connectivity to Cloud Data Sense. After Cloud Data Sense is enabled, ensure that users access the BlueXP interface from a host that has a connection to the Data Sense instance.
 +
 The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to others. As a result, the web browser that you use to access BlueXP must have a connection to that private IP address. That connection can come from a host that's inside the same network as the Data Sense instance.
 
+== Verify that all required ports are enabled
+
+You must ensure that all required ports are open for communication between the Connector, Data Sense, Active Directory, and your data sources.
+
+[cols="25,25,50",options="header"]
+|===
+| Connection Type
+| Ports
+| Description
+
+|Connector <> Data Sense | 8080 (TCP), 443 (TCP), and 80 | The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
+
+Make sure port 8080 is open so you can see the installation progress in BlueXP.
+|Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
+
+* The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined security group.
+* The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Connector host.
+|Data Sense <> ONTAP cluster  a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
+* For CIFS - 139 (TCP\UDP) and 445(TCP\UDP) a| Data Sense needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Security groups for Cloud Volumes ONTAP must allow inbound connections from the Data Sense instance. 
+
+Make sure these ports are open to the Data Sense instance:
+
+* For NFS - 111 and 2049
+* For CIFS - 139 and 445
+
+NFS volume export policies must allow access from the Data Sense instance.
+|Data Sense <> Active Directory | 389 (TCP & UDP), 636 (TCP), 3268 (TCP), and 3269 (TCP) a| You must have an Active Directory already set up for the users in your company. Additionally, Data Sense needs Active Directory credentials to scan CIFS volumes.
+
+You must have the information for the Active Directory:
+
+* DNS Server IP Address, or multiple IP Addresses
+* User Name and Password for the server
+* Domain Name (Active Directory Name)
+* Whether you are using secure LDAP (LDAPS) or not
+* LDAP Server Port (typically 389 for LDAP, and 636 for secure LDAP)
+
+|===
+
+If you are using multiple Data Sense hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-dark-site.html#multi-host-installation-for-large-configurations[See the additional port requirements].
+
 == SharePoint and OneDrive special requirements
 
 When BlueXP and Data Sense are deployed in a site with no internet access, you can scan files in SharePoint Online and OneDrive accounts by providing internet access to a few select endpoints. 
 
-SharePoint On-Premises accounts can be scanned without providing any internet access.
+Locally installed SharePoint On-Premises accounts can be scanned without providing any internet access.
 
 [cols="50,50",options="header"]
 |===
@@ -127,13 +176,13 @@ SharePoint On-Premises accounts can be scanned without providing any internet ac
 
 | Communication with Microsoft servers to log in to the selected online service.
 
-| \https://cloudmanager.cloud.netapp.com
+| \https://api.bluexp.netapp.com
 
 | Communication with the BlueXP service, which includes NetApp accounts.
 
 |===
 
-Access to _cloudmanager.cloud.netapp.com_ is required only during the initial connections to these external services.
+Access to _api.bluexp.netapp.com_ is required only during the initial connections to these external services.
 
 == Deploy Data Sense
 
