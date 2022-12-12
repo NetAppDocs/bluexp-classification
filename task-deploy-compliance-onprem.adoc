@@ -107,13 +107,17 @@ Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, bu
 +
  firewall-cmd --permanent --add-service=http
  firewall-cmd --permanent --add-service=https
- firewall-cmd --permanent --add-service=mysql
  firewall-cmd --permanent --add-port=80/tcp
  firewall-cmd --permanent --add-port=8080/tcp
  firewall-cmd --permanent --add-port=443/tcp
- firewall-cmd --permanent --add-port=555/tcp
- firewall-cmd --permanent --add-port=3306/tcp
  firewall-cmd --reload
++
+If you're planning to use additional Data Sense hosts, add these rules to your primary system at this time:
++
+ firewall-cmd --permanent --add-port=2377/tcp
+ firewall-cmd --permanent --add-port=7496/udp
+ firewall-cmd --permanent --add-port=7496/tcp
+ firewall-cmd --permanent --add-port=4789/udp
 +
 If you enable `firewalld` after installing Data Sense, you must restart docker.
 
@@ -374,6 +378,20 @@ You'll follow these steps to install additional Data Sense scanner nodes:
 |2049 | TCP, UDP | NFS Server for sharing files between the hosts (needed from each scanner node to manager node)
 
 |===
+* If you are using `firewalld` on your Data Sense machines, we recommend that you enable it before installing Data Sense. Run the following commands to configure `firewalld` so that it is compatible with Data Sense:
++
+ firewall-cmd --permanent --add-service=http
+ firewall-cmd --permanent --add-service=https
+ firewall-cmd --permanent --add-port=80/tcp
+ firewall-cmd --permanent --add-port=8080/tcp
+ firewall-cmd --permanent --add-port=443/tcp
+ firewall-cmd --permanent --add-port=2377/tcp
+ firewall-cmd --permanent --add-port=7496/udp
+ firewall-cmd --permanent --add-port=7496/tcp
+ firewall-cmd --permanent --add-port=4789/udp
+ firewall-cmd --reload
++
+If you enable `firewalld` after installing Data Sense, you must restart docker.
 
 .Prerequisite steps
 

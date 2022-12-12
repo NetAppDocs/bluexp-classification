@@ -16,11 +16,19 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 8 December 2022 (version 1.18)
+== 11 December 2022 (version 1.18)
 
-=== On-premises installation program enhancements
+=== On-premises installation enhancements
 
-Some additional prerequisites are now checked before the installation on an on-premises host. This helps to make sure your host system is 100% ready to have Data Sense software installed. Additionally, the Working Environments page now displays the _Working Environment ID_ and the _Scanner Group_ name. This information is needed if you plan to use multiple Data Sense hosts to provide additional processing power to scan your data sources.
+The following enhancements have been added for the on-prem Data Sense installation:
+
+* Some additional prerequisites are now checked before the installation will start on an on-premises host. This helps to make sure your host system is 100% ready to have Data Sense software installed:
+** test for sufficient space on /var/lib/docker, /tmp, and /opt
+** test for the relevant permissions on all required folders
+* In the Configuration page, the Working Environments section now displays the _Working Environment ID_ and the _Scanner Group_ name. You'll need to know the Working Environment ID if you plan to use multiple Data Sense hosts to provide additional processing power to scan your data sources.
+* In the Configuration page, a new section shows the Scanner Groups you have set up, and the scanner nodes that are in each group.
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html[Learn more about installing Data Sense on a single host server and on multiple hosts]. 
 
 == 13 November 2022 (version 1.17)
 
