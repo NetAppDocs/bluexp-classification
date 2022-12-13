@@ -115,8 +115,8 @@ Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, bu
 If you're planning to use additional Data Sense hosts, add these rules to your primary system at this time:
 +
  firewall-cmd --permanent --add-port=2377/tcp
- firewall-cmd --permanent --add-port=7496/udp
- firewall-cmd --permanent --add-port=7496/tcp
+ firewall-cmd --permanent --add-port=7946/udp
+ firewall-cmd --permanent --add-port=7946/tcp
  firewall-cmd --permanent --add-port=4789/udp
 +
 If you enable `firewalld` after installing Data Sense, you must restart docker.
@@ -386,8 +386,8 @@ You'll follow these steps to install additional Data Sense scanner nodes:
  firewall-cmd --permanent --add-port=8080/tcp
  firewall-cmd --permanent --add-port=443/tcp
  firewall-cmd --permanent --add-port=2377/tcp
- firewall-cmd --permanent --add-port=7496/udp
- firewall-cmd --permanent --add-port=7496/tcp
+ firewall-cmd --permanent --add-port=7946/udp
+ firewall-cmd --permanent --add-port=7946/tcp
  firewall-cmd --permanent --add-port=4789/udp
  firewall-cmd --reload
 +
@@ -447,7 +447,7 @@ Variable values:
 When the installation finishes on all scanner nodes and they have been joined to the manager node, the "add_scanner_node.sh" script finishes as well. The installation can take 10 to 20 minutes.
 
 . If you added any scanner nodes into a scanner group, return to the Manager node and perform the following 2 tasks:
-.. Open the file "/opt/netapp/Datasense/working_environment_to_scanner_group_config.yml" and enter the mapping for which scanner groups will scan specific working environments. You'll need to have the _Working Environment ID_ for each data source. For example, the following entries add 2 working environments into 2 scanner groups:
+.. Open the file "/opt/netapp/Datasense/working_environment_to_scanner_group_config.yml" and enter the mapping for which scanner groups will scan specific working environments. You'll need to have the _Working Environment ID_ for each data source. For example, the following entries add 2 working environments to the "europe" scanner group and 2 to the "united_states" scanner group:
 +
  scanner group:
   europe:
@@ -467,9 +467,17 @@ Any working environment that is not added to the list is scanned by the "default
 Data Sense is set up with Manager and Scanner nodes to scan all your data sources.
 
 .What's Next
-From the Configuration page you can select the data sources that you want to scan - if you haven't already done that. If you created scanner groups, each data source is scanned by the Scanner nodes in the respective group. You can see the Scanner Group name for each working environment in the Configuration page.
+From the Configuration page you can select the data sources that you want to scan - if you haven't already done that. If you created scanner groups, each data source is scanned by the Scanner nodes in the respective group. 
 
-You can also link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until the amount of data exceeds 1 TB.
+You can see the Scanner Group name for each working environment in the Configuration page.
+
+image:screenshot_work_env_id.png[A screenshot of the Working Environment ID from the Data Sense Configuration page.]
+
+You can also see the list of all scanner groups along with the IP address and status for each scanner node in the group in the bottom of the Configuration page.
+
+image:screenshot_scanner_groups.png[A screenshot listing all scanner groups along with the IP address for each scanner node in the group.]
+
+You can link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until the amount of data exceeds 1 TB.
 
 === Multi-host installation for large configurations
 
