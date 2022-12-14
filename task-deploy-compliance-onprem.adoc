@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-deploy-compliance-onprem.html
 keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises
-summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or in the cloud, that has internet access.
+summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or a Linux host in the cloud, that has internet access.
 ---
 
 = Deploy Cloud Data Sense on a Linux host that has internet access
@@ -13,7 +13,7 @@ summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or in the cloud, that has internet access.
+Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or a Linux host in the cloud, that has internet access.
 
 The on-prem installation may be a good option if you prefer to scan on-premises ONTAP systems using a Data Sense instance that's also located on premises -- but this is not a requirement. The software functions exactly the same way regardless of which installation method you choose.
 
@@ -81,6 +81,8 @@ You'll need the IP address or host name of the Connector system when installing 
 
 Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. The Linux host can be in your network, or in the cloud. Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.
 
+Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense machine needs to stay on to continuously scan your data.
+
 * *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.6
 ** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
 ** The OS must be capable of installing the docker engine
@@ -123,13 +125,14 @@ If you enable `firewalld` after installing Data Sense, you must restart docker.
 
 NOTE: The IP address of the Data Sense host system can't be changed after installation.
 
-== Verify BlueXP and Data Sense prerequisites
+//== Verify BlueXP and Data Sense prerequisites
+//
+//Review the following prerequisites to make sure that you have a supported configuration before you deploy Cloud Data Sense on a Linux system. 
 
-Review the following prerequisites to make sure that you have a supported configuration before you deploy Cloud Data Sense on a Linux system.
+== Enable outbound internet access from Cloud Data Sense
 
-Enable outbound internet access from Cloud Data Sense::
 Cloud Data Sense requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the Data Sense instance has outbound internet access to contact the following endpoints.
-+
+
 [cols="43,57",options="header"]
 |===
 | Endpoints
@@ -166,16 +169,13 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 | Provides prerequisite packages for installation.
 |===
 
-Ensure that the BlueXP Connector has the required permissions::
-Ensure that the Connector has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
-
-Ensure that you can keep Cloud Data Sense running::
-The Cloud Data Sense machine needs to stay on to continuously scan your data.
-
-Ensure web browser connectivity to Cloud Data Sense::
-After Cloud Data Sense is enabled, ensure that users access the BlueXP interface from a host that has a connection to the Data Sense instance.
-+
-The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to the internet. As a result, the web browser that you use to access BlueXP must have a connection to that private IP address. That connection can come from a direct connection to your cloud provider (for example, a VPN), or from a host that's inside the same network as the Data Sense instance.
+//Ensure that the BlueXP Connector has the required permissions::
+//Ensure that the Connector has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
+//
+//Ensure web browser connectivity to Cloud Data Sense::
+//After Cloud Data Sense is enabled, ensure that users access the BlueXP interface from a host that has a connection to the Data Sense instance.
+//+
+//The Data Sense instance uses a private IP address to ensure that the indexed data isn't accessible to the internet. As a result, the web browser that you use to access BlueXP must have a connection to that private IP address. That connection can come from a direct connection to your cloud provider (for example, a VPN), or from a host that's inside the same network as the Data Sense instance.
 
 == Verify that all required ports are enabled
 
@@ -187,15 +187,15 @@ You must ensure that all required ports are open for communication between the C
 | Ports
 | Description
 
-|Connector <> Data Sense | 8080 (TCP), 443 (TCP), and 80 | The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
+|Connector <> Data Sense | 8080 (TCP), 443 (TCP), and 80 | The firewall or routing rules for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
 
 Make sure port 8080 is open so you can see the installation progress in BlueXP.
 |Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
 
-* The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined security group.
+* The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
 * The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Connector host.
 |Data Sense <> ONTAP cluster  a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
-* For CIFS - 139 (TCP\UDP) and 445(TCP\UDP) a| Data Sense needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Security groups for Cloud Volumes ONTAP must allow inbound connections from the Data Sense instance. 
+* For CIFS - 139 (TCP\UDP) and 445(TCP\UDP) a| Data Sense needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Firewalls or routing rules for Cloud Volumes ONTAP must allow inbound connections from the Data Sense instance. 
 
 Make sure these ports are open to the Data Sense instance:
 
@@ -227,7 +227,7 @@ For very large configurations where you'll be scanning petabytes of data, you ca
 
 image:diagram_deploy_onprem_multi_host_internet.png[A diagram showing the location of the data sources you can scan when using multiple Data Sense instances deployed on-prem with internet access.]
 
-See <<Prepare the Linux host system,Preparing the Linux host system>> and <<Verify BlueXP and Data Sense prerequisites,Reviewing prerequisites>> for the full list of requirements before you deploy Cloud Data Sense.
+See <<Prepare the Linux host system,Preparing the Linux host system>> and <<Enable outbound internet access from Cloud Data Sense,Reviewing prerequisites>> for the full list of requirements before you deploy Cloud Data Sense.
 
 Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
 
@@ -243,7 +243,7 @@ Follow these steps when installing Data Sense software on a single on-premises h
 * (Optional) Verify that the system has the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the system.
 * Make sure you have root privileges on the Linux system.
 * If you're using a proxy, and it is performing TLS interception, you'll need to know the path on the Data Sense Linux system where the TLS CA certificates are stored.
-* Verify that your offline environment meets the required <<Verify BlueXP and Data Sense prerequisites,permissions and connectivity>>.
+* Verify that your offline environment meets the required <<Enable outbound internet access from Cloud Data Sense,permissions and connectivity>>.
 
 .Steps
 
@@ -358,7 +358,7 @@ You'll follow these steps to install additional Data Sense scanner nodes:
 * Verify that all your Linux systems for Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
 * (Optional) Verify that the systems have the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the systems.
 * Make sure you have root privileges on the Linux systems.
-* Verify that your environment meets the required <<Verify BlueXP and Data Sense prerequisites,permissions and connectivity>>.
+* Verify that your environment meets the required <<Enable outbound internet access from Cloud Data Sense,permissions and connectivity>>.
 * You must have the IP addresses of the Scanner node hosts that you are adding.
 * You must have the IP address of the Data Sense Manager node host system
 * You must have the IP address or host name of the Connector system, your NetApp Account ID, Connector Client ID, and user access token. If you're planning to use scanner groups, you'll need to know the Working Environment ID for each data source in your account. See _Prerequisite steps_ below to get this information.
@@ -481,7 +481,7 @@ You can link:task-licensing-datasense.html[set up licensing for Cloud Data Sense
 
 === Multi-host installation for large configurations
 
-For very large configurations where you’ll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the _Manager node_ and the additional systems that provide extra processing power are called _Scanner nodes_.
+For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the _Manager node_ and the additional systems that provide extra processing power are called _Scanner nodes_.
 
 Follow these steps when installing Data Sense software on multiple on-premises hosts.
 
@@ -490,7 +490,7 @@ Follow these steps when installing Data Sense software on multiple on-premises h
 * Verify that all your Linux systems for the Manager and Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
 * (Optional) Verify that the systems have the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the systems.
 * Make sure you have root privileges on the Linux systems.
-* Verify that your environment meets the required <<Verify BlueXP and Data Sense prerequisites,permissions and connectivity>>.
+* Verify that your environment meets the required <<Enable outbound internet access from Cloud Data Sense,permissions and connectivity>>.
 * You must have the IP addresses of the scanner node hosts that you plan to use.
 * The following ports and protocols must be enabled on all hosts:
 +
