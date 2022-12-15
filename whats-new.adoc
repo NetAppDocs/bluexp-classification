@@ -23,10 +23,10 @@ Learn what's new in Cloud Data Sense.
 The following enhancements have been added for the on-prem Data Sense installation:
 
 * Some additional prerequisites are now checked before the installation will start on an on-premises host. This helps to make sure your host system is 100% ready to have Data Sense software installed:
-** test for sufficient space on /var/lib/docker, /tmp, and /opt
+** test for sufficient space on `/var/lib/docker`, `/tmp`, and `/opt`
 ** test for the relevant permissions on all required folders
 * In the Configuration page, the Working Environments section now displays the _Working Environment ID_ and the _Scanner Group_ name. You'll need to know the Working Environment ID if you plan to use multiple Data Sense hosts to provide additional processing power to scan your data sources.
-* In the Configuration page, a new section shows the Scanner Groups you have set up, and the scanner nodes that are in each group.
+* Also in the Configuration page, a new section shows the Scanner Groups you have set up, and the scanner nodes that are in each group.
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html[Learn more about installing Data Sense on a single host server and on multiple hosts]. 
 

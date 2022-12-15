@@ -121,8 +121,8 @@ Data transfer costs depend on your setup. If the Cloud Data Sense instance and d
 == The Cloud Data Sense instance
 
 When you deploy Data Sense in the cloud, BlueXP deploys the instance in the same subnet as the Connector. https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html[Learn more about Connectors.^]
-
-NOTE: If the Connector is installed on-prem, it deploys the Cloud Data Sense instance in same VPC or VNet as the first Cloud Volumes ONTAP system in the request. You can install Data Sense on-prem as well.
+//
+//NOTE: If the Connector is installed on-prem, it deploys the Cloud Data Sense instance in same VPC or VNet as the first Cloud Volumes ONTAP system in the request. You can install Data Sense on-prem as well.
 
 image:diagram_cloud_compliance_instance.png[A diagram that shows a BlueXP instance and a Cloud Data Sense instance running in your cloud provider.]
 
