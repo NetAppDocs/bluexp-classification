@@ -19,7 +19,7 @@ Cloud Data Sense provides many ways for you to manage and organize your private 
 * You can add Tags to files that you want to mark for organization or for some type of follow-up.
 * You can assign a BlueXP user to a specific file, or to multiple files, so that person can be responsible for managing the file.
 * Using the "Policy" functionality you can create your own custom search queries so that you can easily see the results by clicking one button.
-* You can send email alerts to BlueXP users when certain critical Policies return results.
+* You can send email alerts to BlueXP users, or any other email address, when certain critical Policies return results.
 
 NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
 
@@ -36,7 +36,7 @@ Below is a comparison of Data Sense tagging and Azure Information Protection lab
 | File tags are an integrated part of Data Sense. | Requires that you have subscribed to Azure Information Protection (AIP).
 | The tag is only kept in the Data Sense database - it is not written to the file.
 It does not change the file, or the file accessed or modified times. | The label is part of the file and when the label changes, the file changes. This change also changes the file accessed and modified times.
-| You can have multiple tags on a single file. |	You can have one label on a single file.
+| You can have multiple tags on a single file. | You can have one label on a single file.
 | The tag can be used for internal Data Sense action, such as copy, move, delete, run a policy, etc. | Other systems that can read the file can see the label - which can be used for additional automation.
 | Only a single API call is used to see if a file has a tag.  |
 
@@ -51,7 +51,7 @@ Cloud Data Sense supports AIP labels within the following file types: .DOC, .DOC
 [NOTE]
 ====
 * You can't currently change labels in files larger than 30 MB. For OneDrive, SharePoint, and Google Drive accounts the maximum file size is 4 MB.
-* If a file has a label which doesn’t exist anymore in AIP, Cloud Data Sense considers it as a file without a label.
+* If a file has a label which doesn't exist anymore in AIP, Cloud Data Sense considers it as a file without a label.
 * If you've deployed Data Sense in a Government region, or in an on-prem location that has no internet access (also known as a dark site), then the AIP label functionality is unavailable.
 ====
 
@@ -305,7 +305,7 @@ Policies provide the following functionality:
 * <<List of predefined Policies,Predefined Policies>> from NetApp based on user requests
 * Ability to create your own custom Policies
 * Launch the Investigation page with the results from your Policies in one click
-* Send email alerts to BlueXP users when certain critical Policies return results so you can get notifications to protect your data
+* Send email alerts to BlueXP users, or any other email addresses, when certain critical Policies return results so you can get notifications to protect your data
 * Assign AIP (Azure Information Protection) labels automatically to all files that match the criteria defined in a Policy
 * Delete files automatically (once per day) when certain Policies return results so you can protect your data automatically
 
@@ -338,7 +338,8 @@ image:screenshot_compliance_save_as_highlight.png[A screenshot showing how to sa
 . Name the Policy and select other actions that can be performed by the Policy:
 .. Enter a unique name and description.
 .. Optionally, check the box to automatically delete files that match the Policy parameters. Learn more about link:task-managing-highlights.html#deleting-source-files-automatically-using-policies[deleting source files using a policy].
-.. Optionally, check the box if you want notification emails sent to BlueXP users, and choose the interval at which the email is sent. Learn more about link:task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[sending email alerts based on policy results].
+.. Optionally, check the box if you want notification emails sent to BlueXP users in your account, and choose the interval at which the email is sent. Learn more about link:task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[sending email alerts based on policy results].
+.. Optionally, check the box if you want notification emails sent to other users (up to 10 email addresses), and choose the interval at which the email is sent. Learn more about link:task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[sending email alerts based on policy results].
 .. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP labels].)
 .. Click *Create Policy*.
 +
@@ -350,7 +351,7 @@ The new Policy appears in the Policies tab.
 
 === Sending email alerts when non-compliant data is found
 
-Cloud Data Sense can send email alerts to BlueXP users when certain critical Policies return results so you can get notifications to protect your data. You can choose to send the email notifications on a daily, weekly, or monthly basis.
+Cloud Data Sense can send email alerts to BlueXP users in your account when certain critical Policies return results so you can get notifications to protect your data. You can also choose to send email alerts to any other email address - up to 10 email addresses - not in your BlueXP account. You can choose to send the email notifications on a daily, weekly, or monthly basis.
 
 You can configure this setting when creating the Policy or when editing any Policy.
 
@@ -362,7 +363,9 @@ Follow these steps to add email updates to an existing Policy.
 +
 image:screenshot_compliance_add_email_alert_1.png[A screenshot showing how to edit an existing Policy.]
 
-. In the Edit Policy page, check the box if you want notification emails sent to BlueXP users, and choose the interval at which the email is sent (for example, every *Week*).
+. In the Edit Policy page:
+.. Check the "Email all the users in this account" box if you want notification emails sent to users in your BlueXP account, and choose the interval at which the email is sent (for example, *Every Day*).
+.. Check the "Send Email" box if you want notification emails sent to additional users, choose the interval at which the email is sent, and enter up to 10 email addresses.
 +
 image:screenshot_compliance_add_email_alert_2.png[A screenshot showing how to choose the email criterial to be sent for the Policy.]
 
@@ -413,14 +416,14 @@ Cloud Data Sense provides the following system-defined Policies:
 | Name
 | Description
 | Logic
-| S3 publicly-exposed private data | S3 Objects containing personal or sensitive personal information, with open Public read access. | S3 Public AND contains personal OR sensitive personal info
-| PCI DSS – Stale data over 30 days | Files containing Credit Card information, last modified over 30 days ago. | Contains credit card AND last modified over 30 days
-| HIPAA – Stale data over 30 days | Files containing Health information, last modified over 30 days ago. | Contains health data (defined same way as in HIPAA report) AND last modified over 30 days
-| Private data – Stale over 7 years | Files containing personal or sensitive personal information, last modified over 7 years ago. | Files containing personal or sensitive personal information, last modified over 7 years ago
-| GDPR – European citizens | Files containing more than 5 identifiers of an EU country’s citizens or DB Tables containing identifiers of an EU country’s citizens. | Files containing over 5 identifiers of an (one) EU citizens or DB Tables containing rows with over 15% of columns with one country’s EU identifiers. (any one of the national identifiers of the European countries. Does not include Brazil, California, USA SSN, Israel, South Africa)
-| CCPA – California residents | Files containing over 10 California Driver’s License identifiers or DB Tables with this identifier. | Files containing over 10 California Driver’s License identifiers OR DB Tables containing California Driver’s license
-| Data Subject names – High risk | Files with over 50 Data Subject names. | Files with over 50 Data Subject names
-| Email Addresses – High risk | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses
-| Personal data – High risk | Files with over 20 Personal data identifiers, or DB Columns with over 50% of their rows containing Personal data identifiers. | Files with over 20 personal, or DB Columns with over 50% of their rows containing personal
-| Sensitive Personal data – High risk | Files with over 20 Sensitive Personal data identifiers, or DB Columns with over 50% of their rows containing Sensitive Personal data. | Files with over 20 sensitive personal, or DB Columns with over 50% of their rows containing sensitive personal
+| S3 publicly - Exposed private data | S3 Objects containing personal or sensitive personal information, with open Public read access. | S3 Public AND contains personal OR sensitive personal info
+| PCI DSS - Stale data over 30 days | Files containing Credit Card information, last modified over 30 days ago. | Contains credit card AND last modified over 30 days
+| HIPAA - Stale data over 30 days | Files containing Health information, last modified over 30 days ago. | Contains health data (defined same way as in HIPAA report) AND last modified over 30 days
+| Private data - Stale over 7 years | Files containing personal or sensitive personal information, last modified over 7 years ago. | Files containing personal or sensitive personal information, last modified over 7 years ago
+| GDPR - European citizens | Files containing more than 5 identifiers of an EU country's citizens or DB Tables containing identifiers of an EU country's citizens. | Files containing over 5 identifiers of an (one) EU citizens or DB Tables containing rows with over 15% of columns with one country's EU identifiers. (any one of the national identifiers of the European countries. Does not include Brazil, California, USA SSN, Israel, South Africa)
+| CCPA - California residents | Files containing over 10 California Driver's License identifiers or DB Tables with this identifier. | Files containing over 10 California Driver's License identifiers OR DB Tables containing California Driver's license
+| Data Subject names - High risk | Files with over 50 Data Subject names. | Files with over 50 Data Subject names
+| Email Addresses - High risk | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses
+| Personal data - High risk | Files with over 20 Personal data identifiers, or DB Columns with over 50% of their rows containing Personal data identifiers. | Files with over 20 personal, or DB Columns with over 50% of their rows containing personal
+| Sensitive Personal data - High risk | Files with over 20 Sensitive Personal data identifiers, or DB Columns with over 50% of their rows containing Sensitive Personal data. | Files with over 20 sensitive personal, or DB Columns with over 50% of their rows containing sensitive personal
 |===
