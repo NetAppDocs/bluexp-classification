@@ -29,7 +29,7 @@ Data Sense provides several tools that can help with your compliance efforts. Yo
 * Identify a wide scope of sensitive personal information as required by GDPR, CCPA, PCI, and HIPAA privacy regulations.
 * Respond to Data Subject Access Requests (DSAR) based on name or email address.
 * Identify whether unique identifiers from your databases are found in files in other repositories - basically making your own list of "personal data" that is identified in Data Sense scans.
-* Notify BlueXP users through email when files contain certain PII (you define this criteria using link:task-org-private-data.html#controlling-your-data-using-policies[Policies^]) so you can decide on an action plan.
+* Notify certain users through email when files contain certain PII (you define this criteria using link:task-org-private-data.html#controlling-your-data-using-policies[Policies^]) so you can decide on an action plan.
 
 === Strengthen security
 
@@ -48,7 +48,7 @@ Data Sense provides tools that can help with your storage total cost of ownershi
 
 * Increase storage efficiency by identifying duplicate or non-business-related data. You can use this information to decide whether you want to move or delete certain files.
 * Delete files that seem insecure or too risky to leave in your storage system, or that you have identified as duplicate. You can use _Policies_ to automatically delete files that match certain criteria.
-* Save storage costs by identifying inactive data that you can tier to less expensive object storage. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html[Learn more about tiering^].
+* Save storage costs by identifying inactive data that you can tier to less expensive object storage. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html[Learn more about tiering from Cloud Volumes ONTAP systems^]. https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html[Learn more about tiering from on-premises ONTAP systems^].
 
 === Accelerate data migration
 
