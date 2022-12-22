@@ -30,7 +30,7 @@ New filters are available to refine the results that display in the Data Investi
 
 * The "Number of users with access" filter shows which files and folders are open to a certain number of users. You can choose a number range to refine the results - for example, to see which files are accessible by 51-100 users.
 * The "Created Time", "Discovered Time", "Last Modified", and "Last Accessed" filters now allow you to create a custom date range instead of just selecting a pre-defined range of days. For example, you can look for files with a "Created Time" "older than 6 months", or with a "Last Modified" date within the "last 10 days".
-* The "File Path" filter now enables you to specify paths that you want to exclude from the filtered query results. If you enter both paths to include and exclude, Data Sense finds all files in the included paths first, then it removes files from excluded paths, and then it displays the results.
+* The "File Path" filter now enables you to specify paths that you want to exclude from the filtered query results. If you enter paths to both include and exclude certain data, Data Sense finds all files in the included paths first, then it removes files from excluded paths, and then it displays the results.
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
 
