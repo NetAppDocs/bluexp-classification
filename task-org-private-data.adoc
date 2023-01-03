@@ -305,7 +305,8 @@ Policies provide the following functionality:
 * <<List of predefined Policies,Predefined Policies>> from NetApp based on user requests
 * Ability to create your own custom Policies
 * Launch the Investigation page with the results from your Policies in one click
-* Send email alerts to BlueXP users, or any other email addresses, when certain critical Policies return results so you can get notifications to protect your data
+* Send email alerts to BlueXP users when certain critical Policies return results so you can get notifications to protect your data
+//* Send email alerts to BlueXP users, or any other email addresses, when certain critical Policies return results so you can get notifications to protect your data
 * Assign AIP (Azure Information Protection) labels automatically to all files that match the criteria defined in a Policy
 * Delete files automatically (once per day) when certain Policies return results so you can protect your data automatically
 
@@ -339,7 +340,7 @@ image:screenshot_compliance_save_as_highlight.png[A screenshot showing how to sa
 .. Enter a unique name and description.
 .. Optionally, check the box to automatically delete files that match the Policy parameters. Learn more about link:task-managing-highlights.html#deleting-source-files-automatically-using-policies[deleting source files using a policy].
 .. Optionally, check the box if you want notification emails sent to BlueXP users in your account, and choose the interval at which the email is sent. Learn more about link:task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[sending email alerts based on policy results].
-.. Optionally, check the box if you want notification emails sent to other users (up to 10 email addresses), and choose the interval at which the email is sent. Learn more about link:task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[sending email alerts based on policy results].
+//.. Optionally, check the box if you want notification emails sent to other users (up to 10 email addresses), and choose the interval at which the email is sent. Learn more about link:task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[sending email alerts based on policy results].
 .. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP labels].)
 .. Click *Create Policy*.
 +
@@ -351,7 +352,8 @@ The new Policy appears in the Policies tab.
 
 === Sending email alerts when non-compliant data is found
 
-Cloud Data Sense can send email alerts to BlueXP users in your account when certain critical Policies return results so you can get notifications to protect your data. You can also choose to send email alerts to any other email address - up to 10 email addresses - not in your BlueXP account. You can choose to send the email notifications on a daily, weekly, or monthly basis.
+Cloud Data Sense can send email alerts to BlueXP users in your account when certain critical Policies return results so you can get notifications to protect your data. You can choose to send the email notifications on a daily, weekly, or monthly basis.
+//You can also choose to send email alerts to any other email address - up to 10 email addresses - not in your BlueXP account. 
 
 You can configure this setting when creating the Policy or when editing any Policy.
 
@@ -365,7 +367,7 @@ image:screenshot_compliance_add_email_alert_1.png[A screenshot showing how to ed
 
 . In the Edit Policy page:
 .. Check the "Email all the users in this account" box if you want notification emails sent to users in your BlueXP account, and choose the interval at which the email is sent (for example, *Every Day*).
-.. Check the "Send Email" box if you want notification emails sent to additional users, choose the interval at which the email is sent, and enter up to 10 email addresses.
+//.. Check the "Send Email" box if you want notification emails sent to additional users, choose the interval at which the email is sent, and enter up to 10 email addresses.
 +
 image:screenshot_compliance_add_email_alert_2.png[A screenshot showing how to choose the email criterial to be sent for the Policy.]
 

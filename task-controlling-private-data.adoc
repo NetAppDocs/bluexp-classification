@@ -212,7 +212,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 | Working Environment Type | Select the type of working environment. OneDrive, SharePoint, and Google Drive are categorized under "Apps".
 | Working Environment name | Select specific working environments.
 | Storage Repository | Select the storage repository, for example, a volume or a schema.
-| File Path | Enter up to 20 partial or full paths that you want to include or exclude from the query. If you enter both paths to include and exclude, Data Sense finds all files in the included paths first, then it removes files from excluded paths, and then it displays the results.
+| File Path | Enter up to 20 partial or full paths that you want to include or exclude from the query. If you enter both include paths and exclude paths, Data Sense finds all files in the included paths first, then it removes files from excluded paths, and then it displays the results.
 | Category | Select the link:reference-private-data-categories.html#types-of-categories[types of categories^].
 | Sensitivity Level | Select the sensitivity level: Personal, Sensitive personal, or Non sensitive.
 | Number of identifiers | Select the range of detected sensitive identifiers per file. Includes personal data and sensitive personal data. When filtering in Directories, Data Sense totals the matches from all files in each folder (and sub-folders).

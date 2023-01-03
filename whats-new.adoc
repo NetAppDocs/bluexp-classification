@@ -17,12 +17,12 @@ Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
 == 5 January 2023 (version 1.19)
-
-=== Ability to send Policy-based notification emails to any email address
-
-In earlier versions of Cloud Data Sense you could have email alerts sent to the BlueXP users in your account when certain critical Policies return results. This allows you to get notifications to protect your data. Now you can also choose to send email alerts to any other email address - up to 10 email addresses - not in your BlueXP account. 
-
-https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
+//
+//=== Ability to send Policy-based notification emails to any email address
+//
+//In earlier versions of Cloud Data Sense you could have email alerts sent to the BlueXP users in your account when certain critical Policies return results. This allows you to get notifications to protect your data. Now you can also choose to send email alerts to any other email address - up to 10 email addresses - not in your BlueXP account. 
+//
+//https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
 
 === Three new filters are available in the Data Investigation page
 

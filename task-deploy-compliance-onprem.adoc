@@ -83,7 +83,7 @@ Data Sense software must run on a host that meets specific operating system requ
 
 Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense machine needs to stay on to continuously scan your data.
 
-* *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.6
+* *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.7
 ** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
 ** The OS must be capable of installing the docker engine
 
@@ -449,13 +449,15 @@ When the installation finishes on all scanner nodes and they have been joined to
 . If you added any scanner nodes into a scanner group, return to the Manager node and perform the following 2 tasks:
 .. Open the file "/opt/netapp/Datasense/working_environment_to_scanner_group_config.yml" and enter the mapping for which scanner groups will scan specific working environments. You'll need to have the _Working Environment ID_ for each data source. For example, the following entries add 2 working environments to the "europe" scanner group and 2 to the "united_states" scanner group:
 +
- scanner group:
+ scanner_groups:
   europe:
-    - "working_environment_id1"
-    - "working_environment_id2"
+    working_environments:
+      - "working_environment_id1"
+      - "working_environment_id2"
   united_states:
-    - "working_environment_id3"
-    - "working_environment_id4"
+    working_environments:
+      - "working_environment_id3"
+      - "working_environment_id4"
 +
 Any working environment that is not added to the list is scanned by the "default" group - you must have at least one manager or scanner node in the "default" group.
 
