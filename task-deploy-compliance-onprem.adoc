@@ -100,7 +100,7 @@ Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, bu
 
 * *Red Hat Subscription Management*: A Red Hat Enterprise Linux system must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd party software during installation.
 
-* *Additional software*: The following software must be installed on the host. If it doesn't already exist on the host, then the installer will install the software for you:
+* *Additional software*: You must install the following software on the host before you install Data Sense:
 
 ** Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
 ** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
@@ -240,7 +240,7 @@ Follow these steps when installing Data Sense software on a single on-premises h
 .What you'll need
 
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
-* (Optional) Verify that the system has the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the system.
+* Verify that the system has the two prerequisite software packages installed (Docker Engine and Python 3).
 * Make sure you have root privileges on the Linux system.
 * If you're using a proxy, and it is performing TLS interception, you'll need to know the path on the Data Sense Linux system where the TLS CA certificates are stored.
 * Verify that your offline environment meets the required <<Enable outbound internet access from Cloud Data Sense,permissions and connectivity>>.
@@ -356,7 +356,7 @@ You'll follow these steps to install additional Data Sense scanner nodes:
 .What you'll need
 
 * Verify that all your Linux systems for Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
-* (Optional) Verify that the systems have the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the systems.
+* Verify that the systems have the two prerequisite software packages installed (Docker Engine and Python 3).
 * Make sure you have root privileges on the Linux systems.
 * Verify that your environment meets the required <<Enable outbound internet access from Cloud Data Sense,permissions and connectivity>>.
 * You must have the IP addresses of the Scanner node hosts that you are adding.
@@ -490,7 +490,7 @@ Follow these steps when installing Data Sense software on multiple on-premises h
 .What you'll need
 
 * Verify that all your Linux systems for the Manager and Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
-* (Optional) Verify that the systems have the two prerequisite software packages installed (Docker Engine and Python 3). The installer will install this software if it is not already on the systems.
+* Verify that the systems have the two prerequisite software packages installed (Docker Engine and Python 3).
 * Make sure you have root privileges on the Linux systems.
 * Verify that your environment meets the required <<Enable outbound internet access from Cloud Data Sense,permissions and connectivity>>.
 * You must have the IP addresses of the scanner node hosts that you plan to use.
