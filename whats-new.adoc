@@ -16,7 +16,7 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 5 January 2023 (version 1.19)
+== 9 January 2023 (version 1.19)
 //
 //=== Ability to send Policy-based notification emails to any email address
 //
