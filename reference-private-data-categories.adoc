@@ -39,7 +39,7 @@ Note that you can add to the list of personal data that is found in your files i
 | Password | Yes
 
 .50+| National Identifiers | Australian TFN (Tax File Number) | Yes
-| Australian Driver’s License | Yes
+| Australian Driver's License | Yes
 | Australian Medicare Number | Yes
 | Australian Passport Number | Yes
 | Austrian SSN | Yes
@@ -74,9 +74,9 @@ Note that you can add to the list of personal data that is found in your files i
 | National Health Service (NHS) Number | Yes
 | New York Driver's License | Yes
 | New Zealand Bank Account | Yes
-| New Zealand Driver’s License | Yes
+| New Zealand Driver's License | Yes
 | New Zealand IRD Number (Tax ID) | Yes
-| New Zealand NHI (National Health Index) Number | Yes
+| New Zealand NHI (National Health Index) Number | Yes
 | New Zealand Passport Number | Yes
 | Polish ID (PESEL) | Yes
 | Portuguese Tax Identification Number (NIF) | Yes
@@ -95,16 +95,16 @@ Note that you can add to the list of personal data that is found in your files i
 
 The sensitive personal data that Cloud Data Sense can find in files includes the following list. The items in this category can be recognized only in English at this time.
 
-// Civil Law Reference:: Data concerning a natural person’s civil law suits, offences, and procedures.
-Criminal Procedures Reference::	Data concerning a natural person’s criminal convictions and offenses.
-Ethnicity Reference::	Data concerning a natural person’s racial or ethnic origin.
-Health Reference:: Data concerning a natural person’s health.
+// Civil Law Reference:: Data concerning a natural person's civil law suits, offences, and procedures.
+Criminal Procedures Reference::	Data concerning a natural person's criminal convictions and offenses.
+Ethnicity Reference::	Data concerning a natural person's racial or ethnic origin.
+Health Reference:: Data concerning a natural person's health.
 ICD-9-CM Medical Codes:: Codes used in the medical and health industry.
 ICD-10-CM Medical Codes:: Codes used in the medical and health industry.
-Philosophical Beliefs Reference::	Data concerning a natural person’s philosophical beliefs.
-Political Opinions Reference:: Data concerning a natural person’s political opinions.
-Religious Beliefs Reference::	Data concerning a natural person’s religious beliefs.
-Sex Life or Orientation Reference::	Data concerning a natural person’s sex life or sexual orientation.
+Philosophical Beliefs Reference::	Data concerning a natural person's philosophical beliefs.
+Political Opinions Reference:: Data concerning a natural person's political opinions.
+Religious Beliefs Reference::	Data concerning a natural person's religious beliefs.
+Sex Life or Orientation Reference::	Data concerning a natural person's sex life or sexual orientation.
 
 == Types of categories
 
@@ -162,7 +162,7 @@ The following Metadata is also categorized, and are identified in the same suppo
 * Data Sense Breadcrumbs
 * Design Files
 * Email Application Data
-* Encrypted
+* Encrypted (files with a high entropy score)
 * Executables
 * Financial Application Data
 * Health Application Data
@@ -172,6 +172,7 @@ The following Metadata is also categorized, and are identified in the same suppo
 * Miscellaneous Presentations
 * Miscellaneous Spreadsheets
 * Miscellaneous "Unknown"
+* Password Protected files
 * Structured Data
 * Videos
 * Zero-Byte Files
@@ -192,7 +193,7 @@ Based on our testing, the table below shows the accuracy of the information that
 
 Precision:: The probability that what Data Sense finds has been identified correctly. For example, a precision rate of 90% for personal data means that 9 out of 10 files identified as containing personal information, actually contain personal information. 1 out of 10 files would be a false positive.
 
-Recall:: The probability for Data Sense to find what it should. For example, a recall rate of 70% for personal data means that Data Sense can identify 7 out of 10 files that actually contain personal information in your organization. Data Sense would miss 30% of the data and it won’t appear in the dashboard.
+Recall:: The probability for Data Sense to find what it should. For example, a recall rate of 70% for personal data means that Data Sense can identify 7 out of 10 files that actually contain personal information in your organization. Data Sense would miss 30% of the data and it won't appear in the dashboard.
 
 We are constantly improving the accuracy of our results. Those improvements will be automatically available in future Data Sense releases.
 

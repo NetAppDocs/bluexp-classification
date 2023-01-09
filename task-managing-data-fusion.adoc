@@ -182,10 +182,11 @@ You'll need to access the Data Sense system in order to add the file that contai
 
 The command syntax to add a custom regex is:
 
- sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "<pattern_name>" -r "<regular_expression>"
+ sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "<pattern_name>" -r "<regular_expression>" -p "<proximity_words>"
 
 * <pattern_name> = This is the name that will appear in the Data Sense UI. Make sure the name identifies what the regex is designed to find. The name must contain at least one letter, and it can be up to 70 characters in length.
 * <regular_expression> = This can be any legal regular expression.
+* <proximity_words> = Words that are within 300 characters of the pattern you are searching for (either before or after the found pattern) to help refine the accuracy of the results. Each word is separated by a comma (,).
 
 You run the command from the path */opt/netapp/Datasense/*.
 
@@ -193,17 +194,19 @@ Note that we test each new regex to verify if it is too broad and it would retur
 
  log v1.0 | 2022-08-17 07:24:19,585 | ERROR | ds_logger | custom_regex | 119 | 1 | None | custom_regex_119 | The regex has high risk to identify false positives. Please narrow the regular expression and try again. To add it anyway, use the force flag (-f) at the end 
 
-You can use the *-f* option at the end of the command line if you want to forcefully add the regex to Data Sense - even if we think it is too broad.
+You can use the *-f* option at the end of the command line if you want to forcefully add the regex to Data Sense - even if we think it is too broad. Or you can use the "-p" option to try to refine the search results.
 
 === Example
 
-The Product ID is a 12-digit number that starts with 201; so the regular expression is *\b201\d{9}\b*. And you want to the text in the Data Sense UI to identify this pattern as *Internal Product ID*. 
+The Product ID is a 12-digit number that starts with 201; for example "201123456789". So the regular expression is *\b201\d{9}\b*. And you want the text in the Data Sense UI to identify this pattern as *Internal Product ID*. And we'll add the proximity words "product id" and "identifier".
 
 To see where your internal Product IDs are mentioned in all of your files, enter the following commands.
 
 [source,cli]
 [user ~]$ cd /opt/netapp/Datasense/
-[user Datasense]$ sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "Internal Product ID" -r "\b201\d{9}\b"
+[user Datasense]$ sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "Internal Product ID" -r "\b201\d{9}\b" -p "product id,identifier"
+
+The output of this command is:
 
  [+] Adding Custom Regex to Data Sense
  log v1.0 | 2022-08-23 13:19:01,476 | INFO | ds_logger | custom_regex | 154 | 1 | None | custom_regex_154 | A pattern named 'Internal Product ID' was added successfully to Data Sense

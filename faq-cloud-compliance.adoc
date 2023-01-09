@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: faq-cloud-compliance.html
 keywords: faq, frequently asked questions, questions, cloud compliance, data sense
-summary: This FAQ can help if you’re just looking for a quick answer to a question.
+summary: This FAQ can help if you're just looking for a quick answer to a question.
 ---
 
 = Frequently asked questions about Cloud Data Sense
@@ -14,7 +14,7 @@ summary: This FAQ can help if you’re just looking for a quick answer to a ques
 
 [.lead]
 
-This FAQ can help if you’re just looking for a quick answer to a question.
+This FAQ can help if you're just looking for a quick answer to a question.
 
 == Cloud Data Sense service
 
@@ -28,7 +28,9 @@ Cloud Data Sense provides pre-defined parameters (such as sensitive information 
 
 === How does Cloud Data Sense work?
 
-Cloud Data Sense deploys another layer of Artificial Intelligence alongside your BlueXP system and storage systems. It then scans the data on volumes, buckets, databases, and other storage accounts and indexes the data insights that are found. Data Sense leverages both artificial intelligence and natural language processing, as opposed to alternative solutions that are commonly built around regular expressions and pattern matching. Cloud Data Sense uses AI to provide contextual understanding of data for accurate detection and classification. It is driven by AI because it is designed for modern data types and scale. It also understands data context in order to provide strong, accurate, discovery and classification.
+Cloud Data Sense deploys another layer of Artificial Intelligence alongside your BlueXP system and storage systems. It then scans the data on volumes, buckets, databases, and other storage accounts and indexes the data insights that are found. Data Sense leverages both artificial intelligence and natural language processing, as opposed to alternative solutions that are commonly built around regular expressions and pattern matching. 
+
+Cloud Data Sense uses AI to provide contextual understanding of data for accurate detection and classification. It is driven by AI because it is designed for modern data types and scale. It also understands data context in order to provide strong, accurate, discovery and classification.
 
 link:concept-cloud-compliance.html[Learn more about how Cloud Data Sense works^].
 
@@ -87,7 +89,7 @@ Yes. The information offered by Cloud Data Sense can be relevant to other stakeh
 
 Privacy Risk Assessment report:: Provides privacy insights from your data and a privacy risk score. link:task-generating-compliance-reports.html#privacy-risk-assessment-report[Learn more^].
 
-Data Subject Access Request report:: Enables you to extract a report of all files that contain information regarding a data subject’s specific name or personal identifier. link:task-responding-to-dsar.html[Learn more^].
+Data Subject Access Request report:: Enables you to extract a report of all files that contain information regarding a data subject's specific name or personal identifier. link:task-responding-to-dsar.html[Learn more^].
 
 PCI DSS report:: Helps you identify the distribution of credit card information across your files. link:task-generating-compliance-reports.html#pci-dss-report[Learn more^].
 
@@ -99,9 +101,9 @@ Reports on a specific information type:: Reports are available that include deta
 
 === Does scan performance vary?
 
-Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size characteristics of the host system (either in the cloud or on-premises).  See link:concept-cloud-compliance.html#the-cloud-data-sense-instance[The Cloud Data Sense instance^] and link:task-deploy-cloud-compliance.html[Deploying Cloud Data Sense^] for more information.
+Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size characteristics of the host system (either in the cloud or on-premises). See link:concept-cloud-compliance.html#the-cloud-data-sense-instance[The Cloud Data Sense instance^] and link:task-deploy-cloud-compliance.html[Deploying Cloud Data Sense^] for more information.
 
-When initially adding new data sources you can also choose to only perform a "mapping" scan instead of a full "classification" scan. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.  link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[See the difference between a mapping and classification scan^].
+When initially adding new data sources you can also choose to only perform a "mapping" scan instead of a full "classification" scan. Mapping can be done on your data sources very quickly because it does not access files to see the data inside. link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[See the difference between a mapping and classification scan^].
 
 == Cloud Data Sense management and privacy
 
@@ -123,7 +125,7 @@ link:task-managing-compliance.html[Learn more^].
 
 NOTE: To completely remove the Cloud Data Sense instance, you can manually remove the Data Sense instance from your cloud provider's portal or on-prem location.
 
-=== Can I customize the service to my organization’s needs?
+=== Can I customize the service to my organization's needs?
 
 Cloud Data Sense provides out-of-the-box insights to your data. These insights can be extracted and used for your organization's needs.
 
@@ -145,7 +147,7 @@ link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn m
 
 === Can anyone access the private data sent between my browser and Data Sense?
 
-No. The private data sent between your browser and the Data Sense instance are secured with end-to-end encryption, which means NetApp and third parties can’t read it. Data Sense won’t share any data or results with NetApp unless you request and approve access.
+No. The private data sent between your browser and the Data Sense instance are secured with end-to-end encryption, which means NetApp and third parties can't read it. Data Sense won't share any data or results with NetApp unless you request and approve access.
 
 === What happens if data tiering is enabled on your ONTAP volumes?
 
@@ -155,13 +157,13 @@ The compliance scan doesn't heat up the cold data--it stays cold and tiered to o
 
 === Can Cloud Data Sense send notifications to my organization?
 
-Yes. In conjunction with the Policies feature, you can send email alerts to BlueXP users (daily, weekly, or monthly) when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-org-private-data.html#controlling-your-data-using-policies[Policies^].
+Yes. In conjunction with the Policies feature, you can send email alerts to BlueXP users (daily, weekly, or monthly), or any other email address,  when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-org-private-data.html#controlling-your-data-using-policies[Policies^].
 
 You can also download status reports from the Governance page and Investigation page that you can share internally in your organization.
 
 === Can Cloud Data Sense work with the AIP labels I have embedded in my files?
 
-Yes. You can manage AIP labels in the files that Cloud Data Sense is scanning if you have subscribed to link:https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. You can view the labels that are already assigned to files, add labels to files, and change existing labels.
+Yes. You can manage AIP labels in the files that Cloud Data Sense is scanning if you have subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. You can view the labels that are already assigned to files, add labels to files, and change existing labels.
 
 link:task-org-private-data.html#categorizing-your-data-using-aip-labels[Learn more^].
 
@@ -221,7 +223,7 @@ When Data Sense detects Personal Identifiable Information (PII), or when it perf
 
 Cloud Data Sense enables you to run a general "mapping" scan or a full "classification" scan on your data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
 
-*	Data mapping scan.
+* Data mapping scan.
 +
 Data Sense scans the metadata only. This is useful for overall data management and governance, quick project scoping, very large estates, and prioritization. Data mapping is based on metadata and is considered a *fast* scan.
 +
@@ -247,7 +249,7 @@ See https://cloud.netapp.com/netapp-cloud-data-sense#Pricing[pricing^] for detai
 
 === What happens if I have reached the BYOL capacity limit?
 
-If you reach a BYOL capacity limit, Data Sense continues to run, but access to the Dashboards is blocked so that you can’t view information about any of your scanned data. Only the Configuration page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit. You must renew your BYOL license to regain full access to Data Sense.
+If you reach a BYOL capacity limit, Data Sense continues to run, but access to the Dashboards is blocked so that you can't view information about any of your scanned data. Only the Configuration page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit. You must renew your BYOL license to regain full access to Data Sense.
 
 == Connector deployment
 
@@ -264,7 +266,7 @@ The Connector is software running on a compute instance either within your cloud
 * When scanning data in Cloud Volumes ONTAP in GCP, you use a Connector in GCP.
 * When scanning data in on-premises ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts, you can use a connector in any of these cloud locations.
 
-So if you have data in many of these locations, you may need to use https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Connectors].
+So if you have data in many of these locations, you may need to use https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Connectors^].
 
 === Can I deploy the Connector on my own host?
 
