@@ -25,7 +25,7 @@ By default, the Cloud Data Sense dashboards display compliance and governance da
 
 == Privacy Risk Assessment Report
 
-The Privacy Risk Assessment Report provides an overview of your organization’s privacy risk status, as required by privacy regulations such as GDPR and CCPA. The report includes the following information:
+The Privacy Risk Assessment Report provides an overview of your organization's privacy risk status, as required by privacy regulations such as GDPR and CCPA. The report includes the following information:
 
 Compliance status:: A <<Severity score,severity score>> and the distribution of data, whether it's non-sensitive, personal, or sensitive personal.
 
@@ -111,7 +111,7 @@ Cloud Data Sense generates a PDF report that you can review and send to other gr
 
 == HIPAA Report
 
-The Health Insurance Portability and Accountability Act (HIPAA) Report can help you identify files containing health information. It is designed to aid in your organization’s requirement to comply with HIPAA data privacy laws. The information Cloud Data Sense looks for includes:
+The Health Insurance Portability and Accountability Act (HIPAA) Report can help you identify files containing health information. It is designed to aid in your organization's requirement to comply with HIPAA data privacy laws. The information Cloud Data Sense looks for includes:
 
 * Health reference pattern
 * ICD-10-CM Medical code
@@ -178,6 +178,8 @@ image:screenshot_compliance_data_mapping_report_button.png[A screen shot of the 
 
 Cloud Data Sense generates a PDF report that you can review and send to other groups as needed.
 
+Note that you can customize the company name that appears on the first page of the report from the top of the Data Sense page by clicking image:screenshot_gallery_options.gif[More button] and then clicking *Change company name*.
+
 == Data Investigation Report
 
 The Data Investigation Report is a download of the contents of the Data Investigation page. link:task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[Learn more about the Data Investigation page].
@@ -204,7 +206,7 @@ A dialog displays a message that the reports are being downloaded.
 
 You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
 
-=== What’s included in each Data Investigation Report
+=== What's included in each Data Investigation Report
 
 The *Unstructured Files Data Report* includes the following information about your files:
 
