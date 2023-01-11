@@ -13,7 +13,7 @@ summary: The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspac
 :imagesdir: ./media/
 
 [.lead]
-The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspace is free. A BYOL license from NetApp, or a subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
+The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspace is free for 30 days. A BYOL license from NetApp, or a subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
 
 A few notes before you read any further:
 
@@ -28,7 +28,7 @@ link:concept-cloud-compliance.html#cost[Learn more about the licensing and costs
 
 Pay-as-you-go subscriptions from your cloud provider's marketplace enable you to license the use of Cloud Volumes ONTAP systems and many Cloud Data Services, such as Cloud Data Sense.
 
-You can subscribe at any time and you will not be charged until the amount of data exceeds 1 TB. You can always see the total amount of data that is being scanned from the Data Sense Dashboard. And the _Subscribe Now_ button makes it easy to subscribe when you are ready.
+You can subscribe at any time and you will not be charged until either the 30 day trial ends, or the amount of data exceeds 1 TB. You can always see the total amount of data that is being scanned from the Data Sense Dashboard. And the _Subscribe Now_ button makes it easy to subscribe when you are ready.
 
 image:screenshot_compliance_subscribe.png[A screenshot showing how much data is being scanned and the Subscribe button to subscribe to the service.]
 

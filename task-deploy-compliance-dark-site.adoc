@@ -66,7 +66,7 @@ Download the Cloud Data Sense software from the NetApp Support Site and copy the
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the Cloud Data Sense service
 
 [role="quick-margin-para"]
-The first 1 TB of data that Cloud Data Sense scans in BlueXP is free. A BYOL license from NetApp is required to continue scanning data after that point.
+The first 1 TB of data that Cloud Data Sense scans in BlueXP is free for 30 days. A BYOL license from NetApp is required to continue scanning data after that point.
 
 == Install the BlueXP Connector
 
@@ -275,7 +275,7 @@ If there is connectivity over port 8080 between the host machine and the Connect
 .What's Next
 From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and link:task-scanning-databases.html[databases] that you want to scan.
 
-You can also link:task-licensing-datasense.html#use-a-cloud-data-sense-byol-license[set up BYOL licensing for Cloud Data Sense] from the Digital Wallet page at this time. You will not be charged until the amount of data exceeds 1 TB.
+You can also link:task-licensing-datasense.html#use-a-cloud-data-sense-byol-license[set up BYOL licensing for Cloud Data Sense] from the Digital Wallet page at this time. You will not be charged until your 30-day free trial ends.
 
 === Multi-host installation for large configurations
 
@@ -336,7 +336,7 @@ The Cloud Data Sense installer finishes installing packages, and registers the i
 .What's Next
 From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and local link:task-scanning-databases.html[databases] that you want to scan.
 
-You can also link:task-licensing-datasense.html#use-a-cloud-data-sense-byol-license[set up BYOL licensing for Cloud Data Sense] from the Digital Wallet page at this time. You will not be charged until the amount of data exceeds 1 TB.
+You can also link:task-licensing-datasense.html#use-a-cloud-data-sense-byol-license[set up BYOL licensing for Cloud Data Sense] from the Digital Wallet page at this time. You will not be charged until your 30-day free trial ends.
 
 == Upgrade Data Sense software
 

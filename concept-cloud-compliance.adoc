@@ -102,7 +102,7 @@ Data Sense supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 
 
 == Cost
 
-* The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a BlueXP workspace is free. This includes all data from all working environments and data sources. A subscription to the AWS, Azure, or GCP Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point. See https://cloud.netapp.com/netapp-cloud-data-sense[pricing^] for details.
+* The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a BlueXP workspace is free for 30 days. This includes all data from all working environments and data sources. A subscription to the AWS, Azure, or GCP Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point. See https://cloud.netapp.com/netapp-cloud-data-sense[pricing^] for details.
 +
 link:task-licensing-datasense.html[Learn how to license Cloud Data Sense^].
 
