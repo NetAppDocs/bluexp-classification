@@ -53,7 +53,7 @@ Download the Cloud Data Sense software from the NetApp Support Site and copy the
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the Cloud Data Sense service
 
 [role="quick-margin-para"]
-The first 1 TB of data that Cloud Data Sense scans in BlueXP is free. A subscription to your cloud provider Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point.
+The first 1 TB of data that Cloud Data Sense scans in BlueXP is free for 30 days. A subscription to your cloud provider Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point.
 
 == Create a Connector
 
@@ -316,7 +316,7 @@ If there is connectivity over port 8080 between the host machine and the Connect
 .What's Next
 From the Configuration page you can select the data sources that you want to scan.
 
-You can also link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until the amount of data exceeds 1 TB.
+You can also link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until your 30-day free trial ends.
 
 === Add scanner nodes to an existing deployment
 
@@ -479,7 +479,7 @@ You can also see the list of all scanner groups along with the IP address and st
 
 image:screenshot_scanner_groups.png[A screenshot listing all scanner groups along with the IP address for each scanner node in the group.]
 
-You can link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until the amount of data exceeds 1 TB.
+You can link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until your 30-day free trial ends.
 
 === Multi-host installation for large configurations
 
@@ -540,4 +540,4 @@ The Cloud Data Sense installer finishes installing packages, docker, and registe
 .What's Next
 From the Configuration page you can select the data sources that you want to scan.
 
-You can also link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until the amount of data exceeds 1 TB.
+You can also link:task-licensing-datasense.html[set up licensing for Cloud Data Sense] at this time. You will not be charged until your 30-day free trial ends.
