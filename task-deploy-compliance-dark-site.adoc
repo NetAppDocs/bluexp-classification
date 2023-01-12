@@ -216,7 +216,7 @@ Follow these steps when installing Data Sense software on a single on-premises h
 [source,cli]
 tar -xzf DataSense-offline-bundle-v1.16.1.tar.gz
 +
-This extracts required software and the actual installation file *DATASENSE-INSTALLER-V1.16.1.tar.gz*.
+This extracts required software and the actual installation file *cc_onprem_installer.tar.gz*.
 
 . Launch BlueXP and select *Governance > Classification*.
 
@@ -235,7 +235,7 @@ image:screenshot_cloud_compliance_deploy_darksite.png[A screenshot of selecting 
 . Unzip the installation file on the host machine, for example:
 +
 [source,cli]
-tar -xzf DATASENSE-INSTALLER-V1.16.1.tar.gz
+tar -xzf cc_onprem_installer.tar.gz
 
 . When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer:
 
@@ -323,7 +323,7 @@ For example, this command adds 3 scanner nodes:
 `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212`
 
 . On *each* scanner node host:
-.. Copy the Data Sense installer file (*DATASENSE-INSTALLER-<version>.tar.gz*) to the host machine.
+.. Copy the Data Sense installer file (*cc_onprem_installer.tar.gz*) to the host machine.
 .. Unzip the installer file.
 .. Paste and run the command that you copied in step 3.
 +
@@ -358,12 +358,12 @@ Since Data Sense software is updated with new features on a regular basis, you s
 [source,cli]
 tar -xvf DataSense-offline-bundle-v1.16.1.tar.gz
 +
-This extracts the installation file *DATASENSE-INSTALLER-V1.16.1.tar.gz*.
+This extracts the installation file *cc_onprem_installer.tar.gz*.
 
 . Unzip the installation file on the host machine, for example:
 +
 [source,cli]
-tar -xzf DATASENSE-INSTALLER-V1.16.1.tar.gz
+tar -xzf cc_onprem_installer.tar.gz
 +
 This extracts the upgrade script *start_darksite_upgrade.sh* and any required third-party software.
 
