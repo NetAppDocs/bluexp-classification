@@ -23,7 +23,7 @@ The personal data found in files can be general personal data or national identi
 
 The items in this category can be recognized in any language.
 
-Note that you can add to the list of personal data that is found in your files if you are scanning a database server. The _Data Fusion_ feature allows you to choose the additional identifiers that Cloud Data Sense will look for in its' scans by selecting columns in a database table. See link:task-managing-data-fusion.html[Adding personal data identifiers using Data Fusion^] for details.
+Note that you can add to the list of personal data that is found in your files. If you are scanning a database server, the _Data Fusion_ feature allows you to choose the additional identifiers that Cloud Data Sense will look for in its' scans by selecting columns in a database table. You can also add custom keywords from a text file, or custom patterns using a regular expression. See link:task-managing-data-fusion.html[Adding personal data identifiers to your Data Sense scans^] for details.
 
 [cols="20,50,18",width=80%,options="header"]
 |===
@@ -38,7 +38,7 @@ Note that you can add to the list of personal data that is found in your files i
 | IP address | No
 | Password | Yes
 
-.50+| National Identifiers | Australian TFN (Tax File Number) | Yes
+.51+| National Identifiers | Australian TFN (Tax File Number) | Yes
 | Australian Driver's License | Yes
 | Australian Medicare Number | Yes
 | Australian Passport Number | Yes
@@ -67,6 +67,7 @@ Note that you can add to the list of personal data that is found in your files i
 | Irish ID (PPS) | Yes
 | Israeli ID | Yes
 | Italian Tax Identification Number | Yes
+| Japanese Personal Identification Number (both Personal and Corporate) | Yes
 | Latvian ID | Yes
 | Lithuanian ID | Yes
 | Luxembourg ID | Yes

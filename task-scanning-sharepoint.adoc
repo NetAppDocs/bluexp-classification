@@ -22,7 +22,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Review SharePoint prerequisites
 
 [role="quick-margin-para"]
-Ensure that you have the Admin credentials to log into the SharePoint account, and that you have the URLs for the SharePoint sites that you want to scan.
+Ensure that you have qualified credentials to log into the SharePoint account, and that you have the URLs for the SharePoint sites that you want to scan.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
 
@@ -32,7 +32,7 @@ link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Log into the SharePoint account
 
 [role="quick-margin-para"]
-Using Admin user credentials, log into the SharePoint account that you want to access so that it is added as a new data source/working environment.
+Using qualified user credentials, log into the SharePoint account that you want to access so that it is added as a new data source/working environment.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the SharePoint site URLs to scan
 
@@ -43,7 +43,8 @@ Add the list of SharePoint site URLs that you want to scan in the SharePoint acc
 
 Review the following prerequisites to make sure you are ready to activate Cloud Data Sense on a SharePoint account.
 
-* You must have the Admin login credentials for the SharePoint account that provides read access to all SharePoint sites.
+* You must have the Admin user login credentials for the SharePoint account that provides read access to all SharePoint sites.
+** For SharePoint Online you can use a non-Admin account, but that user must have permission to access all the SharePoint sites that you want to scan.
 * For SharePoint On-Premise, you'll also need the URL of the SharePoint Server.
 * You will need a line-separated list of the SharePoint site URLs for all the data you want to scan.
 
@@ -72,7 +73,7 @@ image:screenshot_compliance_add_sharepoint_button.png[A screenshot of the Config
 
 . In the Add a SharePoint Online Account dialog, click *Sign in to SharePoint*.
 
-. In the Microsoft page that appears, select the SharePoint account and enter the required Admin user and password, then click *Accept* to allow Cloud Data Sense to read data from this account.
+. In the Microsoft page that appears, select the SharePoint account and enter the user and password (Admin user or other user with access to the SharePoint sites), then click *Accept* to allow Cloud Data Sense to read data from this account.
 
 The SharePoint Online account is added to the list of working environments.
 
