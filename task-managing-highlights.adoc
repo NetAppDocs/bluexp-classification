@@ -16,8 +16,8 @@ summary: Cloud Data Sense provides many ways for you to manage your private data
 Cloud Data Sense provides many ways for you to manage your private data. Some functionality makes it easier to prepare for migrating your data, while other functionality allows you to make changes to the data.
 
 * You can copy files to a destination NFS share if you want to make a copy of certain data and move it to a different NFS location.
-* You can clone an ONTAP volume to a new volume, while including only selected files from the source volume in the new cloned volume. This is useful for situations where you’re migrating data and you want to exclude certain files from the original volume.
-* You can copy and synchronize files from a source repository to a directory in a specific destination location. This is useful for situations where you’re migrating data from one source system to another while there is still some final activity on the source files.
+* You can clone an ONTAP volume to a new volume, while including only selected files from the source volume in the new cloned volume. This is useful for situations where you're migrating data and you want to exclude certain files from the original volume.
+* You can copy and synchronize files from a source repository to a directory in a specific destination location. This is useful for situations where you're migrating data from one source system to another while there is still some final activity on the source files.
 * You can move source files that Data Sense is scanning to any NFS share.
 * You can delete files that seem insecure or too risky to leave in your storage system, or that you have identified as duplicate.
 
@@ -36,7 +36,7 @@ You can copy any source files that Data Sense is scanning. There are three types
 This is useful if you want to make a copy of certain data and move it to a different NFS location.
 * *Clone an ONTAP volume* to a new volume in the same aggregate, but include only selected files from the source volume in the new cloned volume.
 +
-This is useful for situations where you're migrating data and you want to exclude certain files from the original volume. This action uses the link:https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[NetApp FlexClone^] functionality to quickly duplicate the volume and then remove the files that you *didn't* select.
+This is useful for situations where you're migrating data and you want to exclude certain files from the original volume. This action uses the https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[NetApp FlexClone^] functionality to quickly duplicate the volume and then remove the files that you *didn't* select.
 * *Copy and synchronize files* from a single source repository (ONTAP volume, S3 bucket, NFS share, etc.) to a directory in a specific destination (target) location.
 +
 This is useful for situations where you're migrating data from one source system to another. After the initial copy, the service syncs any changed data based on the schedule that you set. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
@@ -60,9 +60,9 @@ TIP: You can't copy files that reside in databases.
 image:screenshot_compliance_copy_multi_files.png["A screenshot showing how to select the files to copy, and the Copy button, from the Data Investigation page."]
 
 +
-* To select individual files, check the box for each file (image:button_backup_1_volume.png[]).
-* To select all files on the current page, check the box in the title row (image:button_select_all_files.png[]).
-* To select all files on all pages, check the box in the title row (image:button_select_all_files.png[]), and then in the pop-up message image:screenshot_select_all_items.png[], click *Select all items in list (xxx items)*.
+* To select individual files, check the box for each file (image:button_backup_1_volume.png[""]).
+* To select all files on the current page, check the box in the title row (image:button_select_all_files.png[""]).
+* To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[about selecting all files], click *Select all items in list (xxx items)*.
 
 . In the _Copy Files_ dialog, select the *Regular Copy* tab.
 +
@@ -106,9 +106,9 @@ Apply any other filters so that you're seeing only the files that you want to cl
 image:screenshot_compliance_copy_multi_files.png["A screenshot showing how to select the files to copy, and the Copy button, from the Data Investigation page."]
 
 +
-* To select individual files, check the box for each file (image:button_backup_1_volume.png[]).
-* To select all files on the current page, check the box in the title row (image:button_select_all_files.png[]).
-* To select all files on all pages, check the box in the title row (image:button_select_all_files.png[]), and then in the pop-up message image:screenshot_select_all_items.png[], click *Select all items in list (xxx items)*.
+* To select individual files, check the box for each file (image:button_backup_1_volume.png[""]).
+* To select all files on the current page, check the box in the title row (image:button_select_all_files.png[""]).
+* To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[about selecting all files], click *Select all items in list (xxx items)*.
 
 . In the _Copy Files_ dialog, select the *FlexClone* tab. This page shows the total number of files that will be cloned from the volume (the files you selected), and the number of files that are not included/deleted (the files you didn't select) from the cloned volume.
 +
@@ -150,7 +150,7 @@ image:screenshot_compliance_filter_1_repo.png[A screenshot of creating a filter 
 +
 Apply any other filters so that you're seeing only the files that you want to copy and sync to the destination system.
 
-. In the Investigation results pane, select all files on all pages by checking the box in the title row (image:button_select_all_files.png[]), then in the pop-up message image:screenshot_select_all_items.png[] click *Select all items in list (xxx items)*, and then click *Copy*.
+. In the Investigation results pane, select all files on all pages by checking the box in the title row (image:button_select_all_files.png[""]), then in the pop-up message image:screenshot_select_all_items.png[about selecting all files] click *Select all items in list (xxx items)*, and then click *Copy*.
 +
 image:screenshot_compliance_sync_multi_files.png["A screenshot showing how to select the files to copy, and the Copy button, from the Data Investigation page."]
 
@@ -164,7 +164,7 @@ The Cloud Sync UI is opened in BlueXP.
 +
 You are prompted to define the sync relationship. The Source system is pre-populated based on the repository and files you already selected in Data Sense.
 
-. You'll need to select the Target system and then select (or create) the Data Broker you plan to use. Review the Cloud Sync requirements beginning with the link:https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html.html[Quick Start description^].
+. You'll need to select the Target system and then select (or create) the Data Broker you plan to use. Review the Cloud Sync requirements beginning with the link:https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html[Quick Start description^].
 
 .Result
 
@@ -199,9 +199,9 @@ TIP: You can't move files that reside in databases.
 image:screenshot_compliance_move_multi_files.png["A screenshot showing how to select the files to move, and the Move button, from the Data Investigation page."]
 
 +
-* To select individual files, check the box for each file (image:button_backup_1_volume.png[]).
-* To select all files on the current page, check the box in the title row (image:button_select_all_files.png[]).
-* To select all files on all pages, check the box in the title row (image:button_select_all_files.png[]), and then in the pop-up message image:screenshot_select_all_items.png[], click *Select all items in list (xxx items)*.
+* To select individual files, check the box for each file (image:button_backup_1_volume.png[""]).
+* To select all files on the current page, check the box in the title row (image:button_select_all_files.png[""]).
+* To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[about selecting all files], click *Select all items in list (xxx items)*.
 
 . From the button bar, click *Move*.
 +
@@ -245,9 +245,9 @@ Deleting files requires the following permissions:
 image:screenshot_compliance_delete_multi_files.png["A screenshot showing how to select the files to delete, and the Delete button, from the Data Investigation page."]
 
 +
-* To select individual files, check the box for each file (image:button_backup_1_volume.png[]).
-* To select all files on the current page, check the box in the title row (image:button_select_all_files.png[]).
-* To select all files on all pages, check the box in the title row (image:button_select_all_files.png[]), and then in the pop-up message image:screenshot_select_all_items.png[], click *Select all items in list (xxx items)*.
+* To select individual files, check the box for each file (image:button_backup_1_volume.png[""]).
+* To select all files on the current page, check the box in the title row (image:button_select_all_files.png[""]).
+* To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[about selecting all files], click *Select all items in list (xxx items)*.
 
 . From the button bar, click *Delete*.
 
