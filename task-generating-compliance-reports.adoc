@@ -116,7 +116,7 @@ The Health Insurance Portability and Accountability Act (HIPAA) Report can help 
 * Health reference pattern
 * ICD-10-CM Medical code
 * ICD-9-CM Medical code
-* HR – Health category
+* HR - Health category
 * Health Application Data category
 
 The report includes the following information:
@@ -178,7 +178,7 @@ image:screenshot_compliance_data_mapping_report_button.png[A screen shot of the 
 
 Cloud Data Sense generates a PDF report that you can review and send to other groups as needed.
 
-Note that you can customize the company name that appears on the first page of the report from the top of the Data Sense page by clicking image:screenshot_gallery_options.gif[More button] and then clicking *Change company name*.
+Note that you can customize the company name that appears on the first page of the report from the top of the Data Sense page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
 
 == Data Investigation Report
 
