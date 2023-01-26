@@ -40,7 +40,7 @@ Data Sense can identify data that is potentially at risk for being accessed for 
 * Comply with data retention policies.
 * Use _Policies_ to automatically notify security staff of new security issues so they can take action immediately.
 * Add custom tags to files (for example, "needs to be moved") and assign a BlueXP user so that person can own updates to the files.
-* View and modify link:https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP) labels^] in your files.
+* View and modify https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP) labels^] in your files.
 
 === Optimize storage usage
 
@@ -142,7 +142,7 @@ In regions where n2-standard-16 isn't available, Data Sense runs on an n2d-stand
 
 * Only one Data Sense instance is deployed per Connector.
 
-* Upgrades of Data Sense software is automated as long as the instance has internet access.
+You can also deploy Data Sense on a Linux host on your premises or on a host in your preferred cloud provider. The software functions exactly the same way regardless of which installation method you choose. Upgrades of Data Sense software is automated as long as the instance has internet access.
 
 TIP: The instance should remain running at all times because Cloud Data Sense continuously scans the data.
 
@@ -212,6 +212,12 @@ The table below shows some of the differences:
 | Ability to run other reports | Yes | No
 |===
 
+=== How quickly does Data Sense scan data
+
+Data Sense can scan between 15-40 TBs of data per day, per scanner node. The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
+
+link:task-deploy-compliance-onprem.html#deploy-data-sense-on-premises[Learn more about deploying multiple scanner nodes to scan your data^].
+
 == Information that Cloud Data Sense indexes
 
 Data Sense collects, indexes, and assigns categories to your data (files). The data that Data Sense indexes includes the following:
@@ -227,13 +233,13 @@ Categories:: Cloud Data Sense takes the data that it scanned and divides it into
 Types:: Cloud Data Sense takes the data that it scanned and breaks it down by file type. link:task-controlling-private-data.html#viewing-files-by-file-types[Learn more about types^].
 
 Name entity recognition::
-Cloud Data Sense uses AI to extract natural persons’ names from documents. link:task-responding-to-dsar.html[Learn about responding to Data Subject Access Requests^].
+Cloud Data Sense uses AI to extract natural persons' names from documents. link:task-responding-to-dsar.html[Learn about responding to Data Subject Access Requests^].
 
 == Networking overview
 
 BlueXP deploys the Cloud Data Sense instance with a security group that enables inbound HTTP connections from the Connector instance.
 
-When using BlueXP in SaaS mode, the connection to BlueXP is served over HTTPS, and the private data sent between your browser and the Data Sense instance are secured with end-to-end encryption, which means NetApp and third parties can’t read it.
+When using BlueXP in SaaS mode, the connection to BlueXP is served over HTTPS, and the private data sent between your browser and the Data Sense instance are secured with end-to-end encryption, which means NetApp and third parties can't read it.
 
 Outbound rules are completely open. Internet access is needed to install and upgrade the Data Sense software and to send usage metrics.
 
