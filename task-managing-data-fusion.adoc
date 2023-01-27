@@ -176,7 +176,16 @@ You can add a personal pattern to identify specific information in your data usi
 
 For example, you may want to see where your internal Product IDs are mentioned in all of your files. If the Product ID has a clear structure, for example, it is a 12-digit number that starts with 201, you can use the custom regex feature to search for it in your files.
 
-After adding the regex, Data Sense will restart scanning all data sources - the new results will appear in Data Sense after the scan has completed.
+After adding the regex, Data Sense will restart scanning all data sources. After the scan has completed, the new results will appear in the Data Sense Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
+
+.Steps
+
+. You can add a new custom classifier from the _Custom Classifiers_ tab. You can also add one from the _Compliance_ tab if this is the first classifier you are adding.
++
+image:screenshot_compliance_add_classifier_button.png[]
+
+
+
 
 === Command syntax to add the regex
 
