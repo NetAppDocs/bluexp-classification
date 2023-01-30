@@ -69,6 +69,63 @@ If at some point you decide not to scan your files using a certain Data Fusion s
 
 image:screenshot_compliance_delete_data_fusion.png[A screenshot showing how to remove a data fusion source.]
 
+== Add custom personal data identifiers using a regex
+
+You can add a personal pattern to identify specific information in your data using a custom regular expression (regex). This allows you to create a new custom regex to identify new personal information elements that don't yet exist in the system. The regex is added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the personal patterns section. 
+
+For example, you may want to see where your internal Product IDs are mentioned in all of your files. If the Product ID has a clear structure, for example, it is a 12-digit number that starts with 201, you can use the custom regex feature to search for it in your files. The regular expression for this example is *\b201\d{9}\b*.
+
+After adding the regex, Data Sense will restart scanning all data sources. After the scan has completed, the new results will appear in the Data Sense Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
+
+.Steps
+
+. From the _Custom Classifiers_ tab, click *Add New Classifier* to launch the _Add Custom Classifier_ wizard.
++
+image:screenshot_compliance_add_classifier_button.png[A screenshot showing how to launch the Add Custom Classifier wizard.]
+
+. In the _Select type_ page, enter the name of the classifier, provide a brief description, select *Personal identifier*, and then click *Next*.
++
+The name you enter will appear in the Data Sense UI as the heading for scanned files that match the classifier requirements.
++
+image:screenshot_select_classifier_type.png[A screenshot showing how to name the classifier and select the type of classifier.]
+
+. In the _Select Data Analysis Tool_ page, select *Custom regular expression* as the method you want to use to define the classifier, and then click *Next*.
++
+image:screenshot_select_classifier_tool.png[A screenshot showing the selection of Custom regular expression as the tool that Data Sense will use to build the pattern.]
+
+. In the _Create Logic_ page, enter the regular expression and any proximity words, and click *Done*.
++
+.. You can enter any legal regular expression. Click the *Validate* button to have Data Sense verify that the regular expression is valid, and that it is not too broad -- meaning it will return too many results.
+.. Optionally, you can enter some proximity words to help refine the accuracy of the results. These are words that will typically be found within 300 characters of the pattern you are searching for (either before or after the found pattern). Enter each word, or phrase, on a separate line.
++
+image:screenshot_select_classifier_create_logic.png[A screenshot of entering the regex and proximity words for your customer classifier.]
+
+.Result
+
+The classifier is added and Data Sense starts to rescan all your data sources. You are returned to the Custom Classifiers page where you can view the number of files that have matched your new classifier. Results from scanning all of your data sources will take some time depending on the number of files that need to be scanned.
+
+image:screenshot_personal_info_regex_added.png[A screenshot showing the results of a new regex classifier being added to the system with scanning in progress.]
+
+=== View results from your custom classifiers
+
+You can view the results from any of your custom classifiers in the Compliance Dashboard and in the Investigation page. For example, this screenshot shows the matched information in the Compliance Dashboard under the "Personal Results" section.
+
+image:screenshot_add_regex_result.png[A screenshot showing an example of custom regex results in the Investigation Results pane.]
+
+Click the image:button_arrow_investigate.png[circle with an arrow] button to see the detailed results in the Investigation page.
+
+Additionally, all of your custom classifier results appear in the Custom Classifiers tab, and the top 6 custom classifier results are displayed in the Compliance Dashboard, as shown below.
+
+image:screenshot_custom_classifier_top_5.png[A screenshot showing the top 3 custom classifiers based on returned results.]
+
+=== Manage custom classifiers
+
+You can change any of the custom classifiers that you have created by using the *Edit Classifier* button.
+
+And if you decide at some later point that you don't need Data Sense to identify the custom patterns that you added, you can use the *Delete Classifier* button to remove each item.
+
+image:screenshot_custom_classifiers_manage.png[A screenshot of the Custom Classifiers page with the buttons to edit and delete a classifier.]
+
 == Add custom keywords from a text file
 
 You can add custom keywords to Data Sense so that it will identify specific information in your data. You add the keywords from a text file that you define. The keywords are added to the existing predefined keywords that Data Sense already uses, and the results will be visible under the personal patterns section. 
@@ -169,75 +226,4 @@ For example, to remove the keywords defined in the file *internal_product_names.
 [user Datasense]$ sudo bash tools/datascience/custom_keywords/upload_custom_keywords.sh -s deactivate -f internal_product_names.txt
 
  log v1.0 | 2022-08-24 08:16:25,332 | INFO | ds_logger | upload_custom_keywords | 87 | 1 | None | upload_custom_keywords_87 | Deactivated keyword pattern from internal_product_names.txt successfully 
-
-== Add custom personal data identifiers using a regex
-
-You can add a personal pattern to identify specific information in your data using a custom regular expression (regex). The regex is added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the personal patterns section. 
-
-For example, you may want to see where your internal Product IDs are mentioned in all of your files. If the Product ID has a clear structure, for example, it is a 12-digit number that starts with 201, you can use the custom regex feature to search for it in your files.
-
-After adding the regex, Data Sense will restart scanning all data sources. After the scan has completed, the new results will appear in the Data Sense Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
-
-.Steps
-
-. You can add a new custom classifier from the _Custom Classifiers_ tab. You can also add one from the _Compliance_ tab if this is the first classifier you are adding.
-+
-image:screenshot_compliance_add_classifier_button.png[]
-
-
-
-
-=== Command syntax to add the regex
-
-You'll need to access the Data Sense system in order to add the file that contains the custom keyword patterns, and to initiate the command to add the custom keywords. <<Accessing the command line,See how to access the command line>> whether you have installed Data Sense in your premises, or you have deployed it in the cloud.
-
-The command syntax to add a custom regex is:
-
- sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "<pattern_name>" -r "<regular_expression>" -p "<proximity_words>"
-
-* <pattern_name> = This is the name that will appear in the Data Sense UI. Make sure the name identifies what the regex is designed to find. The name must contain at least one letter, and it can be up to 70 characters in length.
-* <regular_expression> = This can be any legal regular expression.
-* <proximity_words> = Words that are within 300 characters of the pattern you are searching for (either before or after the found pattern) to help refine the accuracy of the results. Each word is separated by a comma (,).
-
-You run the command from the path */opt/netapp/Datasense/*.
-
-Note that we test each new regex to verify if it is too broad and it would return too many matches. If that's the case, then the following log message will appear: 
-
- log v1.0 | 2022-08-17 07:24:19,585 | ERROR | ds_logger | custom_regex | 119 | 1 | None | custom_regex_119 | The regex has high risk to identify false positives. Please narrow the regular expression and try again. To add it anyway, use the force flag (-f) at the end 
-
-You can use the *-f* option at the end of the command line if you want to forcefully add the regex to Data Sense - even if we think it is too broad. Or you can use the "-p" option to try to refine the search results.
-
-=== Example
-
-The Product ID is a 12-digit number that starts with 201; for example "201123456789". So the regular expression is *\b201\d{9}\b*. And you want the text in the Data Sense UI to identify this pattern as *Internal Product ID*. And we'll add the proximity words "product id" and "identifier".
-
-To see where your internal Product IDs are mentioned in all of your files, enter the following commands.
-
-[source,cli]
-[user ~]$ cd /opt/netapp/Datasense/
-[user Datasense]$ sudo bash tools/datascience/custom_regex/custom_regex.sh -s activate -n "Internal Product ID" -r "\b201\d{9}\b" -p "product id,identifier"
-
-The output of this command is:
-
- [+] Adding Custom Regex to Data Sense
- log v1.0 | 2022-08-23 13:19:01,476 | INFO | ds_logger | custom_regex | 154 | 1 | None | custom_regex_154 | A pattern named 'Internal Product ID' was added successfully to Data Sense
-
-.Results
-After the next scan, the results will include this new information in the Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
-
-image:screenshot_add_regex_result.png[A screenshot showing an example of custom regex results in the Investigation Results pane.]
-
-=== Deactivate a custom regex
-
-If you decide at some later point that you don't need Data Sense to identify the custom patterns you entered as a regex, use the *deactivate* option in the command to remove each regex.
-
- sudo bash tools/datascience/custom_regex/custom_regex.sh -s deactivate -n "<pattern name>" 
-
-For example, to remove the *Internal Product ID* regex:
-
-[source,cli]
-[user ~]$ cd /opt/netapp/Datasense/
-[user Datasense]$ sudo bash tools/datascience/custom_regex/custom_regex.sh -s deactivate -n "Internal Product ID"
-
- log v1.0 | 2022-08-17 09:13:15,431 | INFO | ds_logger | custom_regex | 31 | 1 | None | custom_regex_31 | A pattern named 'Internal Product ID' was deactivated successfully 
 
