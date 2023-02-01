@@ -85,7 +85,7 @@ image:screenshot_compliance_add_classifier_button.png[A screenshot showing how t
 
 . In the _Select type_ page, enter the name of the classifier, provide a brief description, select *Personal identifier*, and then click *Next*.
 +
-The name you enter will appear in the Data Sense UI as the heading for scanned files that match the classifier requirements.
+The name you enter will appear in the Data Sense UI as the heading for scanned files that match the classifier requirements. You can also check the box to "Mask detected results in the system" so the full result won't appear in the UI. For example, you may want to do this to hide full credit card numbers or similar personal data.
 +
 image:screenshot_select_classifier_type.png[A screenshot showing how to name the classifier and select the type of classifier.]
 

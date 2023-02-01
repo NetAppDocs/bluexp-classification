@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-deploy-compliance-onprem.html
 keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises
-summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or a Linux host in the cloud, that has internet access.
+summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
 ---
 
 = Deploy Cloud Data Sense on a Linux host that has internet access
@@ -13,7 +13,7 @@ summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or a Linux host in the cloud, that has internet access.
+Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
 
 The on-prem installation may be a good option if you prefer to scan on-premises ONTAP systems using a Data Sense instance that's also located on premises -- but this is not a requirement. The software functions exactly the same way regardless of which installation method you choose.
 
@@ -21,7 +21,7 @@ The typical on-prem installation has the following components and connections.
 
 image:diagram_deploy_onprem_overview.png[A diagram of the required BlueXP and network components, and the related connections.]
 
-For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the Manager node, and the additional systems that provide extra processing power are called Scanner nodes.
+For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the _Manager node_, and the additional systems that provide extra processing power are called _Scanner nodes_.
 
 Note that you can also link:task-deploy-compliance-dark-site.html[deploy Data Sense in an on-premises site that doesn't have internet access] for completely secure sites.
 
@@ -83,26 +83,32 @@ Data Sense software must run on a host that meets specific operating system requ
 
 Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense machine needs to stay on to continuously scan your data.
 
-* *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.7
-** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
-** The OS must be capable of installing the docker engine
+* *CPU*: 16 cores
+
+* *RAM*: 64 GB (swap memory must be disabled on the host)
 
 * *Disk*: SSD with 500 GiB available on /, or
 ** 100 GiB available on /opt
 ** 400 GiB available on /var
 ** 5 GiB on /tmp
-
-* *RAM*: 64 GB (swap memory must be disabled on the host)
-
-* *CPU*: 16 cores
 +
 Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
+
+* *AWS EC2 instance type*: An instance type that meets the CPU and RAM requirements above. We recommend https://aws.amazon.com/ec2/instance-types/m5/[m5.4xlarge^].
+
+* *Azure VM size*: An instance type that meets the CPU and RAM requirements above. We recommend https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3^].
+
+* *GCP machine type*: An instance type that meets the CPU and RAM requirements above. We recommend https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16^].
+
+* *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.7
+** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
+** The OS must be capable of installing the docker engine
 
 * *Red Hat Subscription Management*: A Red Hat Enterprise Linux system must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd party software during installation.
 
 * *Additional software*: You must install the following software on the host before you install Data Sense:
 
-** Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
+** Docker Engine version 19.3.1 or later. https://docs.docker.com/engine/install/[View installation instructions^].
 ** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
 
 * *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Sense. Run the following commands to configure `firewalld` so that it is compatible with Data Sense:
@@ -257,9 +263,9 @@ Follow these steps when installing Data Sense software on a single on-premises h
 +
 image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate Cloud Data Sense.]
 
-. Click *Activate Data Sense* to start the on-prem deployment wizard.
+. Depending on whether you are deploying on an instance in the cloud or an instance in your premises, click the appropriate *Deploy* button to start the Data Sense deployment wizard.
 +
-image:screenshot_cloud_compliance_deploy_onprem.png[A screenshot of selecting the button to deploy Cloud Data Sense on premises.]
+image:screenshot_cloud_compliance_deploy_onprem.png[A screenshot of selecting the button to deploy Cloud Data Sense on a machine in the cloud or in your premises.]
 
 . In the _Deploy Data Sense On Premises_ dialog, copy the provided command and paste it in a text file so you can use it later, and click *Close*. For example:
 +

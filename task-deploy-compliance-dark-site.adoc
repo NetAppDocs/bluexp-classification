@@ -90,7 +90,7 @@ Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, bu
 
 * *Additional software*: You must install the following software on the host before you install Data Sense:
 
-** Docker Engine version 19 or later. https://docs.docker.com/engine/install/[View installation instructions^].
+** Docker Engine version 19.3.1 or later. https://docs.docker.com/engine/install/[View installation instructions^].
 ** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
 
 * *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Sense. Run the following commands to configure `firewalld` so that it is compatible with Data Sense:

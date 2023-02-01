@@ -20,19 +20,19 @@ Learn what's new in Cloud Data Sense.
 
 === Ability to send Policy-based notification emails to any email address
 
-In earlier versions of Cloud Data Sense you could have email alerts sent to the BlueXP users in your account when certain critical Policies return results. This feature enables you to get notifications to protect your data. Now you can also send email alerts to any other email address - up to 10 email addresses - that are not in your BlueXP account. 
+In earlier versions of Cloud Data Sense you could send email alerts to the BlueXP users in your account when certain critical Policies return results. This feature enables you to get notifications to protect your data when you're not online. Now you can also send email alerts from Policies to any other users - up to 10 email addresses - who are not in your BlueXP account. 
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
 
 === Now you can add personal patterns that Data Sense will identify from the UI
 
-Data Sense has had the ability to add custom "personal data" that Data Sense will identify in future scans for a while. However, you needed to log into the Linux host and use a command line to add the custom patterns. In this release, the ability to add personal patterns using a regex is in the Data Sense UI, making it very easy to add and edit these custom patterns.
+Data Sense has had the ability to add custom "personal data" that Data Sense will identify in future scans for a while. However, you needed to log into the Data Sense Linux host and use a command line to add the custom patterns. In this release, the ability to add personal patterns using a regex is in the Data Sense UI, making it very easy to add and edit these custom patterns.
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html#add-custom-personal-data-identifiers-using-a-regex[Learn more about adding custom patterns from the Data Sense UI^].
 
 === Ability to move 15 million files using Data Sense
 
-In the past you could move a maximum of 100,000 source files that Data Sense is scanning to any NFS share. Now you can move up to 15 million files at a time. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more about moving source files using Data Sense].
+In the past you could have Data Sense move a maximum of 100,000 source files to any NFS share. Now you can move up to 15 million files at a time. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more about moving source files using Data Sense].
 
 === Ability to see the number of users who have access to SharePoint Online files
 
