@@ -228,7 +228,7 @@ image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the
 +
 image:screenshot_cloud_compliance_deploy_darksite.png[A screenshot of selecting the button to deploy Cloud Data Sense on premises.]
 
-. In the _Deploy Data Sense On Premises_ dialog, copy the provided command and paste it in a text file so you can use it later, and click *Close*. For example:
+. The _Deploy Data Sense On Premises_ dialog is displayed. Copy the provided command and paste it in a text file so you can use it later, and click *Close*. For example:
 +
 `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq --darksite`
 
@@ -270,7 +270,7 @@ Variable values:
 
 The Data Sense installer installs packages, registers the installation, and installs Data Sense. Installation can take 10 to 20 minutes.
 
-If there is connectivity over port 8080 between the host machine and the Connector instance, you will see the installation progress in the Data Sense tab in BlueXP.
+If there is connectivity over port 8080 between the host machine and the Connector instance, you'll see the installation progress in the Data Sense tab in BlueXP.
 
 .What's Next
 From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and link:task-scanning-databases.html[databases] that you want to scan.
@@ -344,7 +344,7 @@ Since Data Sense software is updated with new features on a regular basis, you s
 
 .Before you begin
 
-* Data Sense software can be upgraded one major version at a time. For example, if you have version 1.17.x installed, you can upgrade only to 1.18.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
+* Data Sense software can be upgraded one major version at a time. For example, if you have version 1.18.x installed, you can upgrade only to 1.19.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
 * Verify that your on-prem Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access[See the Connector upgrade steps^].
 
 .Steps
@@ -356,7 +356,7 @@ Since Data Sense software is updated with new features on a regular basis, you s
 . Unzip the software bundle on the host machine, for example:
 +
 [source,cli]
-tar -xvf DataSense-offline-bundle-v1.16.1.tar.gz
+tar -xvf DataSense-offline-bundle-v1.19.1.tar.gz
 +
 This extracts the installation file *cc_onprem_installer.tar.gz*.
 

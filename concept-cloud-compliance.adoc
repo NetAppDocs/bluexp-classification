@@ -214,7 +214,7 @@ The table below shows some of the differences:
 
 === How quickly does Data Sense scan data
 
-Data Sense can scan between 15-40 TBs of data per day, per scanner node. The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
+Data Sense can scan between 15-40 TiBs of data per day, per scanner node. The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
 
 link:task-deploy-compliance-onprem.html#deploy-data-sense-on-premises[Learn more about deploying multiple scanner nodes to scan your data^].
 

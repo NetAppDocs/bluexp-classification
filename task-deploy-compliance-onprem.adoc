@@ -32,7 +32,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Create a Connector
 
 [role="quick-margin-para"]
-If you don't already have a Connector, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network or in the cloud.
+If you don't already have a Connector, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network, or on a Linux host in the cloud.
 
 [role="quick-margin-para"]
 You can also create a Connector with your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^].
@@ -120,7 +120,7 @@ Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, bu
  firewall-cmd --permanent --add-port=443/tcp
  firewall-cmd --reload
 +
-If you're planning to use additional Data Sense hosts, add these rules to your primary system at this time:
+If you're planning to use additional Data Sense hosts as scanner nodes, add these rules to your primary system at this time:
 +
  firewall-cmd --permanent --add-port=2377/tcp
  firewall-cmd --permanent --add-port=7946/udp
@@ -267,7 +267,7 @@ image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the
 +
 image:screenshot_cloud_compliance_deploy_onprem.png[A screenshot of selecting the button to deploy Cloud Data Sense on a machine in the cloud or in your premises.]
 
-. In the _Deploy Data Sense On Premises_ dialog, copy the provided command and paste it in a text file so you can use it later, and click *Close*. For example:
+. The _Deploy Data Sense On Premises_ dialog is displayed. Copy the provided command and paste it in a text file so you can use it later, and click *Close*. For example:
 +
 `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`
 
@@ -315,9 +315,9 @@ Variable values:
 
 .Result
 
-The Cloud Data Sense installer installs packages, installs docker, registers the installation, and installs Data Sense. Installation can take 10 to 20 minutes.
+The Cloud Data Sense installer installs packages, registers the installation, and installs Data Sense. Installation can take 10 to 20 minutes.
 
-If there is connectivity over port 8080 between the host machine and the Connector instance, you will see the installation progress in the Data Sense tab in BlueXP.
+If there is connectivity over port 8080 between the host machine and the Connector instance, you'll see the installation progress in the Data Sense tab in BlueXP.
 
 .What's Next
 From the Configuration page you can select the data sources that you want to scan.
@@ -331,7 +331,7 @@ You can add more scanner nodes if you find that you need more scanning processin
 There are two ways in which you can add additional scanner nodes:
 
 * add a node to assist with scanning all data sources
-* add a node to assist with scanning a specific data source, or a specific group of data sources
+* add a node to assist with scanning a specific data source, or a specific group of data sources (typically based on location)
 
 By default, any new scanner nodes you add are added to the general pool of scanning resources. This is called the "default scanner group". In the image below, there is 1 Manager node and 3 Scanner nodes in the "default" group that are all scanning data from all 6 data sources.
 
@@ -367,7 +367,7 @@ You'll follow these steps to install additional Data Sense scanner nodes:
 * Verify that your environment meets the required <<Enable outbound internet access from Cloud Data Sense,permissions and connectivity>>.
 * You must have the IP addresses of the Scanner node hosts that you are adding.
 * You must have the IP address of the Data Sense Manager node host system
-* You must have the IP address or host name of the Connector system, your NetApp Account ID, Connector Client ID, and user access token. If you're planning to use scanner groups, you'll need to know the Working Environment ID for each data source in your account. See _Prerequisite steps_ below to get this information.
+* You must have the IP address or host name of the Connector system, your NetApp Account ID, Connector Client ID, and user access token. If you're planning to use scanner groups, you'll need to know the Working Environment ID for each data source in your account. See *_Prerequisite steps_* below to get this information.
 * The following ports and protocols must be enabled on all hosts:
 +
 [cols="15,20,55",options="header"]
@@ -491,7 +491,7 @@ You can link:task-licensing-datasense.html[set up licensing for Cloud Data Sense
 
 For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the _Manager node_ and the additional systems that provide extra processing power are called _Scanner nodes_.
 
-Follow these steps when installing Data Sense software on multiple on-premises hosts.
+Follow these steps when installing Data Sense software on multiple on-premises hosts at the same time. Note that you can't use "scanner groups" when deploying multiple hosts in this fashion.
 
 .What you'll need
 
@@ -541,7 +541,7 @@ When the installation finishes on all scanner nodes and they have been joined to
 
 .Result
 
-The Cloud Data Sense installer finishes installing packages, docker, and registers the installation. Installation can take 10 to 20 minutes.
+The Cloud Data Sense installer finishes installing packages, and registers the installation. Installation can take 10 to 20 minutes.
 
 .What's Next
 From the Configuration page you can select the data sources that you want to scan.

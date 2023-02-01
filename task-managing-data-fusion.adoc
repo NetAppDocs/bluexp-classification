@@ -157,7 +157,7 @@ Note the following requirements:
 * Each word must be at least 3 characters long. Shorter words are ignored.
 * Duplicate words are only added once.
 
-=== Accessing the command line
+=== Access the command line
 
 You'll need to access the Data Sense system in order to initiate the command to add custom keywords.
 
