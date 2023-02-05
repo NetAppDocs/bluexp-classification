@@ -21,7 +21,7 @@ sidebar:
           entries:
             - title: Deploy in the cloud
               url: /task-deploy-cloud-compliance.html
-            - title: Deploy on-prem with internet access
+            - title: Deploy on a Linux host with internet access
               url: /task-deploy-compliance-onprem.html
             - title: Deploy on-prem without internet access
               url: /task-deploy-compliance-dark-site.html
@@ -103,11 +103,11 @@ homepage:
       links:
         - title: Learn about Cloud Data Sense
           url: concept-cloud-compliance.html
-        - title: What’s New
+        - title: What's New
           url: whats-new.html
         - title: Deploy Data Sense in the cloud
           url: task-deploy-cloud-compliance.html
-        - title: Deploy Data Sense on-premises with internet
+        - title: Deploy Data Sense on a Linux host with internet
           url: task-deploy-compliance-onprem.html
         - title: Deploy Data Sense on-premises without internet
           url: task-deploy-compliance-dark-site.html
@@ -176,10 +176,10 @@ homepage:
     - title: Blogs & community
       links:
         - title: NetApp Community
-          url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
-        - title: BlueXP use cases
-          url: https://cloud.netapp.com/netapp-cloud-data-sense
+          url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+        - title: Data Sense use cases
+          url: https://bluexp.netapp.com/netapp-cloud-data-sense
         - title: BlueXP blog
-          url: https://cloud.netapp.com/blog
+          url: https://bluexp.netapp.com/blog
         - title: Cloud webinars
-          url: https://cloud.netapp.com/events
+          url: https://bluexp.netapp.com/events

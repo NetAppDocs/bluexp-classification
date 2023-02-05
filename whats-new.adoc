@@ -16,13 +16,33 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 5 February 2023 (version 1.20)
+
+=== Ability to send Policy-based notification emails to any email address
+
+In earlier versions of Cloud Data Sense you could send email alerts to the BlueXP users in your account when certain critical Policies return results. This feature enables you to get notifications to protect your data when you're not online. Now you can also send email alerts from Policies to any other users - up to 20 email addresses - who are not in your BlueXP account. 
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
+
+=== Now you can add personal patterns that Data Sense will identify from the UI
+
+Data Sense has had the ability to add custom "personal data" that Data Sense will identify in future scans for a while. However, you needed to log into the Data Sense Linux host and use a command line to add the custom patterns. In this release, the ability to add personal patterns using a regex is in the Data Sense UI, making it very easy to add and edit these custom patterns.
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html#add-custom-personal-data-identifiers-using-a-regex[Learn more about adding custom patterns from the Data Sense UI^].
+
+=== Ability to move 15 million files using Data Sense
+
+In the past you could have Data Sense move a maximum of 100,000 source files to any NFS share. Now you can move up to 15 million files at a time. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more about moving source files using Data Sense].
+
+=== Ability to see the number of users who have access to SharePoint Online files
+
+The filter "Number of users with access" now supports files stored in SharePoint Online repositories. In the past only files on CIFS shares were supported. Note that SharePoint groups that are not active directory based will not be counted in this filter at this time.
+
+=== New "Partial Success" status has been added to the Action Status panel
+
+The new "Partial Success" status indicates that a Data Sense action is finished and some items failed and some items succeeded, for example, when you are moving or deleting 100 files. Additionally, the "Finished" status has been renamed to "Success". In the past, the "Finished" status might list actions that succeeded and that failed. Now the "Success" status means that all actions succeeded on all items. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-view-compliance-actions.html[See how to view the Actions Status panel].
+
 == 9 January 2023 (version 1.19)
-//
-//=== Ability to send Policy-based notification emails to any email address
-//
-//In earlier versions of Cloud Data Sense you could have email alerts sent to the BlueXP users in your account when certain critical Policies return results. This allows you to get notifications to protect your data. Now you can also choose to send email alerts to any other email address - up to 10 email addresses - not in your BlueXP account. 
-//
-//https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
 
 === Ability to view a chart of files that contain sensitive data and that are overly permissive
 
@@ -55,6 +75,7 @@ The following enhancements have been added for the on-prem Data Sense installati
 * Also in the Configuration page, a new section shows the Scanner Groups you have set up, and the scanner nodes that are in each group.
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html[Learn more about installing Data Sense on a single host server and on multiple hosts]. 
+// end::whats-new[]
 
 == 13 November 2022 (version 1.17)
 
@@ -75,7 +96,6 @@ If necessary, the scanner nodes can be installed on host systems that are physic
 === On-premises installers now perform a pre-check before starting the installation
 
 When installing Data Sense on a Linux system, the installer checks whether the system meets all the necessary requirements (CPU, RAM, capacity, networking, etc.) before starting the actual installation. This helps catch issues *before* you spend time on the installation.
-// end::whats-new[]
 
 == 6 September 2022 (version 1.16)
 
