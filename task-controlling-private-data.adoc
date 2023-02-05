@@ -196,7 +196,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 
 * The left-pane filters enable you to refine the results by selecting from the following attributes:
 +
-[cols=2*,options="header",cols="35,65"]
+[cols=2*,options="header",cols="30,65"]
 |===
 
 | Filter
