@@ -20,7 +20,7 @@ Learn what's new in Cloud Data Sense.
 
 === Ability to send Policy-based notification emails to any email address
 
-In earlier versions of Cloud Data Sense you could send email alerts to the BlueXP users in your account when certain critical Policies return results. This feature enables you to get notifications to protect your data when you're not online. Now you can also send email alerts from Policies to any other users - up to 10 email addresses - who are not in your BlueXP account. 
+In earlier versions of Cloud Data Sense you could send email alerts to the BlueXP users in your account when certain critical Policies return results. This feature enables you to get notifications to protect your data when you're not online. Now you can also send email alerts from Policies to any other users - up to 20 email addresses - who are not in your BlueXP account. 
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
 
