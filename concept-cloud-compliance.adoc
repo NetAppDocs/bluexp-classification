@@ -203,7 +203,7 @@ The table below shows some of the differences:
 | List of file types and used capacity | Yes | Yes
 | Number of files and used capacity | Yes | Yes
 | Age and size of files | Yes | Yes
-| Ability to run a link:task-generating-compliance-reports.html#data-mapping-report[Data Mapping Report] | Yes | Yes
+| Ability to run a link:task-controlling-governance-data.html#data-mapping-report[Data Mapping Report] | Yes | Yes
 | Data Investigation page to view file details | Yes | No
 | Search for names within files | Yes | No
 | Create link:task-org-private-data.html#controlling-your-data-using-policies[policies] that provide custom search results | Yes | No
@@ -214,7 +214,10 @@ The table below shows some of the differences:
 
 === How quickly does Data Sense scan data
 
-Data Sense can scan between 15-40 TiBs of data per day, per scanner node. The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
+The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
+
+* When performing Mapping scans, Data Sense can scan between 100-150 TiBs of data per day, per scanner node. 
+* When performing Classification scans, Data Sense can scan between 15-40 TiBs of data per day, per scanner node. 
 
 link:task-deploy-compliance-onprem.html#deploy-data-sense-on-premises[Learn more about deploying multiple scanner nodes to scan your data^].
 

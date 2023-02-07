@@ -59,8 +59,14 @@ sidebar:
           url: /task-controlling-governance-data.html
         - title: View compliance details about your data
           url: /task-controlling-private-data.html
+        - title: Categories of private data
+          url: /reference-private-data-categories.html
+        - title: Investigate your data
+          url: /task-investigate-data.html
         - title: Organize your private data
           url: /task-org-private-data.html
+        - title: Assign policies to your data
+          url: /task-using-policies.html 
         - title: Manage your private data
           url: /task-managing-highlights.html
         - title: Change scan settings
@@ -69,8 +75,7 @@ sidebar:
           url: /task-generating-compliance-reports.html
         - title: Respond to a DSAR
           url: /task-responding-to-dsar.html
-        - title: Categories of private data
-          url: /reference-private-data-categories.html
+
     - title: Manage Cloud Data Sense
       entries:
         - title: Add custom personal data identifiers
@@ -85,6 +90,10 @@ sidebar:
           url: /task-managing-compliance.html
         - title: Uninstall Data Sense
           url: /task-uninstall-data-sense.html
+    - title: Reference
+      entries:
+        - title: Metadata collected from data sources
+          url: /reference-collected-metadata.html
     - title: Knowledge and support
       entries:
         - title: Register for support
