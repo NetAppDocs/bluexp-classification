@@ -22,7 +22,7 @@ Learn what's new in Cloud Data Sense.
 
 In earlier versions of Cloud Data Sense you could send email alerts to the BlueXP users in your account when certain critical Policies return results. This feature enables you to get notifications to protect your data when you're not online. Now you can also send email alerts from Policies to any other users - up to 20 email addresses - who are not in your BlueXP account. 
 
-https://docs.netapp.com/us-en/cloud-manager-data-sense/task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-using-policies.html#sending-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
 
 === Now you can add personal patterns that Data Sense will identify from the UI
 
@@ -56,7 +56,7 @@ New filters are available to refine the results that display in the Data Investi
 * The "Created Time", "Discovered Time", "Last Modified", and "Last Accessed" filters now allow you to create a custom date range instead of just selecting a pre-defined range of days. For example, you can look for files with a "Created Time" "older than 6 months", or with a "Last Modified" date within the "last 10 days".
 * The "File Path" filter now enables you to specify paths that you want to exclude from the filtered query results. If you enter paths to both include and exclude certain data, Data Sense finds all files in the included paths first, then it removes files from excluded paths, and then it displays the results.
 
-https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-investigate-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
 
 === Data Sense can identify the Japanese Individual Number
 

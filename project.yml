@@ -152,11 +152,11 @@ homepage:
         - title: View files that contain private information
           url: task-controlling-private-data.html
         - title: View files that are duplicated in your storage
-          url: task-controlling-private-data.html#checking-for-duplicate-files-in-your-storage-systems
+          url: task-investigate-data.html#checking-for-duplicate-files-in-your-storage-systems
         - title: Filter your data to view specific files
-          url: task-controlling-private-data.html#filtering-data-in-the-data-investigation-page
+          url: task-investigate-data.html
         - title: Create policies to view your top searches
-          url: task-org-private-data.html#controlling-your-data-using-policies
+          url: task-using-policies.html
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
     - title: Organize your private data
@@ -176,7 +176,7 @@ homepage:
         - title: Delete source files
           url: task-managing-highlights.html#deleting-source-files
         - title: Create email alerts when non-compliant data is found
-          url: task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found
+          url: task-using-policies.html#sending-email-alerts-when-non-compliant-data-is-found
         - title: Respond to a Data Subject Access Request
           url: task-generating-compliance-reports.html#searching-for-data-subjects-and-downloading-reports
     - title: Blogs & community

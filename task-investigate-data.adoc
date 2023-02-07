@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-investigate-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies
-summary: Gain control of your private data by viewing details about the personal data and sensitive personal data in your organization. You can also gain visibility by reviewing the categories and file types that Cloud Data Sense found in your data.
+summary: You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the Data Sense UI, including the Governance and Compliance dashboards.
 ---
 
 = Investigate the data stored in your organization
@@ -13,26 +13,15 @@ summary: Gain control of your private data by viewing details about the personal
 :imagesdir: ./media/
 
 [.lead]
-Gain control of your private data by viewing details about the personal data and sensitive personal data in your organization. You can also gain visibility by reviewing the categories and file types that Cloud Data Sense found in your data.
+You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the Data Sense UI, including the Governance and Compliance dashboards.
 
 NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
-
-By default, the Cloud Data Sense dashboard displays compliance data for all working environments and databases.
-
-image:screenshot_compliance_dashboard.png[A screenshot of the Cloud Data Sense dashboard]
-
-If you want to see data for only some of the working environments, <<Viewing Dashboard data for specific working environments,select those working environments>>.
-
-You can also filter the results from the Data Investigation page and download a report of the results as a CSV file. See <<Filtering data in the Data Investigation page,Filtering data in the Data Investigation page>> for details.
-
-
-NEW STUFF HERE
 
 == Filtering data in the Data Investigation page
 
 You can filter the contents of the investigation page to display only the results you want to see. This is a very powerful feature because after you've refined the data, you can use the button bar at the top of the page to perform a variety of actions, including copying files, moving files, adding a tag or AIP label to the files, and more.
 
-If you want to download the contents of the page as a report after you've refined it, click the image:button_download.png[download button] button. You can save the report locally as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). link:task-generating-compliance-reports.html#data-investigation-report[Go here for details about Data Investigation reports].
+If you want to download the contents of the page as a report after you've refined it, click the image:button_download.png[download button] button. <<Data Investigation Report,Go here for details about the Data Investigation report>>.
 
 //Note that the actions available in the button bar and Policies are not currently supported at the "Directory" level.
 
@@ -42,11 +31,11 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 
 * The controls at the top of each column allow you to sort the results in numerical or alphabetical order.
 
-* The left-pane filters enable you to refine the results by selecting from the following attributes:
+* The left-pane filters enable you to refine the results by selecting the attributes described in the next sections.
 
 === Filter data by sensitivity and content
 
-You can 
+Use the following filters to view how much sensitive information is contained in your data. 
 
 [cols=2*,options="header",cols="30,60"]
 |===
@@ -65,7 +54,7 @@ You can
 
 === Filter data by user owner and user permissions 
 
-You can 
+Use the following filters to view file owners and permissions to access your data.
 
 [cols=2*,options="header",cols="30,60"]
 |===
@@ -76,12 +65,13 @@ You can
 | Open Permissions | Select the type of permissions within the data and within folders/shares.
 | User / Group Permissions | Select one or multiple user names and/or group names, or enter a partial name.
 | File Owner | Enter the file owner name.
+| Number of users with access | Select one or multiple category ranges to show which files and folders are open to a certain number of users.
 
 |===
 
 === Filter data by time
 
-You can 
+Use the following filters to view data based on time criteria. 
 
 [cols=2*,options="header",cols="30,60"]
 |===
@@ -94,12 +84,11 @@ You can
 | Last Modified | Select a time range when the file was last modified. You can also specify a custom time range to further refine the search results.
 | Last Accessed | Select a time range when the file was last accessed. You can also specify a custom time range to further refine the search results. For the types of files that Data Sense scans, this is the last time Data Sense scanned the file.
 
-
 |===
 
 === Filter data by metadata
 
-You can 
+Use the following filters to view data based on location, size, and directory or file type. 
 
 [cols=2*,options="header",cols="30,60"]
 |===
@@ -117,7 +106,7 @@ You can
 
 === Filter data by storage type
 
-You can 
+Use the following filters to view data by storage type. 
 
 [cols=2*,options="header",cols="30,60"]
 |===
@@ -133,7 +122,7 @@ You can
 
 === Filter data by tags, labels, assigned users, and policies
 
-You can 
+Use the following filters to view data by AIP labels or tags.
 
 [cols=2*,options="header",cols="30,60"]
 |===
@@ -141,7 +130,7 @@ You can
 | Filter
 | Details
 
-| Policies | Select a policy or policies. Go link:task-org-private-data.html#controlling-your-data-using-policies[here^] to view the list of existing policies and to create your own custom policies.
+| Policies | Select a policy or policies. Go link:task-using-policies.html[here^] to view the list of existing policies and to create your own custom policies.
 | Label | Select link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP labels] that are assigned to your files.
 | Tags | Select link:task-org-private-data.html#applying-tags-to-manage-your-scanned-files[the tag or tags] that are assigned to your files.
 | Assigned To | Select the name of the person to which the file is assigned.
@@ -150,7 +139,7 @@ You can
 
 === Filter data by analysis status
 
-You can 
+Use the following filter to view data by the Data Sense scan status.
 
 [cols=2*,options="header",cols="30,60"]
 |===
@@ -163,6 +152,8 @@ You can
 |===
 
 === Filter data by Duplicates
+
+Use the following filter to view files that are duplicated in your storage.
 
 [cols=2*,options="header",cols="30,60"]
 |===
@@ -180,7 +171,7 @@ In the Data Investigation results pane you can click image:button_down_caret.png
 
 image:screenshot_compliance_file_details.png[A screenshot showing the metadata details for a file in the Data Investigation page.]
 
-In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, whether there are duplicates of this file, and assigned AIP label (if you have link:task-org-private-data.html#categorizing-your-data-using-aip-labels[integrated AIP in Cloud Data Sense^]). This information is useful if you're planning to link:task-org-private-data.html#creating-custom-policies[create Policies] because you can see all the information that you can use to filter your data.
+In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, whether there are duplicates of this file, and assigned AIP label (if you have link:task-org-private-data.html#categorizing-your-data-using-aip-labels[integrated AIP in Cloud Data Sense^]). This information is useful if you're planning to link:task-using-policies.html#creating-custom-policies[create Policies] because you can see all the information that you can use to filter your data.
 
 Note that not all information is available for all data sources - just what is appropriate for that data source. For example, volume name, permissions, and AIP labels are not relevant for database files.
 
@@ -235,7 +226,7 @@ TIP: You can use the "file hash" value provided in this page and enter it direct
 
 == Data Investigation Report
 
-The Data Investigation Report is a download of the contents of the Data Investigation page. link:task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[Learn more about the Data Investigation page].
+The Data Investigation Report is a download of the filtered contents of the Data Investigation page. 
 
 You can save the report to the local machine as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). If Data Sense is scanning files (unstructured data), directories (folders and file shares), or databases (structured data), there can be up to three report files downloaded.
 

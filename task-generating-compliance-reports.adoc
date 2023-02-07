@@ -153,7 +153,7 @@ Privacy regulations such as the European GDPR grant data subjects (such as custo
 
 You can respond to a DSAR by searching for a subject's full name or known identifier (such as an email address) and then downloading a report. The report is designed to aid in your organization's requirement to comply with GDPR or similar data privacy laws.
 
-== How can Cloud Data Sense help you respond to a DSAR?
+=== How can Cloud Data Sense help you respond to a DSAR?
 
 When you perform a data subject search, Cloud Data Sense finds all of the files, buckets, OneDrive, and SharePoint accounts that have that person's name or identifier in it. Data Sense checks the latest pre-indexed data for the name or identifier. It doesn't initiate a new scan.
 
@@ -161,7 +161,7 @@ After the search is complete, you can then download the list of files for a Data
 
 NOTE: Data subject search is not supported within databases at this time.
 
-== Searching for data subjects and downloading reports
+=== Searching for data subjects and downloading reports
 
 Search for the data subject's full name or known identifier and then download a file list report or DSAR report. You can search by link:reference-private-data-categories.html#types-of-personal-data[any personal information type^].
 
