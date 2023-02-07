@@ -47,8 +47,8 @@ Now that Cloud Data Sense is enabled, ensure that it can access all volumes.
 * The Cloud Data Sense instance needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system.
 * Security groups for Cloud Volumes ONTAP must allow inbound connections from the Data Sense instance.
 * Make sure these ports are open to the Data Sense instance:
-** For NFS – ports 111 and 2049.
-** For CIFS – ports 139 and 445.
+** For NFS - ports 111 and 2049.
+** For CIFS - ports 139 and 445.
 * NFS volume export policies must allow access from the Data Sense instance.
 * Data Sense needs Active Directory credentials to scan CIFS volumes.
 +
@@ -110,8 +110,8 @@ Make sure that Cloud Data Sense can access volumes by checking your networking, 
 You can either open the security group for traffic from the IP address of the Data Sense instance, or you can open the security group for all traffic from inside the virtual network.
 
 . Ensure the following ports are open to the Data Sense instance:
-** For NFS – ports 111 and 2049.
-** For CIFS – ports 139 and 445.
+** For NFS - ports 111 and 2049.
+** For CIFS - ports 139 and 445.
 
 . Ensure that NFS volume export policies include the IP address of the Data Sense instance so it can access the data on each volume.
 

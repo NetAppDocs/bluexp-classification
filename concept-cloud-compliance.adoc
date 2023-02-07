@@ -15,7 +15,7 @@ summary: Cloud Data Sense is a data governance service for BlueXP that scans you
 [.lead]
 Cloud Data Sense is a data governance service for BlueXP (formerly Cloud Manager) that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
 
-https://cloud.netapp.com/netapp-cloud-data-sense[Learn about the use cases for Cloud Data Sense^].
+https://bluexp.netapp.com/netapp-cloud-data-sense[Learn about the use cases for Cloud Data Sense^].
 
 == Features
 
@@ -29,7 +29,7 @@ Data Sense provides several tools that can help with your compliance efforts. Yo
 * Identify a wide scope of sensitive personal information as required by GDPR, CCPA, PCI, and HIPAA privacy regulations.
 * Respond to Data Subject Access Requests (DSAR) based on name or email address.
 * Identify whether unique identifiers from your databases are found in files in other repositories - basically making your own list of "personal data" that is identified in Data Sense scans.
-* Notify certain users through email when files contain certain PII (you define this criteria using link:task-org-private-data.html#controlling-your-data-using-policies[Policies^]) so you can decide on an action plan.
+* Notify certain users through email when files contain certain PII (you define this criteria using link:task-using-policies.html[Policies^]) so you can decide on an action plan.
 
 === Strengthen security
 
@@ -102,7 +102,7 @@ Data Sense supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 
 
 == Cost
 
-* The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a BlueXP workspace is free for 30 days. This includes all data from all working environments and data sources. A subscription to the AWS, Azure, or GCP Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point. See https://cloud.netapp.com/netapp-cloud-data-sense[pricing^] for details.
+* The cost to use Cloud Data Sense depends on the amount of data that you're scanning. The first 1 TB of data that Data Sense scans in a BlueXP workspace is free for 30 days. This includes all data from all working environments and data sources. A subscription to the AWS, Azure, or GCP Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point. See https://bluexp.netapp.com/netapp-cloud-data-sense[pricing^] for details.
 +
 link:task-licensing-datasense.html[Learn how to license Cloud Data Sense^].
 
@@ -157,7 +157,7 @@ You can deploy Data Sense on a system with fewer CPUs and less RAM, but there ar
 | Limitations
 | Large (default) | 16 CPUs, 64 GB RAM, 500 GB SSD | None
 | Medium | 8 CPUs, 32 GB RAM, 200 GB SSD | Slower scanning, and can only scan up to 1 million files.
-| Small | 8 CPUs, 16 GB RAM, 100 GB SSD | Same limitations as "Medium", plus the ability to identify link:task-responding-to-dsar.html[data subject names] inside files is disabled.
+| Small | 8 CPUs, 16 GB RAM, 100 GB SSD | Same limitations as "Medium", plus the ability to identify link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[data subject names] inside files is disabled.
 |===
 
 When deploying Data Sense in the cloud, email ng-contact-data-sense@netapp.com for assistance if you want to use one of these smaller systems. We'll need to work with you to deploy these smaller cloud configurations.
@@ -203,10 +203,10 @@ The table below shows some of the differences:
 | List of file types and used capacity | Yes | Yes
 | Number of files and used capacity | Yes | Yes
 | Age and size of files | Yes | Yes
-| Ability to run a link:task-generating-compliance-reports.html#data-mapping-report[Data Mapping Report] | Yes | Yes
+| Ability to run a link:task-controlling-governance-data.html#data-mapping-report[Data Mapping Report] | Yes | Yes
 | Data Investigation page to view file details | Yes | No
 | Search for names within files | Yes | No
-| Create link:task-org-private-data.html#controlling-your-data-using-policies[policies] that provide custom search results | Yes | No
+| Create link:task-using-policies.html[policies] that provide custom search results | Yes | No
 | Categorize data using AIP labels and Status tags | Yes | No
 | Copy, delete, and move source files | Yes | No
 | Ability to run other reports | Yes | No
@@ -214,7 +214,10 @@ The table below shows some of the differences:
 
 === How quickly does Data Sense scan data
 
-Data Sense can scan between 15-40 TiBs of data per day, per scanner node. The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
+The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
+
+* When performing Mapping scans, Data Sense can scan between 100-150 TiBs of data per day, per scanner node. 
+* When performing Classification scans, Data Sense can scan between 15-40 TiBs of data per day, per scanner node. 
 
 link:task-deploy-compliance-onprem.html#deploy-data-sense-on-premises[Learn more about deploying multiple scanner nodes to scan your data^].
 
@@ -233,7 +236,7 @@ Categories:: Cloud Data Sense takes the data that it scanned and divides it into
 Types:: Cloud Data Sense takes the data that it scanned and breaks it down by file type. link:task-controlling-private-data.html#viewing-files-by-file-types[Learn more about types^].
 
 Name entity recognition::
-Cloud Data Sense uses AI to extract natural persons' names from documents. link:task-responding-to-dsar.html[Learn about responding to Data Subject Access Requests^].
+Cloud Data Sense uses AI to extract natural persons' names from documents. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Learn about responding to Data Subject Access Requests^].
 
 == Networking overview
 

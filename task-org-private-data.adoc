@@ -128,44 +128,6 @@ image:screenshot_compliance_select_aip_label_multi.png[A screenshot showing how 
 +
 The AIP label is added to the metadata for all selected files.
 
-=== Assigning AIP labels automatically with Policies
-
-You can assign an AIP label to all the files that meet the criteria of the Policy. You can specify the AIP label when creating the Policy, or you can add the label when editing any Policy.
-
-Labels are added or updated in files continuously as Cloud Data Sense scans your files.
-
-Depending on whether a label is already applied to a file, and the classification level of the label, the following actions are taken when changing a label:
-
-[cols=2*,options="header",cols="60,40"]
-|===
-
-| If the file...
-| Then...
-
-| Has no label | The label is added
-| Has an existing label of a lower level of classification | The higher level label is added
-| Has an existing label of a higher level of classification | The higher level label is retained
-| Is assigned a label both manually and by a Policy | The higher level label is added
-| Is assigned two different labels by two Policies | The higher level label is added
-
-|===
-
-Follow these steps to add an AIP label to an existing Policy.
-
-.Steps
-
-. From the Policies List page, click *Edit* for the Policy where you want to add (or change) the AIP label.
-+
-image:screenshot_compliance_add_label_highlight_1.png[A screenshot showing how to edit an existing Policy.]
-
-. In the Edit Policy page, check the box to enable automatic labels for files that match the Policy parameters, and select the label (for example, *General*).
-+
-image:screenshot_compliance_add_label_highlight_2.png[A screenshot showing how to select the label to be assigned to files that match the Policy.]
-
-. Click *Save Policy* and the label appears in the Policy description.
-
-NOTE: If a Policy was configured with a label, but the label has since been removed from AIP, the label name is turned to OFF and the label is not assigned anymore.
-
 === Removing the AIP integration
 
 If you no longer want the ability to manage AIP labels in files, you can remove the AIP account from the Cloud Data Sense interface.
@@ -251,7 +213,7 @@ You can delete a tag if you don't need to use it anymore.
 
 Just click the *x* for an existing tag.
 
-image:button_delete_datasense_file_tag.png[add this somewhere in this topic]
+image:button_delete_datasense_file_tag.png[A screenshot of the delete tag button location.]
 
 If you had selected multiple files, the tag is removed from all the files.
 
@@ -295,135 +257,3 @@ image:screenshot_compliance_tag_multi_files.png["A screenshot showing how to sel
 image:screenshot_compliance_select_user_multi.png[A screenshot showing how to assign a user to multiple files in the Data Investigation page.]
 +
 The user is added to the metadata for all selected files.
-
-== Controlling your data using Policies
-
-Policies are like a favorites list of custom filters that provide search results in the Investigation page for commonly requested compliance queries. Cloud Data Sense provides a set of predefined Policies based on common customer requests. You can create custom Policies that provide results for searches specific to your organization.
-
-Policies provide the following functionality:
-
-* <<List of predefined Policies,Predefined Policies>> from NetApp based on user requests
-* Ability to create your own custom Policies
-* Launch the Investigation page with the results from your Policies in one click
-* Send email alerts to BlueXP users, or any other email addresses, when certain critical Policies return results so you can get notifications to protect your data
-* Assign AIP (Azure Information Protection) labels automatically to all files that match the criteria defined in a Policy
-* Delete files automatically (once per day) when certain Policies return results so you can protect your data automatically
-
-The *Policies* tab in the Compliance Dashboard lists all the predefined and custom Policies available on this instance of Cloud Data Sense.
-
-image:screenshot_compliance_highlights_tab.png[A screenshot of the Policies tab in the Cloud Data Sense dashboard.]
-
-In addition, Policies appear in the list of Filters in the Investigation page.
-
-=== Viewing Policy results in the Investigation page
-
-To display the results for a Policy in the Investigation page, click the image:screenshot_gallery_options.gif[More button] button for a specific Policy, and then select *Investigate Results*.
-
-image:screenshot_compliance_highlights_investigate.png[A screenshot of selecting Investigate Results for a specific Policy from the Policies tab.]
-
-=== Creating custom Policies
-
-You can create your own custom Policies that provide results for searches specific to your organization. Results are returned for all files and directories (shares and folders) that match the search criteria.
-
-Note that the actions for deleting data and assigning AIP labels based on the policy results are valid only for files. Directories that match the search criteria can't be deleted automatically or assigned AIP labels.
-
-.Steps
-
-. From the Data Investigation page, define your search by selecting all the filters you want to use. See link:task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[Filtering data in the Data Investigation page^] for details.
-
-. Once you have all the filter characteristics just the way you want them, click *Create Policy from this search*.
-+
-image:screenshot_compliance_save_as_highlight.png[A screenshot showing how to save a filtered query as a Policy.]
-
-. Name the Policy and select other actions that can be performed by the Policy:
-.. Enter a unique name and description.
-.. Optionally, check the box to automatically delete files that match the Policy parameters. Learn more about link:task-managing-highlights.html#deleting-source-files-automatically-using-policies[deleting source files using a policy].
-.. Optionally, check the box if you want notification emails sent to BlueXP users in your account, and choose the interval at which the email is sent. Learn more about link:task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found[sending email alerts based on policy results].
-.. Optionally, check the box if you want notification emails sent to other users, enter up to 20 email addresses, and choose the interval at which the email is sent.
-.. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP labels].)
-.. Click *Create Policy*.
-+
-image:screenshot_compliance_save_highlight.png[A screenshot that shows how to configure the Policy and save it.]
-
-.Result
-
-The new Policy appears in the Policies tab.
-
-=== Sending email alerts when non-compliant data is found
-
-Cloud Data Sense can send email alerts to BlueXP users in your account when certain critical Policies return results so you can get notifications to protect your data. You can choose to send the email notifications on a daily, weekly, or monthly basis. You can also choose to send email alerts to any other email address - up to 20 email addresses - not in your BlueXP account. 
-
-You can configure this setting when creating the Policy or when editing any Policy.
-
-Follow these steps to add email updates to an existing Policy.
-
-.Steps
-
-. From the Policies List page, click *Edit* for the Policy where you want to add (or change) the email setting.
-+
-image:screenshot_compliance_add_email_alert_1.png[A screenshot showing how to edit an existing Policy.]
-
-. In the Edit Policy page:
-.. Check the "Email all the users in this account" box if you want notification emails sent to users in your BlueXP account, and choose the interval at which the email is sent (for example, *Every Day*).
-.. Check the "Send Email" box if you want notification emails sent to additional users, choose the interval at which the email is sent, and enter up to 20 email addresses.
-+
-image:screenshot_compliance_add_email_alert_2.png[A screenshot showing how to choose the email criterial to be sent for the Policy.]
-
-. Click *Save Policy* and the interval at which the email is sent appears in the Policy description.
-
-.Result
-
-The first email is sent now if there are any results from the Policy - but only if any files meet the Policy criteria. No personal information is sent in the notification emails. The email indicates that there are files that match the Policy criteria, and it provides a link to the Policy results.
-
-=== Editing Policies
-
-You can modify any criteria for an existing policy that you previously created. This can be especially useful if you want to change the query (the items you defined using Filters) to add or remove certain parameters.
-
-Note that for Predefined Policies that you can only modify whether email notifications are sent and whether AIP labels are added. No other values can be changed.
-
-.Steps
-
-. From the Policies List page, click *Edit* for the Policy that you want to change.
-+
-image:screenshot_compliance_edit_policy_button.png[A screenshot showing how to initiate an edit to an existing Policy.]
-
-. If you just want to change the items on this page (the Name, Description, whether email notifications are sent, and whether AIP labels are added), make the change and click *Save Policy*.
-+
-If you want to change the filters for the saved query, click *Edit Query*.
-+
-image:screenshot_compliance_edit_policy_dialog.png[A screenshot of selecting the Edit Query button on the Edit Policy page.]
-
-. In the Investigation page that defines that query, edit the query by adding, removing, or customizing the filters, and click *Save Changes* .
-+
-image:screenshot_compliance_edit_policy_query.png[A screenshot showing how to edit the query by changing filter settings.]
-
-.Result
-
-The policy is changed immediately. Any actions defined for that policy to send an email, add AIP labels, or delete files will occur at the next internal.
-
-=== Deleting Policies
-
-You can delete any custom Policy that you created if you no longer need it. You can't delete any of the predefined Policies.
-
-To delete a Policy, click the image:screenshot_gallery_options.gif[More button] button for a specific Policy, click *Delete Policy*, and then click *Delete Policy* again in the confirmation dialog.
-
-=== List of predefined Policies
-
-Cloud Data Sense provides the following system-defined Policies:
-
-[cols="25,40,40",width=90%,options="header"]
-|===
-| Name
-| Description
-| Logic
-| S3 publicly - Exposed private data | S3 Objects containing personal or sensitive personal information, with open Public read access. | S3 Public AND contains personal OR sensitive personal info
-| PCI DSS - Stale data over 30 days | Files containing Credit Card information, last modified over 30 days ago. | Contains credit card AND last modified over 30 days
-| HIPAA - Stale data over 30 days | Files containing Health information, last modified over 30 days ago. | Contains health data (defined same way as in HIPAA report) AND last modified over 30 days
-| Private data - Stale over 7 years | Files containing personal or sensitive personal information, last modified over 7 years ago. | Files containing personal or sensitive personal information, last modified over 7 years ago
-| GDPR - European citizens | Files containing more than 5 identifiers of an EU country's citizens or DB Tables containing identifiers of an EU country's citizens. | Files containing over 5 identifiers of an (one) EU citizens or DB Tables containing rows with over 15% of columns with one country's EU identifiers. (any one of the national identifiers of the European countries. Does not include Brazil, California, USA SSN, Israel, South Africa)
-| CCPA - California residents | Files containing over 10 California Driver's License identifiers or DB Tables with this identifier. | Files containing over 10 California Driver's License identifiers OR DB Tables containing California Driver's license
-| Data Subject names - High risk | Files with over 50 Data Subject names. | Files with over 50 Data Subject names
-| Email Addresses - High risk | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses
-| Personal data - High risk | Files with over 20 Personal data identifiers, or DB Columns with over 50% of their rows containing Personal data identifiers. | Files with over 20 personal, or DB Columns with over 50% of their rows containing personal
-| Sensitive Personal data - High risk | Files with over 20 Sensitive Personal data identifiers, or DB Columns with over 50% of their rows containing Sensitive Personal data. | Files with over 20 sensitive personal, or DB Columns with over 50% of their rows containing sensitive personal
-|===

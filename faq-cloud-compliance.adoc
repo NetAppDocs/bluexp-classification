@@ -43,7 +43,7 @@ link:concept-cloud-compliance.html[Learn more about how Cloud Data Sense works^]
 * Migrate data from legacy systems to the cloud.
 * Comply with data retention policies.
 
-https://cloud.netapp.com/netapp-cloud-data-sense[Learn more about the use cases for Cloud Data Sense^].
+https://bluexp.netapp.com/netapp-cloud-data-sense[Learn more about the use cases for Cloud Data Sense^].
 
 === What about the architecture of Cloud Data Sense?
 
@@ -89,13 +89,13 @@ Yes. The information offered by Cloud Data Sense can be relevant to other stakeh
 
 Privacy Risk Assessment report:: Provides privacy insights from your data and a privacy risk score. link:task-generating-compliance-reports.html#privacy-risk-assessment-report[Learn more^].
 
-Data Subject Access Request report:: Enables you to extract a report of all files that contain information regarding a data subject's specific name or personal identifier. link:task-responding-to-dsar.html[Learn more^].
+Data Subject Access Request report:: Enables you to extract a report of all files that contain information regarding a data subject's specific name or personal identifier. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Learn more^].
 
 PCI DSS report:: Helps you identify the distribution of credit card information across your files. link:task-generating-compliance-reports.html#pci-dss-report[Learn more^].
 
 HIPAA report:: Helps you identify the distribution of health information across your files. link:task-generating-compliance-reports.html#hipaa-report[Learn more^].
 
-Data Mapping report:: Provides information about the size and number of files in your working environments. This includes usage capacity, age of data, size of data, and file types. link:task-generating-compliance-reports.html#data-mapping-report[Learn more^].
+Data Mapping report:: Provides information about the size and number of files in your working environments. This includes usage capacity, age of data, size of data, and file types. link:task-controlling-governance-data.html#data-mapping-report[Learn more^].
 
 Reports on a specific information type:: Reports are available that include details about the identified files that contain personal data and sensitive personal data. You can also see files broken down by category and file type. link:task-controlling-private-data.html[Learn more^].
 
@@ -157,7 +157,7 @@ The compliance scan doesn't heat up the cold data--it stays cold and tiered to o
 
 === Can Cloud Data Sense send notifications to my organization?
 
-Yes. In conjunction with the Policies feature, you can send email alerts to BlueXP users (daily, weekly, or monthly), or any other email address,  when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-org-private-data.html#controlling-your-data-using-policies[Policies^].
+Yes. In conjunction with the Policies feature, you can send email alerts to BlueXP users (daily, weekly, or monthly), or any other email address,  when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-using-policies.html[Policies^].
 
 You can also download status reports from the Governance page and Investigation page that you can share internally in your organization.
 
@@ -245,7 +245,7 @@ The cost to use Cloud Data Sense depends on the amount of data that you're scann
 * A subscription to the BlueXP Marketplace listing from your cloud provider, or
 * A Bring-your-own-license (BYOL) from NetApp
 
-See https://cloud.netapp.com/netapp-cloud-data-sense#Pricing[pricing^] for details.
+See https://bluexp.netapp.com/pricing[pricing^] for details.
 
 === What happens if I have reached the BYOL capacity limit?
 
@@ -274,7 +274,7 @@ Yes. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-instal
 
 === What about secure sites without internet access?
 
-Yes, that's also supported. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector on an on-premises Linux host that doesn’t have internet access^]. Then you can discover on-premises ONTAP clusters and other local data sources and scan the data using Data Sense.
+Yes, that's also supported. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector on an on-premises Linux host that doesn't have internet access^]. Then you can discover on-premises ONTAP clusters and other local data sources and scan the data using Data Sense.
 
 == Data Sense deployment
 

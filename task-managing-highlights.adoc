@@ -221,7 +221,7 @@ image:screenshot_compliance_move_file.png[A screenshot showing selection of the 
 
 You can permanently remove source files that seem insecure or too risky to leave in your storage system, or that you've identified as a duplicate. This action is permanent and there is no undo or restore.
 
-You can delete files manually from the Investigation pane, or automatically using Policies.
+You can delete files manually from the Investigation pane, or link:task-using-policies.html#deleting-source-files-automatically-using-policies[automatically using Policies^].
 
 TIP: You can't delete files that reside in databases.
 
@@ -258,30 +258,3 @@ You can view the progress of the delete operation in the link:task-view-complian
 Note that you can also delete an individual file when viewing the metadata details for a file. Just click *Delete file*.
 
 image:screenshot_compliance_delete_file.png[A screenshot showing selection of the Delete File button from the metadata details for a file in the Data Investigation page.]
-
-=== Deleting source files automatically using Policies
-
-You can create a custom Policy to delete files that match the policy. For example, you may want to delete files that contain sensitive information and were discovered by Data Sense in the past 30 days.
-
-Only Account Admins can create a policy to automatically delete files.
-
-NOTE: All files that match the policy will be permanently deleted once a day.
-
-.Steps
-
-. From the Data Investigation page, define your search by selecting all the filters you want to use. See link:task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[Filtering data in the Data Investigation page^] for details.
-
-. Once you have all the filter characteristics just the way you want them, click *Create Policy from this search*.
-
-. Name the Policy and select other actions that can be performed by the Policy:
-.. Enter a unique name and description.
-.. Check the box to "Automatically delete files that match this policy" and type *permanently delete* to confirm that you want files permanently deleted by this policy.
-.. Click *Create Policy*.
-+
-image:screenshot_compliance_delete_files_using_policies.png[A screenshot that shows how to configure the Policy and save it.]
-
-.Result
-
-The new Policy appears in the Policies tab. Files that match the policy are deleted once per day when the policy runs.
-
-You can view the list of files that have been deleted in the link:task-view-compliance-actions.html[Actions Status pane].
