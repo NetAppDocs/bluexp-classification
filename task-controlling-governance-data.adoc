@@ -38,17 +38,17 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 ** Videos
 ** Miscellaneous (general "other" category)
 
-* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-controlling-private-data.html#viewing-all-duplicated-files[See what types of duplicate files are displayed].
+* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#viewing-all-duplicated-files[See what types of duplicate files are displayed].
 
 === Policies with the largest number of results
 
 In the _Policies_ area, the Policies with the greatest number of results appear at the top of the list. Click the name of a Policy to display the results in the Investigation page. Click *View All* to view the list of all available Policies.
 
-Click link:task-org-private-data.html#controlling-your-data-using-policies[here] to learn more about Policies.
+Click link:task-using-policies.html[here] to learn more about Policies.
 
 === Data Overview
 
-The _Data Overview_ section provides a quick overview of all the data that is being scanned. Click the button to download a full data mapping report that includes Usage Capacity, Age of Data, Size of Data, and File Types for all of your working environments and data sources. See link:task-generating-compliance-reports.html#data-mapping-report[Data Mapping Report^] for complete details about this report.
+The _Data Overview_ section provides a quick overview of all the data that is being scanned. Click the button to download a full data mapping report that includes Usage Capacity, Age of Data, Size of Data, and File Types for all of your working environments and data sources. See <<Data Mapping Report,Data Mapping Report>> for complete details about this report.
 
 === Top data repositories listed by data sensitivity
 
@@ -117,3 +117,36 @@ See link:task-controlling-private-data.html#viewing-files-by-file-types[Viewing 
 If you have subscribed to Azure Information Protection (AIP), you can classify and protect documents and files by applying labels to content. Reviewing the most used AIP labels that are assigned to files enables you to see which labels are most used in your files.
 
 See link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP Labels^] for more information.
+
+=== Data Mapping Report
+
+The Data Mapping Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report first lists an overview report summarizing all your working environments and data sources, and then provides a breakdown for each working environment.
+
+The report includes the following information:
+
+Usage Capacity:: For all working environments: Lists the number of files and the used capacity for each working environment.
+For single working environments: Lists the files that are using the most capacity.
+
+Age of Data:: Provides three charts and graphs for when files were created, last modified, or last accessed. Lists the number of files, and their used capacity, based on certain date ranges.
+
+Size of Data:: Lists the number of files that exist within certain size ranges in your working environments.
+
+File Types:: Lists the total number of files and the used capacity for each type of file being stored in your working environments.
+
+==== Generating the Data Mapping Report
+
+Go to the Data Sense tab to generate the report.
+
+.Steps
+
+. From the BlueXP menu, click *Governance > Classification*.
+
+. Click *Governance*, and then click the *Full Data Mapping Overview Report* button from the Governance Dashboard.
++
+image:screenshot_compliance_data_mapping_report_button.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
+
+.Result
+
+Cloud Data Sense generates a PDF report that you can review and send to other groups as needed.
+
+Note that you can customize the company name that appears on the first page of the report from the top of the Data Sense page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.

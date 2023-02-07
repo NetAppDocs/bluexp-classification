@@ -1,0 +1,33 @@
+---
+sidebar: sidebar
+permalink: reference-collected-metadata.html
+keywords: compliance, metadata, permissions, time stamps, privacy
+summary: Data Sense collects certain metadata when performing classification scans on the data from your data sources and working environments. Data Sense can access most of the metadata we need to classify your data, but there are some sources where we are unable to access the data we need.
+---
+
+= Metadata collected from data sources
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Data Sense collects certain metadata when performing classification scans on the data from your data sources and working environments. Data Sense can access most of the metadata we need to classify your data, but there are some sources where we are unable to access the data we need.
+
+|===
+|  | *Metadata* | *CIFS* | *NFS*
+
+.3+| *Time stamps* 
+| *Creation time* | Available | Not available (Unsupported in Linux)
+
+| *Last access time* | Available | Available
+ 
+| *Last modify time* | Available | Available
+
+.2+| *Permissions* 
+| *Open permissions* | If "EVERYONE" group has access to the file, it is considered "Open to organization" | If "Others" has access to the file, it is considered "Open to organization"
+
+| *Users/group access* | Users and group information is taken from LDAP | Not available (NFS users are usually managed locally on the server, therefore, the same individual can have a different UID in each server)
+
+|===

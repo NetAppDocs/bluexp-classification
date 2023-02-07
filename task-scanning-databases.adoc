@@ -66,7 +66,7 @@ Any database with connectivity to the Cloud Data Sense instance can be scanned, 
 * Service name (only for accessing Oracle databases)
 * Credentials that allow read access to the schemas
 +
-When choosing a user name and password, it’s important to choose one that has full read permissions to all the schemas and tables you want to scan. We recommend that you create a dedicated user for the Cloud Data Sense system with all the required permissions.
+When choosing a user name and password, it's important to choose one that has full read permissions to all the schemas and tables you want to scan. We recommend that you create a dedicated user for the Cloud Data Sense system with all the required permissions.
 
 *Note:* For MongoDB, a read-only Admin role is required.
 
@@ -115,4 +115,4 @@ image:screenshot_compliance_select_schemas.png[A screenshot of the Scan Configur
 
 .Result
 
-Cloud Data Sense starts scanning the database schemas that you enabled. If there are any errors, they’ll appear in the Status column, alongside the required action to fix the error.
+Cloud Data Sense starts scanning the database schemas that you enabled. If there are any errors, they'll appear in the Status column, alongside the required action to fix the error.
