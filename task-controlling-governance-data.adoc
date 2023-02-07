@@ -38,13 +38,13 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 ** Videos
 ** Miscellaneous (general "other" category)
 
-* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-controlling-private-data.html#viewing-all-duplicated-files[See what types of duplicate files are displayed].
+* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#viewing-all-duplicated-files[See what types of duplicate files are displayed].
 
 === Policies with the largest number of results
 
 In the _Policies_ area, the Policies with the greatest number of results appear at the top of the list. Click the name of a Policy to display the results in the Investigation page. Click *View All* to view the list of all available Policies.
 
-Click link:task-org-private-data.html#controlling-your-data-using-policies[here] to learn more about Policies.
+Click link:task-using-policies.html[here] to learn more about Policies.
 
 === Data Overview
 
@@ -143,7 +143,7 @@ Go to the Data Sense tab to generate the report.
 
 . Click *Governance*, and then click the *Full Data Mapping Overview Report* button from the Governance Dashboard.
 +
-image:screenshot_compliance_data_mapping_report_button.png[A screen shot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
+image:screenshot_compliance_data_mapping_report_button.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
 
 .Result
 

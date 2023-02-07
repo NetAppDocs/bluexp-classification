@@ -213,7 +213,7 @@ You can delete a tag if you don't need to use it anymore.
 
 Just click the *x* for an existing tag.
 
-image:button_delete_datasense_file_tag.png[add this somewhere in this topic]
+image:button_delete_datasense_file_tag.png[A screenshot of the delete tag button location.]
 
 If you had selected multiple files, the tag is removed from all the files.
 

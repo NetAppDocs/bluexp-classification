@@ -103,7 +103,7 @@ The sensitive personal data that Cloud Data Sense can find in files includes the
 
 The items in this category can be recognized only in English at this time.
 
-// Civil Law Reference:: Data concerning a natural person's civil law suits, offences, and procedures.
+// Civil Law Reference:: Data concerning a natural person's civil law suits, offenses, and procedures.
 Criminal Procedures Reference::	Data concerning a natural person's criminal convictions and offenses.
 Ethnicity Reference:: Data concerning a natural person's racial or ethnic origin.
 Health Reference:: Data concerning a natural person's health.
