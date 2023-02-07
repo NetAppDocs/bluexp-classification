@@ -73,9 +73,6 @@ sidebar:
           url: task-managing-repo-scanning.html
         - title: Generate reports
           url: /task-generating-compliance-reports.html
-        - title: Respond to a DSAR
-          url: /task-responding-to-dsar.html
-
     - title: Manage Cloud Data Sense
       entries:
         - title: Add custom personal data identifiers
@@ -181,7 +178,7 @@ homepage:
         - title: Create email alerts when non-compliant data is found
           url: task-org-private-data.html#sending-email-alerts-when-non-compliant-data-is-found
         - title: Respond to a Data Subject Access Request
-          url: task-responding-to-dsar.html
+          url: task-generating-compliance-reports.html#searching-for-data-subjects-and-downloading-reports
     - title: Blogs & community
       links:
         - title: NetApp Community
