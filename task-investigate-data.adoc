@@ -82,7 +82,8 @@ Use the following filters to view data based on time criteria.
 | Created Time | Select a time range when the file was created. You can also specify a custom time range to further refine the search results.
 | Discovered Time | Select a time range when Data Sense discovered the file. You can also specify a custom time range to further refine the search results.
 | Last Modified | Select a time range when the file was last modified. You can also specify a custom time range to further refine the search results.
-| Last Accessed | Select a time range when the file was last accessed. You can also specify a custom time range to further refine the search results. For the types of files that Data Sense scans, this is the last time Data Sense scanned the file.
+| Last Accessed | Select a time range when the file, or directory (CIFS or NFS only), was last accessed. You can also specify a custom time range to further refine the search results. For the types of files that Data Sense scans, this is the last time Data Sense scanned the file.
+| Scan Analysis Event | Select whether you want to view files that were "Classified and updated the last accessed time" or "Not classified - Cannot revert last accessed time".
 
 |===
 

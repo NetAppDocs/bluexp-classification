@@ -36,23 +36,24 @@ Note that you can add to the list of personal data that is found in your files. 
 | French
 | Japanese
 
-.6+| General | Email address | No | ✓ | ✓ | ✓ |  | ✓
-| Credit card number | No | ✓ | ✓ | ✓ |  | ✓
+.6+| General | Credit card number | No | ✓ | ✓ | ✓ |  | ✓
 | Data Subjects | No | ✓ | ✓ | ✓ |  | 
+| Email address | No | ✓ | ✓ | ✓ |  | ✓
 | IBAN number (International Bank Account Number) | No | ✓ | ✓ | ✓ |  | ✓
 | IP address | No | ✓ | ✓ | ✓ |  | ✓
 | Password | Yes | ✓ | ✓ | ✓ |  | ✓
 
-.51+| National Identifiers | Australian TFN (Tax File Number) | Yes | ✓ | ✓ | ✓ |  | 
+.54+| National Identifiers | Australian TFN (Tax File Number) | Yes | ✓ | ✓ | ✓ |  | 
 | Australian Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | Australian Medicare Number | Yes | ✓ | ✓ | ✓ |  | 
 | Australian Passport Number | Yes | ✓ | ✓ | ✓ |  | 
 | Austrian SSN | Yes | ✓ | ✓ | ✓ |  | 
 | Belgian ID (Numero National) | Yes | ✓ | ✓ | ✓ |  | 
+| Botswana Identity Card (Omang) Number | Yes | ✓ | ✓ | ✓ |  | 
+| Botswana Passport Number | Yes | ✓ | ✓ | ✓ |  | 
 | Brazilian ID (CPF) | Yes | ✓ | ✓ | ✓ |  | 
 | British Passport | Yes | ✓ | ✓ | ✓ |  | 
 | Bulgarian ID (UCN) | Yes | ✓ | ✓ | ✓ |  | 
-| California Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | Croatian ID (OIB) | Yes | ✓ | ✓ | ✓ |  | 
 | Cyprus Tax Identification Number (TIC) | Yes | ✓ | ✓ | ✓ |  | 
 | Czech/Slovak ID | Yes | ✓ | ✓ | ✓ |  | 
@@ -68,7 +69,6 @@ Note that you can add to the list of personal data that is found in your files. 
 | German Tax Identification Number (Steuerliche Identifikationsnummer) | Yes | ✓ | ✓ | ✓ |  | 
 | Greek ID | Yes | ✓ | ✓ | ✓ |  | 
 | Hungarian Tax Identification Number | Yes | ✓ | ✓ | ✓ |  | 
-| Indiana Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | Irish ID (PPS) | Yes | ✓ | ✓ | ✓ |  | 
 | Israeli ID | Yes | ✓ | ✓ | ✓ |  | 
 | Italian Tax Identification Number | Yes | ✓ | ✓ | ✓ |  | 
@@ -78,7 +78,6 @@ Note that you can add to the list of personal data that is found in your files. 
 | Luxembourg ID | Yes | ✓ | ✓ | ✓ |  | 
 | Maltese ID | Yes | ✓ | ✓ | ✓ |  | 
 | National Health Service (NHS) Number | Yes | ✓ | ✓ | ✓ |  | 
-| New York Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | New Zealand Bank Account | Yes | ✓ | ✓ | ✓ |  | 
 | New Zealand Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | New Zealand IRD Number (Tax ID) | Yes | ✓ | ✓ | ✓ |  | 
@@ -87,6 +86,7 @@ Note that you can add to the list of personal data that is found in your files. 
 | Polish ID (PESEL) | Yes | ✓ | ✓ | ✓ |  | 
 | Portuguese Tax Identification Number (NIF) | Yes | ✓ | ✓ | ✓ |  | 
 | Romanian ID (CNP) | Yes | ✓ | ✓ | ✓ |  | 
+| Singapore National Registration Identity Card (NRIC) | Yes | ✓ | ✓ | ✓ |  | 
 | Slovenian ID (EMSO) | Yes | ✓ | ✓ | ✓ |  | 
 | South African ID | Yes | ✓ | ✓ | ✓ |  | 
 | Spanish Tax Identification Number | Yes | ✓ | ✓ | ✓ |  | 
@@ -94,6 +94,9 @@ Note that you can add to the list of personal data that is found in your files. 
 // | Swedish Social Security Number | Yes | ✓ | ✓ | ✓ |  | 
 | Texas Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | U.K. ID (NINO) | Yes | ✓ | ✓ | ✓ |  | 
+| USA California Driver's License | Yes | ✓ | ✓ | ✓ |  | 
+| USA Indiana Driver's License | Yes | ✓ | ✓ | ✓ |  | 
+| USA New York Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | USA Social Security Number (SSN) | Yes | ✓ | ✓ | ✓ |  | 
 |===
 
