@@ -128,7 +128,7 @@ image:screenshot_select_classifier_type2.png[A screenshot showing how to name th
 
 . In the _Select Data Analysis Tool_ page, select *Custom keywords* as the method you want to use to define the classifier, and then click *Next*.
 +
-image:screenshot_select_classifier_tool_keywords.png.png[A screenshot showing the selection of Custom keywords as the tool that Data Sense will use to build the pattern.]
+image:screenshot_select_classifier_tool_keywords.png[A screenshot showing the selection of Custom keywords as the tool that Data Sense will use to build the pattern.]
 
 . In the _Create Logic_ page, enter the keywords you want to recognize - each word on a separate line - and click *Done*.
 +
@@ -143,7 +143,7 @@ image:screenshot_add_keywords_result.png[A screenshot showing an example of cust
 
 As you can see, the name of the classifier is used as the name in the Personal Results panel. In this manner you can activate many different categories of keywords and see the results for each type of keyword.
 
-=== View results from your custom classifiers
+== View results from your custom classifiers
 
 You can view the results from any of your custom classifiers in the Compliance Dashboard and in the Investigation page. For example, this screenshot shows the matched information in the Compliance Dashboard under the "Personal Results" section.
 
@@ -155,7 +155,7 @@ Additionally, all of your custom classifier results appear in the Custom Classif
 
 image:screenshot_custom_classifier_top_5.png[A screenshot showing the top 3 custom classifiers based on returned results.]
 
-=== Manage custom classifiers
+== Manage custom classifiers
 
 You can change any of the custom classifiers that you have created by using the *Edit Classifier* button.
 

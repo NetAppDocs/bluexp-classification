@@ -16,6 +16,12 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 5 March 2023 (version 1.21)
+
+=== thing
+
+thing description
+
 == 5 February 2023 (version 1.20)
 
 === Ability to send Policy-based notification emails to any email address
@@ -61,6 +67,7 @@ https://docs.netapp.com/us-en/cloud-manager-data-sense/task-investigate-data.htm
 === Data Sense can identify the Japanese Individual Number
 
 Data Sense can identify and categorize files that contain the Japanese Individual Number (also known as My Number). This includes both the Personal and Corporate My Number. https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
+// end::whats-new[]
 
 == 11 December 2022 (version 1.18)
 
@@ -75,7 +82,6 @@ The following enhancements have been added for the on-prem Data Sense installati
 * Also in the Configuration page, a new section shows the Scanner Groups you have set up, and the scanner nodes that are in each group.
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html[Learn more about installing Data Sense on a single host server and on multiple hosts]. 
-// end::whats-new[]
 
 == 13 November 2022 (version 1.17)
 

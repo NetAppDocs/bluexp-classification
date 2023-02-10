@@ -119,7 +119,7 @@ You can either open the security group for traffic from the IP address of the Da
 
 .. From the BlueXP left navigation menu, click *Governance > Classification* and then select the *Configuration* tab.
 +
-image:screenshot_cifs_credentials.gif[A screenshot of the Compliance tab that shows the Scan Status button that's available in the top right of the content pane.]
+image:screenshot_cifs_credentials_cvo.png[A screenshot of the Compliance tab that shows the Scan Status button that's available in the top right of the content pane.]
 
 .. For each working environment, click *Edit CIFS Credentials* and enter the user name and password that Data Sense needs to access CIFS volumes on the system.
 +
