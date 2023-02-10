@@ -18,6 +18,12 @@ Learn what's new in Cloud Data Sense.
 // tag::whats-new[]
 == 5 March 2023 (version 1.21)
 
+=== Now you can add personal patterns that Data Sense will identify from the UI
+
+Data Sense has had the ability to add custom "personal data" that Data Sense will identify in future scans for a while. However, you needed to log into the Data Sense Linux host and use a command line to add the custom patterns. In this release, the ability to add personal patterns using a regex is in the Data Sense UI, making it very easy to add and edit these custom patterns.
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html#add-custom-add-custom-keywords-from-a-list-of-words[Learn more about adding custom patterns from the Data Sense UI^].
+
 === thing
 
 thing description

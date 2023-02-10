@@ -69,6 +69,45 @@ If at some point you decide not to scan your files using a certain Data Fusion s
 
 image:screenshot_compliance_delete_data_fusion.png[A screenshot showing how to remove a data fusion source.]
 
+== Add custom keywords from a list of words
+
+You can add custom keywords to Data Sense so that it will identify where that information is found in your data. You add the keywords just by entering each word you want Data Sense to recognize. The keywords are added to the existing predefined keywords that Data Sense already uses, and the results will be visible under the personal patterns section. 
+
+For example, you may want to see where internal Product Names are mentioned in all of your files to make sure these names are not accessible in locations that are not secure.
+
+After updating the custom keywords, Data Sense will restart scanning all data sources. After the scan has completed, the new results will appear in the Data Sense Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
+
+.Steps
+
+. From the _Classification settings_ tab, click *Add New Classifier* to launch the _Add Custom Classifier_ wizard.
++
+image:screenshot_compliance_add_classifier_button.png[A screenshot showing how to launch the Add Custom Classifier wizard.]
+
+. In the _Select type_ page, enter the name of the classifier, provide a brief description, select *Personal identifier*, and then click *Next*.
++
+The name you enter will appear in the Data Sense UI as the heading for scanned files that match the classifier requirements. You can also check the box to "Mask detected results in the system" so the full result won't appear in the UI. For example, you may want to do this to hide full credit card numbers or similar personal data (the mask would appear in the UI like this: "3434 pass:[****] pass:[****] pass:[****]").
++
+image:screenshot_select_classifier_type2.png[A screenshot showing how to name the classifier and select the type of classifier.]
+
+. In the _Select Data Analysis Tool_ page, select *Custom keywords* as the method you want to use to define the classifier, and then click *Next*.
++
+image:screenshot_select_classifier_tool_keywords.png[A screenshot showing the selection of Custom keywords as the tool that Data Sense will use to build the pattern.]
+
+. In the _Create Logic_ page, enter the keywords you want to recognize - each word on a separate line - and click *Validate*.
++
+The screenshot below shows internal Product Names (different types of owls). The Data Sense search for these items is not case sensitive.
++
+image:screenshot_select_classifier_create_logic_keyword.png[A screenshot of entering the keywords for your customer classifier.]
+
+. Click *Done* and Data Sense starts to rescan your data.
+
+.Results
+After the scan is complete, the results will include this new information in the Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
+
+image:screenshot_add_keywords_result.png[A screenshot showing an example of custom keyword results in the Investigation Results pane.]
+
+As you can see, the name of the classifier is used as the name in the Personal Results panel. In this manner you can activate many different groups of keywords and see the results for each group.
+
 == Add custom personal data identifiers using a regex
 
 You can add a personal pattern to identify specific information in your data using a custom regular expression (regex). This allows you to create a new custom regex to identify new personal information elements that don't yet exist in the system. The regex is added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the personal patterns section. 
@@ -105,43 +144,6 @@ image:screenshot_select_classifier_create_logic_regex.png[A screenshot of enteri
 The classifier is added and Data Sense starts to rescan all your data sources. You are returned to the Custom Classifiers page where you can view the number of files that have matched your new classifier. Results from scanning all of your data sources will take some time depending on the number of files that need to be scanned.
 
 image:screenshot_personal_info_regex_added.png[A screenshot showing the results of a new regex classifier being added to the system with scanning in progress.]
-
-== Add custom keywords from a text file
-
-You can add custom keywords to Data Sense so that it will identify specific information in your data. You add the keywords from a text file that you define. The keywords are added to the existing predefined keywords that Data Sense already uses, and the results will be visible under the personal patterns section. 
-
-For example, you may want to see where internal Product Names are mentioned in all of your files to make sure these names are not accessible in locations that are not secure.
-
-After updating the custom keywords, Data Sense will restart scanning all data sources. After the scan has completed, the new results will appear in Data Sense after the scan has completed.
-
-.Steps
-
-. From the _Classification settings_ tab, click *Add New Classifier* to launch the _Add Custom Classifier_ wizard.
-+
-image:screenshot_compliance_add_classifier_button.png[A screenshot showing how to launch the Add Custom Classifier wizard.]
-
-. In the _Select type_ page, enter the name of the classifier, provide a brief description, select *Personal identifier*, and then click *Next*.
-+
-The name you enter will appear in the Data Sense UI as the heading for scanned files that match the classifier requirements. You can also check the box to "Mask detected results in the system" so the full result won't appear in the UI. For example, you may want to do this to hide full credit card numbers or similar personal data.
-+
-image:screenshot_select_classifier_type2.png[A screenshot showing how to name the classifier and select the type of classifier.]
-
-. In the _Select Data Analysis Tool_ page, select *Custom keywords* as the method you want to use to define the classifier, and then click *Next*.
-+
-image:screenshot_select_classifier_tool_keywords.png[A screenshot showing the selection of Custom keywords as the tool that Data Sense will use to build the pattern.]
-
-. In the _Create Logic_ page, enter the keywords you want to recognize - each word on a separate line - and click *Done*.
-+
-The screenshot below shows internal Product Names which are types of owls. The Data Sense search for these items is not case sensitive.
-+
-image:screenshot_select_classifier_create_logic_keyword.png[A screenshot of entering the keywords for your customer classifier.]
-
-.Results
-After the next scan, the results will include this new information in the Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
-
-image:screenshot_add_keywords_result.png[A screenshot showing an example of custom keyword results in the Investigation Results pane.]
-
-As you can see, the name of the classifier is used as the name in the Personal Results panel. In this manner you can activate many different categories of keywords and see the results for each type of keyword.
 
 == View results from your custom classifiers
 
