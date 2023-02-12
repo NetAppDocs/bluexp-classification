@@ -36,12 +36,15 @@ Data Sense collects certain metadata when performing classification scans on the
 
 When Data Sense extracts data from file shares, the operating system considers it as accessing the data and it changes the "last access time" accordingly. After scanning, Data Sense attempts to revert the last access time to the original timestamp. If Data Sense doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system can't revert the last access time to the original timestamp.
 
-By default, if Data Sense doesn't have these permissions, the system won't scan the files in your volumes because Data Sense can't revert the "last access time" to the original timestamp. However, if you don't care if the last access time is reset to the original time in your files, you can click the *Scan when missing "write attributes" permissions* switch at the bottom of the Configuration page so that Data Sense will scan the volumes regardless of permissions.
-
-This functionality is applicable to On-premises ONTAP systems, Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, and Non-NetApp file shares.
+By default, if Data Sense doesn't have these permissions, the system won't scan those files in your volumes because Data Sense can't revert the "last access time" to the original timestamp. However, if you don't care if the last access time is reset to the original time in your files, you can click the *Scan when missing "write attributes" permissions* switch at the bottom of the Configuration page so that Data Sense will scan the volumes regardless of permissions.
 
 image:screenshot_scan_missing_permissions.png[A screenshot showing the switch you can use to have Data Sense scan your files even if it does not have the correct permissions to revert the last access time to the original timestamp.]
 
-Note that there is a filter _Scan Analysis Event_ that enables you to display in the Investigation page the files that were not classified because Data Sense can't revert the last accessed time.
+This functionality is applicable to On-premises ONTAP systems, Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, and Non-NetApp file shares.
 
-More here....
+Note that there is a filter in the Investigation page called _Scan Analysis Event_ that enables you to display the files that were not classified because Data Sense couldn't revert the last accessed time. This filter is relevant only for environments where you turned the *Scan when missing "write attributes" permissions* ON. The filter selections are:
+
+* "Not classified -- Cannot revert last access time" - This shows the files that were not scanned due to missing write permissions.
+* "Classified and updated last access time" - This shows the files that were scanned and the system changed the last access time back to the original date. 
+
+If needed, you can export these results to a report so you can see which files are, or aren't, being scanned because of permissions. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-investigate-data.html#data-investigation-report[Learn more about the Data Investigation Report^].
