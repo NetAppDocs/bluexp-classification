@@ -83,7 +83,6 @@ Use the following filters to view data based on time criteria.
 | Discovered Time | Select a time range when Data Sense discovered the file. You can also specify a custom time range to further refine the search results.
 | Last Modified | Select a time range when the file was last modified. You can also specify a custom time range to further refine the search results.
 | Last Accessed | Select a time range when the file, or directory (CIFS or NFS only), was last accessed. You can also specify a custom time range to further refine the search results. For the types of files that Data Sense scans, this is the last time Data Sense scanned the file.
-| Scan Analysis Event | Select whether you want to view files that were "Classified and updated the last accessed time" or "Not classified - Cannot revert last accessed time".
 
 |===
 
@@ -149,8 +148,11 @@ Use the following filter to view data by the Data Sense scan status.
 | Details
 
 | Analysis Status | Select an option to show the list of files that are Pending First Scan, Completed being scanned, Pending Rescan, or that have Failed to be scanned. 
+| Scan Analysis Event | Select whether you want to view files that were "Classified and updated the last accessed time" or "Not classified - Cannot revert last accessed time".
 
 |===
+
+link:reference-collected-metadata.html#last-access-time-timestamp[See details about the "last accessed time timestamp"] for more information about the items that appear in the Scan Analysis Event.
 
 === Filter data by Duplicates
 
