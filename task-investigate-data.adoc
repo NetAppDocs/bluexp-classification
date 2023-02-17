@@ -148,11 +148,11 @@ Use the following filter to view data by the Data Sense scan status.
 | Details
 
 | Analysis Status | Select an option to show the list of files that are Pending First Scan, Completed being scanned, Pending Rescan, or that have Failed to be scanned. 
-| Scan Analysis Event | Select whether you want to view files that were "Classified and updated the last accessed time" or "Not classified - Cannot revert last accessed time".
+| Scan Analysis Event | Select whether you want to view files that were not classified because Data Sense couldn't revert last accessed time, or files that were classified even though Data Sense couldn't revert last accessed time.
 
 |===
 
-link:reference-collected-metadata.html#last-access-time-timestamp[See details about the "last accessed time timestamp"] for more information about the items that appear in the Scan Analysis Event.
+link:reference-collected-metadata.html#last-access-time-timestamp[See details about the "last accessed time" timestamp] for more information about the items that appear in the Investigation page when filtering using the Scan Analysis Event.
 
 === Filter data by Duplicates
 
