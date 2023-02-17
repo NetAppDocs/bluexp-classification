@@ -42,7 +42,7 @@ image:screenshot_scan_missing_permissions.png[A screenshot showing the switch yo
 
 This functionality is applicable to On-premises ONTAP systems, Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, and Non-NetApp file shares.
 
-Note that there is a filter in the Investigation page called _Scan Analysis Event_ that enables you to display either the files that were not classified because Data Sense couldn't revert the last accessed time, or the files that were changed even thought Data Sense could not revert the last access time. 
+Note that there is a filter in the Investigation page called _Scan Analysis Event_ that enables you to display either the files that were not classified because Data Sense couldn't revert the last accessed time, or the files that were classified even though Data Sense couldn't revert the last access time. 
 
 image:screenshot_scan_analysis_event_filter.png[A screenshot of the filter to see which files were scanned, and not scanned, based on having, or not having, write permissions.]
 
