@@ -101,6 +101,7 @@ Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, bu
 * *GCP machine type*: An instance type that meets the CPU and RAM requirements above. We recommend https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16^].
 
 * *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.7
+** CentOS Stream 8 is also supported
 ** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
 ** The OS must be capable of installing the docker engine
 
