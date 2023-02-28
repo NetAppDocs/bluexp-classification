@@ -145,6 +145,48 @@ The classifier is added and Data Sense starts to rescan all your data sources. Y
 
 image:screenshot_personal_info_regex_added.png[A screenshot showing the results of a new regex classifier being added to the system with scanning in progress.]
 
+== Add custom categories
+
+Data Sense takes the data that it scans and divides it into different types of categories. Categories are topics based on artificial intelligence analysis of the content and metadata of each file. link:reference-private-data-categories.html#types-of-categories[See the list of categories].
+
+Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like _resumes_ or _employee contracts_ may include sensitive data. When you investigate the results, you might find that employee contracts are stored in an insecure location. You can then correct that issue.
+
+You can add custom categories to Data Sense so you can identify where specific categories of information are found in your data. You add the categories by creating files that contain the categories of data that you want to identify, and then have Data Sense scan those file and "learn" through AI so that it can identify that data in files in your data sources. The categories are added to the existing predefined categories that Data Sense already identifies, and the results are visible under the Categories section. 
+
+For example, you may want to see where compressed installation files in .gz format are located in your files so that you can remove them, if necessary.
+
+After updating the custom categories, Data Sense will restart scanning all data sources. After the scan has completed, the new results will appear in the Data Sense Compliance Dashboard under the "Categories" section, and in the Investigation page in the "Category" filter.
+
+link:task-controlling-private-data.html#viewing-files-by-categories[See how to view files by categories].
+
+.Prerequisites
+
+The following file types are supported:
+
+`+.CSV, .DOC, .DOCX, .GZ, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+
+.Steps
+
+. From the _Classification settings_ tab, click *Add New Classifier* to launch the _Add Custom Classifier_ wizard.
++
+image:screenshot_compliance_add_classifier_button.png[A screenshot showing how to launch the Add Custom Classifier wizard.]
+
+. In the _Select type_ page, enter the name of the classifier, provide a brief description, select *Category*, and then click *Next*.
++
+The name you enter will appear in the Data Sense UI as the heading for scanned files that match the category of data you are defining.
++
+image:screenshot_select_classifier_category.png[A screenshot showing how to name the classifier and select the type of classifier.]
+
+. In the _Create Logic_ page, make sure you have the learning files prepared, and then click *Select files*.
+
+image:screenshot_category_create_logic.png[A screenshot of the Create Logic page where you add the files that contain data that you want Data Sense to learn from.]
+
+. c
+
+image:screenshot_category_add_files.png[]
+
+
 == View results from your custom classifiers
 
 You can view the results from any of your custom classifiers in the Compliance Dashboard and in the Investigation page. For example, this screenshot shows the matched information in the Compliance Dashboard under the "Personal Results" section.
