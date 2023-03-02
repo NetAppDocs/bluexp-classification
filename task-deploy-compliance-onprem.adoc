@@ -5,7 +5,7 @@ keywords: cloud compliance, data sense, get started, deploy cloud data sense, ou
 summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
 ---
 
-= Deploy Cloud Data Sense on a Linux host that has internet access
+= Deploy Cloud Data Sense on a host that has internet access
 :hardbreaks:
 :nofooter:
 :icons: font
