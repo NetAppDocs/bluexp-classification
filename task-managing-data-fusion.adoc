@@ -119,6 +119,8 @@ For example, you may want to see where your internal Product IDs are mentioned i
 
 After adding the regex, Data Sense will restart scanning all data sources. After the scan has completed, the new results will appear in the Data Sense Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
 
+See https://regex101.com/ if you need assistance in building the regular expression you need.
+
 .Steps
 
 . From the _Classification settings_ tab, click *Add New Classifier* to launch the _Add Custom Classifier_ wizard.

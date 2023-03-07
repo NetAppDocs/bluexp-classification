@@ -16,9 +16,9 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
-== 5 March 2023 (version 1.21)
+== 6 March 2023 (version 1.21)
 
-=== New functionality to add your own custom categories
+=== New functionality to add your own custom categories from the Data Sense UI
 
 Data Sense now enables you to add your own custom categories so that Data Sense will identify the files that fit into those categories. Data Sense has many https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-categories[predefined categories], so this feature enables you to add custom categories to identify where information that is unique to your organization are found in your data.
 
