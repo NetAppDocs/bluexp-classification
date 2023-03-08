@@ -215,7 +215,7 @@ Follow these steps when installing Data Sense software on a single on-premises h
 . Unzip the installer bundle on the host machine, for example:
 +
 [source,cli]
-tar -xzf DataSense-offline-bundle-v1.16.1.tar.gz
+tar -xzf DataSense-offline-bundle-v1.21.0.tar.gz
 +
 This extracts required software and the actual installation file *cc_onprem_installer.tar.gz*.
 
@@ -357,7 +357,7 @@ Since Data Sense software is updated with new features on a regular basis, you s
 . Unzip the software bundle on the host machine, for example:
 +
 [source,cli]
-tar -xvf DataSense-offline-bundle-v1.19.1.tar.gz
+tar -xvf DataSense-offline-bundle-v1.21.0.tar.gz
 +
 This extracts the installation file *cc_onprem_installer.tar.gz*.
 
