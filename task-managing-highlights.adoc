@@ -51,7 +51,7 @@ TIP: You can't copy files that reside in databases.
 
 * You must have the Account Admin or Workspace Admin role to copy files.
 * Copying files requires that the destination NFS share allows access from the Data Sense instance.
-* You can copy a maximum of 100,000 files at a time.
+* You can copy between 1 and 100,000 files at a time.
 
 .Steps
 
@@ -89,6 +89,7 @@ The new volume is created in the same aggregate as the source volume. Ensure tha
 .Requirements
 
 * You must have the Account Admin or Workspace Admin role to copy files.
+* You must select a minimum of 20 files.
 * All selected files must be from the same volume, and the volume must be online.
 * The volume must be from a Cloud Volumes ONTAP or on-premises ONTAP system. No other data sources are currently supported.
 * The FlexClone license must be installed on the cluster. This license is installed by default on Cloud Volumes ONTAP systems.
@@ -137,6 +138,7 @@ TIP: You can't copy and sync files that reside in databases, OneDrive accounts, 
 .Requirements
 
 * You must have the Account Admin or Workspace Admin role to copy and sync files.
+* You must select a minimum of 20 files.
 * All selected files must be from the same source repository (ONTAP volume, S3 bucket, NFS or CIFS share, etc.).
 * You'll need to activate the Cloud Sync service and configure a minimum of one data broker that can be used to transfer files between the source and target systems. Review the Cloud Sync requirements beginning with the https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html[Quick Start description^].
 +
