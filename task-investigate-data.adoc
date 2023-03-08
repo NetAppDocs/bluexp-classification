@@ -82,7 +82,7 @@ Use the following filters to view data based on time criteria.
 | Created Time | Select a time range when the file was created. You can also specify a custom time range to further refine the search results.
 | Discovered Time | Select a time range when Data Sense discovered the file. You can also specify a custom time range to further refine the search results.
 | Last Modified | Select a time range when the file was last modified. You can also specify a custom time range to further refine the search results.
-| Last Accessed | Select a time range when the file was last accessed. You can also specify a custom time range to further refine the search results. For the types of files that Data Sense scans, this is the last time Data Sense scanned the file.
+| Last Accessed | Select a time range when the file, or directory (CIFS or NFS only), was last accessed. You can also specify a custom time range to further refine the search results. For the types of files that Data Sense scans, this is the last time Data Sense scanned the file.
 
 |===
 
@@ -96,7 +96,7 @@ Use the following filters to view data based on location, size, and directory or
 | Filter
 | Details
 
-| File Path | Enter up to 20 partial or full paths that you want to include or exclude from the query. If you enter both include paths and exclude paths, Data Sense finds all files in the included paths first, then it removes files from excluded paths, and then it displays the results.
+| File Path | Enter up to 20 partial or full paths that you want to include or exclude from the query. If you enter both include paths and exclude paths, Data Sense finds all files in the included paths first, then it removes files from excluded paths, and then it displays the results. Note that including "*" in this filter has no effect; you'll need to search for specific files and subfolders by using full paths.
 | Directory Type | Select the directory type; either "Share" or "Folder".
 | File Type | Select the link:reference-private-data-categories.html#types-of-files[types of files^].
 | File Size | Select the file size range.
@@ -148,8 +148,11 @@ Use the following filter to view data by the Data Sense scan status.
 | Details
 
 | Analysis Status | Select an option to show the list of files that are Pending First Scan, Completed being scanned, Pending Rescan, or that have Failed to be scanned. 
+| Scan Analysis Event | Select whether you want to view files that were not classified because Data Sense couldn't revert last accessed time, or files that were classified even though Data Sense couldn't revert last accessed time.
 
 |===
+
+link:reference-collected-metadata.html#last-access-time-timestamp[See details about the "last accessed time" timestamp] for more information about the items that appear in the Investigation page when filtering using the Scan Analysis Event.
 
 === Filter data by Duplicates
 

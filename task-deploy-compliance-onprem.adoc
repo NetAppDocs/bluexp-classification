@@ -5,7 +5,7 @@ keywords: cloud compliance, data sense, get started, deploy cloud data sense, ou
 summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
 ---
 
-= Deploy Cloud Data Sense on a Linux host that has internet access
+= Deploy Cloud Data Sense on a host that has internet access
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -101,6 +101,7 @@ Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, bu
 * *GCP machine type*: An instance type that meets the CPU and RAM requirements above. We recommend https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16^].
 
 * *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.7
+** CentOS Stream 8 is also supported
 ** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
 ** The OS must be capable of installing the docker engine
 
@@ -274,7 +275,7 @@ image:screenshot_cloud_compliance_deploy_onprem.png[A screenshot of selecting th
 . Unzip the installer file on the host machine, for example:
 +
 [source,cli]
-tar -xzf DATASENSE-INSTALLER-V1.16.1.tar.gz
+tar -xzf DATASENSE-INSTALLER-V1.21.0.tar.gz
 
 . When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer.
 
