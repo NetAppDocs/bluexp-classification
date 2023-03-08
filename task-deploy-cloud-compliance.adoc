@@ -202,6 +202,8 @@ image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Cloud Dat
 
 BlueXP deploys the Cloud Data Sense instance in your cloud provider.
 
+Upgrades to the BlueXP Connector and Data Sense software is automated as long as the instances have internet connectivity.
+
 .What's Next
 From the Configuration page you can select the data sources that you want to scan.
 

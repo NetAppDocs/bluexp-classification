@@ -195,7 +195,7 @@ image:screenshot_compliance_tag_multi_files.png["A screenshot showing how to sel
 +
 * To select individual files, check the box for each file (image:button_backup_1_volume.png[""]).
 * To select all files on the current page, check the box in the title row (image:button_select_all_files.png[""]).
-// * To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[], click *Select all items in list (xxx items)*.
+// * To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[""], click *Select all items in list (xxx items)*.
 
 . From the button bar, click *Tags* and the currently assigned tags are displayed.
 

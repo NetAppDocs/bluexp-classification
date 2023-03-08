@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-audit-data-sense-actions.html
-keywords: compliance, actions, view progress
-summary: Data Sense logs management activities that have been performed on files from all the working environments and data sources that Data Sense is scanning. You can view the contents of the Data Sense audit log files, or download them, to see what file changes have occurred, and when.
+keywords: compliance, actions, view progress, audit, logs, installation
+summary: Data Sense logs management activities that have been performed on files from all the working environments and data sources that Data Sense is scanning. Data Sense also logs the activities when deploying the Data Sense instance.
 ---
 
 = Auditing the history of Data Sense actions
@@ -13,9 +13,9 @@ summary: Data Sense logs management activities that have been performed on files
 :imagesdir: ./media/
 
 [.lead]
-Data Sense logs management activities that have been performed on files from all the working environments and data sources that Data Sense is scanning. You can view the contents of the Data Sense audit log files, or download them, to see what file changes have occurred, and when.
+Data Sense logs management activities that have been performed on files from all the working environments and data sources that Data Sense is scanning. Data Sense also logs the activities when deploying the Data Sense instance.
 
-For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
+You can view the contents of the Data Sense audit log files, or download them, to see what file changes have occurred, and when. For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
 
 == Log file contents
 
@@ -43,7 +43,9 @@ For example, the following lines from the log file show a successful copy operat
 
 == Accessing the log file
 
-The audit log files are located on the Data Sense machine in: `/opt/netapp/audit_logs/`
+The management audit log files are located on the Data Sense machine in: `/opt/netapp/audit_logs/`
+
+The installation audit log files are written to `/ops/netapp/install_logs`
 
 Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - old log files are deleted automatically after the maximum has been reached.
 
