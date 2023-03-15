@@ -17,7 +17,7 @@ The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspace is free
 
 A few notes before you read any further:
 
-* If you've already subscribed to the BlueXP pay-as-you-go (PAYGO) subscription in your cloud provider's marketplace, then you're automatically subscribed to Cloud Data Sense as well. You won’t need to subscribe again.
+* If you've already subscribed to the BlueXP pay-as-you-go (PAYGO) subscription in your cloud provider's marketplace, then you're automatically subscribed to Cloud Data Sense as well. You won't need to subscribe again.
 // You'll see an active subscription in the Digital Wallet.
 
 * The Cloud Data Sense bring-your-own-license (BYOL) is a _floating_ license that you can use across all the working environments and data sources in the workspace that you plan to scan. You'll see an active subscription in the Digital Wallet.
@@ -162,8 +162,8 @@ When using a Cloud Data Sense BYOL license, BlueXP displays a warning in the Dat
 
 Use the chat icon in the lower right of the BlueXP interface to renew your license when you see these warnings.
 
-If your license expires, Data Sense continues to run, but access to the Dashboards is blocked so that you can't view information about any of your scanned data. Only the _Configuration_ page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit.
+If your license expires or you have reached the BYOL limit, Data Sense continues to run, but access to the Dashboards is blocked so that you can't view information about any of your scanned data. Only the _Configuration_ page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit.
 
 Once you renew your BYOL license, BlueXP automatically updates the license in the Digital Wallet and provides full access to all Dashboards. If BlueXP can't access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to BlueXP. For instructions, see <<Update a Cloud Data Sense BYOL license,how to update a Cloud Data Sense license>>.
 
-TIP: If the account you are using has both a BYOL license and a PAYGO subscription, Data Sense _will not_ shift over to the PAYGO subscription when the BYOL license expires. You must renew the BYOL license.
+NOTE: If the account you are using has both a BYOL license and a PAYGO subscription, Data Sense _will not_ shift over to the PAYGO subscription when the BYOL license expires. You must renew the BYOL license.
