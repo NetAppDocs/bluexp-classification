@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-deploy-compliance-onprem.html
 keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises
-summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
+summary: Complete a few steps to deploy Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
 ---
 
-= Deploy Cloud Data Sense on a host that has internet access
+= Install Data Sense on a host that has internet access
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,17 +13,21 @@ summary: Complete a few steps to deploy Cloud Data Sense on a Linux host in your
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to deploy Cloud Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
+Complete a few steps to deploy Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
 
 The on-prem installation may be a good option if you prefer to scan on-premises ONTAP systems using a Data Sense instance that's also located on premises -- but this is not a requirement. The software functions exactly the same way regardless of which installation method you choose.
 
-The typical on-prem installation has the following components and connections.
+The typical installation on a Linux host in your premises has the following components and connections.
 
 image:diagram_deploy_onprem_overview.png[A diagram of the required BlueXP and network components, and the related connections.]
 
+The typical installation on a Linux host in the cloud has the following components and connections.
+
+image:diagram_deploy_onprem_cloud_instance.png[A diagram of the required BlueXP and network components, and the related connections.]
+
 For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the _Manager node_, and the additional systems that provide extra processing power are called _Scanner nodes_.
 
-Note that you can also link:task-deploy-compliance-dark-site.html[deploy Data Sense in an on-premises site that doesn't have internet access] for completely secure sites.
+Note that you can also link:task-deploy-compliance-dark-site.html[install Data Sense in an on-premises site that doesn't have internet access] for completely secure sites.
 
 == Quick start
 
@@ -93,6 +97,31 @@ Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense machine 
 ** 5 GiB on /tmp
 +
 Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
+
+// Add this next release. And add to dark site topic too.  Change /var to /var/lib/docker for early May release.
+//* Depending on the size of the data set that you plan to scan, the host system can be specified in three sizes.
+//+
+//[cols="18,18,26,30",width=95%,options="header"]
+//|===
+//| System size
+//| CPU
+//| RAM (swap memory must be disabled)
+//| Disk
+//| Large | 16 CPUs | 64 GB RAM | 500 GB SSD on /, or
+//* 100 GB available on /opt
+//* 395 GB available on /var
+//* 5 GB on /tmp
+//| Medium | 8 CPUs | 32 GB RAM | 200 GB SSD on /, or
+//* 50 GB available on /opt
+//* 145 GB available on /var
+//* 5 GB on /tmp
+//| Small | 8 CPUs | 16 GB RAM | 100 GB SSD on /, or
+//* 50 GB available on /opt
+//* 45 GB available on /var
+//* 5 GB on /tmp
+//|===
+//+
+//Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
 * *AWS EC2 instance type*: An instance type that meets the CPU and RAM requirements above. We recommend https://aws.amazon.com/ec2/instance-types/m5/[m5.4xlarge^].
 
@@ -224,7 +253,7 @@ You must have the information for the Active Directory:
 
 If you are using multiple Data Sense hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-onprem.html#add-scanner-nodes-to-an-existing-deployment[See the additional port requirements].
 
-== Deploy Data Sense on premises
+== Install Data Sense on the Linux host
 
 For typical configurations you'll install the software on a single host system. <<Single-host installation for typical configurations,See those steps here>>.
 
@@ -258,26 +287,24 @@ Follow these steps when installing Data Sense software on a single on-premises h
 
 . Copy the installer file to the Linux host you plan to use (using `scp` or some other method).
 
+. Unzip the installer file on the host machine, for example:
++
+[source,cli]
+tar -xzf DATASENSE-INSTALLER-V1.21.0.tar.gz
+
 . In BlueXP, select *Governance > Classification*.
 
 . Click *Activate Data Sense*.
 +
 image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate Cloud Data Sense.]
 
-. Depending on whether you are deploying on an instance in the cloud or an instance in your premises, click the appropriate *Deploy* button to start the Data Sense deployment wizard.
+. Depending on whether you are installing Data Sense on an instance you prepared in the cloud or on an instance you prepared in your premises, click the appropriate *Deploy* button to start the Data Sense installation.
 +
 image:screenshot_cloud_compliance_deploy_onprem.png[A screenshot of selecting the button to deploy Cloud Data Sense on a machine in the cloud or in your premises.]
 
-. The _Deploy Data Sense On Premises_ dialog is displayed. Copy the provided command and paste it in a text file so you can use it later, and click *Close*. For example:
-+
-`sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`
+. The _Deploy Data Sense On Premises_ dialog is displayed. Copy the provided command (for example: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`) and paste it in a text file so you can use it later. Then click *Close* to dismiss the dialog.
 
-. Unzip the installer file on the host machine, for example:
-+
-[source,cli]
-tar -xzf DATASENSE-INSTALLER-V1.21.0.tar.gz
-
-. When prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer.
+. On the host machine, enter the command you copied and then follow a series of prompts, or you can provide the full command including all required parameters as command line arguments.
 
 +
 Note that the installer performs a pre-check to make sure your system and networking requirements are in place for a successful installation.
@@ -289,7 +316,7 @@ Note that the installer performs a pre-check to make sure your system and networ
 | Enter the full command:
 
 |
-a. Paste the information you copied from step 6:
+a. Paste the information you copied from step 7:
 `sudo ./install.sh -a <account_id> -c <agent_id> -t <token>`
 b. Enter the IP address or host name of the Data Sense host machine so it can be accessed by the Connector instance.
 c. Enter the IP address or host name of the BlueXP Connector host machine so it can be accessed by the Data Sense instance.
@@ -441,9 +468,7 @@ Variable values:
 * _node_private_ip_ = IP addresses of the Data Sense Scanner node systems (multiple scanner node IPs are separated by a comma)
 * _user_token_ = JWT user access token
 
-. Before the add_scanner_node script completes, a dialog displays the installation command needed for the scanner nodes. Copy the command and save it in a text file. For example:
-+
-`sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF1s35212 -u red95467j`
+. Before the add_scanner_node script completes, a dialog displays the installation command needed for the scanner nodes. Copy the command (for example: `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF1s35212 -u red95467j`) and save it in a text file.
 
 . On *each* scanner node host:
 .. Copy the Data Sense installer file (*DATASENSE-INSTALLER-<version>.tar.gz*) to the host machine (using `scp` or some other method).
@@ -529,9 +554,7 @@ In addition to the variables available for a single-host installation, a new opt
 For example, this command adds 3 scanner nodes:
 `sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --manager-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password>`
 
-. Before the manager node installation completes, a dialog displays the installation command needed for the scanner nodes. Copy the command and save it in a text file. For example:
-+
-`sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212`
+. Before the manager node installation completes, a dialog displays the installation command needed for the scanner nodes. Copy the command (for example, `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212`) and save it in a text file.
 
 . On *each* scanner node host:
 .. Copy the Data Sense installer file (*DATASENSE-INSTALLER-<version>.tar.gz*) to the host machine (using `scp` or some other method).
