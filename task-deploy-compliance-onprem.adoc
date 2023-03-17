@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-deploy-compliance-onprem.html
 keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises
-summary: Complete a few steps to deploy Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
+summary: Complete a few steps to install Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access. You'll need to deploy the Linux host manually in your network or in the cloud as part of this installation.
 ---
 
 = Install Data Sense on a host that has internet access
@@ -13,15 +13,15 @@ summary: Complete a few steps to deploy Data Sense on a Linux host in your netwo
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to deploy Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access.
+Complete a few steps to install Data Sense on a Linux host in your network, or on a Linux host in the cloud, that has internet access. You'll need to deploy the Linux host manually in your network or in the cloud as part of this installation.
 
 The on-prem installation may be a good option if you prefer to scan on-premises ONTAP systems using a Data Sense instance that's also located on premises -- but this is not a requirement. The software functions exactly the same way regardless of which installation method you choose.
 
-The typical installation on a Linux host in your premises has the following components and connections.
+The typical installation on a Linux host _in your premises_ has the following components and connections.
 
 image:diagram_deploy_onprem_overview.png[A diagram of the required BlueXP and network components, and the related connections.]
 
-The typical installation on a Linux host in the cloud has the following components and connections.
+The typical installation on a Linux host _in the cloud_ has the following components and connections.
 
 image:diagram_deploy_onprem_cloud_instance.png[A diagram of the required BlueXP and network components, and the related connections.]
 
