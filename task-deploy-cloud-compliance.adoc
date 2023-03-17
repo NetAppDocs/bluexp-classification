@@ -27,7 +27,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 If you don't already have a Connector, create a Connector now. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^].
 
 [role="quick-margin-para"]
-You can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network or in the cloud.
+You can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[install the Connector on-premises^] on a Linux host in your network or in the cloud.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review prerequisites
 
@@ -60,7 +60,7 @@ There are some scenarios where you have to use a Connector that's deployed in a 
 
 On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts can be scanned when using any of these cloud Connectors.
 
-Note that you can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network or in the cloud. Some users planning to install Data Sense on-prem may also choose to install the Connector on-prem.
+Note that you can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[install the Connector on-premises^] on a Linux host in your network or in the cloud. Some users planning to install Data Sense on-prem may also choose to install the Connector on-prem.
 
 As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Connectors].
 
@@ -80,8 +80,13 @@ Cloud Data Sense requires outbound internet access. If your virtual or physical 
 +
 Review the appropriate table below depending on whether you are deploying Cloud Data Sense in AWS, Azure, or GCP.
 +
-*Required endpoints for AWS deployments:*
-+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Required endpoints for AWS deployments
+--
 [cols="43,57",options="header"]
 |===
 | Endpoints
@@ -116,9 +121,10 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 
 | Enables Cloud Data Sense to access and download manifests and templates, and to send logs and metrics.
 |===
-+
-*Required endpoints for Azure and GCP deployments:*
-+
+--
+
+.Required endpoints for Azure deployments
+--
 [cols="43,57",options="header"]
 |===
 | Endpoints
@@ -144,14 +150,48 @@ Review the appropriate table below depending on whether you are deploying Cloud 
 | Provides access to software images, manifests, templates, and to send logs and metrics.
 
 | \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
-
 |===
+--
+
+.Required endpoints for GCP deployments
+--
+[cols="43,57",options="header"]
+|===
+| Endpoints
+| Purpose
+
+| \https://api.bluexp.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
+
+|
+\https://netapp-cloud-account.auth0.com
+\https://auth0.com
+
+| Communication with the BlueXP website for centralized user authentication.
+
+|
+\https://support.compliance.api.bluexp.netapp.com/
+\https://hub.docker.com
+\https://auth.docker.io
+\https://registry-1.docker.io
+\https://index.docker.io/
+\https://dseasb33srnrn.cloudfront.net/
+\https://production.cloudflare.docker.com/
+
+| Provides access to software images, manifests, templates, and to send logs and metrics.
+
+| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
+|===
+--
+
+====
+
+// end tabbed area
 
 Ensure that BlueXP has the required permissions::
 Ensure that BlueXP has permissions to deploy resources and create security groups for the Cloud Data Sense instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 
 Check your vCPU limits::
-Ensure that your cloud provider's vCPU limit allows for the deployment of an instance with 16 cores. You'll need to verify the vCPU limit for the relevant instance family in the region where BlueXP is running. link:concept-cloud-compliance.html#the-cloud-data-sense-instance[See the required instance types].
+Ensure that your cloud provider's vCPU limit allows for the deployment of an instance with the necessary number of cores. You'll need to verify the vCPU limit for the relevant instance family in the region where BlueXP is running. link:concept-cloud-compliance.html#the-cloud-data-sense-instance[See the required instance types].
 +
 See the following links for more details on vCPU limits:
 +
@@ -178,25 +218,99 @@ The Data Sense instance uses a private IP address to ensure that the indexed dat
 
 == Deploy Data Sense in the cloud
 
-Follow these steps to deploy an instance of Cloud Data Sense in the cloud.
+Follow these steps to deploy an instance of Cloud Data Sense in the cloud. The Connector will deploy the instance and then install Data Sense software.
 
+Note that when deploying Data Sense from a BlueXP Connector in an AWS environment, you can select the default instance size or two smaller instance types. link:concept-cloud-compliance.html#using-a-smaller-instance-type[See the available instance types and limitations].
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Deploy in AWS
+--
 .Steps
 
 . From the BlueXP left navigation menu, click *Governance > Classification*.
 
 . Click *Activate Data Sense*.
 +
-image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate Cloud Data Sense.]
+image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate Data Sense.]
+
+. Click *Deploy > Launch Deployment* to use the "Large" instance size and start the cloud deployment wizard. Click *Deploy > Configuration* to choose from two smaller instance types, and then click *Deploy* to start the cloud deployment wizard. 
++
+image:screenshot_cloud_compliance_deploy_cloud_aws.png[A screenshot of selecting the button to deploy Data Sense in the cloud.]
+
+. The wizard displays progress as it goes through the deployment steps. It will stop and prompt for input if it runs into any issues.
++
+image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Sense wizard to deploy a new instance.]
+
+. When the instance is deployed, click *Continue to configuration* to go to the _Configuration_ page.
+--
+
+.Deploy in Azure
+--
+.Steps
+
+. From the BlueXP left navigation menu, click *Governance > Classification*.
+
+. Click *Activate Data Sense*.
++
+image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate Data Sense.]
 
 . Click *Deploy* to start the cloud deployment wizard.
 +
-image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy Cloud Data Sense in the cloud.]
+image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy Data Sense in the cloud.]
 
-. The wizard displays progress as it goes through the deployment steps. It will stop and ask for input if it runs into any issues.
+. The wizard displays progress as it goes through the deployment steps. It will stop and prompt for input if it runs into any issues.
 +
-image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Cloud Data Sense wizard to deploy a new instance.]
+image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Sense wizard to deploy a new instance.]
 
 . When the instance is deployed, click *Continue to configuration* to go to the _Configuration_ page.
+--
+
+.Deploy in Google Cloud
+--
+.Steps
+
+. From the BlueXP left navigation menu, click *Governance > Classification*.
+
+. Click *Activate Data Sense*.
++
+image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate Data Sense.]
+
+. Click *Deploy* to start the cloud deployment wizard.
++
+image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy Data Sense in the cloud.]
+
+. The wizard displays progress as it goes through the deployment steps. It will stop and prompt for input if it runs into any issues.
++
+image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Sense wizard to deploy a new instance.]
+
+. When the instance is deployed, click *Continue to configuration* to go to the _Configuration_ page.
+--
+
+====
+
+// end tabbed area
+
+//.Steps
+//
+//. From the BlueXP left navigation menu, click *Governance > Classification*.
+//
+//. Click *Activate Data Sense*.
+//+
+//image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate Cloud Data Sense.]
+//
+//. Click *Deploy* to start the cloud deployment wizard.
+//+
+//image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy Cloud Data Sense in the cloud.]
+//
+//. The wizard displays progress as it goes through the deployment steps. It will stop and ask for input if it runs into any issues.
+//+
+//image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Cloud Data Sense wizard to deploy a new instance.]
+//
+//. When the instance is deployed, click *Continue to configuration* to go to the _Configuration_ page.
 
 .Result
 

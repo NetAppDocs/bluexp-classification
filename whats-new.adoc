@@ -16,6 +16,16 @@ summary: Learn what's new in Cloud Data Sense.
 Learn what's new in Cloud Data Sense.
 
 // tag::whats-new[]
+== 2 April 2023 (version 1.22)
+
+=== first new feature
+
+df
+
+=== 2nd feature
+
+dfdf
+
 == 7 March 2023 (version 1.21)
 
 === New functionality to add your own custom categories from the Data Sense UI
@@ -84,6 +94,7 @@ The filter "Number of users with access" now supports files stored in SharePoint
 === New "Partial Success" status has been added to the Action Status panel
 
 The new "Partial Success" status indicates that a Data Sense action is finished and some items failed and some items succeeded, for example, when you are moving or deleting 100 files. Additionally, the "Finished" status has been renamed to "Success". In the past, the "Finished" status might list actions that succeeded and that failed. Now the "Success" status means that all actions succeeded on all items. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-view-compliance-actions.html[See how to view the Actions Status panel].
+// end::whats-new[]
 
 == 9 January 2023 (version 1.19)
 
@@ -104,7 +115,6 @@ https://docs.netapp.com/us-en/cloud-manager-data-sense/task-investigate-data.htm
 === Data Sense can identify the Japanese Individual Number
 
 Data Sense can identify and categorize files that contain the Japanese Individual Number (also known as My Number). This includes both the Personal and Corporate My Number. https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
-// end::whats-new[]
 
 == 11 December 2022 (version 1.18)
 
