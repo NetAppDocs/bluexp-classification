@@ -155,25 +155,22 @@ Note that you can customize the company name that appears on the first page of t
 
 == Data Discovery Assessment Report
 
-The Data Discovery Assessment Report provides high-level analysis of the scanned environment to highlight the system's findings and prove its value to the customer. highlights data-related concerns and proposes recommended remediation steps.
-
-The goal of the DDA management briefing report is to raise awareness of four significant aspects that exist in the subject data set:
+The Data Discovery Assessment Report provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your data set:
 
 [cols="25,65",width=90%,options="header"]
 |===
 | Feature
 | Description
-| Data management challenges | Issues surrounding the granular day-to-day actions, short-term tactical engagements, and strategic projects.
-| Data governance concerns | a detailed picture of all the data they own, starting with the information about the data (such as metadata and permissions), and proceeding with the contents and the context of the data.
-| Data security exposures | .
-| Data compliance gaps | distinguish between personal information and sensitive personal information.
+| Data governance concerns | A detailed picture of all the data you own and areas where you may be able to reduce the amount of data to save costs.
+| Data security exposures | Areas where your data is accessible to internal or external attacks because of broad access permissions.
+| Data compliance gaps | Where your personal or sensitive personal information is located for both security and for DSARs (data subject access requests).
 |===
 
 After the assessment, this report identifies areas where you can:
 
-* Reduce storage costs by moving, tiering, or deleting data
-* Protect your data that has broad permissions
-* Protect your data that has personal or sensitive personal information
+* Reduce storage costs by changing your retention policy, or by moving or deleting certain data (stale, duplicate, or non-business data)
+* Protect your data that has broad permissions by revising global group management policies
+* Protect your data that has personal or sensitive personal information by moving PII to more secure data stores
 
 === Generating the Data Discovery Assessment Report
 

@@ -18,13 +18,21 @@ Learn what's new in Cloud Data Sense.
 // tag::whats-new[]
 == 2 April 2023 (version 1.22)
 
-=== first new feature
+=== File access audit logging is now supported for your volumes
 
-df
+You can configure file access audit logging for critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action: Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. See XYZ for details.......
 
-=== 2nd feature
+=== Ability to deploy Data Sense on smaller instances in the cloud
 
-dfdf
+When deploying Data Sense from a BlueXP Connector in an AWS environment, you can select the default instance size or you can select from two smaller instance types. If you are scanning a small environment this can help you save on cloud costs. However, there are some restrictions when using the smaller instance. https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html#using-a-smaller-instance-type[See the available instance types and limitations].
+
+=== New Data Discovery Assessment Report
+
+The Data Discovery Assessment Report provides a high-level analysis of your scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The goal of this report is to raise awareness of data governance concerns, data security exposures, and data compliance gaps of your data set. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-governance-data.html#data-discovery-assessment-report[See how to generate and use the Data Discovery Assessment Report].
+
+=== Data Sense BYOL licenses are now supported in dark sites
+
+Now you can upload your Data Sense BYOL license into the Digital Wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-licensing-datasense.html#obtain-your-cloud-data-sense-license-file[See how to obtain and upload your Data Sense BYOL license].
 
 == 7 March 2023 (version 1.21)
 
