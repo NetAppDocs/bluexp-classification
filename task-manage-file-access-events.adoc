@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-manage-file-access-events.html
 keywords: compliance, actions, view progress, audit, logs, installation
-summary: Data Sense logs management activities that have been performed on files from all the working environments and data sources that Data Sense is scanning. Data Sense also logs the activities when deploying the Data Sense instance.
+summary: DYou can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of the File Access Audit Log, or download them, to see what file changes have occurred, and by whom. 
 ---
 
 = Monitor and manage file access events
@@ -13,25 +13,22 @@ summary: Data Sense logs management activities that have been performed on files
 :imagesdir: ./media/
 
 [.lead]
-You can configure Data Sense to add events to a log file whenever a file has been accessed or changed.
+You can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of the File Access Audit Logs, or download them, to see what file changes have occurred, and by whom. 
 
-You can configure file access audit logging for critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action: Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. See XYZ for details.......
+You can configure file access audit logging for any critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action: Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. See XYZ for details.......
 
-history on files from all the working environments that Data Sense is scanning. 
-The ONTAP framework creates and maintains the FPolicy configuration, monitors file events, and sends notifications to external FPolicy servers.
-
-You can view the contents of the Data Sense audit log files, or download them, to see what file changes have occurred, and when. For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
+For example, you can see the name of the person who has made a change to a files, and when the change was made.
 
 == Supported data sources
 
-Data Sense can ...:
+Data Sense can log file access events for the following data sources:
 
-* On-premises ONTAP systems
+* On-premises ONTAP
 * Cloud Volumes ONTAP
 * Azure NetApp Files
 * FSx for ONTAP
 
-
+You must have Active Directory configured for these data sources so that Data Sense can capture the name of the person who accessed the files.
 
 == Log file contents
 
@@ -63,7 +60,7 @@ The management audit log files are located on the Data Sense machine in: `/opt/n
 
 The installation audit log files are written to `/ops/netapp/install_logs`
 
-Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - old log files are deleted automatically after the maximum has been reached.
+Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "File_Access_Aidit_<volume-name>_<timestamp>.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - old log files are deleted automatically after the maximum has been reached.
 
 When Data Sense is installed on your premises, you can navigate directly to the log file.
 

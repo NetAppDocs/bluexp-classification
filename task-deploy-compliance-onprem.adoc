@@ -36,10 +36,10 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Create a Connector
 
 [role="quick-margin-para"]
-If you don't already have a Connector, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network, or on a Linux host in the cloud.
+If you don't already have a Connector, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network, or on a Linux host in the cloud.
 
 [role="quick-margin-para"]
-You can also create a Connector with your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^].
+You can also create a Connector with your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html[creating a Connector in GCP^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review prerequisites
 
@@ -63,7 +63,7 @@ The first 1 TB of data that Cloud Data Sense scans in BlueXP is free for 30 days
 
 A BlueXP Connector is required before you can install and use Data Sense. In most cases you'll probably have a Connector set up before you attempt to activate Cloud Data Sense because most https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-a-connector-is-required[BlueXP features require a Connector], but there are cases where you'll you need to set one up now.
  
-To create one in your cloud provider environment, see https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[creating a Connector in GCP^]. 
+To create one in your cloud provider environment, see https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html[creating a Connector in GCP^]. 
 
 There are some scenarios where you have to use a Connector that's deployed in a specific cloud provider:
 
@@ -75,9 +75,9 @@ For Azure NetApp Files, it must be deployed in the same region as the volumes yo
 
 On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts can be scanned using any of these cloud Connectors.
 
-Note that you can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network or in the cloud. Some users planning to install Data Sense on-prem may also choose to install the Connector on-prem.
+Note that you can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install Data Sense on-prem may also choose to install the Connector on-prem.
 
-As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Connectors].
+As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#multiple-connectors[multiple Connectors].
 
 You'll need the IP address or host name of the Connector system when installing Data Sense. You'll have this information if you installed the Connector in your premises. If the Connector is deployed in the cloud, you can find this information from the BlueXP console: click the Help icon, select *Support*, and click *BlueXP Connector*.
 
@@ -105,18 +105,18 @@ Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense machine 
 | CPU
 | RAM (swap memory must be disabled)
 | Disk
-| Large | 16 CPUs | 64 GB RAM | 500 GB SSD on /, or
-* 100 GB available on /opt
-* 395 GB available on /var
-* 5 GB on /tmp
-| Medium | 8 CPUs | 32 GB RAM | 200 GB SSD on /, or
-* 50 GB available on /opt
-* 145 GB available on /var
-* 5 GB on /tmp
-| Small | 8 CPUs | 16 GB RAM | 100 GB SSD on /, or
-* 50 GB available on /opt
-* 45 GB available on /var
-* 5 GB on /tmp
+| *Large* | 16 CPUs | 64 GB RAM | 500 GB SSD on /, or
+- 100 GB available on /opt
+- 395 GB available on /var
+- 5 GB on /tmp
+| *Medium* | 8 CPUs | 32 GB RAM | 200 GB SSD on /, or
+- 50 GB available on /opt
+- 145 GB available on /var
+- 5 GB on /tmp
+| *Small* | 8 CPUs | 16 GB RAM | 100 GB SSD on /, or
+- 50 GB available on /opt
+- 45 GB available on /var
+- 5 GB on /tmp
 |===
 +
 Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
@@ -265,7 +265,7 @@ See <<Prepare the Linux host system,Preparing the Linux host system>> and <<Enab
 
 Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
 
-NOTE: Cloud Data Sense is currently unable to scan S3 buckets, Azure NetApp Files, or FSx for ONTAP when the software is installed on premises. In these cases you'll need to deploy a separate Connector and instance of Data Sense in the cloud and https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-to-switch-between-connectors[switch between Connectors^] for your different data sources.
+NOTE: Cloud Data Sense is currently unable to scan S3 buckets, Azure NetApp Files, or FSx for ONTAP when the software is installed on premises. In these cases you'll need to deploy a separate Connector and instance of Data Sense in the cloud and https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#multiple-connectors[switch between Connectors^] for your different data sources.
 
 === Single-host installation for typical configurations
 
