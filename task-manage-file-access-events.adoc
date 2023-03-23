@@ -71,7 +71,7 @@ For example, the following lines from the log file show a successful copy operat
  2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
  2022-06-06 15:23:08,968 | WARNING | ds_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
 
-== Access the File Access Audit Logs
+== Access the File Access Audit Log files
 
 The File Access Audit Log files are located on the Data Sense machine in: `/opt/netapp/audit_logs/`
 
@@ -109,3 +109,5 @@ image:screenshot_compliance_file_access_audit_config.png[A screenshot showing th
 * Log file location - The location is currently hardcoded to write the log files to `/opt/netapp/audit_logs/`
 * Maximum storage allocation for audit logs - The total size of all the log files in the directory is currently hardcoded to a default value of 50 GB. When that limit is reached, the oldest log files are deleted automatically.
 * Maximum number of audit events per audit file - Each file is currently hardcoded to contain a maximum of 50,000 events. After this maximum has been reached, a new log file for that volume is created. The new file will have a newer timestamp.
+
+Note that these settings are currently hardcoded to default settings. They can't be changed.

@@ -220,7 +220,7 @@ The Data Sense instance uses a private IP address to ensure that the indexed dat
 
 == Deploy Data Sense in the cloud
 
-Follow these steps to deploy an instance of Cloud Data Sense in the cloud. The Connector will deploy the instance and then install Data Sense software.
+Follow these steps to deploy an instance of Cloud Data Sense in the cloud. The Connector will deploy the instance in the cloud, and then install Data Sense software on that instance.
 
 Note that when deploying Data Sense from a BlueXP Connector in an AWS environment, you can select the default instance size or you can select from two smaller instance types. link:concept-cloud-compliance.html#using-a-smaller-instance-type[See the available instance types and limitations].
 
@@ -234,20 +234,24 @@ Note that when deploying Data Sense from a BlueXP Connector in an AWS environmen
 .Steps
 
 . From the BlueXP left navigation menu, click *Governance > Classification*.
-
-. Click *Activate Data Sense*.
 +
 image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate Data Sense.]
 
-. Click *Deploy > Launch Deployment* to use the "Large" instance size and start the cloud deployment wizard. Click *Deploy > Configuration* to choose from two smaller instance types, and then click *Deploy* to start the cloud deployment wizard. 
+. Click *Activate Data Sense*.
 +
 image:screenshot_cloud_compliance_deploy_cloud_aws.png[A screenshot of selecting the button to deploy Data Sense in the cloud.]
+
+. From the _Installation_ page, click *Deploy > Deploy* to use the "Large" instance size and start the cloud deployment wizard. 
++
+You can also click *Deploy > Configuration* to choose from two smaller instance types if you don't have a lot of data that you initially plan to scan. This can save some cloud cost when using a smaller instance. Then click *Deploy* to start the cloud deployment wizard.
++
+image:screenshot_cloud_deploy_resource_size.png[A screenshot of the deployment page to pick the size of the instance that Data Sense will be deployed on.]
 
 . The wizard displays progress as it goes through the deployment steps. It will stop and prompt for input if it runs into any issues.
 +
 image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Sense wizard to deploy a new instance.]
 
-. When the instance is deployed, click *Continue to configuration* to go to the _Configuration_ page.
+. When the instance is deployed and Data Sense is installed, click *Continue to configuration* to go to the _Configuration_ page.
 --
 
 .Deploy in Azure
@@ -268,7 +272,7 @@ image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the
 +
 image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Sense wizard to deploy a new instance.]
 
-. When the instance is deployed, click *Continue to configuration* to go to the _Configuration_ page.
+. When the instance is deployed and Data Sense is installed, click *Continue to configuration* to go to the _Configuration_ page.
 --
 
 .Deploy in Google Cloud
@@ -289,7 +293,7 @@ image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the
 +
 image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Sense wizard to deploy a new instance.]
 
-. When the instance is deployed, click *Continue to configuration* to go to the _Configuration_ page.
+. When the instance is deployed and Data Sense is installed, click *Continue to configuration* to go to the _Configuration_ page.
 --
 
 ====
