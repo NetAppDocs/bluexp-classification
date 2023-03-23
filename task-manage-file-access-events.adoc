@@ -15,54 +15,71 @@ summary: DYou can configure Data Sense to log events to a file whenever one of t
 [.lead]
 You can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of the File Access Audit Logs, or download them, to see what file changes have occurred, and by whom. 
 
-You can configure file access audit logging for any critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action: Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. See XYZ for details.......
+You can configure file access audit logging for any critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action on your files and directories: Create, Read, Write, Rename, Delete, Change owner/permissions, and Change SACL/DACL. See XYZ for details.......
 
-For example, you can see the name of the person who has made a change to a files, and when the change was made.
+For example, you can see the name of the person who has made a change to a files and when the change was made.
+
+BlueXP users with the "Account Admin" or "Workspace Admin" roles can configure volumes for file access audit logging and can view and download the audit logs. Users with the "Compliance Viewer" can only view and download the audit logs.
 
 == Supported data sources
 
-Data Sense can log file access events for the following data sources:
+Data Sense can log file access events for files that reside in the following data sources:
 
 * On-premises ONTAP
 * Cloud Volumes ONTAP
 * Azure NetApp Files
 * FSx for ONTAP
 
-You must have Active Directory configured for these data sources so that Data Sense can capture the name of the person who accessed the files.
+You must have Active Directory configured for these data sources so that Data Sense can identify the name of the person who accessed the files.
+
+== Configure volumes for file access audit logging
+
+You can enable file access audit logging on individual volumes.
+
+.Steps
+
+. From the _Scan Configuration_ page for the data source, click image:screenshot_horizontal_more_button.gif[More icon] for the volume and select *Configure File Access Audit*.
++
+image:screenshot_compliance_file_access_audit_button.png[A screenshot of selecting a volume on which you want to enable file access logging.]
+
+. In the _Configure File Access Audit_ dialog, click the checkbox for *Enable logging of file access events* and click *Save*.
++
+Note at this time that the actions to log are not editable.
++
+image:screenshot_compliance_file_access_audit_dialog.png[A screenshot of the dialog for enabling and disabling logging for a volume, and for selecting which actions to log.]
+
+. You'll see that file access auditing is now enabled for that volume.
++
+image:screenshot_compliance_file_access_audit_done.png[A screenshot showing that file access audit logging is enabled for a specific volume.]
 
 == Log file contents
 
-Each line in the audit log contains information in this format:
+A log file is created for every volume that you have configured to track file access events. Each line in the audit log contains information in this format:
 
-`<full date> | <status> | ds_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
+`<timestamp> | <volume_name> | <event_type> | <file_name> | <user_name> | <action_result> | <action_details>`
 
-* Date and time - full timestamp for the event
-* Status - INFO, WARNING
-* Action type (delete, copy, move, create policy, update policy, rescan files, download JSON report, etc.)
-* File name (if the action is relevant to a file)
-* Details for the action - what was done: depends on the action
-
-** Policy name
-** For move - Source and destination
-** For copy - Source and destination
-** For tag - tag name
-** For assign to - user name
-** For email alert - email address / account
+* Timestamp - date and time for the event
+* Volume name - name of the volume
+* Event type - Create, Read, Write, Rename, Delete, Change owner/permissions, and Change SACL/DACL
+* File name - full path and file name
+* User name (or ID) - name, or ID, of the person who performed the action
+* Action result - whether the action was successful or if it failed, and the reason for success/failure
+* Details - what was done: depends on the action
 
 For example, the following lines from the log file show a successful copy operation and a failed copy operation.
 
  2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
  2022-06-06 15:23:08,968 | WARNING | ds_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
 
-== Accessing the log file
+== Access the File Access Audit Logs
 
-The management audit log files are located on the Data Sense machine in: `/opt/netapp/audit_logs/`
+The File Access Audit Log files are located on the Data Sense machine in: `/opt/netapp/audit_logs/`
 
-The installation audit log files are written to `/ops/netapp/install_logs`
+The log files are named "File_Access_Audit_<volume_name>_<timestamp>.log"; for example "File Access Audit_MedicalData_20230205092321.log". The <timestamp> is the time when Data Sense wrote the first log to the file. Each file is configured by default to contain a maximum of 50,000 events. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> After this maximum has been reached, a new log file for that volume is created. The new file will have a newer timestamp.
 
-Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "File_Access_Aidit_<volume-name>_<timestamp>.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - old log files are deleted automatically after the maximum has been reached.
+The total size of all the log files in the directory is set to a default value of 50 GB. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> When that limit is reached, the oldest log files are deleted automatically.
 
-When Data Sense is installed on your premises, you can navigate directly to the log file.
+When Data Sense is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the log files.
 
 When Data Sense is deployed in the cloud, you need to SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
 
@@ -83,3 +100,12 @@ Note that you'll need to modify the security group inbound rules to access the s
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html[Security group rules in Azure^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html[Firewall rules in Google Cloud^]
 
+== Configure File Access Audit Log settings
+
+There are three options that you can configure for the file access audit file logs. You configure these settings from the _File Access Audit Log_ section of the Data Sense _Configuration_ page.
+
+image:screenshot_compliance_file_access_audit_config.png[A screenshot showing the configuration setting for the audit logs in the Data Sense Configuration page.]
+
+* Log file location - The location is currently hardcoded to write the log files to `/opt/netapp/audit_logs/`
+* Maximum storage allocation for audit logs - The total size of all the log files in the directory is currently hardcoded to a default value of 50 GB. When that limit is reached, the oldest log files are deleted automatically.
+* Maximum number of audit events per audit file - Each file is currently hardcoded to contain a maximum of 50,000 events. After this maximum has been reached, a new log file for that volume is created. The new file will have a newer timestamp.

@@ -161,6 +161,8 @@ homepage:
           url: task-using-policies.html
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
+        - title: Monitor and manage file access events
+          url: task-manage-file-access-events.html
     - title: Organize your private data
       links:
         - title: Apply tags and owners to files that need attention
