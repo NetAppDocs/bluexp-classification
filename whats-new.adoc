@@ -18,9 +18,9 @@ Learn what's new in Cloud Data Sense.
 // tag::whats-new[]
 == 2 April 2023 (version 1.22)
 
-=== File access audit logging is now supported for your volumes
+=== File access audit logging is now supported for data in your volumes
 
-You can configure file access audit logging for critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action: Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. See XYZ for details.......
+You can configure file access audit logging for critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-manage-file-access-events.html[See how to monitor and manage file access events].
 
 === Ability to deploy Data Sense on smaller instances in the cloud
 

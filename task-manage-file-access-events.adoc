@@ -15,11 +15,11 @@ summary: DYou can configure Data Sense to log events to a file whenever one of t
 [.lead]
 You can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of the File Access Audit Logs, or download them, to see what file changes have occurred, and by whom. 
 
-You can configure file access audit logging for any critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action on your files and directories: Create, Read, Write, Rename, Delete, Change owner/permissions, and Change SACL/DACL. See XYZ for details.......
+You can configure file access audit logging for any critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action on your files and directories: Create, Read, Write, Rename, Delete, Change owner/permissions, and Change SACL/DACL.
 
 For example, you can see the name of the person who has made a change to a files and when the change was made.
 
-BlueXP users with the "Account Admin" or "Workspace Admin" roles can configure volumes for file access audit logging and can view and download the audit logs. Users with the "Compliance Viewer" can only view and download the audit logs.
+BlueXP users with the "Account Admin" or "Workspace Admin" roles can configure volumes for file access audit logging and can view and download the audit logs. Users with the "Compliance Viewer" role can only view and download the audit logs.
 
 == Supported data sources
 
@@ -44,7 +44,7 @@ image:screenshot_compliance_file_access_audit_button.png[A screenshot of selecti
 
 . In the _Configure File Access Audit_ dialog, click the checkbox for *Enable logging of file access events* and click *Save*.
 +
-Note at this time that the actions to log are not editable.
+Note at this time that all the actions to log are select by default -- they are not editable.
 +
 image:screenshot_compliance_file_access_audit_dialog.png[A screenshot of the dialog for enabling and disabling logging for a volume, and for selecting which actions to log.]
 
