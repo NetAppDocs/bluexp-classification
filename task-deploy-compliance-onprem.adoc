@@ -121,11 +121,11 @@ Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense machine 
 +
 Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
-* *AWS EC2 instance type*: An instance type that meets the CPU and RAM requirements above. We recommend https://aws.amazon.com/ec2/instance-types/m5/[m5.4xlarge^].
+* *AWS EC2 instance type*: An instance type that meets the "Large" system requirements above. We recommend https://aws.amazon.com/ec2/instance-types/m5/[m5.4xlarge^].
 
-* *Azure VM size*: An instance type that meets the CPU and RAM requirements above. We recommend https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3^].
+* *Azure VM size*: A virtual machine that meets the "Large" system requirements above. We recommend https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3^].
 
-* *GCP machine type*: An instance type that meets the CPU and RAM requirements above. We recommend https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16^].
+* *GCP machine type*: An instance type that meets the "Large" system requirements above. We recommend https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16^].
 
 * *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.7
 ** CentOS Stream 8 is also supported

@@ -84,10 +84,10 @@ Data Sense software must run on a host that meets specific operating system requ
 | CPU
 | RAM (swap memory must be disabled)
 | Disk
-| *Large* | 16 CPUs | 64 GB RAM | 500 GB SSD on /, or
-- 100 GB available on /opt
-- 395 GB available on /var
-- 5 GB on /tmp
+a| *Large* | 16 CPUs | 64 GB RAM | 500 GB SSD on /, or
+* 100 GB available on /opt
+* 395 GB available on /var
+* 5 GB on /tmp
 | *Medium* | 8 CPUs | 32 GB RAM | 200 GB SSD on /, or
 - 50 GB available on /opt
 - 145 GB available on /var

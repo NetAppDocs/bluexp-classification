@@ -243,7 +243,9 @@ image:screenshot_cloud_compliance_deploy_cloud_aws.png[A screenshot of selecting
 
 . From the _Installation_ page, click *Deploy > Deploy* to use the "Large" instance size and start the cloud deployment wizard. 
 +
-You can also click *Deploy > Configuration* to choose from two smaller instance types if you don't have a lot of data that you initially plan to scan. This can save some cloud cost when using a smaller instance. Then click *Deploy* to start the cloud deployment wizard.
+You can also click *Deploy > Configuration* to choose from two smaller instance types if you don't have a lot of data to scan. This can save some cloud costs when using a smaller instance. A "Medium" resource size is shown below.
++
+Then click *Deploy* to start the cloud deployment wizard.
 +
 image:screenshot_cloud_deploy_resource_size.png[A screenshot of the deployment page to pick the size of the instance that Data Sense will be deployed on.]
 

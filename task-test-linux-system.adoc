@@ -1,0 +1,220 @@
+---
+sidebar: sidebar
+permalink: task-test-linux-system.html
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, cloud compliance access, compliance, on-premises
+summary: Before installing Data Sense manually on a Linux host you can run a script on the host to verify that all the prerequisites are in place for installing Data Sense. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access.
+---
+
+= Check that your Linux host is ready to install Data Sense
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Before installing Data Sense manually on a Linux host, you can run a script on the host to verify that all the prerequisites are in place for installing Data Sense. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access (a "dark site").
+
+There is also a prerequisite test script that is part of the Data Sense installation script. The script described here is specifically designed for users who want to verify the Linux host independently of running the Data Sense installation script.
+
+== Getting Started
+
+You'll perform the following tasks.
+
+. Optional. Install a BlueXP Connector if you don't already have one installed. You can run the test script without having a Connector installed, but the script checks for connectivity between the Connector and the Data Sense host machine - so it is recommended that you have a Connector.
+. Prepare the host machine and verify that it meets all the requirements.
+. Enable outbound internet access from Data Sense host machine.
+. Verify that all required ports are enabled on all systems.
+. Download and run the Prerequisite test script.
+
+== Create a Connector
+
+A BlueXP Connector is required before you can install and use Data Sense. You can, however, run the Prerequisites script without a Connector.
+
+You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html[install the Connector on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install Data Sense on-prem may also choose to install the Connector on-prem.
+
+To create a Connector in your cloud provider environment, see https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html[creating a Connector in GCP^]. 
+
+You'll need the IP address or host name of the Connector system when running the Prerequisites script. You'll have this information if you installed the Connector in your premises. If the Connector is deployed in the cloud, you can find this information from the BlueXP console: click the Help icon, select *Support*, and click *BlueXP Connector*.
+
+== Verify host requirements
+
+Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. 
+
+* Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.
+
+// Change /var to /var/lib/docker for early May release.
+* When building the host system in your premises, you can choose among three system sizes depending on the size of the data set that you plan to have Data Sense scan.
++
+[cols="18,18,26,30",width=95%,options="header"]
+|===
+| System size
+| CPU
+| RAM (swap memory must be disabled)
+| Disk
+| *Large* | 16 CPUs | 64 GB RAM | 500 GB SSD on /, or
+- 100 GB available on /opt
+- 395 GB available on /var
+- 5 GB on /tmp
+| *Medium* | 8 CPUs | 32 GB RAM | 200 GB SSD on /, or
+- 50 GB available on /opt
+- 145 GB available on /var
+- 5 GB on /tmp
+| *Small* | 8 CPUs | 16 GB RAM | 100 GB SSD on /, or
+- 50 GB available on /opt
+- 45 GB available on /var
+- 5 GB on /tmp
+|===
++
+Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
+
+* When installing Data Sense on a system that you've deployed in a particular cloud provider, you must use one of the following types.
+
+** *AWS EC2 instance type*: An instance type that meets the "Large" system requirements above. We recommend https://aws.amazon.com/ec2/instance-types/m5/[m5.4xlarge^].
+
+** *Azure VM size*: A virtual machine type that meets the "Large" system requirements above. We recommend https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3^].
+
+** *GCP machine type*: An instance type that meets the "Large" system requirements above. We recommend https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16^].
+
+* *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.7
+** CentOS Stream 8 is also supported
+** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
+** The OS must be capable of installing the docker engine
+
+* *Red Hat Subscription Management*: A Red Hat Enterprise Linux system must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd party software during installation.
+
+* *Additional software*: You must install the following software on the host before you install Data Sense:
+
+** Docker Engine version 19.3.1 or later. https://docs.docker.com/engine/install/[View installation instructions^].
+** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
+
+* *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Sense. Run the following commands to configure `firewalld` so that it is compatible with Data Sense:
++
+ firewall-cmd --permanent --add-service=http
+ firewall-cmd --permanent --add-service=https
+ firewall-cmd --permanent --add-port=80/tcp
+ firewall-cmd --permanent --add-port=8080/tcp
+ firewall-cmd --permanent --add-port=443/tcp
+ firewall-cmd --reload
++
+If you're planning to use additional Data Sense hosts as scanner nodes (in a distributed model), add these rules to your primary system at this time:
++
+ firewall-cmd --permanent --add-port=2377/tcp
+ firewall-cmd --permanent --add-port=7946/udp
+ firewall-cmd --permanent --add-port=7946/tcp
+ firewall-cmd --permanent --add-port=4789/udp
++
+If you enable `firewalld` after installing Data Sense, you must restart docker.
+
+== Enable outbound internet access from Data Sense
+
+Data Sense requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the Data Sense instance has outbound internet access to contact the following endpoints.
+
+This section is not required for host systems installed in sites without internet connectivity. 
+
+[cols="43,57",options="header"]
+|===
+| Endpoints
+| Purpose
+
+| \https://api.bluexp.netapp.com | Communication with the BlueXP service, which includes NetApp accounts.
+
+|
+\https://netapp-cloud-account.auth0.com
+\https://auth0.com
+
+| Communication with the BlueXP website for centralized user authentication.
+
+|
+\https://support.compliance.api.bluexp.netapp.com/
+\https://hub.docker.com
+\https://auth.docker.io
+\https://registry-1.docker.io
+\https://index.docker.io/
+\https://dseasb33srnrn.cloudfront.net/
+\https://production.cloudflare.docker.com/
+
+| Provides access to software images, manifests, templates, and to send logs and metrics.
+
+| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
+
+|
+\https://github.com/docker
+\https://download.docker.com
+\http://mirror.centos.org
+\http://mirrorlist.centos.org
+\http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm
+
+| Provides prerequisite packages for installation.
+|===
+
+== Verify that all required ports are enabled
+
+You must ensure that all required ports are open for communication between the Connector, Data Sense, Active Directory, and your data sources.
+
+[cols="25,25,50",options="header"]
+|===
+| Connection Type
+| Ports
+| Description
+
+|Connector <> Data Sense | 8080 (TCP), 443 (TCP), and 80 | The firewall or routing rules for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
+
+Make sure port 8080 is open so you can see the installation progress in BlueXP.
+|Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
+
+* The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
+* The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Connector host.
+
+|===
+
+== Run the Data Sense Prerequisites script
+
+Follow these steps to run the Data Sense Prerequisites script.
+
+.What you'll need
+
+* Verify that your Linux system meets the <<Verify host requirements,host requirements>>.
+* Verify that the system has the two prerequisite software packages installed (Docker Engine and Python 3).
+* Make sure you have root privileges on the Linux system.
+//* If you're using a proxy for access to the internet:
+//** You'll need the proxy server information (IP address or host name, connection port, connection scheme: https or http, user name and password).
+//** If the proxy is performing TLS interception, you'll need to know the path on the Linux system where the TLS CA certificates are stored.
+//* Verify that your offline environment meets the required <<Enable outbound internet access from Cloud Data Sense,permissions and connectivity>>.
+
+.Steps
+
+. Download the Data Sense Prerequisites script from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *test_datasense_prerequisites-<version>.tar.gz*.
+
+. Copy the file to the Linux host you plan to use (using `scp` or some other method).
+
+. Unzip the file on the host machine, for example:
++
+[source,cli]
+tar -xzf test_datasense_prerequisites-V1.0.tar.gz
+
+. Run the script using the following command.
++
+[source,cli]
+test_datasense_prerequisites <--darksite>
++
+Add the option "--darksite" only if you are running the script on a host that doesn't have internet access. Certain prerequisite tests are skipped when the host is not connected to the internet.
+
+. The script prompts you for the IP address of the Data Sense host machine.
++
+** Enter the IP address or host name.
+
+. The script prompts whether you have an installed BlueXP Connector. 
++
+** Enter *N* if you do not have an installed Connector.
+** Enter *Y* if you do have an installed Connector. And then enter the IP address or host name of the BlueXP Connector so the test script can test this connectivity.
+
+. The script runs a variety of tests on the system and it displays results as it progresses. When it finishes it writes a log of the session to a file.
+
+.Result
+
+If all the prerequisites tests ran successfully, you can install Data Sense on the host when you are ready.
+
+If any issues were discovered, they are categorized as "Recommended" or "Required" to be fixed. Recommended issues are typically items that would make the Data Sense scanning and categorizing tasks run slower. These items do not need to be corrected - but you may want to address them.
+
+If you have any "Required" issues, you should fix the issues and run the Prerequisites test script again.
