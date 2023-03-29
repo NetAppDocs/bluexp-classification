@@ -115,11 +115,11 @@ homepage:
           url: concept-cloud-compliance.html
         - title: What's New
           url: whats-new.html
-        - title: Deploy Data Sense in the cloud automatically
+        - title: Deploy Data Sense in the cloud using BlueXP
           url: task-deploy-cloud-compliance.html
-        - title: Deploy Data Sense on a Linux host with internet
+        - title: Install Data Sense on a Linux host with internet
           url: task-deploy-compliance-onprem.html
-        - title: Deploy Data Sense on-premises without internet
+        - title: Install Data Sense on-premises without internet
           url: task-deploy-compliance-dark-site.html
         - title: Integrate Active Directory
           url: task-add-active-directory-datasense.html

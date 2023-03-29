@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-manage-file-access-events.html
 keywords: compliance, actions, view progress, audit, logs, installation
-summary: DYou can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of the File Access Audit Log, or download them, to see what file changes have occurred, and by whom. 
+summary: You can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
 ---
 
 = Monitor and manage file access events
@@ -13,17 +13,27 @@ summary: DYou can configure Data Sense to log events to a file whenever one of t
 :imagesdir: ./media/
 
 [.lead]
-You can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of the File Access Audit Logs, or download them, to see what file changes have occurred, and by whom. 
+You can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
 
-You can configure file access audit logging for any critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action on your files and directories: Create, Read, Write, Rename, Delete, Change owner/permissions, and Change SACL/DACL.
+For example, if you want to track when any changes are made to your sensitive personnel files or payroll files, you can enable this feature on the volumes where these files reside. Then you can view the File Access Audit Log to see if these files have been changed. If they have been changed, you'll be able to see the name of the person who made the change and when the change was made.
 
-For example, you can see the name of the person who has made a change to a files and when the change was made.
+You can enable this feature on any critical volumes in your ONTAP working environments. When enabled on a volume, file access events are tracked for all files and directories in the volume. This capability is based on the https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html[FPolicy feature^] from your ONTAP systems, and it uses your Data Sense system as an FPolicy server to receive notification messages (events) from ONTAP.
+
+Data Sense currently captures events for the following actions on your files and directories: 
+
+* Create
+* Read
+* Write
+* Rename
+* Delete
+* Change owner/permissions
+* Change SACL/DACL (access control list (ACL) changes)
 
 BlueXP users with the "Account Admin" or "Workspace Admin" roles can configure volumes for file access audit logging and can view and download the audit logs. Users with the "Compliance Viewer" role can only view and download the audit logs.
 
 == Supported data sources
 
-Data Sense can log file access events for files that reside in the following data sources:
+Data Sense can log file access events for files that reside on the following data sources:
 
 * On-premises ONTAP
 * Cloud Volumes ONTAP
@@ -34,7 +44,9 @@ You must have Active Directory configured for these data sources so that Data Se
 
 == Configure volumes for file access audit logging
 
-You can enable file access audit logging on individual volumes.
+You can enable file access audit logging on individual volumes to track changes to files and directories.
+
+TIP:: You can configure file access auditing for a maximum of 5 volumes on each ONTAP system at this time.
 
 .Steps
 
@@ -44,7 +56,7 @@ image:screenshot_compliance_file_access_audit_button.png[A screenshot of selecti
 
 . In the _Configure File Access Audit_ dialog, click the checkbox for *Enable logging of file access events* and click *Save*.
 +
-Note at this time that all the actions to log are select by default -- they are not editable.
+Note at this time that all the potential logging actions are selected by default -- they are not editable.
 +
 image:screenshot_compliance_file_access_audit_dialog.png[A screenshot of the dialog for enabling and disabling logging for a volume, and for selecting which actions to log.]
 
@@ -64,8 +76,9 @@ A log file is created for every volume that you have configured to track file ac
 * File name - full path and file name
 * User name (or ID) - name, or ID, of the person who performed the action
 * Action result - whether the action was successful or if it failed, and the reason for success/failure
-* Details - what was done: depends on the action
+* Action details - what was done: depends on the action
 
+*change this info below with real log file content*
 For example, the following lines from the log file show a successful copy operation and a failed copy operation.
 
  2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
@@ -81,7 +94,7 @@ The total size of all the log files in the directory is set to a default value o
 
 When Data Sense is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the log files.
 
-When Data Sense is deployed in the cloud, you need to SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
+When Data Sense is deployed in the cloud, you'll need to SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
 
  ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
 
@@ -102,12 +115,20 @@ Note that you'll need to modify the security group inbound rules to access the s
 
 == Configure File Access Audit Log settings
 
-There are three options that you can configure for the file access audit file logs. You configure these settings from the _File Access Audit Log_ section of the Data Sense _Configuration_ page.
+There are three options that you can configure for the file access audit file logs. These settings apply to all data sources that have configured file access audit logging on this Data Sense instance. You configure these settings from the _File Access Audit Log_ section of the Data Sense _Configuration_ page.
 
 image:screenshot_compliance_file_access_audit_config.png[A screenshot showing the configuration setting for the audit logs in the Data Sense Configuration page.]
 
-* Log file location - The location is currently hardcoded to write the log files to `/opt/netapp/audit_logs/`
-* Maximum storage allocation for audit logs - The total size of all the log files in the directory is currently hardcoded to a default value of 50 GB. When that limit is reached, the oldest log files are deleted automatically.
-* Maximum number of audit events per audit file - Each file is currently hardcoded to contain a maximum of 50,000 events. After this maximum has been reached, a new log file for that volume is created. The new file will have a newer timestamp.
+[cols=2*,options="header",cols="30,50"]
+|===
+
+| Audit Log Option
+| Description
+
+| Log file location | The location is currently hardcoded to write the log files to `/opt/netapp/audit_logs/`
+| Maximum storage allocation for audit logs | The total size of all the log files in the directory is currently hardcoded to a default value of 50 GB. When that limit is reached, the oldest log files are deleted automatically.
+| Maximum number of audit events per audit file | Each file is currently hardcoded to contain a maximum of 50,000 events. After this maximum has been reached, a new log file for that volume is created. The new file will have a newer timestamp.
+
+|===
 
 Note that these settings are currently hardcoded to default settings. They can't be changed.

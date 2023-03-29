@@ -23,7 +23,7 @@ You'll perform the following tasks.
 
 . Optional. Install a BlueXP Connector if you don't already have one installed. You can run the test script without having a Connector installed, but the script checks for connectivity between the Connector and the Data Sense host machine - so it is recommended that you have a Connector.
 . Prepare the host machine and verify that it meets all the requirements.
-. Enable outbound internet access from Data Sense host machine.
+. Enable outbound internet access from the Data Sense host machine.
 . Verify that all required ports are enabled on all systems.
 . Download and run the Prerequisite test script.
 
