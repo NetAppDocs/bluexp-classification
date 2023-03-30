@@ -18,9 +18,9 @@ Learn what's new in Cloud Data Sense.
 // tag::whats-new[]
 == 2 April 2023 (version 1.22)
 
-=== File access audit logging is now supported for data in your volumes
+=== Data Sense can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
 
-You can configure file access audit logging for critical volumes in your working environments. You can configure Data Sense to capture the following actions and the users who performed the action: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-manage-file-access-events.html[See how to monitor and manage file access events].
+You can enable file access audit logs to be collected on your Data Sense system for critical volumes in your working environments. Data Sense can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-manage-file-access-events.html[See how to monitor and manage file access events].
 
 === Ability to deploy Data Sense on smaller instances in the cloud
 
@@ -33,6 +33,10 @@ The Data Discovery Assessment Report provides a high-level analysis of your scan
 === Data Sense BYOL licenses are now supported in dark sites
 
 Now you can upload your Data Sense BYOL license into the Digital Wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-licensing-datasense.html#obtain-your-cloud-data-sense-license-file[See how to obtain and upload your Data Sense BYOL license].
+
+=== Standalone script is now available to test that your Linux system is qualified to install Data Sense
+
+If you would like to verify that your Linux system meets all prerequisites independently of running the Data Sense installation, there is a separate software package you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-test-linux-system.html[See how to check if your Linux host is ready to install Data Sense].
 
 == 7 March 2023 (version 1.21)
 

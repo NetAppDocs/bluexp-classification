@@ -110,7 +110,7 @@ If you enable `firewalld` after installing Data Sense, you must restart docker.
 
 Data Sense requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the Data Sense instance has outbound internet access to contact the following endpoints.
 
-This section is not required for host systems installed in sites without internet connectivity. 
+TIP:: This section is not required for host systems installed in sites without internet connectivity. 
 
 [cols="43,57",options="header"]
 |===
@@ -161,10 +161,7 @@ You must ensure that all required ports are open for communication between the C
 |Connector <> Data Sense | 8080 (TCP), 443 (TCP), and 80 | The firewall or routing rules for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
 
 Make sure port 8080 is open so you can see the installation progress in BlueXP.
-|Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
-
-* The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
-* The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Connector host.
+|Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, the Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
 
 |===
 
@@ -184,19 +181,24 @@ Follow these steps to run the Data Sense Prerequisites script.
 
 .Steps
 
-. Download the Data Sense Prerequisites script from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *test_datasense_prerequisites-<version>.tar.gz*.
+. Download the Data Sense Prerequisites script from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *test_datasense_prerequisites_<version>.tar.gz*.
 
 . Copy the file to the Linux host you plan to use (using `scp` or some other method).
 
 . Unzip the file on the host machine, for example:
 +
 [source,cli]
-tar -xzf test_datasense_prerequisites-V1.0.tar.gz
+tar -xzf test_datasense_prerequisites_1_0.tar.gz
+
+. Assign permissions to run the script.
++
+[source,cli]
+chmod +x test_datasense_prerequisites_1_0
 
 . Run the script using the following command.
 +
 [source,cli]
-test_datasense_prerequisites <--darksite>
+test_datasense_prerequisites_1_0 <--darksite>
 +
 Add the option "--darksite" only if you are running the script on a host that doesn't have internet access. Certain prerequisite tests are skipped when the host is not connected to the internet.
 
