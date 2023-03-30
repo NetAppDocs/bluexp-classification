@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-test-linux-system.html
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, cloud compliance access, compliance, on-premises
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, cloud compliance access, compliance, on-premises, linux, test linux system
 summary: Before installing Data Sense manually on a Linux host you can run a script on the host to verify that all the prerequisites are in place for installing Data Sense. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access.
 ---
 
@@ -181,14 +181,9 @@ Follow these steps to run the Data Sense Prerequisites script.
 
 .Steps
 
-. Download the Data Sense Prerequisites script from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *test_datasense_prerequisites_<version>.tar.gz*.
+. Download the Data Sense Prerequisites script from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *test_datasense_prerequisites_<version>*.
 
 . Copy the file to the Linux host you plan to use (using `scp` or some other method).
-
-. Unzip the file on the host machine, for example:
-+
-[source,cli]
-tar -xzf test_datasense_prerequisites_1_0.tar.gz
 
 . Assign permissions to run the script.
 +
@@ -198,7 +193,7 @@ chmod +x test_datasense_prerequisites_1_0
 . Run the script using the following command.
 +
 [source,cli]
-test_datasense_prerequisites_1_0 <--darksite>
+./test_datasense_prerequisites_1_0 <--darksite>
 +
 Add the option "--darksite" only if you are running the script on a host that doesn't have internet access. Certain prerequisite tests are skipped when the host is not connected to the internet.
 

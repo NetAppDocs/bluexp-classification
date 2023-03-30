@@ -64,6 +64,10 @@ image:screenshot_compliance_file_access_audit_dialog.png[A screenshot of the dia
 +
 image:screenshot_compliance_file_access_audit_done.png[A screenshot showing that file access audit logging is enabled for a specific volume.]
 
+.Result
+
+Any file access events that are generated for files on the enabled volumes will be added to the log file. Check the log file occasionally to see they types of events you are receiving.
+
 == Log file contents
 
 A log file is created for every volume that you have configured to track file access events. Each line in the audit log contains information in this format:
