@@ -20,11 +20,11 @@ Learn what's new in Cloud Data Sense.
 
 === Data Sense can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
 
-You can enable file access audit logs to be collected on your Data Sense system for critical volumes in your working environments. Data Sense can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-manage-file-access-events.html[See how to monitor and manage file access events].
+You can enable file access audit logs to be collected on your Data Sense system for file access events on volumes in your working environments. Data Sense can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-manage-file-access-events.html[See how to monitor and manage file access events].
 
 === Ability to deploy Data Sense on smaller instances in the cloud
 
-When deploying Data Sense from a BlueXP Connector in an AWS environment, you can select the default instance size or you can select from two smaller instance types. If you are scanning a small environment this can help you save on cloud costs. However, there are some restrictions when using the smaller instance. https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html#using-a-smaller-instance-type[See the available instance types and limitations].
+When deploying Data Sense from a BlueXP Connector in an AWS environment, now you can select from two smaller instance sizes than what is available with the default instance size. If you are scanning a small environment this can help you save on cloud costs. However, there are some restrictions when using the smaller instance. https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html#using-a-smaller-instance-type[See the available instance types and limitations].
 
 === New Data Discovery Assessment Report
 
@@ -36,7 +36,7 @@ Now you can upload your Data Sense BYOL license into the Digital Wallet in a dar
 
 === Standalone script is now available to test that your Linux system is qualified to install Data Sense
 
-If you would like to verify that your Linux system meets all prerequisites independently of running the Data Sense installation, there is a separate software package you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-test-linux-system.html[See how to check if your Linux host is ready to install Data Sense].
+If you would like to verify that your Linux system meets all prerequisites independently of running the Data Sense installation, there is a separate script you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-test-linux-system.html[See how to check if your Linux host is ready to install Data Sense].
 
 == 7 March 2023 (version 1.21)
 
