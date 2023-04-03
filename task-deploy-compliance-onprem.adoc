@@ -99,7 +99,7 @@ Ensure that you can keep Cloud Data Sense running. The Cloud Data Sense machine 
 //Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
 // Change /var to /var/lib/docker for early May release.
-* When building your own on-premises system, depending on the size of the data set that you plan to scan, you can create the host system in three sizes:
+* When building the host system in your premises, you can choose among three system sizes depending on the size of the data set that you plan to have Data Sense scan:
 +
 [cols="18,18,26,30",width=95%,options="header"]
 |===

@@ -52,29 +52,29 @@ Data Sense software must run on a host that meets specific operating system requ
 | CPU
 | RAM (swap memory must be disabled)
 | Disk
-| *Large* | 16 CPUs | 64 GB RAM | 500 GB SSD on /, or
-- 100 GB available on /opt
-- 395 GB available on /var
-- 5 GB on /tmp
-| *Medium* | 8 CPUs | 32 GB RAM | 200 GB SSD on /, or
-- 50 GB available on /opt
-- 145 GB available on /var
-- 5 GB on /tmp
-| *Small* | 8 CPUs | 16 GB RAM | 100 GB SSD on /, or
-- 50 GB available on /opt
-- 45 GB available on /var
-- 5 GB on /tmp
+| *Large* | 16 CPUs | 64 GB RAM | 500 GiB SSD on /, or
+- 100 GiB available on /opt
+- 395 GiB available on /var
+- 5 GiB on /tmp
+| *Medium* | 8 CPUs | 32 GB RAM | 200 GiB SSD on /, or
+- 50 GiB available on /opt
+- 145 GiB available on /var
+- 5 GiB on /tmp
+| *Small* | 8 CPUs | 16 GB RAM | 100 GiB SSD on /, or
+- 50 GiB available on /opt
+- 45 GiB available on /var
+- 5 GiB on /tmp
 |===
 +
 Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
-* When installing Data Sense on a system that you've deployed in a particular cloud provider, you must use one of the following types.
+* When deploying a cloud instance for your Data Sense installation, we recommend a system that meets the "Large" system requirements above:
 
-** *AWS EC2 instance type*: An instance type that meets the "Large" system requirements above. We recommend https://aws.amazon.com/ec2/instance-types/m5/[m5.4xlarge^].
+** *AWS EC2 instance type*: We recommend "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types[See additional AWS instance types^]. 
 
-** *Azure VM size*: A virtual machine type that meets the "Large" system requirements above. We recommend https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3^].
+** *Azure VM size*: We recommend "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types[See additional Azure instance types^].
 
-** *GCP machine type*: An instance type that meets the "Large" system requirements above. We recommend https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16^].
+** *GCP machine type*: We recommend "n2-standard-16". link:reference-instance-types.html#gcp-instance-types[See additional GCP instance types^].
 
 * *Operating system*: Red Hat Enterprise Linux or CentOS versions 8.0 through 8.7
 ** CentOS Stream 8 is also supported
