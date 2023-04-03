@@ -93,6 +93,8 @@ sidebar:
           url: /task-uninstall-data-sense.html
     - title: Reference
       entries:
+        - title: Supported Data Sense instance types
+          url: /reference-instance-types.html
         - title: Metadata collected from data sources
           url: /reference-collected-metadata.html
     - title: Knowledge and support

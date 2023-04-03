@@ -82,7 +82,6 @@ A log file is created for every volume that you have configured to track file ac
 * Action result - whether the action was successful or if it failed, and the reason for success/failure
 * Action details - what was done: depends on the action
 
-*change this info below with real log file content*
 For example, the following lines from the log file show a successful copy operation and a failed copy operation.
 
  2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS

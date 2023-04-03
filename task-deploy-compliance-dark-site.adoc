@@ -86,18 +86,18 @@ Data Sense software must run on a host that meets specific operating system requ
 | CPU
 | RAM (swap memory must be disabled)
 | Disk
-a| *Large* | 16 CPUs | 64 GB RAM | 500 GB SSD on /, or
-* 100 GB available on /opt
-* 395 GB available on /var
-* 5 GB on /tmp
-| *Medium* | 8 CPUs | 32 GB RAM | 200 GB SSD on /, or
-- 50 GB available on /opt
-- 145 GB available on /var
-- 5 GB on /tmp
-| *Small* | 8 CPUs | 16 GB RAM | 100 GB SSD on /, or
-- 50 GB available on /opt
-- 45 GB available on /var
-- 5 GB on /tmp
+a| *Large* | 16 CPUs | 64 GB RAM | 500 GiB SSD on /, or
+* 100 GiB available on /opt
+* 395 GiB available on /var
+* 5 GiB on /tmp
+| *Medium* | 8 CPUs | 32 GB RAM | 200 GiB SSD on /, or
+- 50 GiB available on /opt
+- 145 GiB available on /var
+- 5 GiB on /tmp
+| *Small* | 8 CPUs | 16 GB RAM | 100 GiB SSD on /, or
+- 50 GiB available on /opt
+- 45 GiB available on /var
+- 5 GiB on /tmp
 |===
 +
 Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
