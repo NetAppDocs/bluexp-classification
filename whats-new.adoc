@@ -34,9 +34,9 @@ When deploying Data Sense from a BlueXP Connector in an AWS environment, now you
 
 If you would like to verify that your Linux system meets all prerequisites independently of running the Data Sense installation, there is a separate script you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-test-linux-system.html[See how to check if your Linux host is ready to install Data Sense].
 
-=== Data Sense BYOL licenses are now supported in dark sites
-
-Now you can upload your Data Sense BYOL license into the Digital Wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-licensing-datasense.html#obtain-your-cloud-data-sense-license-file[See how to obtain and upload your Data Sense BYOL license].
+//=== Data Sense BYOL licenses are now supported in dark sites
+//
+//Now you can upload your Data Sense BYOL license into the Digital Wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-licensing-datasense.html#obtain-your-cloud-data-sense-license-file[See how to obtain and upload your Data Sense BYOL license].
 
 == 7 March 2023 (version 1.21)
 
