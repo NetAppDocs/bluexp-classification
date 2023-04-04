@@ -128,15 +128,13 @@ image:diagram_cloud_compliance_instance.png[A diagram that shows a BlueXP instan
 
 Note the following about the default instance:
 
-* In AWS, Cloud Data Sense runs on an link:https://aws.amazon.com/ec2/instance-types/m5/[m5.4xlarge instance^] with a 500 GB GP2 disk. The operating system image is Amazon Linux 2 (Red Hat 7.3.1).
-+
-In regions where m5.4xlarge isn't available, Data Sense runs on an m4.4xlarge instance instead.
+* In AWS, Cloud Data Sense runs on an https://aws.amazon.com/ec2/instance-types/m6i/[m6i.4xlarge instance^] with a 500 GiB GP2 disk. The operating system image is Amazon Linux 2.
 
-* In Azure, Cloud Data Sense runs on a link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3 VM^] with a 512 GB disk. The operating system image is CentOS 7.8.
+* In Azure, Cloud Data Sense runs on a link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3 VM^] with a 500 GiB disk. The operating system image is CentOS 7.9.
 
-* In GCP, Cloud Data Sense runs on an link:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16 VM^] with a 512 GB Standard persistent disk. The operating system image is CentOS 7.9.
-+
-In regions where n2-standard-16 isn't available, Data Sense runs on an n2d-standard-16 or n1-standard-16 VM instead.
+* In GCP, Cloud Data Sense runs on an link:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16 VM^] with a 500 GiB Standard persistent disk. The operating system image is CentOS 7.9.
+
+* In regions where the default instance isn't available, Data Sense runs on an alternate instance. link:reference-instance-types.html[See the alternate instance types].
 
 * The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
 
@@ -155,12 +153,12 @@ You can deploy Data Sense on a system with fewer CPUs and less RAM, but there ar
 | System size
 | Specs
 | Limitations
-| Large (default) | 16 CPUs, 64 GB RAM, 500 GB SSD | None
-| Medium | 8 CPUs, 32 GB RAM, 200 GB SSD | Slower scanning, and can only scan up to 1 million files.
-| Small | 8 CPUs, 16 GB RAM, 100 GB SSD | Same limitations as "Medium", plus the ability to identify link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[data subject names] inside files is disabled.
+| Large (default) | 16 CPUs, 64 GB RAM, 500 GiB SSD | None
+| Medium | 8 CPUs, 32 GB RAM, 200 GiB SSD | Slower scanning, and can only scan up to 1 million files.
+| Small | 8 CPUs, 16 GB RAM, 100 GiB SSD | Same limitations as "Medium", plus the ability to identify link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[data subject names] inside files is disabled.
 |===
 
-When deploying Data Sense in the cloud, email ng-contact-data-sense@netapp.com for assistance if you want to use one of these smaller systems. We'll need to work with you to deploy these smaller cloud configurations.
+When deploying Data Sense in the cloud on AWS you can choose a large/medium/small instance. When deploying Data Sense in Azure or GCP, email ng-contact-data-sense@netapp.com for assistance if you want to use one of these smaller systems. We'll need to work with you to deploy these smaller cloud configurations.
 
 When deploying Data Sense on-premises, just use a Linux host with the smaller specifications. You do not need to contact NetApp for assistance.
 

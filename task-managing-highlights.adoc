@@ -225,7 +225,7 @@ You can permanently remove source files that seem insecure or too risky to leave
 
 You can delete files manually from the Investigation pane, or link:task-using-policies.html#deleting-source-files-automatically-using-policies[automatically using Policies^].
 
-TIP: You can't delete files that reside in databases.
+TIP: You can't delete files that reside in databases. All other data sources are supported.
 
 Deleting files requires the following permissions:
 
