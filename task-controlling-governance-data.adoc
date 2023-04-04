@@ -118,35 +118,74 @@ If you have subscribed to Azure Information Protection (AIP), you can classify a
 
 See link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP Labels^] for more information.
 
-=== Data Mapping Report
+== Data Mapping Report
 
-The Data Mapping Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report first lists an overview report summarizing all your working environments and data sources, and then provides a breakdown for each working environment.
+The Data Mapping Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report first lists an overview that summarizes all your working environments and data sources, and then it provides a breakdown for each working environment.
 
 The report includes the following information:
 
-Usage Capacity:: For all working environments: Lists the number of files and the used capacity for each working environment.
+[cols="25,65",width=90%,options="header"]
+|===
+| Category
+| Description
+| Usage Capacity | For all working environments: Lists the number of files and the used capacity for each working environment.
 For single working environments: Lists the files that are using the most capacity.
+| Age of Data | Provides three charts and graphs for when files were created, last modified, or last accessed. Lists the number of files, and their used capacity, based on certain date ranges.
+| Size of Data | Lists the number of files that exist within certain size ranges in your working environments.
+| File Types | Lists the total number of files and the used capacity for each type of file being stored in your working environments.
+|===
 
-Age of Data:: Provides three charts and graphs for when files were created, last modified, or last accessed. Lists the number of files, and their used capacity, based on certain date ranges.
+=== Generating the Data Mapping Report
 
-Size of Data:: Lists the number of files that exist within certain size ranges in your working environments.
-
-File Types:: Lists the total number of files and the used capacity for each type of file being stored in your working environments.
-
-==== Generating the Data Mapping Report
-
-Go to the Data Sense tab to generate the report.
+You generate this report from the Governance tab in Data Sense.
 
 .Steps
 
 . From the BlueXP menu, click *Governance > Classification*.
 
-. Click *Governance*, and then click the *Full Data Mapping Overview Report* button from the Governance Dashboard.
+. Click *Governance*, and then click the *Data Mapping Report* button.
 +
 image:screenshot_compliance_data_mapping_report_button.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
 
 .Result
 
-Cloud Data Sense generates a PDF report that you can review and send to other groups as needed.
+Data Sense generates a PDF report that you can review and send to other groups as needed.
+
+Note that you can customize the company name that appears on the first page of the report from the top of the Data Sense page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
+
+== Data Discovery Assessment Report
+
+The Data Discovery Assessment Report provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your data set:
+
+[cols="25,65",width=90%,options="header"]
+|===
+| Feature
+| Description
+| Data governance concerns | A detailed picture of all the data you own and areas where you may be able to reduce the amount of data to save costs.
+| Data security exposures | Areas where your data is accessible to internal or external attacks because of broad access permissions.
+| Data compliance gaps | Where your personal or sensitive personal information is located for both security and for DSARs (data subject access requests).
+|===
+
+After the assessment, this report identifies areas where you can:
+
+* Reduce storage costs by changing your retention policy, or by moving or deleting certain data (stale, duplicate, or non-business data)
+* Protect your data that has broad permissions by revising global group management policies
+* Protect your data that has personal or sensitive personal information by moving PII to more secure data stores
+
+=== Generating the Data Discovery Assessment Report
+
+You generate this report from the Governance tab in Data Sense.
+
+.Steps
+
+. From the BlueXP menu, click *Governance > Classification*.
+
+. Click *Governance*, and then click the *Data Discovery Assessment Report* button.
++
+image:screenshot_compliance_data_discovery_report_button.png[A screenshot of the Governance Dashboard that shows how to launch the Data Discovery Assessment Report.]
+
+.Result
+
+Data Sense generates a PDF report that you can review and send to other groups as needed.
 
 Note that you can customize the company name that appears on the first page of the report from the top of the Data Sense page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.

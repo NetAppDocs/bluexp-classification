@@ -116,3 +116,5 @@ image:screenshot_compliance_select_schemas.png[A screenshot of the Scan Configur
 .Result
 
 Cloud Data Sense starts scanning the database schemas that you enabled. If there are any errors, they'll appear in the Status column, alongside the required action to fix the error.
+
+Note that Data Sense scans your databases once per day - databases are not continuously scanned like other data sources.

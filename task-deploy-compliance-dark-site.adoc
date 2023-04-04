@@ -17,6 +17,8 @@ Complete a few steps to install Data Sense on a Linux host in an on-premises sit
 
 Note that you can also link:task-deploy-compliance-onprem.html[deploy Data Sense in an on-premises site that has internet access].
 
+The Data Sense installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the Data Sense installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install Data Sense].
+
 == Supported data sources
 
 When installed in this manner (sometimes called an "offline" or "dark" site), Data Sense can only scan data from data sources that are also local to the on-premises site. At this time, Data Sense can scan the following *local* data sources:
@@ -42,7 +44,7 @@ Most Data Sense features work when it is deployed in a site with no internet acc
 * Receiving user feedback
 * Automated software upgrades from BlueXP
 +
-Both the BlueXP Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the link:whats-new.html[Cloud Data Sense Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access[upgrade the BlueXP Connector^] and <<Upgrade Data Sense software,upgrade your Data Sense software>>.
+Both the BlueXP Connector and Data Sense will require periodic manual upgrades to enable new features. You can see the Data Sense version at the bottom of the Data Sense UI pages. Check the link:whats-new.html[Cloud Data Sense Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-in-a-location-without-internet-access[upgrade the BlueXP Connector^] and <<Upgrade Data Sense software,upgrade your Data Sense software>>.
 
 == Quick start
 
@@ -51,7 +53,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the BlueXP Connector
 
 [role="quick-margin-para"]
-If you don't already have a Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector^] on a Linux host now.
+If you don't already have a Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html[deploy the Connector^] on a Linux host now.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review Data Sense prerequisites
 
@@ -70,20 +72,11 @@ The first 1 TB of data that Cloud Data Sense scans in BlueXP is free for 30 days
 
 == Install the BlueXP Connector
 
-If you don't already have a BlueXP Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector^] on a Linux host in your offline site.
+If you don't already have a BlueXP Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html[deploy the Connector^] on a Linux host in your offline site.
 
 == Prepare the Linux host system
 
 Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. Data Sense is not supported on a host that is shared with other applications - the host must be a dedicated host.
-
-//* *Disk*: SSD with 500 GiB available on /, or
-//** 100 GiB available on /opt
-//** 400 GiB available on /var
-//** 5 GiB on /tmp
-//* *RAM*: 64 GB (swap memory must be disabled on the host)
-//* *CPU*: 16 cores
-//+
-//Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
 * Depending on the size of the data set that you plan to scan, the host system can be specified in three sizes.
 +
@@ -93,18 +86,18 @@ Data Sense software must run on a host that meets specific operating system requ
 | CPU
 | RAM (swap memory must be disabled)
 | Disk
-| Large | 16 CPUs | 64 GB RAM | 500 GB SSD on /, or
-* 100 GB available on /opt
-* 395 GB available on /var
-* 5 GB on /tmp
-| Medium | 8 CPUs | 32 GB RAM | 200 GB SSD on /, or
-* 50 GB available on /opt
-* 145 GB available on /var
-* 5 GB on /tmp
-| Small | 8 CPUs | 16 GB RAM | 100 GB SSD on /, or
-* 50 GB available on /opt
-* 45 GB available on /var
-* 5 GB on /tmp
+a| *Large* | 16 CPUs | 64 GB RAM | 500 GiB SSD on /, or
+* 100 GiB available on /opt
+* 395 GiB available on /var
+* 5 GiB on /tmp
+| *Medium* | 8 CPUs | 32 GB RAM | 200 GiB SSD on /, or
+- 50 GiB available on /opt
+- 145 GiB available on /var
+- 5 GiB on /tmp
+| *Small* | 8 CPUs | 16 GB RAM | 100 GiB SSD on /, or
+- 50 GiB available on /opt
+- 45 GiB available on /var
+- 5 GiB on /tmp
 |===
 +
 Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
@@ -123,12 +116,9 @@ Note that there are limitations when using these smaller systems. See link:conce
 +
  firewall-cmd --permanent --add-service=http
  firewall-cmd --permanent --add-service=https
- firewall-cmd --permanent --add-service=mysql
  firewall-cmd --permanent --add-port=80/tcp
  firewall-cmd --permanent --add-port=8080/tcp
  firewall-cmd --permanent --add-port=443/tcp
- firewall-cmd --permanent --add-port=555/tcp
- firewall-cmd --permanent --add-port=3306/tcp
  firewall-cmd --reload
 +
 If you enable `firewalld` after installing Data Sense, you must restart docker.
@@ -366,8 +356,8 @@ Since Data Sense software is updated with new features on a regular basis, you s
 
 .Before you begin
 
-* Data Sense software can be upgraded one major version at a time. For example, if you have version 1.18.x installed, you can upgrade only to 1.19.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
-* Verify that your on-prem Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-on-prem-without-internet-access[See the Connector upgrade steps^].
+* Data Sense software can be upgraded one major version at a time. For example, if you have version 1.20.x installed, you can upgrade only to 1.21.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
+* Verify that your on-prem Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-in-a-location-without-internet-access[See the Connector upgrade steps^].
 
 .Steps
 

@@ -97,6 +97,8 @@ HIPAA report:: Helps you identify the distribution of health information across 
 
 Data Mapping report:: Provides information about the size and number of files in your working environments. This includes usage capacity, age of data, size of data, and file types. link:task-controlling-governance-data.html#data-mapping-report[Learn more^].
 
+Data Discovery Assessment report:: Provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. link:task-controlling-governance-data.html#data-discovery-assessment-report[Learn mode^].
+
 Reports on a specific information type:: Reports are available that include details about the identified files that contain personal data and sensitive personal data. You can also see files broken down by category and file type. link:task-controlling-private-data.html[Learn more^].
 
 === Does scan performance vary?
@@ -270,7 +272,7 @@ So if you have data in many of these locations, you may need to use https://docs
 
 === Can I deploy the Connector on my own host?
 
-Yes. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network or in the cloud. If you're planning to deploy Data Sense on-premises, then you may want to install the Connector on-premises as well; but it's not required.
+Yes. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network or on a host in the cloud. If you're planning to deploy Data Sense on-premises, then you may want to install the Connector on-premises as well; but it's not required.
 
 === What about secure sites without internet access?
 
@@ -288,9 +290,9 @@ BlueXP allows the user to scan and report on systems virtually anywhere, includi
 
 When link:task-deploy-cloud-compliance.html[deployed in the cloud]:
 
-* In AWS, Cloud Data Sense runs on an m5.4xlarge instance with a 500 GB GP2 disk.
-* In Azure, Cloud Data Sense runs on a Standard_D16s_v3 VM with a 512 GB disk.
-* In GCP, Cloud Data Sense runs on an n2-standard-16 VM with a 512 GB Standard persistent disk.
+* In AWS, Cloud Data Sense runs on an m6i.4xlarge instance with a 500 GiB GP2 disk. You can select a smaller instance type during deployment.
+* In Azure, Cloud Data Sense runs on a Standard_D16s_v3 VM with a 500 GiB disk.
+* In GCP, Cloud Data Sense runs on an n2-standard-16 VM with a 500 GiB Standard persistent disk.
 
 Note that you can deploy Data Sense on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
