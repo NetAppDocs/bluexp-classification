@@ -108,7 +108,7 @@ link:task-licensing-datasense.html[Learn how to license Cloud Data Sense^].
 
 * Installing Cloud Data Sense in the cloud requires deploying a cloud instance, which results in charges from the cloud provider where it is deployed. See <<The Cloud Data Sense instance,the type of instance that is deployed for each cloud provider>>. There is no cost if you install Data Sense on an on-premises system.
 
-* Cloud Data Sense requires that you have deployed a BlueXP Connector. In many cases you already have a Connector because of other storage and services you are using in BlueXP. The Connector instance results in charges from the cloud provider where it is deployed. See the https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[type of instance that is deployed for each cloud provider^]. There is no cost if you install the Connector on an on-premises system.
+* Cloud Data Sense requires that you have deployed a BlueXP Connector. In many cases you already have a Connector because of other storage and services you are using in BlueXP. The Connector instance results in charges from the cloud provider where it is deployed. See the https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-on-prem.html[type of instance that is deployed for each cloud provider^]. There is no cost if you install the Connector on an on-premises system.
 
 === Data transfer costs
 

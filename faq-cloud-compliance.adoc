@@ -272,11 +272,11 @@ So if you have data in many of these locations, you may need to use https://docs
 
 === Can I deploy the Connector on my own host?
 
-Yes. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[deploy the Connector on-premises^] on a Linux host in your network or on a host in the cloud. If you're planning to deploy Data Sense on-premises, then you may want to install the Connector on-premises as well; but it's not required.
+Yes. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network or on a host in the cloud. If you're planning to deploy Data Sense on-premises, then you may want to install the Connector on-premises as well; but it's not required.
 
 === What about secure sites without internet access?
 
-Yes, that's also supported. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-onprem-no-internet.html[deploy the Connector on an on-premises Linux host that doesn't have internet access^]. Then you can discover on-premises ONTAP clusters and other local data sources and scan the data using Data Sense.
+Yes, that's also supported. You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html[deploy the Connector on an on-premises Linux host that doesn't have internet access^]. Then you can discover on-premises ONTAP clusters and other local data sources and scan the data using Data Sense.
 
 == Data Sense deployment
 
