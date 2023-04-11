@@ -30,7 +30,7 @@ The Data Discovery Assessment Report provides a high-level analysis of your scan
 
 When deploying Data Sense from a BlueXP Connector in an AWS environment, now you can select from two smaller instance types than what is available with the default instance. If you are scanning a small environment this can help you save on cloud costs. However, there are some restrictions when using the smaller instance. https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html#using-a-smaller-instance-type[See the available instance types and limitations].
 
-=== Standalone script is now available to test that your Linux system is qualified to install Data Sense
+=== Standalone script is now available to qualify your Linux system prior to Data Sense installation
 
 If you would like to verify that your Linux system meets all prerequisites independently of running the Data Sense installation, there is a separate script you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-test-linux-system.html[See how to check if your Linux host is ready to install Data Sense].
 
@@ -299,18 +299,3 @@ Data Sense can identify and categorize files that contain the Australian TFN (Ta
 === Global Active Directory server can be an LDAP server now
 
 The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously supported DNS Server. link:task-add-active-directory-datasense.html[Go here for details].
-
-== 15 March 2022 (version 1.10.0)
-
-=== New Filter to show the files to which a specific user or a group has read or write permissions
-
-A new Filter called "User / Group Permissions" has been added so you can list the files that a specific user or a group has read and/or write permissions to. You can select one or more user and/or group names - or enter a partial name. This functionality is available for volumes on Cloud Volumes ONTAP, on-prem ONTAP, Azure NetApp Files, Amazon FSx for ONTAP, and File Shares.
-
-=== Data Sense can determine the permissions for files in SharePoint and OneDrive accounts
-
-Data Sense can read the permissions that exist for files that are being scanned in OneDrive accounts and SharePoint accounts now. This information appears in the Investigation pane details for files and in the Open Permissions area in the Governance Dashboard.
-
-=== Two additional types of personal data can be identified by Data Sense
-
-* French INSEE - The INSEE code is a numerical code used by the French National Institute for Statistics and Economic Studies (INSEE) to identify various entities.
-* Passwords - This information is identified using proximity validation by looking for permutations of the word "password" next to a alphanumeric string. The number of items found will be listed under "Personal Results" in the Compliance Dashboard. You can search for files that contain passwords in the Investigation pane using the Filter *Personal Data > Password*.
