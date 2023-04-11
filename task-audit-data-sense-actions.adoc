@@ -45,7 +45,7 @@ For example, the following lines from the log file show a successful copy operat
 
 The management audit log files are located on the Data Sense machine in: `/opt/netapp/audit_logs/`
 
-The installation audit log files are written to `/ops/netapp/install_logs`
+The installation audit log files are written to `/opt/netapp/install_logs/`
 
 Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - old log files are deleted automatically after the maximum has been reached.
 
