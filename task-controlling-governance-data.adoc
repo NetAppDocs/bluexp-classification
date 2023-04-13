@@ -40,6 +40,8 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 
 * *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#viewing-all-duplicated-files[See what types of duplicate files are displayed].
 
+NOTE:: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Stale Data_ category.
+
 === Policies with the largest number of results
 
 In the _Policies_ area, the Policies with the greatest number of results appear at the top of the list. Click the name of a Policy to display the results in the Investigation page. Click *View All* to view the list of all available Policies.
@@ -74,7 +76,7 @@ You can click the block you are interested in to view the filtered results of th
 
 No data is displayed in this panel if you haven't integrated an identity service with Data Sense. link:task-add-active-directory-datasense.html[See how to integrate your Active Directory service with Data Sense^].
 
-TIP: This panel supports files in CIFS shares, OneDrive, and SharePoint data sources. There is currently no support for databases, Google Drive, Amazon S3 and generic object storage.
+TIP: This panel supports files in CIFS shares, OneDrive, and SharePoint data sources. There is currently no support for databases, Google Drive, Amazon S3, and generic object storage.
 
 === Data listed by types of Open Permissions
 
@@ -95,6 +97,8 @@ You can hover over a point in the charts to see details about the age or size of
 
 * *Age of Data graph* - Categorizes data based on the time it was created, the last time it was accessed, or the last time it was modified.
 * *Size of Data graph* - Categorizes data based on size.
+
+NOTE:: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Age of Data_ graph.
 
 === Most identified data Classifications
 

@@ -153,9 +153,9 @@ No. The private data sent between your browser and the Data Sense instance are s
 
 === What happens if data tiering is enabled on your ONTAP volumes?
 
-You might want to enable Cloud Data Sense on ONTAP systems that tier cold data to object storage. If data tiering is enabled, Data Sense scans all of the data--data that's on disks and cold data tiered to object storage.
+When Data Sense scans volumes that have cold data tiered to object storage, it scans all of the data--data that's on local disks and cold data tiered to object storage. This is also true for non-NetApp products that implement tiering.
 
-The compliance scan doesn't heat up the cold data--it stays cold and tiered to object storage.
+The scan doesn't heat up the cold data--it stays cold and remains in object storage.
 
 === Can Cloud Data Sense send notifications to my organization?
 
