@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-collected-metadata.html
-keywords: compliance, metadata, permissions, time stamps, privacy
+keywords: compliance, metadata, permissions, time stamps, privacy, last access time
 summary: Data Sense collects certain metadata when performing classification scans on the data from your data sources and working environments. Data Sense can access most of the metadata we need to classify your data, but there are some sources where we are unable to access the data we need.
 ---
 
@@ -15,6 +15,7 @@ summary: Data Sense collects certain metadata when performing classification sca
 [.lead]
 Data Sense collects certain metadata when performing classification scans on the data from your data sources and working environments. Data Sense can access most of the metadata we need to classify your data, but there are some sources where we are unable to access the data we need.
 
+[cols="15,25,25,25",width=90%]
 |===
 |  | *Metadata* | *CIFS* | *NFS*
 
@@ -34,7 +35,7 @@ Data Sense collects certain metadata when performing classification scans on the
 
 == Last access time timestamp
 
-When Data Sense extracts data from file shares, the operating system considers it as accessing the data and it changes the "last access time" accordingly. After scanning, Data Sense attempts to revert the last access time to the original timestamp. If Data Sense doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system can't revert the last access time to the original timestamp.
+When Data Sense extracts data from file shares, the operating system considers it as accessing the data and it changes the "last access time" accordingly. After scanning, Data Sense attempts to revert the last access time to the original timestamp. If Data Sense doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system can't revert the last access time to the original timestamp. ONTAP volumes configured with SnapLock have read-only permissions and also can't revert the last access time to the original timestamp. 
 
 By default, if Data Sense doesn't have these permissions, the system won't scan those files in your volumes because Data Sense can't revert the "last access time" to the original timestamp. However, if you don't care if the last access time is reset to the original time in your files, you can click the *Scan when missing "write attributes" permissions* switch at the bottom of the Configuration page so that Data Sense will scan the volumes regardless of permissions.
 

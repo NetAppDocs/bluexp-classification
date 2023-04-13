@@ -34,7 +34,7 @@ link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't 
 [role="quick-margin-para"]
 The group is a container for the file shares that you want to scan, and it is used as the working environment name for those file shares.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the file shares and select the shares to scan
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the file shares to the group
 
 [role="quick-margin-para"]
 Add the list of file shares that you want to scan and select the type of scanning. You can add up to 100 file shares at a time.
@@ -43,7 +43,9 @@ Add the list of file shares that you want to scan and select the type of scannin
 
 Review the following prerequisites to make sure that you have a supported configuration before you enable Cloud Data Sense.
 
-* The shares can be hosted anywhere, including in the cloud or on-premises. These are file shares that reside on non-NetApp storage systems.
+* The shares can be hosted anywhere, including in the cloud or on-premises. In most cases these are file shares that reside on non-NetApp storage systems. However, CIFS shares from older NetApp 7-Mode storage systems can be scanned as file shares.
++
+Data Sense can't extract permissions or last access time from 7-Mode systems. Additionally, there is a known issue where mounting CIFS shares on SMB version 2 is not supported for Linux.
 
 * There needs to be network connectivity between the Data Sense instance and the shares.
 
