@@ -458,7 +458,9 @@ image:screenshot_work_env_id.png[A screenshot of the Working Environment ID from
 +
 image:screenshot_client_access_token.png["A screenshot of the API Documentation page, with a link to authentication instructions."]
 
-. Follow the authentication instructions, and copy the _access token_ from the response.
+. Follow the authentication instructions, using the username and password of the account admin in the "username" and "password" parameters. 
+
+. Then copy the _access token_ from the response.
 
 .Steps
 
