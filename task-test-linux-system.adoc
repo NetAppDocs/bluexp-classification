@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: task-test-linux-system.html
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, cloud compliance access, compliance, on-premises, linux, test linux system
-summary: Before installing Data Sense manually on a Linux host you can run a script on the host to verify that all the prerequisites are in place for installing Data Sense. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access.
+keywords: cloud compliance, data sense, get started, deploy cloud BlueXP classification, cloud compliance access, compliance, on-premises, linux, test linux system
+summary: Before installing BlueXP classification manually on a Linux host you can run a script on the host to verify that all the prerequisites are in place for installing BlueXP classification. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access.
 ---
 
-= Check that your Linux host is ready to install Data Sense
+= Check that your Linux host is ready to install BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,25 +13,25 @@ summary: Before installing Data Sense manually on a Linux host you can run a scr
 :imagesdir: ./media/
 
 [.lead]
-Before installing Data Sense manually on a Linux host, you can run a script on the host to verify that all the prerequisites are in place for installing Data Sense. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access (a "dark site").
+Before installing BlueXP classification manually on a Linux host, you can run a script on the host to verify that all the prerequisites are in place for installing BlueXP classification. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access (a "dark site").
 
-There is also a prerequisite test script that is part of the Data Sense installation script. The script described here is specifically designed for users who want to verify the Linux host independently of running the Data Sense installation script.
+There is also a prerequisite test script that is part of the BlueXP classification installation script. The script described here is specifically designed for users who want to verify the Linux host independently of running the BlueXP classification installation script.
 
 == Getting Started
 
 You'll perform the following tasks.
 
-. Optionally, install a BlueXP Connector if you don't already have one installed. You can run the test script without having a Connector installed, but the script checks for connectivity between the Connector and the Data Sense host machine - so it is recommended that you have a Connector.
+. Optionally, install a BlueXP Connector if you don't already have one installed. You can run the test script without having a Connector installed, but the script checks for connectivity between the Connector and the BlueXP classification host machine - so it is recommended that you have a Connector.
 . Prepare the host machine and verify that it meets all the requirements.
-. Enable outbound internet access from the Data Sense host machine.
+. Enable outbound internet access from the BlueXP classification host machine.
 . Verify that all required ports are enabled on all systems.
 . Download and run the Prerequisite test script.
 
 == Create a Connector
 
-A BlueXP Connector is required before you can install and use Data Sense. You can, however, run the Prerequisites script without a Connector.
+A BlueXP Connector is required before you can install and use BlueXP classification. You can, however, run the Prerequisites script without a Connector.
 
-You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html[install the Connector on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install Data Sense on-prem may also choose to install the Connector on-prem.
+You can https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html[install the Connector on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install BlueXP classification on-prem may also choose to install the Connector on-prem.
 
 To create a Connector in your cloud provider environment, see https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html[creating a Connector in GCP^]. 
 
@@ -39,11 +39,11 @@ You'll need the IP address or host name of the Connector system when running the
 
 == Verify host requirements
 
-Data Sense software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. 
+BlueXP classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. 
 
 include::_include/host-requirements.adoc[]
 
-* *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Sense. Run the following commands to configure `firewalld` so that it is compatible with Data Sense:
+* *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing BlueXP classification. Run the following commands to configure `firewalld` so that it is compatible with BlueXP classification:
 +
  firewall-cmd --permanent --add-service=http
  firewall-cmd --permanent --add-service=https
@@ -52,18 +52,18 @@ include::_include/host-requirements.adoc[]
  firewall-cmd --permanent --add-port=443/tcp
  firewall-cmd --reload
 +
-If you're planning to use additional Data Sense hosts as scanner nodes (in a distributed model), add these rules to your primary system at this time:
+If you're planning to use additional BlueXP classification hosts as scanner nodes (in a distributed model), add these rules to your primary system at this time:
 +
  firewall-cmd --permanent --add-port=2377/tcp
  firewall-cmd --permanent --add-port=7946/udp
  firewall-cmd --permanent --add-port=7946/tcp
  firewall-cmd --permanent --add-port=4789/udp
 +
-If you enable `firewalld` after installing Data Sense, you must restart docker.
+If you enable `firewalld` after installing BlueXP classification, you must restart docker.
 
-== Enable outbound internet access from Data Sense
+== Enable outbound internet access from BlueXP classification
 
-Data Sense requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the Data Sense instance has outbound internet access to contact the following endpoints.
+BlueXP classification requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the BlueXP classification instance has outbound internet access to contact the following endpoints.
 
 TIP:: This section is not required for host systems installed in sites without internet connectivity. 
 
@@ -105,7 +105,7 @@ TIP:: This section is not required for host systems installed in sites without i
 
 == Verify that all required ports are enabled
 
-You must ensure that all required ports are open for communication between the Connector, Data Sense, Active Directory, and your data sources.
+You must ensure that all required ports are open for communication between the Connector, BlueXP classification, Active Directory, and your data sources.
 
 [cols="25,25,50",options="header"]
 |===
@@ -113,16 +113,16 @@ You must ensure that all required ports are open for communication between the C
 | Ports
 | Description
 
-|Connector <> Data Sense | 8080 (TCP), 443 (TCP), and 80 | The firewall or routing rules for the Connector must allow inbound and outbound traffic over port 443 to and from the Data Sense instance.
+|Connector <> BlueXP classification | 8080 (TCP), 443 (TCP), and 80 | The firewall or routing rules for the Connector must allow inbound and outbound traffic over port 443 to and from the BlueXP classification instance.
 
 Make sure port 8080 is open so you can see the installation progress in BlueXP.
 |Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, the Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
 
 |===
 
-== Run the Data Sense Prerequisites script
+== Run the BlueXP classification Prerequisites script
 
-Follow these steps to run the Data Sense Prerequisites script.
+Follow these steps to run the BlueXP classification Prerequisites script.
 
 .What you'll need
 
@@ -132,11 +132,11 @@ Follow these steps to run the Data Sense Prerequisites script.
 //* If you're using a proxy for access to the internet:
 //** You'll need the proxy server information (IP address or host name, connection port, connection scheme: https or http, user name and password).
 //** If the proxy is performing TLS interception, you'll need to know the path on the Linux system where the TLS CA certificates are stored.
-//* Verify that your offline environment meets the required <<Enable outbound internet access from Cloud Data Sense,permissions and connectivity>>.
+//* Verify that your offline environment meets the required <<Enable outbound internet access from BlueXP classification,permissions and connectivity>>.
 
 .Steps
 
-. Download the Data Sense Prerequisites script from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *standalone-pre-requisite-tester-<version>*.
+. Download the BlueXP classification Prerequisites script from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *standalone-pre-requisite-tester-<version>*.
 
 . Copy the file to the Linux host you plan to use (using `scp` or some other method).
 
@@ -152,7 +152,7 @@ chmod +x standalone-pre-requisite-tester-v1.21.0
 +
 Add the option "--darksite" only if you are running the script on a host that doesn't have internet access. Certain prerequisite tests are skipped when the host is not connected to the internet.
 
-. The script prompts you for the IP address of the Data Sense host machine.
+. The script prompts you for the IP address of the BlueXP classification host machine.
 +
 ** Enter the IP address or host name.
 
@@ -165,8 +165,8 @@ Add the option "--darksite" only if you are running the script on a host that do
 
 .Result
 
-If all the prerequisites tests ran successfully, you can install Data Sense on the host when you are ready.
+If all the prerequisites tests ran successfully, you can install BlueXP classification on the host when you are ready.
 
-If any issues were discovered, they are categorized as "Recommended" or "Required" to be fixed. Recommended issues are typically items that would make the Data Sense scanning and categorizing tasks run slower. These items do not need to be corrected - but you may want to address them.
+If any issues were discovered, they are categorized as "Recommended" or "Required" to be fixed. Recommended issues are typically items that would make the BlueXP classification scanning and categorizing tasks run slower. These items do not need to be corrected - but you may want to address them.
 
 If you have any "Required" issues, you should fix the issues and run the Prerequisites test script again.

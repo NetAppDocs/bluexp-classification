@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-scanning-file-shares.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode
-summary: Complete a few steps to start scanning non-NetApp NFS or CIFS file shares directly with Cloud Data Sense. These file shares can reside on-premises or in the cloud.
+summary: Complete a few steps to start scanning non-NetApp NFS or CIFS file shares directly with BlueXP classification. These file shares can reside on-premises or in the cloud.
 ---
 
 = Scanning file shares
@@ -13,7 +13,7 @@ summary: Complete a few steps to start scanning non-NetApp NFS or CIFS file shar
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to start scanning non-NetApp NFS or CIFS file shares directly with Cloud Data Sense. These file shares can reside on-premises or in the cloud.
+Complete a few steps to start scanning non-NetApp NFS or CIFS file shares directly with BlueXP classification. These file shares can reside on-premises or in the cloud.
 
 == Quick start
 
@@ -24,10 +24,10 @@ Get started quickly by following these steps, or scroll down to the remaining se
 [role="quick-margin-para"]
 For CIFS (SMB) shares, ensure that you have credentials to access the shares.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the BlueXP classification instance
 
 [role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't already an instance deployed.
+link:task-deploy-cloud-compliance.html[Deploy BlueXP classification^] if there isn't already an instance deployed.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a group to hold the file shares
 
@@ -41,32 +41,32 @@ Add the list of file shares that you want to scan and select the type of scannin
 
 == Reviewing file share requirements
 
-Review the following prerequisites to make sure that you have a supported configuration before you enable Cloud Data Sense.
+Review the following prerequisites to make sure that you have a supported configuration before you enable BlueXP classification.
 
 * The shares can be hosted anywhere, including in the cloud or on-premises. In most cases these are file shares that reside on non-NetApp storage systems. However, CIFS shares from older NetApp 7-Mode storage systems can be scanned as file shares.
 +
-Note that Data Sense can't extract permissions or the "last access time" from 7-Mode systems. Additionally, because of a known issue between some Linux versions and CIFS shares on 7-Mode systems, you must configure the share to use only SMB v1 with NTLM authentication enabled.
+Note that BlueXP classification can't extract permissions or the "last access time" from 7-Mode systems. Additionally, because of a known issue between some Linux versions and CIFS shares on 7-Mode systems, you must configure the share to use only SMB v1 with NTLM authentication enabled.
 
-* There needs to be network connectivity between the Data Sense instance and the shares.
+* There needs to be network connectivity between the BlueXP classification instance and the shares.
 
-* Make sure these ports are open to the Data Sense instance:
+* Make sure these ports are open to the BlueXP classification instance:
 ** For NFS – ports 111 and 2049.
 ** For CIFS – ports 139 and 445.
 
 * You will need the list of shares you want to add in the format `<host_name>:/<share_path>`. You can enter the shares individually, or you can supply a line-separated list of the file shares you want to scan.
 
-* For CIFS (SMB) shares, ensure that you have Active Directory credentials that provide read access to the shares. Admin credentials are preferred in case Cloud Data Sense needs to scan any data that requires elevated permissions.
+* For CIFS (SMB) shares, ensure that you have Active Directory credentials that provide read access to the shares. Admin credentials are preferred in case BlueXP classification needs to scan any data that requires elevated permissions.
 include::_include/cifs-permissions.adoc[]
 
-== Deploying the Cloud Data Sense instance
+== Deploying the BlueXP classification instance
 
-Deploy Cloud Data Sense if there isn't already an instance deployed.
+Deploy BlueXP classification if there isn't already an instance deployed.
 
-If you are scanning non-NetApp NFS or CIFS file shares that are accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy Cloud Data Sense in the cloud^] or link:task-deploy-compliance-onprem.html[deploy Data Sense in an on-premises location that has internet access^].
+If you are scanning non-NetApp NFS or CIFS file shares that are accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy BlueXP classification in the cloud^] or link:task-deploy-compliance-onprem.html[deploy BlueXP classification in an on-premises location that has internet access^].
 
-If you are scanning non-NetApp NFS or CIFS file shares that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy Cloud Data Sense in the same on-premises location that has no internet access^]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
+If you are scanning non-NetApp NFS or CIFS file shares that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy BlueXP classification in the same on-premises location that has no internet access^]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
 
-Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
+Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
 == Creating the group for the file shares
 
@@ -86,7 +86,7 @@ The new File Shares Group is added to the list of working environments.
 
 == Adding file shares to a group
 
-You add file shares to the File Shares Group so that the files in those shares will be scanned by Cloud Data Sense. You add the shares in the format `<host_name>:/<share_path>`.
+You add file shares to the File Shares Group so that the files in those shares will be scanned by BlueXP classification. You add the shares in the format `<host_name>:/<share_path>`.
 
 You can add individual file shares, or you can supply a line-separated list of the file shares you want to scan. You can add up to 100 shares at a time.
 
@@ -129,11 +129,11 @@ If the dialog lists any shares that could not be added, capture this information
 
 |===
 +
-The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if Data Sense doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't scan the files because Data Sense can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, turn the switch ON and all files are scanned regardless of the permissions. link:reference-collected-metadata.html#last-access-time-timestamp[Learn more^].
+The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't scan the files because BlueXP classification can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, turn the switch ON and all files are scanned regardless of the permissions. link:reference-collected-metadata.html#last-access-time-timestamp[Learn more^].
 
 .Result
 
-Cloud Data Sense starts scanning the files in the file shares you added, and the results are displayed in the Dashboard and in other locations.
+BlueXP classification starts scanning the files in the file shares you added, and the results are displayed in the Dashboard and in other locations.
 
 == Removing a file share from compliance scans
 

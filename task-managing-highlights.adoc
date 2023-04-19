@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-managing-highlights.html
 keywords: compliance, privacy, filter data, delete files, move files, copy files, clone files, sync files, data sense, migration
-summary: Cloud Data Sense provides many ways for you to manage your private data. Some functionality makes it easier to prepare for migrating your data, while other functionality allows you to make changes to the data.
+summary: BlueXP classification provides many ways for you to manage your private data. Some functionality makes it easier to prepare for migrating your data, while other functionality allows you to make changes to the data.
 ---
 
 = Managing your private data
@@ -13,12 +13,12 @@ summary: Cloud Data Sense provides many ways for you to manage your private data
 :imagesdir: ./media/
 
 [.lead]
-Cloud Data Sense provides many ways for you to manage your private data. Some functionality makes it easier to prepare for migrating your data, while other functionality allows you to make changes to the data.
+BlueXP classification provides many ways for you to manage your private data. Some functionality makes it easier to prepare for migrating your data, while other functionality allows you to make changes to the data.
 
 * You can copy files to a destination NFS share if you want to make a copy of certain data and move it to a different NFS location.
 * You can clone an ONTAP volume to a new volume, while including only selected files from the source volume in the new cloned volume. This is useful for situations where you're migrating data and you want to exclude certain files from the original volume.
 * You can copy and synchronize files from a source repository to a directory in a specific destination location. This is useful for situations where you're migrating data from one source system to another while there is still some final activity on the source files.
-* You can move source files that Data Sense is scanning to any NFS share.
+* You can move source files that BlueXP classification is scanning to any NFS share.
 * You can delete files that seem insecure or too risky to leave in your storage system, or that you have identified as duplicate.
 
 [NOTE]
@@ -29,7 +29,7 @@ Cloud Data Sense provides many ways for you to manage your private data. Some fu
 
 == Copying source files
 
-You can copy any source files that Data Sense is scanning. There are three types of copy operations depending on what you're trying to accomplish:
+You can copy any source files that BlueXP classification is scanning. There are three types of copy operations depending on what you're trying to accomplish:
 
 * *Copy files* from the same, or different, volumes or data sources to a destination NFS share.
 +
@@ -39,18 +39,18 @@ This is useful if you want to make a copy of certain data and move it to a diffe
 This is useful for situations where you're migrating data and you want to exclude certain files from the original volume. This action uses the https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[NetApp FlexClone^] functionality to quickly duplicate the volume and then remove the files that you *didn't* select.
 * *Copy and synchronize files* from a single source repository (ONTAP volume, S3 bucket, NFS share, etc.) to a directory in a specific destination (target) location.
 +
-This is useful for situations where you're migrating data from one source system to another. After the initial copy, the service syncs any changed data based on the schedule that you set. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
+This is useful for situations where you're migrating data from one source system to another. After the initial copy, the service syncs any changed data based on the schedule that you set. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp BlueXP copy and sync^] functionality to copy and sync data from a source to a target.
 
 === Copying source files to an NFS share
 
-You can copy source files that Data Sense is scanning to any NFS share. The NFS share doesn't need to be integrated with Data Sense, you just need to know the name of the NFS share where all selected files will be copied in the format `<host_name>:/<share_path>`.
+You can copy source files that BlueXP classification is scanning to any NFS share. The NFS share doesn't need to be integrated with BlueXP classification, you just need to know the name of the NFS share where all selected files will be copied in the format `<host_name>:/<share_path>`.
 
 TIP: You can't copy files that reside in databases.
 
 .Requirements
 
 * You must have the Account Admin or Workspace Admin role to copy files.
-* Copying files requires that the destination NFS share allows access from the Data Sense instance.
+* Copying files requires that the destination NFS share allows access from the BlueXP classification instance.
 * You can copy between 1 and 100,000 files at a time.
 
 .Steps
@@ -80,7 +80,7 @@ image:screenshot_compliance_copy_file.png[A screenshot showing selection of the 
 
 === Cloning volume data to a new volume
 
-You can clone an existing ONTAP volume that Data Sense is scanning using NetApp _FlexClone_ functionality. This allows you to quickly duplicate the volume while including only those files you selected. This is useful if you're migrating data and you want to exclude certain files from the original volume, or if you want to create a copy of a volume for testing.
+You can clone an existing ONTAP volume that BlueXP classification is scanning using NetApp _FlexClone_ functionality. This allows you to quickly duplicate the volume while including only those files you selected. This is useful if you're migrating data and you want to exclude certain files from the original volume, or if you want to create a copy of a volume for testing.
 
 The new volume is created in the same aggregate as the source volume. Ensure that you have enough space for this new volume in the aggregate before you start this task. Contact your storage administrator if necessary.
 
@@ -125,13 +125,13 @@ The new, cloned volume is created in the same aggregate as the source volume.
 
 You can view the progress of the clone operation in the link:task-view-compliance-actions.html[Actions Status pane].
 
-If you initially selected *Map all volumes* or *Map & Classify all volumes* when you enabled Data Sense for the working environment where the source volume resides, then Data Sense will scan the new cloned volume automatically. If you didn't use either of these selections initially, then if you want to scan this new volume, you'll need to link:task-getting-started-compliance.html#enabling-and-disabling-compliance-scans-on-volumes[enable scanning on the volume manually].
+If you initially selected *Map all volumes* or *Map & Classify all volumes* when you enabled BlueXP classification for the working environment where the source volume resides, then BlueXP classification will scan the new cloned volume automatically. If you didn't use either of these selections initially, then if you want to scan this new volume, you'll need to link:task-getting-started-compliance.html#enabling-and-disabling-compliance-scans-on-volumes[enable scanning on the volume manually].
 
 === Copying and synchronizing source files to a target system
 
-You can copy source files that Data Sense is scanning from any supported unstructured data source to a directory in a specific target destination location (https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html[target locations that are supported by Cloud Sync^]). After the initial copy, any data changed in the files are synchronized based on the schedule that you configure.
+You can copy source files that BlueXP classification is scanning from any supported unstructured data source to a directory in a specific target destination location (https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html[target locations that are supported by BlueXP copy and sync^]). After the initial copy, any data changed in the files are synchronized based on the schedule that you configure.
 
-This is useful for situations where you're migrating data from one source system to another. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp Cloud Sync^] functionality to copy and sync data from a source to a target.
+This is useful for situations where you're migrating data from one source system to another. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp BlueXP copy and sync^] functionality to copy and sync data from a source to a target.
 
 TIP: You can't copy and sync files that reside in databases, OneDrive accounts, or SharePoint accounts.
 
@@ -140,9 +140,9 @@ TIP: You can't copy and sync files that reside in databases, OneDrive accounts, 
 * You must have the Account Admin or Workspace Admin role to copy and sync files.
 * You must select a minimum of 20 files.
 * All selected files must be from the same source repository (ONTAP volume, S3 bucket, NFS or CIFS share, etc.).
-* You'll need to activate the Cloud Sync service and configure a minimum of one data broker that can be used to transfer files between the source and target systems. Review the Cloud Sync requirements beginning with the https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html[Quick Start description^].
+* You'll need to activate the BlueXP copy and sync service and configure a minimum of one data broker that can be used to transfer files between the source and target systems. Review the BlueXP copy and sync requirements beginning with the https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html[Quick Start description^].
 +
-Note that the Cloud Sync service has separate service charges for your sync relationships, and will incur resource charges if you deploy the data broker in the cloud.
+Note that the BlueXP copy and sync service has separate service charges for your sync relationships, and will incur resource charges if you deploy the data broker in the cloud.
 
 .Steps
 
@@ -162,24 +162,24 @@ image:screenshot_compliance_sync_files_dialog.png[A screenshot showing the Copy 
 
 . If you are sure that you want to sync the selected files to a destination location, click *OK*.
 +
-The Cloud Sync UI is opened in BlueXP.
+The BlueXP copy and sync UI is opened in BlueXP.
 +
-You are prompted to define the sync relationship. The Source system is pre-populated based on the repository and files you already selected in Data Sense.
+You are prompted to define the sync relationship. The Source system is pre-populated based on the repository and files you already selected in BlueXP classification.
 
-. You'll need to select the Target system and then select (or create) the Data Broker you plan to use. Review the Cloud Sync requirements beginning with the link:https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html[Quick Start description^].
+. You'll need to select the Target system and then select (or create) the Data Broker you plan to use. Review the BlueXP copy and sync requirements beginning with the link:https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html[Quick Start description^].
 
 .Result
 
 The files are copied to the target system and they'll be synchronized based on the schedule you define. If you select a one-time sync then the files are copied and synchronized one time only. If you choose a periodic sync, then the files are synchronized based on the schedule. Note that if the source system adds new files that match the query you created using filters, those _new_ files will be copied to the destination and synchronized in the future.
 
-Note that some of the usual Cloud Sync operations are disabled when it is invoked from Data Sense:
+Note that some of the usual BlueXP copy and sync operations are disabled when it is invoked from BlueXP classification:
 
 * You can't use the *Delete Files on Source* or *Delete Files on Target* buttons.
 * Running a report is disabled.
 
 == Moving source files to an NFS share
 
-You can move source files that Data Sense is scanning to any NFS share. The NFS share doesn't need to be integrated with Data Sense (see link:task-scanning-file-shares.html[Scanning file shares]).
+You can move source files that BlueXP classification is scanning to any NFS share. The NFS share doesn't need to be integrated with BlueXP classification (see link:task-scanning-file-shares.html[Scanning file shares]).
 
 Optionally, you can leave a breadcrumb file in the location of the moved file. A breadcrumb file helps your users understand why a file was moved from its original location. For each moved file, the system creates a breadcrumb file in the source location named `<filename>-breadcrumb-<date>.txt`. You can add text in the dialog box that will be added to the breadcrumb file to indicate the location where the file was moved and the user who moved the file.
 
@@ -191,7 +191,7 @@ TIP: You can't move files that reside in databases.
 
 * You must have the Account Admin or Workspace Admin role to move files.
 * The source files can be located in the following data sources: On-premises ONTAP, Cloud Volumes ONTAP, Azure NetApp Files, File Shares, and SharePoint Online.
-* Moving files requires that the NFS share allows access from the Data Sense instance IP address.
+* Moving files requires that the NFS share allows access from the BlueXP classification instance IP address.
 * You can move a maximum of 15 million files at a time.
 
 .Steps
