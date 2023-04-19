@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-scanning-file-shares.html
-keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, Data Sense
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode
 summary: Complete a few steps to start scanning non-NetApp NFS or CIFS file shares directly with Cloud Data Sense. These file shares can reside on-premises or in the cloud.
 ---
 
@@ -45,7 +45,7 @@ Review the following prerequisites to make sure that you have a supported config
 
 * The shares can be hosted anywhere, including in the cloud or on-premises. In most cases these are file shares that reside on non-NetApp storage systems. However, CIFS shares from older NetApp 7-Mode storage systems can be scanned as file shares.
 +
-Data Sense can't extract permissions or last access time from 7-Mode systems. Additionally, there is a known issue where mounting CIFS shares on SMB version 2 is not supported for Linux.
+Note that Data Sense can't extract permissions or the "last access time" from 7-Mode systems. Additionally, because of a known issue between some Linux versions and CIFS shares on 7-Mode systems, you must configure the share to use only SMB v1 with NTLM authentication enabled.
 
 * There needs to be network connectivity between the Data Sense instance and the shares.
 
