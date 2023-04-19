@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-manage-file-access-events.html
 keywords: compliance, actions, view progress, audit, logs, installation
-summary: You can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
+summary: You can configure BlueXP classification to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
 ---
 
 = Monitor and manage file access events
@@ -13,13 +13,13 @@ summary: You can configure Data Sense to log events to a file whenever one of th
 :imagesdir: ./media/
 
 [.lead]
-You can configure Data Sense to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
+You can configure BlueXP classification to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
 
 For example, if you want to track when any changes are made to your sensitive personnel files or payroll files, you can enable this feature on the volumes where these files reside. Then you can view the File Access Audit Log to see if these files have been changed. If they have been changed, you'll be able to see the name of the person who made the change and when the change was made.
 
-You can enable this feature on any critical volumes in your ONTAP working environments. When enabled on a volume, file access events are tracked for all files and directories in the volume. This capability is based on the https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html[FPolicy feature^] from your ONTAP systems, and it uses your Data Sense system as an FPolicy server to receive notification messages (events) from ONTAP.
+You can enable this feature on any critical volumes in your ONTAP working environments. When enabled on a volume, file access events are tracked for all files and directories in the volume. This capability is based on the https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html[FPolicy feature^] from your ONTAP systems, and it uses your BlueXP classification system as an FPolicy server to receive notification messages (events) from ONTAP.
 
-Data Sense currently captures events for the following actions on your files and directories: 
+BlueXP classification currently captures events for the following actions on your files and directories: 
 
 * Create
 * Read
@@ -33,14 +33,14 @@ BlueXP users with the "Account Admin" or "Workspace Admin" roles can configure v
 
 == Supported data sources
 
-Data Sense can log file access events for files that reside on the following data sources:
+BlueXP classification can log file access events for files that reside on the following data sources:
 
 * On-premises ONTAP
 * Cloud Volumes ONTAP
 * Azure NetApp Files
 * FSx for ONTAP
 
-You must have Active Directory configured for these data sources so that Data Sense can identify the name of the person who accessed the files.
+You must have Active Directory configured for these data sources so that BlueXP classification can identify the name of the person who accessed the files.
 
 == Configure volumes for file access audit logging
 
@@ -89,15 +89,15 @@ For example, the following lines from the log file show a successful copy operat
 
 == Access the File Access Audit Log files
 
-The File Access Audit Log files are located on the Data Sense machine in: `/opt/netapp/audit_logs/`
+The File Access Audit Log files are located on the BlueXP classification machine in: `/opt/netapp/audit_logs/`
 
-The log files are named "File_Access_Audit_<volume_name>_<timestamp>.log"; for example "File Access Audit_MedicalData_20230205092321.log". The <timestamp> is the time when Data Sense wrote the first log to the file. Each file is configured by default to contain a maximum of 50,000 events. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> After this maximum has been reached, a new log file for that volume is created. The new file will have a newer timestamp.
+The log files are named "File_Access_Audit_<volume_name>_<timestamp>.log"; for example "File Access Audit_MedicalData_20230205092321.log". The <timestamp> is the time when BlueXP classification wrote the first log to the file. Each file is configured by default to contain a maximum of 50,000 events. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> After this maximum has been reached, a new log file for that volume is created. The new file will have a newer timestamp.
 
 The total size of all the log files in the directory is set to a default value of 50 GB. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> When that limit is reached, the oldest log files are deleted automatically.
 
-When Data Sense is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the log files.
+When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the log files.
 
-When Data Sense is deployed in the cloud, you'll need to SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
+When BlueXP classification is deployed in the cloud, you'll need to SSH to the BlueXP classification instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
 
  ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
 
@@ -118,9 +118,9 @@ Note that you'll need to modify the security group inbound rules to access the s
 
 == Configure File Access Audit Log settings
 
-There are three options that you can configure for the file access audit file logs. These settings apply to all data sources that have configured file access audit logging on this Data Sense instance. You configure these settings from the _File Access Audit Log_ section of the Data Sense _Configuration_ page.
+There are three options that you can configure for the file access audit file logs. These settings apply to all data sources that have configured file access audit logging on this BlueXP classification instance. You configure these settings from the _File Access Audit Log_ section of the BlueXP classification _Configuration_ page.
 
-image:screenshot_compliance_file_access_audit_config.png[A screenshot showing the configuration setting for the audit logs in the Data Sense Configuration page.]
+image:screenshot_compliance_file_access_audit_config.png[A screenshot showing the configuration setting for the audit logs in the BlueXP classification Configuration page.]
 
 [cols=2*,options="header",cols="30,50"]
 |===

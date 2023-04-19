@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-scanning-onedrive.html
-keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive, Data Sense
-summary: Complete a few steps to start scanning files in your user's OneDrive folders with Cloud Data Sense.
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive, data sense
+summary: Complete a few steps to start scanning files in your user's OneDrive folders with BlueXP classification.
 ---
 
 = Scanning OneDrive accounts
@@ -13,7 +13,7 @@ summary: Complete a few steps to start scanning files in your user's OneDrive fo
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to start scanning files in your user's OneDrive folders with Cloud Data Sense.
+Complete a few steps to start scanning files in your user's OneDrive folders with BlueXP classification.
 
 == Quick start
 
@@ -24,10 +24,10 @@ Get started quickly by following these steps, or scroll down to the remaining se
 [role="quick-margin-para"]
 Ensure that you have the Admin credentials to log into the OneDrive account.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Cloud Data Sense instance
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the BlueXP classification instance
 
 [role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't already an instance deployed.
+link:task-deploy-cloud-compliance.html[Deploy BlueXP classification^] if there isn't already an instance deployed.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add the OneDrive account
 
@@ -41,20 +41,20 @@ Add the list of users from the OneDrive account that you want to scan and select
 
 == Reviewing OneDrive requirements
 
-Review the following prerequisites to make sure that you have a supported configuration before you enable Cloud Data Sense.
+Review the following prerequisites to make sure that you have a supported configuration before you enable BlueXP classification.
 
 * You must have the Admin login credentials for the OneDrive for Business account that provides read access to the user's files.
 * You'll need a line-separated list of the email addresses for all the users whose OneDrive folders you want to scan.
 
-== Deploying the Cloud Data Sense instance
+== Deploying the BlueXP classification instance
 
-Deploy Cloud Data Sense if there isn't already an instance deployed.
+Deploy BlueXP classification if there isn't already an instance deployed.
 
-Data Sense can be link:task-deploy-cloud-compliance.html[deployed in the cloud^] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^].
+BlueXP classification can be link:task-deploy-cloud-compliance.html[deployed in the cloud^] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^].
 
-Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
+Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
-//Data Sense can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local OneDrive files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
+//BlueXP classification can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local OneDrive files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
 
 == Adding the OneDrive account
 
@@ -68,13 +68,13 @@ image:screenshot_compliance_add_onedrive_button.png[A screenshot of the Scan Con
 
 . In the Add a OneDrive account dialog, click *Sign in to OneDrive*.
 
-. In the Microsoft page that appears, select the OneDrive account and enter the required Admin user and password, then click *Accept* to allow Cloud Data Sense to read data from this account.
+. In the Microsoft page that appears, select the OneDrive account and enter the required Admin user and password, then click *Accept* to allow BlueXP classification to read data from this account.
 
 The OneDrive account is added to the list of working environments.
 
 == Adding OneDrive users to compliance scans
 
-You can add individual OneDrive users, or all of your OneDrive users, so that their files will be scanned by Cloud Data Sense.
+You can add individual OneDrive users, or all of your OneDrive users, so that their files will be scanned by BlueXP classification.
 
 .Steps
 
@@ -113,7 +113,7 @@ If the dialog lists any users who could not be added, capture this information s
 
 .Result
 
-Cloud Data Sense starts scanning the files for the users you added, and the results are displayed in the Dashboard and in other locations.
+BlueXP classification starts scanning the files for the users you added, and the results are displayed in the Dashboard and in other locations.
 
 == Removing a OneDrive user from compliance scans
 
@@ -121,4 +121,4 @@ If users leave the company or if their email address changes, you can remove ind
 
 image:screenshot_compliance_onedrive_remove_user.png[A screenshot showing how to remove a single user from having their files scanned.]
 
-Note that you can link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-cloud-data-sense[delete the entire OneDrive account from Data Sense] if you no longer want to scan any user data from the OneDrive account.
+Note that you can link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification[delete the entire OneDrive account from BlueXP classification] if you no longer want to scan any user data from the OneDrive account.

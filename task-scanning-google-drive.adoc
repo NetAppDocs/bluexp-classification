@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-scanning-google-drive.html
 keywords: cloud compliance, enable cloud compliance, privacy, compliance, google drive, data sense
-summary: Complete a few steps to start scanning user files in your Google Drive accounts with Cloud Data Sense.
+summary: Complete a few steps to start scanning user files in your Google Drive accounts with BlueXP classification.
 ---
 
 = Scanning Google Drive accounts
@@ -13,7 +13,7 @@ summary: Complete a few steps to start scanning user files in your Google Drive 
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to start scanning user files in your Google Drive accounts with Cloud Data Sense.
+Complete a few steps to start scanning user files in your Google Drive accounts with BlueXP classification.
 
 == Quick start
 
@@ -25,10 +25,10 @@ Get started quickly by following these steps, or scroll down to the remaining se
 Ensure that you have the Admin credentials to log into the Google Drive account.
 //, and that you have the URLs for the Google Drive sites that you want to scan.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy Cloud Data Sense
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy BlueXP classification
 
 [role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html[Deploy Cloud Data Sense^] if there isn't already an instance deployed.
+link:task-deploy-cloud-compliance.html[Deploy BlueXP classification^] if there isn't already an instance deployed.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Log into the Google Drive account
 
@@ -47,7 +47,7 @@ Select the type of scanning you want to perform on the user files; mapping or ma
 
 == Reviewing Google Drive requirements
 
-Review the following prerequisites to make sure you are ready to enable Cloud Data Sense on a Google Drive account.
+Review the following prerequisites to make sure you are ready to enable BlueXP classification on a Google Drive account.
 
 * You must have the Admin login credentials for the Google Drive account that provides read access to the user's files
 // all Google Drive sites.
@@ -55,20 +55,20 @@ Review the following prerequisites to make sure you are ready to enable Cloud Da
 
 === Current restrictions
 
-The following Data Sense features are not currently supported with Google Drive files:
+The following BlueXP classification features are not currently supported with Google Drive files:
 
 * When viewing files in the Data Investigation page, the actions in the button bar aren't active. You can't copy, move, delete, etc. any files.
 * Permissions can't be identified within files in Google Drive, so no permission information is displayed in the Investigation page.
 
-== Deploying Cloud Data Sense
+== Deploying BlueXP classification
 
-Deploy Cloud Data Sense if there isn't already an instance deployed.
+Deploy BlueXP classification if there isn't already an instance deployed.
 
-Data Sense can be link:task-deploy-cloud-compliance.html[deployed in the cloud^] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^].
+BlueXP classification can be link:task-deploy-cloud-compliance.html[deployed in the cloud^] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^].
 
-Upgrades to Data Sense software is automated as long as the instance has internet connectivity.
+Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 //
-// Data Sense can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local Google Drive files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
+// BlueXP classification can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local Google Drive files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
 
 == Adding the Google Drive account
 
@@ -82,13 +82,13 @@ image:screenshot_compliance_add_google_drive_button.png[A screenshot of the Scan
 
 . In the Add a Google Drive Account dialog, click *Sign in to Google Drive*.
 
-. In the Google page that appears, select the Google Drive account and enter the required Admin user and password, then click *Accept* to allow Cloud Data Sense to read data from this account.
+. In the Google page that appears, select the Google Drive account and enter the required Admin user and password, then click *Accept* to allow BlueXP classification to read data from this account.
 
 The Google Drive account is added to the list of working environments.
 
 == Selecting the type of scanning for user data
 
-Select the type of scanning that Cloud Data Sense will perform on the user's data.
+Select the type of scanning that BlueXP classification will perform on the user's data.
 
 .Steps
 
@@ -113,7 +113,7 @@ image:screenshot_compliance_google_drive_add_sites.png[A screenshot of the Confi
 
 . Enable mapping-only scans, or mapping and classification scans, on the files in the Google Drive account.
 +
-image:screenshot_compliance_google_drive_select_scan.png[A screenshot showing how to select the type of scanning Data Sense will perform on the Google Drive data.]
+image:screenshot_compliance_google_drive_select_scan.png[A screenshot showing how to select the type of scanning BlueXP classification will perform on the Google Drive data.]
 +
 [cols="45,45",width=90%,options="header"]
 |===
@@ -128,11 +128,11 @@ image:screenshot_compliance_google_drive_select_scan.png[A screenshot showing ho
 
 .Result
 
-Cloud Data Sense starts scanning the files in the Google Drive account you added, and the results are displayed in the Dashboard and in other locations.
+BlueXP classification starts scanning the files in the Google Drive account you added, and the results are displayed in the Dashboard and in other locations.
 
 == Removing a Google Drive account from compliance scans
 
 //If you remove a Google Drive site in the future, or decide not to scan files in a Google Drive site, you can remove individual Google Drive sites from having their files scanned at any time. Just click *Remove Google Drive Site* from the Configuration page.
 //
 //image:screenshot_compliance_sharepoint_remove_site.png[A screenshot showing how to remove a single Google Drive site from having their files scanned.]
-Since only a single user's Google Drive files are part of a single Google Drive account, if you want to stop scanning files from a user's Google Drive account, then you should link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-cloud-data-sense[delete the Google Drive account from Data Sense].
+Since only a single user's Google Drive files are part of a single Google Drive account, if you want to stop scanning files from a user's Google Drive account, then you should link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification[delete the Google Drive account from BlueXP classification].

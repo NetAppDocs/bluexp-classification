@@ -19,8 +19,8 @@ This allows you to see the actions that have completed successfully, those curre
 
 The status can be:
 
-* Success - A Data Sense action is finished and all items succeeded.
-* Partial Success - A Data Sense action is finished and some items failed and some succeeded.
+* Success - A BlueXP classification action is finished and all items succeeded.
+* Partial Success - A BlueXP classification action is finished and some items failed and some succeeded.
 * In Progress - The action is still in progress.
 * Queued - The action has not started.
 * Canceled - The action has been canceled.
@@ -30,7 +30,7 @@ Note that you can Cancel any actions that have the "Queued" or "In Progress" sta
 
 .Steps
 
-. In the bottom-right of the Data Sense UI you can see the *Actions Status* button image:button_actions_status.png[].
+. In the bottom-right of the BlueXP classification UI you can see the *Actions Status* button image:button_actions_status.png[].
 
 . Click this button and the most recent 20 actions are listed.
 +

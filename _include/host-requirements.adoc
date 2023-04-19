@@ -1,0 +1,47 @@
+* BlueXP classification is not supported on a host that is shared with other applications - the host must be a dedicated host.
+
+// Change /var to /var/lib/docker for early May release.
+* When building the host system in your premises, you can choose among three system sizes depending on the size of the data set that you plan to have BlueXP classification scan.
++
+[cols="18,18,26,30",width=95%,options="header"]
+|===
+| System size
+| CPU
+| RAM (swap memory must be disabled)
+| Disk
+| *Large* | 16 CPUs | 64 GB RAM | 500 GiB SSD on /, or
+- 100 GiB available on /opt
+- 395 GiB available on /var
+- 5 GiB on /tmp
+| *Medium* | 8 CPUs | 32 GB RAM | 200 GiB SSD on /, or
+- 50 GiB available on /opt
+- 145 GiB available on /var
+- 5 GiB on /tmp
+| *Small* | 8 CPUs | 16 GB RAM | 100 GiB SSD on /, or
+- 50 GiB available on /opt
+- 45 GiB available on /var
+- 5 GiB on /tmp
+|===
++
+Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
+
+* When deploying a compute instance in the cloud for your BlueXP classification installation, we recommend a system that meets the "Large" system requirements above:
+
+** *AWS EC2 instance type*: We recommend "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types[See additional AWS instance types^]. 
+** *Azure VM size*: We recommend "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types[See additional Azure instance types^].
+** *GCP machine type*: We recommend "n2-standard-16". link:reference-instance-types.html#gcp-instance-types[See additional GCP instance types^].
+
+* *Operating system*: The OS must be capable of installing the docker engine.
+
+** Red Hat Enterprise Linux versions 8.0 through 8.7
+** CentOS versions 8.0 through 8.7
+** CentOS Stream 8 
+** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
+//** Ubuntu 22.04
+
+* *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
+
+* *Additional software*: You must install the following software on the host before you install BlueXP classification:
+
+** Docker Engine version 19.3.1 or later. https://docs.docker.com/engine/install/[View installation instructions^].
+** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].

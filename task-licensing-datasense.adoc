@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-licensing-datasense.html
 keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, data sense, cloud data sense
-summary: The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspace is free. A BYOL license from NetApp, or a subscription from your cloud provider Marketplace, is required to continue scanning data after that point.
+summary: The first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free. A BYOL license from NetApp, or a subscription from your cloud provider Marketplace, is required to continue scanning data after that point.
 ---
 
-= Set up licensing for Cloud Data Sense
+= Set up licensing for BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,22 +13,22 @@ summary: The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspac
 :imagesdir: ./media/
 
 [.lead]
-The first 1 TB of data that Cloud Data Sense scans in a BlueXP workspace is free for 30 days. A BYOL license from NetApp, or a subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
+The first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free for 30 days. A BYOL license from NetApp, or a subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
 
 A few notes before you read any further:
 
-* If you've already subscribed to the BlueXP pay-as-you-go (PAYGO) subscription in your cloud provider's marketplace, then you're automatically subscribed to Cloud Data Sense as well. You won't need to subscribe again.
-// You'll see an active subscription in the Digital Wallet.
+* If you've already subscribed to the BlueXP pay-as-you-go (PAYGO) subscription in your cloud provider's marketplace, then you're automatically subscribed to BlueXP classification as well. You won't need to subscribe again.
+// You'll see an active subscription in the BlueXP digital wallet.
 
-* The Cloud Data Sense bring-your-own-license (BYOL) is a _floating_ license that you can use across all the working environments and data sources in the workspace that you plan to scan. You'll see an active subscription in the Digital Wallet.
+* The BlueXP classification (Data Sense) bring-your-own-license (BYOL) is a _floating_ license that you can use across all the working environments and data sources in the workspace that you plan to scan. You'll see an active subscription in the BlueXP digital wallet.
 
-link:concept-cloud-compliance.html#cost[Learn more about the licensing and costs related to Cloud Data Sense].
+link:concept-cloud-compliance.html#cost[Learn more about the licensing and costs related to BlueXP classification].
 
-== Use a Cloud Data Sense PAYGO subscription
+== Use a BlueXP classification PAYGO subscription
 
-Pay-as-you-go subscriptions from your cloud provider's marketplace enable you to license the use of Cloud Volumes ONTAP systems and many Cloud Data Services, such as Cloud Data Sense.
+Pay-as-you-go subscriptions from your cloud provider's marketplace enable you to license the use of Cloud Volumes ONTAP systems and many Cloud Data Services, such as BlueXP classification.
 
-You can subscribe at any time and you will not be charged until either the 30 day trial ends, or the amount of data exceeds 1 TB. You can always see the total amount of data that is being scanned from the Data Sense Dashboard. And the _Subscribe Now_ button makes it easy to subscribe when you are ready.
+You can subscribe at any time and you will not be charged until either the 30 day trial ends, or the amount of data exceeds 1 TB. You can always see the total amount of data that is being scanned from the BlueXP classification Governance Dashboard. And the _Subscribe Now_ button makes it easy to subscribe when you are ready.
 
 image:screenshot_compliance_subscribe.png[A screenshot showing how much data is being scanned and the Subscribe button to subscribe to the service.]
 
@@ -66,30 +66,30 @@ The following video shows how to associate a https://console.cloud.google.com/ma
 +
 video::video_subscribing_gcp.mp4[width=848, height=480]
 
-== Use a Cloud Data Sense BYOL license
+== Use a BlueXP classification BYOL license
 
-Bring-your-own licenses from NetApp provide 1-, 2-, or 3-year terms. The BYOL *Cloud Data Sense* license is a _floating_ license where the total capacity is shared among *all* of your working environments and data sources, making initial licensing and renewal easy.
+Bring-your-own licenses from NetApp provide 1-, 2-, or 3-year terms. The BYOL BlueXP classification (Data Sense) license is a _floating_ license where the total capacity is shared among *all* of your working environments and data sources, making initial licensing and renewal easy.
 
-If you don't have a Cloud Data Sense license, contact us to purchase one:
+If you don't have a BlueXP classification license, contact us to purchase one:
 
 * mailto:ng-contact-data-sense@netapp.com?subject=Licensing[Send email to purchase a license].
 * Click the chat icon in the lower-right of BlueXP to request a license.
 
-Optionally, if you have an unassigned node-based license for Cloud Volumes ONTAP that you won't be using, you can convert it to a Cloud Data Sense license with the same dollar-equivalence and the same expiration date. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses[Go here for details^].
+Optionally, if you have an unassigned node-based license for Cloud Volumes ONTAP that you won't be using, you can convert it to a BlueXP classification license with the same dollar-equivalence and the same expiration date. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses[Go here for details^].
 
-You use the Digital Wallet page in BlueXP to manage Cloud Data Sense BYOL licenses. You can add new licenses and update existing licenses.
+You use the BlueXP digital wallet page in BlueXP to manage BlueXP classification BYOL licenses. You can add new licenses and update existing licenses.
 
-=== Obtain your Cloud Data Sense license file
+=== Obtain your BlueXP classification license file
 
-After you have purchased your Cloud Data Sense license, you activate the license in BlueXP by entering the Cloud Data Sense serial number and NSS account, or by uploading the NLF license file. The steps below show how to get the NLF license file if you plan to use that method.
+After you have purchased your BlueXP classification (Data Sense) license, you activate the license in BlueXP by entering the BlueXP classification serial number and NSS account, or by uploading the NLF license file. The steps below show how to get the NLF license file if you plan to use that method.
 
-If you've deployed Cloud Data Sense on a host in an on-premises site that doesn't have internet access, you'll need to obtain the license file from an internet-connected system. Activating the license using the serial number and NSS account is not available for dark site installations.
+If you've deployed BlueXP classification on a host in an on-premises site that doesn't have internet access, you'll need to obtain the license file from an internet-connected system. Activating the license using the serial number and NSS account is not available for dark site installations.
 
 .Steps
 
 . Sign in to the https://mysupport.netapp.com[NetApp Support Site^] and click *Systems > Software Licenses*.
 
-. Enter your Cloud Data Sense license serial number.
+. Enter your BlueXP classification license serial number.
 +
 image:screenshot_cloud_tiering_license_step1.gif[A screenshot that shows a table of licenses after searching by serial number.]
 
@@ -101,9 +101,9 @@ image:screenshot_cloud_tiering_license_step2.gif[A screenshot that shows the get
 +
 You can find your BlueXP Account ID by selecting the *Account* drop-down from the top of BlueXP, and then clicking *Manage Account* next to your account. Your Account ID is in the Overview tab.
 
-=== Add Cloud Data Sense BYOL licenses to your account
+=== Add BlueXP classification BYOL licenses to your account
 
-After you purchase a Cloud Data Sense license for your BlueXP account, you need to add the license to BlueXP to use the Data Sense service.
+After you purchase a BlueXP classification (Data Sense) license for your BlueXP account, you need to add the license to BlueXP to use the BlueXP classification service.
 
 .Steps
 
@@ -113,57 +113,57 @@ After you purchase a Cloud Data Sense license for your BlueXP account, you need 
 
 . In the _Add License_ dialog, enter the license information and click *Add License*:
 +
-* If you have the Data Sense license serial number and know your NSS account, select the *Enter Serial Number* option and enter that information.
+* If you have the BlueXP classification license serial number and know your NSS account, select the *Enter Serial Number* option and enter that information.
 +
 If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html[add the NSS account to BlueXP^].
-* If you have the Data Sense license file (required when installed in a dark site), select the *Upload License File* option and follow the prompts to attach the file.
+* If you have the BlueXP classification license file (required when installed in a dark site), select the *Upload License File* option and follow the prompts to attach the file.
 +
-image:screenshot_services_license_add.png[A screenshot that shows the page to add the Cloud Data Sense BYOL license.]
+image:screenshot_services_license_add.png[A screenshot that shows the page to add the BlueXP classification BYOL license.]
 
 .Result
 
-BlueXP adds the license so that your Cloud Data Sense service is active.
+BlueXP adds the license so that your BlueXP classification service is active.
 
-=== Update a Cloud Data Sense BYOL license
+=== Update a BlueXP classification BYOL license
 
-If your licensed term is nearing the expiration date, or if your licensed capacity is reaching the limit, you'll be notified in Cloud Data Sense.
+If your licensed term is nearing the expiration date, or if your licensed capacity is reaching the limit, you'll be notified in BlueXP classification.
 
-image:screenshot_services_license_expire_cc1.png[A screenshot that shows an expiring license in the Cloud Data Sense page.]
+image:screenshot_services_license_expire_cc1.png[A screenshot that shows an expiring license in the BlueXP classification page.]
 
-This status also appears in the Digital Wallet.
+This status also appears in the BlueXP digital wallet.
 
-image:screenshot_services_license_expire_cc2.png[A screenshot that shows an expiring license in the Digital Wallet page.]
+image:screenshot_services_license_expire_cc2.png[A screenshot that shows an expiring license in the BlueXP digital wallet page.]
 
-You can update your Cloud Data Sense license before it expires so that there is no interruption in your ability to access your scanned data.
+You can update your BlueXP classification license before it expires so that there is no interruption in your ability to access your scanned data.
 
 .Steps
 
 . Click the chat icon in the lower-right of BlueXP to request an extension to your term or additional capacity to your Cloud Data Sense license for the particular serial number. You can also mailto:ng-contact-data-sense@netapp.com?subject=Licensing[send an email to request an update to your license].
 +
-After you pay for the license and it is registered with the NetApp Support Site, BlueXP automatically updates the license in the Digital Wallet and the Data Services Licenses page will reflect the change in 5 to 10 minutes.
+After you pay for the license and it is registered with the NetApp Support Site, BlueXP automatically updates the license in the BlueXP digital wallet and the Data Services Licenses page will reflect the change in 5 to 10 minutes.
 
 . If BlueXP can't automatically update the license (for example, when installed in a dark site), then you'll need to manually upload the license file.
-.. You can <<Obtain your Cloud Data Sense license file,obtain the license file from the NetApp Support Site>>.
-.. On the Digital Wallet page in the _Data Services Licenses_ tab, click image:screenshot_horizontal_more_button.gif[More icon] for the service serial number you are updating, and click *Update License*.
+.. You can <<Obtain your BlueXP classification license file,obtain the license file from the NetApp Support Site>>.
+.. On the BlueXP digital wallet page in the _Data Services Licenses_ tab, click image:screenshot_horizontal_more_button.gif[More icon] for the service serial number you are updating, and click *Update License*.
 +
 image:screenshot_services_license_update.png[A screenshot of selecting the Update License button for a particular service.]
 .. In the _Update License_ page, upload the license file and click *Update License*.
 
 .Result
 
-BlueXP updates the license so that your Cloud Data Sense service continues to be active.
+BlueXP updates the license so that your BlueXP classification service continues to be active.
 
 === BYOL license considerations
 
-When using a Cloud Data Sense BYOL license, BlueXP displays a warning in the Data Sense UI and in the Digital Wallet UI when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. You receive these warnings:
+When using a BlueXP classification (Data Sense) BYOL license, BlueXP displays a warning in the BlueXP classification UI and in the BlueXP digital wallet UI when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. You receive these warnings:
 
 * When the amount of data you are scanning has reached 80% of licensed capacity, and again when you have reached the limit
 * 30 days before a license is due to expire, and again when the license expires
 
 Use the chat icon in the lower right of the BlueXP interface to renew your license when you see these warnings.
 
-If your license expires or you have reached the BYOL limit, Data Sense continues to run, but access to the Dashboards is blocked so that you can't view information about any of your scanned data. Only the _Configuration_ page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit.
+If your license expires or you have reached the BYOL limit, BlueXP classification continues to run, but access to the Dashboards is blocked so that you can't view information about any of your scanned data. Only the _Configuration_ page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit.
 
-Once you renew your BYOL license, BlueXP automatically updates the license in the Digital Wallet and provides full access to all Dashboards. If BlueXP can't access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to BlueXP. For instructions, see <<Update a Cloud Data Sense BYOL license,how to update a Cloud Data Sense license>>.
+Once you renew your BYOL license, BlueXP automatically updates the license in the BlueXP digital wallet and provides full access to all Dashboards. If BlueXP can't access the license file over the secure internet connection (for example, when installed in a dark site), you can obtain the file yourself and manually upload it to BlueXP. For instructions, see <<Update a BlueXP classification BYOL license,how to update a BlueXP classification license>>.
 
-NOTE: If the account you are using has both a BYOL license and a PAYGO subscription, Data Sense _will not_ shift over to the PAYGO subscription when the BYOL license expires. You must renew the BYOL license.
+NOTE: If the account you are using has both a BYOL license and a PAYGO subscription, BlueXP classification _will not_ shift over to the PAYGO subscription when the BYOL license expires. You must renew the BYOL license.

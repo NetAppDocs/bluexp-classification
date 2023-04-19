@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-org-private-data.html
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense
-summary: Cloud Data Sense provides many ways for you to manage and organize your private data. This makes it easier to see the data that is most important to you.
+summary: BlueXP classification provides many ways for you to manage and organize your private data. This makes it easier to see the data that is most important to you.
 ---
 
 = Organizing your private data
@@ -13,9 +13,9 @@ summary: Cloud Data Sense provides many ways for you to manage and organize your
 :imagesdir: ./media/
 
 [.lead]
-Cloud Data Sense provides many ways for you to manage and organize your private data. This makes it easier to see the data that is most important to you.
+BlueXP classification provides many ways for you to manage and organize your private data. This makes it easier to see the data that is most important to you.
 
-* If you are subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^] to classify and protect your files, you can use Cloud Data Sense to manage those AIP labels.
+* If you are subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^] to classify and protect your files, you can use BlueXP classification to manage those AIP labels.
 * You can add Tags to files that you want to mark for organization or for some type of follow-up.
 * You can assign a BlueXP user to a specific file, or to multiple files, so that person can be responsible for managing the file.
 * Using the "Policy" functionality you can create your own custom search queries so that you can easily see the results by clicking one button.
@@ -25,7 +25,7 @@ NOTE: The capabilities described in this section are available only if you have 
 
 == Should I use tags or labels?
 
-Below is a comparison of Data Sense tagging and Azure Information Protection labeling.
+Below is a comparison of BlueXP classification tagging and Azure Information Protection labeling.
 
 [cols=2*,options="header",cols="50,50"]
 |===
@@ -33,31 +33,31 @@ Below is a comparison of Data Sense tagging and Azure Information Protection lab
 | Tags
 | Labels
 
-| File tags are an integrated part of Data Sense. | Requires that you have subscribed to Azure Information Protection (AIP).
-| The tag is only kept in the Data Sense database - it is not written to the file.
+| File tags are an integrated part of BlueXP classification. | Requires that you have subscribed to Azure Information Protection (AIP).
+| The tag is only kept in the BlueXP classification database - it is not written to the file.
 It does not change the file, or the file accessed or modified times. | The label is part of the file and when the label changes, the file changes. This change also changes the file accessed and modified times.
 | You can have multiple tags on a single file. | You can have one label on a single file.
-| The tag can be used for internal Data Sense action, such as copy, move, delete, run a policy, etc. | Other systems that can read the file can see the label - which can be used for additional automation.
+| The tag can be used for internal BlueXP classification action, such as copy, move, delete, run a policy, etc. | Other systems that can read the file can see the label - which can be used for additional automation.
 | Only a single API call is used to see if a file has a tag.  |
 
 |===
 
 == Categorizing your data using AIP labels
 
-You can manage AIP labels in the files that Cloud Data Sense is scanning if you have subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. AIP enables you to classify and protect documents and files by applying labels to content. Data Sense enables you to view the labels that are already assigned to files, add labels to files, and change labels when a label already exists.
+You can manage AIP labels in the files that BlueXP classification is scanning if you have subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. AIP enables you to classify and protect documents and files by applying labels to content. BlueXP classification enables you to view the labels that are already assigned to files, add labels to files, and change labels when a label already exists.
 
-Cloud Data Sense supports AIP labels within the following file types: .DOC, .DOCX, .PDF, .PPTX, .XLS, .XLSX.
+BlueXP classification supports AIP labels within the following file types: .DOC, .DOCX, .PDF, .PPTX, .XLS, .XLSX.
 
 [NOTE]
 ====
 * You can't currently change labels in files larger than 30 MB. For OneDrive, SharePoint, and Google Drive accounts the maximum file size is 4 MB.
-* If a file has a label which doesn't exist anymore in AIP, Cloud Data Sense considers it as a file without a label.
-* If you've deployed Data Sense in a Government region, or in an on-prem location that has no internet access (also known as a dark site), then the AIP label functionality is unavailable.
+* If a file has a label which doesn't exist anymore in AIP, BlueXP classification considers it as a file without a label.
+* If you've deployed BlueXP classification in a Government region, or in an on-prem location that has no internet access (also known as a dark site), then the AIP label functionality is unavailable.
 ====
 
 === Integrating AIP labels in your workspace
 
-Before you can manage AIP labels, you need to integrate the AIP label functionality into Cloud Data Sense by signing into your existing Azure account. Once enabled, you can manage AIP labels within files for all link:concept-cloud-compliance.html#supported-data-sources[data sources^] in your BlueXP workspace.
+Before you can manage AIP labels, you need to integrate the AIP label functionality into BlueXP classification by signing into your existing Azure account. Once enabled, you can manage AIP labels within files for all link:concept-cloud-compliance.html#supported-data-sources[data sources^] in your BlueXP workspace.
 
 .Requirements
 
@@ -67,15 +67,15 @@ Before you can manage AIP labels, you need to integrate the AIP label functional
 
 .Steps
 
-. From the Cloud Data Sense Configuration page, click *Integrate AIP Labels*.
+. From the BlueXP classification Configuration page, click *Integrate AIP Labels*.
 +
-image:screenshot_compliance_integrate_aip_labels.png[A screenshot that shows clicking the button to integrate AIP labels functionality into Cloud Data Sense.]
+image:screenshot_compliance_integrate_aip_labels.png[A screenshot that shows clicking the button to integrate AIP labels functionality into BlueXP classification.]
 
 . In the Integrate AIP Labels dialog, click *Sign in to Azure*.
 
 . In the Microsoft page that appears, select the account and enter the required credentials.
 
-. Return to the Cloud Data Sense tab and you'll see the message "_AIP Labels were integrated successfully with the account <account_name>_".
+. Return to the BlueXP classification tab and you'll see the message "_AIP Labels were integrated successfully with the account <account_name>_".
 
 . Click *Close* and you'll see the text _AIP Labels integrated_ at the top of the page.
 +
@@ -95,7 +95,7 @@ image:screenshot_compliance_show_label.png[A screenshot showing the metadata det
 
 === Assigning AIP labels manually
 
-You can add, change, and remove AIP labels from your files using Cloud Data Sense.
+You can add, change, and remove AIP labels from your files using BlueXP classification.
 
 Follow these steps to assign an AIP label to a single file.
 
@@ -130,15 +130,15 @@ The AIP label is added to the metadata for all selected files.
 
 === Removing the AIP integration
 
-If you no longer want the ability to manage AIP labels in files, you can remove the AIP account from the Cloud Data Sense interface.
+If you no longer want the ability to manage AIP labels in files, you can remove the AIP account from the BlueXP classification interface.
 
-Note that no changes are made to the labels you have added using Data Sense. The labels that exist in files will stay as they currently exist.
+Note that no changes are made to the labels you have added using BlueXP classification. The labels that exist in files will stay as they currently exist.
 
 .Steps
 
 . From the _Configuration_ page, click *AIP Labels integrated > Remove Integration*.
 +
-image:screenshot_compliance_un_integrate_aip_labels.png[A screenshot showing how to remove AIP integrations with Cloud Data Sense.]
+image:screenshot_compliance_un_integrate_aip_labels.png[A screenshot showing how to remove AIP integrations with BlueXP classification.]
 
 . Click *Remove Integration* from the confirmation dialog.
 
@@ -146,17 +146,17 @@ image:screenshot_compliance_un_integrate_aip_labels.png[A screenshot showing how
 
 You can add a tag to files that you want to mark for some type of follow-up. For example, you may have found some duplicate files and you want to delete one of them, but you need to check to see which one should be deleted. You could add a tag of "Check to delete" to the file so you know this file requires some research and some type of future action.
 
-Data Sense enables you to view the tags that are assigned to files, add or remove tags from files, and change the name or delete an existing tag.
+BlueXP classification enables you to view the tags that are assigned to files, add or remove tags from files, and change the name or delete an existing tag.
 
-Note that the tag is not added to the file in the same way as AIP Labels are part of the file metadata. The tag is just seen by BlueXP users using Cloud Data Sense so you can see if a file needs to be deleted or checked for some type of follow-up.
+Note that the tag is not added to the file in the same way as AIP Labels are part of the file metadata. The tag is just seen by BlueXP users using BlueXP classification so you can see if a file needs to be deleted or checked for some type of follow-up.
 
-TIP: Tags assigned to files in Cloud Data Sense are not related to the tags you can add to resources, such as volumes or virtual machine instances. Data Sense tags are applied at the file level.
+TIP: Tags assigned to files in BlueXP classification are not related to the tags you can add to resources, such as volumes or virtual machine instances. BlueXP classification tags are applied at the file level.
 
 === Viewing files that have certain tags applied
 
 You can view all the files that have specific tags assigned.
 
-. Click the *Investigation* tab from Cloud Data Sense.
+. Click the *Investigation* tab from BlueXP classification.
 
 . In the Data Investigation page, click *Tags* in the Filters pane and then select the required tags.
 +
@@ -223,7 +223,7 @@ You can assign a BlueXP user to a specific file, or to multiple files, so that p
 
 For example, you might have a file that contains certain personal data that allows too many users read and write access (open permissions). So you could assign the Status tag "Change permissions" and assign this file to user "Joan Smith" so they can decide how to fix the issue. When they have fixed the issue they could change the Status tag to "Completed".
 
-Note that the user name is not added to the file as part of the file metadata - it is just seen by BlueXP users when using Cloud Data Sense.
+Note that the user name is not added to the file as part of the file metadata - it is just seen by BlueXP users when using BlueXP classification.
 
 A new Filter in the Investigation page enables you to easily view all files that have the same person in the "Assigned To" field.
 
