@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-audit-data-sense-actions.html
 keywords: compliance, actions, view progress, audit, logs, installation
-summary: Data Sense logs management activities that have been performed on files from all the working environments and data sources that Data Sense is scanning. Data Sense also logs the activities when deploying the Data Sense instance.
+summary: BlueXP classification logs management activities that have been performed on files from all the working environments and data sources that BlueXP classification is scanning. BlueXP classification also logs the activities when deploying the BlueXP classification instance.
 ---
 
-= Auditing the history of Data Sense actions
+= Auditing the history of BlueXP classification actions
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,9 +13,9 @@ summary: Data Sense logs management activities that have been performed on files
 :imagesdir: ./media/
 
 [.lead]
-Data Sense logs management activities that have been performed on files from all the working environments and data sources that Data Sense is scanning. Data Sense also logs the activities when deploying the Data Sense instance.
+BlueXP classification logs management activities that have been performed on files from all the working environments and data sources that BlueXP classification is scanning. BlueXP classification also logs the activities when deploying the BlueXP classification instance.
 
-You can view the contents of the Data Sense audit log files, or download them, to see what file changes have occurred, and when. For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
+You can view the contents of the BlueXP classification audit log files, or download them, to see what file changes have occurred, and when. For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
 
 == Log file contents
 
@@ -43,15 +43,15 @@ For example, the following lines from the log file show a successful copy operat
 
 == Access the log file
 
-The management audit log files are located on the Data Sense machine in: `/opt/netapp/audit_logs/`
+The management audit log files are located on the BlueXP classification machine in: `/opt/netapp/audit_logs/`
 
 The installation audit log files are written to `/opt/netapp/install_logs/`
 
 Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - old log files are deleted automatically after the maximum has been reached.
 
-When Data Sense is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the log file.
+When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the log file.
 
-When Data Sense is deployed in the cloud, you need to SSH to the Data Sense instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
+When BlueXP classification is deployed in the cloud, you need to SSH to the BlueXP classification instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
 
  ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
 

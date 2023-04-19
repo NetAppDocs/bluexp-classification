@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-generating-compliance-reports.html
 keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file
-summary: Cloud Data Sense provides reports that you can use to better understand the status of your organization's data privacy program.
+summary: BlueXP classification provides reports that you can use to better understand the status of your organization's data privacy program.
 ---
 
 = Viewing compliance reports
@@ -13,14 +13,14 @@ summary: Cloud Data Sense provides reports that you can use to better understand
 :imagesdir: ./media/
 
 [.lead]
-Cloud Data Sense provides reports that you can use to better understand the status of your organization's data privacy program.
+BlueXP classification provides reports that you can use to better understand the status of your organization's data privacy program.
 
-By default, the Cloud Data Sense dashboards display compliance and governance data for all working environments, databases, and data sources. If you want to view reports that contain data for only some of the working environments, <<Selecting the working environments for reports,select those working environments>>.
+By default, the BlueXP classification dashboards display compliance and governance data for all working environments, databases, and data sources. If you want to view reports that contain data for only some of the working environments, <<Selecting the working environments for reports,select those working environments>>.
 
 [NOTE]
 ====
 * The reports described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan can only generate the Data Mapping Report.
-* NetApp can't guarantee 100% accuracy of the personal data and sensitive personal data that Cloud Data Sense identifies. You should always validate the information by reviewing the data.
+* NetApp can't guarantee 100% accuracy of the personal data and sensitive personal data that BlueXP classification identifies. You should always validate the information by reviewing the data.
 ====
 
 == Privacy Risk Assessment Report
@@ -35,7 +35,7 @@ Data subjects in this assessment:: The number of people, by location, for which 
 
 === Generating the Privacy Risk Assessment Report
 
-Go to the Data Sense tab to generate the report.
+Go to the Compliance tab to generate the report.
 
 .Steps
 
@@ -47,11 +47,11 @@ image:screenshot_privacy_risk_assessment.gif[A screen shot of the Compliance tab
 
 .Result
 
-Cloud Data Sense generates a PDF report that you can review and send to other groups as needed.
+BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
 === Severity score
 
-Cloud Data Sense calculates the severity score for the Privacy Risk Assessment Report on the basis of three variables:
+BlueXP classification calculates the severity score for the Privacy Risk Assessment Report on the basis of three variables:
 
 * The percentage of personal data out of all data.
 * The percentage of sensitive personal data out of all data.
@@ -95,7 +95,7 @@ Distribution of Credit Card Information:: The working environments where the cre
 
 === Generating the PCI DSS Report
 
-Go to the Data Sense tab to generate the report.
+Go to the Compliance tab to generate the report.
 
 .Steps
 
@@ -107,11 +107,11 @@ image:screenshot_pci_dss.gif[A screen shot of the Compliance tab in BlueXP that 
 
 .Result
 
-Cloud Data Sense generates a PDF report that you can review and send to other groups as needed.
+BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
 == HIPAA Report
 
-The Health Insurance Portability and Accountability Act (HIPAA) Report can help you identify files containing health information. It is designed to aid in your organization's requirement to comply with HIPAA data privacy laws. The information Cloud Data Sense looks for includes:
+The Health Insurance Portability and Accountability Act (HIPAA) Report can help you identify files containing health information. It is designed to aid in your organization's requirement to comply with HIPAA data privacy laws. The information BlueXP classification looks for includes:
 
 * Health reference pattern
 * ICD-10-CM Medical code
@@ -133,7 +133,7 @@ Distribution of Health Information:: The working environments where the health i
 
 === Generating the HIPAA Report
 
-Go to the Data Sense tab to generate the report.
+Go to the Compliance tab to generate the report.
 
 .Steps
 
@@ -145,7 +145,7 @@ image:screenshot_hipaa.gif[A screen shot of the Compliance tab in BlueXP that sh
 
 .Result
 
-Cloud Data Sense generates a PDF report that you can review and send to other groups as needed.
+BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
 == What is a Data Subject Access Request?
 
@@ -153,9 +153,9 @@ Privacy regulations such as the European GDPR grant data subjects (such as custo
 
 You can respond to a DSAR by searching for a subject's full name or known identifier (such as an email address) and then downloading a report. The report is designed to aid in your organization's requirement to comply with GDPR or similar data privacy laws.
 
-=== How can Cloud Data Sense help you respond to a DSAR?
+=== How can BlueXP classification help you respond to a DSAR?
 
-When you perform a data subject search, Cloud Data Sense finds all of the files, buckets, OneDrive, and SharePoint accounts that have that person's name or identifier in it. Data Sense checks the latest pre-indexed data for the name or identifier. It doesn't initiate a new scan.
+When you perform a data subject search, BlueXP classification finds all of the files, buckets, OneDrive, and SharePoint accounts that have that person's name or identifier in it. BlueXP classification checks the latest pre-indexed data for the name or identifier. It doesn't initiate a new scan.
 
 After the search is complete, you can then download the list of files for a Data Subject Access Request report. The report aggregates insights from the data and puts it into legal terms that you can send back to the person.
 
@@ -180,7 +180,7 @@ Here's an example that shows a search for the name _john doe_:
 image:screenshot_dsar_search.gif[A screenshot that shows a search for the name "John Doe" for a DSAR.]
 
 . Choose one of the available options:
-* *Download DSAR Report*: A formal response to the access request that you can send to the data subject. This report contains automatically-generated information based on data that Cloud Data Sense found on the data subject and is designed to be used as a template. You should complete the form and review it internally before sending it to the data subject.
+* *Download DSAR Report*: A formal response to the access request that you can send to the data subject. This report contains automatically-generated information based on data that BlueXP classification found on the data subject and is designed to be used as a template. You should complete the form and review it internally before sending it to the data subject.
 
 * *Investigate Results*: A page that enables you to investigate the data by searching, sorting, expanding details for a specific file, and by downloading the file list.
 +
@@ -188,9 +188,9 @@ NOTE: If there are more than 10,000 results, only the top 10,000 appear in the f
 
 == Selecting the working environments for reports
 
-You can filter the contents of the Cloud Data Sense Compliance dashboard to see compliance data for all working environments and databases, or for just specific working environments.
+You can filter the contents of the BlueXP classification Compliance dashboard to see compliance data for all working environments and databases, or for just specific working environments.
 
-When you filter the dashboard, Data Sense scopes the compliance data and reports to just those working environments that you selected.
+When you filter the dashboard, BlueXP classification scopes the compliance data and reports to just those working environments that you selected.
 
 .Steps
 

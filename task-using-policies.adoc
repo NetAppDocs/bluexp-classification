@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-using-policies.html
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense
-summary: Policies are like a favorites list of custom filters that provide search results in the Investigation page for commonly requested compliance queries. Cloud Data Sense provides a set of predefined Policies based on common customer requests. You can create custom Policies that provide results for searches specific to your organization.
+summary: Policies are like a favorites list of custom filters that provide search results in the Investigation page for commonly requested compliance queries. BlueXP classification provides a set of predefined Policies based on common customer requests. You can create custom Policies that provide results for searches specific to your organization.
 ---
 
 = Assigning policies to your data
@@ -13,7 +13,7 @@ summary: Policies are like a favorites list of custom filters that provide searc
 :imagesdir: ./media/
 
 [.lead]
-Policies are like a favorites list of custom filters that provide search results in the Investigation page for commonly requested compliance queries. Cloud Data Sense provides a set of predefined Policies based on common customer requests. You can create custom Policies that provide results for searches specific to your organization.
+Policies are like a favorites list of custom filters that provide search results in the Investigation page for commonly requested compliance queries. BlueXP classification provides a set of predefined Policies based on common customer requests. You can create custom Policies that provide results for searches specific to your organization.
 
 Policies provide the following functionality:
 
@@ -24,9 +24,9 @@ Policies provide the following functionality:
 * Assign AIP (Azure Information Protection) labels automatically to all files that match the criteria defined in a Policy
 * Delete files automatically (once per day) when certain Policies return results so you can protect your data automatically
 
-The *Policies* tab in the Compliance Dashboard lists all the predefined and custom Policies available on this instance of Cloud Data Sense.
+The *Policies* tab in the Compliance Dashboard lists all the predefined and custom Policies available on this instance of BlueXP classification.
 
-image:screenshot_compliance_highlights_tab.png[A screenshot of the Policies tab in the Cloud Data Sense dashboard.]
+image:screenshot_compliance_highlights_tab.png[A screenshot of the Policies tab in the BlueXP classification dashboard.]
 
 In addition, Policies appear in the list of Filters in the Investigation page.
 
@@ -66,7 +66,7 @@ The new Policy appears in the Policies tab.
 
 == Sending email alerts when non-compliant data is found
 
-Cloud Data Sense can send email alerts to BlueXP users in your account when certain critical Policies return results so you can get notifications to protect your data. You can choose to send the email notifications on a daily, weekly, or monthly basis. You can also choose to send email alerts to any other email address - up to 20 email addresses - not in your BlueXP account. 
+BlueXP classification can send email alerts to BlueXP users in your account when certain critical Policies return results so you can get notifications to protect your data. You can choose to send the email notifications on a daily, weekly, or monthly basis. You can also choose to send email alerts to any other email address - up to 20 email addresses - not in your BlueXP account. 
 
 You can configure this setting when creating the Policy or when editing any Policy.
 
@@ -92,7 +92,7 @@ The first email is sent now if there are any results from the Policy - but only 
 
 == Deleting source files automatically using Policies
 
-You can create a custom Policy to delete files that match the policy. For example, you may want to delete files that contain sensitive information and were discovered by Data Sense in the past 30 days.
+You can create a custom Policy to delete files that match the policy. For example, you may want to delete files that contain sensitive information and were discovered by BlueXP classification in the past 30 days.
 
 Only Account Admins can create a policy to automatically delete files.
 
@@ -121,7 +121,7 @@ You can view the list of files that have been deleted in the link:task-view-comp
 
 You can assign an AIP label to all the files that meet the criteria of the Policy. You can specify the AIP label when creating the Policy, or you can add the label when editing any Policy.
 
-Labels are added or updated in files continuously as Cloud Data Sense scans your files.
+Labels are added or updated in files continuously as BlueXP classification scans your files.
 
 Depending on whether a label is already applied to a file, and the classification level of the label, the following actions are taken when changing a label:
 
@@ -189,7 +189,7 @@ To delete a Policy, click the image:screenshot_gallery_options.gif[More button] 
 
 == List of predefined Policies
 
-Cloud Data Sense provides the following system-defined Policies:
+BlueXP classification provides the following system-defined Policies:
 
 [cols="25,40,40",width=90%,options="header"]
 |===

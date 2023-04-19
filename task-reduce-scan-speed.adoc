@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-reduce-scan-speed.html
 keywords: slow scans, reduce speed
-summary: Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans.
+summary: Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure BlueXP classification to perform "slow" scans.
 ---
 
-= Reducing the Data Sense scan speed
+= Reducing the BlueXP classification scan speed
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Data scans have a negligible impact on your storage systems and on your
 :imagesdir: ./media/
 
 [.lead]
-Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure Data Sense to perform "slow" scans. 
+Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure BlueXP classification to perform "slow" scans. 
 
 When enabled, slow scanning is used on all data sources - you can't configure slow scanning for a single working environment or data source.
 

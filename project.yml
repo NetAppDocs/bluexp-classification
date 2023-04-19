@@ -1,5 +1,5 @@
 settings:
-  name: Cloud Data Sense
+  name: BlueXP classification
   platform: cloud
   internal:
     pdf_enabled: true
@@ -9,15 +9,15 @@ settings:
   rss_page: "whats-new.html"
 sidebar:
   entries:
-    - title: Cloud Data Sense docs
+    - title: BlueXP classification docs
       url: /index.html
     - title: Release notes
       url: /whats-new.html
     - title: Get started
       entries:
-        - title: Learn about Cloud Data Sense
+        - title: Learn about BlueXP classification
           url: /concept-cloud-compliance.html
-        - title: Deploy Cloud Data Sense
+        - title: Deploy BlueXP classification
           entries:
             - title: Deploy in the cloud using BlueXP
               url: /task-deploy-cloud-compliance.html
@@ -25,7 +25,7 @@ sidebar:
               url: /task-deploy-compliance-onprem.html
             - title: Install on-prem without internet access
               url: /task-deploy-compliance-dark-site.html
-            - title: Check that your Linux host is ready to install Data Sense
+            - title: Check that your Linux host is ready to install BlueXP classification
               url: /task-test-linux-system.html
         - title: Activate scanning on your data sources
           entries:
@@ -55,7 +55,7 @@ sidebar:
           url: /task-licensing-datasense.html
         - title: FAQ
           url: /faq-cloud-compliance.html
-    - title: Use Cloud Data Sense
+    - title: Use BlueXP classification
       entries:
         - title: View governance details about your data
           url: /task-controlling-governance-data.html
@@ -75,23 +75,23 @@ sidebar:
           url: task-managing-repo-scanning.html
         - title: Generate compliance reports
           url: /task-generating-compliance-reports.html
-    - title: Manage Cloud Data Sense
+    - title: Manage BlueXP classification
       entries:
         - title: Add custom personal data identifiers
           url: /task-managing-data-fusion.html
-        - title: View the status of Data Sense actions
+        - title: View the status of BlueXP classification actions
           url: /task-view-compliance-actions.html
-        - title: Audit the history of Data Sense actions
+        - title: Audit the history of BlueXP classification actions
           url: /task-audit-data-sense-actions.html
-        - title: Reduce the Data Sense scan speed
+        - title: Reduce the BlueXP classification scan speed
           url: /task-reduce-scan-speed.html
-        - title: Remove data sources from Data Sense
+        - title: Remove data sources from BlueXP classification
           url: /task-managing-compliance.html
-        - title: Uninstall Data Sense
+        - title: Uninstall BlueXP classification
           url: /task-uninstall-data-sense.html
     - title: Reference
       entries:
-        - title: Supported Data Sense instance types
+        - title: Supported BlueXP classification instance types
           url: /reference-instance-types.html
         - title: Metadata collected from data sources
           url: /reference-collected-metadata.html
@@ -111,15 +111,15 @@ homepage:
   tiles:
     - title: Get started
       links:
-        - title: Learn about Cloud Data Sense
+        - title: Learn about BlueXP classification
           url: concept-cloud-compliance.html
         - title: What's New
           url: whats-new.html
-        - title: Deploy Data Sense in the cloud using BlueXP
+        - title: Deploy BlueXP classification in the cloud using BlueXP
           url: task-deploy-cloud-compliance.html
-        - title: Install Data Sense on a Linux host with internet
+        - title: Install BlueXP classification on a Linux host with internet
           url: task-deploy-compliance-onprem.html
-        - title: Install Data Sense on-premises without internet
+        - title: Install BlueXP classification on-premises without internet
           url: task-deploy-compliance-dark-site.html
         - title: Integrate Active Directory
           url: task-add-active-directory-datasense.html
@@ -187,7 +187,7 @@ homepage:
       links:
         - title: NetApp Community
           url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-        - title: Data Sense use cases
+        - title: BlueXP classification use cases
           url: https://bluexp.netapp.com/netapp-cloud-data-sense
         - title: BlueXP blog
           url: https://bluexp.netapp.com/blog
