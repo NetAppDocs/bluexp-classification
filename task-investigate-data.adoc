@@ -48,7 +48,7 @@ Use the following filters to view how much sensitive information is contained in
 | Number of identifiers | Select the range of detected sensitive identifiers per file. Includes personal data and sensitive personal data. When filtering in Directories, BlueXP classification totals the matches from all files in each folder (and sub-folders).
 | Personal Data | Select the link:reference-private-data-categories.html#types-of-personal-data[types of personal data^].
 | Sensitive Personal Data | Select the link:reference-private-data-categories.html#types-of-sensitive-personal-data[types of sensitive personal data^].
-| Data Subject | Enter a data subject's full name or known identifier.
+| Data Subject | Enter a data subject's full name or known identifier. link:task-generating-compliance-reports.html#searching-for-data-subjects-and-downloading-reports[Learn more about data subjects here^].
 
 |===
 
@@ -154,7 +154,7 @@ Use the following filter to view data by the BlueXP classification scan status.
 
 link:reference-collected-metadata.html#last-access-time-timestamp[See details about the "last accessed time" timestamp] for more information about the items that appear in the Investigation page when filtering using the Scan Analysis Event.
 
-=== Filter data by Duplicates
+=== Filter data by duplicates
 
 Use the following filter to view files that are duplicated in your storage.
 
