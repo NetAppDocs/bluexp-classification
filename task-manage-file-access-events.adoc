@@ -17,7 +17,7 @@ You can configure BlueXP classification to log events to a file whenever one of 
 
 For example, if you want to track when any changes are made to your sensitive personnel files or payroll files, you can enable this feature on the volumes where these files reside. Then you can view the File Access Audit Log to see if these files have been changed. If they have been changed, you'll be able to see the name of the person who made the change and when the change was made.
 
-You can enable this feature on any critical volumes in your ONTAP working environments. When enabled on a volume, file access events are tracked for all files and directories in the volume. This capability is based on the https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html[FPolicy feature^] from your ONTAP systems, and it uses your BlueXP classification system as an FPolicy server to receive notification messages (events) from ONTAP.
+You can enable this feature on any critical volumes in your working environments that are running ONTAP software. When enabled on a volume, file access events are tracked for all files and directories in the volume. This capability is based on the https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html[FPolicy feature^] from your ONTAP systems, and it uses your BlueXP classification system as an FPolicy server to receive notification messages (events) from ONTAP.
 
 BlueXP classification currently captures events for the following actions on your files and directories: 
 
@@ -33,20 +33,26 @@ BlueXP users with the "Account Admin" or "Workspace Admin" roles can configure v
 
 == Supported data sources
 
-BlueXP classification can log file access events for files that reside on the following data sources:
+BlueXP classification can log file access events for files that reside on volumes in the following data sources:
 
 * On-premises ONTAP
 * Cloud Volumes ONTAP
 * Azure NetApp Files
 * FSx for ONTAP
 
-You must have Active Directory configured for these data sources so that BlueXP classification can identify the name of the person who accessed the files.
+The data sources must be running ONTAP version 9.11 or greater software. 
 
 == Configure volumes for file access audit logging
 
 You can enable file access audit logging on individual volumes to track changes to files and directories.
 
-TIP:: You can configure file access auditing for a maximum of 5 volumes on each ONTAP system at this time.
+TIP: You can configure file access auditing on a maximum of 5 volumes on each supported data source at this time.
+
+.Before you begin
+
+* You must have Active Directory configured for the data sources so that BlueXP classification can identify the name of the person who accessed the files. If it is not configured, the File Owner will contain the SID (Security IDentifier) instead of being populated with the actual user name.
+
+* Port 5018 must be open for outbound access from the BlueXP classification system.
 
 .Steps
 
@@ -70,30 +76,34 @@ Any file access events that are generated for files on the enabled volumes will 
 
 == Log file contents
 
-A log file is created for every volume that you have configured to track file access events. Each line in the audit log contains information in this format:
+A log file is created for every volume that you have configured to track file access events. The log files are named "<volume_name>_<volume_uuid>_.log"; for example "fpolicy_cifs_838c1727-dd2d-11ed-a3ec-590ce4991.log". Each line in the audit log contains information in this format:
 
-`<timestamp> | <volume_name> | <event_type> | <file_name> | <user_name> | <action_result> | <action_details>`
+//`<Timestamp> | <Client_IP> | <Volume_Name> | <Volume_UUID> | <File_Type> | <File_Size> | <Path> | <Volume_Type> | <User_ID> | <File_Owner_ID> | <Event_Type> | <Action_Details>`
 
-* Timestamp - date and time for the event
-* Volume name - name of the volume
-* Event type - Create, Read, Write, Rename, Delete, Change owner/permissions, and Change SACL/DACL
-* File name - full path and file name
-* User name (or ID) - name, or ID, of the person who performed the action
-* Action result - whether the action was successful or if it failed, and the reason for success/failure
-* Action details - what was done: depends on the action
+* Timestamp - date and time of the event
+* Client IP - IP address of the source data source
+* Volume Name - name of the volume
+* Volume UUID - UUID of the volume
+* File Type - type of file
+* File Size - size of file
+* Path - full path and file name
+* Volume Type - type of volume
+* User ID - name, or ID, of the person who performed the action
+* File Owner ID - ID of the file owner
+* Event Type - Create, Read, Write, Rename, Delete, Change owner/permissions, or Change SACL/DACL
+* Action Details - what was done: depends on the action
 
-For example, the following lines from the log file show a successful copy operation and a failed copy operation.
+For example, the following line from the log file shows that a "Create" action has occurred in the volume "fpolicy_cifs" - a new file "f14" has been created in the volume.
 
- 2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
- 2022-06-06 15:23:08,968 | WARNING | ds_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
+ {"Timestamp": "2023-04-24 13:57", "Client_IP": "172.31.140.35", "Volume_Name": "fpolicy_cifs", "Volume_UUID": "838c1727-dd2d-11ed-a3ec-590ce4991", "File_Type": "FILE", "File_Size": 100, "Path": \\FPOLICY_CVO\fpolicy_cifs_share\dbs\f14, "Volume_Type": "SMB", "User_ID": "S-1-5-21-459977447-2546672318-3630509715-500", "File_Owner_ID": "S-1-5-32-544", "Event_Type": "CREATE", "Action_Details": {details}}
 
 == Access the File Access Audit Log files
 
-The File Access Audit Log files are located on the BlueXP classification machine in: `/opt/netapp/audit_logs/`
+The File Access Audit Log files are located on the BlueXP classification machine in: `/opt/netapp/file_access_audit_logs/`
 
-The log files are named "File_Access_Audit_<volume_name>_<timestamp>.log"; for example "File Access Audit_MedicalData_20230205092321.log". The <timestamp> is the time when BlueXP classification wrote the first log to the file. Each file is configured by default to contain a maximum of 50,000 events. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> After this maximum has been reached, a new log file for that volume is created. The new file will have a newer timestamp.
+Each file is configured by default to contain a maximum of 50,000 events. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> After this maximum has been reached, the older log entries are overwritten.
 
-The total size of all the log files in the directory is set to a default value of 50 GB. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> When that limit is reached, the oldest log files are deleted automatically.
+The total size of all the log files in the directory is set by default to a maximum of 50 GB. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> When that limit is reached, the oldest log files are overwritten as new log files are added. Additionally, any log files that are older than 14 days will be overwritten as that is the maximum retention time.
 
 When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the log files.
 
@@ -128,7 +138,7 @@ image:screenshot_compliance_file_access_audit_config.png[A screenshot showing th
 | Audit Log Option
 | Description
 
-| Log file location | The location is currently hardcoded to write the log files to `/opt/netapp/audit_logs/`
+| Log file location | The location is currently hardcoded to write the log files to `/opt/netapp/file_access_audit_logs/`
 | Maximum storage allocation for audit logs | The total size of all the log files in the directory is currently hardcoded to a default value of 50 GB. When that limit is reached, the oldest log files are deleted automatically.
 | Maximum number of audit events per audit file | Each file is currently hardcoded to contain a maximum of 50,000 events. After this maximum has been reached, a new log file for that volume is created. The new file will have a newer timestamp.
 

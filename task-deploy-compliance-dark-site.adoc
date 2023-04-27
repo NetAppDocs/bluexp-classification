@@ -89,9 +89,9 @@ include::_include/host-requirements.adoc[]
  firewall-cmd --permanent --add-port=443/tcp
  firewall-cmd --reload
 +
-If you enable `firewalld` after installing BlueXP classification, you must restart docker.
+Note that you must restart Docker whenever you enable or update `firewalld` settings.
 
-NOTE: The IP address of the BlueXP classification host system can't be changed after installation.
+TIP: The IP address of the BlueXP classification host system can't be changed after installation.
 
 == Verify BlueXP and BlueXP classification prerequisites
 
@@ -243,7 +243,7 @@ c. Enter the IP address or host name of the BlueXP Connector host machine so it 
 Variable values:
 
 * _account_id_ = NetApp Account ID
-* _client_id_ = Connector Client ID
+* _client_id_ = Connector Client ID (add the suffix "clients" to the client ID if it not already there)
 * _user_token_ = JWT user access token
 * _ds_host_ = IP address or host name of the BlueXP classification system.
 * _cm_host_ = IP address or host name of the BlueXP Connector system.
