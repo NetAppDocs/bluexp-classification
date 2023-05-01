@@ -148,11 +148,21 @@ BlueXP classification requires outbound internet access. If your virtual or phys
 |
 \https://github.com/docker
 \https://download.docker.com
+
+| Provides prerequisite packages for docker installation.
+
+|
 \http://mirror.centos.org
 \http://mirrorlist.centos.org
 \http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm
 
-| Provides prerequisite packages for installation.
+| Provides prerequisite packages for CentOS installation.
+
+|
+\http://packages.ubuntu.com/
+\http://archive.ubuntu.com
+
+| Provides prerequisite packages for Ubuntu installation.
 |===
 
 //Ensure that the BlueXP Connector has the required permissions::
