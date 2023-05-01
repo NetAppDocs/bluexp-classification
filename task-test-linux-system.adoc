@@ -65,7 +65,7 @@ Note that you must restart Docker whenever you enable or update `firewalld` sett
 
 BlueXP classification requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the BlueXP classification instance has outbound internet access to contact the following endpoints.
 
-TIP:: This section is not required for host systems installed in sites without internet connectivity. 
+TIP: This section is not required for host systems installed in sites without internet connectivity. 
 
 [cols="43,57",options="header"]
 |===
@@ -96,11 +96,21 @@ TIP:: This section is not required for host systems installed in sites without i
 |
 \https://github.com/docker
 \https://download.docker.com
+
+| Provides prerequisite packages for docker installation.
+
+|
 \http://mirror.centos.org
 \http://mirrorlist.centos.org
 \http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm
 
-| Provides prerequisite packages for installation.
+| Provides prerequisite packages for CentOS installation.
+
+|
+\http://packages.ubuntu.com/
+\http://archive.ubuntu.com
+
+| Provides prerequisite packages for Ubuntu installation.
 |===
 
 == Verify that all required ports are enabled

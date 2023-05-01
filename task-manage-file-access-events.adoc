@@ -99,7 +99,7 @@ For example, the following line from the log file shows that a "Create" action h
 
  {"Timestamp": "2023-04-24 13:57", "Client_IP": "172.31.14.35", "Volume_Name": "fpolicy_cifs", "Volume_UUID": "838c1727-dd2d-11ed-a3ec-590ce4991", "File_Type": "FILE", "File_Size": 100, "Path": \\FPOLICY_CVO\fpolicy_cifs_share\dbs\f14, "Volume_Type": "SMB", "User_ID": "S-1-5-21-459977447-2546672318-3630509715-500", "File_Owner_ID": "S-1-5-32-544", "Event_Type": "CREATE", "Action_Details": {details}}
 
- You can use the BlueXP classification Investigation page to search for the volume (using the "Storage Repository" filter) or file (using the "File / Directory Path" filter) to see more details about the affected volume and file.
+You can use the BlueXP classification Investigation page to search for the volume (using the "Storage Repository" filter) or file (using the "File / Directory Path" filter) to see more details about the affected volume and file.
 
 == Access the File Access Audit Log files
 

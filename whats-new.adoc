@@ -28,7 +28,7 @@ Japanese names can now be entered when searching for a subject's name in respons
 
 === Ubuntu is now a supported Linux distribution on which you can install BlueXP classification
 
-Ubuntu 22.04 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on an Ubuntu Linux host in your network, or on a Linux host instance in the cloud.
+Ubuntu 22.04 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on an Ubuntu Linux host in your network, or on a Linux host instance in the cloud. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Ubuntu installed].
 
 //=== Data Sense BYOL licenses are now supported in dark sites
 //
