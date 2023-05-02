@@ -25,6 +25,22 @@
 +
 Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
+* *UNIX folder permissions*: The following minimum UNIX permissions are required:
++
+[cols="25,25",width=60%,options="header"]
+|===
+| Folder
+| Minimum Permissions
+
+| /tmp | `rwxrwxrwt`
+
+| /opt | `rwxr-xr-x`
+
+| /var/lib/docker | `rwx------`
+
+| /user/lib/systemd/system  | `rwxr-xr-x`
+|===
+
 * When deploying a compute instance in the cloud for your BlueXP classification installation, we recommend a system that meets the "Large" system requirements above:
 
 ** *AWS EC2 instance type*: We recommend "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types[See additional AWS instance types^]. 
