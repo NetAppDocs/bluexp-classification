@@ -66,7 +66,7 @@ When BlueXP classification is deployed in the cloud, you need to SSH to the Blue
 
 Note that you'll need to modify the security group inbound rules to access the system in the cloud. For details, see: 
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html[Security group rules in AWS^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-azure.html[Security group rules in Azure^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html[Firewall rules in Google Cloud^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html[Security group rules in AWS^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html[Security group rules in Azure^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html[Firewall rules in Google Cloud^]
 

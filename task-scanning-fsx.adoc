@@ -34,7 +34,7 @@ Get started quickly by following these steps or scroll down for full details.
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Discover the FSx for ONTAP file systems you want to scan
 
 [role="quick-margin-para"]
-Before you can scan FSx for ONTAP volumes, https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/concept-fsx-aws.html[you must have an FSx working environment with volumes configured^].
+Before you can scan FSx for ONTAP volumes, https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html[you must have an FSx working environment with volumes configured^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the BlueXP classification instance
 
@@ -70,7 +70,7 @@ Select or deselect the volumes you want to scan and BlueXP classification will s
 
 If the FSx for ONTAP file system you want to scan is not already in BlueXP as a working environment, you can add it to the canvas at this time.
 
-https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html[See how to discover or create the FSx for ONTAP file system in BlueXP^].
+https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html[See how to discover or create the FSx for ONTAP file system in BlueXP^].
 
 == Deploying the BlueXP classification instance
 
