@@ -16,7 +16,7 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
-== 9 May 2023 (version 1.23)
+== 16 May 2023 (version 1.23)
 
 === Japanese is now supported when searching for data subject names
 
