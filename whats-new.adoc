@@ -16,15 +16,33 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
+//== 4 June 2023 (version 1.23)
+//
+//=== Japanese is now supported when searching for data subject names
+//
+//Japanese names can now be entered when searching for a subject's name in response to a Data Subject Access Request (DSAR). You can generate a https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Data Subject Access Request report] with the resulting information. You can also enter Japanese names in the https://docs.netapp.com/us-en/cloud-manager-data-sense/task-investigate-data.html#filter-data-by-sensitivity-and-content["Data Subject" filter in the Data Investigation page] to identify files that contain the subject's name.
+//
+//=== Ubuntu is now a supported Linux distribution on which you can install BlueXP classification
+//
+//Ubuntu 22.04 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Ubuntu Linux host in your network, or on a Linux host in the cloud. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Ubuntu installed].
+//
+//=== Red Hat Enterprise Linux 8.6 and 8.7 are no longer supported with new BlueXP classification installations
+//
+//These versions are not supported with new deployments because Red Hat no longer supports Docker, which is a prerequisite. If you have an existing BlueXP classification machine running on RHEL 8.6 or 8.7, NetApp will continue to support your configuration.
+//
+//=== BlueXP classification can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
+//
+//You can enable file access audit logs to be collected on your BlueXP classification system for file access events detected on volumes in your working environments. BlueXP classification can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-manage-file-access-events.html[See how to monitor and manage file access events].
+//
+//=== Data Sense BYOL licenses are now supported in dark sites
+//
+//Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
+
 == 3 April 2023 (version 1.22)
 
 === New Data Discovery Assessment Report
 
 The Data Discovery Assessment Report provides a high-level analysis of your scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The goal of this report is to raise awareness of data governance concerns, data security exposures, and data compliance gaps of your data set. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-governance-data.html#data-discovery-assessment-report[See how to generate and use the Data Discovery Assessment Report].
-
-//=== BlueXP classification can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
-//
-//You can enable file access audit logs to be collected on your BlueXP classification system for file access events on volumes in your working environments. BlueXP classification can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-manage-file-access-events.html[See how to monitor and manage file access events].
 
 === Ability to deploy BlueXP classification on smaller instances in the cloud
 
@@ -33,10 +51,6 @@ When deploying BlueXP classification from a BlueXP Connector in an AWS environme
 === Standalone script is now available to qualify your Linux system prior to BlueXP classification installation
 
 If you would like to verify that your Linux system meets all prerequisites independently of running the BlueXP classification installation, there is a separate script you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-test-linux-system.html[See how to check if your Linux host is ready to install BlueXP classification].
-
-//=== Data Sense BYOL licenses are now supported in dark sites
-//
-//Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
 
 == 7 March 2023 (version 1.21)
 
