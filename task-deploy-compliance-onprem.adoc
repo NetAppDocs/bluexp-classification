@@ -158,11 +158,12 @@ BlueXP classification requires outbound internet access. If your virtual or phys
 
 | Provides prerequisite packages for CentOS installation.
 
-|
-\http://packages.ubuntu.com/
-\http://archive.ubuntu.com
+// |
+//\http://packages.ubuntu.com/
+//\http://archive.ubuntu.com
+//
+// | Provides prerequisite packages for Ubuntu installation.
 
-| Provides prerequisite packages for Ubuntu installation.
 |===
 
 //Ensure that the BlueXP Connector has the required permissions::

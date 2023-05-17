@@ -81,7 +81,7 @@ BlueXP classification can scan and analyze structured and unstructured data from
 *Cloud:*
 
 * Amazon S3
-* Azure Blob
+//* Azure Blob
 * Google Cloud Storage
 * OneDrive
 * SharePoint Online
