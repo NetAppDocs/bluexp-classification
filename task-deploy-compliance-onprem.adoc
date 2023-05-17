@@ -107,7 +107,7 @@ If you're planning to use additional BlueXP classification hosts as scanner node
  firewall-cmd --permanent --add-port=7946/tcp
  firewall-cmd --permanent --add-port=4789/udp
 +
-If you enable `firewalld` after installing BlueXP classification, you must restart docker.
+Note that you must restart Docker whenever you enable or update `firewalld` settings.
 
 NOTE: The IP address of the BlueXP classification host system can't be changed after installation.
 
@@ -148,11 +148,22 @@ BlueXP classification requires outbound internet access. If your virtual or phys
 |
 \https://github.com/docker
 \https://download.docker.com
+
+| Provides prerequisite packages for docker installation.
+
+|
 \http://mirror.centos.org
 \http://mirrorlist.centos.org
 \http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.107-3.el7.noarch.rpm
 
-| Provides prerequisite packages for installation.
+| Provides prerequisite packages for CentOS installation.
+
+// |
+//\http://packages.ubuntu.com/
+//\http://archive.ubuntu.com
+//
+// | Provides prerequisite packages for Ubuntu installation.
+
 |===
 
 //Ensure that the BlueXP Connector has the required permissions::
@@ -269,14 +280,14 @@ Note that the installer performs a pre-check to make sure your system and networ
 
 |
 a. Paste the command you copied from step 7:
-`sudo ./install.sh -a <account_id> -c <agent_id> -t <token>`
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token>`
 +
 If you are installing on a cloud instance (not on your premises), add `--manual-cloud-install <cloud_provider>`.
-b. Enter the IP address or host name of the BlueXP classification host machine so it can be accessed by the Connector instance.
-c. Enter the IP address or host name of the BlueXP Connector host machine so it can be accessed by the BlueXP classification instance.
+b. Enter the IP address or host name of the BlueXP classification host machine so it can be accessed by the Connector system.
+c. Enter the IP address or host name of the BlueXP Connector host machine so it can be accessed by the BlueXP classification system.
 d. Enter proxy details as prompted. If your BlueXP Connector already uses a proxy, there is no need to enter this information again here since BlueXP classification will automatically use the proxy used by the Connector.
 | Alternatively, you can create the whole command in advance, providing the necessary host and proxy parameters:
-`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --manager-host <cm_host> --manual-cloud-install <cloud_provider> --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password> --cacert-folder-path <ca_cert_dir>`
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> --manual-cloud-install <cloud_provider> --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password> --cacert-folder-path <ca_cert_dir>`
 
 |===
 
@@ -284,8 +295,8 @@ d. Enter proxy details as prompted. If your BlueXP Connector already uses a prox
 Variable values:
 
 * _account_id_ = NetApp Account ID
-* _agent_id_ = Connector ID
-* _token_ = jwt user token
+* _client_id_ = Connector Client ID (add the suffix "clients" to the client ID if it not already there)
+* _user_token_ = JWT user access token
 * _ds_host_ = IP address or host name of the BlueXP classification Linux system.
 * _cm_host_ = IP address or host name of the BlueXP Connector system.
 * _cloud_provider_ = When installing on a cloud instance, enter "AWS", "Azure", or "Gcp" depending on cloud provider.
@@ -380,7 +391,7 @@ You'll follow these steps to install additional BlueXP classification scanner no
  firewall-cmd --permanent --add-port=4789/udp
  firewall-cmd --reload
 +
-If you enable `firewalld` after installing BlueXP classification, you must restart docker.
+Note that you must restart Docker whenever you enable or update `firewalld` settings.
 
 .Prerequisite steps
 
@@ -419,7 +430,7 @@ image:screenshot_client_access_token.png["A screenshot of the API Documentation 
 Variable values:
 
 * _account_id_ = NetApp Account ID
-* _client_id_ = Connector Client ID
+* _client_id_ = Connector Client ID (add the suffix "clients" to the client ID that you copied in the Prerequisite steps)
 * _cm_host_ = IP address or host name of the Connector system
 * _ds_manager_ip_ = Private IP address of the BlueXP classification Manager node system
 * _node_private_ip_ = IP addresses of the BlueXP classification Scanner node systems (multiple scanner node IPs are separated by a comma)
@@ -509,7 +520,7 @@ Follow these steps when installing BlueXP classification software on multiple on
 In addition to the variables available for a single-host installation, a new option *-n <node_ip>* is used to specify the IP addresses of the scanner nodes. Multiple scanner node IPs are separated by a comma.
 +
 For example, this command adds 3 scanner nodes:
-`sudo ./install.sh -a <account_id> -c <agent_id> -t <token> --host <ds_host> --manager-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password>`
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password>`
 
 . Before the manager node installation completes, a dialog displays the installation command needed for the scanner nodes. Copy the command (for example, `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212`) and save it in a text file.
 

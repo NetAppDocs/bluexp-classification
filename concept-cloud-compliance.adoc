@@ -81,7 +81,7 @@ BlueXP classification can scan and analyze structured and unstructured data from
 *Cloud:*
 
 * Amazon S3
-* Azure Blob
+//* Azure Blob
 * Google Cloud Storage
 * OneDrive
 * SharePoint Online
@@ -148,7 +148,7 @@ TIP: The instance should remain running at all times because BlueXP classificati
 
 You can deploy BlueXP classification on a system with fewer CPUs and less RAM, but there are some limitations when using these less powerful systems.
 
-[cols="18,26,56",width=95%,options="header"]
+[cols="18,31,51",width=95%,options="header"]
 |===
 | System size
 | Specs
@@ -191,7 +191,7 @@ Many users like this functionality because they want to quickly scan their data 
 
 The table below shows some of the differences:
 
-[cols="50,20,20",width=90%,options="header"]
+[cols="47,18,18",width=85%,options="header"]
 |===
 | Feature
 | Classification

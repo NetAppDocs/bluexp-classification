@@ -181,6 +181,8 @@ homepage:
           url: task-managing-highlights.html#deleting-source-files
         - title: Create email alerts when non-compliant data is found
           url: task-using-policies.html#sending-email-alerts-when-non-compliant-data-is-found
+        - title: Monitor and manage file access events
+          url: task-manage-file-access-events.html
         - title: Respond to a Data Subject Access Request
           url: task-generating-compliance-reports.html#searching-for-data-subjects-and-downloading-reports
     - title: Blogs & community
@@ -191,5 +193,5 @@ homepage:
           url: https://bluexp.netapp.com/netapp-cloud-data-sense
         - title: BlueXP blog
           url: https://bluexp.netapp.com/blog
-        - title: Cloud webinars
+        - title: BlueXP webinars
           url: https://bluexp.netapp.com/events

@@ -33,6 +33,8 @@ BlueXP classification collects certain metadata when performing classification s
 
 |===
 
+Note that BlueXP classification does not extract the "last accessed time" from the following data sources: SharePoint Online, SharePoint On-premises (SharePoint Server), OneDrive, Google Drive, and Amazon S3.
+
 == Last access time timestamp
 
 When BlueXP classification extracts data from file shares, the operating system considers it as accessing the data and it changes the "last access time" accordingly. After scanning, BlueXP classification attempts to revert the last access time to the original timestamp. If BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system can't revert the last access time to the original timestamp. ONTAP volumes configured with SnapLock have read-only permissions and also can't revert the last access time to the original timestamp. 
