@@ -158,11 +158,11 @@ BlueXP classification requires outbound internet access. If your virtual or phys
 
 | Provides prerequisite packages for CentOS installation.
 
-// |
-//\http://packages.ubuntu.com/
-//\http://archive.ubuntu.com
-//
-// | Provides prerequisite packages for Ubuntu installation.
+|
+\http://packages.ubuntu.com/
+\http://archive.ubuntu.com
+
+| Provides prerequisite packages for Ubuntu installation.
 
 |===
 
@@ -192,7 +192,7 @@ Make sure port 8080 is open so you can see the installation progress in BlueXP.
 * The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
 * The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Connector host.
 |BlueXP classification <> ONTAP cluster  a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
-* For CIFS - 139 (TCP\UDP) and 445(TCP\UDP) a| BlueXP classification needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Firewalls or routing rules for Cloud Volumes ONTAP must allow inbound connections from the BlueXP classification instance. 
+* For CIFS - 139 (TCP\UDP) and 445 (TCP\UDP) a| BlueXP classification needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Firewalls or routing rules for Cloud Volumes ONTAP must allow inbound connections from the BlueXP classification instance. 
 
 Make sure these ports are open to the BlueXP classification instance:
 

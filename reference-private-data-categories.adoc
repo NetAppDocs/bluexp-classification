@@ -38,12 +38,12 @@ Note that you can add to the list of personal data that is found in your files. 
 
 .6+| General | Credit card number | No | ✓ | ✓ | ✓ |  | ✓
 | Data Subjects | No | ✓ | ✓ | ✓ |  | 
-| Email address | No | ✓ | ✓ | ✓ |  | ✓
-| IBAN number (International Bank Account Number) | No | ✓ | ✓ | ✓ |  | ✓
-| IP address | No | ✓ | ✓ | ✓ |  | ✓
+| Email Address | No | ✓ | ✓ | ✓ |  | ✓
+| IBAN Number (International Bank Account Number) | No | ✓ | ✓ | ✓ |  | ✓
+| IP Address | No | ✓ | ✓ | ✓ |  | ✓
 | Password | Yes | ✓ | ✓ | ✓ |  | ✓
 
-.54+| National Identifiers | Australian TFN (Tax File Number) | Yes | ✓ | ✓ | ✓ |  | 
+.59+| National Identifiers | Australian TFN (Tax File Number) | Yes | ✓ | ✓ | ✓ |  | 
 | Australian Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | Australian Medicare Number | Yes | ✓ | ✓ | ✓ |  | 
 | Australian Passport Number | Yes | ✓ | ✓ | ✓ |  | 
@@ -66,7 +66,12 @@ Note that you can add to the list of personal data that is found in your files. 
 | French INSEE | Yes | ✓ | ✓ | ✓ | ✓ | 
 | French Social Security Number | Yes | ✓ | ✓ | ✓ | ✓ | 
 | French Tax Identification Number (SPI) | Yes | ✓ | ✓ | ✓ | ✓ | 
+| German ID (Personalausweisnummer) | Yes | ✓ | ✓ | ✓ |  | 
+| German Internal ID for Bank Transfers | Yes | ✓ | ✓ | ✓ |  | 
+| German Matriculation Number (Matrikelnummer) | Yes | ✓ | ✓ | ✓ |  | 
+| German Social Security Number (Sozialversicherungsnummer) | Yes | ✓ | ✓ | ✓ |  | 
 | German Tax Identification Number (Steuerliche Identifikationsnummer) | Yes | ✓ | ✓ | ✓ |  | 
+| German Telephone Number | Yes | ✓ | ✓ | ✓ |  | 
 | Greek ID | Yes | ✓ | ✓ | ✓ |  | 
 | Hungarian Tax Identification Number | Yes | ✓ | ✓ | ✓ |  | 
 | Irish ID (PPS) | Yes | ✓ | ✓ | ✓ |  | 

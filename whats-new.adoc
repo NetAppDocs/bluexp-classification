@@ -16,23 +16,35 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
-//== 4 June 2023 (version 1.23)
-//
-//=== Japanese is now supported when searching for data subject names
-//
-//Japanese names can now be entered when searching for a subject's name in response to a Data Subject Access Request (DSAR). You can generate a https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Data Subject Access Request report] with the resulting information. You can also enter Japanese names in the https://docs.netapp.com/us-en/cloud-manager-data-sense/task-investigate-data.html#filter-data-by-sensitivity-and-content["Data Subject" filter in the Data Investigation page] to identify files that contain the subject's name.
-//
-//=== Ubuntu is now a supported Linux distribution on which you can install BlueXP classification
-//
-//Ubuntu 22.04 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Ubuntu Linux host in your network, or on a Linux host in the cloud. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Ubuntu installed].
-//
-//=== Red Hat Enterprise Linux 8.6 and 8.7 are no longer supported with new BlueXP classification installations
-//
-//These versions are not supported with new deployments because Red Hat no longer supports Docker, which is a prerequisite. If you have an existing BlueXP classification machine running on RHEL 8.6 or 8.7, NetApp will continue to support your configuration.
-//
-//=== BlueXP classification can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
-//
-//You can enable file access audit logs to be collected on your BlueXP classification system for file access events detected on volumes in your working environments. BlueXP classification can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-manage-file-access-events.html[See how to monitor and manage file access events].
+== 4 June 2023 (version 1.23)
+
+=== Japanese is now supported when searching for data subject names
+
+Japanese names can now be entered when searching for a subject's name in response to a Data Subject Access Request (DSAR). You can generate a https://docs.netapp.com/us-en/cloud-manager-data-sense/task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Data Subject Access Request report] with the resulting information. You can also enter Japanese names in the https://docs.netapp.com/us-en/cloud-manager-data-sense/task-investigate-data.html#filter-data-by-sensitivity-and-content["Data Subject" filter in the Data Investigation page] to identify files that contain the subject's name.
+
+=== Ubuntu is now a supported Linux distribution on which you can install BlueXP classification
+
+Ubuntu 22.04 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Ubuntu Linux host in your network, or on a Linux host in the cloud. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Ubuntu installed].
+
+=== Red Hat Enterprise Linux 8.6 and 8.7 are no longer supported with new BlueXP classification installations
+
+These versions are not supported with new deployments because Red Hat no longer supports Docker, which is a prerequisite. If you have an existing BlueXP classification machine running on RHEL 8.6 or 8.7, NetApp will continue to support your configuration.
+
+=== BlueXP classification can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
+
+You can enable file access audit logs to be collected on your BlueXP classification system for file access events detected on volumes in your working environments. BlueXP classification can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-manage-file-access-events.html[See how to monitor and manage file access events].
+
+=== Five new types of personal data are identified by BlueXP classification
+
+BlueXP classification can identify and categorize files that contain the following types of data:
+
+* German ID (Personalausweisnummer)
+* German Internal ID for Bank Transfers
+* German Matriculation Number (Matrikelnummer)
+* German Social Security Number (Sozialversicherungsnummer)
+* German Telephone Number
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
 //
 //=== Data Sense BYOL licenses are now supported in dark sites
 //
