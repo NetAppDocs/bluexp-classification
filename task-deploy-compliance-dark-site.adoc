@@ -324,8 +324,11 @@ Since BlueXP classification software is updated with new features on a regular b
 
 .Before you begin
 
-* BlueXP classification software can be upgraded one major version at a time. For example, if you have version 1.20.x installed, you can upgrade only to 1.21.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
-* Verify that your BlueXP Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode[See the Connector upgrade steps^].
+* We recommend that your BlueXP Connector software is upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode[See the Connector upgrade steps^].
+* Starting with BlueXP classification version 1.23 you can perform upgrades to any future version of software.
++
+If your BlueXP classification software is running a version prior to 1.23, you can upgrade only one major version at a time. For example, if you have version 1.21.x installed, you can upgrade only to 1.22.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
+//BlueXP classification software can be upgraded one major version at a time. For example, if you have version 1.20.x installed, you can upgrade only to 1.21.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
 
 .Steps
 
