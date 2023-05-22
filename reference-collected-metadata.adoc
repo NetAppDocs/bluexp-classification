@@ -20,20 +20,24 @@ BlueXP classification collects certain metadata when performing classification s
 |  | *Metadata* | *CIFS* | *NFS*
 
 .3+| *Time stamps* 
-| *Creation time* | Available | Not available (Unsupported in Linux)
+| _Creation time_ | Available | Not available (Unsupported in Linux)
 
-| *Last access time* | Available | Available
+| _Last access time_ | Available | Available
  
-| *Last modify time* | Available | Available
+| _Last modify time_ | Available | Available
 
 .2+| *Permissions* 
-| *Open permissions* | If "EVERYONE" group has access to the file, it is considered "Open to organization" | If "Others" has access to the file, it is considered "Open to organization"
+| _Open permissions_ | If "EVERYONE" group has access to the file, it is considered "Open to organization" | If "Others" has access to the file, it is considered "Open to organization"
 
-| *Users/group access* | Users and group information is taken from LDAP | Not available (NFS users are usually managed locally on the server, therefore, the same individual can have a different UID in each server)
+| _Users/group access_ | Users and group information is taken from LDAP | Not available (NFS users are usually managed locally on the server, therefore, the same individual can have a different UID in each server)
 
 |===
 
-Note that BlueXP classification does not extract the "last accessed time" from the following data sources: SharePoint Online, SharePoint On-premises (SharePoint Server), OneDrive, Google Drive, and Amazon S3.
+[NOTE]
+====
+* BlueXP classification does not extract the "last accessed time" from the following data sources: SharePoint Online, SharePoint On-premises (SharePoint Server), OneDrive, Google Drive, and Amazon S3.
+* Older versions of the Windows OS (for example, Windows 7 and Windows 8) disable the collection of the "last accessed time" attribute by default because it can impact system performance. When this attribute is not collected, Data Sense analytics that are based on "last accessed time" will be impacted.
+====
 
 == Last access time timestamp
 
