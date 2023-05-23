@@ -242,6 +242,7 @@ Follow these steps when installing BlueXP classification software on a single on
 * If you're using a proxy for access to the internet:
 ** You'll need the proxy server information (IP address or host name, connection port, connection scheme: https or http, user name and password).
 ** If the proxy is performing TLS interception, you'll need to know the path on the BlueXP classification Linux system where the TLS CA certificates are stored.
+** The proxy must be non-transparent - we don't currently support transparent proxies.
 * Verify that your offline environment meets the required <<Enable outbound internet access from BlueXP classification,permissions and connectivity>>.
 
 .Steps
