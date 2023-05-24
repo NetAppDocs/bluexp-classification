@@ -25,6 +25,22 @@
 +
 Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
+* *UNIX folder permissions*: The following minimum UNIX permissions are required:
++
+[cols="25,25",width=60%,options="header"]
+|===
+| Folder
+| Minimum Permissions
+
+| /tmp | `rwxrwxrwt`
+
+| /opt | `rwxr-xr-x`
+
+| /var/lib/docker | `rwx------`
+
+| /user/lib/systemd/system  | `rwxr-xr-x`
+|===
+
 * When deploying a compute instance in the cloud for your BlueXP classification installation, we recommend a system that meets the "Large" system requirements above:
 
 ** *AWS EC2 instance type*: We recommend "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types[See additional AWS instance types^]. 
@@ -34,10 +50,12 @@ Note that there are limitations when using these smaller systems. See link:conce
 * *Operating system*: The OS must be capable of installing the docker engine.
 
 ** Red Hat Enterprise Linux versions 8.0 through 8.7
+//** Red Hat Enterprise Linux versions 8.0 through 8.5
+//** CentOS versions 8.0 through 8.5
+//** Ubuntu 22.04
 ** CentOS versions 8.0 through 8.7
 ** CentOS Stream 8 
-** Version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
-//** Ubuntu 22.04
+** RHEL or CentOS version 7.8 or 7.9 can be used, but the Linux kernel version must be 4.0 or greater
 
 * *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
 

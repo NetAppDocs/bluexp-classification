@@ -48,7 +48,7 @@ Use the following filters to view how much sensitive information is contained in
 | Number of identifiers | Select the range of detected sensitive identifiers per file. Includes personal data and sensitive personal data. When filtering in Directories, BlueXP classification totals the matches from all files in each folder (and sub-folders).
 | Personal Data | Select the link:reference-private-data-categories.html#types-of-personal-data[types of personal data^].
 | Sensitive Personal Data | Select the link:reference-private-data-categories.html#types-of-sensitive-personal-data[types of sensitive personal data^].
-| Data Subject | Enter a data subject's full name or known identifier.
+| Data Subject | Enter a data subject's full name or known identifier. link:task-generating-compliance-reports.html#searching-for-data-subjects-and-downloading-reports[Learn more about data subjects here^].
 
 |===
 
@@ -82,7 +82,9 @@ Use the following filters to view data based on time criteria.
 | Created Time | Select a time range when the file was created. You can also specify a custom time range to further refine the search results.
 | Discovered Time | Select a time range when BlueXP classification discovered the file. You can also specify a custom time range to further refine the search results.
 | Last Modified | Select a time range when the file was last modified. You can also specify a custom time range to further refine the search results.
-| Last Accessed | Select a time range when the file, or directory (CIFS or NFS only), was last accessed. You can also specify a custom time range to further refine the search results. For the types of files that BlueXP classification scans, this is the last time BlueXP classification scanned the file.
+| Last Accessed a| Select a time range when the file, or directory (CIFS or NFS only), was last accessed. You can also specify a custom time range to further refine the search results. For the types of files that BlueXP classification scans, this is the last time BlueXP classification scanned the file.
+
+Note that BlueXP classification does not extract the "last accessed time" from the following data sources: SharePoint Online, SharePoint On-premises (SharePoint Server), OneDrive, Google Drive, and Amazon S3.
 
 |===
 
@@ -154,7 +156,7 @@ Use the following filter to view data by the BlueXP classification scan status.
 
 link:reference-collected-metadata.html#last-access-time-timestamp[See details about the "last accessed time" timestamp] for more information about the items that appear in the Investigation page when filtering using the Scan Analysis Event.
 
-=== Filter data by Duplicates
+=== Filter data by duplicates
 
 Use the following filter to view files that are duplicated in your storage.
 

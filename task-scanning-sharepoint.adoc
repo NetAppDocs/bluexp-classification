@@ -37,7 +37,7 @@ Using qualified user credentials, log into the SharePoint account that you want 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the SharePoint site URLs to scan
 
 [role="quick-margin-para"]
-Add the list of SharePoint site URLs that you want to scan in the SharePoint account, and select the type of scanning. You can add up to 100 URLs at time.
+Add the list of SharePoint site URLs that you want to scan in the SharePoint account, and select the type of scanning. You can add up to 100 URLs at time - and up to 1,000 sites total for each account.
 
 == Reviewing SharePoint requirements
 
@@ -100,7 +100,7 @@ The SharePoint On-premise account is added to the list of working environments.
 
 == Adding SharePoint sites to compliance scans
 
-You can add individual SharePoint sites, or all of the SharePoint sites in the account, so that the associated files will be scanned by BlueXP classification. The steps are the same when adding SharePoint Online or SharePoint On-premise sites.
+You can add individual SharePoint sites, or up to 1,000 SharePoint sites in the account, so that the associated files will be scanned by BlueXP classification. The steps are the same whether you are adding SharePoint Online or SharePoint On-premise sites.
 
 .Steps
 
@@ -123,6 +123,8 @@ image:screenshot_compliance_sharepoint_add_site.png[A screenshot of the Add Shar
 A confirmation dialog displays the number of sites that were added.
 +
 If the dialog lists any sites that could not be added, capture this information so that you can resolve the issue. In some cases you can re-add the site with a corrected URL.
+
+. If you need to add more than 100 sites for this account, just click *Add SharePoint Sites* again until you have added all your sites for this account (up to 1,000 sites total for each account).
 
 . Enable mapping-only scans, or mapping and classification scans, on the files in the SharePoint sites.
 +
