@@ -19,14 +19,14 @@ Known limitations identify functions that are not supported by this release of t
 
 === BlueXP classification scans only one share under a volume
 
-If you have multiple shares under a single volume, BlueXP classification scans the share with the highest hierarchy. For example, if you have shares like the following:
+If you have multiple file shares under a single volume, BlueXP classification scans the share with the highest hierarchy. For example, if you have shares like the following:
 
 * /A
 * /A/B
 * /C
 * /D/E
 
-Then the data in /A will be scanned. The data in /B and /C will not be scanned.
+Then the data in /A will be scanned. The data in /C and /D will not be scanned.
 
 .Workaround
 
@@ -36,14 +36,12 @@ There is a workaround to make sure you are scanning data from all the shares in 
 . After BlueXP classification has completed scanning the volume, go to the _Data Investigation_ page and create a filter to see which share is being scanned:
 +
 You'll filter the data by "Working Environment Name" and "Directory Type = Share" to see which share is being scanned.
-. Get the complete list of shares that exist in the volume to see which shares are not being scanned.
+. Get the complete list of shares that exist in the volume so you can see which shares are not being scanned.
 . link:task-scanning-file-shares.html[Add the remaining shares to a share group].
 +
-You'll need to add all the shares and sub-shares individually, for example:
+You'll need to add all the shares individually, for example:
 +
- /A/B
  /C
  /D
- /D/E
-
+ 
 . Perform these steps for each volume in the working environment that has multiple shares.
