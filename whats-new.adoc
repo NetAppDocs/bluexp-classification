@@ -103,7 +103,7 @@ https://docs.netapp.com/us-en/cloud-manager-data-sense/reference-private-data-ca
 
 === Installation enhancements
 
-* BlueXP classification can be installed on Linux hosts that are running CentOS Stream 8.
+//* BlueXP classification can be installed on Linux hosts that are running CentOS Stream 8.
 * The BlueXP classification installer for sites without internet access (dark sites) now performs a pre-check to make sure your system and networking requirements are in place for a successful installation.
 * Installation audit log files are saved now; they are written to `/ops/netapp/install_logs`.
 
