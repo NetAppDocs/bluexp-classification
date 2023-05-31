@@ -39,7 +39,7 @@ This is useful if you want to make a copy of certain data and move it to a diffe
 This is useful for situations where you're migrating data and you want to exclude certain files from the original volume. This action uses the https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[NetApp FlexClone^] functionality to quickly duplicate the volume and then remove the files that you *didn't* select.
 * *Copy and synchronize files* from a single source repository (ONTAP volume, S3 bucket, NFS share, etc.) to a directory in a specific destination (target) location.
 +
-This is useful for situations where you're migrating data from one source system to another. After the initial copy, the service syncs any changed data based on the schedule that you set. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp BlueXP copy and sync^] functionality to copy and sync data from a source to a target.
+This is useful for situations where you're migrating data from one source system to another. After the initial copy, the service syncs any changed data based on the schedule that you set. This action uses the https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html[NetApp BlueXP copy and sync^] functionality to copy and sync data from a source to a target.
 
 === Copying source files to an NFS share
 
@@ -129,9 +129,9 @@ If you initially selected *Map all volumes* or *Map & Classify all volumes* when
 
 === Copying and synchronizing source files to a target system
 
-You can copy source files that BlueXP classification is scanning from any supported unstructured data source to a directory in a specific target destination location (https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html[target locations that are supported by BlueXP copy and sync^]). After the initial copy, any data changed in the files are synchronized based on the schedule that you configure.
+You can copy source files that BlueXP classification is scanning from any supported unstructured data source to a directory in a specific target destination location (https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html[target locations that are supported by BlueXP copy and sync^]). After the initial copy, any data changed in the files are synchronized based on the schedule that you configure.
 
-This is useful for situations where you're migrating data from one source system to another. This action uses the https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[NetApp BlueXP copy and sync^] functionality to copy and sync data from a source to a target.
+This is useful for situations where you're migrating data from one source system to another. This action uses the https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html[NetApp BlueXP copy and sync^] functionality to copy and sync data from a source to a target.
 
 TIP: You can't copy and sync files that reside in databases, OneDrive accounts, or SharePoint accounts.
 
@@ -140,7 +140,7 @@ TIP: You can't copy and sync files that reside in databases, OneDrive accounts, 
 * You must have the Account Admin or Workspace Admin role to copy and sync files.
 * You must select a minimum of 20 files.
 * All selected files must be from the same source repository (ONTAP volume, S3 bucket, NFS or CIFS share, etc.).
-* You'll need to activate the BlueXP copy and sync service and configure a minimum of one data broker that can be used to transfer files between the source and target systems. Review the BlueXP copy and sync requirements beginning with the https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html[Quick Start description^].
+* You'll need to activate the BlueXP copy and sync service and configure a minimum of one data broker that can be used to transfer files between the source and target systems. Review the BlueXP copy and sync requirements beginning with the https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html[Quick Start description^].
 +
 Note that the BlueXP copy and sync service has separate service charges for your sync relationships, and will incur resource charges if you deploy the data broker in the cloud.
 
@@ -166,7 +166,7 @@ The BlueXP copy and sync UI is opened in BlueXP.
 +
 You are prompted to define the sync relationship. The Source system is pre-populated based on the repository and files you already selected in BlueXP classification.
 
-. You'll need to select the Target system and then select (or create) the Data Broker you plan to use. Review the BlueXP copy and sync requirements beginning with the link:https://docs.netapp.com/us-en/cloud-manager-sync/task-quick-start.html[Quick Start description^].
+. You'll need to select the Target system and then select (or create) the Data Broker you plan to use. Review the BlueXP copy and sync requirements beginning with the link:https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html[Quick Start description^].
 
 .Result
 
