@@ -44,7 +44,7 @@ Most BlueXP classification features work when it is deployed in a site with no i
 * Receiving user feedback
 * Automated software upgrades from BlueXP
 +
-Both the BlueXP Connector and BlueXP classification will require periodic manual upgrades to enable new features. You can see the BlueXP classification version at the bottom of the BlueXP classification UI pages. Check the link:whats-new.html[BlueXP classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode[upgrade the BlueXP Connector^] and <<Upgrade BlueXP classification software,upgrade your BlueXP classification software>>.
+Both the BlueXP Connector and BlueXP classification will require periodic manual upgrades to enable new features. You can see the BlueXP classification version at the bottom of the BlueXP classification UI pages. Check the link:whats-new.html[BlueXP classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode[upgrade the BlueXP Connector^] and <<Upgrade BlueXP classification software,upgrade your BlueXP classification software>>.
 
 == Quick start
 
@@ -53,7 +53,7 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the BlueXP Connector
 
 [role="quick-margin-para"]
-If you don't already have a Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html[deploy the Connector^] on a Linux host now.
+If you don't already have a Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Connector^] on a Linux host now.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review BlueXP classification prerequisites
 
@@ -72,7 +72,7 @@ The first 1 TB of data that BlueXP classification scans in BlueXP is free for 30
 
 == Install the BlueXP Connector
 
-If you don't already have a BlueXP Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-private-mode.html[deploy the Connector^] on a Linux host in your offline site.
+If you don't already have a BlueXP Connector installed at your offline on-premises site, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Connector^] on a Linux host in your offline site.
 
 == Prepare the Linux host system
 
@@ -97,7 +97,7 @@ TIP: The IP address of the BlueXP classification host system can't be changed af
 
 Review the following prerequisites to make sure that you have a supported configuration before you deploy BlueXP classification.
 
-* Ensure that the Connector has permissions to deploy resources and create security groups for the BlueXP classification instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
+* Ensure that the Connector has permissions to deploy resources and create security groups for the BlueXP classification instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 * Ensure that you can keep BlueXP classification running. The BlueXP classification instance needs to stay on to continuously scan your data.
 * Ensure web browser connectivity to BlueXP classification. After BlueXP classification is enabled, ensure that users access the BlueXP interface from a host that has a connection to the BlueXP classification instance.
 +
@@ -325,7 +325,8 @@ Since BlueXP classification software is updated with new features on a regular b
 .Before you begin
 
 * BlueXP classification software can be upgraded one major version at a time. For example, if you have version 1.20.x installed, you can upgrade only to 1.21.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
-* Verify that your BlueXP Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode[See the Connector upgrade steps^].
+
+* Verify that your BlueXP Connector software has been upgraded to the newest available version. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode[See the Connector upgrade steps^].
 
 .Steps
 

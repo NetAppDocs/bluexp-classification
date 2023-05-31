@@ -75,7 +75,7 @@ If you don't have a BlueXP classification license, contact us to purchase one:
 * mailto:ng-contact-data-sense@netapp.com?subject=Licensing[Send email to purchase a license].
 * Click the chat icon in the lower-right of BlueXP to request a license.
 
-Optionally, if you have an unassigned node-based license for Cloud Volumes ONTAP that you won't be using, you can convert it to a BlueXP classification license with the same dollar-equivalence and the same expiration date. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses[Go here for details^].
+Optionally, if you have an unassigned node-based license for Cloud Volumes ONTAP that you won't be using, you can convert it to a BlueXP classification license with the same dollar-equivalence and the same expiration date. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses[Go here for details^].
 
 You use the BlueXP digital wallet page in BlueXP to manage BlueXP classification BYOL licenses. You can add new licenses and update existing licenses.
 
@@ -115,7 +115,7 @@ After you purchase a BlueXP classification (Data Sense) license for your BlueXP 
 +
 * If you have the BlueXP classification license serial number and know your NSS account, select the *Enter Serial Number* option and enter that information.
 +
-If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html[add the NSS account to BlueXP^].
+If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html[add the NSS account to BlueXP^].
 * If you have the BlueXP classification license file (required when installed in a dark site), select the *Upload License File* option and follow the prompts to attach the file.
 +
 image:screenshot_services_license_add.png[A screenshot that shows the page to add the BlueXP classification BYOL license.]
