@@ -38,10 +38,10 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Create a Connector
 
 [role="quick-margin-para"]
-If you don't already have a Connector, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network, or on a Linux host in the cloud.
+If you don't already have a Connector, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network, or on a Linux host in the cloud.
 
 [role="quick-margin-para"]
-You can also create a Connector with your cloud provider. See https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html[creating a Connector in GCP^].
+You can also create a Connector with your cloud provider. See https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[creating a Connector in GCP^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review prerequisites
 
@@ -63,9 +63,9 @@ The first 1 TB of data that BlueXP classification scans in BlueXP is free for 30
 
 == Create a Connector
 
-A BlueXP Connector is required before you can install and use BlueXP classification. In most cases you'll probably have a Connector set up before you attempt to activate BlueXP classification because most https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#when-a-connector-is-required[BlueXP features require a Connector], but there are cases where you'll you need to set one up now.
+A BlueXP Connector is required before you can install and use BlueXP classification. In most cases you'll probably have a Connector set up before you attempt to activate BlueXP classification because most https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-a-connector-is-required[BlueXP features require a Connector], but there are cases where you'll you need to set one up now.
  
-To create one in your cloud provider environment, see https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html[creating a Connector in GCP^]. 
+To create one in your cloud provider environment, see https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[creating a Connector in GCP^]. 
 
 There are some scenarios where you have to use a Connector that's deployed in a specific cloud provider:
 
@@ -77,9 +77,9 @@ For Azure NetApp Files, it must be deployed in the same region as the volumes yo
 
 On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts can be scanned using any of these cloud Connectors.
 
-Note that you can also https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install BlueXP classification on-prem may also choose to install the Connector on-prem.
+Note that you can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install BlueXP classification on-prem may also choose to install the Connector on-prem.
 
-As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#multiple-connectors[multiple Connectors].
+As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors[multiple Connectors].
 
 You'll need the IP address or host name of the Connector system when installing BlueXP classification. You'll have this information if you installed the Connector in your premises. If the Connector is deployed in the cloud, you can find this information from the BlueXP console: click the Help icon, select *Support*, and click *BlueXP Connector*.
 
@@ -167,7 +167,7 @@ BlueXP classification requires outbound internet access. If your virtual or phys
 |===
 
 //Ensure that the BlueXP Connector has the required permissions::
-//Ensure that the Connector has permissions to deploy resources and create security groups for the BlueXP classification instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html[the policies provided by NetApp^].
+//Ensure that the Connector has permissions to deploy resources and create security groups for the BlueXP classification instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 //
 //Ensure web browser connectivity to BlueXP classification::
 //After BlueXP classification is enabled, ensure that users access the BlueXP interface from a host that has a connection to the BlueXP classification instance.
@@ -228,7 +228,7 @@ See <<Prepare the Linux host system,Preparing the Linux host system>> and <<Enab
 
 Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
-NOTE: BlueXP classification is currently unable to scan S3 buckets, Azure NetApp Files, or FSx for ONTAP when the software is installed on premises. In these cases you'll need to deploy a separate Connector and instance of BlueXP classification in the cloud and https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#multiple-connectors[switch between Connectors^] for your different data sources.
+NOTE: BlueXP classification is currently unable to scan S3 buckets, Azure NetApp Files, or FSx for ONTAP when the software is installed on premises. In these cases you'll need to deploy a separate Connector and instance of BlueXP classification in the cloud and https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors[switch between Connectors^] for your different data sources.
 
 === Single-host installation for typical configurations
 
