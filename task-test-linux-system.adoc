@@ -106,11 +106,11 @@ TIP: This section is not required for host systems installed in sites without in
 
 | Provides prerequisite packages for CentOS installation.
 
-// |
-//\http://packages.ubuntu.com/
-//\http://archive.ubuntu.com
-//
-// | Provides prerequisite packages for Ubuntu installation.
+|
+\http://packages.ubuntu.com/
+\http://archive.ubuntu.com
+
+| Provides prerequisite packages for Ubuntu installation.
 |===
 
 == Verify that all required ports are enabled
