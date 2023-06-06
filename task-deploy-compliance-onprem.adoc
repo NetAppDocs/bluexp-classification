@@ -158,11 +158,11 @@ BlueXP classification requires outbound internet access. If your virtual or phys
 
 | Provides prerequisite packages for CentOS installation.
 
-// |
-//\http://packages.ubuntu.com/
-//\http://archive.ubuntu.com
-//
-// | Provides prerequisite packages for Ubuntu installation.
+|
+\http://packages.ubuntu.com/
+\http://archive.ubuntu.com
+
+| Provides prerequisite packages for Ubuntu installation.
 
 |===
 
@@ -192,7 +192,7 @@ Make sure port 8080 is open so you can see the installation progress in BlueXP.
 * The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
 * The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Connector host.
 |BlueXP classification <> ONTAP cluster  a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
-* For CIFS - 139 (TCP\UDP) and 445(TCP\UDP) a| BlueXP classification needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Firewalls or routing rules for Cloud Volumes ONTAP must allow inbound connections from the BlueXP classification instance. 
+* For CIFS - 139 (TCP\UDP) and 445 (TCP\UDP) a| BlueXP classification needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Firewalls or routing rules for Cloud Volumes ONTAP must allow inbound connections from the BlueXP classification instance. 
 
 Make sure these ports are open to the BlueXP classification instance:
 
@@ -242,6 +242,8 @@ Follow these steps when installing BlueXP classification software on a single on
 * If you're using a proxy for access to the internet:
 ** You'll need the proxy server information (IP address or host name, connection port, connection scheme: https or http, user name and password).
 ** If the proxy is performing TLS interception, you'll need to know the path on the BlueXP classification Linux system where the TLS CA certificates are stored.
+** The proxy must be non-transparent - we don't currently support transparent proxies.
+** The user must be a local user. Domain users are not supported.
 * Verify that your offline environment meets the required <<Enable outbound internet access from BlueXP classification,permissions and connectivity>>.
 
 .Steps
@@ -303,7 +305,7 @@ Variable values:
 * _proxy_host_ = IP or host name of the proxy server if the host is behind a proxy server.
 * _proxy_port_ = Port to connect to the proxy server (default 80).
 * _proxy_scheme_ = Connection scheme: https or http (default http).
-* _proxy_user_ = Authenticated user to connect to the proxy server, if basic authentication is required.
+* _proxy_user_ = Authenticated user to connect to the proxy server, if basic authentication is required. The user must be a local user - domain users are not supported.
 * _proxy_password_ = Password for the user name that you specified.
 * _ca_cert_dir_ = Path on the BlueXP classification Linux system containing additional TLS CA certificate bundles. Only required if the proxy is performing TLS interception.
 

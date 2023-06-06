@@ -155,6 +155,8 @@ image:screenshot_compliance_data_mapping_report_button.png[A screenshot of the G
 
 BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
+If the report is larger than 1 MB, the PDF file is retained on the BlueXP classification instance and you'll see a pop-up message about the exact location. When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the PDF file. When BlueXP classification is deployed in the cloud, you'll need to SSH to the BlueXP classification instance to download PDF file. link:task-audit-data-sense-actions.html#access-the-log-file[See how to access data on the Classification instance^].
+
 Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
 
 == Data Discovery Assessment Report
