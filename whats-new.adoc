@@ -24,7 +24,7 @@ Japanese names can now be entered when searching for a subject's name in respons
 
 === Ubuntu is now a supported Linux distribution on which you can install BlueXP classification
 
-Ubuntu 22.04 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Ubuntu Linux host in your network, or on a Linux host in the cloud. https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Ubuntu installed].
+Ubuntu 22.04 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Ubuntu Linux host in your network, or on a Linux host in the cloud when using version 1.23 of the installer. https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Ubuntu installed].
 
 === Red Hat Enterprise Linux 8.6 and 8.7 are no longer supported with new BlueXP classification installations
 
