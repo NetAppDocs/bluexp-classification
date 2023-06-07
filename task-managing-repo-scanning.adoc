@@ -57,7 +57,7 @@ image:screenshot_compliance_repo_scan_all.png[A screenshot showing how to config
 
 == Pausing and resuming scanning for a repository
 
-You can "pause" scanning on a repository if you want to temporarily stop scanning certain content. This is not the same as turning scanning "off". When scanning is turned off, all the indexing and information about that volume is removed from the system. Pausing scanning means that BlueXP classification won't perform any future scans for changes or additions to the repository, but that all the current results will still be displayed in the system.
+You can "pause" scanning on a repository if you want to temporarily stop scanning certain content. This is not the same as turning scanning "off". When scanning is turned off, all the indexing and information about that volume is removed from the system, and charging for scanning the data is stopped. Pausing scanning means that BlueXP classification won't perform any future scans for changes or additions to the repository, but that all the current results will still be displayed in the system. Pausing scanning does not stop charging to scan the data because the data still exists.
 
 You can "resume" scanning at any time.
 
