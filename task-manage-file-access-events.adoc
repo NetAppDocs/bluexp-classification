@@ -103,7 +103,7 @@ You can use the BlueXP classification Investigation page to search for the volum
 
 == Access the File Access Audit Log files
 
-The File Access Audit Log files are located on the BlueXP classification machine in: `/opt/netapp/file_access_audit_logs/`
+The File Access Audit Log files are located on the BlueXP classification machine in: `/opt/netapp/fpolicy/logs`
 
 Each file is configured by default to contain a maximum of 50,000 events. <<Configure File Access Audit Log settings,You can customize this value in the File Access Audit Log Configuration page.>> After this maximum has been reached, older entries in the log file are overwritten.
 
@@ -142,7 +142,7 @@ image:screenshot_compliance_file_access_audit_config.png[A screenshot showing th
 | Audit Log Option
 | Description
 
-| Log file location | The location is currently hardcoded to write the log files to `/opt/netapp/file_access_audit_logs/`
+| Log file location | The location is currently hardcoded to write the log files to `/opt/netapp/fpolicy/logs`
 | Maximum storage allocation for audit logs | The total size of all the log files in the directory is currently hardcoded to a default value of 50 GB. When that limit is reached, the oldest log files are deleted automatically.
 | Maximum number of audit events per audit file | Each file is currently hardcoded to contain a maximum of 50,000 events. After this maximum has been reached, old events are deleted as new events are added.
 
