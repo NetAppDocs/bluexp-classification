@@ -232,7 +232,9 @@ NOTE: BlueXP classification is currently unable to scan S3 buckets, Azure NetApp
 
 === Single-host installation for typical configurations
 
-Follow these steps when installing BlueXP classification software on a single on-premises host.
+Review the requirements and follow these steps when installing BlueXP classification software on a single on-premises host.
+
+https://youtu.be/gE-vrBLSJqw[Watch this video] to see how to install BlueXP classification.
 
 .What you'll need
 

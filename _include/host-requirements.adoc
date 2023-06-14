@@ -1,6 +1,5 @@
 * BlueXP classification is not supported on a host that is shared with other applications - the host must be a dedicated host.
 
-// Change /var to /var/lib/docker for early May release.
 * When building the host system in your premises, you can choose among three system sizes depending on the size of the data set that you plan to have BlueXP classification scan.
 +
 [cols="18,18,26,30",width=95%,options="header"]
@@ -11,15 +10,15 @@
 | Disk
 | *Large* | 16 CPUs | 64 GB RAM | 500 GiB SSD on /, or
 - 100 GiB available on /opt
-- 395 GiB available on /var
+- 395 GiB available on /var/lib/docker
 - 5 GiB on /tmp
 | *Medium* | 8 CPUs | 32 GB RAM | 200 GiB SSD on /, or
 - 50 GiB available on /opt
-- 145 GiB available on /var
+- 145 GiB available on /var/lib/docker
 - 5 GiB on /tmp
 | *Small* | 8 CPUs | 16 GB RAM | 100 GiB SSD on /, or
 - 50 GiB available on /opt
-- 45 GiB available on /var
+- 45 GiB available on /var/lib/docker
 - 5 GiB on /tmp
 |===
 +
@@ -62,4 +61,6 @@ Note that there are limitations when using these smaller systems. See link:conce
 * *Additional software*: You must install the following software on the host before you install BlueXP classification:
 
 ** Docker Engine version 19.3.1 or later. https://docs.docker.com/engine/install/[View installation instructions^].
++
+https://youtu.be/H1WS_-85pWA[Watch this video] for a quick demo of installing Docker on CentOS.
 ** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
