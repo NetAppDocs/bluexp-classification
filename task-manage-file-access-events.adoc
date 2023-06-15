@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-manage-file-access-events.html
 keywords: compliance, actions, view progress, audit, logs, installation
-summary: You can configure BlueXP classification to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
+summary: You can configure BlueXP classification to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this log file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
 ---
 
 = Monitor and manage file access events
@@ -13,11 +13,11 @@ summary: You can configure BlueXP classification to log events to a file wheneve
 :imagesdir: ./media/
 
 [.lead]
-You can configure BlueXP classification to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
+You can configure BlueXP classification to log events to a file whenever one of the files you are scanning has been accessed or changed. Then you can view the contents of this log file (the File Access Audit Log), or download it, to see what file changes have occurred, and by whom. 
 
 For example, if you want to track when any changes are made to your sensitive personnel files or payroll files, you can enable this feature on the volumes where these files reside. Then you can view the File Access Audit Log to see if these files have been changed. If they have been changed, you'll be able to see the security identifier (SID) of the person who made the change and when the change was made.
 
-You can enable this feature on any critical volumes in your working environments that are running ONTAP software. When enabled on a volume, file access events are tracked for all files and directories in the volume. This capability is based on the https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html[FPolicy feature^] from your ONTAP systems, and it uses your BlueXP classification system as an FPolicy server to receive notification messages (events) from ONTAP.
+You can enable this feature on any critical volumes in your working environments that are running ONTAP software. When enabled on a volume, file access events are tracked for all files and directories in the volume. This capability is based on the https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html[FPolicy feature^] from your ONTAP systems, and it uses your BlueXP classification system as an FPolicy server to receive notification messages (events) from ONTAP. BlueXP classification can process approximately 990 events per second from ONTAP.
 
 BlueXP classification currently captures events for the following actions on your files and directories: 
 
@@ -46,7 +46,7 @@ The data sources must be running ONTAP version 9.11 or greater software.
 
 You can enable file access audit logging on individual volumes to track changes to files and directories.
 
-TIP: You can configure file access auditing on a maximum of 5 volumes on each data source at this time.
+// TIP: You can configure file access auditing on a maximum of 5 volumes on each data source at this time.
 
 .Before you begin
 
