@@ -274,7 +274,7 @@ image:screenshot_cloud_compliance_deploy_onprem.png[A screenshot of selecting th
 . On the host machine, enter the command you copied and then follow a series of prompts, or you can provide the full command including all required parameters as command line arguments.
 
 +
-Note that the installer performs a pre-check to make sure your system and networking requirements are in place for a successful installation.
+Note that the installer performs a pre-check to make sure your system and networking requirements are in place for a successful installation. https://youtu.be/UZtn_I0e1Ls[Watch this video] to understand the pre-check messages and implications.
 
 +
 [cols="50a,50",options="header"]
