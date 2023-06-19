@@ -43,7 +43,7 @@ Note that you can add to the list of personal data that is found in your files. 
 | IP Address | No | ✓ | ✓ | ✓ |  | ✓
 | Password | Yes | ✓ | ✓ | ✓ |  | ✓
 
-.54+| National Identifiers | Australian TFN (Tax File Number) | Yes | ✓ | ✓ | ✓ |  | 
+.57+| National Identifiers | Australian TFN (Tax File Number) | Yes | ✓ | ✓ | ✓ |  | 
 | Australian Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | Australian Medicare Number | Yes | ✓ | ✓ | ✓ |  | 
 | Australian Passport Number | Yes | ✓ | ✓ | ✓ |  | 
@@ -66,10 +66,10 @@ Note that you can add to the list of personal data that is found in your files. 
 | French INSEE | Yes | ✓ | ✓ | ✓ | ✓ | 
 | French Social Security Number | Yes | ✓ | ✓ | ✓ | ✓ | 
 | French Tax Identification Number (SPI) | Yes | ✓ | ✓ | ✓ | ✓ | 
-// | German ID (Personalausweisnummer) | Yes | ✓ | ✓ | ✓ |  | 
-// | German Internal ID for Bank Transfers | Yes | ✓ | ✓ | ✓ |  | 
+| German ID (Personalausweisnummer) | Yes | ✓ | ✓ | ✓ |  | 
+| German Internal ID for Bank Transfers | Yes | ✓ | ✓ | ✓ |  | 
 // | German Matriculation Number (Matrikelnummer) | Yes | ✓ | ✓ | ✓ |  | 
-// | German Social Security Number (Sozialversicherungsnummer) | Yes | ✓ | ✓ | ✓ |  | 
+| German Social Security Number (Sozialversicherungsnummer) | Yes | ✓ | ✓ | ✓ |  | 
 | German Tax Identification Number (Steuerliche Identifikationsnummer) | Yes | ✓ | ✓ | ✓ |  | 
 // | German Telephone Number | Yes | ✓ | ✓ | ✓ |  | 
 | Greek ID | Yes | ✓ | ✓ | ✓ |  | 

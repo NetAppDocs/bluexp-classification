@@ -15,6 +15,8 @@ summary: Complete a few steps to start scanning files in your SharePoint Online 
 [.lead]
 Complete a few steps to start scanning files in your SharePoint Online and SharePoint On-Premise accounts with BlueXP classification.
 
+Note that you can scan data from the default library and any additional libraries in the SharePoint site.
+
 == Quick start
 
 Get started quickly by following these steps, or scroll down to the remaining sections for full details.
@@ -53,9 +55,6 @@ Review the following prerequisites to make sure you are ready to activate BlueXP
 Deploy BlueXP classification if there isn't already an instance deployed.
 
 * For SharePoint Online, BlueXP classification can be link:task-deploy-cloud-compliance.html[deployed in the cloud^].
-// or link:task-deploy-compliance-onprem.html[installed in an on-premises location that has internet access^].
-//+
-//BlueXP classification can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your SharePoint Online files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
 * For SharePoint On-Premises, BlueXP classification can be installed link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^] or link:task-deploy-compliance-dark-site.html[in an on-premises location that does not have internet access^]. 
 
 When BlueXP classification is installed in a site without internet access, the BlueXP Connector also must be installed in that same site without internet access. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[Learn more^].

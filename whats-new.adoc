@@ -16,6 +16,26 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
+== July xx 2023
+
+=== 
+
+d
+
+=== Three new types of German personal data are identified by BlueXP classification
+
+BlueXP classification can identify and categorize files that contain the following types of data:
+
+* German ID (Personalausweisnummer)
+* German Internal ID for Bank Transfers
+* German Social Security Number (Sozialversicherungsnummer)
+
+https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
+
+=== Ability to scan data from additional libraries in the SharePoint online
+
+SharePoint sites include a single document library by default. In the past, BlueXP classification could scan files only from that default library. Now files from additional libraries will also be scanned. 
+
 == 6 June 2023 (version 1.23)
 
 === Japanese is now supported when searching for data subject names
@@ -37,18 +57,6 @@ You can enable file access audit logs to be collected on your BlueXP classificat
 === Data Sense BYOL licenses are now supported in dark sites
 
 Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
-//
-//=== Five new types of personal data are identified by BlueXP classification
-//
-//BlueXP classification can identify and categorize files that contain the following types of data:
-//
-//* German ID (Personalausweisnummer)
-//* German Internal ID for Bank Transfers
-//* German Matriculation Number (Matrikelnummer)
-//* German Social Security Number (Sozialversicherungsnummer)
-//* German Telephone Number
-//
-//https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
 
 == 3 April 2023 (version 1.22)
 
