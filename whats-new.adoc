@@ -16,11 +16,11 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
-== July xx 2023
+== 3 July 2023 (version 1.24)
 
-=== 
+=== Data Fusion capability has been added to the Classifications dashboard
 
-d
+Data Fusion allows you to scan your organizations' data to identify whether unique identifiers from your databases are found in any of your other data sources. In the past there was a separate workflow to integrate this functionality. Now it is part of the "Classifier settings" page where you can add other types of custom classifiers for your business. https://docs.netapp.com/us-en/bluexp-classification/task-managing-data-fusion.html#add-custom-personal-data-identifiers-from-your-databases[Go here for details].
 
 === Three new types of German personal data are identified by BlueXP classification
 
