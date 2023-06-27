@@ -131,7 +131,7 @@ image:screenshot_select_classifier_tool_keywords.png[A screenshot showing the se
 +
 The screenshot below shows internal Product Names (different types of owls). The BlueXP classification search for these items is not case sensitive.
 +
-image:screenshot_select_classifier_create_logic_keyword.png[A screenshot of entering the keywords for your customer classifier.]
+image:screenshot_select_classifier_create_logic_keyword.png[A screenshot of entering the keywords for your custom classifier.]
 
 . Click *Done* and BlueXP classification starts to rescan your data.
 
@@ -150,7 +150,9 @@ For example, you may want to see where your internal Product IDs are mentioned i
 
 After adding the regex, BlueXP classification will restart scanning all data sources. After the scan has completed, the new results will appear in the BlueXP classification Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
 
-See https://regex101.com/ if you need assistance in building the regular expression you need. Choose *Python* for the Flavor to see the types of results BlueXP classification will return from the regular expression.
+See https://regex101.com/ if you need assistance in building the regular expression you need. Choose *Python* for the Flavor to see the types of results BlueXP classification will match from the regular expression.
+
+NOTE: Currently we do not allow the use of pattern flags when creating a regex - this means you should not use "/".
 
 .Steps
 
@@ -173,7 +175,7 @@ image:screenshot_select_classifier_tool_regex.png[A screenshot showing the selec
 .. You can enter any legal regular expression. Click the *Validate* button to have BlueXP classification verify that the regular expression is valid, and that it is not too broad -- meaning it will return too many results.
 .. Optionally, you can enter some proximity words to help refine the accuracy of the results. These are words that will typically be found within 300 characters of the pattern you are searching for (either before or after the found pattern). Enter each word, or phrase, on a separate line.
 +
-image:screenshot_select_classifier_create_logic_regex.png[A screenshot of entering the regex and proximity words for your customer classifier.]
+image:screenshot_select_classifier_create_logic_regex.png[A screenshot of entering the regex and proximity words for your custom classifier.]
 
 .Results
 

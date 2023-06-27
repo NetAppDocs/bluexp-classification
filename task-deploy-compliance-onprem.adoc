@@ -111,10 +111,6 @@ Note that you must restart Docker whenever you enable or update `firewalld` sett
 
 NOTE: The IP address of the BlueXP classification host system can't be changed after installation.
 
-//== Verify BlueXP and BlueXP classification prerequisites
-//
-//Review the following prerequisites to make sure that you have a supported configuration before you deploy BlueXP classification on a Linux system. 
-
 == Enable outbound internet access from BlueXP classification
 
 BlueXP classification requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the BlueXP classification instance has outbound internet access to contact the following endpoints.

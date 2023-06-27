@@ -46,7 +46,7 @@ The data sources must be running ONTAP version 9.11 or greater software.
 
 You can enable file access audit logging on individual volumes to track changes to files and directories.
 
-// TIP: You can configure file access auditing on a maximum of 5 volumes on each data source at this time.
+TIP: You can configure file access auditing on a maximum of 8 volumes on each data source at this time.
 
 .Before you begin
 
