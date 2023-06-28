@@ -32,6 +32,10 @@ BlueXP classification can identify and categorize files that contain the followi
 
 https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
 
+=== Rocky Linux 9 is now a supported Linux distribution on which you can install BlueXP classification
+
+Rocky Linux 9 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Rocky Linux host in your network, or on a Linux host in the cloud when using version 1.24 of the installer. https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Rocky Linux installed].
+
 === Ability to scan data from additional libraries in the SharePoint online
 
 SharePoint sites include a single document library by default. In the past, BlueXP classification could scan files only from that default library. Now files from additional libraries will also be scanned. 
@@ -71,6 +75,7 @@ When deploying BlueXP classification from a BlueXP Connector in an AWS environme
 === Standalone script is now available to qualify your Linux system prior to BlueXP classification installation
 
 If you would like to verify that your Linux system meets all prerequisites independently of running the BlueXP classification installation, there is a separate script you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/bluexp-classification/task-test-linux-system.html[See how to check if your Linux host is ready to install BlueXP classification].
+// end::whats-new[]
 
 == 7 March 2023 (version 1.21)
 
@@ -114,7 +119,6 @@ https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categ
 //* BlueXP classification can be installed on Linux hosts that are running CentOS Stream 8.
 * The BlueXP classification installer for sites without internet access (dark sites) now performs a pre-check to make sure your system and networking requirements are in place for a successful installation.
 * Installation audit log files are saved now; they are written to `/ops/netapp/install_logs`.
-// end::whats-new[]
 
 == 5 February 2023 (version 1.20)
 
@@ -274,62 +278,3 @@ In the past when you created a custom Policy, the results showed the files that 
 === Data Sense can move up to 100,000 files at a time now
 
 If you plan to use Data Sense to move files from a scanned data source to an NFS share, the maximum number of files has been increased to 100,000 files. https://docs.netapp.com/us-en/bluexp-classification/task-managing-highlights.html#moving-source-files-to-an-nfs-share[See how to move files using Data Sense].
-
-== 12 June 2022 (version 1.13.1)
-
-=== Now you can download the results from the Data Investigation page as a .JSON report
-
-After you have filtered the data in the Data Investigation page, now you can save the data as a report in a .JSON file that you can export to an NFS Share, in addition to saving the data to a .CSV file on your local system. Make sure Data Sense has the correct permissions for export access. https://docs.netapp.com/us-en/bluexp-classification/task-generating-compliance-reports.html#data-investigation-report[See how to create reports from the Data Investigation page].
-
-=== Ability to uninstall Data Sense from the Data Sense UI
-
-You can uninstall Data Sense to permanently remove the software from the host, and in the case of a cloud deployment, delete the virtual machine / instance on which Data Sense was deployed. Deleting the instance permanently deletes all the indexed information Data Sense has scanned. https://docs.netapp.com/us-en/bluexp-classification/task-uninstall-data-sense.html[See how].
-
-=== Audit logging is now available to track the history of actions that Data Sense has performed
-
-The audit log tracks the management activities that Data Sense has performed on files from all the working environments and data sources that Data Sense is scanning. The activities could be user generated (delete a file, create a policy, etc.) or policy generated (automatically add labels to files, automatically delete files, etc.).
-
-https://docs.netapp.com/us-en/bluexp-classification/task-audit-data-sense-actions.html[See more details about the audit log].
-
-=== New Filter for number of sensitive identifiers in the Data Investigation page
-
-The “Number of identifiers” filter enables you to list the files that have a certain number of sensitive identifiers - including both personal data and sensitive personal data. You can select a range like 1-10 or 501-1000 to view only the files that contain that number of sensitive identifiers.
-
-https://docs.netapp.com/us-en/bluexp-classification/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
-
-=== Now you can edit existing policies that you created
-
-If you need to make a change to a custom policy that you created in the past, now you can edit the policy instead of creating a new policy. https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#editing-policies[See how to edit a policy].
-
-== 11 May 2022 (version 1.12.1)
-
-=== Support added for scanning data in Google Drive accounts
-
-Now you can add your Google Drive accounts to Data Sense in order to scan the documents and files from those Google Drive accounts. https://docs.netapp.com/us-en/bluexp-classification/task-scanning-google-drive.html[See how to scan your Google Drive accounts].
-
-Data Sense can identify Personal Identifiable Information (PII) within the following Google file types from the Google Docs suite -- Docs, Sheets, and Slides -- in addition to the https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-files[existing file types].
-
-=== Directory level view added to the Data Investigation page
-
-In addition to viewing and filtering data from all your files and databases, now you can view and filter data based on all the data within folders and shares in the Data Investigation page. Directories will be indexed for scanned CIFS and NFS shares, and for OneDrive, SharePoint, and Google Drive folders. So now you can view permissions and manage your data on the directory level. https://docs.netapp.com/us-en/bluexp-classification/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See how to select the Directories view of your scanned data].
-
-=== Expand groups to show the users/members that have permissions to access a file
-
-As part the Data Sense permissions capabilities, now you can view the list of users and groups that have access to a file. Each group can be expanded to show the list of users in the group. https://docs.netapp.com/us-en/bluexp-classification/task-controlling-private-data.html#viewing-permissions-for-files[See how to view users and groups who have read and/or write permissions to your files].
-
-=== Two new Filters have been added to the Data Investigation page
-
-* The “Directory type” filter enables you to refine your data to see folders or shares only. The results will be shown in the new *Directories* tab.
-* The "User / Group Permissions" filter enables you to list the files, folders, and shares that a specific user or a group has read and/or write permissions to. You can select multiple users and/or group names - or enter a partial name.
-
-https://docs.netapp.com/us-en/bluexp-classification/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
-
-== 5 April 2022 (version 1.11.1)
-
-=== Four new types of Australian personal data can be identified by Data Sense
-
-Data Sense can identify and categorize files that contain the Australian TFN (Tax File Number), Australian Driver's License Number, Australian Medicare Number, and Australian Passport Number. link:reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
-
-=== Global Active Directory server can be an LDAP server now
-
-The global Active Directory server you integrate with Data Sense can be an LDAP Server now in addition to the previously supported DNS Server. link:task-add-active-directory-datasense.html[Go here for details].
