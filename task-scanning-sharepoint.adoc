@@ -15,7 +15,7 @@ summary: Complete a few steps to start scanning files in your SharePoint Online 
 [.lead]
 Complete a few steps to start scanning files in your SharePoint Online and SharePoint On-Premise accounts with BlueXP classification.
 
-Note that you can scan data from the default library and any additional libraries in the SharePoint site.
+//Note that you can scan data from the default library and any additional libraries in the SharePoint site.
 
 == Quick start
 

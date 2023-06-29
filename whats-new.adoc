@@ -36,9 +36,9 @@ https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categ
 
 Rocky Linux 9 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Rocky Linux host in your network, or on a Linux host in the cloud when using version 1.24 of the installer. https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Rocky Linux installed].
 
-=== Ability to scan data from additional libraries in the SharePoint online
-
-SharePoint sites include a single document library by default. In the past, BlueXP classification could scan files only from that default library. Now files from additional libraries will also be scanned. 
+//=== Ability to scan data from additional libraries in the SharePoint online
+//
+//SharePoint sites include a single document library by default. In the past, BlueXP classification could scan files only from that default library. Now files from additional libraries will also be scanned. 
 
 == 6 June 2023 (version 1.23)
 

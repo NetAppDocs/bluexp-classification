@@ -253,7 +253,7 @@ https://youtu.be/gE-vrBLSJqw[Watch this video] to see how to install BlueXP clas
 . Unzip the installer file on the host machine, for example:
 +
 [source,cli]
-tar -xzf DATASENSE-INSTALLER-V1.21.0.tar.gz
+tar -xzf DATASENSE-INSTALLER-V1.22.0.tar.gz
 
 . In BlueXP, select *Governance > Classification*.
 
