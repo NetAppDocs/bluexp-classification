@@ -157,6 +157,8 @@ image:diagram_deploy_onprem_multi_host_no_internet.png[A diagram showing the loc
 
 Follow these steps when installing BlueXP classification software on a single on-premises host in an offline environment.
 
+Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html#access-the-log-file[See more details here].
+
 .What you'll need
 
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
