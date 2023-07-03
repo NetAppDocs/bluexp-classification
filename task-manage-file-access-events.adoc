@@ -37,7 +37,6 @@ BlueXP classification can log file access events for files that reside on ONTAP 
 
 * On-premises ONTAP
 * Cloud Volumes ONTAP
-* Azure NetApp Files
 * Amazon FSx for NetApp ONTAP
 
 The data sources must be running ONTAP version 9.11 or greater software. 
