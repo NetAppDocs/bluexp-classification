@@ -38,68 +38,68 @@ Note that since you're scanning your own databases, whatever language your data 
 
 You must have link:task-scanning-databases.html#adding-the-database-server[added at least one database server^] to BlueXP classification before you can add data fusion sources.
 
-. From the _Classification settings_ tab, click *Add New Classifier* to launch the _Add Custom Classifier_ wizard.
-+
-image:screenshot_compliance_add_classifier_button.png[A screenshot showing how to launch the Add Custom Classifier wizard.]
-
-. In the _Select type_ page, enter the name of the classifier, provide a brief description, select *Personal identifier*, and then click *Next*.
-+
-The name you enter will appear in the BlueXP classification UI as the heading for scanned files that match the classifier requirements, and as the name of the filter in the Investigation page. 
-+
-You can also check the box to "Mask detected results in the system" so the full result won't appear in the UI. For example, you may want to do this to hide full credit card numbers or similar personal data (the mask would appear in the UI like this: "pass:[****] pass:[****] pass:[****]" 3434).
-+
-image:screenshot_select_classifier_type3.png[A screenshot showing how to name the classifier and select the type of classifier.]
-
-. In the _Select Data Analysis Tool_ page, select *DB fusion* as the method you want to use to define the classifier, and then click *Next*.
-+
-image:screenshot_select_classifier_tool_dbfusion.png[A screenshot showing the selection of DB fusion as the tool that BlueXP classification will use to build the pattern.]
-
-. In the _Create Logic_ page, enter the information that defines the database columns you want to use, and click *Done*.
-.. Select the database where the source data resides.
-.. Select the Database Schema from the drop-down menu.
-.. Select the Table name in that schema.
-.. Enter the Column, or Columns, that contain the unique identifiers you want to use.
-+
-When adding multiple columns, enter each column name, or table view name, on a separate line.
-+
-image:screenshot_select_classifier_create_logic_dbfusion.png["A screenshot of identifying the database, schema, table, and column for the data fusion source."]
-+
-The Custom Classifiers page displays the Data Fusion integration that you have configured BlueXP classification to scan in the Personal Information area.
+//. From the _Classification settings_ tab, click *Add New Classifier* to launch the _Add Custom Classifier_ wizard.
+//+
+//image:screenshot_compliance_add_classifier_button.png[A screenshot showing how to launch the Add Custom Classifier wizard.]
+//
+//. In the _Select type_ page, enter the name of the classifier, provide a brief description, select *Personal identifier*, and then click *Next*.
+//+
+//The name you enter will appear in the BlueXP classification UI as the heading for scanned files that match the classifier requirements, and as the name of the filter in the Investigation page. 
+//+
+//You can also check the box to "Mask detected results in the system" so the full result won't appear in the UI. For example, you may want to do this to hide full credit card numbers or similar personal data (the mask would appear in the UI like this: "pass:[****] pass:[****] pass:[****]" 3434).
+//+
+//image:screenshot_select_classifier_type3.png[A screenshot showing how to name the classifier and select the type of classifier.]
+//
+//. In the _Select Data Analysis Tool_ page, select *DB fusion* as the method you want to use to define the classifier, and then click *Next*.
+//+
+//image:screenshot_select_classifier_tool_dbfusion.png[A screenshot showing the selection of DB fusion as the tool that BlueXP classification will use to build the pattern.]
+//
+//. In the _Create Logic_ page, enter the information that defines the database columns you want to use, and click *Done*.
+//.. Select the database where the source data resides.
+//.. Select the Database Schema from the drop-down menu.
+//.. Select the Table name in that schema.
+//.. Enter the Column, or Columns, that contain the unique identifiers you want to use.
+//+
+//When adding multiple columns, enter each column name, or table view name, on a separate line.
+//+
+//image:screenshot_select_classifier_create_logic_dbfusion.png["A screenshot of identifying the database, schema, table, and column for the data fusion source."]
+//+
+//The Custom Classifiers page displays the Data Fusion integration that you have configured BlueXP classification to scan in the Personal Information area.
 
 //+
 //The Data Fusion inventory page displays the database source columns that you have configured BlueXP classification to scan.
 //+
 //image:screenshot_compliance_data_fusion_list.png[A screenshot of all the data source references you have configured with Data Fusion.]
-//
-//. In the Configuration page, click *Manage Data Fusion* in the database where the source data resides.
-//+
-//image:screenshot_compliance_manage_data_fusion.png[A screenshot of selecting the Manage Data Fusion button to add a source column.]
-//
-//. Click *Add Data Fusion source* on the next page.
-//
-//. In the _Add Data Fusion Source_ page:
-//.. Select the Database Schema from the drop-down menu.
-//.. Enter the Table name in that schema.
-//.. Enter the Column, or Columns, that contain the unique identifiers you want to use.
-//+
-//When adding multiple columns, enter each column name, or table view name, on a separate line.
-//+
-//image:screenshot_compliance_add_data_fusion.png[A screenshot of identifying the schema, table, and column for the data fusion source.]
-//
-//. Click *Add Data Fusion Source*.
-//+
-//image:screenshot_compliance_data_fusion_list.png[A screenshot of all the data source references you have configured with Data Fusion.]
+
+. In the Configuration page, click *Manage Data Fusion* in the database where the source data resides.
++
+image:screenshot_compliance_manage_data_fusion.png[A screenshot of selecting the Manage Data Fusion button to add a source column.]
+
+. Click *Add Data Fusion source* on the next page.
+
+. In the _Add Data Fusion Source_ page:
+.. Select the Database Schema from the drop-down menu.
+.. Enter the Table name in that schema.
+.. Enter the Column, or Columns, that contain the unique identifiers you want to use.
++
+When adding multiple columns, enter each column name, or table view name, on a separate line.
++
+image:screenshot_compliance_add_data_fusion.png[A screenshot of identifying the schema, table, and column for the data fusion source.]
+
+. Click *Add Data Fusion Source*.
++
+image:screenshot_compliance_data_fusion_list.png[A screenshot of all the data source references you have configured with Data Fusion.]
 
 .Results
 After the next scan, the results will include this new information in the Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter. The name you used for the classifier appears in the filter list, for example `Customers.CustomerID`.
 
 image:screenshot_add_data_fusion_result.png[A screenshot showing an example of Data Fusion results in the Investigation Results pane.]
 
-//=== Delete a Data Fusion source
-//
-//If at some point you decide not to scan your files using a certain Data Fusion source, you can select the source row from the Data Fusion inventory page and click *Delete Data Fusion Source*.
-//
-//image:screenshot_compliance_delete_data_fusion.png[A screenshot showing how to remove a data fusion source.]
+=== Delete a Data Fusion source
+
+If at some point you decide not to scan your files using a certain Data Fusion source, you can select the source row from the Data Fusion inventory page and click *Delete Data Fusion Source*.
+
+image:screenshot_compliance_delete_data_fusion.png[A screenshot showing how to remove a data fusion source.]
 
 == Add custom keywords from a list of words
 
