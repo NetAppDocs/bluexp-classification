@@ -111,10 +111,6 @@ Note that you must restart Docker whenever you enable or update `firewalld` sett
 
 NOTE: The IP address of the BlueXP classification host system can't be changed after installation.
 
-//== Verify BlueXP and BlueXP classification prerequisites
-//
-//Review the following prerequisites to make sure that you have a supported configuration before you deploy BlueXP classification on a Linux system. 
-
 == Enable outbound internet access from BlueXP classification
 
 BlueXP classification requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the BlueXP classification instance has outbound internet access to contact the following endpoints.
@@ -236,6 +232,8 @@ Review the requirements and follow these steps when installing BlueXP classifica
 
 https://youtu.be/gE-vrBLSJqw[Watch this video] to see how to install BlueXP classification.
 
+Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html#access-the-log-file[See more details here].
+
 .What you'll need
 
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
@@ -257,7 +255,7 @@ https://youtu.be/gE-vrBLSJqw[Watch this video] to see how to install BlueXP clas
 . Unzip the installer file on the host machine, for example:
 +
 [source,cli]
-tar -xzf DATASENSE-INSTALLER-V1.21.0.tar.gz
+tar -xzf DATASENSE-INSTALLER-V1.22.0.tar.gz
 
 . In BlueXP, select *Governance > Classification*.
 

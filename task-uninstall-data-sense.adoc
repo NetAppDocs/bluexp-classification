@@ -19,15 +19,17 @@ The steps that you need to use depend on whether you deployed BlueXP classificat
 
 == Uninstall BlueXP classification from a cloud deployment
 
-You can uninstall and delete the BlueXP classification instance from the cloud provider if you no longer want to use BlueXP classification.
+You can uninstall and delete the BlueXP classification instance from the cloud provider environment if you no longer want to use BlueXP classification.
 
 . At the top of the BlueXP classification page, click image:screenshot_gallery_options.gif[More button] and then click *Uninstall Data Sense*.
 +
 image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall BlueXP classification software.]
 
-. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to delete the instance and all associated data, and then click *Uninstall*.
+. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to disconnect the BlueXP classification instance from the BlueXP Connector, and then click *Uninstall*.
 
-Note that you can go to your cloud provider's console and delete the BlueXP classification instance from there as well. The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
+. Go to your cloud provider's console and delete the BlueXP classification instance. The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
++
+This deletes the instance and all associated data that had been collected by BlueXP classification.
 
 == Uninstall BlueXP classification from an on-premises deployment
 
@@ -37,15 +39,9 @@ You can uninstall BlueXP classification from a host if you no longer want to use
 +
 image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstall BlueXP classification software.]
 
-. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to clear all the configuration information, and then click *Uninstall*.
+. In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to disconnect the BlueXP classification instance from the BlueXP Connector, and then click *Uninstall*.
 
-. To complete the uninstallation from the host, run the uninstall script on the host machine, for example:
+. To uninstall the software from the host, run the `cleanup.sh` script on the host machine, for example:
 +
 [source,cli]
-uninstall.sh
-
-//You can delete the BlueXP classification instance if you no longer want to use BlueXP classification. Deleting the instance also deletes the associated disks where the indexed data resides.
-//
-//. Go to your cloud provider's console and delete the BlueXP classification instance.
-//+
-//The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
+cleanup.sh

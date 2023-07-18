@@ -198,14 +198,14 @@ BlueXP classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions
 
 === Are there any restrictions when deployed in a Government region?
 
-BlueXP classification is supported when the Connector is deployed in a Government region (AWS GovCloud, Azure Gov, or Azure DoD). When deployed in this manner, BlueXP classification has the following restrictions:
+BlueXP classification is supported when the Connector is deployed in a Government region (AWS GovCloud, Azure Gov, or Azure DoD) - also known as "Restricted mode". When deployed in this manner, BlueXP classification has the following restrictions:
 
 * OneDrive accounts, SharePoint accounts, and Google Drive accounts can't be scanned.
 * Microsoft Azure Information Protection (AIP) label functionality can't be integrated.
 
 === What data sources can I scan if I install BlueXP classification in a site without internet access?
 
-BlueXP classification can only scan data from data sources that are local to the on-premises site. At this time, BlueXP classification can scan the following local data sources in a "dark" site:
+BlueXP classification can only scan data from data sources that are local to the on-premises site. At this time, BlueXP classification can scan the following local data sources in "Private mode" - also known as a "dark" site:
 
 * On-premises ONTAP systems
 * Database schemas
@@ -276,7 +276,7 @@ Yes. You can https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-conne
 
 === What about secure sites without internet access?
 
-Yes, that's also supported. You can https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Connector on an on-premises Linux host that doesn't have internet access^]. Then you can discover on-premises ONTAP clusters and other local data sources and scan the data using BlueXP classification.
+Yes, that's also supported. You can https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Connector on an on-premises Linux host that doesn't have internet access^]. https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[This is also known as "Private mode"^]. Then you can discover on-premises ONTAP clusters and other local data sources and scan the data using BlueXP classification.
 
 == BlueXP classification deployment
 
