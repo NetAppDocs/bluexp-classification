@@ -1,0 +1,50 @@
+---
+sidebar: sidebar
+permalink: api-classification.html
+keywords: api, apis, rest, restful, authorization, classification, data sense, swagger, body, header, list apis
+summary: The BlueXP classification capabilities that are available through the web UI are also available through the Swagger API.
+---
+
+= BlueXP classification APIs
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The BlueXP classification capabilities that are available through the web UI are also available through the Swagger API.
+
+There are four categories defined within BlueXP classification that correspond to the tabs in the UI:
+
+* Investigation
+* Compliance
+* Governance
+* Configuration
+
+The APIs in the Swagger documentation allow you to search, aggregate data, track your scans, and create actions like copy, move, and more.
+
+== Overview 
+
+The API enables you to perform the following functions:
+
+* Export information
+** Everything that is available in the UI can be exported via the API (with the exception of reports)
+** Data is exported in a JSON format (easy to parse and push to 3rd party applications, like Splunk)
+
+* Create queries using "AND" and "OR" statements, include and exclude information, and more.
++
+For example, you can locate files _without_ specific Personal Identifiable Information (PII) (functionality not available in the UI). You can also exclude specific fields for the export operation.
+
+* Perform actions
+** Update CIFS credentials 
+** View and cancel actions
+** Re-scan directories
+
+The API is secure and it uses the same authentication method as the UI. You can find information on the authentication in: https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html
+
+== Accessing the Swagger API reference
+
+To get into Swagger you'll need the IP address of the your BlueXP classification instance. In the case of a cloud deployment you'll use the public IP address. Then you'll need to get into this endpoint: 
+
+https://<classification_ip>/documentation

@@ -81,9 +81,20 @@ You use the BlueXP digital wallet page in BlueXP to manage BlueXP classification
 
 === Obtain your BlueXP classification license file
 
-After you have purchased your BlueXP classification (Data Sense) license, you activate the license in BlueXP by entering the BlueXP classification serial number and NSS account, or by uploading the NLF license file. The steps below show how to get the NLF license file if you plan to use that method.
+After you've purchased your BlueXP classification (Data Sense) license, you activate the license in BlueXP by entering the BlueXP classification serial number and NSS account, or by uploading the NLF license file. The steps below show how to get the NLF license file if you plan to use that method.
 
 If you've deployed BlueXP classification on a host in an on-premises site that doesn't have internet access, you'll need to obtain the license file from an internet-connected system. Activating the license using the serial number and NSS account is not available for dark site installations.
+
+.Before you begin
+
+You'll need to have the following information before you start:
+
+* BlueXP classification serial number
++
+Locate this number from your Sales Order, or contact the account team for this information.
+* BlueXP Account ID
++
+You can find your BlueXP Account ID by selecting the *Account* drop-down from the top of BlueXP, and then clicking *Manage Account* next to your account. Your Account ID is in the Overview tab.
 
 .Steps
 
@@ -93,13 +104,11 @@ If you've deployed BlueXP classification on a host in an on-premises site that d
 +
 image:screenshot_cloud_tiering_license_step1.gif[A screenshot that shows a table of licenses after searching by serial number.]
 
-. Under *License Key*, click *Get NetApp License File*.
+. Under the *License Key* column, click *Get NetApp License File*.
 
-. Enter your BlueXP Account ID (this is called a Tenant ID on the support site) and click *Submit* to download the license file.
+. Enter your Tenant ID (BlueXP Account ID) and click *Submit* to download the license file.
 +
 image:screenshot_cloud_tiering_license_step2.gif[A screenshot that shows the get license dialog box where you enter your tenant ID and then click Submit to download the license file.]
-+
-You can find your BlueXP Account ID by selecting the *Account* drop-down from the top of BlueXP, and then clicking *Manage Account* next to your account. Your Account ID is in the Overview tab.
 
 === Add BlueXP classification BYOL licenses to your account
 

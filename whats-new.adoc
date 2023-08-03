@@ -39,6 +39,14 @@ BlueXP classification is now fully supported in sites with no internet access (P
 
 Now you can upgrade to a newer version of BlueXP classification even if it is not sequential. This means that the current limitation of upgrading BlueXP classification by one version at a time is no longer required. This feature is relevant starting from version 1.24 onwards.
 
+=== The BlueXP classification API is now available
+
+The BlueXP classification API enables you to perform actions, create queries, and export information about the data you are scanning. The interactive documentation is available using Swagger. The documentation is separated into multiple categories, including Investigation, Compliance, Governance, and Configuration. Each category is a reference to the tabs in the BlueXP classification UI.
+
+To get into Swagger you'll need the IP address of the your BlueXP classification instance. In the case of a cloud deployment you'll use the public IP address. Then you'll need to get into this endpoint: 
+
+https://<classification_ip>/documentation
+
 //=== Data Fusion capability has been added to the Classifications dashboard
 //
 //Data Fusion allows you to scan your organizations' data to identify whether unique identifiers from your databases are found in any of your other data sources. In the past there was a separate workflow to integrate this functionality. Now it is part of the "Classifier settings" page where you can add other types of custom classifiers for your business. https://docs.netapp.com/us-en/bluexp-classification/task-managing-data-fusion.html#add-custom-personal-data-identifiers-from-your-databases[Go here for details].
@@ -263,25 +271,3 @@ There are two ways that you can add custom "personal data" that Data Sense will 
 * You can add a personal pattern using a regular expression (regex).
 
 These keywords and patterns are added to the existing predefined patterns that Data Sense already uses, and the results will be visible under the Personal patterns section. https://docs.netapp.com/us-en/bluexp-classification/task-managing-data-fusion.html[Learn more^].
-
-== 6 July 2022 (version 1.14)
-
-=== Now you can view the users and groups who have access to your directories
-
-In the past you could view the types of open permissions granted on individual files. Now you can view a list of all users or groups who have access to directories (folders and file shares), and the types of permissions they have. https://docs.netapp.com/us-en/bluexp-classification/task-controlling-private-data.html#viewing-permissions-for-files-and-directories[See how to view the users and groups that have access to your folders and file shares].
-
-=== You can "pause" scanning a repository to temporarily stop scanning certain content
-
-Pausing scanning means that Data Sense won't perform future scanning on any additions or changes to a volume or bucket, but that all the current results will still be available in the system. https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#pausing-and-resuming-scanning-for-a-repository[See how to pause and resume scanning].
-
-=== US driver's license data from three additional states can be identified by Data Sense
-
-Data Sense can identify and categorize files that contain driver's license data from Indiana, New York, and Texas. link:reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that Data Sense can identify in your data].
-
-=== Policies now return directories that match the search criteria
-
-In the past when you created a custom Policy, the results showed the files that matched the search criteria. Now the results also show the directories (folders and file shares) that match the query. https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#creating-custom-policies[Learn more about creating policies].
-
-=== Data Sense can move up to 100,000 files at a time now
-
-If you plan to use Data Sense to move files from a scanned data source to an NFS share, the maximum number of files has been increased to 100,000 files. https://docs.netapp.com/us-en/bluexp-classification/task-managing-highlights.html#moving-source-files-to-an-nfs-share[See how to move files using Data Sense].
