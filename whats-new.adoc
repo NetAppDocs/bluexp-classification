@@ -45,7 +45,9 @@ The BlueXP classification API enables you to perform actions, create queries, an
 
 To get into Swagger you'll need the IP address of the your BlueXP classification instance. In the case of a cloud deployment you'll use the public IP address. Then you'll need to get into this endpoint: 
 
-https://<classification_ip>/documentation
+\https://<classification_ip>/documentation
+
+https://docs.netapp.com/us-en/bluexp-classification/api-classification.html[Learn more about the BlueXP classification APIs].
 
 //=== Data Fusion capability has been added to the Classifications dashboard
 //
