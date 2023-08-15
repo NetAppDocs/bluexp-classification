@@ -43,9 +43,7 @@ Now you can upgrade to a newer version of BlueXP classification even if it is no
 
 The BlueXP classification API enables you to perform actions, create queries, and export information about the data you are scanning. The interactive documentation is available using Swagger. The documentation is separated into multiple categories, including Investigation, Compliance, Governance, and Configuration. Each category is a reference to the tabs in the BlueXP classification UI.
 
-To get into Swagger you'll need the IP address of the your BlueXP classification instance. In the case of a cloud deployment you'll use the public IP address. Then you'll need to get into this endpoint: 
-
-https://<classification_ip>/documentation
+https://docs.netapp.com/us-en/bluexp-classification/api-classification.html[Learn more about the BlueXP classification APIs].
 
 //=== Data Fusion capability has been added to the Classifications dashboard
 //
