@@ -233,9 +233,14 @@ TIP: You can use the "file hash" value provided in this page and enter it direct
 
 The Data Investigation Report is a download of the filtered contents of the Data Investigation page. 
 
-You can save the report to the local machine as a .CSV file (which can include up to 5,000 rows of data), or as a .JSON file that you export to an NFS Share (which can include an unlimited number of rows). If BlueXP classification is scanning files (unstructured data), directories (folders and file shares), or databases (structured data), there can be up to three report files downloaded.
+You can save the report in two different format:
 
+* As a .CSV file to the local machine; which can include up to 5,000 rows of data.
+* As a .JSON file that you export to an NFS Share; which can include up to 100,000 rows of data. If there are more than 100,000 rows of data, additional .JSON files are created. 
++
 When exporting to a file share, make sure BlueXP classification has the correct permissions for export access.
+
+There can be up to three report files downloaded if BlueXP classification is scanning files (unstructured data), directories (folders and file shares), and databases (structured data).
 
 === Generating the Data Investigation Report
 
@@ -245,9 +250,9 @@ When exporting to a file share, make sure BlueXP classification has the correct 
 
 . Select whether you want to download a .CSV report or .JSON report of the data, and click *Download Report*.
 +
-image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
-+
 When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
++
+image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
 
 .Result
 
