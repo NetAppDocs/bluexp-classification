@@ -16,6 +16,22 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
+== 7 September (version 1.??)
+
+=== Support for on-premises installations using RHEL/CentOS version 9
+
+Docker was not supported with these Linux version...  Now using Podman version 2 or greater as the container infrastructure instead of Docker
+
+Currently not supported in dark site installations or in distributed scanning (using a master scanner and remote node scanners)
+
+=== Apply tags on up to 100,000 items from the Investigation Results page
+
+Used to be one page (20 items) at a time. Now you can apply tags on up to 100,000 items at a time.
+
+=== Identify duplicated files now has a minimum file size fo 1 MB
+
+BlueXP classification used to identify duplicated files only for files that were 50 MB or larger. Now duplicated files starting with 1 MB are identified.
+
 == 17 July 2023 (version 1.24)
 
 === Two new types of German personal data are identified by BlueXP classification
@@ -74,6 +90,7 @@ You can enable file access audit logs to be collected on your BlueXP classificat
 === Data Sense BYOL licenses are now supported in dark sites
 
 Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
+// end::whats-new[]
 
 == 3 April 2023 (version 1.22)
 
@@ -88,7 +105,6 @@ When deploying BlueXP classification from a BlueXP Connector in an AWS environme
 === Standalone script is now available to qualify your Linux system prior to BlueXP classification installation
 
 If you would like to verify that your Linux system meets all prerequisites independently of running the BlueXP classification installation, there is a separate script you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/bluexp-classification/task-test-linux-system.html[See how to check if your Linux host is ready to install BlueXP classification].
-// end::whats-new[]
 
 == 7 March 2023 (version 1.21)
 

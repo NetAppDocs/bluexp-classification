@@ -209,6 +209,8 @@ Additionally, you can click the name of a user or a group and the Investigation 
 
 You can view if duplicate files are being stored in your storage systems. This is useful if you want to identify areas where you can save storage space. It can also be helpful to make sure certain files that have specific permissions or sensitive information are not unnecessarily duplicated in your storage systems.
 
+All of your files (not including databases) that are 1 MB or larger, and that contain personal or sensitive personal information, are compared to see if there are duplicates.
+
 BlueXP classification uses hashing technology to determine duplicate files. If any file has the same hash code as another file, we can be 100% sure that the files are exact duplicates -- even if the file names are different.
 
 You can download the list of duplicate files and send it to your storage admin so they can decide which files, if any, can be deleted. Or you can link:task-managing-highlights.html#deleting-source-files[delete the file] yourself if you are confident that a specific version of the file is not needed.
@@ -217,7 +219,7 @@ You can download the list of duplicate files and send it to your storage admin s
 
 If you want a list of all files that are duplicated in the working environments and data sources you are scanning, you can use the filter called *Duplicates > Has duplicates* in the Data Investigation page.
 
-All files with duplicates from all file types (not including databases), with a minimum size of 50 MB, and/or containing personal or sensitive personal information, will show in the Results page.
+All duplicated files are displayed in the Results page.
 
 === Viewing if a specific file is duplicated
 
@@ -233,7 +235,7 @@ TIP: You can use the "file hash" value provided in this page and enter it direct
 
 The Data Investigation Report is a download of the filtered contents of the Data Investigation page. 
 
-You can save the report in two different format:
+You can save the report in two different formats:
 
 * As a .CSV file to the local machine; which can include up to 5,000 rows of data.
 * As a .JSON file that you export to an NFS Share; which can include up to 100,000 rows of data. If there are more than 100,000 rows of data, additional .JSON files are created. 
