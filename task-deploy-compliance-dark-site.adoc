@@ -162,7 +162,7 @@ Note that all installation activities are logged when installing BlueXP classifi
 .What you'll need
 
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
-* Verify that you have installed the two prerequisite software packages (Docker Engine and Python 3).
+* Verify that you have installed the two prerequisite software packages (Docker or Podman Engine, and Python 3).
 * Make sure you have root privileges on the Linux system.
 * Verify that your offline environment meets the required <<Verify BlueXP and BlueXP classification prerequisites,permissions and connectivity>>.
 
@@ -175,7 +175,7 @@ Note that all installation activities are logged when installing BlueXP classifi
 . Unzip the installer bundle on the host machine, for example:
 +
 [source,cli]
-tar -xzf DataSense-offline-bundle-v1.22.0.tar.gz
+tar -xzf DataSense-offline-bundle-v1.25.0.tar.gz
 +
 This extracts required software and the actual installation file *cc_onprem_installer.tar.gz*.
 
@@ -316,7 +316,7 @@ If your BlueXP classification software is running a version prior to 1.24, you c
 . Unzip the software bundle on the host machine, for example:
 +
 [source,cli]
-tar -xvf DataSense-offline-bundle-v1.23.0.tar.gz
+tar -xvf DataSense-offline-bundle-v1.25.0.tar.gz
 +
 This extracts the installation file *cc_onprem_installer.tar.gz*.
 

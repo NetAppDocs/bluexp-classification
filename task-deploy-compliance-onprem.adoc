@@ -237,7 +237,7 @@ Note that all installation activities are logged when installing BlueXP classifi
 .What you'll need
 
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
-* Verify that the system has the two prerequisite software packages installed (Docker Engine and Python 3).
+* Verify that the system has the two prerequisite software packages installed (Docker or Podman Engine, and Python 3).
 * Make sure you have root privileges on the Linux system.
 * If you're using a proxy for access to the internet:
 ** You'll need the proxy server information (IP address or host name, connection port, connection scheme: https or http, user name and password).
@@ -255,7 +255,7 @@ Note that all installation activities are logged when installing BlueXP classifi
 . Unzip the installer file on the host machine, for example:
 +
 [source,cli]
-tar -xzf DATASENSE-INSTALLER-V1.22.0.tar.gz
+tar -xzf DATASENSE-INSTALLER-V1.25.0.tar.gz
 
 . In BlueXP, select *Governance > Classification*.
 

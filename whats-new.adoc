@@ -16,21 +16,21 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
-== 7 September (version 1.??)
+== 7 September (version 1.25)
 
-=== Support for on-premises installations using RHEL/CentOS version 9
+=== Support for on-premises installations using RHEL and CentOS version 9
 
-Docker was not supported with these Linux version...  Now using Podman version 2 or greater as the container infrastructure instead of Docker
+Red Hat Enterprise Linux and CentOS version 9 do not support the Docker engine; which is required for BlueXP classification installation. We now support installation on RHEL/CentOS 9.2 using Podman version 2 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL/CentOS, now you can install BlueXP classification when using Podman.
 
-Currently not supported in dark site installations or in distributed scanning (using a master scanner and remote node scanners)
+At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes).
 
 === Apply tags on up to 100,000 items from the Investigation Results page
 
-Used to be one page (20 items) at a time. Now you can apply tags on up to 100,000 items at a time.
+In the past you could only apply tags to a single page at a time in the Investigation Results page (20 items). Now you can select *all* items in the Investigation Results pages and apply tags to all the items - up to 100,000 items at a time.  https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#assigning-tags-to-files[See how].
 
-=== Identify duplicated files now has a minimum file size fo 1 MB
+=== Identify duplicated files with a minimum file size of 1 MB
 
-BlueXP classification used to identify duplicated files only for files that were 50 MB or larger. Now duplicated files starting with 1 MB are identified.
+BlueXP classification used to identify duplicated files only when files were 50 MB or larger. Now duplicated files starting with 1 MB can be identified. You can use the Investigation page filters "File Size" along with "Duplicates" to see which files of a certain size are duplicated in your environment.
 
 == 17 July 2023 (version 1.24)
 
