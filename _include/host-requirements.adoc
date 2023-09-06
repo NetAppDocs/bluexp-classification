@@ -24,6 +24,12 @@
 +
 Note that there are limitations when using these smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
+* When deploying a compute instance in the cloud for your BlueXP classification installation, we recommend a system that meets the "Large" system requirements above:
+
+** *AWS EC2 instance type*: We recommend "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types[See additional AWS instance types^]. 
+** *Azure VM size*: We recommend "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types[See additional Azure instance types^].
+** *GCP machine type*: We recommend "n2-standard-16". link:reference-instance-types.html#gcp-instance-types[See additional GCP instance types^].
+
 * *UNIX folder permissions*: The following minimum UNIX permissions are required:
 +
 [cols="25,25",width=60%,options="header"]
@@ -40,29 +46,34 @@ Note that there are limitations when using these smaller systems. See link:conce
 | /user/lib/systemd/system  | `rwxr-xr-x`
 |===
 
-* When deploying a compute instance in the cloud for your BlueXP classification installation, we recommend a system that meets the "Large" system requirements above:
+* *Operating system*: 
 
-** *AWS EC2 instance type*: We recommend "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types[See additional AWS instance types^]. 
-** *Azure VM size*: We recommend "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types[See additional Azure instance types^].
-** *GCP machine type*: We recommend "n2-standard-16". link:reference-instance-types.html#gcp-instance-types[See additional GCP instance types^].
+** The following operating systems require using the Docker container engine:
 
-* *Operating system*: The OS must be capable of installing the docker engine.
+*** Red Hat Enterprise Linux version 7.8 and 7.9 - the Linux kernel version must be 4.0 or greater
+*** CentOS version 7.8 and 7.9 - the Linux kernel version must be 4.0 or greater
+*** Rocky Linux 9 (requires BlueXP classification version 1.24 or greater)
+*** Ubuntu 22.04 (requires BlueXP classification version 1.23 or greater)
 
-** Red Hat Enterprise Linux version 7.8 and 7.9 - the Linux kernel version must be 4.0 or greater
-** CentOS version 7.8 and 7.9 - the Linux kernel version must be 4.0 or greater
-** Rocky Linux 9 (requires BlueXP classification version 1.24 and greater)
-** Ubuntu 22.04 (requires BlueXP classification version 1.23 and greater)
-//** Red Hat Enterprise Linux versions 8.0 through 8.5
-//** CentOS versions 8.0 through 8.5
-//** CentOS versions 8.0 through 8.7
-//** CentOS Stream 8 
-//** Red Hat Enterprise Linux versions 8.0 through 8.7
+//** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.25 or greater:
+//
+//*** Red Hat Enterprise Linux version 9.1 and 9.2
+//+
+//Note that the following features are not currently supported when using RHEL 9.x:
+//+
+//**** Installation in a dark site
+//**** Distributed scanning; using a master scanner node and remote scanner nodes
 
 * *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
 
 * *Additional software*: You must install the following software on the host before you install BlueXP classification:
 
-** Docker Engine version 19.3.1 or later. https://docs.docker.com/engine/install/[View installation instructions^].
+** Depending on the OS you are using, you'll need to install one of the container engines:
++
+*** Docker Engine version 19.3.1 or greater. https://docs.docker.com/engine/install/[View installation instructions^].
 +
 https://youtu.be/Ogoufel1q6c[Watch this video^] for a quick demo of installing Docker on CentOS.
-** Python 3 version 3.6 or later. https://www.python.org/downloads/[View installation instructions^].
+//*** Podman version 4 or greater. To install Podman, update your system packages (`sudo yum update -y`), and then install Podman (`sudo yum install podman -y`).
+//https://podman.io/docs/installation#installing-on-linux[View installation instructions^].
+
+** Python version 3.6 or greater. https://www.python.org/downloads/[View installation instructions^].
