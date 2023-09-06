@@ -89,7 +89,8 @@ include::_include/host-requirements.adoc[]
  firewall-cmd --permanent --add-port=443/tcp
  firewall-cmd --reload
 +
-Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
+Note that you must restart Docker whenever you enable or update `firewalld` settings.
+//Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
 
 TIP: The IP address of the BlueXP classification host system can't be changed after installation.
 
@@ -162,9 +163,10 @@ Note that all installation activities are logged when installing BlueXP classifi
 .What you'll need
 
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
-* Verify that you have installed the two prerequisite software packages (Docker or Podman Engine, and Python 3).
+* Verify that you have installed the two prerequisite software packages (Docker Engine, and Python 3).
 * Make sure you have root privileges on the Linux system.
 * Verify that your offline environment meets the required <<Verify BlueXP and BlueXP classification prerequisites,permissions and connectivity>>.
+//add 'or Podman' in 2nd bullet
 
 .Steps
 
@@ -245,7 +247,8 @@ Follow these steps when installing BlueXP classification software on multiple on
 .What you'll need
 
 * Verify that all your Linux systems for the Manager and Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
-* Verify that you have installed the two prerequisite software packages (Docker or Podman Engine, and Python 3).
+* Verify that you have installed the two prerequisite software packages (Docker Engine, and Python 3).
+//add 'or Podman' in 2nd bullet
 * Make sure you have root privileges on the Linux systems.
 * Verify that your offline environment meets the required <<Verify BlueXP and BlueXP classification prerequisites,permissions and connectivity>>.
 * You must have the IP addresses of the scanner node hosts that you plan to use.

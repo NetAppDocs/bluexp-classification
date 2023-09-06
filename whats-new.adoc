@@ -16,13 +16,13 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
-== 7 September (version 1.25)
+== 5 September (version 1.25)
 
-=== Support for on-premises installations using RHEL version 9
-
-Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; which is required for the BlueXP classification installation. We now support installation on RHEL 9.1 and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification when using Podman.
-
-At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes).
+//=== Support for on-premises installations using RHEL version 9
+//
+//Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; which is required for the BlueXP classification installation. We now support installation on RHEL 9.1 and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification when using Podman.
+//
+//At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes).
 
 === Apply tags on up to 100,000 items from the Investigation Results page
 
