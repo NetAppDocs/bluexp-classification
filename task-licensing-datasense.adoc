@@ -22,6 +22,8 @@ A few notes before you read any further:
 
 * The BlueXP classification (Data Sense) bring-your-own-license (BYOL) is a _floating_ license that you can use across all the working environments and data sources in the workspace that you plan to scan. You'll see an active subscription in the BlueXP digital wallet.
 
+* The amount of data being scanned is calculated based on logical file size; without any storage efficiencies.  
+
 link:concept-cloud-compliance.html#cost[Learn more about the licensing and costs related to BlueXP classification].
 
 == Use a BlueXP classification PAYGO subscription
