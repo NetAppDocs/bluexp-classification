@@ -135,6 +135,8 @@ Make sure port 8080 is open so you can see the installation progress in BlueXP.
 
 Follow these steps to run the BlueXP classification Prerequisites script.
 
+https://youtu.be/_RCYpuLXiV0?si=QLGUw8mqPrz9qs4B[Watch this video^] to see how to run the Prerequisites script and interpret the results.
+
 .What you'll need
 
 * Verify that your Linux system meets the <<Verify host requirements,host requirements>>.
