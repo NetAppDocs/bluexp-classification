@@ -109,7 +109,7 @@ image:screenshot_compliance_add_label_manually.png[A screenshot showing the meta
 +
 The label appears in the file metadata.
 
-To assign an AIP label to multiple files:
+Follow these steps to assign an AIP label to multiple files. Note that you can assign an AIP label to a maximum of 20 files at a time (one page in the UI).
 
 .Steps
 
@@ -229,7 +229,7 @@ Note that the user name is not added to the file as part of the file metadata - 
 
 A new Filter in the Investigation page enables you to easily view all files that have the same person in the "Assigned To" field.
 
-To assign a user to a single file:
+Follow these steps to assign a user to a single file.
 
 .Steps
 
@@ -241,7 +241,7 @@ image:screenshot_compliance_add_user_manually.png[A screenshot showing how to as
 +
 The User name appears in the file metadata.
 
-To assign a user to multiple files:
+Follow these steps to assign a user to multiple files. Note that you can assign a user to a maximum of 20 files at a time (one page in the UI).
 
 .Steps
 
