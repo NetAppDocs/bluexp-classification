@@ -236,16 +236,16 @@ Note that when deploying BlueXP classification from a BlueXP Connector in an AWS
 image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate BlueXP classification.]
 
 . Click *Activate Data Sense*.
-+
-image:screenshot_cloud_compliance_deploy_cloud_aws.png[A screenshot of selecting the button to deploy BlueXP classification in the cloud.]
+//+
+//image:screenshot_cloud_compliance_deploy_cloud_aws.png[A screenshot of selecting the button to deploy BlueXP classification in the cloud.]
 
 . From the _Installation_ page, click *Deploy > Deploy* to use the "Large" instance size and start the cloud deployment wizard. 
-+
-You can also click *Deploy > Configuration* to choose from two smaller instance types if you don't have a lot of data to scan. This can save some cloud costs when using a smaller instance. A "Medium" resource size is shown below.
-+
-Then click *Deploy* to start the cloud deployment wizard.
-+
-image:screenshot_cloud_deploy_resource_size.png[A screenshot of the deployment page to pick the size of the instance that BlueXP classification will be deployed on.]
+//+
+//You can also click *Deploy > Configuration* to choose from two smaller instance types if you don't have a lot of data to scan. This can save some cloud costs when using a smaller instance. A "Medium" resource size is shown below.
+//+
+//Then click *Deploy* to start the cloud deployment wizard.
+//+
+//image:screenshot_cloud_deploy_resource_size.png[A screenshot of the deployment page to pick the size of the instance that BlueXP classification will be deployed on.]
 
 . The wizard displays progress as it goes through the deployment steps. It will stop and prompt for input if it runs into any issues.
 +
