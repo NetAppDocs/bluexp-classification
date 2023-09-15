@@ -18,19 +18,23 @@ Learn what's new in BlueXP classification.
 // tag::whats-new[]
 == 5 September (version 1.25)
 
+=== Small and medium deployments temporarily unavailable
+
+When you deploy an instance of BlueXP classification in AWS, the option to select *Deploy > Configuration* and choose a small or medium-sized instance is unavailable at this time. You can still deploy the instance using the large instance size by selecting *Deploy > Deploy*.
+
+=== Apply tags on up to 100,000 items from the Investigation Results page
+
+In the past you could only apply tags to a single page at a time in the Investigation Results page (20 items). Now you can select *all* items in the Investigation Results pages and apply tags to all the items - up to 100,000 items at a time. https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#assigning-tags-to-files[See how].
+
+=== Identify duplicated files with a minimum file size of 1 MB
+
+BlueXP classification used to identify duplicated files only when files were 50 MB or larger. Now duplicated files starting with 1 MB can be identified. You can use the Investigation page filters "File Size" along with "Duplicates" to see which files of a certain size are duplicated in your environment.
+
 //=== Support for on-premises installations using RHEL version 9
 //
 //Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; which is required for the BlueXP classification installation. We now support installation on RHEL 9.1 and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification when using Podman.
 //
 //At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes).
-
-=== Apply tags on up to 100,000 items from the Investigation Results page
-
-In the past you could only apply tags to a single page at a time in the Investigation Results page (20 items). Now you can select *all* items in the Investigation Results pages and apply tags to all the items - up to 100,000 items at a time.  https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#assigning-tags-to-files[See how].
-
-=== Identify duplicated files with a minimum file size of 1 MB
-
-BlueXP classification used to identify duplicated files only when files were 50 MB or larger. Now duplicated files starting with 1 MB can be identified. You can use the Investigation page filters "File Size" along with "Duplicates" to see which files of a certain size are duplicated in your environment.
 
 == 17 July 2023 (version 1.24)
 
@@ -43,9 +47,9 @@ BlueXP classification can identify and categorize files that contain the followi
 
 https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
 
-=== Rocky Linux 9 is now a supported Linux distribution on which you can install BlueXP classification
-
-Rocky Linux 9 (9.0, 9.1, and 9.2) has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Rocky Linux host in your network, or on a Linux host in the cloud when using version 1.24 of the installer. https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Rocky Linux installed].
+//=== Rocky Linux 9 is now a supported Linux distribution on which you can install BlueXP classification
+//
+//Rocky Linux 9 (9.0, 9.1, and 9.2) has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Rocky Linux host in your network, or on a Linux host in the cloud when using version 1.24 of the installer. https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Rocky Linux installed].
 
 === BlueXP classification is fully supported in Restricted mode and Private mode
 
