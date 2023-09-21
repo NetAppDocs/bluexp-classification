@@ -179,11 +179,11 @@ Note that some of the usual BlueXP copy and sync operations are disabled when it
 
 == Moving source files to an NFS share
 
-You can move source files that BlueXP classification is scanning to any NFS share. The NFS share doesn't need to be integrated with BlueXP classification (see link:task-scanning-file-shares.html[Scanning file shares]).
+You can move source files that BlueXP classification is scanning to any NFS share. The NFS share doesn't need to be integrated with BlueXP classification.
 
 Optionally, you can leave a breadcrumb file in the location of the moved file. A breadcrumb file helps your users understand why a file was moved from its original location. For each moved file, the system creates a breadcrumb file in the source location named `<filename>-breadcrumb-<date>.txt`. You can add text in the dialog box that will be added to the breadcrumb file to indicate the location where the file was moved and the user who moved the file.
 
-If a file with the same name exists in the destination location, the file will not be moved.
+Note that the subdirectory structure from the source file is recreated on the destination share when the file is moved so it is easier to understand where the file was moved from. If a file with the same name exists in the destination location, the file will not be moved.
 
 TIP: You can't move files that reside in databases.
 
