@@ -15,7 +15,7 @@ summary: When you run an action from the Investigation Results pane across many 
 [.lead]
 When you run an asynchronous action from the Investigation Results pane across many files, for example, moving or deleting 100 files, the process can take some time. You can monitor the status of these actions in the _Action Status_ pane so you'll know when it has been applied to all files.
 
-This allows you to see the actions that have completed successfully, those currently in progress, and those that have failed so you can diagnose and fix any problems.
+This allows you to see the actions that have completed successfully, those currently in progress, and those that have failed so you can diagnose and fix any problems. Note that short operations that complete quickly, such as moving a single file, do not appear in the Actions Status pane.
 
 The status can be:
 
