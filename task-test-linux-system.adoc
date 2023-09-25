@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-test-linux-system.html
-keywords: cloud compliance, data sense, get started, deploy cloud BlueXP classification, cloud compliance access, compliance, on-premises, linux, test linux system
+keywords: cloud compliance, data sense, get started, deploy, bluexp classification, cloud compliance access, compliance, on-premises, linux, test linux system, docker, podman
 summary: Before installing BlueXP classification manually on a Linux host you can run a script on the host to verify that all the prerequisites are in place for installing BlueXP classification. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access.
 ---
 
@@ -59,7 +59,7 @@ If you're planning to use additional BlueXP classification hosts as scanner node
  firewall-cmd --permanent --add-port=7946/tcp
  firewall-cmd --permanent --add-port=4789/udp
 +
-Note that you must restart Docker whenever you enable or update `firewalld` settings.
+Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
 //add 'or Podman' in 2nd bullet
 
 == Enable outbound internet access from BlueXP classification
@@ -140,7 +140,7 @@ https://youtu.be/_RCYpuLXiV0?si=QLGUw8mqPrz9qs4B[Watch this video^] to see how t
 .What you'll need
 
 * Verify that your Linux system meets the <<Verify host requirements,host requirements>>.
-* Verify that the system has the two prerequisite software packages installed (Docker Engine, and Python 3).
+* Verify that the system has the two prerequisite software packages installed (Docker Engine or Podman, and Python 3).
 //add 'or Podman'
 * Make sure you have root privileges on the Linux system.
 //* If you're using a proxy for access to the internet:
