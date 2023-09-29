@@ -16,6 +16,22 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
+== 5 October (version 1.26)
+
+=== Support for on-premises installations using RHEL version 9
+
+Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; which is required for the BlueXP classification installation. We now support installation on RHEL 9.1 and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification when using Podman.
+
+At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes).
+
+=== Now you can download up to 500k rows of data in CSV reports to a local directory
+    
+In the past when reports had over 5,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
+
+=== Display total size in addition to total items in Investigation page results
+
+The filtered results in the Investigation page now shows the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
+
 == 5 September (version 1.25)
 
 === Small and medium deployments temporarily unavailable
@@ -29,12 +45,6 @@ In the past you could only apply tags to a single page at a time in the Investig
 === Identify duplicated files with a minimum file size of 1 MB
 
 BlueXP classification used to identify duplicated files only when files were 50 MB or larger. Now duplicated files starting with 1 MB can be identified. You can use the Investigation page filters "File Size" along with "Duplicates" to see which files of a certain size are duplicated in your environment.
-
-//=== Support for on-premises installations using RHEL version 9
-//
-//Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; which is required for the BlueXP classification installation. We now support installation on RHEL 9.1 and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification when using Podman.
-//
-//At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes).
 
 == 17 July 2023 (version 1.24)
 
@@ -64,6 +74,7 @@ Now you can upgrade to a newer version of BlueXP classification even if it is no
 The BlueXP classification API enables you to perform actions, create queries, and export information about the data you are scanning. The interactive documentation is available using Swagger. The documentation is separated into multiple categories, including Investigation, Compliance, Governance, and Configuration. Each category is a reference to the tabs in the BlueXP classification UI.
 
 https://docs.netapp.com/us-en/bluexp-classification/api-classification.html[Learn more about the BlueXP classification APIs].
+// end::whats-new[]
 
 //=== Data Fusion capability has been added to the Classifications dashboard
 //
@@ -94,7 +105,6 @@ You can enable file access audit logs to be collected on your BlueXP classificat
 === Data Sense BYOL licenses are now supported in dark sites
 
 Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
-// end::whats-new[]
 
 == 3 April 2023 (version 1.22)
 
