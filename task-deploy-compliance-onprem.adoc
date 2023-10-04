@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-deploy-compliance-onprem.html
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, bluexp classification, docker, podman
 summary: Complete a few steps to install BlueXP classification on a Linux host in your network, or on a Linux host in the cloud, that has internet access. You'll need to deploy the Linux host manually in your network or in the cloud as part of this installation.
 ---
 
@@ -108,6 +108,7 @@ If you're planning to use additional BlueXP classification hosts as scanner node
  firewall-cmd --permanent --add-port=4789/udp
 +
 Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
+// or Podman
 
 NOTE: The IP address of the BlueXP classification host system can't be changed after installation.
 
@@ -237,7 +238,7 @@ Note that all installation activities are logged when installing BlueXP classifi
 .What you'll need
 
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
-* Verify that the system has the two prerequisite software packages installed (Docker Engine, and Python 3).
+* Verify that the system has the two prerequisite software packages installed (Docker Engine or Podman, and Python 3).
 //add 'or Podman' in 2nd bullet
 * Make sure you have root privileges on the Linux system.
 * If you're using a proxy for access to the internet:
@@ -359,7 +360,8 @@ You'll follow these steps to install additional BlueXP classification scanner no
 .What you'll need
 
 * Verify that all your Linux systems for Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
-* Verify that the systems have the two prerequisite software packages installed (Docker Engine and Python 3).
+* Verify that the systems have the two prerequisite software packages installed (Docker Engine or Podman, and Python 3).
+// or Podman
 * Make sure you have root privileges on the Linux systems.
 * Verify that your environment meets the required <<Enable outbound internet access from BlueXP classification,permissions and connectivity>>.
 * You must have the IP addresses of the Scanner node hosts that you are adding.
@@ -394,7 +396,7 @@ You'll follow these steps to install additional BlueXP classification scanner no
  firewall-cmd --permanent --add-port=4789/udp
  firewall-cmd --reload
 +
-Note that you must restart Docker whenever you enable or update `firewalld` settings.
+Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
 //add 'or Podman'
 
 .Prerequisite steps
@@ -495,6 +497,7 @@ Follow these steps when installing BlueXP classification software on multiple on
 
 * Verify that all your Linux systems for the Manager and Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
 * Verify that the systems have the two prerequisite software packages installed (Docker or Podman Engine, and Python 3).
+// or Podman
 * Make sure you have root privileges on the Linux systems.
 * Verify that your environment meets the required <<Enable outbound internet access from BlueXP classification,permissions and connectivity>>.
 * You must have the IP addresses of the scanner node hosts that you plan to use.
