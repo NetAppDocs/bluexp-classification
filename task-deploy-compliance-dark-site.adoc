@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-deploy-compliance-dark-site.html
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification
 summary: Complete a few steps to install BlueXP classification on a Linux host in an on-premises site that doesn't have internet access - also known as "private mode". This type of installation is perfect for your secure sites.
 ---
 
@@ -89,7 +89,7 @@ include::_include/host-requirements.adoc[]
  firewall-cmd --permanent --add-port=443/tcp
  firewall-cmd --reload
 +
-Note that you must restart Docker whenever you enable or update `firewalld` settings.
+Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
 //Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
 
 TIP: The IP address of the BlueXP classification host system can't be changed after installation.
@@ -163,7 +163,7 @@ Note that all installation activities are logged when installing BlueXP classifi
 .What you'll need
 
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
-* Verify that you have installed the two prerequisite software packages (Docker Engine, and Python 3).
+* Verify that you have installed the two prerequisite software packages (Docker Engine or Podman, and Python 3).
 * Make sure you have root privileges on the Linux system.
 * Verify that your offline environment meets the required <<Verify BlueXP and BlueXP classification prerequisites,permissions and connectivity>>.
 //add 'or Podman' in 2nd bullet
@@ -247,7 +247,7 @@ Follow these steps when installing BlueXP classification software on multiple on
 .What you'll need
 
 * Verify that all your Linux systems for the Manager and Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
-* Verify that you have installed the two prerequisite software packages (Docker Engine, and Python 3).
+* Verify that you have installed the two prerequisite software packages (Docker Engine or Podman, and Python 3).
 //add 'or Podman' in 2nd bullet
 * Make sure you have root privileges on the Linux systems.
 * Verify that your offline environment meets the required <<Verify BlueXP and BlueXP classification prerequisites,permissions and connectivity>>.

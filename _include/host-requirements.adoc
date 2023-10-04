@@ -55,14 +55,14 @@ Note that there are limitations when using these smaller systems. See link:conce
 //*** Rocky Linux 9 (requires BlueXP classification version 1.24 or greater)
 *** Ubuntu 22.04 (requires BlueXP classification version 1.23 or greater)
 
-//** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.25 or greater:
-//
-//*** Red Hat Enterprise Linux version 9.1 and 9.2
-//+
-//Note that the following features are not currently supported when using RHEL 9.x:
-//+
-//**** Installation in a dark site
-//**** Distributed scanning; using a master scanner node and remote scanner nodes
+** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.26 or greater:
+
+*** Red Hat Enterprise Linux version 9.0, 9.1, and 9.2
++
+Note that the following features are not currently supported when using RHEL 9.x:
++
+**** Installation in a dark site
+**** Distributed scanning; using a master scanner node and remote scanner nodes
 
 * *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
 
@@ -73,7 +73,7 @@ Note that there are limitations when using these smaller systems. See link:conce
 *** Docker Engine version 19.3.1 or greater. https://docs.docker.com/engine/install/[View installation instructions^].
 +
 https://youtu.be/Ogoufel1q6c[Watch this video^] for a quick demo of installing Docker on CentOS.
-//*** Podman version 4 or greater. To install Podman, update your system packages (`sudo yum update -y`), and then install Podman (`sudo yum install podman -y`).
+*** Podman version 4 or greater. To install Podman, update your system packages (`sudo yum update -y`), and then install Podman (`sudo yum install podman -y`).
 //https://podman.io/docs/installation#installing-on-linux[View installation instructions^].
 
 ** Python version 3.6 or greater. https://www.python.org/downloads/[View installation instructions^].
