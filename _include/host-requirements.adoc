@@ -57,7 +57,7 @@ Note that there are limitations when using these smaller systems. See link:conce
 
 ** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.26 or greater:
 
-*** Red Hat Enterprise Linux version 9.1 and 9.2
+*** Red Hat Enterprise Linux version 9.0, 9.1, and 9.2
 +
 Note that the following features are not currently supported when using RHEL 9.x:
 +
