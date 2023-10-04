@@ -24,13 +24,13 @@ Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; whic
 
 At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes).
 
-=== Now you can download up to 500k rows of data in CSV reports to a local directory
-    
-In the past when reports had over 5,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
-
-=== Display total size in addition to total items in Investigation page results
+=== Investigation page results now displays the total size in addition to total number of items
 
 The filtered results in the Investigation page now shows the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
+
+//=== Now you can download up to 500k rows of data in CSV reports to a local directory
+//  
+//In the past when reports had over 5,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
 
 == 5 September (version 1.25)
 

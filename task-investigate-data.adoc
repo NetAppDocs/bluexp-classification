@@ -237,7 +237,7 @@ The Data Investigation Report is a download of the filtered contents of the Data
 
 You can save the report in two different formats:
 
-* As a .CSV file to the local machine; which can include up to 50,000 rows of data.
+* As a .CSV file to the local machine; which can include up to 5,000 rows of data.
 * As a .JSON file that you export to an NFS Share; which can include up to 100,000 rows of data. If there are more than 100,000 rows of data, additional .JSON files are created. 
 +
 When exporting to a file share, make sure BlueXP classification has the correct permissions for export access.
