@@ -67,9 +67,11 @@ The following questions relate to BlueXP classification scanning performance and
 
 === How often does BlueXP classification scan my data?
 
-Data changes frequently, so BlueXP classification scans your data continuously with no impact to your data. While the initial scan of your data might take longer, subsequent scans only scan the incremental changes, which reduces system scan times.
+While the initial scan of your data might take a little bit of time, subsequent scans only inspect the incremental changes, which reduces system scan times. BlueXP classification scans your data continuously in a round-robin fashion, six repositories at a time, so that all changed data is classified very quickly.
 
 link:concept-cloud-compliance.html#how-scans-work[Learn how scans work].
+
+Note that BlueXP classification scans databases only once per day - databases are not continuously scanned like other data sources.
 
 Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure BlueXP classification to perform "slow" scans. link:task-reduce-scan-speed.html[See how to reduce the scan speed].
 
