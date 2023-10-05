@@ -277,6 +277,7 @@ The *Unstructured Files Data Report* includes the following information about yo
 * Created time
 * Last modified
 * Last accessed
+* Open permissions
 * File owner
 * Category
 * Personal information
