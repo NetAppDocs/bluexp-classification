@@ -16,6 +16,13 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
+== 6 November (version 1.26.3)
+
+=== The following issues have been fixed in this release
+
+* Fixed an inconsistency when presenting the number of files scanned by the system in dashboards.
+* Improved the scanning behavior by handling and reporting on files and directories with special characters in the name and metadata.
+
 == 4 October (version 1.26)
 
 === Support for on-premises installations of BlueXP classification on RHEL version 9
@@ -45,6 +52,7 @@ In the past you could only apply tags to a single page at a time in the Investig
 === Identify duplicated files with a minimum file size of 1 MB
 
 BlueXP classification used to identify duplicated files only when files were 50 MB or larger. Now duplicated files starting with 1 MB can be identified. You can use the Investigation page filters "File Size" along with "Duplicates" to see which files of a certain size are duplicated in your environment.
+// end::whats-new[]
 
 == 17 July 2023 (version 1.24)
 
@@ -74,7 +82,6 @@ Now you can upgrade to a newer version of BlueXP classification even if it is no
 The BlueXP classification API enables you to perform actions, create queries, and export information about the data you are scanning. The interactive documentation is available using Swagger. The documentation is separated into multiple categories, including Investigation, Compliance, Governance, and Configuration. Each category is a reference to the tabs in the BlueXP classification UI.
 
 https://docs.netapp.com/us-en/bluexp-classification/api-classification.html[Learn more about the BlueXP classification APIs].
-// end::whats-new[]
 
 //=== Data Fusion capability has been added to the Classifications dashboard
 //
