@@ -26,13 +26,19 @@ A few notes before you read any further:
 
 link:concept-cloud-compliance.html#cost[Learn more about the licensing and costs related to BlueXP classification].
 
-== Use a BlueXP classification PAYGO subscription
+== 30-day free trial
 
-Pay-as-you-go subscriptions from your cloud provider's marketplace enable you to license the use of Cloud Volumes ONTAP systems and many Cloud Data Services, such as BlueXP classification.
+A 30-day free trial is available for up to 1 TB of data that BlueXP classification scans in a BlueXP workspace. You'll need to purchase a BYOL license from NetApp, or a sign up for a subscription from your cloud provider's marketplace, to continue scanning data after that point.
 
 You can subscribe at any time and you will not be charged until either the 30 day trial ends, or the amount of data exceeds 1 TB. You can always see the total amount of data that is being scanned from the BlueXP classification Governance Dashboard. And the _Subscribe Now_ button makes it easy to subscribe when you are ready.
 
 image:screenshot_compliance_subscribe.png[A screenshot showing how much data is being scanned and the Subscribe button to subscribe to the service.]
+
+== Use a BlueXP classification PAYGO subscription
+
+Pay-as-you-go subscriptions from your cloud provider's marketplace enable you to license the use of Cloud Volumes ONTAP systems and many BlueXP services, such as BlueXP classification. You'll pay your cloud provider for the amount of data BlueXP classification is scanning on an hourly basis in a single subscription. 
+
+Subscribing ensures that there's no disruption of service after your free trial ends. When the trial ends, you'll be charged hourly according to the amount of data that you are scanning. You won't be charged from your subscription during your free trial.
 
 .Steps
 
@@ -42,21 +48,21 @@ These steps must be completed by a user who has the _Account Admin_ role.
 +
 image:screenshot_settings_icon.gif[A screenshot of BlueXP's top right banner where you can select the Settings icon.]
 
-. Find the credentials for the AWS Instance Profile, Azure Managed Service Identity, or Google Project.
+. Click *Credentials* and then find the credentials for the AWS Instance Profile, Azure Managed Service Identity, or Google Project.
 +
 The subscription must be added to the Instance Profile, Managed Service Identity, or Google Project. Charging won't work otherwise.
 +
-If you already have a BlueXP subscription (shown below for AWS), then you're all set--there's nothing else that you need to do.
+If you already have a BlueXP subscription (as shown below for AWS), then you're all set--there's nothing else that you need to do.
 +
 image:screenshot_profile_subscription.gif[A screenshot from the Credentials page that shows the Instance Profile with an active subscription.]
 
-. If you don't have a subscription yet, hover over the credentials, click the action menu, and click *Associate Subscription*.
+. If you don't have a subscription yet, click the action menu and click *Associate Subscription*.
 +
 image:screenshot_add_subscription.gif["A screenshot of the menu in the Credentials page. It shows a button to associate a subscription to the credentials."]
 
 . Select an existing subscription and click *Associate*, or click *Add Subscription* and follow the steps.
 +
-The following video shows how to associate an https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa[AWS Marketplace^] subscription to an AWS subscription:
+The following video shows how to associate an https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4[AWS Marketplace^] subscription to an AWS subscription:
 +
 video::video_subscribing_aws.mp4[width=848, height=480]
 +
@@ -64,9 +70,19 @@ The following video shows how to associate an https://azuremarketplace.microsoft
 +
 video::video_subscribing_azure.mp4[width=848, height=480]
 +
-The following video shows how to associate a https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved[GCP Marketplace^] subscription to a GCP subscription:
+The following video shows how to associate a https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project[Google Cloud Marketplace^] subscription to a GCP subscription:
 +
 video::video_subscribing_gcp.mp4[width=848, height=480]
+
+== Use an annual contract
+
+Pay for BlueXP classification annually by purchasing an annual contract. They're available in 1-, 2-, or 3-year terms.
+
+If you have an annual contract from a marketplace, all BlueXP classification data scanning is charged against that contract. You can't mix and match an annual marketplace contract with a BYOL.
+
+* AWS: https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri[Go to the BlueXP Marketplace offering for pricing details^].
+* Azure: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp[Go to the BlueXP Marketplace offering for pricing details^].
+* Google Cloud: Contact your NetApp sales representative to purchase an annual contract. The contract is available as a private offer in the Google Cloud Marketplace. After NetApp shares the private offer with you, you can select the annual plan when you subscribe from the Google Cloud Marketplace during BlueXP classification activation.
 
 == Use a BlueXP classification BYOL license
 
@@ -79,13 +95,13 @@ If you don't have a BlueXP classification license, contact us to purchase one:
 
 Optionally, if you have an unassigned node-based license for Cloud Volumes ONTAP that you won't be using, you can convert it to a BlueXP classification license with the same dollar-equivalence and the same expiration date. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses[Go here for details^].
 
-You use the BlueXP digital wallet page in BlueXP to manage BlueXP classification BYOL licenses. You can add new licenses and update existing licenses.
+You use the BlueXP digital wallet to manage BlueXP classification BYOL licenses. You can add new licenses, update existing licenses, and view license status from the BlueXP digital wallet.
 
 === Obtain your BlueXP classification license file
 
-After you've purchased your BlueXP classification (Data Sense) license, you activate the license in BlueXP by entering the BlueXP classification serial number and NSS account, or by uploading the NLF license file. The steps below show how to get the NLF license file if you plan to use that method.
+After you've purchased your BlueXP classification (Data Sense) license, you activate the license in BlueXP by entering the BlueXP classification serial number and NetApp Support Site (NSS) account, or by uploading the NetApp License File (NLF). The steps below show how to get the NLF license file if you plan to use that method.
 
-If you've deployed BlueXP classification on a host in an on-premises site that doesn't have internet access, meaning that you've deployed the BlueXP Connector in https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#private-mode[private mode^], you'll need to obtain the license file from an internet-connected system. Activating the license using the serial number and NSS account is not available for dark site installations.
+If you've deployed BlueXP classification on a host in an on-premises site that doesn't have internet access, meaning that you've deployed the BlueXP Connector in https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#private-mode[private mode^], you'll need to obtain the license file from an internet-connected system. Activating the license using the serial number and NSS account is not available for private mode installations.
 
 .Before you begin
 
@@ -108,7 +124,7 @@ image:screenshot_cloud_tiering_license_step1.gif[A screenshot that shows a table
 
 . Under the *License Key* column, click *Get NetApp License File*.
 
-. Enter your Tenant ID (BlueXP Account ID) and click *Submit* to download the license file.
+. Enter your BlueXP Account ID (this is called a Tenant ID on the support site) and click *Submit* to download the license file.
 +
 image:screenshot_cloud_tiering_license_step2.gif[A screenshot that shows the get license dialog box where you enter your tenant ID and then click Submit to download the license file.]
 
@@ -137,11 +153,11 @@ BlueXP adds the license so that your BlueXP classification service is active.
 
 === Update a BlueXP classification BYOL license
 
-If your licensed term is nearing the expiration date, or if your licensed capacity is reaching the limit, you'll be notified in BlueXP classification.
+If your licensed term is nearing the expiration date, or if your licensed capacity is reaching the limit, you'll be notified in the Classification UI. 
 
 image:screenshot_services_license_expire_cc1.png[A screenshot that shows an expiring license in the BlueXP classification page.]
 
-This status also appears in the BlueXP digital wallet.
+This status also appears in the BlueXP digital wallet and in https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center[Notifications^].
 
 image:screenshot_services_license_expire_cc2.png[A screenshot that shows an expiring license in the BlueXP digital wallet page.]
 
