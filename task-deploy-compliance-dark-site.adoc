@@ -114,9 +114,10 @@ You must ensure that all required ports are open for communication between the C
 | Ports
 | Description
 
-|Connector <> BlueXP classification | 8080 (TCP), 6000 (TCP), 443 (TCP), and 80 | The security group for the Connector must allow inbound and outbound traffic over ports 6000 and 443 to and from the BlueXP classification instance.
+|Connector <> BlueXP classification | 8080 (TCP), 6000 (TCP), 443 (TCP), and 80 a| The security group for the Connector must allow inbound and outbound traffic over ports 6000 and 443 to and from the BlueXP classification instance.
 
-Make sure port 8080 is open so you can see the installation progress in BlueXP.
+* Port 6000 is required so that the BlueXP classification BYOL license works in a dark site.
+* Port 8080 should be open so you can see the installation progress in BlueXP.
 |Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
 
 * The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined security group.
