@@ -50,8 +50,8 @@ Note that there are limitations when using these smaller systems. See link:conce
 
 ** The following operating systems require using the Docker container engine:
 
-*** Red Hat Enterprise Linux version 7.8 and 7.9 - the Linux kernel version must be 4.0 or greater
-*** CentOS version 7.8 and 7.9 - the Linux kernel version must be 4.0 or greater
+*** Red Hat Enterprise Linux version 7.8 and 7.9
+*** CentOS version 7.8 and 7.9
 //*** Rocky Linux 9 (requires BlueXP classification version 1.24 or greater)
 *** Ubuntu 22.04 (requires BlueXP classification version 1.23 or greater)
 
