@@ -16,15 +16,15 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
-== 9 January (version 1.27)
+== 10 January (version 1.27)
 
 === Investigation page results now display the total size in addition to total number of items
 
 The filtered results in the Investigation page now shows the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
 
-=== Configure Group IDs as "Open to Organization"
+=== Configure additional Group IDs as "Open to Organization"
 
-Now you can configure additional Group IDs in NFS to be considered as "Open to Organization" directly in BlueXP classification. This is useful when ......  See https://d[link:xxx] for details.
+Now you can configure Group IDs in NFS to be considered as "Open to Organization" directly in BlueXP classification if they had not initially been set with that permission. See how to https://task-add-group-id-as-open[add additional Group IDs as "open to organization"].
 
 //=== Now you can download up to 500k rows of data in CSV reports to a local directory
 //  
