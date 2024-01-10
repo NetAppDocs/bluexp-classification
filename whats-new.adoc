@@ -16,6 +16,20 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
+== 10 January (version 1.27)
+
+=== Investigation page results now display the total size in addition to total number of items
+
+The filtered results in the Investigation page now shows the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
+
+=== Configure additional Group IDs as "Open to Organization"
+
+Now you can configure Group IDs in NFS to be considered as "Open to Organization" directly in BlueXP classification if they had not initially been set with that permission. See how to https://task-add-group-id-as-open[add additional Group IDs as "open to organization"].
+
+//=== Now you can download up to 500k rows of data in CSV reports to a local directory
+//  
+//In the past when reports had over 10,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
+
 == 6 November (version 1.26.3)
 
 === The following issues have been fixed in this release
@@ -30,14 +44,6 @@ Learn what's new in BlueXP classification.
 Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; which was required for the BlueXP classification installation. We now support BlueXP classification installation on RHEL 9.0, 9.1, and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification (version 1.26 or greater) when using Podman.
 
 At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes) when using RHEL 9.x.
-
-//=== Investigation page results now displays the total size in addition to total number of items
-//
-//The filtered results in the Investigation page now shows the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
-//
-//=== Now you can download up to 500k rows of data in CSV reports to a local directory
-//  
-//In the past when reports had over 5,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
 
 == 5 September (version 1.25)
 
