@@ -24,7 +24,7 @@ The filtered results in the Investigation page now shows the total size of the i
 
 === Configure additional Group IDs as "Open to Organization"
 
-Now you can configure Group IDs in NFS to be considered as "Open to Organization" directly in BlueXP classification if they had not initially been set with that permission. See how to https://task-add-group-id-as-open[add additional Group IDs as "open to organization"].
+Now you can configure Group IDs in NFS to be considered as "Open to Organization" directly in BlueXP classification if they had not initially been set with that permission. See how to https://docs.netapp.com/us-en/bluexp-classification/task-add-group-id-as-open[add additional Group IDs as "open to organization"].
 
 //=== Now you can download up to 500k rows of data in CSV reports to a local directory
 //  
