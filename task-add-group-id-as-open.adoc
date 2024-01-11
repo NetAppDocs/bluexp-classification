@@ -39,7 +39,7 @@ You need to have the group ID numbers (GIDs) before starting this task.
 +
 Do not change anything else in this file.
 
-. Go to "/opt/netapp/Datasense" and run the following script:
+. Go to "/opt/netapp/Datasense/tools/customer_configuration/data_providers" and run the following script:
 
  update_data_providers_from_config_file.sh
 +
@@ -49,6 +49,6 @@ All subsequent scans of your data will identify files or folders that have these
 
 You can edit the list of group IDs and delete any group IDs you added in the past using these same steps. The revised list of group IDs will be updated after you run the script to commit your changes.
 
-To view the current list of group IDs that you've added to BlueXP classification, run the following command from "/opt/netapp/Datasense":
+To view the current list of group IDs that you've added to BlueXP classification, run the following command from "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
 
  get_data_providers_configuration.sh
