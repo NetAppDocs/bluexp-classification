@@ -17,7 +17,7 @@ When group IDs (GIDs) are attached to files or folders in NFS file shares they d
 
 After you make this change and BlueXP classification rescans your files and folders, any files and folders that have these group IDs attached will show this permission in the Investigation Details page, and they'll also appear in reports where you are displaying file permissions.
 
-You need to log into the BlueXP classification system so you can edit a configuration file and run a script to use this functionality. 
+To activate this functionality, you need to log into the BlueXP classification system so you can edit a configuration file and run a script.
 
 == Log in to the BlueXP classification system
 
