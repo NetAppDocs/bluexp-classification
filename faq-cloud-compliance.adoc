@@ -55,7 +55,7 @@ BlueXP classification operates as part of BlueXP and supports AWS, Azure, and GC
 
 === Does BlueXP classification have a REST API, and does it work with third-party tools?
 
-BlueXP supports REST API capabilities for its services. If BlueXP isn't the preferred point of management, services such as BlueXP classification can also be used via a REST API. Every user action has a REST API that can be integrated with third-party systems.
+BlueXP supports REST API capabilities for its services. If BlueXP isn't the preferred point of management, services such as BlueXP classification can also be used via a REST API. Every user action has a REST API that can be integrated with third-party systems. See link:api-classification.html[BlueXP classification APIs^] for details.
 
 === Is BlueXP classification available through the marketplaces?
 
@@ -141,6 +141,16 @@ Additionally, BlueXP classification provides many ways for you to add a custom l
 
 link:task-managing-data-fusion.html[Learn more^].
 
+=== What happens if data tiering is enabled on your ONTAP volumes?
+
+When BlueXP classification scans volumes that have cold data tiered to object storage, it scans all of the data--data that's on local disks and cold data tiered to object storage. This is also true for non-NetApp products that implement tiering.
+
+The scan doesn't heat up the cold data--it stays cold and remains in object storage.
+
+=== Are snapshot copies that reside on ONTAP volumes scanned?
+
+No. BlueXP classification does not scan snapshots because the content is identical to the content in the volume.
+
 === Can I limit BlueXP classification information to specific users?
 
 Yes, BlueXP classification is fully integrated with BlueXP. BlueXP users can only see information for the working environments they are eligible to view according to their workspace privileges.
@@ -152,12 +162,6 @@ link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn m
 === Can anyone access the private data sent between my browser and BlueXP classification?
 
 No. The private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption, which means NetApp and third parties can't read it. BlueXP classification won't share any data or results with NetApp unless you request and approve access.
-
-=== What happens if data tiering is enabled on your ONTAP volumes?
-
-When BlueXP classification scans volumes that have cold data tiered to object storage, it scans all of the data--data that's on local disks and cold data tiered to object storage. This is also true for non-NetApp products that implement tiering.
-
-The scan doesn't heat up the cold data--it stays cold and remains in object storage.
 
 === Can BlueXP classification send notifications to my organization?
 
