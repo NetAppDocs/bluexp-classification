@@ -43,7 +43,7 @@ Note that there are limitations when using these smaller systems. See link:conce
 
 | /var/lib/docker | `rwx------`
 
-| /user/lib/systemd/system  | `rwxr-xr-x`
+| /usr/lib/systemd/system  | `rwxr-xr-x`
 |===
 
 * *Operating system*: 
