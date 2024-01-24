@@ -44,6 +44,7 @@ Now you can configure Group IDs in NFS to be considered as "Open to Organization
 Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; which was required for the BlueXP classification installation. We now support BlueXP classification installation on RHEL 9.0, 9.1, and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification (version 1.26 or greater) when using Podman.
 
 At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes) when using RHEL 9.x.
+// end::whats-new[]
 
 == 5 September (version 1.25)
 
@@ -58,7 +59,6 @@ In the past you could only apply tags to a single page at a time in the Investig
 === Identify duplicated files with a minimum file size of 1 MB
 
 BlueXP classification used to identify duplicated files only when files were 50 MB or larger. Now duplicated files starting with 1 MB can be identified. You can use the Investigation page filters "File Size" along with "Duplicates" to see which files of a certain size are duplicated in your environment.
-// end::whats-new[]
 
 == 17 July 2023 (version 1.24)
 
