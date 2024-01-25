@@ -77,3 +77,5 @@ https://youtu.be/Ogoufel1q6c[Watch this video^] for a quick demo of installing D
 //https://podman.io/docs/installation#installing-on-linux[View installation instructions^].
 
 ** Python version 3.6 or greater. https://www.python.org/downloads/[View installation instructions^].
+
+* *NTP considerations*: NetApp recommends configuring the BlueXP classification system to use a Network Time Protocol (NTP) service. The time must be synchronized between the BlueXP classification system and the BlueXP connector system.

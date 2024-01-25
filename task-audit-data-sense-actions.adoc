@@ -41,14 +41,14 @@ For example, the following lines from the log file show a successful copy operat
  2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
  2022-06-06 15:23:08,968 | WARNING | ds_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
 
-== Access the log file
+== Log file locations
 
 The management audit log files are located on the BlueXP classification machine in: `/opt/netapp/audit_logs/`
 
 The installation audit log files are written to `/opt/netapp/install_logs/`
 
-Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - old log files are deleted automatically after the maximum has been reached.
+Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - older log files are deleted automatically after the maximum has been reached.
 
-When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the log file.
+== Accessing the log files
 
-include::_include/access-classification-instance.adoc[]
+You'll need to log into the BlueXP classification system to access the log files. See how to link:reference-log-in-to-instance.html[log in to the BlueXP classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.
