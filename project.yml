@@ -103,6 +103,8 @@ sidebar:
           url: /reference-instance-types.html
         - title: Metadata collected from data sources
           url: /reference-collected-metadata.html
+        - title: Log in to the BlueXP classification system
+          url: /reference-log-in-to-instance.html
         - title: BlueXP classification APIs
           url: /api-classification.html
     - title: Knowledge and support
