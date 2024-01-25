@@ -45,3 +45,5 @@ image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstal
 +
 [source,cli]
 cleanup.sh
+
+See how to link:reference-log-in-to-instance.html[log in to the BlueXP classification host machine].
