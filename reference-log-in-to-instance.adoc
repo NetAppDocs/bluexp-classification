@@ -1,3 +1,22 @@
+---
+sidebar: sidebar
+permalink: reference-log-in-to-instance.html
+keywords: log in, data sense, classification
+summary: At times you may need to log into the BlueXP classification system so you can access log files or edit configuration files.
+---
+
+= Log in to the BlueXP classification system
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+At times you may need to log into the BlueXP classification system so you can access log files or edit configuration files.
+
+When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can access the configuration file and script directly.
+
 When BlueXP classification is deployed in the cloud, you need to SSH to the BlueXP classification instance. You SSH to the system by entering the user and password, or by using the SSH key you provided during the BlueXP Connector installation. The SSH command is:
 
  ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>
