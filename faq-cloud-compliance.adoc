@@ -232,7 +232,7 @@ BlueXP classification scans using standard protocols and read-only permission th
 +
 After a full scan there are many additional BlueXP classification features you can apply to your data, such as view and refine data in the Data Investigation page, search for names within files, copy, move, and delete source files, and more.
 
-BlueXP classification captures metadata such as: file name, permissions, creation time, last access, and last modification. 
+BlueXP classification captures metadata such as: file name, permissions, creation time, last access, and last modification. This includes all of the metadata that appears in the Data Investigation Details page and in Data Investigation Reports.  
 
 BlueXP classification can identify many types of private data such as personal data and sensitive personal data. For details about private data, refer to https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html[Categories of private data that BlueXP classification scans].
 
@@ -252,16 +252,16 @@ The data that is scanned stays within your environment.
 
 === How is sensitive data handled? 
 
-NetApp does not have access to sensitive data and does not display it. Sensitive data is masked. For example, credit card information shows only the last 4 digits. 
+NetApp does not have access to sensitive data and does not display it in the UI. Sensitive data is masked, for example, the last four numbers are displayed for credit card information. 
 
 
 === Where is the data stored? 
 
-Scan results are stored in ElasticSearch within your BlueXP classification instance. 
+Scan results are stored in Elastisearch within your BlueXP classification instance. 
 
 === How is the data accessed? 
 
-BlueXP classification accesses ElasticSearch through API calls, which require authentication and are encrypted using AES-128. Accessing ElasticSearch directly requires root access. 
+BlueXP classification accesses data stored in Elasticsearch through API calls, which require authentication and are encrypted using AES-128. Accessing Elasticsearch directly requires root access. 
 
 == Licenses and costs
 
