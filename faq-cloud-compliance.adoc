@@ -163,6 +163,12 @@ link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn m
 
 No. The private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption, which means NetApp and third parties can't read it. BlueXP classification won't share any data or results with NetApp unless you request and approve access.
 
+The data that is scanned stays within your environment. 
+
+=== How is sensitive data handled? 
+
+NetApp does not have access to sensitive data and does not display it. Sensitive data is masked. For example, credit card information shows only the last 4 digits. 
+
 === Can BlueXP classification send notifications to my organization?
 
 Yes. In conjunction with the Policies feature, you can send email alerts to BlueXP users (daily, weekly, or monthly), or any other email address,  when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-using-policies.html[Policies^].
@@ -229,6 +235,7 @@ When BlueXP classification detects Personal Identifiable Information (PII), or w
 
 === What kinds of data and metadata does BlueXP classification capture?
 
+
 BlueXP classification enables you to run a general "mapping" scan or a full "classification" scan on your data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
 
 * Data mapping scan.
@@ -241,6 +248,18 @@ After a fast scan, you can generate a Data Mapping Report. This report is an ove
 BlueXP classification scans using standard protocols and read-only permission throughout your environments. Select files are opened and scanned for sensitive business-related data, private information, and issues related to ransomware.
 +
 After a full scan there are many additional BlueXP classification features you can apply to your data, such as view and refine data in the Data Investigation page, search for names within files, copy, move, and delete source files, and more.
+
+BlueXP classification captures metadata such as: file name, permissions, creation time, last access, and last modification. 
+
+BlueXP classification can identify many types of private data such as personal data and sensitive personal data. For details about private data, refer to https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html[Categories of private data that BlueXP classification scans].
+
+=== Where is the data stored? 
+
+Scan results are stored in ElasticSearch within your BlueXP classification instance. 
+
+=== How is the data accessed? 
+
+BlueXP classification accesses ElasticSearch through API calls, which require authentication and are encrypted using AES-128. Accessing ElasticSearch directly requires root access. 
 
 == Licenses and costs
 
