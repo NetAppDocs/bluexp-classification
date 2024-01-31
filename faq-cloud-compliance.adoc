@@ -151,23 +151,6 @@ The scan doesn't heat up the cold data--it stays cold and remains in object stor
 
 No. BlueXP classification does not scan snapshots because the content is identical to the content in the volume.
 
-=== Can I limit BlueXP classification information to specific users?
-
-Yes, BlueXP classification is fully integrated with BlueXP. BlueXP users can only see information for the working environments they are eligible to view according to their workspace privileges.
-
-Additionally, if you want to allow certain users to just view BlueXP classification scan results without having the ability to manage BlueXP classification settings, you can assign those users the Cloud Compliance Viewer role.
-
-link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn more^].
-
-=== Can anyone access the private data sent between my browser and BlueXP classification?
-
-No. The private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption, which means NetApp and third parties can't read it. BlueXP classification won't share any data or results with NetApp unless you request and approve access.
-
-The data that is scanned stays within your environment. 
-
-=== How is sensitive data handled? 
-
-NetApp does not have access to sensitive data and does not display it. Sensitive data is masked. For example, credit card information shows only the last 4 digits. 
 
 === Can BlueXP classification send notifications to my organization?
 
@@ -252,6 +235,25 @@ After a full scan there are many additional BlueXP classification features you c
 BlueXP classification captures metadata such as: file name, permissions, creation time, last access, and last modification. 
 
 BlueXP classification can identify many types of private data such as personal data and sensitive personal data. For details about private data, refer to https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html[Categories of private data that BlueXP classification scans].
+
+=== Can I limit BlueXP classification information to specific users?
+
+Yes, BlueXP classification is fully integrated with BlueXP. BlueXP users can only see information for the working environments they are eligible to view according to their workspace privileges.
+
+Additionally, if you want to allow certain users to just view BlueXP classification scan results without having the ability to manage BlueXP classification settings, you can assign those users the Cloud Compliance Viewer role.
+
+link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn more^].
+
+=== Can anyone access the private data sent between my browser and BlueXP classification?
+
+No. The private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption, which means NetApp and third parties can't read it. BlueXP classification won't share any data or results with NetApp unless you request and approve access.
+
+The data that is scanned stays within your environment. 
+
+=== How is sensitive data handled? 
+
+NetApp does not have access to sensitive data and does not display it. Sensitive data is masked. For example, credit card information shows only the last 4 digits. 
+
 
 === Where is the data stored? 
 
