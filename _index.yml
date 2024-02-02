@@ -1,0 +1,98 @@
+# Start snippet: landing page
+indexpage:
+   title: BlueXP classification documentation
+   lead: BlueXP classification enables you to scan and classify data across your organization's hybrid multicloud. Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+   summary: BlueXP classification (Cloud Data Sense) enables you to scan and classify data across your organization's hybrid multicloud. BlueXP classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+   keywords: classification, cloud data sense, data sense, compliance, security 
+   tiles:
+    # Paste tile definitions from project.yml below this line and correct the indentation as needed
+    - title: Get started
+      links:
+        - title: Learn about BlueXP classification
+          url: concept-cloud-compliance.html
+        - title: What's New
+          url: whats-new.html
+        - title: Deploy BlueXP classification in the cloud using BlueXP
+          url: task-deploy-cloud-compliance.html
+        - title: Install BlueXP classification on a Linux host with internet
+          url: task-deploy-compliance-onprem.html
+        - title: Install BlueXP classification on-premises without internet
+          url: task-deploy-compliance-dark-site.html
+        - title: Integrate Active Directory
+          url: task-add-active-directory-datasense.html
+        - title: Set up licensing
+          url: task-licensing-datasense.html
+    - title: Scan your working environments
+      links:
+        - title: Cloud Volumes ONTAP volumes
+          url: task-getting-started-compliance.html
+        - title: On-premises ONTAP volumes
+          url: task-getting-started-compliance.html
+        - title: Azure NetApp Files volumes
+          url: task-scanning-anf.html
+        - title: Amazon FSx for ONTAP volumes
+          url: task-scanning-fsx.html
+        - title: Amazon S3 buckets
+          url: task-scanning-s3.html
+    - title: Scan other data sources
+      links:
+        - title: Generic S3 buckets
+          url: task-scanning-object-storage.html
+        - title: Non-NetApp file shares
+          url: task-scanning-file-shares.html
+        - title: Database schemas
+          url: task-scanning-databases.html
+        - title: OneDrive accounts
+          url: task-scanning-onedrive.html
+        - title: SharePoint accounts
+          url: task-scanning-sharepoint.html
+        - title: Google Drive accounts
+          url: task-scanning-google-drive.html
+    - title: View details about your data
+      links:
+        - title: View files that contain private information
+          url: task-controlling-private-data.html
+        - title: View files that are duplicated in your storage
+          url: task-investigate-data.html#checking-for-duplicate-files-in-your-storage-systems
+        - title: Filter your data to view specific files
+          url: task-investigate-data.html
+        - title: Create policies to view your top searches
+          url: task-using-policies.html
+        - title: Generate compliance reports
+          url: task-generating-compliance-reports.html
+    - title: Organize your private data
+      links:
+        - title: Apply tags and owners to files that need attention
+          url: task-org-private-data.html#applying-tags-to-manage-your-scanned-files
+        - title: Categorize your data using AIP labels
+          url: task-org-private-data.html#categorizing-your-data-using-aip-labels
+        - title: Add your own custom personal data identifiers
+          url: task-managing-data-fusion.html
+    - title: Manage your private data
+      links:
+        - title: Copy source files
+          url: task-managing-highlights.html#copying-source-files
+        - title: Move source files
+          url: task-managing-highlights.html#moving-source-files-to-an-nfs-share
+        - title: Delete source files
+          url: task-managing-highlights.html#deleting-source-files
+        - title: Create email alerts when non-compliant data is found
+          url: task-using-policies.html#sending-email-alerts-when-non-compliant-data-is-found
+        - title: Monitor and manage file access events
+          url: task-manage-file-access-events.html
+        - title: Respond to a Data Subject Access Request
+          url: task-generating-compliance-reports.html#searching-for-data-subjects-and-downloading-reports
+    - title: Blogs & community
+      links:
+        - title: NetApp Community
+          url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+        - title: BlueXP classification use cases
+          url: https://bluexp.netapp.com/netapp-cloud-data-sense
+        - title: BlueXP classification videos
+          url: https://youtube.com/playlist?list=PLdXI3bZJEw7m0dFDhu3w6Yqt71Zqyl2Pw
+        - title: BlueXP blog
+          url: https://bluexp.netapp.com/blog
+        - title: BlueXP webinars
+          url: https://bluexp.netapp.com/events
+
+# End snippet
