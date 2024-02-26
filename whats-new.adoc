@@ -16,7 +16,7 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
-== 10 January (version 1.27)
+== 10 January 2024 (version 1.27)
 
 === Investigation page results now display the total size in addition to total number of items
 
@@ -30,14 +30,25 @@ Now you can configure Group IDs in NFS to be considered as "Open to Organization
 //  
 //In the past when reports had over 10,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
 
-== 6 November (version 1.26.3)
+== December 2023 (version 1.26.6) 
+
+This release included some minor enhancements.
+
+The release also temporarily removed the following options: 
+
+* The option to activate audit log collection has been disabled. Refer to link:task-manage-file-access-events.html[Monitor and manage file access events].
+* During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. Refer to link:task-investigate-data.html#filter-data-by-sensitivity-and-content[Investigate the data stored in your organization].
+* The option to integrate data using Azure Information Protection (AIP) labels has been disabled. Refer to link:task-org-private-data.html[Organize your private data].
+
+
+== 6 November 2023 (version 1.26.3)
 
 === The following issues have been fixed in this release
 
 * Fixed an inconsistency when presenting the number of files scanned by the system in dashboards.
 * Improved the scanning behavior by handling and reporting on files and directories with special characters in the name and metadata.
 
-== 4 October (version 1.26)
+== 4 October 2023 (version 1.26)
 
 === Support for on-premises installations of BlueXP classification on RHEL version 9
 
@@ -46,7 +57,7 @@ Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; whic
 At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes) when using RHEL 9.x.
 // end::whats-new[]
 
-== 5 September (version 1.25)
+== 5 September 2023 (version 1.25)
 
 === Small and medium deployments temporarily unavailable
 
@@ -54,7 +65,7 @@ When you deploy an instance of BlueXP classification in AWS, the option to selec
 
 === Apply tags on up to 100,000 items from the Investigation Results page
 
-In the past you could only apply tags to a single page at a time in the Investigation Results page (20 items). Now you can select *all* items in the Investigation Results pages and apply tags to all the items - up to 100,000 items at a time. https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#assigning-tags-to-files[See how].
+In the past you could only apply tags to a single page at a time in the Investigation Results page (20 items). Now you can select *all* items in the Investigation Results pages and apply tags to all the items - up to 100,000 items at a time. https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#assign-tags-to-files[See how].
 
 === Identify duplicated files with a minimum file size of 1 MB
 
@@ -182,7 +193,7 @@ https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categ
 
 In earlier versions of BlueXP classification you could send email alerts to the BlueXP users in your account when certain critical Policies return results. This feature enables you to get notifications to protect your data when you're not online. Now you can also send email alerts from Policies to any other users - up to 20 email addresses - who are not in your BlueXP account. 
 
-https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html#sending-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
+https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
 
 === Now you can add personal patterns from the BlueXP classification UI
 
@@ -192,7 +203,7 @@ https://docs.netapp.com/us-en/bluexp-classification/task-managing-data-fusion.ht
 
 === Ability to move 15 million files using BlueXP classification
 
-In the past you could have BlueXP classification move a maximum of 100,000 source files to any NFS share. Now you can move up to 15 million files at a time. https://docs.netapp.com/us-en/bluexp-classification/task-managing-highlights.html#moving-source-files-to-an-nfs-share[Learn more about moving source files using BlueXP classification].
+In the past you could have BlueXP classification move a maximum of 100,000 source files to any NFS share. Now you can move up to 15 million files at a time. https://docs.netapp.com/us-en/bluexp-classification/task-managing-highlights.html#move-source-files-to-an-nfs-share[Learn more about moving source files using BlueXP classification].
 
 === Ability to see the number of users who have access to SharePoint Online files
 
@@ -216,7 +227,7 @@ New filters are available to refine the results that display in the Data Investi
 * The "Created Time", "Discovered Time", "Last Modified", and "Last Accessed" filters now allow you to create a custom date range instead of just selecting a pre-defined range of days. For example, you can look for files with a "Created Time" "older than 6 months", or with a "Last Modified" date within the "last 10 days".
 * The "File Path" filter now enables you to specify paths that you want to exclude from the filtered query results. If you enter paths to both include and exclude certain data, BlueXP classification finds all files in the included paths first, then it removes files from excluded paths, and then it displays the results.
 
-https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#filtering-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
+https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#filter-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
 
 === BlueXP classification can identify the Japanese Individual Number
 
