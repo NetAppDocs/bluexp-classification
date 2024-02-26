@@ -19,7 +19,7 @@ TIP: If you need BlueXP classification to identify other private data types, suc
 
 == Types of personal data
 
-The personal data found in files can be general personal data or national identifiers. The third column in the table below identifies whether BlueXP classification uses link:task-controlling-private-data.html#viewing-files-that-contain-personal-data[proximity validation^] to validate its findings for the identifier.
+The personal data found in files can be general personal data or national identifiers. The third column in the table below identifies whether BlueXP classification uses link:task-controlling-private-data.html#view-files-that-contain-personal-data[proximity validation^] to validate its findings for the identifier.
 
 The languages in which these items can be recognized are identified in the table.
 

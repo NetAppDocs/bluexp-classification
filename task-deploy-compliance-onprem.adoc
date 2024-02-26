@@ -233,7 +233,7 @@ Review the requirements and follow these steps when installing BlueXP classifica
 
 https://youtu.be/rFpmekdbORc[Watch this video^] to see how to install BlueXP classification.
 
-Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html#access-the-log-file[See more details here].
+Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html#access-the-log-files[See more details here].
 
 .What you'll need
 

@@ -63,21 +63,21 @@ indexpage:
     - title: Organize your private data
       links:
         - title: Apply tags and owners to files that need attention
-          url: task-org-private-data.html#applying-tags-to-manage-your-scanned-files
+          url: task-org-private-data.html#apply-tags-to-manage-your-scanned-files
         - title: Categorize your data using AIP labels
-          url: task-org-private-data.html#categorizing-your-data-using-aip-labels
+          url: task-org-private-data.html#categorize-your-data-using-aip-labels
         - title: Add your own custom personal data identifiers
           url: task-managing-data-fusion.html
     - title: Manage your private data
       links:
         - title: Copy source files
-          url: task-managing-highlights.html#copying-source-files
+          url: task-managing-highlights.html#copy-source-files
         - title: Move source files
-          url: task-managing-highlights.html#moving-source-files-to-an-nfs-share
+          url: task-managing-highlights.html#move-source-files-to-an-nfs-share
         - title: Delete source files
-          url: task-managing-highlights.html#deleting-source-files
+          url: task-managing-highlights.html#delete-source-files
         - title: Create email alerts when non-compliant data is found
-          url: task-using-policies.html#sending-email-alerts-when-non-compliant-data-is-found
+          url: task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found
         - title: Monitor and manage file access events
           url: task-manage-file-access-events.html
         - title: Respond to a Data Subject Access Request

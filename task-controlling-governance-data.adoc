@@ -38,7 +38,7 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 ** Videos
 ** Miscellaneous (general "other" category)
 
-* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#viewing-all-duplicated-files[See what types of duplicate files are displayed].
+* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#view-all-duplicated-files[See what types of duplicate files are displayed].
 
 NOTE:: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Stale Data_ category.
 
@@ -102,25 +102,25 @@ NOTE:: If any of your data sources implement data tiering, old data that already
 
 === Most identified data Classifications
 
-The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#viewing-files-by-categories[Categories^], link:task-controlling-private-data.html#viewing-files-by-file-types[File types^], and link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP Labels^] in your scanned data.
+The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#view-files-by-categories[Categories^], link:task-controlling-private-data.html#view-files-by-file-types[File types^], and link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP Labels^] in your scanned data.
 
 ==== Categories
 
 Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like "resumes" or "employee contracts" can include sensitive data. When you investigate the results, you might find that employee contracts are stored in an insecure location. You can then correct that issue.
 
-See link:task-controlling-private-data.html#viewing-files-by-categories[Viewing files by categories^] for more information.
+See link:task-controlling-private-data.html#view-files-by-categories[Viewing files by categories^] for more information.
 
 ==== File types
 
 Reviewing your file types can help you control your sensitive data because you might find that certain file types are not stored correctly.
 
-See link:task-controlling-private-data.html#viewing-files-by-file-types[Viewing file types^] for more information.
+See link:task-controlling-private-data.html#view-files-by-file-types[Viewing file types^] for more information.
 
 ==== AIP labels
 
 If you have subscribed to Azure Information Protection (AIP), you can classify and protect documents and files by applying labels to content. Reviewing the most used AIP labels that are assigned to files enables you to see which labels are most used in your files.
 
-See link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP Labels^] for more information.
+See link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP Labels^] for more information.
 
 == Data Mapping Report
 
@@ -155,7 +155,7 @@ image:screenshot_compliance_data_mapping_report_button.png[A screenshot of the G
 
 BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
-If the report is larger than 1 MB, the PDF file is retained on the BlueXP classification instance and you'll see a pop-up message about the exact location. When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the PDF file. When BlueXP classification is deployed in the cloud, you'll need to SSH to the BlueXP classification instance to download PDF file. link:task-audit-data-sense-actions.html#access-the-log-file[See how to access data on the Classification instance^].
+If the report is larger than 1 MB, the PDF file is retained on the BlueXP classification instance and you'll see a pop-up message about the exact location. When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the PDF file. When BlueXP classification is deployed in the cloud, you'll need to SSH to the BlueXP classification instance to download PDF file. link:task-audit-data-sense-actions.html#access-the-log-files[See how to access data on the Classification instance^].
 
 Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
 

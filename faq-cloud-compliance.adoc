@@ -162,7 +162,7 @@ You can also download status reports from the Governance page and Investigation 
 
 Yes. You can manage AIP labels in the files that BlueXP classification is scanning if you have subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. You can view the labels that are already assigned to files, add labels to files, and change existing labels.
 
-link:task-org-private-data.html#categorizing-your-data-using-aip-labels[Learn more^].
+link:task-org-private-data.html#categorize-your-data-using-aip-labels[Learn more^].
 
 == Types of source systems and data types
 

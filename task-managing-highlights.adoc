@@ -125,7 +125,7 @@ The new, cloned volume is created in the same aggregate as the source volume.
 
 You can view the progress of the clone operation in the link:task-view-compliance-actions.html[Actions Status pane].
 
-If you initially selected *Map all volumes* or *Map & Classify all volumes* when you enabled BlueXP classification for the working environment where the source volume resides, then BlueXP classification will scan the new cloned volume automatically. If you didn't use either of these selections initially, then if you want to scan this new volume, you'll need to link:task-getting-started-compliance.html#enable-and-disable-compliance-scans-on-volumes[enable scanning on the volume manually].
+If you initially selected *Map all volumes* or *Map & Classify all volumes* when you enabled BlueXP classification for the working environment where the source volume resides, then BlueXP classification will scan the new cloned volume automatically. If you didn't use either of these selections initially, then if you want to scan this new volume, you'll need to link:task-getting-started-compliance.html#enabling-and-disabling-compliance-scans-on-volumes[enable scanning on the volume manually].
 
 === Copy and synchronize source files to a target system
 

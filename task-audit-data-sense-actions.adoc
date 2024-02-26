@@ -5,7 +5,7 @@ keywords: compliance, actions, view progress, audit, logs, installation
 summary: BlueXP classification logs management activities that have been performed on files from all the working environments and data sources that BlueXP classification is scanning. BlueXP classification also logs the activities when deploying the BlueXP classification instance.
 ---
 
-= Auditing the history of BlueXP classification actions
+= Audit the history of BlueXP classification actions
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -49,6 +49,6 @@ The installation audit log files are written to `/opt/netapp/install_logs/`
 
 Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - older log files are deleted automatically after the maximum has been reached.
 
-== Accessing the log files
+== Access the log files
 
 You'll need to log into the BlueXP classification system to access the log files. See how to link:reference-log-in-to-instance.html[log in to the BlueXP classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.
