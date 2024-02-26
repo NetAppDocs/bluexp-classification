@@ -5,7 +5,7 @@ keywords: compliance, privacy, filter data, highlights, policies, email alerts, 
 summary: Policies are like a favorites list of custom filters that provide search results in the Investigation page for commonly requested compliance queries. BlueXP classification provides a set of predefined Policies based on common customer requests. You can create custom Policies that provide results for searches specific to your organization.
 ---
 
-= Assigning policies to your data
+= Assign policies to your data
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -30,13 +30,13 @@ image:screenshot_compliance_highlights_tab.png[A screenshot of the Policies tab 
 
 In addition, Policies appear in the list of Filters in the Investigation page.
 
-== Viewing Policy results in the Investigation page
+== View Policy results in the Investigation page
 
 To display the results for a Policy in the Investigation page, click the image:screenshot_gallery_options.gif[More button] button for a specific Policy, and then select *Investigate Results*.
 
 image:screenshot_compliance_highlights_investigate.png[A screenshot of selecting Investigate Results for a specific Policy from the Policies tab.]
 
-== Creating custom Policies
+== Create custom Policies
 
 You can create your own custom Policies that provide results for searches specific to your organization. Results are returned for all files and directories (shares and folders) that match the search criteria.
 
@@ -52,10 +52,10 @@ image:screenshot_compliance_save_as_highlight.png[A screenshot showing how to sa
 
 . Name the Policy and select other actions that can be performed by the Policy:
 .. Enter a unique name and description.
-.. Optionally, check the box to automatically delete files that match the Policy parameters. Learn more about <<Deleting source files automatically using Policies,deleting source files using a policy>>.
-.. Optionally, check the box if you want notification emails sent to BlueXP users in your account, and choose the interval at which the email is sent. Learn more about <<Sending email alerts when non-compliant data is found,sending email alerts based on policy results>>.
+.. Optionally, check the box to automatically delete files that match the Policy parameters. Learn more about <<Delete source files automatically using Policies,deleting source files using a policy>>.
+.. Optionally, check the box if you want notification emails sent to BlueXP users in your account, and choose the interval at which the email is sent. Learn more about <<Send email alerts when non-compliant data is found,sending email alerts based on policy results>>.
 .. Optionally, check the box if you want notification emails sent to other users, enter up to 20 email addresses, and choose the interval at which the email is sent.
-.. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html#categorizing-your-data-using-aip-labels[AIP labels].)
+.. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP labels].)
 .. Click *Create Policy*.
 +
 image:screenshot_compliance_save_highlight.png[A screenshot that shows how to configure the Policy and save it.]
@@ -64,7 +64,7 @@ image:screenshot_compliance_save_highlight.png[A screenshot that shows how to co
 
 The new Policy appears in the Policies tab.
 
-== Sending email alerts when non-compliant data is found
+== Send email alerts when non-compliant data is found
 
 BlueXP classification can send email alerts to BlueXP users in your account when certain critical Policies return results so you can get notifications to protect your data. You can choose to send the email notifications on a daily, weekly, or monthly basis. You can also choose to send email alerts to any other email address - up to 20 email addresses - not in your BlueXP account. 
 
@@ -90,7 +90,7 @@ image:screenshot_compliance_add_email_alert_2.png[A screenshot showing how to ch
 
 The first email is sent now if there are any results from the Policy - but only if any files meet the Policy criteria. No personal information is sent in the notification emails. The email indicates that there are files that match the Policy criteria, and it provides a link to the Policy results.
 
-== Deleting source files automatically using Policies
+== Delete source files automatically using Policies
 
 You can create a custom Policy to delete files that match the policy. For example, you may want to delete files that contain sensitive information and were discovered by BlueXP classification in the past 30 days.
 
@@ -117,7 +117,7 @@ The new Policy appears in the Policies tab. Files that match the policy are dele
 
 You can view the list of files that have been deleted in the link:task-view-compliance-actions.html[Actions Status pane].
 
-== Assigning AIP labels automatically with Policies
+== Assign AIP labels automatically with Policies
 
 You can assign an AIP label to all the files that meet the criteria of the Policy. You can specify the AIP label when creating the Policy, or you can add the label when editing any Policy.
 
@@ -155,7 +155,7 @@ image:screenshot_compliance_add_label_highlight_2.png[A screenshot showing how t
 
 NOTE: If a Policy was configured with a label, but the label has since been removed from AIP, the label name is turned to OFF and the label is not assigned anymore.
 
-== Editing Policies
+== Edit Policies
 
 You can modify any criteria for an existing policy that you previously created. This can be especially useful if you want to change the query (the items you defined using Filters) to add or remove certain parameters.
 
@@ -181,7 +181,7 @@ image:screenshot_compliance_edit_policy_query.png[A screenshot showing how to ed
 
 The policy is changed immediately. Any actions defined for that policy to send an email, add AIP labels, or delete files will occur at the next internal.
 
-== Deleting Policies
+== Delete Policies
 
 You can delete any custom Policy that you created if you no longer need it. You can't delete any of the predefined Policies.
 

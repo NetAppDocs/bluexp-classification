@@ -5,7 +5,7 @@ keywords: data identifiers, personal data, sensitive personal data, compliance, 
 summary: BlueXP classification provides many ways for you to add a custom list of "personal data" that BlueXP classification will identify in future scans, giving you the full picture about where potentially sensitive data resides in all your organizations' files.
 ---
 
-= Adding personal data identifiers to your BlueXP classification scans
+= Add personal data identifiers to your BlueXP classification scans
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -36,7 +36,7 @@ Note that since you're scanning your own databases, whatever language your data 
 
 .Steps
 
-You must have link:task-scanning-databases.html#adding-the-database-server[added at least one database server^] to BlueXP classification before you can add data fusion sources.
+You must have link:task-scanning-databases.html#add-the-database-server[added at least one database server^] to BlueXP classification before you can add data fusion sources.
 
 //. From the _Classification settings_ tab, click *Add New Classifier* to launch the _Add Custom Classifier_ wizard.
 //+
@@ -193,7 +193,7 @@ You can add custom categories to BlueXP classification so you can identify where
 
 For example, you may want to see where compressed installation files in .gz format are located in your files so that you can remove them, if necessary.
 
-After updating the custom categories, BlueXP classification will restart scanning all data sources. After the scan has completed, the new results will appear in the BlueXP classification Compliance Dashboard under the "Categories" section, and in the Investigation page in the "Category" filter. link:task-controlling-private-data.html#viewing-files-by-categories[See how to view files by categories].
+After updating the custom categories, BlueXP classification will restart scanning all data sources. After the scan has completed, the new results will appear in the BlueXP classification Compliance Dashboard under the "Categories" section, and in the Investigation page in the "Category" filter. link:task-controlling-private-data.html#view-files-by-categories[See how to view files by categories].
 
 .What you'll need
 
