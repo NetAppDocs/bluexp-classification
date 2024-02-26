@@ -25,7 +25,7 @@ You need to have the group ID numbers (GIDs) before starting this task.
 
 .Steps
 
-. On the BlueXP classification system, go to "/opt/netapp/config/custom_configuration" and open the file "data_provider.yaml".
+. On the BlueXP classification system, go to "/opt/netapp/config/custom_configuration" and open the file `data_provider.yaml`.
 
 . In the line "organization_group_ids: []" add the group IDs. For example:
 
@@ -33,16 +33,22 @@ You need to have the group ID numbers (GIDs) before starting this task.
 +
 Do not change anything else in this file.
 
+. Save the changes to the file.
+
 . Go to "/opt/netapp/Datasense/tools/customer_configuration/data_providers" and run the following script:
 
  update_data_providers_from_config_file.sh
 +
 This command commits the revised group ID permissions to the classification engine.
 
+.Result
+
 All subsequent scans of your data will identify files or folders that have these group IDs attached as "open to organization".
 
 You can edit the list of group IDs and delete any group IDs you added in the past using these same steps. The revised list of group IDs will be updated after you run the script to commit your changes.
 
-To view the current list of group IDs that you've added to BlueXP classification, run the following command from "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
+== View the current list of group IDs
+
+It is possible for the contents of the `data_provider.yaml` configuration file to be different than what has actually been committed after running the `update_data_providers_from_config_file.sh` script. To view the current list of group IDs that you've added to BlueXP classification, run the following command from "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
 
  get_data_providers_configuration.sh
