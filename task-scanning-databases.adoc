@@ -5,7 +5,7 @@ keywords: cloud compliance, enable cloud compliance, outbound internet, endpoint
 summary: Complete a few steps to start scanning your database schemas with BlueXP classification.
 ---
 
-= Scanning database schemas
+= Scan database schemas
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -41,7 +41,7 @@ Add the database server that you want to access.
 [role="quick-margin-para"]
 Select the schemas that you want to scan.
 
-== Reviewing prerequisites
+== Review prerequisites
 
 Review the following prerequisites to make sure that you have a supported configuration before you enable BlueXP classification.
 
@@ -72,7 +72,7 @@ When choosing a user name and password, it's important to choose one that has fu
 
 *Note:* For MongoDB, a read-only Admin role is required.
 
-== Deploying the BlueXP classification instance
+== Deploy the BlueXP classification instance
 
 Deploy BlueXP classification if there isn't already an instance deployed.
 
@@ -82,7 +82,7 @@ If you are scanning database schemas that have been installed in a dark site tha
 
 Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
-== Adding the database server
+== Add the database server
 
 Add the database server where the schemas reside.
 
@@ -101,7 +101,7 @@ image:screenshot_compliance_add_db_server_dialog.png[A screenshot of the Add DB 
 
 The database is added to the list of working environments.
 
-== Enabling and disabling compliance scans on database schemas
+== Enable and disable compliance scans on database schemas
 
 You can stop or start full scanning of your schemas at any time.
 
