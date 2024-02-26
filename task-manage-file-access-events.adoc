@@ -19,6 +19,9 @@ For example, if you want to track when any changes are made to your sensitive pe
 
 You can enable this feature on any critical volumes in your working environments that are running ONTAP software. When enabled on a volume, file access events are tracked for all files and directories in the volume. This capability is based on the https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html[FPolicy feature^] from your ONTAP systems, and it uses your BlueXP classification system as an FPolicy server to receive notification messages (events) from ONTAP. BlueXP classification can process approximately 990 events per second from ONTAP.
 
+NOTE: The December 2023 (version 1.26.6) release temporarily removed the option to activate audit log collection. 
+
+
 BlueXP classification currently captures events for the following actions on your files and directories: 
 
 * Create
