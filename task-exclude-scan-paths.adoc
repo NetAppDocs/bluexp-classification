@@ -63,7 +63,7 @@ You can add, edit, or delete items from the exclude list using these same steps.
 
 == Examples
 
-.Configuration:
+.Configuration 1:
 
 Every folder that contains "folder1" anywhere in the name will be excluded.
 
@@ -89,7 +89,7 @@ Every folder that contains "folder1" anywhere in the name will be excluded.
 * /CVO1/foldername
 * /CVO22/*folder20
 
-.Configuration:
+.Configuration 2:
 
 Every folder that contains "*folder1" only at the start of the name will be excluded.
 
@@ -109,7 +109,7 @@ Every folder that contains "*folder1" only at the start of the name will be excl
 * /CVO/folder1name
 * /CVO/not*folder10
 
-.Configuration:
+.Configuration 3:
 
 Every folder in the data source with the name "CVO22" that contains "folder1" anywhere in the name will be excluded.
 
