@@ -5,7 +5,7 @@ keywords: compliance, privacy, filter data, highlights, policies, email alerts, 
 summary: BlueXP classification provides many ways for you to manage and organize your private data. This makes it easier to see the data that is most important to you.
 ---
 
-= Organizing your private data
+= Organize your private data
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -46,7 +46,7 @@ It does not change the file, or the file accessed or modified times. | The label
 
 |===
 
-== Categorizing your data using AIP labels
+== Categorize your data using AIP labels
 
 You can manage AIP labels in the files that BlueXP classification is scanning if you have subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. AIP enables you to classify and protect documents and files by applying labels to content. BlueXP classification enables you to view the labels that are already assigned to files, add labels to files, and change labels when a label already exists.
 
@@ -59,7 +59,7 @@ BlueXP classification supports AIP labels within the following file types: .DOC,
 * If you've deployed BlueXP classification in a Government region, or in an on-prem location that has no internet access (also known as a dark site), then the AIP label functionality is unavailable.
 ====
 
-=== Integrating AIP labels in your workspace
+=== Integrate AIP labels in your workspace
 
 Before you can manage AIP labels, you need to integrate the AIP label functionality into BlueXP classification by signing into your existing Azure account. Once enabled, you can manage AIP labels within files for all link:concept-cloud-compliance.html#supported-data-sources[data sources^] in your BlueXP workspace.
 
@@ -89,7 +89,7 @@ image:screenshot_compliance_aip_labels_int.png[A screenshot that shows AIP label
 
 You can view and assign AIP labels from the results pane of the Investigation page. You can also assign AIP labels to files using Policies.
 
-=== Viewing AIP labels in your files
+=== View AIP labels in your files
 
 You can view the current AIP label that is assigned to a file.
 
@@ -97,7 +97,7 @@ In the Data Investigation results pane, click image:button_down_caret.png[down-c
 
 image:screenshot_compliance_show_label.png[A screenshot showing the metadata details for a single file; including the assigned AIP label.]
 
-=== Assigning AIP labels manually
+=== Assign AIP labels manually
 
 You can add, change, and remove AIP labels from your files using BlueXP classification.
 
@@ -132,7 +132,7 @@ image:screenshot_compliance_select_aip_label_multi.png[A screenshot showing how 
 +
 The AIP label is added to the metadata for all selected files.
 
-=== Removing the AIP integration
+=== Remove the AIP integration
 
 If you no longer want the ability to manage AIP labels in files, you can remove the AIP account from the BlueXP classification interface.
 
@@ -146,7 +146,7 @@ image:screenshot_compliance_un_integrate_aip_labels.png[A screenshot showing how
 
 . Click *Remove Integration* from the confirmation dialog.
 
-== Applying tags to manage your scanned files
+== Apply tags to manage your scanned files
 
 You can add a tag to files that you want to mark for some type of follow-up. For example, you may have found some duplicate files and you want to delete one of them, but you need to check to see which one should be deleted. You could add a tag of "Check to delete" to the file so you know this file requires some research and some type of future action.
 
@@ -156,7 +156,7 @@ Note that the tag is not added to the file in the same way as AIP Labels are par
 
 TIP: Tags assigned to files in BlueXP classification are not related to the tags you can add to resources, such as volumes or virtual machine instances. BlueXP classification tags are applied at the file level.
 
-=== Viewing files that have certain tags applied
+=== View files that have certain tags applied
 
 You can view all the files that have specific tags assigned.
 
@@ -168,7 +168,7 @@ image:screenshot_compliance_filter_status.png[A screenshot showing how to select
 +
 The Investigation Results pane displays all the files that have those tags assigned.
 
-=== Assigning tags to files
+=== Assign tags to files
 
 You can add tags to a single file or to a group of files.
 
@@ -213,7 +213,7 @@ image:screenshot_compliance_select_tags_multi.png[A screenshot showing how to as
 
 . Approve adding the tags in the confirmation dialog and the tags are added to the metadata for all selected files.
 
-=== Deleting tags from files
+=== Delete tags from files
 
 You can delete a tag if you don't need to use it anymore.
 
@@ -223,7 +223,7 @@ image:button_delete_datasense_file_tag.png[A screenshot of the delete tag button
 
 If you had selected multiple files, the tag is removed from all the files.
 
-== Assigning users to manage certain files
+== Assign users to manage certain files
 
 You can assign a BlueXP user to a specific file, or to multiple files, so that person can be responsible for any follow-up actions that need to be done on the file. This capability is often used with the feature to add custom Status tags to a file.
 

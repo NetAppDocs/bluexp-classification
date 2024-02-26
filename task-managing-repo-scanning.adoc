@@ -17,7 +17,7 @@ You can manage how your data is being scanned in each of your working environmen
 
 Some of the things you can change are whether a repository is scanned or not, and whether BlueXP classification is performing a link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[mapping scan or a mapping & classification scan]. You can also pause and resume scanning, for example, if you need to stop scanning a volume for a period of time.
 
-== Viewing the scan status for your repositories
+== View the scan status for your repositories
 
 You can view the individual repositories that BlueXP classification is scanning (volumes, buckets, etc.) for each working environment and data source. Additionally, you can see how many have been "Mapped", and how many have been "Classified". Classification takes a longer time as the full AI identification is being performed on all data.
 
@@ -33,7 +33,7 @@ image:screenshot_compliance_repo_scan_settings.png["A screenshot showing whether
 
 You can hover your cursor over the chart in the _Scan Status_ column to see the number of files that remain to be mapped or classified in each repository (bucket in this example).
 
-== Changing the type of scanning for a repository
+== Change the type of scanning for a repository
 
 You can start or stop mapping-only scans, or mapping and classification scans, in a working environment at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa.
 
@@ -55,7 +55,7 @@ The example below shows this button bar for an Azure NetApp Files system.
 
 image:screenshot_compliance_repo_scan_all.png[A screenshot showing how to configure the same scan setting for all volumes in a working environment.]
 
-== Stopping scanning for a repository
+== Stop scanning for a repository
 
 You can stop scanning a repository (for example, a volume) if you no longer need to monitor it for compliance. You do this by turning scanning "off". When scanning is turned off, all the indexing and information about that volume is removed from the system, and charging for scanning the data is stopped.
 
@@ -69,7 +69,7 @@ image:screenshot_compliance_config_button.png[A screenshot showing how to click 
 +
 image:screenshot_compliance_stop_repo_scanning.png[A screenshot showing how to select the type of scanning for a bucket.]
 
-== Pausing and resuming scanning for a repository
+== Pause and resume scanning for a repository
 
 You can "pause" scanning on a repository if you want to temporarily stop scanning certain content. Pausing scanning means that BlueXP classification won't perform any future scans for changes or additions to the repository, but that all the current results will still be displayed in the system. Pausing scanning does not stop charging for the scanned the data because the data still exists.
 
@@ -89,7 +89,7 @@ Note that some data sources provide the Pause and Resume functionality in a menu
 +
 image:screenshot_compliance_repo_pause_resume2.png[A screenshot showing how to pause and resume scanning on a SharePoint site.]
 
-== Rescanning data for an existing repository
+== Rescan data for an existing repository
 
 BlueXP classification continuously scans your data to detect incremental changes in the repositories that you've added. However, it takes time for the system to scan all the environments, and there is no method to control the order of the repositories that are scanned. If you need to rescan a particular repository immediately so that changes are reflected in the system, you can select the repository and rescan it. This allows you to prioritize scanning of certain data before other data. After the rescan action, the selected repository returns to being scanned under the normal BlueXP classification schedule.
 

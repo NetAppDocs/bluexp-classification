@@ -15,7 +15,6 @@ summary: Known limitations identify functions that are not supported by this rel
 [.lead]
 Known limitations identify functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
-== BlueXP classification scanning limitations
 
 === BlueXP classification release temporarily removed options
 
@@ -24,6 +23,8 @@ The December 2023 (version 1.26.6) release temporarily removed the following opt
 * The option to activate audit log collection has been disabled. 
 * During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. 
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled. 
+
+== BlueXP classification scanning limitations
 
 
 === BlueXP classification scans only one share under a volume

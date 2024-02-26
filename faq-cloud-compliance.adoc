@@ -257,7 +257,7 @@ NetApp does not have access to sensitive data and does not display it in the UI.
 
 === Where is the data stored? 
 
-Scan results are stored in Elastisearch within your BlueXP classification instance. 
+Scan results are stored in Elasticsearch within your BlueXP classification instance. 
 
 === How is the data accessed? 
 

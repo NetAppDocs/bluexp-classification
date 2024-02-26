@@ -5,7 +5,7 @@ keywords: savings, stale data, non-business data, duplicate data, age or data, s
 summary: Gain control of the costs related to the data on your organizations' storage resources. BlueXP classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
 ---
 
-= Viewing governance details about the data stored in your organization
+= View governance details about the data stored in your organization
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -23,7 +23,7 @@ The Governance dashboard provides information so that you can increase the effic
 
 image:screenshot_compliance_governance_dashboard.png[A screenshot of the BlueXP classification Governance dashboard.]
 
-=== Saving Opportunities
+=== Save Opportunities
 
 You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. Click each item to view the filtered results in the Investigation page.
 
@@ -139,7 +139,7 @@ For single working environments: Lists the files that are using the most capacit
 | File Types | Lists the total number of files and the used capacity for each type of file being stored in your working environments.
 |===
 
-=== Generating the Data Mapping Report
+=== Generate the Data Mapping Report
 
 You generate this report from the Governance tab in BlueXP classification.
 
@@ -178,7 +178,7 @@ After the assessment, this report identifies areas where you can:
 * Protect your data that has broad permissions by revising global group management policies
 * Protect your data that has personal or sensitive personal information by moving PII to more secure data stores
 
-=== Generating the Data Discovery Assessment Report
+=== Generate the Data Discovery Assessment Report
 
 You generate this report from the Governance tab in BlueXP classification.
 
