@@ -161,7 +161,7 @@ After the search is complete, you can then download the list of files for a Data
 
 NOTE: Data subject search is not supported within databases at this time.
 
-=== Search for data subjects and downloading reports
+=== Search for data subjects and download reports
 
 Search for the data subject's full name or known identifier and then download a file list report or DSAR report. You can search by link:reference-private-data-categories.html#types-of-personal-data[any personal information type^].
 

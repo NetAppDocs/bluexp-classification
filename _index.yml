@@ -53,7 +53,7 @@ indexpage:
         - title: View files that contain private information
           url: task-controlling-private-data.html
         - title: View files that are duplicated in your storage
-          url: task-investigate-data.html#checking-for-duplicate-files-in-your-storage-systems
+          url: task-investigate-data.html#check-for-duplicate-files-in-your-storage-systems
         - title: Filter your data to view specific files
           url: task-investigate-data.html
         - title: Create policies to view your top searches
@@ -81,7 +81,7 @@ indexpage:
         - title: Monitor and manage file access events
           url: task-manage-file-access-events.html
         - title: Respond to a Data Subject Access Request
-          url: task-generating-compliance-reports.html#searching-for-data-subjects-and-downloading-reports
+          url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports
     - title: Blogs & community
       links:
         - title: NetApp Community
