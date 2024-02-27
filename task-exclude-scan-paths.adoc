@@ -33,7 +33,7 @@ Excluding specific directories from BlueXP classification scans is supported for
 
 Before you can exclude directories from classification scanning you need to log into the BlueXP classification system so you can edit a configuration file and run a script. See how to link:reference-log-in-to-instance.html[log in to the BlueXP classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.
 
-Note: You can exclude a maximum of 50 directory paths.
+Note:: You can exclude a maximum of 50 directory paths.
 
 .Steps
 
@@ -130,7 +130,7 @@ Every folder in the data source with the name "CVO22" that contains "folder1" an
 
 == Escaping special characters in folder names
 
-If you have a path in your data source that contains one of the following special characters and you want to exclude it from mapping, you need to escape it.
+If you have a path in your data source that contains one of the following special characters and you want to exclude it from mapping, you'll need to escape it.
 
 The following special characters need to be escaped using \\.
 
@@ -144,6 +144,6 @@ Syntax in exclude file: `"\\*not_to_scan"`
 
 == View the current exclusion list
 
-It is possible for the contents of the `data_provider.yaml` configuration file to be different than what has actually been committed after running the `update_data_providers_from_config_file.sh` script. To view the current list of directories that you've excluded from BlueXP classification scanning, run the following command from "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
+It's possible for the contents of the `data_provider.yaml` configuration file to be different than what has actually been committed after running the `update_data_providers_from_config_file.sh` script. To view the current list of directories that you've excluded from BlueXP classification scanning, run the following command from "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
 
  get_data_providers_configuration.sh

@@ -49,6 +49,6 @@ You can edit the list of group IDs and delete any group IDs you added in the pas
 
 == View the current list of group IDs
 
-It is possible for the contents of the `data_provider.yaml` configuration file to be different than what has actually been committed after running the `update_data_providers_from_config_file.sh` script. To view the current list of group IDs that you've added to BlueXP classification, run the following command from "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
+It's possible for the contents of the `data_provider.yaml` configuration file to be different than what has actually been committed after running the `update_data_providers_from_config_file.sh` script. To view the current list of group IDs that you've added to BlueXP classification, run the following command from "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
 
  get_data_providers_configuration.sh
