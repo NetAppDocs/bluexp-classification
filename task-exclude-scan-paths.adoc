@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-exclude-scan-paths.html
 keywords: exclude scans, folders, directories
-summary: If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can list these directories in a configuration file that is converted into a regex in the classification engine. After you apply this change, BlueXP classification will exclude scanning data in the specified directories.
+summary: If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can add these directory names in a configuration file. After you apply this change, the BlueXP classification engine will exclude scanning data in those directories.
 ---
 
 = Exclude specific directories from BlueXP classification scans
@@ -13,7 +13,7 @@ summary: If you want BlueXP classification to exclude scanning data that resides
 :imagesdir: ./media/
 
 [.lead]
-If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can list these directories in a configuration file that is converted into a regex in the classification engine. After you apply this change, BlueXP classification will exclude scanning data in the specified directories.
+If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can add these directory names in a configuration file. After you apply this change, the BlueXP classification engine will exclude scanning data in those directories.
 
 Note that BlueXP classification is configured by default to exclude scanning volume snapshot data because that content is identical to the content in the volume.
 
@@ -31,9 +31,9 @@ Excluding specific directories from BlueXP classification scans is supported for
 
 == Define the directories to exclude from scanning
 
-Before you can exclude directories from classification scanning you need to log into the BlueXP classification system so you can edit a configuration file and run a script. See how to link:reference-log-in-to-instance.html[log in to the BlueXP classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.
+Before you can exclude directories from classification scanning, you need to log into the BlueXP classification system so you can edit a configuration file and run a script. See how to link:reference-log-in-to-instance.html[log in to the BlueXP classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.
 
-Note:: You can exclude a maximum of 50 directory paths.
+NOTE: You can exclude a maximum of 50 directory paths.
 
 .Steps
 
@@ -65,7 +65,7 @@ You can add, edit, or delete items from the exclude list using these same steps.
 
 .Configuration 1:
 
-Every folder that contains "folder1" anywhere in the name will be excluded.
+Every folder that contains "folder1" anywhere in the name will be excluded from all data sources.
 
  data_providers:
     exclude:
@@ -111,7 +111,7 @@ Every folder that contains "*folder1" only at the start of the name will be excl
 
 .Configuration 3:
 
-Every folder in the data source with the name "CVO22" that contains "folder1" anywhere in the name will be excluded.
+Every folder in data source "CVO22" that contains "folder1" anywhere in the name will be excluded.
 
  data_providers:
     exclude:
@@ -130,9 +130,7 @@ Every folder in the data source with the name "CVO22" that contains "folder1" an
 
 == Escaping special characters in folder names
 
-If you have a path in your data source that contains one of the following special characters and you want to exclude it from mapping, you'll need to escape it.
-
-The following special characters need to be escaped using \\.
+If you have a folder name that contains one of the following special characters and you want to exclude data in that folder from being scanned, you'll need to use the escape sequence \\ before the folder name.
 
  ., +, *, ?, ^, $, (, ), [, ], {, }, |
 
