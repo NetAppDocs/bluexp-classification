@@ -153,14 +153,15 @@ You can deploy BlueXP classification on a system with fewer CPUs and less RAM, b
 | System size
 | Specs
 | Limitations
-| Large (default) | 16 CPUs, 64 GB RAM, 500 GiB SSD | None
+| Extra Large | 32 CPUs, 128 GB RAM, 1 TiB SSD | Can scan up to 500 million files.
+| Large (default) | 16 CPUs, 64 GB RAM, 500 GiB SSD | Can scan up to 250 million files.
 | Medium | 8 CPUs, 32 GB RAM, 200 GiB SSD | Slower scanning, and can only scan up to 1 million files.
 | Small | 8 CPUs, 16 GB RAM, 100 GiB SSD | Same limitations as "Medium", plus the ability to identify link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[data subject names] inside files is disabled.
 |===
 
-When deploying BlueXP classification in the cloud on AWS you can choose a large/medium/small instance. When deploying BlueXP classification in Azure or GCP, email ng-contact-data-sense@netapp.com for assistance if you want to use one of these smaller systems. We'll need to work with you to deploy these smaller cloud configurations.
+When deploying BlueXP classification in the cloud on AWS you can choose a large/medium/small instance. When deploying BlueXP classification in Azure or GCP, email ng-contact-data-sense@netapp.com for assistance if you want to use one of these alternate systems. We'll need to work with you to deploy these other cloud configurations.
 
-When deploying BlueXP classification on-premises, just use a Linux host with the smaller specifications. You do not need to contact NetApp for assistance.
+When deploying BlueXP classification on-premises, just use a Linux host with the alternate specifications. You do not need to contact NetApp for assistance.
 
 == How BlueXP classification works
 
