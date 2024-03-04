@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-exclude-scan-paths.html
 keywords: exclude scans, folders, directories
-summary: If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can add these directory names in a configuration file. After you apply this change, the BlueXP classification engine will exclude scanning data in those directories.
+summary: If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can add these directory names to a configuration file. After you apply this change, the BlueXP classification engine will exclude scanning data in those directories.
 ---
 
 = Exclude specific directories from BlueXP classification scans
@@ -13,11 +13,11 @@ summary: If you want BlueXP classification to exclude scanning data that resides
 :imagesdir: ./media/
 
 [.lead]
-If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can add these directory names in a configuration file. After you apply this change, the BlueXP classification engine will exclude scanning data in those directories.
+If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can add these directory names to a configuration file. After you apply this change, the BlueXP classification engine will exclude scanning data in those directories.
 
 Note that BlueXP classification is configured by default to exclude scanning volume snapshot data because that content is identical to the content in the volume.
 
-This functionality is available in BlueXP classification version 1.29 and greater.
+This functionality is available in BlueXP classification version 1.29 and greater (starting in March 2024).
 
 == Supported data sources
 
@@ -33,7 +33,11 @@ Excluding specific directories from BlueXP classification scans is supported for
 
 Before you can exclude directories from classification scanning, you need to log into the BlueXP classification system so you can edit a configuration file and run a script. See how to link:reference-log-in-to-instance.html[log in to the BlueXP classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.
 
-NOTE: You can exclude a maximum of 50 directory paths.
+[NOTE]
+====
+* You can exclude a maximum of 50 directory paths per BlueXP classification system.
+* Excluding directory paths may affect scanning times.
+====
 
 .Steps
 

@@ -56,7 +56,7 @@ indexpage:
           url: task-investigate-data.html#check-for-duplicate-files-in-your-storage-systems
         - title: Filter your data to view specific files
           url: task-investigate-data.html
-        - title: Create policies to view your top searches
+        - title: Create policies to view results from your top searches
           url: task-using-policies.html
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
@@ -68,6 +68,8 @@ indexpage:
           url: task-org-private-data.html#categorize-your-data-using-aip-labels
         - title: Add your own custom personal data identifiers
           url: task-managing-data-fusion.html
+        - title: Exclude certain directories from scanning
+          url: task-exclude-scan-paths.html
     - title: Manage your private data
       links:
         - title: Copy source files
