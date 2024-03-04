@@ -86,6 +86,8 @@ sidebar:
       entries:
         - title: Add custom personal data identifiers
           url: /task-managing-data-fusion.html
+        - title: Exclude directories from scanning
+          url: /task-exclude-scan-paths.html
         - title: View the status of BlueXP classification actions
           url: /task-view-compliance-actions.html
         - title: Define existing Group IDs as "open to organization"
