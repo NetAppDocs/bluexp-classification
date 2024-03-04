@@ -16,6 +16,14 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
+== 4 March 2024 (version 1.29)
+
+=== Now you can exclude scanning data that resides in certain data source directories
+
+If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can add these directory names to a configuration file that BlueXP classification processes. This feature enables you to avoid scanning directories that are unnecessary, or that would result in returning false positive personal data results.
+
+https://docs.netapp.com/us-en/bluexp-classification/task-exclude-scan-paths.html[Learn more].
+
 == 10 January 2024 (version 1.27)
 
 === Investigation page results now display the total size in addition to total number of items
@@ -30,7 +38,7 @@ Now you can configure Group IDs in NFS to be considered as "Open to Organization
 //  
 //In the past when reports had over 10,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
 
-== December 2023 (version 1.26.6) 
+== 14 December 2023 (version 1.26.6) 
 
 This release included some minor enhancements.
 
@@ -39,7 +47,7 @@ The release also temporarily removed the following options:
 * The option to activate audit log collection has been disabled. Refer to link:task-manage-file-access-events.html[Monitor and manage file access events].
 * During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. Refer to link:task-investigate-data.html#filter-data-by-sensitivity-and-content[Investigate the data stored in your organization].
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled. Refer to link:task-org-private-data.html[Organize your private data].
-
+// end::whats-new[]
 
 == 6 November 2023 (version 1.26.3)
 
@@ -55,7 +63,6 @@ The release also temporarily removed the following options:
 Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; which was required for the BlueXP classification installation. We now support BlueXP classification installation on RHEL 9.0, 9.1, and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification (version 1.26 or greater) when using Podman.
 
 At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes) when using RHEL 9.x.
-// end::whats-new[]
 
 == 5 September 2023 (version 1.25)
 
@@ -232,17 +239,3 @@ https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#f
 === BlueXP classification can identify the Japanese Individual Number
 
 BlueXP classification can identify and categorize files that contain the Japanese Individual Number (also known as My Number). This includes both the Personal and Corporate My Number. https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
-
-== 11 December 2022 (version 1.18)
-
-=== On-premises installation enhancements
-
-The following enhancements have been added for the on-prem Data Sense installation:
-
-* Some additional prerequisites are now checked before the installation will start on an on-premises host. This helps to make sure your host system is 100% ready to have Data Sense software installed:
-** test for sufficient space on `/var/lib/docker`, `/tmp`, and `/opt`
-** test for the relevant permissions on all required folders
-* In the Configuration page, the Working Environments section now displays the _Working Environment ID_ and the _Scanner Group_ name. You'll need to know the Working Environment ID if you plan to use multiple Data Sense hosts to provide additional processing power to scan your data sources.
-* Also in the Configuration page, a new section shows the Scanner Groups you have set up, and the scanner nodes that are in each group.
-
-https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[Learn more about installing Data Sense on a single host server and on multiple hosts]. 

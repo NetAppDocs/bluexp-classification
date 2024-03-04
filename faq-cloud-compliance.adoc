@@ -141,16 +141,21 @@ Additionally, BlueXP classification provides many ways for you to add a custom l
 
 link:task-managing-data-fusion.html[Learn more^].
 
-=== What happens if data tiering is enabled on your ONTAP volumes?
+=== Can I instruct the service to exclude scanning data in certain directories?
 
-When BlueXP classification scans volumes that have cold data tiered to object storage, it scans all of the data--data that's on local disks and cold data tiered to object storage. This is also true for non-NetApp products that implement tiering.
+Yes. If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can provide that list to the classification engine. After you apply that change, BlueXP classification will exclude scanning data in the specified directories.
 
-The scan doesn't heat up the cold data--it stays cold and remains in object storage.
+link:task-exclude-scan-paths.html[Learn more^].
 
 === Are snapshot copies that reside on ONTAP volumes scanned?
 
 No. BlueXP classification does not scan snapshots because the content is identical to the content in the volume.
 
+=== What happens if data tiering is enabled on your ONTAP volumes?
+
+When BlueXP classification scans volumes that have cold data tiered to object storage, it scans all of the data--data that's on local disks and cold data tiered to object storage. This is also true for non-NetApp products that implement tiering.
+
+The scan doesn't heat up the cold data--it stays cold and remains in object storage.
 
 === Can BlueXP classification send notifications to my organization?
 
@@ -218,7 +223,6 @@ When BlueXP classification detects Personal Identifiable Information (PII), or w
 
 === What kinds of data and metadata does BlueXP classification capture?
 
-
 BlueXP classification enables you to run a general "mapping" scan or a full "classification" scan on your data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
 
 * Data mapping scan.
@@ -253,7 +257,6 @@ The data that is scanned stays within your environment.
 === How is sensitive data handled? 
 
 NetApp does not have access to sensitive data and does not display it in the UI. Sensitive data is masked, for example, the last four numbers are displayed for credit card information. 
-
 
 === Where is the data stored? 
 
