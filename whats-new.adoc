@@ -24,6 +24,12 @@ If you want BlueXP classification to exclude scanning data that resides in certa
 
 https://docs.netapp.com/us-en/bluexp-classification/task-exclude-scan-paths.html[Learn more].
 
+=== Extra Large instance support is now qualified
+
+If you need BlueXP classification to scan more than 250 million files, you can use an Extra Large instance in your cloud deployment or on-premises installation. This type of system can scan up to 500 million files.
+
+https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#using-a-smaller-instance-type[Learn more].
+
 == 10 January 2024 (version 1.27)
 
 === Investigation page results now display the total size in addition to total number of items
