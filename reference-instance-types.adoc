@@ -50,7 +50,7 @@ c4.2xlarge
 | System size
 | Specs
 | Instance type
-| Extra Large | 32 CPUs, 128 GB RAM, 1 TiB SSD (min throughput of 750MB/s) | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dv3-series[Standard_D32_v3^] (default)
+| Extra Large | 32 CPUs, 128 GB RAM, OS Disk (2,048 GiB, min 250 MB/s throughput), and Data Disk (1 TiB SSD, min 750 MB/s throughput) | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dv3-series[Standard_D32_v3^] (default)
 | Large | 16 CPUs, 64 GB RAM, 500 GiB SSD | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3^] (default)
 |===
 
