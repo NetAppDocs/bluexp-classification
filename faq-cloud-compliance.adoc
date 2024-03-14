@@ -250,7 +250,7 @@ link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn m
 
 === Can anyone access the private data sent between my browser and BlueXP classification?
 
-No. The private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption, which means NetApp and third parties can't read it. BlueXP classification won't share any data or results with NetApp unless you request and approve access.
+No. The private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties can't read it. BlueXP classification won't share any data or results with NetApp unless you request and approve access.
 
 The data that is scanned stays within your environment. 
 

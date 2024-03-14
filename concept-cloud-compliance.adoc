@@ -241,7 +241,7 @@ BlueXP classification uses AI to extract natural persons' names from documents. 
 
 BlueXP deploys the BlueXP classification instance with a security group that enables inbound HTTP connections from the Connector instance.
 
-When using BlueXP in SaaS mode, the connection to BlueXP is served over HTTPS, and the private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption, which means NetApp and third parties can't read it.
+When using BlueXP in SaaS mode, the connection to BlueXP is served over HTTPS, and the private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties can't read it.
 
 Outbound rules are completely open. Internet access is needed to install and upgrade the BlueXP classification software and to send usage metrics.
 
