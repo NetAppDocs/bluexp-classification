@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/api-classification.html</loc>
+        
+      
+      <lastmod>2023-08-15T16:27:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html</loc>
+        
+      
+      <lastmod>2024-03-14T23:12:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/faq-cloud-compliance.html</loc>
+        
+      
+      <lastmod>2024-03-14T23:12:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/</loc>
+        
+      
+      <lastmod>2024-02-02T17:17:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/legal-notices.html</loc>
+        
+      
+      <lastmod>2023-05-12T12:00:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/reference-collected-metadata.html</loc>
+        
+      
+      <lastmod>2023-09-21T12:30:05+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/reference-db-capabilities.html</loc>
+        
+      
+      <lastmod>2023-07-14T19:57:26+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/reference-instance-types.html</loc>
+        
+      
+      <lastmod>2024-03-11T12:53:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/reference-limitations.html</loc>
+        
+      
+      <lastmod>2024-02-26T20:35:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/reference-log-in-to-instance.html</loc>
+        
+      
+      <lastmod>2024-01-25T21:40:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:11:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification//search.html</loc>
+        
+      
+      <lastmod>2024-03-14T23:25:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-add-active-directory-datasense.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:11:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-add-group-id-as-open.html</loc>
+        
+      
+      <lastmod>2024-02-28T14:08:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-audit-data-sense-actions.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:11:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:11:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-controlling-private-data.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:22:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html</loc>
+        
+      
+      <lastmod>2023-09-25T12:58:00+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-dark-site.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:22:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:11:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-exclude-scan-paths.html</loc>
+        
+      
+      <lastmod>2024-03-04T13:33:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-generating-compliance-reports.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:22:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-get-help.html</loc>
+        
+      
+      <lastmod>2023-08-15T16:27:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-getting-started-compliance.html</loc>
+        
+      
+      <lastmod>2023-05-31T19:54:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:42:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html</loc>
+        
+      
+      <lastmod>2023-11-15T19:12:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-manage-file-access-events.html</loc>
+        
+      
+      <lastmod>2024-02-26T16:13:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-managing-compliance.html</loc>
+        
+      
+      <lastmod>2023-06-07T16:18:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-managing-data-fusion.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:11:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-managing-highlights.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:11:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html</loc>
+        
+      
+      <lastmod>2024-02-26T16:44:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html</loc>
+        
+      
+      <lastmod>2024-02-26T16:44:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-reduce-scan-speed.html</loc>
+        
+      
+      <lastmod>2023-04-19T19:55:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-scanning-anf.html</loc>
+        
+      
+      <lastmod>2023-05-31T19:54:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-scanning-databases.html</loc>
+        
+      
+      <lastmod>2024-02-26T16:44:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-scanning-file-shares.html</loc>
+        
+      
+      <lastmod>2023-08-23T14:45:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-scanning-fsx.html</loc>
+        
+      
+      <lastmod>2023-05-31T19:54:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-scanning-google-drive.html</loc>
+        
+      
+      <lastmod>2023-04-19T19:55:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-scanning-object-storage.html</loc>
+        
+      
+      <lastmod>2023-05-17T17:14:59+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-scanning-onedrive.html</loc>
+        
+      
+      <lastmod>2023-04-19T19:55:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-scanning-s3.html</loc>
+        
+      
+      <lastmod>2023-05-18T15:53:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-scanning-sharepoint.html</loc>
+        
+      
+      <lastmod>2023-06-29T13:43:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-support-registration.html</loc>
+        
+      
+      <lastmod>2023-08-15T16:27:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-test-linux-system.html</loc>
+        
+      
+      <lastmod>2023-09-25T12:58:00+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-uninstall-data-sense.html</loc>
+        
+      
+      <lastmod>2024-01-25T21:40:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html</loc>
+        
+      
+      <lastmod>2024-02-26T18:11:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/task-view-compliance-actions.html</loc>
+        
+      
+      <lastmod>2023-09-21T12:30:05+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/bluexp-classification/whats-new.html</loc>
+        
+      
+      <lastmod>2024-03-07T00:51:39+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
