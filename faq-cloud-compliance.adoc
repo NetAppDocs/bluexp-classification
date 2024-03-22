@@ -194,7 +194,8 @@ BlueXP classification can scan data from working environments that you've added 
 * SharePoint Online and On-Premises accounts
 * Google Drive accounts
 
-BlueXP classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
+BlueXP classification supports NFS versions 3.x, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
+//BlueXP classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
 
 === Are there any restrictions when deployed in a Government region?
 
@@ -300,9 +301,20 @@ The Connector is software running on a compute instance either within your cloud
 
 So if you have data in many of these locations, you may need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Connectors^].
 
+=== Does BlueXP classification require access to credentials? 
+
+BlueXP classification itself doesn't retrieve storage credentials. Instead, they are stored within the BlueXP Connector. 
+
+BlueXP classification uses data plane credentials, for example, CIFS credentials to mount shares before scanning. 
+
+
 === Can I deploy the Connector on my own host?
 
 Yes. You can https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network or on a host in the cloud. If you're planning to deploy BlueXP classification on-premises, then you may want to install the Connector on-premises as well; but it's not required.
+
+=== Is communication between the service and the Connector HTTP? 
+
+Yes, BlueXP classification communicates with the BlueXP Connector using HTTP. 
 
 === What about secure sites without internet access?
 
