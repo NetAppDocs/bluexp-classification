@@ -312,7 +312,7 @@ BlueXP classification uses data plane credentials, for example, CIFS credentials
 
 Yes. You can https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network or on a host in the cloud. If you're planning to deploy BlueXP classification on-premises, then you may want to install the Connector on-premises as well; but it's not required.
 
-=== Is communication between the service and the Connector HTTP? 
+=== Does communication between the service and the Connector use HTTP? 
 
 Yes, BlueXP classification communicates with the BlueXP Connector using HTTP. 
 
