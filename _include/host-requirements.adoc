@@ -1,5 +1,5 @@
 * BlueXP classification is not supported on a host that is shared with other applications - the host must be a dedicated host.
-//This include is used in 3 deploy topics
+//This include is used in 3 Linux deploy topics
 
 * When building the host system in your premises, you can choose among three system sizes depending on the size of the data set that you plan to have BlueXP classification scan.
 +
