@@ -53,7 +53,7 @@ Learn more about link:task-deploy-overview.html[BlueXP classification deployment
 
 The option to activate audit log collection has been disabled. 
 
-=== Communication with the service updates
+=== Updates about communication with the service
 We've updated information about communication with the service in the FAQ. 
 
 Read more in the link:faq-cloud-compliance.html[FAQ].
