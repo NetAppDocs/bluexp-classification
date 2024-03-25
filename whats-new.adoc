@@ -37,9 +37,17 @@ Learn more about how to link:task-managing-repo-scanning.html[Manage scan settin
 
 //https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html[Learn more].
 
-=== Podman support on RHEL v8.x and 9.x for the BlueXP Connector 
+=== Support added for RHEL v8.8 and 9.3 on the BlueXP Connector 
 
-This release provides support for Podman on RHEL v8.x in addition to previously supported 9.x. This applies also to dark sites, also known as _private mode._ 
+This release provides support for Red Hat Enterprise Linux v8.8 and v9.3 in addition to previously supported 9.x, which requires Podman, rather than the Docker engine. 
+
+This is applicable to any manual on-premises installation of BlueXP classification.
+
+The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.26 or greater: Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, and 9.3.
+
+Learn more about link:task-deploy-overview.html[BlueXP classification deployments overview].
+
+//Learn more about https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html[BlueXP classification deployments overview].
 
 === Option to activate audit log collection removed
 

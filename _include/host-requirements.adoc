@@ -1,4 +1,5 @@
 * BlueXP classification is not supported on a host that is shared with other applications - the host must be a dedicated host.
+//This include is used in 3 deploy topics
 
 * When building the host system in your premises, you can choose among three system sizes depending on the size of the data set that you plan to have BlueXP classification scan.
 +
@@ -61,7 +62,7 @@ Note that there are limitations when using the smaller systems. See link:concept
 
 ** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.26 or greater:
 
-*** Red Hat Enterprise Linux version 9.0, 9.1, and 9.2
+*** Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, and 9.3
 +
 Note that the following features are not currently supported when using RHEL 9.x:
 +
