@@ -150,7 +150,7 @@ For example, you may want to see where your internal Product IDs are mentioned i
 
 After adding the regex, BlueXP classification will restart scanning all data sources. After the scan has completed, the new results will appear in the BlueXP classification Compliance Dashboard under the "Personal Results" section, and in the Investigation page in the "Personal Data" filter.
 
-See https://regex101.com/ if you need assistance in building the regular expression you need. Choose *Python* for the Flavor to see the types of results BlueXP classification will match from the regular expression.
+If you need assistance in building the regular expression, refer to https://regex101.com/[Regular expressions 101^]. Choose *Python* for the Flavor to see the types of results BlueXP classification will match from the regular expression. The https://pythonium.net/regex[Python Regex Tester page^] is also useful by displaying a graphical representation of your patterns.
 
 NOTE: Currently we do not allow the use of pattern flags when creating a regex - this means you should not use "/".
 

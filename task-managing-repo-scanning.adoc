@@ -21,14 +21,13 @@ Some of the things you can change are whether a repository is scanned or not, an
 
 You can view the individual repositories that BlueXP classification is scanning (volumes, buckets, etc.) for each working environment and data source. Additionally, you can see how many have been "Mapped", and how many have been "Classified". Classification takes a longer time as the full AI identification is being performed on all data.
 
-You can view the scanning status of each work environment on the Configuration page:
+//You can view the scanning status of each work environment on the Configuration page:
+//* Running - green dot
+//* Queued - orange dot
+//* Paused - gray dot
+//* Error - red dot
 
-* Running - green dot
-* Queued - orange dot
-* Paused - gray dot
-* Error - red dot
-
-After a scan has completed, you can also see the last full cycle date and time.
+//After a scan has completed, you can also see the last full cycle date and time.
 
 .Steps
 
@@ -38,7 +37,7 @@ image:screenshot_compliance_config_button.png[A screenshot showing how to click 
 
 . In the Scan Configuration page you can view the scan settings for all repositories.
 +
-image:screenshot_compliance_repo_scan_settings2.png["A screenshot showing whether your buckets are being scanned, and the current scan status."]
+image:screenshot_compliance_repo_scan_settings.png["A screenshot showing whether your buckets are being scanned, and the current scan status."]
 
 You can hover your cursor over the chart in the _Mapping Status_ column to see the number of files that remain to be mapped or classified in each repository (bucket in this example).
 
@@ -56,7 +55,7 @@ image:screenshot_compliance_config_button.png[A screenshot showing how to click 
 
 . In the Scan Configuration page you can change any of the repositories (buckets in this example) to perform *Map* or *Map & Classify* scans.
 +
-image:screenshot_compliance_repo_scan_settings2.png[A screenshot showing how to select the type of scanning for a bucket.]
+image:screenshot_compliance_repo_scan_settings.png[A screenshot showing how to select the type of scanning for a bucket.]
 
 Certain types of working environments enable you to change the type of scanning globally for all repositories using a button bar at the top of the page. This is valid for Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, and Amazon FSx for ONTAP systems.
 

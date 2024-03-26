@@ -17,27 +17,9 @@ Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
 
-== 1 April 2024 
+== 1 April 2024 (Version 1.30)
 
-=== Scan status available in Configuration page
-You can now view the scanning status of each work environment on the Configuration page:
-
-* Running - green dot
-* Queued - orange dot
-* Paused - gray dot
-* Error - red dot
-
-After a scan has completed, you can also see the last full cycle date and time. 
-
-This applies to on-premises, AWS, and Azure deployments and the following work environments: Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, file shares, Amazon S3, generic object storage, databases, and Amazon FSx for NetApp ONTAP. 
-
-//Does't apply to GCP deployments. 
-
-Learn more about how to link:task-managing-repo-scanning.html[Manage scan settings].
-
-//https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html[Learn more].
-
-=== Support added for RHEL v8.8 and 9.3 on the BlueXP Connector 
+=== Support added for RHEL v8.8 and 9.3 BlueXP Classification
 
 This release provides support for Red Hat Enterprise Linux v8.8 and v9.3 in addition to previously supported 9.x, which requires Podman, rather than the Docker engine. 
 
@@ -53,13 +35,16 @@ Learn more about link:task-deploy-overview.html[BlueXP classification deployment
 
 The option to activate audit log collection has been disabled. 
 
-=== Updates about communication with the service
-We've updated information about communication with the service in the FAQ. 
+//=== Scan status available in Configuration page
+//You can now view the scanning status of each working environment on the Configuration page. After a scan has completed, you can also see the last full cycle date and time. 
 
-Read more in the link:faq-cloud-compliance.html[FAQ].
+//This applies to on-premises, AWS, and Azure deployments and the following work environments: Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, file shares, Amazon S3, generic object storage, databases, and Amazon FSx for NetApp ONTAP. 
 
-//Read more in the https://docs.netapp.com/us-en/bluexp-classification/faq-cloud-compliance.html[FAQ].
+//Does't apply to GCP deployments. 
 
+//Learn more about how to link:task-managing-repo-scanning.html[Manage scan settings].
+
+//https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html[Learn more].
 
 == 4 March 2024 (version 1.29)
 
