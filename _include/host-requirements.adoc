@@ -60,7 +60,7 @@ Note that there are limitations when using the smaller systems. See link:concept
 //*** Rocky Linux 9 (requires BlueXP classification version 1.24 or greater)
 *** Ubuntu 22.04 (requires BlueXP classification version 1.23 or greater)
 
-** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.26 or greater:
+** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater:
 
 *** Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, and 9.3
 +
