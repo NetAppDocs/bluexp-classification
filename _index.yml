@@ -1,9 +1,9 @@
 # Start snippet: landing page
 indexpage:
    title: BlueXP classification documentation
-   lead: BlueXP classification enables you to scan and classify data across your organization's hybrid multicloud. Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+   lead: BlueXP classification (Cloud Data Sense) enables you to scan and classify data across your organization's hybrid multicloud. Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
    summary: BlueXP classification (Cloud Data Sense) enables you to scan and classify data across your organization's hybrid multicloud. BlueXP classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
-   keywords: classification, cloud data sense, data sense, compliance, security 
+   keywords: bluexp, classification, cloud data sense, data sense, compliance, security 
    tiles:
     # Paste tile definitions from project.yml below this line and correct the indentation as needed
     - title: Get started
@@ -80,8 +80,6 @@ indexpage:
           url: task-managing-highlights.html#delete-source-files
         - title: Create email alerts when non-compliant data is found
           url: task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found
-        - title: Monitor and manage file access events
-          url: task-manage-file-access-events.html
         - title: Respond to a Data Subject Access Request
           url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports
     - title: Blogs & community

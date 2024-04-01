@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-deploy-compliance-onprem.html
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, bluexp classification, docker, podman
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, bluexp classification, docker, podman, install bluexp classification
 summary: Complete a few steps to install BlueXP classification on a Linux host in your network, or on a Linux host in the cloud, that has internet access. You'll need to deploy the Linux host manually in your network or in the cloud as part of this installation.
 ---
 
@@ -453,7 +453,7 @@ Variable values:
 When the installation finishes on all scanner nodes and they have been joined to the manager node, the "add_scanner_node.sh" script finishes as well. The installation can take 10 to 20 minutes.
 
 . If you added any scanner nodes into a scanner group, return to the Manager node and perform the following 2 tasks:
-.. Open the file "/opt/netapp/Datasense/working_environment_to_scanner_group_config.yml" and enter the mapping for which scanner groups will scan specific working environments. You'll need to have the _Working Environment ID_ for each data source. For example, the following entries add 2 working environments to the "europe" scanner group and 2 to the "united_states" scanner group:
+.. Open the file "/opt/netapp/config/custom_configuration/working_environment_to_scanner_group_config.yml" and enter the mapping for which scanner groups will scan specific working environments. You'll need to have the _Working Environment ID_ for each data source. For example, the following entries add 2 working environments to the "europe" scanner group and 2 to the "united_states" scanner group:
 +
  scanner_groups:
   europe:
