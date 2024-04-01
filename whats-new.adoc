@@ -13,7 +13,7 @@ summary: Learn what's new in BlueXP classification.
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new in BlueXP classification.
+Learn what's new in BlueXP classification (Cloud Data Sense).
 
 // tag::whats-new[]
 
