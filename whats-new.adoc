@@ -46,6 +46,18 @@ The option to activate audit log collection has been disabled.
 
 //https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html[Learn more].
 
+=== Scan speed improved
+
+Scan performance on secondary scanner nodes has been improved. You can add more scanner nodes if you need additional processing power for your scans. For details, refer to link:task-deploy-compliance-onprem.html[Install BlueXP classification on a host that has internet access].
+
+=== Automatic upgrades 
+
+If you deployed BlueXP classification on a system with internet access, the system upgrades automatically. Previously, the upgrade occurred after a specific time elapsed since the last user activity. With this release, BlueXP classification upgrades automatically if the local time is between 1:00 AM and 5:00 AM. If the local time is outside of these hours, the upgrade occurs after a specific time elapses since the last user activity. 
+
+For details, refer to link:task-deploy-compliance-onprem.html[Install on a Linux host with internet access].
+
+If you deployed BlueXP classification without internet access, you'll need to upgrade manually. For details, refer to link:task-deploy-compliance-dark-site.html[Install BlueXP classification on a Linux host with no internet access].
+
 == 4 March 2024 (version 1.29)
 
 === Now you can exclude scanning data that resides in certain data source directories
