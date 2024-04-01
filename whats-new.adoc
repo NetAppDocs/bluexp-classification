@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: whats-new.html
-keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, data sense
+keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, data sense, bluexp, bluexp classification
 summary: Learn what's new in BlueXP classification.
 ---
 
@@ -19,7 +19,7 @@ Learn what's new in BlueXP classification.
 
 == 1 April 2024 (Version 1.30)
 
-=== Support added for RHEL v8.8 and 9.3 BlueXP Classification
+=== Support added for RHEL v8.8 and v9.3 BlueXP classification
 
 This release provides support for Red Hat Enterprise Linux v8.8 and v9.3 in addition to previously supported 9.x, which requires Podman, rather than the Docker engine. 
 
