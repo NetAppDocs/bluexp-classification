@@ -21,9 +21,7 @@ Learn what's new in BlueXP classification (Cloud Data Sense).
 
 === Support added for RHEL v8.8 and v9.3 BlueXP classification
 
-This release provides support for Red Hat Enterprise Linux v8.8 and v9.3 in addition to previously supported 9.x, which requires Podman, rather than the Docker engine. 
-
-This is applicable to any manual on-premises installation of BlueXP classification.
+This release provides support for Red Hat Enterprise Linux v8.8 and v9.3 in addition to previously supported 9.x, which requires Podman, rather than the Docker engine. This is applicable to any manual on-premises installation of BlueXP classification.
 
 The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, and 9.3.
 
@@ -50,9 +48,7 @@ Scan performance on secondary scanner nodes has been improved. You can add more 
 
 === Automatic upgrades 
 
-If you deployed BlueXP classification on a system with internet access, the system upgrades automatically. Previously, the upgrade occurred after a specific time elapsed since the last user activity. With this release, BlueXP classification upgrades automatically if the local time is between 1:00 AM and 5:00 AM. If the local time is outside of these hours, the upgrade occurs after a specific time elapses since the last user activity. 
-
-For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[Install on a Linux host with internet access].
+If you deployed BlueXP classification on a system with internet access, the system upgrades automatically. Previously, the upgrade occurred after a specific time elapsed since the last user activity. With this release, BlueXP classification upgrades automatically if the local time is between 1:00 AM and 5:00 AM. If the local time is outside of these hours, the upgrade occurs after a specific time elapses since the last user activity. For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[Install on a Linux host with internet access].
 
 If you deployed BlueXP classification without internet access, you'll need to upgrade manually. For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-dark-site.html[Install BlueXP classification on a Linux host with no internet access].
 
