@@ -63,7 +63,15 @@ indexpage:
         - title: Respond to a Data Subject Access Request
           url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports    
     - title: Organize your private data (paid version)
-    
+      links:
+        - title: Apply tags and owners to files that need attention
+          url: task-org-private-data.html#apply-tags-to-manage-your-scanned-files
+        - title: Categorize your data using AIP labels
+          url: task-org-private-data.html#categorize-your-data-using-aip-labels
+        - title: Add your own custom personal data identifiers
+          url: task-managing-data-fusion.html
+        - title: Exclude certain directories from scanning
+          url: task-exclude-scan-paths.html
     - title: Manage your private data (paid version)
       links:
         - title: Copy source files
