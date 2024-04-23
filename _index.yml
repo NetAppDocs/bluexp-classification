@@ -12,11 +12,13 @@ indexpage:
           url: concept-cloud-compliance.html
         - title: What's New
           url: whats-new.html
+        - title: Features available in free and paid versions
+          url: reference-free-paid.html 
         - title: Deploy BlueXP classification in the cloud using BlueXP
           url: task-deploy-cloud-compliance.html
         - title: Install BlueXP classification on a Linux host with internet
           url: task-deploy-compliance-onprem.html
-        - title: Install BlueXP classification on-premises without internet
+        - title: Install BlueXP classification on-premises without internet (paid version)
           url: task-deploy-compliance-dark-site.html
         - title: Integrate Active Directory (paid version)
           url: task-add-active-directory-datasense.html
@@ -34,6 +36,8 @@ indexpage:
           url: task-scanning-fsx.html
     - title: Scan your data sources (paid version)
       links:
+        - title: Amazon S3 buckets 
+          url: task-scanning-s3.html
         - title: Generic S3 buckets
           url: task-scanning-object-storage.html
         - title: Non-NetApp file shares

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-free-paid.html
-keywords: bluexp, classification, cloud data sense, 
+keywords: bluexp, classification, cloud data sense, data sense, compliance, security 
 summary: There are some features and functionality that are unavailable with BlueXP classification when you are scanning database schemas.
 ---
 
