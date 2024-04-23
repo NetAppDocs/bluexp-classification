@@ -38,7 +38,6 @@ BlueXP classification is available as a core capability within BlueXP at no addi
 | Scan non-NetApp storage of OneDrive, Google Drive, SharePoint Online, SharePoint on-premises, Amazon S3 buckets, generic S3 buckets, non-NetApp file shares, and object storage service | No | Yes
 | Export data to NFS from investigation | No | Yes
 | Support multiple scanners | No | Yes
-| Deploy through BlueXP ransomware protection (June)| Yes | No
 | Integrate Active Directory  | No | Yes
 | Use permission analysis and filters | No | Yes
 | Use the file card | No | Yes
@@ -48,7 +47,7 @@ BlueXP classification is available as a core capability within BlueXP at no addi
 | Enable file access from the Configuration page | No| Yes
 | Use Directory level PII analysis and filters | No | Yes
 | Use predefined policies* | No | Yes
-
+| Deploy through BlueXP ransomware protection (future)| Yes | No
 
 |===
 

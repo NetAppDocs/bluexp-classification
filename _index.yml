@@ -18,11 +18,11 @@ indexpage:
           url: task-deploy-compliance-onprem.html
         - title: Install BlueXP classification on-premises without internet
           url: task-deploy-compliance-dark-site.html
-        - title: Integrate Active Directory
+        - title: Integrate Active Directory (paid version)
           url: task-add-active-directory-datasense.html
-        - title: Set up licensing
+        - title: Set up licensing (paid version)
           url: task-licensing-datasense.html
-    - title: Scan your working environments
+    - title: Scan your data sources (free version)
       links:
         - title: Cloud Volumes ONTAP volumes
           url: task-getting-started-compliance.html
@@ -32,9 +32,7 @@ indexpage:
           url: task-scanning-anf.html
         - title: Amazon FSx for ONTAP volumes
           url: task-scanning-fsx.html
-        - title: Amazon S3 buckets
-          url: task-scanning-s3.html
-    - title: Scan other data sources
+    - title: Scan your data sources (paid version)
       links:
         - title: Generic S3 buckets
           url: task-scanning-object-storage.html
@@ -60,17 +58,13 @@ indexpage:
           url: task-using-policies.html
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
-    - title: Organize your private data
-      links:
-        - title: Apply tags and owners to files that need attention
-          url: task-org-private-data.html#apply-tags-to-manage-your-scanned-files
-        - title: Categorize your data using AIP labels
-          url: task-org-private-data.html#categorize-your-data-using-aip-labels
-        - title: Add your own custom personal data identifiers
-          url: task-managing-data-fusion.html
-        - title: Exclude certain directories from scanning
-          url: task-exclude-scan-paths.html
-    - title: Manage your private data
+        - title: Create email alerts when non-compliant data is found
+          url: task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found
+        - title: Respond to a Data Subject Access Request
+          url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports    
+    - title: Organize your private data (paid version)
+    
+    - title: Manage your private data (paid version)
       links:
         - title: Copy source files
           url: task-managing-highlights.html#copy-source-files
@@ -78,10 +72,6 @@ indexpage:
           url: task-managing-highlights.html#move-source-files-to-an-nfs-share
         - title: Delete source files
           url: task-managing-highlights.html#delete-source-files
-        - title: Create email alerts when non-compliant data is found
-          url: task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found
-        - title: Respond to a Data Subject Access Request
-          url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports
     - title: Blogs & community
       links:
         - title: NetApp Community
