@@ -15,9 +15,7 @@ summary: There are some features and functionality that are unavailable with Blu
 [.lead]
 There are some features and functionality that are available only in the paid version.
 
-BlueXP classification is available as a core capability within BlueXP at no additional charge. 
- 
- By including BlueXP classification as a core BlueXP capability available to all customers, NetApp is enabling you to access tailored data management with core features.  
+BlueXP classification is available as a core capability within BlueXP at no additional charge. By including BlueXP classification as a core BlueXP capability available to all customers, NetApp is enabling you to access tailored data management with core features.  
 
 
 
