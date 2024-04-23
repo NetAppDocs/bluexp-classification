@@ -101,6 +101,8 @@ sidebar:
           url: /task-uninstall-data-sense.html
     - title: Reference
       entries:
+        - title: BlueXP classification features available in free and paid versions
+          url: /reference-free-paid.html 
         - title: Supported BlueXP classification instance types
           url: /reference-instance-types.html
         - title: Metadata collected from data sources

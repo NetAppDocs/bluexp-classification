@@ -1,0 +1,61 @@
+---
+sidebar: sidebar
+permalink: reference-free-paid.html
+keywords: bluexp, classification, cloud data sense, 
+summary: There are some features and functionality that are unavailable with BlueXP classification when you are scanning database schemas.
+---
+
+= BlueXP classification features available in free and paid versions
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are some features and functionality that are available only in the paid version.
+
+BlueXP classification is available as a core capability within BlueXP at no additional charge. 
+ 
+ By including BlueXP classification as a core BlueXP capability available to all customers, NetApp is enabling you to access tailored data management with core features.  
+
+
+
+[cols="60,20,20",width=100%,options="header"]
+|===
+| Feature
+| Available in free version
+| Available in paid version
+
+| Move, copy, and delete source files   | No | Yes
+| Categorize data using Status tags | No | Yes
+| Categorize data using AIP labels | No | Yes
+| Assign to | No | Yes
+| Rescan data | No | Yes
+| Use custom classifiers (personal data identifiers) and view the dashboard | No | Yes
+| Exclude specific directories from scanning | No | Yes
+| Search for names within files | No | Yes
+| Scan non-NetApp storage of OneDrive, Google Drive, SharePoint Online, SharePoint on-premises, Amazon S3 buckets, generic S3 buckets, non-NetApp file shares, and object storage service | No | Yes
+| Export data to NFS from investigation | No | Yes
+| Support multiple scanners | No | Yes
+| Deploy through BlueXP ransomware protection (June)| Yes | No
+| Integrate Active Directory  | No | Yes
+| Use permission analysis and filters | No | Yes
+| Use the file card | No | Yes
+| Use the heatmap | No | Yes
+| Use actions on Dashboard and file card | No | Yes
+| Use file access audit log | No | Yes
+| Enable file access from the Configuration page | No| Yes
+| Use Directory level PII analysis and filters | No | Yes
+| Use predefined policies* | No | Yes
+
+
+|===
+
+* For a limited time
+* Predefined policies available only in the paid version include: 
+** S3 publicly - Exposed private data
+** PCI DSS - Stale data over 30 days
+** HIPAA - Stale data over 30 days
+** GDPR - European citizens
+** CCPA - California residents
