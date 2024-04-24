@@ -15,7 +15,18 @@ summary: Learn what's new in BlueXP classification.
 [.lead]
 Learn what's new in BlueXP classification (Cloud Data Sense).
 
-// tag::whats-new[]
+//tag::whats-new[]
+== 14 May 2024 (Version 1.31)
+
+=== Classification is available as a free service within BlueXP
+
+BlueXP classification is now available as a core capability within BlueXP at no additional charge. No Classification license or subscription is required. As we focus BlueXP classification functionality on NetApp storage systems with the "free" version, some functionality will only be available in the "paid" version. See the link:reference-free-paid.html[comparison chart] for the list of features available in the two versions of BlueXP classification.
+
+You will see locations in the documentation where a feature is called out as only being available in the "paid" version of BlueXP classification so you'll know what is available for the version you are using.
+
+=== Other changes in this release ????
+
+Describe other changes
 
 == 1 April 2024 (Version 1.30)
 
@@ -66,6 +77,8 @@ If you need BlueXP classification to scan more than 250 million files, you can u
 
 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#using-a-smaller-instance-type[Learn more].
 
+//end::whats-new[]
+
 == 10 January 2024 (version 1.27)
 
 === Investigation page results now display the total size in addition to total number of items
@@ -80,8 +93,6 @@ Now you can configure Group IDs in NFS to be considered as "Open to Organization
 //  
 //In the past when reports had over 10,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
 
-// end::whats-new[]
-
 == 14 December 2023 (version 1.26.6) 
 
 This release included some minor enhancements.
@@ -91,7 +102,6 @@ The release also temporarily removed the following options:
 * The option to activate audit log collection has been disabled. Refer to link:task-manage-file-access-events.html[Monitor and manage file access events].
 * During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. Refer to link:task-investigate-data.html#filter-data-by-sensitivity-and-content[Investigate the data stored in your organization].
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled. Refer to link:task-org-private-data.html[Organize your private data].
-
 
 == 6 November 2023 (version 1.26.3)
 
