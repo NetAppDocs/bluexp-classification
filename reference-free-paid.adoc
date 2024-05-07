@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-free-paid.html
 keywords: bluexp, classification, cloud data sense, data sense, compliance, security 
-summary: There are some features and functionality that are unavailable with BlueXP classification when you are scanning database schemas.
+summary: There are some features and functionality that are unavailable in the free version of BlueXP classification.
 ---
 
 = BlueXP classification deprecated features
@@ -17,22 +17,66 @@ BlueXP classification is available as a core capability within BlueXP at no addi
 
 There are some features and functionality that have been deprecated in versions 1.31 and greater and still supported in versions 1.30 and earlier. 
 
+== Supported data sources
+
+[cols="60,20,20",width=100%,options="header"]
+|===
+| Data source
+| Free version
+| Paid version
+
+| Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP) | Yes | Yes
+| On-premises ONTAP clusters | Yes | Yes
+| StorageGRID | Yes | Yes
+| Azure NetApp Files | Yes | Yes
+| Amazon FSx for ONTAP | Yes | Yes
+| Google Cloud NetApp Volumes * | Yes | Yes
+| Cloud Volumes Service for Google Cloud | Yes | Yes
+| Databases | Yes ** | Yes
+| Amazon S3 | No | Yes
+| Google Cloud Storage | No | Yes
+| OneDrive | No | Yes
+| SharePoint Online | No | Yes
+| SharePoint On-premises (SharePoint Server) | No | Yes
+| Google Drive | No | Yes
+
+|===
+
+* Supported by integrating file shares into BlueXP classification.
+** For the "free" version, databases must reside on NetApp storage.
+
+=== Compliance features
 
 [cols="60,20,20",width=100%,options="header"]
 |===
 | Feature
-| Available in free version
-| Available in paid version
+| Free version
+| Paid version
+
+| Identify Personal Identifiable Information (PII) | Yes | Yes
+| Identify sensitive personal information | Yes | Yes
+| Respond to Data Subject Access Requests (DSAR) | Yes | Yes
+| Create a custom list of "personal data" that is identified | No | Yes
+| Notify users through email when files contain certain PII | Yes | Yes
+| Use Directory level PII analysis and filters | No | Yes
+|===
+
+== Features to manage your data
+
+[cols="60,20,20",width=100%,options="header"]
+|===
+| Feature
+| Free version
+| Paid version
 
 | Move, copy, and delete source files   | No | Yes
 | Categorize data using Status tags | No | Yes
 | Categorize data using AIP labels | No | Yes
-| Assign to | No | Yes
-| Rescan data | No | Yes
-| Use custom classifiers (personal data identifiers) and view the dashboard | No | Yes
-| Exclude specific directories from scanning | No | Yes
+| Assign files to users | No | Yes
+| Rescan data on demand | No | Yes
+| Create custom classifiers | No | Yes
+| Exclude directories from scanning | No | Yes
 | Search for names within files | No | Yes
-| Scan non-NetApp storage of OneDrive, Google Drive, SharePoint Online, SharePoint on-premises, Amazon S3 buckets, generic S3 buckets, non-NetApp file shares, and object storage service | No | Yes
 | Export data to NFS from investigation | No | Yes
 | Support multiple scanners | No | Yes
 | Integrate Active Directory  | No | Yes
@@ -40,11 +84,9 @@ There are some features and functionality that have been deprecated in versions 
 | Use the file card | No | Yes
 | Use the heatmap | No | Yes
 | Use actions on Dashboard and file card | No | Yes
-| Use file access audit log | No | Yes
+| Use file access audit logging | No | Yes
 | Enable file access from the Configuration page | No| Yes
-| Use Directory level PII analysis and filters | No | Yes
-| Use predefined policies* | No | Yes
-| Deploy through BlueXP ransomware protection (future)| Yes | No
+| Use certain predefined policies* | No | Yes
 
 |===
 
