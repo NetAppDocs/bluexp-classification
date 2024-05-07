@@ -5,7 +5,7 @@ keywords: bluexp, classification, cloud data sense, data sense, compliance, secu
 summary: There are some features and functionality that are unavailable with BlueXP classification when you are scanning database schemas.
 ---
 
-= BlueXP classification features available in free and paid versions
+= BlueXP classification deprecated features
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,10 +13,9 @@ summary: There are some features and functionality that are unavailable with Blu
 :imagesdir: ./media/
 
 [.lead]
-There are some features and functionality that are available only in the paid version.
-
 BlueXP classification is available as a core capability within BlueXP at no additional charge. By including BlueXP classification as a core BlueXP capability available to all customers, NetApp is enabling you to access tailored data management with core features.  
 
+There are some features and functionality that have been deprecated in versions 1.31 and greater and still supported in versions 1.30 and earlier. 
 
 
 [cols="60,20,20",width=100%,options="header"]
