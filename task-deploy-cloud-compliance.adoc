@@ -50,12 +50,14 @@ If you don't already have a Connector, create a Connector in your cloud provider
 
 There are some scenarios where you have to use a Connector that's deployed in a specific cloud provider:
 
-* When scanning data in Cloud Volumes ONTAP in AWS, Amazon FSx for ONTAP, or in AWS S3 buckets, you use a Connector in AWS.
+//* When scanning data in Cloud Volumes ONTAP in AWS, Amazon FSx for ONTAP, or in AWS S3 buckets, you use a Connector in AWS.
+* When scanning data in Cloud Volumes ONTAP in AWS or Amazon FSx for ONTAP buckets, you use a Connector in AWS.
 * When scanning data in Cloud Volumes ONTAP in Azure or in Azure NetApp Files, you use a Connector in Azure.
 ** For Azure NetApp Files, it must be deployed in the same region as the volumes you wish to scan.
 * When scanning data in Cloud Volumes ONTAP in GCP, you use a Connector in GCP.
 
-On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts can be scanned when using any of these cloud Connectors.
+On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, and databases can be scanned when using any of these cloud Connectors.
+//On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts can be scanned when using any of these cloud Connectors.
 
 Note that you can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[install the Connector on-premises^] on a Linux host in your network or in the cloud. Some users planning to install BlueXP classification on-prem may also choose to install the Connector on-prem.
 
@@ -65,7 +67,7 @@ As you can see, there may be some situations where you need to use https://docs.
 
 BlueXP classification is supported when the Connector is deployed in a Government region (AWS GovCloud, Azure Gov, or Azure DoD). When deployed in this manner, BlueXP classification has the following restrictions:
 
-* OneDrive accounts, SharePoint accounts, and Google Drive accounts can't be scanned.
+//* OneDrive accounts, SharePoint accounts, and Google Drive accounts can't be scanned.
 * Microsoft Azure Information Protection (AIP) label functionality can't be integrated.
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-restricted-mode.html[See more information about deploying the Connector in a Government region^].

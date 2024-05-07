@@ -18,13 +18,7 @@ indexpage:
           url: task-deploy-cloud-compliance.html
         - title: Install BlueXP classification on a Linux host with internet
           url: task-deploy-compliance-onprem.html
-        - title: Install BlueXP classification on-premises without internet (paid version)
-          url: task-deploy-compliance-dark-site.html
-        - title: Integrate Active Directory (paid version)
-          url: task-add-active-directory-datasense.html
-        - title: Set up licensing (paid version)
-          url: task-licensing-datasense.html
-    - title: Scan your data sources (free version)
+    - title: Scan your data sources 
       links:
         - title: Cloud Volumes ONTAP volumes
           url: task-getting-started-compliance.html
@@ -38,18 +32,6 @@ indexpage:
           url: task-scanning-file-shares.html
         - title: Database schemas
           url: task-scanning-databases.html
-    - title: Scan your data sources (paid version)
-      links:
-        - title: Amazon S3 buckets 
-          url: task-scanning-s3.html
-        - title: Generic S3 buckets
-          url: task-scanning-object-storage.html
-        - title: OneDrive accounts
-          url: task-scanning-onedrive.html
-        - title: SharePoint accounts
-          url: task-scanning-sharepoint.html
-        - title: Google Drive accounts
-          url: task-scanning-google-drive.html
     - title: View details about your data
       links:
         - title: View files that contain private information
@@ -66,24 +48,10 @@ indexpage:
           url: task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found
         - title: Respond to a Data Subject Access Request
           url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports    
-    - title: Organize your private data (paid version)
+    - title: Deprecated features 
       links:
-        - title: Apply tags and owners to files that need attention
-          url: task-org-private-data.html#apply-tags-to-manage-your-scanned-files
-        - title: Categorize your data using AIP labels
-          url: task-org-private-data.html#categorize-your-data-using-aip-labels
-        - title: Add your own custom personal data identifiers
-          url: task-managing-data-fusion.html
-        - title: Exclude certain directories from scanning
-          url: task-exclude-scan-paths.html
-    - title: Manage your private data (paid version)
-      links:
-        - title: Copy source files
-          url: task-managing-highlights.html#copy-source-files
-        - title: Move source files
-          url: task-managing-highlights.html#move-source-files-to-an-nfs-share
-        - title: Delete source files
-          url: task-managing-highlights.html#delete-source-files
+        - title: Deprecated features
+          url: reference-free-paid.html
     - title: Blogs & community
       links:
         - title: NetApp Community

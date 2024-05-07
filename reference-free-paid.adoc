@@ -57,9 +57,10 @@ There are some features and functionality that have been deprecated in versions 
 | Identify sensitive personal information | Yes | Yes
 | Respond to Data Subject Access Requests (DSAR) | Yes | Yes
 | Create a custom list of "personal data" that is identified | No | Yes
-| Notify users through email when files contain certain PII | Yes | Yes
+| Notify users through email when files contain certain PII. (You define this criteria using link:task-using-policies.html[Policies^].)  | Yes | Yes
 | Use Directory level PII analysis and filters | No | Yes
 |===
+
 
 == Features to manage your data
 

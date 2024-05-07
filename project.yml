@@ -99,10 +99,13 @@ sidebar:
           url: /task-managing-compliance.html
         - title: Uninstall BlueXP classification
           url: /task-uninstall-data-sense.html
+    - title: Deprecated features
+      entries: 
+        - title: List of deprecated features
+          url: /reference-free-paid.html 
+
     - title: Reference
       entries:
-        - title: BlueXP classification features available in free and paid versions
-          url: /reference-free-paid.html 
         - title: Supported BlueXP classification instance types
           url: /reference-instance-types.html
         - title: Metadata collected from data sources
