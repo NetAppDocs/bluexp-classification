@@ -38,13 +38,13 @@ BlueXP classification provides several tools that can help with your compliance 
 [cols="70,15,15",width=100%,options="header"]
 |===
 | Feature
-| Versions 1.31 and later
 | Versions 1.30 and earlier
+| Versions 1.31 and later
 
 | Identify Personal Identifiable Information (PII) | Yes | Yes
 | Identify a wide scope of sensitive personal information as required by GDPR, CCPA, PCI, and HIPAA privacy regulations | Yes | Yes
 | Respond to Data Subject Access Requests (DSAR) based on name or email address | Yes | Yes
-| Identify whether unique identifiers from your databases are found in files in other repositories - making your own list of "personal data" that is identified in BlueXP classification scans | No | Yes
+| Identify whether unique identifiers from your databases are found in files in other repositories - making your own list of "personal data" that is identified in BlueXP classification scans | Yes | No
 
 |===
 
