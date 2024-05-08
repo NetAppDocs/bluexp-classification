@@ -109,6 +109,8 @@ sidebar:
           url: /task-scanning-object-storage.html
         - title: Set up a free trial or bring your own license
           url: /task-licensing-byol-freetrial.html
+        - title: View governance details about data on the Governance dashboard
+          url: /task-controlling-governance-dashboard-deprecated.html
 
     - title: Reference
       entries:
