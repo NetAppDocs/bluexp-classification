@@ -103,7 +103,10 @@ sidebar:
       entries: 
         - title: List of deprecated features
           url: /reference-free-paid.html 
-
+        - title: Install BlueXP classification on multiple hosts with no internet access
+          url: /task-deploy-multi-host-install-dark-site.html
+        - title: Add scanner nodes to an existing deployment 
+          url: /task-deploy-add-scanner-nodes.html
     - title: Reference
       entries:
         - title: Supported BlueXP classification instance types

@@ -55,15 +55,15 @@ BlueXP classification can identify data that is potentially at risk for being ac
 [cols="70,15,15",width=100%,options="header"]
 |===
 | Feature
-| Versions 1.31 and later
 | Versions 1.30 and earlier
+| Versions 1.31 and later
 
 | Identify all the files and directories (shares and folders) with open permissions that are exposed to your entire organization or to the public | Yes | Yes
 | Identify sensitive data that resides outside of the initial, dedicated location | Yes | Yes
 | Comply with data retention policies | Yes | Yes
 | Use _Policies_ to automatically detect security staff of new security issues so they can take action immediately | Yes | Yes
 | Add custom tags to files (for example, "needs to be moved") and assign a BlueXP user so that person can own updates to the files | Yes | Yes
-| View and modify https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP) labels^] in your files | No | Yes
+| View and modify https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP) labels^] in your files | Yes | No
 |===
 
 === Optimize storage usage
@@ -73,11 +73,11 @@ BlueXP classification provides tools that can help with your storage total cost 
 [cols="70,15,15",width=100%,options="header"]
 |===
 | Feature
-| Versions 1.31 and later
 | Versions 1.30 and earlier
+| Versions 1.31 and later
 
 | Increase storage efficiency by identifying duplicate or non-business-related data. You can use this information to decide whether you want to move or delete certain files | Yes | Yes
-| Delete files that seem insecure or too risky to leave in your storage system, or that you have identified as duplicate. You can use _Policies_ to automatically delete files that match certain criteria | No | Yes
+| Delete files that seem insecure or too risky to leave in your storage system, or that you have identified as duplicate. You can use _Policies_ to automatically delete files that match certain criteria | Yes | No
 | Save storage costs by identifying inactive data that you can tier to less expensive object storage. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html[Learn more about tiering from Cloud Volumes ONTAP systems^]. https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html[Learn more about tiering from on-premises ONTAP systems^] | Yes | Yes
 |===
 
@@ -88,11 +88,11 @@ BlueXP classification can be used to scan your on-premises data before migrating
 [cols="70,15,15",width=100%,options="header"]
 |===
 | Feature
-| Versions 1.31 and later
 | Versions 1.30 and earlier
+| Versions 1.31 and later
 
 | View the size of data and whether any of the data contains sensitive information prior to moving it | Yes | Yes
-| Filter the source data (based on over 25 types of criteria) so you can move only the required files to the destination - unnecessary data is not moved | No | Yes
+| Filter the source data (based on over 25 types of criteria) so you can move only the required files to the destination - unnecessary data is not moved | Yes | No
 | Automatically and continually move, copy, or sync only the required data into the cloud repository | No | Yes
 |===
 
@@ -104,8 +104,8 @@ BlueXP classification can scan and analyze structured and unstructured data from
 |===
 | Data source type
 | Data sources
-| Versions 1.31 and later
 | Versions 1.30 and earlier
+| Versions 1.31 and later
 
 | *NetApp* | Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP) | Yes | Yes
 | | On-premises ONTAP clusters | Yes | Yes
@@ -114,15 +114,15 @@ BlueXP classification can scan and analyze structured and unstructured data from
 | | Amazon FSx for ONTAP | Yes | Yes
 | | Cloud Volumes Service for Google Cloud | Yes | Yes
 | *Non-NetApp* | Dell EMC Isilon | No | Yes
-| | Pure Storage | No | Yes
-| | Nutanix | No | Yes
-| | Any other storage vendor | No | Yes
-| *Cloud* | Amazon S3 | No | Yes
-| | Google Cloud Storage | No | Yes
-| | OneDrive | No | Yes
-| | SharePoint Online | No | Yes
-| | SharePoint On-premises (SharePoint Server) | No | Yes
-| | Google Drive | No | Yes
+| | Pure Storage | Yes | No
+| | Nutanix | Yes | No
+| | Any other storage vendor | Yes | No
+| *Cloud* | Amazon S3 | Yes | No
+| | Google Cloud Storage | Yes | No
+| | OneDrive | Yes | No
+| | SharePoint Online | Yes | No
+| | SharePoint On-premises (SharePoint Server) | Yes | No
+| | Google Drive | Yes | No
 | *Databases* | Amazon Relational Database Service (Amazon RDS) | Yes | Yes
 | | MongoDB | Yes | Yes
 | | MySQL | Yes | Yes
@@ -221,7 +221,7 @@ At a high-level, BlueXP classification works like this:
 
 == How scans work
 
-After you enable BlueXP classification and select the repositories that you want to scan (these are the volumes, buckets, database schemas, or OneDrive or SharePoint user data), it immediately starts scanning the data to identify personal and sensitive data. You should focus on scanning live production data in most cases instead of backups, mirrors, or DR sites. Then BlueXP classification maps your organizational data, categorizes each file, and identifies and extracts entities and predefined patterns in the data. The result of the scan is an index of personal information, sensitive personal information, data categories, and file types.
+After you enable BlueXP classification and select the repositories that you want to scan, it immediately starts scanning the data to identify personal and sensitive data. You should focus on scanning live production data in most cases instead of backups, mirrors, or DR sites. Then BlueXP classification maps your organizational data, categorizes each file, and identifies and extracts entities and predefined patterns in the data. The result of the scan is an index of personal information, sensitive personal information, data categories, and file types.
 
 BlueXP classification connects to the data like any other client by mounting NFS and CIFS volumes. NFS volumes are automatically accessed as read-only, while you need to provide Active Directory credentials to scan CIFS volumes.
 
@@ -229,7 +229,8 @@ image:diagram_cloud_compliance_scan.png["A diagram that shows a BlueXP instance 
 
 After the initial scan, BlueXP classification continuously scans your data in a round-robin fashion to detect incremental changes (this is why it's important to keep the instance running).
 
-You can enable and disable scans at the volume level, at the bucket level, at the database schema level, at the OneDrive user level, and at the SharePoint site level.
+You can enable and disable scans at the volume level and at the database schema level.
+//You can enable and disable scans at the bucket level, volume level, at the database schema level, at the OneDrive user level, and at the SharePoint site level.
 
 === What's the difference between Mapping and Classification scans
 
