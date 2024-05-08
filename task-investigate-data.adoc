@@ -129,6 +129,7 @@ Use the following filters to view data by storage type.
 
 Use the following filters to view data by AIP labels or tags.
 
+
 [cols=2*,options="header",cols="30,60"]
 |===
 
@@ -238,16 +239,14 @@ TIP: You can use the "file hash" value provided in this page and enter it direct
 
 The Data Investigation Report is a download of the filtered contents of the Data Investigation page. 
 
-The report is available in two different formats:
-
-* As a .CSV file that you can save to the local machine. 
+The report is available as a .CSV file that you can save to the local machine. 
 +
-This report can include a maximum of 10,000 rows of data.
+//This report can include a maximum of 10,000 rows of data.
 * As a .JSON file that you export to an NFS Share. 
-+
-If there are more than 250,000 rows of data, additional .JSON files are created. 
-+
-When exporting to a file share, make sure BlueXP classification has the correct permissions for export access.
+//+
+//If there are more than 250,000 rows of data, additional .JSON files are created. 
+//+
+//When exporting to a file share, make sure BlueXP classification has the correct permissions for export access.
 
 There can be up to three report files downloaded if BlueXP classification is scanning files (unstructured data), directories (folders and file shares), and databases (structured data).
 
@@ -257,9 +256,9 @@ There can be up to three report files downloaded if BlueXP classification is sca
 
 . From the Data Investigation page, click the image:button_download.png[download button] button on the top, right of the page.
 
-. Select whether you want to download a .CSV report or .JSON report of the data, and click *Download Report*.
-+
-When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
+. Select to download a .CSV report of the data, and click *Download Report*.
+//+
+//When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
 +
 image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
 
@@ -267,9 +266,9 @@ image:screenshot_compliance_investigation_report.png[A screenshot of the Downloa
 
 A dialog displays a message that the reports are being downloaded.
 
-You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
+//You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
 
-=== What's included in each Data Investigation Report
+=== What's included in the Data Investigation Report
 
 The *Unstructured Files Data Report* includes the following information about your files:
 

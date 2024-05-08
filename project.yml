@@ -61,8 +61,6 @@ sidebar:
           url: /reference-private-data-categories.html
         - title: Investigate your data
           url: /task-investigate-data.html
-        - title: Organize your private data
-          url: /task-org-private-data.html
         - title: Assign policies to your data
           url: /task-using-policies.html 
         - title: Manage your private data
@@ -111,6 +109,8 @@ sidebar:
           url: /task-licensing-byol-freetrial.html
         - title: View governance details about data on the Governance dashboard
           url: /task-controlling-governance-dashboard-deprecated.html
+        - title: Organize your private data
+          url: /task-org-private-data.html
 
     - title: Reference
       entries:

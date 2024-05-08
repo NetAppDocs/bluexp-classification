@@ -15,6 +15,10 @@ summary: BlueXP classification can scan your Amazon S3 buckets to identify the p
 [.lead]
 BlueXP classification can scan your Amazon S3 buckets to identify the personal and sensitive data that resides in S3 object storage. BlueXP classification can scan any bucket in the account, regardless if it was created for a NetApp solution.
 
+====
+*NOTE*    This information is relevant only for BlueXP classification versions 1.30 and earlier.
+====
+
 == Quick start
 
 Get started quickly by following these steps, or scroll down to the remaining sections for full details.

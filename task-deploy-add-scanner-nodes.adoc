@@ -13,9 +13,13 @@ summary: Complete a few steps to add scanner nodes on a Linux host in the cloud,
 :imagesdir: ./media/
 
 [.lead]
-For versions 1.30 and earlier, you can add scanner nodes to an existing deployment on a Linux host with internet access. 
+You can add scanner nodes to an existing deployment on a Linux host with internet access. 
 
 You can add more scanner nodes if you find that you need more scanning processing power to scan your data sources. You can add the scanner nodes immediately after installing the manager node, or you can add a scanner node later. For example, if you realize that the amount of data in one of your data sources has doubled or tripled in size after 6 months, you can add a new scanner node to assist with data scanning. 
+
+====
+*NOTE*    This information is relevant only for BlueXP classification versions 1.30 and earlier.
+====
 
 There are two ways in which you can add additional scanner nodes:
 

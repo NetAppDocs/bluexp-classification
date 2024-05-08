@@ -15,7 +15,7 @@ summary: There are some features and functionality that are unavailable in the f
 [.lead]
 BlueXP classification is available as a core capability within BlueXP at no additional charge. By including BlueXP classification as a core BlueXP capability available to all customers, NetApp is enabling you to access tailored data management with core features.  
 
-There are some features and functionality that have been deprecated in versions 1.31 and greater and still supported in versions 1.30 and earlier. 
+There are some features and functionality that are deprecated in versions 1.31 and later and are still supported in versions 1.30 and earlier. 
 
 == Supported data sources
 
@@ -43,7 +43,7 @@ There are some features and functionality that have been deprecated in versions 
 |===
 
 * Supported by integrating file shares into BlueXP classification.
-** For versions 1.31 and greater, databases must reside on NetApp storage.
+** For versions 1.31 and later, databases must reside on NetApp storage.
 
 == Compliance features
 

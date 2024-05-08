@@ -37,7 +37,7 @@ No data is displayed in this panel if you haven't integrated an identity service
 
 TIP: This panel supports files in CIFS shares, OneDrive, and SharePoint data sources. There is currently no support for databases, Google Drive, Amazon S3, and generic object storage.
 
-== AIP labels
+== Classification area on the dashboard showing AIP labels
 The _Classification_ area on the dashboard provides a list of the most identified Azure Information Protection (AIP) Labels in your scanned data. 
 
 If you have subscribed to Azure Information Protection (AIP), you can classify and protect documents and files by applying labels to content. Reviewing the most used AIP labels that are assigned to files enables you to see which labels are most used in your files.
