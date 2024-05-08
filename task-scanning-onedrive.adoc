@@ -5,7 +5,7 @@ keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedri
 summary: Complete a few steps to start scanning files in your user's OneDrive folders with BlueXP classification.
 ---
 
-= Scanning OneDrive accounts
+= Scan OneDrive accounts
 :hardbreaks:
 :nofooter:
 :icons: font

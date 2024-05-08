@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: task-licensing-datasense.html
-keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, data sense, cloud data sense
+permalink: task-licensing-byol-freetrial.html
+keywords: subscribe, trial, marketplace, subscription, byol, bring your own license, data sense, cloud data sense
 summary: The first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free. A BYOL license from NetApp, or a subscription from your cloud provider Marketplace, is required to continue scanning data after that point.
 ---
 
-= Set up pay-as-you-go licensing for BlueXP classification
+= Set up a free trial or bring your own license for BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,20 +13,16 @@ summary: The first 1 TB of data that BlueXP classification scans in a BlueXP wor
 :imagesdir: ./media/
 
 [.lead]
-A pay-as-you-go (PAYGO) subscription is required to scan data. 
-
-//The first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free for 30 days. A BYOL license from NetApp, or a subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
+For versions 1.30 and earlier, the first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free for 30 days. A BYOL license from NetApp, or a subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
 
 ====
-*NOTE*    This information is relevant only for BlueXP classification versions 1.31 and later.
+*NOTE*    This information is relevant only for BlueXP classification versions 1.30 and earlier.
 ====
 
 A few notes before you read any further:
 
-* If you've already subscribed to the BlueXP pay-as-you-go (PAYGO) subscription in your cloud provider's marketplace, then you're automatically subscribed to BlueXP classification as well. You won't need to subscribe again.
-// You'll see an active subscription in the BlueXP digital wallet.
 
-//* The BlueXP classification (Data Sense) bring-your-own-license (BYOL) is a _floating_ license that you can use across all the working environments and data sources in the workspace that you plan to scan. You'll see an active subscription in the BlueXP digital wallet.
+* The BlueXP classification (Data Sense) bring-your-own-license (BYOL) is a _floating_ license that you can use across all the working environments and data sources in the workspace that you plan to scan. You'll see an active subscription in the BlueXP digital wallet.
 
 * The amount of data being scanned is calculated based on logical file size; without any storage efficiencies.  
 
@@ -40,45 +36,7 @@ You can subscribe at any time and you will not be charged until either the 30 da
 
 image:screenshot_compliance_subscribe.png[A screenshot showing how much data is being scanned and the Subscribe button to subscribe to the service.]
 
-== Use a BlueXP classification PAYGO subscription
 
-Pay-as-you-go subscriptions from your cloud provider's marketplace enable you to license the use of Cloud Volumes ONTAP systems and many BlueXP services, such as BlueXP classification. You'll pay your cloud provider for the amount of data BlueXP classification is scanning on an hourly basis in a single subscription. 
-
-Subscribing ensures that there's no disruption of service after your free trial ends. When the trial ends, you'll be charged hourly according to the amount of data that you are scanning. You won't be charged from your subscription during your free trial.
-
-.Steps
-
-These steps must be completed by a user who has the _Account Admin_ role.
-
-. In the upper right of the BlueXP console, click the Settings icon, and select *Credentials*.
-+
-image:screenshot_settings_icon.gif[A screenshot of BlueXP's top right banner where you can select the Settings icon.]
-
-. Click *Credentials* and then find the credentials for the AWS Instance Profile, Azure Managed Service Identity, or Google Project.
-+
-The subscription must be added to the Instance Profile, Managed Service Identity, or Google Project. Charging won't work otherwise.
-+
-If you already have a BlueXP subscription (as shown below for AWS), then you're all set--there's nothing else that you need to do.
-+
-image:screenshot_profile_subscription.gif[A screenshot from the Credentials page that shows the Instance Profile with an active subscription.]
-
-. If you don't have a subscription yet, click the action menu and click *Associate Subscription*.
-+
-image:screenshot_add_subscription.gif["A screenshot of the menu in the Credentials page. It shows a button to associate a subscription to the credentials."]
-
-. Select an existing subscription and click *Associate*, or click *Add Subscription* and follow the steps.
-+
-The following video shows how to associate an https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4[AWS Marketplace^] subscription to an AWS subscription:
-+
-video::video_subscribing_aws.mp4[width=848, height=480]
-+
-The following video shows how to associate an https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview[Azure Marketplace^] subscription to an Azure subscription:
-+
-video::video_subscribing_azure.mp4[width=848, height=480]
-+
-The following video shows how to associate a https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project[Google Cloud Marketplace^] subscription to a GCP subscription:
-+
-video::video_subscribing_gcp.mp4[width=848, height=480]
 
 == Use an annual contract
 

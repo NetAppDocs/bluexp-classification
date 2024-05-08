@@ -41,20 +41,10 @@ sidebar:
               url: /task-scanning-anf.html
             - title: Amazon FSx for ONTAP
               url: /task-scanning-fsx.html
-            - title: Amazon S3 buckets
-              url: /task-scanning-s3.html
             - title: Database schemas
               url: /task-scanning-databases.html
-            - title: OneDrive accounts
-              url: /task-scanning-onedrive.html
-            - title: SharePoint accounts
-              url: /task-scanning-sharepoint.html
-            - title: Google Drive accounts
-              url: /task-scanning-google-drive.html
             - title: File shares
               url: /task-scanning-file-shares.html
-            - title: Object storage
-              url: /task-scanning-object-storage.html
         - title: Integrate Active Directory
           url: /task-add-active-directory-datasense.html
         - title: Set up licensing
@@ -107,6 +97,19 @@ sidebar:
           url: /task-deploy-multi-host-install-dark-site.html
         - title: Add scanner nodes to an existing deployment 
           url: /task-deploy-add-scanner-nodes.html
+        - title: Scan Amazon S3 buckets
+          url: /task-scanning-s3.html
+        - title: Scan OneDrive accounts
+          url: /task-scanning-onedrive.html
+        - title: Scan SharePoint accounts
+          url: /task-scanning-sharepoint.html
+        - title: Scan Google Drive accounts
+          url: /task-scanning-google-drive.html
+        - title: Scan object storage that uses S3 protocol
+          url: /task-scanning-object-storage.html
+        - title: Set up a free trial or bring your own license
+          url: /task-licensing-byol-freetrial.html
+
     - title: Reference
       entries:
         - title: Supported BlueXP classification instance types
