@@ -64,8 +64,8 @@ BlueXP classification can scan and analyze structured and unstructured data from
 //* StorageGRID
 * Azure NetApp Files
 * Amazon FSx for ONTAP
-* Cloud Volumes Service for Google Cloud
-* Non-NetApp file shares (for example, Dell EMC Isilon, Pure Storage, Nutanix, and so on)
+* Google Cloud NetApp Volumes
+* File shares (for example, Dell EMC Isilon, Pure Storage, Nutanix, and so on)
 * Databases:
 ** Amazon Relational Database Service (Amazon RDS)
 ** MongoDB

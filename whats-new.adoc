@@ -20,7 +20,7 @@ Learn what's new in BlueXP classification (Cloud Data Sense).
 
 === Classification is available as a free service within BlueXP
 
-BlueXP classification is now available as a core capability within BlueXP at no additional charge for up to 500 TiB of scanned data. No Classification license or subscription is required. As we focus BlueXP classification functionality on NetApp storage systems with this new version, some legacy functionality will only be available to customers who paid for a license previously.
+BlueXP classification is now available as a core capability within BlueXP at no additional charge for up to 500 TiB of scanned data. No Classification license or paid subscription is required. As we focus BlueXP classification functionality on scanning NetApp storage systems with this new version, some legacy functionality will only be available to customers who had previously paid for a license. The use of those legacy features will expire when the paid contract reaches its end date.
 
 == 1 April 2024 (Version 1.30)
 
@@ -41,7 +41,7 @@ The option to activate audit log collection has been disabled.
 
 //This applies to on-premises, AWS, and Azure deployments and the following work environments: Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, file shares, Amazon S3, generic object storage, databases, and Amazon FSx for NetApp ONTAP. 
 
-//Does't apply to GCP deployments. 
+//Doesn't apply to GCP deployments. 
 
 //Learn more about how to link:task-managing-repo-scanning.html[Manage scan settings].
 
