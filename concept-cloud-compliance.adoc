@@ -20,6 +20,9 @@ IMPORTANT
 
 Starting in May 2024 with version 1.31, BlueXP classification is now available as a core capability within BlueXP at no additional charge. No Classification license or subscription is required. We have also focused BlueXP classification functionality on NetApp storage systems, so some unused, or underused, features have been deprecated.
 
+link:reference-free-paid.html[See a list of deprecated features].
+//https://docs.netapp.com/us-en/bluexp-classification/reference-free-paid.html[See a list of deprecated features].
+
 Users who have been using versions 1.30 or earlier will continue to be able to use that version until their subscription expires.
 
 ====
