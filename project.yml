@@ -69,18 +69,10 @@ sidebar:
           url: /task-generating-compliance-reports.html
     - title: Manage BlueXP classification
       entries:
-        - title: Add custom personal data identifiers
-          url: /task-managing-data-fusion.html
         - title: Exclude directories from scanning
           url: /task-exclude-scan-paths.html
-        - title: View the status of BlueXP classification actions
-          url: /task-view-compliance-actions.html
         - title: Define existing Group IDs as "open to organization"
           url: /task-add-group-id-as-open.html
-        - title: Audit the history of BlueXP classification actions
-          url: /task-audit-data-sense-actions.html
-        - title: Reduce the BlueXP classification scan speed
-          url: /task-reduce-scan-speed.html
         - title: Remove data sources from BlueXP classification
           url: /task-managing-compliance.html
         - title: Uninstall BlueXP classification
@@ -111,7 +103,16 @@ sidebar:
           url: /task-org-private-data.html
         - title: Manage your private data
           url: /task-managing-highlights.html          
-
+        - title: Add custom personal data identifiers
+          url: /task-managing-data-fusion.html
+        - title: View the status of BlueXP classification actions
+          url: /task-view-compliance-actions.html    
+        - title: Audit the history of BlueXP classification actions
+          url: /task-audit-data-sense-actions.html                
+        - title: Reduce the BlueXP classification scan speed
+          url: /task-reduce-scan-speed.html
+        - title: Removing a OneDrive, SharePoint, or Google Drive account
+          url: /task-managing-compliance-deprecated.html  
     - title: Reference
       entries:
         - title: Supported BlueXP classification instance types
