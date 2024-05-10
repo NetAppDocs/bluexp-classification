@@ -97,24 +97,3 @@ Note that some data sources provide the Pause and Resume functionality in a menu
 +
 image:screenshot_compliance_repo_pause_resume2.png[A screenshot showing how to pause and resume scanning on a SharePoint site.]
 
-== Rescan data for an existing repository
-
-BlueXP classification continuously scans your data to detect incremental changes in the repositories that you've added. However, it takes time for the system to scan all the environments, and there is no method to control the order of the repositories that are scanned. If you need to rescan a particular repository immediately so that changes are reflected in the system, you can select the repository and rescan it. This allows you to prioritize scanning of certain data before other data. After the rescan action, the selected repository returns to being scanned under the normal BlueXP classification schedule.
-
-BlueXP classification supports scanning directories on all data source types except for Amazon S3 and Databases. Currently we support rescanning a single directory (folder or share) or multiple directories. Future support will include rescanning additional repository types (files, databases, etc.).
-
-* When rescanning a directory, all the files within the directory are rescanned, but sub-folders within the directory are not rescanned.
-* When rescanning a share, only the share's metadata is rescanned.
-* A maximum of 1K items can be rescanned at a time.
-
-.Steps
-
-. In the Data Investigation results pane, select the folders or shares that you want to rescan, and click *Rescan*.
-+
-image:screenshot_compliance_rescan_directory.png[A screenshot showing how to select and rescan a directory.]
-
-. In the _Rescan Directory_ dialog, click *Rescan*.
-
-Note that you can also rescan an individual directory when viewing the metadata details. Just click *Rescan*. 
-
-image:screenshot_compliance_rescan_single_file.png[A screenshot showing how to rescan a single folder or share.]
