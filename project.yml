@@ -81,38 +81,44 @@ sidebar:
       entries: 
         - title: List of deprecated features
           url: /reference-free-paid.html 
-        - title: Install BlueXP classification on multiple hosts with no internet access
-          url: /task-deploy-multi-host-install-dark-site.html
-        - title: Add scanner nodes to an existing deployment 
-          url: /task-deploy-add-scanner-nodes.html
-        - title: Scan Amazon S3 buckets
-          url: /task-scanning-s3.html
-        - title: Scan OneDrive accounts
-          url: /task-scanning-onedrive.html
-        - title: Scan SharePoint accounts
-          url: /task-scanning-sharepoint.html
-        - title: Scan Google Drive accounts
-          url: /task-scanning-google-drive.html
-        - title: Scan object storage that uses S3 protocol
-          url: /task-scanning-object-storage.html
-        - title: Set up a free trial or bring your own license
-          url: /task-licensing-byol-freetrial.html
-        - title: View governance details about data on the Governance dashboard
-          url: /task-controlling-governance-dashboard-deprecated.html
-        - title: Organize your private data
-          url: /task-org-private-data.html
-        - title: Manage your private data
-          url: /task-managing-highlights.html          
-        - title: Add custom personal data identifiers
-          url: /task-managing-data-fusion.html
-        - title: View the status of BlueXP classification actions
-          url: /task-view-compliance-actions.html    
-        - title: Audit the history of BlueXP classification actions
-          url: /task-audit-data-sense-actions.html                
-        - title: Reduce the BlueXP classification scan speed
-          url: /task-reduce-scan-speed.html
-        - title: Removing a OneDrive, SharePoint, or Google Drive account
-          url: /task-managing-compliance-deprecated.html  
+        -  title: Deploy BlueXP classification
+           entries: 
+             - title: Install BlueXP classification on multiple hosts with no internet access
+               url: /task-deploy-multi-host-install-dark-site.html
+             - title: Add scanner nodes to an existing deployment 
+               url: /task-deploy-add-scanner-nodes.html
+             - title: Set up a free trial or bring your own license
+               url: /task-licensing-byol-freetrial.html  
+        - title: Scan data
+          entries: 
+             - title: Scan Amazon S3 buckets
+               url: /task-scanning-s3.html
+             - title: Scan OneDrive accounts
+               url: /task-scanning-onedrive.html
+             - title: Scan SharePoint accounts
+               url: /task-scanning-sharepoint.html
+             - title: Scan Google Drive accounts
+               url: /task-scanning-google-drive.html
+             - title: Scan object storage that uses S3 protocol
+               url: /task-scanning-object-storage.html
+        - title: Manage data 
+          entries: 
+             - title: View governance details about data on the Governance dashboard
+               url: /task-controlling-governance-dashboard-deprecated.html
+             - title: Organize your private data
+               url: /task-org-private-data.html
+             - title: Manage your private data
+               url: /task-managing-highlights.html          
+             - title: Add custom personal data identifiers
+               url: /task-managing-data-fusion.html
+             - title: View the status of BlueXP classification actions
+               url: /task-view-compliance-actions.html    
+             - title: Audit the history of BlueXP classification actions
+               url: /task-audit-data-sense-actions.html                
+             - title: Reduce the BlueXP classification scan speed
+               url: /task-reduce-scan-speed.html
+             - title: Removing a OneDrive, SharePoint, or Google Drive account
+               url: /task-managing-compliance-deprecated.html  
     - title: Reference
       entries:
         - title: Supported BlueXP classification instance types
