@@ -5,7 +5,7 @@ keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud 
 summary: If you need to, you can stop BlueXP classification from scanning one or more working environments, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts.
 ---
 
-= Removing a OneDrive, SharePoint, or Google Drive account from BlueXP classification
+= Remove a OneDrive, SharePoint, or Google Drive account from BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font

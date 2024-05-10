@@ -117,7 +117,7 @@ sidebar:
                url: /task-audit-data-sense-actions.html                
              - title: Reduce the BlueXP classification scan speed
                url: /task-reduce-scan-speed.html
-             - title: Removing a OneDrive, SharePoint, or Google Drive account
+             - title: Remove a OneDrive, SharePoint, or Google Drive account
                url: /task-managing-compliance-deprecated.html  
     - title: Reference
       entries:
