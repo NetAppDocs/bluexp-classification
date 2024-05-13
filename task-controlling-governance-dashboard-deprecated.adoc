@@ -18,7 +18,7 @@ Gain control of the costs related to the data on your organizations' storage res
 Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information prior to moving it.
 
 ====
-*NOTE*    This information is relevant only for BlueXP classification versions 1.30 and earlier.
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier.
 ====
 
 == Data listed by sensitivity and wide permissions on the Governance dashboard

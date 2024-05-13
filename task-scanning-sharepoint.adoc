@@ -18,7 +18,7 @@ Complete a few steps to start scanning files in your SharePoint Online and Share
 //Note that you can scan data from the default library and any additional libraries in the SharePoint site.
 
 ====
-*NOTE*    This information is relevant only for BlueXP classification versions 1.30 and earlier.
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier.
 ====
 
 == Quick start

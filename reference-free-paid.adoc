@@ -15,15 +15,15 @@ summary: There are some features and functionality that are unavailable in the f
 [.lead]
 BlueXP classification is available as a core capability within BlueXP at no additional charge. By including BlueXP classification as a core BlueXP capability available to all customers, NetApp is enabling you to access tailored data management with core features.  
 
-There are some features and functionality that are deprecated in versions 1.31 and later and are still supported in versions 1.30 and earlier. 
+There are some features and functionality that are deprecated in the BlueXP core version starting with version 1.31 and later and are still supported in legacy versions 1.30 and earlier. 
 
 == Supported data sources
 
 [cols="60,20,20",width=100%,options="header"]
 |===
 | Data source
-| Versions 1.30 and earlier
-| Versions 1.31 and later
+| Legacy versions 1.30 and earlier
+| BlueXP core versions 1.31 and later
 
 | Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP) | Yes | Yes
 | On-premises ONTAP clusters | Yes | Yes

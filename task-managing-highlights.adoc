@@ -15,6 +15,10 @@ summary: BlueXP classification provides many ways for you to manage your private
 [.lead]
 BlueXP classification provides many ways for you to manage your private data. Some functionality makes it easier to prepare for migrating your data, while other functionality allows you to make changes to the data.
 
+====
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
+====
+
 * You can copy files to a destination NFS share if you want to make a copy of certain data and move it to a different NFS location.
 * You can clone an ONTAP volume to a new volume, while including only selected files from the source volume in the new cloned volume. This is useful for situations where you're migrating data and you want to exclude certain files from the original volume.
 * You can copy and synchronize files from a source repository to a directory in a specific destination location. This is useful for situations where you're migrating data from one source system to another while there is still some final activity on the source files.

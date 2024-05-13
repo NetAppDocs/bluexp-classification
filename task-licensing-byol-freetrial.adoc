@@ -16,7 +16,7 @@ summary: The first 1 TB of data that BlueXP classification scans in a BlueXP wor
 For versions 1.30 and earlier, the first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free for 30 days. A BYOL license from NetApp, or a subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
 
 ====
-*NOTE*    This information is relevant only for BlueXP classification versions 1.30 and earlier.
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier.
 ====
 
 A few notes before you read any further:

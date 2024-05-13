@@ -17,7 +17,12 @@ Data scans have a negligible impact on your storage systems and on your data. Ho
 
 When enabled, slow scanning is used on all data sources - you can't configure slow scanning for a single working environment or data source.
 
+
 TIP: The scan speed can't be reduced when scanning databases.
+
+====
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
+====
 
 .Steps
 

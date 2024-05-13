@@ -20,7 +20,7 @@ For very large configurations where you'll be scanning petabytes of data in site
 Follow these steps when installing BlueXP classification software on multiple on-premises hosts in an offline environment.
 
 ====
-*NOTE*    This information is relevant only for BlueXP classification versions 1.30 and earlier.
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier.
 ====
 
 .What you'll need

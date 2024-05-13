@@ -16,7 +16,7 @@ summary: Complete a few steps to start scanning user files in your Google Drive 
 Complete a few steps to start scanning user files in your Google Drive accounts with BlueXP classification.
 
 ====
-*NOTE*    This information is relevant only for BlueXP classification versions 1.30 and earlier.
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier.
 ====
 
 == Quick start
