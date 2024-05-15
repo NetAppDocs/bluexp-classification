@@ -13,7 +13,7 @@ summary: You can manage how your data is being scanned in each of your working e
 :imagesdir: ./media/
 
 [.lead]
-You can manage how your data is being scanned in each of your working environments and data sources. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
+You can manage how your data is being scanned in each of your working environments and data sources. You can make the changes on a "repository" basis; meaning you can make changes for each volume, schema, user, etc. depending on the type of data source you are scanning.
 
 Some of the things you can change are whether a repository is scanned or not, and whether BlueXP classification is performing a link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[mapping scan or a mapping & classification scan]. You can also pause and resume scanning, for example, if you need to stop scanning a volume for a period of time.
 

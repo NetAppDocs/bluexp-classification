@@ -40,7 +40,7 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 
 * *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#view-all-duplicated-files[See what types of duplicate files are displayed].
 
-NOTE:: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Stale Data_ category.
+NOTE: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Stale Data_ category.
 
 === Policies with the largest number of results
 
@@ -86,7 +86,7 @@ You can hover over a point in the charts to see details about the age or size of
 * *Age of Data graph* - Categorizes data based on the time it was created, the last time it was accessed, or the last time it was modified.
 * *Size of Data graph* - Categorizes data based on size.
 
-NOTE:: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Age of Data_ graph.
+NOTE: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Age of Data_ graph.
 
 === Most identified data Classifications
 
