@@ -17,7 +17,7 @@ If you need to, you can stop BlueXP classification from scanning one or more wor
 
 //If you need to, you can stop BlueXP classification from scanning one or more working environments, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts.
 
-Charging for scanning the data is stopped when the data source is removed.
+
 
 == Deactivate compliance scans for a working environment
 

@@ -34,9 +34,9 @@ link:concept-cloud-compliance.html#cost[Learn more about the licensing and costs
 
 == 30-day free trial
 
-A 30-day free trial is available for up to 1 TB of data that BlueXP classification scans in a BlueXP workspace. You'll need to purchase a BYOL license from NetApp, or a sign up for a subscription from your cloud provider's marketplace, to continue scanning data after that point.
+A 30-day free trial is available for up to 500 TB of data that BlueXP classification scans in a BlueXP workspace. You'll need to purchase a BYOL license from NetApp, or a sign up for a subscription from your cloud provider's marketplace, to continue scanning data after that point.
 
-You can subscribe at any time and you will not be charged until either the 30 day trial ends, or the amount of data exceeds 1 TB. You can always see the total amount of data that is being scanned from the BlueXP classification Governance Dashboard. And the _Subscribe Now_ button makes it easy to subscribe when you are ready.
+You can subscribe at any time and you will not be charged even after the 30 day trial ends. You can always see the total amount of data that is being scanned from the BlueXP classification Governance Dashboard. And the _Subscribe Now_ button makes it easy to subscribe when you are ready.
 
 image:screenshot_compliance_subscribe.png[A screenshot showing how much data is being scanned and the Subscribe button to subscribe to the service.]
 
@@ -44,7 +44,7 @@ image:screenshot_compliance_subscribe.png[A screenshot showing how much data is 
 
 Pay-as-you-go subscriptions from your cloud provider's marketplace enable you to license the use of Cloud Volumes ONTAP systems and many BlueXP services, such as BlueXP classification. You'll pay your cloud provider for the amount of data BlueXP classification is scanning on an hourly basis in a single subscription. 
 
-Subscribing ensures that there's no disruption of service after your free trial ends. When the trial ends, you'll be charged hourly according to the amount of data that you are scanning. You won't be charged from your subscription during your free trial.
+Subscribing ensures that there's no disruption of service after your free trial ends. When the trial ends, you will not be charged for BlueXP core version 1.31 or greater.
 
 .Steps
 
@@ -82,7 +82,7 @@ video::video_subscribing_gcp.mp4[width=848, height=480]
 
 == Use an annual contract
 
-Pay for BlueXP classification annually by purchasing an annual contract. They're available in 1-, 2-, or 3-year terms.
+Use BlueXP classification annually by getting an annual contract. They're available in 1-, 2-, or 3-year terms.
 
 If you have an annual contract from a marketplace, all BlueXP classification data scanning is charged against that contract. You can't mix and match an annual marketplace contract with a BYOL.
 
@@ -94,7 +94,7 @@ If you have an annual contract from a marketplace, all BlueXP classification dat
 
 Bring-your-own licenses from NetApp provide 1-, 2-, or 3-year terms. The BYOL BlueXP classification (Data Sense) license is a _floating_ license where the total capacity is shared among *all* of your working environments and data sources, making initial licensing and renewal easy.
 
-If you don't have a BlueXP classification license, contact us to purchase one:
+If you don't have a BlueXP classification license, contact us to get one:
 
 * mailto:ng-contact-data-sense@netapp.com?subject=Licensing[Send email to purchase a license].
 * Click the chat icon in the lower-right of BlueXP to request a license.

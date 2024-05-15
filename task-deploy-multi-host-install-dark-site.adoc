@@ -75,4 +75,4 @@ The BlueXP classification installer finishes installing packages, and registers 
 .What's Next
 From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and local link:task-scanning-databases.html[databases] that you want to scan.
 
-You can also link:task-licensing-datasense.html#use-a-bluexp-classification-byol-license[set up BYOL licensing for BlueXP classification] from the BlueXP digital wallet page at this time. You will not be charged until your 30-day free trial ends.
+You can also link:task-licensing-datasense.html#use-a-bluexp-classification-byol-license[set up BYOL licensing for BlueXP classification] from the BlueXP digital wallet page at this time. You will not be charged even after your 30-day free trial ends.

@@ -65,7 +65,7 @@ Download the Cloud BlueXP classification software from the NetApp Support Site a
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the BlueXP classification service
 
 [role="quick-margin-para"]
-The first 1 TB of data that BlueXP classification scans in BlueXP is free for 30 days. A subscription to your cloud provider Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point.
+The first 500 TB of data that BlueXP classification scans in BlueXP is free for 30 days. A subscription to your cloud provider Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point.
 
 == Create a Connector
 
@@ -75,13 +75,13 @@ To create one in your cloud provider environment, see https://docs.netapp.com/us
 
 There are some scenarios where you have to use a Connector that's deployed in a specific cloud provider:
 
-* When scanning data in Cloud Volumes ONTAP in AWS, Amazon FSx for ONTAP, or in AWS S3 buckets, you use a Connector in AWS.
+* When scanning data in Cloud Volumes ONTAP in AWS or Amazon FSx for ONTAP, you use a Connector in AWS.
 * When scanning data in Cloud Volumes ONTAP in Azure or in Azure NetApp Files, you use a Connector in Azure.
 +
 For Azure NetApp Files, it must be deployed in the same region as the volumes you wish to scan.
 * When scanning data in Cloud Volumes ONTAP in GCP, you use a Connector in GCP.
 
-On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts can be scanned using any of these cloud Connectors.
+On-prem ONTAP systems, non-NetApp file shares and database accounts can be scanned using any of these cloud Connectors.
 
 Note that you can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install BlueXP classification on-prem may also choose to install the Connector on-prem.
 
@@ -326,5 +326,5 @@ If there is connectivity over port 8080 between the host machine and the Connect
 .What's Next
 From the Configuration page you can select the data sources that you want to scan.
 
-You can also link:task-licensing-datasense.html[set up licensing for BlueXP classification] at this time. You will not be charged until your 30-day free trial ends.
+You can also link:task-licensing-datasense.html[set up licensing for BlueXP classification] at this time. You will not be charged even after your 30-day free trial ends.
 

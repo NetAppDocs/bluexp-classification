@@ -21,7 +21,7 @@ Note that you can also link:task-deploy-compliance-onprem.html[deploy BlueXP cla
 
 The BlueXP classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the BlueXP classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install BlueXP classification].
 
-NOTE: For legacy versions 1.30 and earlier, if you need to install BlueXP classification on multiple hosts, refer to link:task-deploy-multi-host-install-dark-site.html[Install BlueXP classification on multipile hosts with no internet access].
+NOTE: For legacy versions 1.30 and earlier, if you need to install BlueXP classification on multiple hosts, refer to link:task-deploy-multi-host-install-dark-site.html[Install BlueXP classification on multiple hosts with no internet access].
 
 == Supported data sources
 
@@ -33,17 +33,17 @@ When installed private mode (sometimes called an "offline" or "dark" site), Blue
 * Non-NetApp NFS or CIFS file shares
 //* Object Storage that uses the Simple Storage Service (S3) protocol
 
-There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, AWS S3, or Google Drive, OneDrive, or SharePoint Online accounts when BlueXP classification is deployed in private mode.
+There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, or FSx for ONTAP accounts when BlueXP classification is deployed in private mode.
 
 == Limitations
 
 Most BlueXP classification features work when it is deployed in a site with no internet access. However, certain features that require internet access are not supported, for example:
 
-* Managing Microsoft Azure Information Protection (AIP) labels
-* Sending email alerts to BlueXP users when certain critical Policies return results
+//* Managing Microsoft Azure Information Protection (AIP) labels
+//* Sending email alerts to BlueXP users when certain critical Policies return results
 * Setting BlueXP roles for different users (for example, Account Admin or Compliance Viewer)
 * Copying and synchronizing source files using BlueXP copy and sync
-* Receiving user feedback
+//* Receiving user feedback
 * Automated software upgrades from BlueXP
 +
 Both the BlueXP Connector and BlueXP classification will require periodic manual upgrades to enable new features. You can see the BlueXP classification version at the bottom of the BlueXP classification UI pages. Check the link:whats-new.html[BlueXP classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode[upgrade the BlueXP Connector^] and <<Upgrade BlueXP classification software,upgrade your BlueXP classification software>>.
@@ -70,7 +70,7 @@ Download the BlueXP classification software from the NetApp Support Site and cop
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the BlueXP classification service
 
 [role="quick-margin-para"]
-The first 1 TB of data that BlueXP classification scans in BlueXP is free for 30 days. A BYOL license from NetApp is required to continue scanning data after that point.
+The first 500 TB of data that BlueXP classification scans in BlueXP is free for 30 days. A BYOL license from NetApp is required to continue scanning data after that point. There is no charge for the BlueXP core version 1.31. 
 
 == Install the BlueXP Connector
 
