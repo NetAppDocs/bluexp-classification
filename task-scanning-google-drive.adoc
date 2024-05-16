@@ -49,7 +49,7 @@ Select the type of scanning you want to perform on the user files; mapping or ma
 //[role="quick-margin-para"]
 //Add the list of Google Drive site URLs that you want to scan in the Google Drive account, and select the type of scanning. You can add up to 100 URLs at time.
 
-== Reviewing Google Drive requirements
+== Review Google Drive requirements
 
 Review the following prerequisites to make sure you are ready to enable BlueXP classification on a Google Drive account.
 
@@ -64,7 +64,7 @@ The following BlueXP classification features are not currently supported with Go
 * When viewing files in the Data Investigation page, the actions in the button bar aren't active. You can't copy, move, delete, etc. any files.
 * Permissions can't be identified within files in Google Drive, so no permission information is displayed in the Investigation page.
 
-== Deploying BlueXP classification
+== Deploy BlueXP classification
 
 Deploy BlueXP classification if there isn't already an instance deployed.
 
@@ -72,9 +72,9 @@ BlueXP classification can be link:task-deploy-cloud-compliance.html[deployed in 
 
 Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 //
-// BlueXP classification can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local Google Drive files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
+// BlueXP classification can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local Google Drive files. link:task-deploy-compliance-dark-site.html[See the list of required endpoints here].
 
-== Adding the Google Drive account
+== Add the Google Drive account
 
 Add the Google Drive account where the user files reside. If you want to scan files from multiple users, you'll need to run through this step for each user.
 
@@ -90,7 +90,7 @@ image:screenshot_compliance_add_google_drive_button.png[A screenshot of the Scan
 
 The Google Drive account is added to the list of working environments.
 
-== Selecting the type of scanning for user data
+== Select the type of scanning for user data
 
 Select the type of scanning that BlueXP classification will perform on the user's data.
 
@@ -134,9 +134,9 @@ image:screenshot_compliance_google_drive_select_scan.png[A screenshot showing ho
 
 BlueXP classification starts scanning the files in the Google Drive account you added, and the results are displayed in the Dashboard and in other locations.
 
-== Removing a Google Drive account from compliance scans
+== Remove a Google Drive account from compliance scans
 
 //If you remove a Google Drive site in the future, or decide not to scan files in a Google Drive site, you can remove individual Google Drive sites from having their files scanned at any time. Just click *Remove Google Drive Site* from the Configuration page.
 //
 //image:screenshot_compliance_sharepoint_remove_site.png[A screenshot showing how to remove a single Google Drive site from having their files scanned.]
-Since only a single user's Google Drive files are part of a single Google Drive account, if you want to stop scanning files from a user's Google Drive account, then you should link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification[delete the Google Drive account from BlueXP classification].
+Since only a single user's Google Drive files are part of a single Google Drive account, if you want to stop scanning files from a user's Google Drive account, then you should link:task-managing-compliance.html[delete the Google Drive account from BlueXP classification].

@@ -17,7 +17,7 @@ Policies are like a favorites list of custom filters that provide search results
 
 Policies provide the following functionality:
 
-* <<List of predefined Policies,Predefined Policies>> from NetApp based on user requests
+* <<List of predefined policies,Predefined policies>> from NetApp based on user requests
 * Ability to create your own custom policies
 * Launch the Investigation page with the results from your Policies in one click
 //* Send email alerts to BlueXP users, or any other email addresses, when certain critical Policies return results so you can get notifications to protect your data
@@ -52,10 +52,10 @@ image:screenshot_compliance_save_as_highlight.png[A screenshot showing how to sa
 
 . Name the policy and select other actions that can be performed by the policy:
 .. Enter a unique name and description.
-.. Optionally, check the box to automatically delete files that match the policy parameters. Learn more about <<Delete source files automatically using policies,deleting source files using a policy>>.
+.. Optionally, check the box to automatically delete files that match the policy parameters. 
 //.. Optionally, check the box if you want notification emails sent to BlueXP users in your account, and choose the interval at which the email is sent. Learn more about <<Send email alerts when non-compliant data is found,sending email alerts based on policy results>>.
 //.. Optionally, check the box if you want notification emails sent to other users, enter up to 20 email addresses, and choose the interval at which the email is sent.
-//.. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP labels].)
+//.. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html[AIP labels].)
 .. Click *Create Policy*.
 +
 image:screenshot_compliance_save_highlight.png[A screenshot that shows how to configure the Policy and save it.]
@@ -97,7 +97,7 @@ You can delete any custom policy that you created if you no longer need it. You 
 
 To delete a policy, click the image:screenshot_gallery_options.gif[More button] button for a specific Policy, click *Delete Policy*, and then click *Delete Policy* again in the confirmation dialog.
 
-== List of predefined Policies
+== List of predefined policies
 
 BlueXP classification provides the following system-defined policies:
 

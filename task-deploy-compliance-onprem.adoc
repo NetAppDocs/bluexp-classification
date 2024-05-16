@@ -69,7 +69,7 @@ The first 500 TB of data that BlueXP classification scans in BlueXP is free for 
 
 == Create a Connector
 
-A BlueXP Connector is required before you can install and use BlueXP classification. In most cases you'll probably have a Connector set up before you attempt to activate BlueXP classification because most https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-a-connector-is-required[BlueXP features require a Connector], but there are cases where you'll you need to set one up now.
+A BlueXP Connector is required before you can install and use BlueXP classification. In most cases you'll probably have a Connector set up before you attempt to activate BlueXP classification because most https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[BlueXP features require a Connector], but there are cases where you'll you need to set one up now.
  
 To create one in your cloud provider environment, see https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[creating a Connector in AWS^], https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[creating a Connector in Azure^], or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[creating a Connector in GCP^]. 
 
@@ -85,7 +85,7 @@ On-prem ONTAP systems, non-NetApp file shares and database accounts can be scann
 
 Note that you can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install BlueXP classification on-prem may also choose to install the Connector on-prem.
 
-As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors[multiple Connectors].
+As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[multiple Connectors].
 
 You'll need the IP address or host name of the Connector system when installing BlueXP classification. You'll have this information if you installed the Connector in your premises. If the Connector is deployed in the cloud, you can find this information from the BlueXP console: click the Help icon, select *Support*, and click *BlueXP Connector*.
 
@@ -215,7 +215,7 @@ You must have the information for the Active Directory:
 
 |===
 
-If you are using multiple BlueXP classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-onprem.html#add-scanner-nodes-to-an-existing-deployment[See the additional port requirements].
+If you are using multiple BlueXP classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-onprem.html[See the additional port requirements].
 
 == Install BlueXP classification on the Linux host
 
@@ -231,7 +231,7 @@ See <<Prepare the Linux host system,Preparing the Linux host system>> and <<Enab
 
 Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
-NOTE: BlueXP classification is currently unable to scan S3 buckets, Azure NetApp Files, or FSx for ONTAP when the software is installed on premises. In these cases you'll need to deploy a separate Connector and instance of BlueXP classification in the cloud and https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors[switch between Connectors^] for your different data sources.
+NOTE: BlueXP classification is currently unable to scan S3 buckets, Azure NetApp Files, or FSx for ONTAP when the software is installed on premises. In these cases you'll need to deploy a separate Connector and instance of BlueXP classification in the cloud and https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[switch between Connectors^] for your different data sources.
 
 === Single-host installation for typical configurations
 
@@ -239,7 +239,7 @@ Review the requirements and follow these steps when installing BlueXP classifica
 
 https://youtu.be/rFpmekdbORc[Watch this video^] to see how to install BlueXP classification.
 
-Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html#access-the-log-files[See more details here].
+Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html[See more details here].
 
 .What you'll need
 

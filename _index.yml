@@ -45,7 +45,7 @@ indexpage:
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
         - title: Create email alerts when non-compliant data is found
-          url: task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found
+          url: task-using-policies.html
         - title: Respond to a Data Subject Access Request
           url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports    
     - title: Deprecated features 

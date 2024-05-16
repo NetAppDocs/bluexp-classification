@@ -95,9 +95,9 @@ Now you can configure Group IDs in NFS to be considered as "Open to Organization
 
 This release included some minor enhancements.
 
-The release also temporarily removed the following options: 
+The release also removed the following options: 
 
-* The option to activate audit log collection has been disabled. Refer to link:task-manage-file-access-events.html[Monitor and manage file access events].
+* The option to activate audit log collection has been disabled. 
 * During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. Refer to link:task-investigate-data.html#filter-data-by-sensitivity-and-content[Investigate the data stored in your organization].
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled. Refer to link:task-org-private-data.html[Organize your private data].
 
@@ -183,7 +183,7 @@ These versions are not supported with new deployments because Red Hat no longer 
 
 === BlueXP classification can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
 
-You can enable file access audit logs to be collected on your BlueXP classification system for file access events detected on volumes in your working environments. BlueXP classification can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/bluexp-classification/task-manage-file-access-events.html[See how to monitor and manage file access events].
+You can enable file access audit logs to be collected on your BlueXP classification system for file access events detected on volumes in your working environments. BlueXP classification can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. 
 
 === Data Sense BYOL licenses are now supported in dark sites
 

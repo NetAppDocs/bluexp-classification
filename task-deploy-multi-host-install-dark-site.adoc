@@ -25,11 +25,11 @@ Follow these steps when installing BlueXP classification software on multiple on
 
 .What you'll need
 
-* Verify that all your Linux systems for the Manager and Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
+* Verify that all your Linux systems for the Manager and Scanner nodes meet the host requirements.
 * Verify that you have installed the two prerequisite software packages (Docker Engine or Podman, and Python 3).
 //add 'or Podman' in 2nd bullet
 * Make sure you have root privileges on the Linux systems.
-* Verify that your offline environment meets the required <<Verify BlueXP and BlueXP classification prerequisites,permissions and connectivity>>.
+* Verify that your offline environment meets the required permissions and connectivity.
 * You must have the IP addresses of the scanner node hosts that you plan to use.
 * The following ports and protocols must be enabled on all hosts:
 +
@@ -75,4 +75,4 @@ The BlueXP classification installer finishes installing packages, and registers 
 .What's Next
 From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and local link:task-scanning-databases.html[databases] that you want to scan.
 
-You can also link:task-licensing-datasense.html#use-a-bluexp-classification-byol-license[set up BYOL licensing for BlueXP classification] from the BlueXP digital wallet page at this time. You will not be charged even after your 30-day free trial ends.
+You can also link:task-licensing-datasense.html[set up BYOL licensing for BlueXP classification] from the BlueXP digital wallet page at this time. You will not be charged even after your 30-day free trial ends.

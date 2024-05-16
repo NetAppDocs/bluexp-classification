@@ -58,7 +58,7 @@ BlueXP classification can be link:task-deploy-cloud-compliance.html[deployed in 
 
 Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
-//BlueXP classification can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local OneDrive files. link:task-deploy-compliance-dark-site.html#sharepoint-and-onedrive-special-requirements[See the list of required endpoints here].
+//BlueXP classification can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local OneDrive files. 
 
 == Adding the OneDrive account
 
@@ -125,4 +125,4 @@ If users leave the company or if their email address changes, you can remove ind
 
 image:screenshot_compliance_onedrive_remove_user.png[A screenshot showing how to remove a single user from having their files scanned.]
 
-Note that you can link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification[delete the entire OneDrive account from BlueXP classification] if you no longer want to scan any user data from the OneDrive account.
+//Note that you can delete the entire OneDrive account from BlueXP classification if you no longer want to scan any user data from the OneDrive account.

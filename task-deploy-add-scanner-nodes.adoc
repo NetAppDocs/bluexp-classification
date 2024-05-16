@@ -54,11 +54,11 @@ You'll follow these steps to install additional BlueXP classification scanner no
 
 .What you'll need
 
-* Verify that all your Linux systems for Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
+* Verify that all your Linux systems for Scanner nodes meet the host requirements.
 * Verify that the systems have the two prerequisite software packages installed (Docker Engine or Podman, and Python 3).
 // or Podman
 * Make sure you have root privileges on the Linux systems.
-* Verify that your environment meets the required <<Enable outbound internet access from BlueXP classification,permissions and connectivity>>.
+* Verify that your environment meets the required permissions and connectivity.
 * You must have the IP addresses of the Scanner node hosts that you are adding.
 * You must have the IP address of the BlueXP classification Manager node host system
 * You must have the IP address or host name of the Connector system, your NetApp Account ID, Connector Client ID, and user access token. If you're planning to use scanner groups, you'll need to know the Working Environment ID for each data source in your account. See *_Prerequisite steps_* below to get this information.
