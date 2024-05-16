@@ -45,7 +45,7 @@ Using qualified user credentials, log into the SharePoint account that you want 
 [role="quick-margin-para"]
 Add the list of SharePoint site URLs that you want to scan in the SharePoint account, and select the type of scanning. You can add up to 100 URLs at time - and up to 1,000 sites total for each account.
 
-== Reviewing SharePoint requirements
+== Review SharePoint requirements
 
 Review the following prerequisites to make sure you are ready to activate BlueXP classification on a SharePoint account.
 
@@ -54,7 +54,7 @@ Review the following prerequisites to make sure you are ready to activate BlueXP
 * For SharePoint On-Premise, you'll also need the URL of the SharePoint Server.
 * You will need a line-separated list of the SharePoint site URLs for all the data you want to scan.
 
-== Deploying the BlueXP classification instance
+== Deploy the BlueXP classification instance
 
 Deploy BlueXP classification if there isn't already an instance deployed.
 
@@ -65,7 +65,7 @@ When BlueXP classification is installed in a site without internet access, the B
 
 Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
-== Adding a SharePoint Online account
+== Add a SharePoint Online account
 
 Add the SharePoint Online account where the user files reside.
 
@@ -81,7 +81,7 @@ image:screenshot_compliance_add_sharepoint_button.png[A screenshot of the Config
 
 The SharePoint Online account is added to the list of working environments.
 
-== Adding a SharePoint On-premise account
+== Add a SharePoint On-premise account
 
 Add the SharePoint On-premise account where the user files reside.
 
@@ -101,7 +101,7 @@ image:screenshot_compliance_sharepoint_onprem.png[A screenshot showing the login
 
 The SharePoint On-premise account is added to the list of working environments.
 
-== Adding SharePoint sites to compliance scans
+== Add SharePoint sites to compliance scans
 
 You can add individual SharePoint sites, or up to 1,000 SharePoint sites in the account, so that the associated files will be scanned by BlueXP classification. The steps are the same whether you are adding SharePoint Online or SharePoint On-premise sites.
 
@@ -146,10 +146,10 @@ If the dialog lists any sites that could not be added, capture this information 
 
 BlueXP classification starts scanning the files in the SharePoint sites you added, and the results are displayed in the Dashboard and in other locations.
 
-== Removing a SharePoint site from compliance scans
+== Remove a SharePoint site from compliance scans
 
 If you remove a SharePoint site in the future, or decide not to scan files in a SharePoint site, you can remove individual SharePoint sites from having their files scanned at any time. Just click *Remove SharePoint Site* from the Configuration page.
 
 image:screenshot_compliance_sharepoint_remove_site.png[A screenshot showing how to remove a single SharePoint site from having their files scanned.]
 
-Note that you can link:task-managing-compliance.html#removing-a-onedrive-sharepoint-or-google-drive-account-from-bluexp-classification[delete the entire SharePoint account from BlueXP classification] if you no longer want to scan any user data from the SharePoint account.
+Note that you can link:task-managing-compliance.html[delete the entire SharePoint account from BlueXP classification] if you no longer want to scan any user data from the SharePoint account.
