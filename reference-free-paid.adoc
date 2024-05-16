@@ -27,7 +27,7 @@ There are some features and functionality that are deprecated in the BlueXP core
 
 | Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP) | Yes | Yes
 | On-premises ONTAP clusters | Yes | Yes
-| StorageGRID | Yes | Yes
+| StorageGRID | Yes | No
 | Azure NetApp Files | Yes | Yes
 | Amazon FSx for ONTAP | Yes | Yes
 | Google Cloud NetApp Volumes * | Yes | Yes
@@ -43,15 +43,15 @@ There are some features and functionality that are deprecated in the BlueXP core
 |===
 
 * Supported by integrating file shares into BlueXP classification.
-** For versions 1.31 and later, databases must reside on NetApp storage.
+
 
 == Compliance features
 
 [cols="60,20,20",width=100%,options="header"]
 |===
 | Feature
-| Versions 1.30 and earlier
-| Versions 1.31 and later
+| Legacy versions 1.30 and earlier
+| BlueXP core versions 1.31 and later
 
 | Identify Personal Identifiable Information (PII) | Yes | Yes
 | Identify sensitive personal information | Yes | Yes
@@ -67,8 +67,8 @@ There are some features and functionality that are deprecated in the BlueXP core
 [cols="60,20,20",width=100%,options="header"]
 |===
 | Feature
-| Versions 1.30 and earlier
-| Versions 1.31 and later
+| Legacy versions 1.30 and earlier
+| BlueXP core versions 1.31 and later
 
 | Move, copy, and delete source files   | Yes | No
 | Categorize data using Status tags | Yes | No
