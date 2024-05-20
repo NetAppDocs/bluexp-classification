@@ -47,7 +47,7 @@ Use the following filters to view how much sensitive information is contained in
 | Sensitivity Level | Select the sensitivity level: Personal, Sensitive personal, or Non sensitive.
 | Number of identifiers | Select the range of detected sensitive identifiers per file. Includes personal data and sensitive personal data. When filtering in Directories, BlueXP classification totals the matches from all files in each folder (and sub-folders).
 
-NOTE: The December 2023 (version 1.26.6) release temporarily removed the option to calculate the number of personal identifiable information  (PII) data by Directories. 
+NOTE: The December 2023 (version 1.26.6) release removed the option to calculate the number of personal identifiable information  (PII) data by Directories. 
 
 | Personal Data | Select the link:reference-private-data-categories.html#types-of-personal-data[types of personal data^].
 | Sensitive Personal Data | Select the link:reference-private-data-categories.html#types-of-sensitive-personal-data[types of sensitive personal data^].
@@ -125,9 +125,10 @@ Use the following filters to view data by storage type.
 
 |===
 
-=== Filter data by tags, labels, assigned users, and policies
+=== Filter data by policies
 
-Use the following filters to view data by AIP labels or tags.
+Use the following filter to view data by policies.
+
 
 [cols=2*,options="header",cols="30,60"]
 |===
@@ -136,9 +137,9 @@ Use the following filters to view data by AIP labels or tags.
 | Details
 
 | Policies | Select a policy or policies. Go link:task-using-policies.html[here^] to view the list of existing policies and to create your own custom policies.
-| Label | Select link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP labels] that are assigned to your files.
-| Tags | Select link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files[the tag or tags] that are assigned to your files.
-| Assigned To | Select the name of the person to which the file is assigned.
+//| Label | Select link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP labels] that are assigned to your files.
+//| Tags | Select link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files[the tag or tags] that are assigned to your files.
+//| Assigned To | Select the name of the person to which the file is assigned.
 
 |===
 
@@ -179,25 +180,25 @@ In the Data Investigation results pane you can click image:button_down_caret.png
 
 image:screenshot_compliance_file_details.png[A screenshot showing the metadata details for a file in the Data Investigation page.]
 
-In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, whether there are duplicates of this file, and assigned AIP label (if you have link:task-org-private-data.html#categorize-your-data-using-aip-labels[integrated AIP in BlueXP classification^]). This information is useful if you're planning to link:task-using-policies.html#create-custom-policies[create Policies] because you can see all the information that you can use to filter your data.
+In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html#create-custom-policies[create Policies] because you can see all the information that you can use to filter your data.
 
-Note that not all information is available for all data sources - just what is appropriate for that data source. For example, volume name, permissions, and AIP labels are not relevant for database files.
+Note that not all information is available for all data sources - just what is appropriate for that data source. For example, volume name and permissions are not relevant for database files.
 
-When viewing the details for a single file there are a few actions you can take on the file:
+//When viewing the details for a single file there are a few actions you can take on the file:
 
-* You can move or copy the file to any NFS share. See link:task-managing-highlights.html#move-source-files-to-an-nfs-share[Moving source files to an NFS share] and link:task-managing-highlights.html#copy-source-files[Copying source files to an NFS share] for details.
+//* You can move or copy the file to any NFS share. See link:task-managing-highlights.html#move-source-files-to-an-nfs-share[Moving source files to an NFS share] and link:task-managing-highlights.html#copy-source-files[Copying source files to an NFS share] for details.
 
-* You can delete the file. See link:task-managing-highlights.html#delete-source-files[Deleting source files] for details.
+//* You can delete the file. See link:task-managing-highlights.html#delete-source-files[Deleting source files] for details.
 
-* You can assign a certain Status to the file. See link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files[Applying tags] for details.
+//* You can assign a certain Status to the file. See link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files[Applying tags] for details.
 
-* You can assign the file to a BlueXP user to be responsible for any follow-up actions that need to be done on the file. See link:task-org-private-data.html#assign-users-to-manage-certain-files[Assigning users to a file] for details.
+//* You can assign the file to a BlueXP user to be responsible for any follow-up actions that need to be done on the file. See link:task-org-private-data.html#assign-users-to-manage-certain-files[Assigning users to a file] for details.
 
-* If you have integrated AIP labels with BlueXP classification, you can assign a label to this file, or change to a different label if one already exists. See link:task-org-private-data.html#assign-aip-labels-manually[Assigning AIP labels manually] for details.
+//* If you have integrated AIP labels with BlueXP classification, you can assign a label to this file, or change to a different label if one already exists. See link:task-org-private-data.html#assign-aip-labels-manually[Assigning AIP labels manually] for details.
 
 == View permissions for files and directories
 
-To view a list of all users or groups who have access to a file or to a directory, and the types of permissions they have, click *View all Permissions*. This button is available only for data in CIFS shares, SharePoint Online, SharePoint On-Premise, and OneDrive.
+To view a list of all users or groups who have access to a file or to a directory, and the types of permissions they have, click *View all Permissions*. This button is available only for data in CIFS shares.
 
 Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into BlueXP classification. link:task-add-active-directory-datasense.html[See how to do this].
 
@@ -238,16 +239,14 @@ TIP: You can use the "file hash" value provided in this page and enter it direct
 
 The Data Investigation Report is a download of the filtered contents of the Data Investigation page. 
 
-The report is available in two different formats:
+The report is available as a .CSV file that you can save to the local machine. 
 
-* As a .CSV file that you can save to the local machine. 
-+
-This report can include a maximum of 10,000 rows of data.
-* As a .JSON file that you export to an NFS Share. 
-+
-If there are more than 250,000 rows of data, additional .JSON files are created. 
-+
-When exporting to a file share, make sure BlueXP classification has the correct permissions for export access.
+//This report can include a maximum of 10,000 rows of data.
+//* As a .JSON file that you export to an NFS Share. 
+//+
+//If there are more than 250,000 rows of data, additional .JSON files are created. 
+//+
+//When exporting to a file share, make sure BlueXP classification has the correct permissions for export access.
 
 There can be up to three report files downloaded if BlueXP classification is scanning files (unstructured data), directories (folders and file shares), and databases (structured data).
 
@@ -257,9 +256,9 @@ There can be up to three report files downloaded if BlueXP classification is sca
 
 . From the Data Investigation page, click the image:button_download.png[download button] button on the top, right of the page.
 
-. Select whether you want to download a .CSV report or .JSON report of the data, and click *Download Report*.
-+
-When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
+. Select to download a .CSV report of the data, and click *Download Report*.
+//+
+//When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
 +
 image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
 
@@ -267,9 +266,9 @@ image:screenshot_compliance_investigation_report.png[A screenshot of the Downloa
 
 A dialog displays a message that the reports are being downloaded.
 
-You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
+//You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
 
-=== What's included in each Data Investigation Report
+=== What's included in the Data Investigation Report
 
 The *Unstructured Files Data Report* includes the following information about your files:
 

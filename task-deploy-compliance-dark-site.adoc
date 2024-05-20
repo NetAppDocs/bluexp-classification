@@ -21,30 +21,32 @@ Note that you can also link:task-deploy-compliance-onprem.html[deploy BlueXP cla
 
 The BlueXP classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the BlueXP classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install BlueXP classification].
 
+NOTE: For legacy versions 1.30 and earlier, if you need to install BlueXP classification on multiple hosts, refer to link:task-deploy-multi-host-install-dark-site.html[Install BlueXP classification on multiple hosts with no internet access].
+
 == Supported data sources
 
 When installed private mode (sometimes called an "offline" or "dark" site), BlueXP classification can only scan data from data sources that are also local to the on-premises site. At this time, BlueXP classification can scan the following *local* data sources:
 
 * On-premises ONTAP systems
 * Database schemas
-* SharePoint On-Premises accounts (SharePoint Server)
+//* SharePoint On-Premises accounts (SharePoint Server)
 * Non-NetApp NFS or CIFS file shares
-* Object Storage that uses the Simple Storage Service (S3) protocol
+//* Object Storage that uses the Simple Storage Service (S3) protocol
 
-There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, AWS S3, or Google Drive, OneDrive, or SharePoint Online accounts when BlueXP classification is deployed in private mode.
+There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, or FSx for ONTAP accounts when BlueXP classification is deployed in private mode.
 
 == Limitations
 
 Most BlueXP classification features work when it is deployed in a site with no internet access. However, certain features that require internet access are not supported, for example:
 
-* Managing Microsoft Azure Information Protection (AIP) labels
-* Sending email alerts to BlueXP users when certain critical Policies return results
+//* Managing Microsoft Azure Information Protection (AIP) labels
+//* Sending email alerts to BlueXP users when certain critical Policies return results
 * Setting BlueXP roles for different users (for example, Account Admin or Compliance Viewer)
 * Copying and synchronizing source files using BlueXP copy and sync
-* Receiving user feedback
+//* Receiving user feedback
 * Automated software upgrades from BlueXP
 +
-Both the BlueXP Connector and BlueXP classification will require periodic manual upgrades to enable new features. You can see the BlueXP classification version at the bottom of the BlueXP classification UI pages. Check the link:whats-new.html[BlueXP classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode[upgrade the BlueXP Connector^] and <<Upgrade BlueXP classification software,upgrade your BlueXP classification software>>.
+Both the BlueXP Connector and BlueXP classification will require periodic manual upgrades to enable new features. You can see the BlueXP classification version at the bottom of the BlueXP classification UI pages. Check the link:whats-new.html[BlueXP classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html[upgrade the BlueXP Connector^] and <<Upgrade BlueXP classification software,upgrade your BlueXP classification software>>.
 
 == Quick start
 
@@ -68,7 +70,7 @@ Download the BlueXP classification software from the NetApp Support Site and cop
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the BlueXP classification service
 
 [role="quick-margin-para"]
-The first 1 TB of data that BlueXP classification scans in BlueXP is free for 30 days. A BYOL license from NetApp is required to continue scanning data after that point.
+The first 500 TB of data that BlueXP classification scans in BlueXP is free for 30 days. A BYOL license from NetApp is required to continue scanning data after that point. There is no charge for the BlueXP core version 1.31. 
 
 == Install the BlueXP Connector
 
@@ -143,15 +145,15 @@ You must have the information for the Active Directory:
 
 |===
 
-If you are using multiple BlueXP classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-dark-site.html#multi-host-installation-for-large-configurations[See the additional port requirements].
+If you are using multiple BlueXP classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-dark-site.html[See the additional port requirements].
 
 == Install BlueXP classification on the on-premises Linux host
 
-For typical configurations you'll install the software on a single host system. link:task-deploy-compliance-dark-site.html#single-host-installation-for-typical-configurations[See those steps here].
+For typical configurations you'll install the software on a single host system. 
 
 image:diagram_deploy_onprem_single_host_no_internet.png[A diagram showing the location of the data sources you can scan when using a single BlueXP classification instance deployed on-prem without internet access.]
 
-For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. link:task-deploy-compliance-dark-site.html#multi-host-installation-for-large-configurations[See those steps here].
+//For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. 
 
 image:diagram_deploy_onprem_multi_host_no_internet.png[A diagram showing the location of the data sources you can scan when using multiple BlueXP classification instances deployed on-prem without internet access.]
 
@@ -159,7 +161,7 @@ image:diagram_deploy_onprem_multi_host_no_internet.png[A diagram showing the loc
 
 Follow these steps when installing BlueXP classification software on a single on-premises host in an offline environment.
 
-Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html#access-the-log-files[See more details here].
+Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html[See more details here].
 
 .What you'll need
 
@@ -237,67 +239,8 @@ If there is connectivity over port 8080 between the host machine and the Connect
 .What's Next
 From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and link:task-scanning-databases.html[databases] that you want to scan.
 
-You can also link:task-licensing-datasense.html#use-a-bluexp-classification-byol-license[set up BYOL licensing for BlueXP classification] from the BlueXP digital wallet page at this time. You will not be charged until your 30-day free trial ends.
+You can also link:task-licensing-datasense.html[set up BYOL licensing for BlueXP classification] from the BlueXP digital wallet page at this time. You will not be charged until your 30-day free trial ends.
 
-=== Multi-host installation for large configurations
-
-For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the _Manager node_ and the additional systems that provide extra processing power are called _Scanner nodes_.
-
-Follow these steps when installing BlueXP classification software on multiple on-premises hosts in an offline environment.
-
-.What you'll need
-
-* Verify that all your Linux systems for the Manager and Scanner nodes meet the <<Prepare the Linux host system,host requirements>>.
-* Verify that you have installed the two prerequisite software packages (Docker Engine or Podman, and Python 3).
-//add 'or Podman' in 2nd bullet
-* Make sure you have root privileges on the Linux systems.
-* Verify that your offline environment meets the required <<Verify BlueXP and BlueXP classification prerequisites,permissions and connectivity>>.
-* You must have the IP addresses of the scanner node hosts that you plan to use.
-* The following ports and protocols must be enabled on all hosts:
-+
-[cols="15,20,55",options="header"]
-|===
-| Port
-| Protocols
-| Description
-
-|2377 | TCP | Cluster management communications
-|7946 | TCP, UDP | Inter-node communication
-|4789 | UDP | Overlay network traffic
-|50 | ESP | Encrypted IPsec overlay network (ESP) traffic
-|111 | TCP, UDP | NFS Server for sharing files between the hosts (needed from each scanner node to manager node)
-|2049 | TCP, UDP | NFS Server for sharing files between the hosts (needed from each scanner node to manager node)
-
-|===
-
-.Steps
-
-. Follow steps 1 through 8 from the link:task-deploy-compliance-dark-site.html#single-host-installation-for-typical-configurations[Single-host installation] on the manager node.
-
-. As shown in step 9, when prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer.
-+
-In addition to the variables available for a single-host installation, a new option *-n <node_ip>* is used to specify the IP addresses of the scanner nodes. Multiple node IPs are separated by a comma.
-+
-For example, this command adds 3 scanner nodes:
-`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --no-proxy --darksite`
-
-. Before the manager node installation completes, a dialog displays the installation command needed for the scanner nodes. Copy the command (for example: `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212`) and save it in a text file. 
-
-. On *each* scanner node host:
-.. Copy the Data Sense installer file (*cc_onprem_installer.tar.gz*) to the host machine.
-.. Unzip the installer file.
-.. Paste and run the command that you copied in step 3.
-+
-When the installation finishes on all scanner nodes and they have been joined to the manager node, the manager node installation finishes as well.
-
-.Result
-
-The BlueXP classification installer finishes installing packages, and registers the installation. Installation can take 15 to 25 minutes.
-
-.What's Next
-From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and local link:task-scanning-databases.html[databases] that you want to scan.
-
-You can also link:task-licensing-datasense.html#use-a-bluexp-classification-byol-license[set up BYOL licensing for BlueXP classification] from the BlueXP digital wallet page at this time. You will not be charged until your 30-day free trial ends.
 
 == Upgrade BlueXP classification software
 
@@ -305,7 +248,7 @@ Since BlueXP classification software is updated with new features on a regular b
 
 .Before you begin
 
-* We recommend that your BlueXP Connector software is upgraded to the newest available version. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#upgrade-the-connector-when-using-private-mode[See the Connector upgrade steps^].
+* We recommend that your BlueXP Connector software is upgraded to the newest available version. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html[See the Connector upgrade steps^].
 * Starting with BlueXP classification version 1.24 you can perform upgrades to any future version of software.
 +
 If your BlueXP classification software is running a version prior to 1.24, you can upgrade only one major version at a time. For example, if you have version 1.21.x installed, you can upgrade only to 1.22.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.

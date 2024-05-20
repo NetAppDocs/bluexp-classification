@@ -16,9 +16,9 @@ summary: Known limitations identify functions that are not supported by this rel
 Known limitations identify functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
 
-== BlueXP classification release temporarily removed options
+== BlueXP classification release removed options
 
-The December 2023 (version 1.26.6) release temporarily removed the following options: 
+The December 2023 (version 1.26.6) release removed the following options: 
 
 * The option to activate audit log collection has been disabled. 
 * During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. 

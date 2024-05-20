@@ -40,7 +40,7 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 
 * *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#view-all-duplicated-files[See what types of duplicate files are displayed].
 
-NOTE:: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Stale Data_ category.
+NOTE: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Stale Data_ category.
 
 === Policies with the largest number of results
 
@@ -64,19 +64,7 @@ You can hover over each section to see the total number of items in each categor
 
 Click each area to view the filtered results in the Investigation page so that you can investigate further.
 
-=== Data listed by sensitivity and wide permissions
 
-The _Sensitive Data and Wide Permissions_ area provides a heatmap of files that contain sensitive data (including both sensitive and sensitive personal data) and that are overly permissive. This can help you to see where you may have some risks with sensitive data. 
-
-Files are rated based on the number of users with permission to access the files on the X axis (lowest to highest), and the number of sensitive identifiers within the files on the Y axis (lowest to highest). The blocks represent the number of files that match the items from the X and Y axes. The lighter colored block are good; with fewer users able to access the files, and with fewer sensitive identifiers per file. The darker blocks are the items you may want to investigate. For example, the screen below shows the hover text for the dark blue block. It shows that you have 1,500 files where 751-100 users have access, and where there are 501-100 sensitive identifiers per file.
-
-image:screenshot_compliance_sensitive_data.png[A screenshot showing the data displayed when you place your cursor over an element in this panel.]
-
-You can click the block you are interested in to view the filtered results of the affected files in the Investigation page so that you can investigate further.
-
-No data is displayed in this panel if you haven't integrated an identity service with BlueXP classification. link:task-add-active-directory-datasense.html[See how to integrate your Active Directory service with BlueXP classification^].
-
-TIP: This panel supports files in CIFS shares, OneDrive, and SharePoint data sources. There is currently no support for databases, Google Drive, Amazon S3, and generic object storage.
 
 === Data listed by types of Open Permissions
 
@@ -98,11 +86,11 @@ You can hover over a point in the charts to see details about the age or size of
 * *Age of Data graph* - Categorizes data based on the time it was created, the last time it was accessed, or the last time it was modified.
 * *Size of Data graph* - Categorizes data based on size.
 
-NOTE:: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Age of Data_ graph.
+NOTE: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Age of Data_ graph.
 
 === Most identified data Classifications
 
-The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#view-files-by-categories[Categories^], link:task-controlling-private-data.html#view-files-by-file-types[File types^], and link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP Labels^] in your scanned data.
+The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#view-files-by-categories[Categories^] and link:task-controlling-private-data.html#view-files-by-file-types[File types^] in your scanned data.
 
 ==== Categories
 
@@ -116,11 +104,7 @@ Reviewing your file types can help you control your sensitive data because you m
 
 See link:task-controlling-private-data.html#view-files-by-file-types[Viewing file types^] for more information.
 
-==== AIP labels
 
-If you have subscribed to Azure Information Protection (AIP), you can classify and protect documents and files by applying labels to content. Reviewing the most used AIP labels that are assigned to files enables you to see which labels are most used in your files.
-
-See link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP Labels^] for more information.
 
 == Data Mapping Report
 
@@ -194,4 +178,4 @@ image:screenshot_compliance_data_discovery_report_button.png[A screenshot of the
 
 BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
-Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
+//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
