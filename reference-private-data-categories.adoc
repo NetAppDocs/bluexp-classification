@@ -13,7 +13,7 @@ summary: There are many types of private data that BlueXP classification can ide
 :imagesdir: ./media/
 
 [.lead]
-There are many types of private data that BlueXP classification can identify in your volumes, Amazon S3 buckets, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts. See the categories below.
+There are many types of private data that BlueXP classification can identify in your volumes and databases. See the categories below.
 
 TIP: If you need BlueXP classification to identify other private data types, such as additional national ID numbers or healthcare identifiers, email ng-contact-data-sense@netapp.com with your request.
 
@@ -23,7 +23,7 @@ The personal data found in files can be general personal data or national identi
 
 The languages in which these items can be recognized are identified in the table.
 
-Note that you can add to the list of personal data that is found in your files. If you are scanning a database server, the _Data Fusion_ feature enables you to choose additional identifiers that BlueXP classification will look for in its' scans by selecting columns in a database table. You can also add custom keywords from a text file, or custom patterns using a regular expression. See link:task-managing-data-fusion.html[Adding personal data identifiers to your BlueXP classification scans^] for details.
+//Note that you can add to the list of personal data that is found in your files. If you are scanning a database server, the _Data Fusion_ feature enables you to choose additional identifiers that BlueXP classification will look for in its' scans by selecting columns in a database table. You can also add custom keywords from a text file, or custom patterns using a regular expression. See link:task-managing-data-fusion.html[Adding personal data identifiers to your BlueXP classification scans^] for details.
 
 [cols="13,37,10,8,8,8,8,8",width=90%,options="header"]
 |===

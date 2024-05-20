@@ -12,17 +12,13 @@ indexpage:
           url: concept-cloud-compliance.html
         - title: What's New
           url: whats-new.html
+        - title: Features available in free and paid versions
+          url: reference-free-paid.html 
         - title: Deploy BlueXP classification in the cloud using BlueXP
           url: task-deploy-cloud-compliance.html
         - title: Install BlueXP classification on a Linux host with internet
           url: task-deploy-compliance-onprem.html
-        - title: Install BlueXP classification on-premises without internet
-          url: task-deploy-compliance-dark-site.html
-        - title: Integrate Active Directory
-          url: task-add-active-directory-datasense.html
-        - title: Set up licensing
-          url: task-licensing-datasense.html
-    - title: Scan your working environments
+    - title: Scan your data sources 
       links:
         - title: Cloud Volumes ONTAP volumes
           url: task-getting-started-compliance.html
@@ -32,22 +28,10 @@ indexpage:
           url: task-scanning-anf.html
         - title: Amazon FSx for ONTAP volumes
           url: task-scanning-fsx.html
-        - title: Amazon S3 buckets
-          url: task-scanning-s3.html
-    - title: Scan other data sources
-      links:
-        - title: Generic S3 buckets
-          url: task-scanning-object-storage.html
         - title: Non-NetApp file shares
           url: task-scanning-file-shares.html
         - title: Database schemas
           url: task-scanning-databases.html
-        - title: OneDrive accounts
-          url: task-scanning-onedrive.html
-        - title: SharePoint accounts
-          url: task-scanning-sharepoint.html
-        - title: Google Drive accounts
-          url: task-scanning-google-drive.html
     - title: View details about your data
       links:
         - title: View files that contain private information
@@ -60,28 +44,14 @@ indexpage:
           url: task-using-policies.html
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
-    - title: Organize your private data
-      links:
-        - title: Apply tags and owners to files that need attention
-          url: task-org-private-data.html#apply-tags-to-manage-your-scanned-files
-        - title: Categorize your data using AIP labels
-          url: task-org-private-data.html#categorize-your-data-using-aip-labels
-        - title: Add your own custom personal data identifiers
-          url: task-managing-data-fusion.html
-        - title: Exclude certain directories from scanning
-          url: task-exclude-scan-paths.html
-    - title: Manage your private data
-      links:
-        - title: Copy source files
-          url: task-managing-highlights.html#copy-source-files
-        - title: Move source files
-          url: task-managing-highlights.html#move-source-files-to-an-nfs-share
-        - title: Delete source files
-          url: task-managing-highlights.html#delete-source-files
         - title: Create email alerts when non-compliant data is found
-          url: task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found
+          url: task-using-policies.html
         - title: Respond to a Data Subject Access Request
-          url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports
+          url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports    
+    - title: Deprecated features 
+      links:
+        - title: Deprecated features list
+          url: reference-free-paid.html
     - title: Blogs & community
       links:
         - title: NetApp Community

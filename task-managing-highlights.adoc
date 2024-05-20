@@ -15,6 +15,10 @@ summary: BlueXP classification provides many ways for you to manage your private
 [.lead]
 BlueXP classification provides many ways for you to manage your private data. Some functionality makes it easier to prepare for migrating your data, while other functionality allows you to make changes to the data.
 
+====
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
+====
+
 * You can copy files to a destination NFS share if you want to make a copy of certain data and move it to a different NFS location.
 * You can clone an ONTAP volume to a new volume, while including only selected files from the source volume in the new cloned volume. This is useful for situations where you're migrating data and you want to exclude certain files from the original volume.
 * You can copy and synchronize files from a source repository to a directory in a specific destination location. This is useful for situations where you're migrating data from one source system to another while there is still some final activity on the source files.
@@ -125,7 +129,7 @@ The new, cloned volume is created in the same aggregate as the source volume.
 
 You can view the progress of the clone operation in the link:task-view-compliance-actions.html[Actions Status pane].
 
-If you initially selected *Map all volumes* or *Map & Classify all volumes* when you enabled BlueXP classification for the working environment where the source volume resides, then BlueXP classification will scan the new cloned volume automatically. If you didn't use either of these selections initially, then if you want to scan this new volume, you'll need to link:task-getting-started-compliance.html#enabling-and-disabling-compliance-scans-on-volumes[enable scanning on the volume manually].
+If you initially selected *Map all volumes* or *Map & Classify all volumes* when you enabled BlueXP classification for the working environment where the source volume resides, then BlueXP classification will scan the new cloned volume automatically. If you didn't use either of these selections initially, then if you want to scan this new volume, you'll need to link:task-getting-started-compliance.html[enable scanning on the volume manually].
 
 === Copy and synchronize source files to a target system
 
@@ -224,7 +228,7 @@ image:screenshot_compliance_move_file.png[A screenshot showing selection of the 
 
 You can permanently remove source files that seem insecure or too risky to leave in your storage system, or that you've identified as a duplicate. This action is permanent and there is no undo or restore.
 
-You can delete files manually from the Investigation pane, or link:task-using-policies.html#delete-source-files-automatically-using-policies[automatically using Policies^].
+You can delete files manually from the Investigation pane, or link:task-using-policies.html[automatically using Policies^].
 
 TIP: You can't delete files that reside in databases. All other data sources are supported.
 

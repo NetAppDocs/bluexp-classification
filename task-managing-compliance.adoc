@@ -5,7 +5,7 @@ keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud 
 summary: If you need to, you can stop BlueXP classification from scanning one or more working environments, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts.
 ---
 
-= Removing data sources from BlueXP classification
+= Remove data sources from BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,13 @@ summary: If you need to, you can stop BlueXP classification from scanning one or
 :imagesdir: ./media/
 
 [.lead]
-If you need to, you can stop BlueXP classification from scanning one or more working environments, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts.
+If you need to, you can stop BlueXP classification from scanning one or more working environments, databases, or file share groups.
 
-Charging for scanning the data is stopped when the data source is removed.
+//If you need to, you can stop BlueXP classification from scanning one or more working environments, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts.
 
-== Deactivating compliance scans for a working environment
+
+
+== Deactivate compliance scans for a working environment
 
 When you deactivate scans, BlueXP classification no longer scans the data on the working environment and it removes the indexed compliance insights from the BlueXP classification instance (the data from the working environment itself isn't deleted).
 
@@ -27,7 +29,7 @@ image:screenshot_deactivate_compliance_scan.png[A screenshot of the action icon 
 
 TIP: You can also disable compliance scans for a working environment from the Services panel when you select the working environment.
 
-== Removing a database from BlueXP classification
+== Remove a database from BlueXP classification
 
 If you no longer want to scan a certain database, you can delete it from the BlueXP classification interface and stop all scans.
 
@@ -35,19 +37,9 @@ If you no longer want to scan a certain database, you can delete it from the Blu
 
 image:screenshot_compliance_remove_db.png[A screenshot of the Remove DB Server button from the Scan Configuration page.]
 
-== Removing a OneDrive, SharePoint, or Google Drive account from BlueXP classification
 
-If you no longer want to scan user files from a certain OneDrive account, from a specific SharePoint account, or from a Google Drive account, you can delete the account from the BlueXP classification interface and stop all scans.
 
-.Steps
-
-. From the _Configuration_ page, click the image:screenshot_gallery_options.gif[More button] button in the row for the OneDrive, SharePoint, or Google Drive account, and then click *Remove OneDrive Account*, *Remove SharePoint Account*, or *Remove Google Drive account*.
-+
-image:screenshot_compliance_remove_onedrive.png[A screenshot of the Remove OneDrive button from the Scan Configuration page.]
-
-. Click *Delete Account* from the confirmation dialog.
-
-== Removing a group of file shares from BlueXP classification
+== Remove a group of file shares from BlueXP classification
 
 If you no longer want to scan user files from a file shares group, you can delete the File Shares Group from the BlueXP classification interface and stop all scans.
 

@@ -15,6 +15,10 @@ summary: BlueXP classification provides many ways for you to add a custom list o
 [.lead]
 BlueXP classification provides many ways for you to add a custom list of "personal data" that BlueXP classification will identify in future scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
 
+====
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
+====
+
 * You can add unique identifiers based on specific columns in databases you are scanning.
 * You can add custom keywords from a text file -- these words are identified within your data.
 * You can add a personal pattern using a regular expression (regex) -- the regex is added to the existing predefined patterns.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: whats-new.html
-keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, data sense, bluexp, bluexp classification
+keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, data sense, cloud data sense, bluexp, bluexp classification
 summary: Learn what's new in BlueXP classification.
 ---
 
@@ -15,7 +15,16 @@ summary: Learn what's new in BlueXP classification.
 [.lead]
 Learn what's new in BlueXP classification (Cloud Data Sense).
 
-// tag::whats-new[]
+//tag::whats-new[]
+== 15 May 2024 (Version 1.31)
+
+=== Classification is available as a free service within BlueXP
+
+BlueXP classification is now available as a core capability within BlueXP at no additional charge for up to 500 TiB of scanned data. No Classification license or paid subscription is required. As we focus BlueXP classification functionality on scanning NetApp storage systems with this new version, some legacy functionality will only be available to customers who had previously paid for a license. The use of those legacy features will expire when the paid contract reaches its end date.
+
+link:reference-free-paid.html[Learn more about the deprecated features].
+//Learn more about https://docs.netapp.com/us-en/bluexp-classification/reference-free-paid.html[A list of deprecated features].
+
 
 == 1 April 2024 (Version 1.30)
 
@@ -36,7 +45,7 @@ The option to activate audit log collection has been disabled.
 
 //This applies to on-premises, AWS, and Azure deployments and the following work environments: Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, file shares, Amazon S3, generic object storage, databases, and Amazon FSx for NetApp ONTAP. 
 
-//Does't apply to GCP deployments. 
+//Doesn't apply to GCP deployments. 
 
 //Learn more about how to link:task-managing-repo-scanning.html[Manage scan settings].
 
@@ -66,6 +75,8 @@ If you need BlueXP classification to scan more than 250 million files, you can u
 
 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#using-a-smaller-instance-type[Learn more].
 
+//end::whats-new[]
+
 == 10 January 2024 (version 1.27)
 
 === Investigation page results now display the total size in addition to total number of items
@@ -80,18 +91,15 @@ Now you can configure Group IDs in NFS to be considered as "Open to Organization
 //  
 //In the past when reports had over 10,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
 
-// end::whats-new[]
-
 == 14 December 2023 (version 1.26.6) 
 
 This release included some minor enhancements.
 
-The release also temporarily removed the following options: 
+The release also removed the following options: 
 
-* The option to activate audit log collection has been disabled. Refer to link:task-manage-file-access-events.html[Monitor and manage file access events].
+* The option to activate audit log collection has been disabled. 
 * During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. Refer to link:task-investigate-data.html#filter-data-by-sensitivity-and-content[Investigate the data stored in your organization].
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled. Refer to link:task-org-private-data.html[Organize your private data].
-
 
 == 6 November 2023 (version 1.26.3)
 
@@ -175,7 +183,7 @@ These versions are not supported with new deployments because Red Hat no longer 
 
 === BlueXP classification can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
 
-You can enable file access audit logs to be collected on your BlueXP classification system for file access events detected on volumes in your working environments. BlueXP classification can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. https://docs.netapp.com/us-en/bluexp-classification/task-manage-file-access-events.html[See how to monitor and manage file access events].
+You can enable file access audit logs to be collected on your BlueXP classification system for file access events detected on volumes in your working environments. BlueXP classification can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. 
 
 === Data Sense BYOL licenses are now supported in dark sites
 

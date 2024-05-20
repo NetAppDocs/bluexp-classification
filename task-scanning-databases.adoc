@@ -15,7 +15,7 @@ summary: Complete a few steps to start scanning your database schemas with BlueX
 [.lead]
 Complete a few steps to start scanning your database schemas with BlueXP classification.
 
-Note that after you have enabled database scanning that you can add unique identifiers that BlueXP classification will identify in all your data sources based on specific columns in your databases. This is called the _Data Fusion_ feature. link:task-managing-data-fusion.html#add-custom-personal-data-identifiers-from-your-databases[Learn how to add custom personal data identifiers from your databases^].
+//Note that after you have enabled database scanning that you can add unique identifiers that BlueXP classification will identify in all your data sources based on specific columns in your databases. This is called the _Data Fusion_ feature. link:task-managing-data-fusion.html#add-custom-personal-data-identifiers-from-your-databases[Learn how to add custom personal data identifiers from your databases^].
 
 == Quick start
 

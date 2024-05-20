@@ -17,6 +17,10 @@ When you run an asynchronous action from the Investigation Results pane across m
 
 This allows you to see the actions that have completed successfully, those currently in progress, and those that have failed so you can diagnose and fix any problems. Note that short operations that complete quickly, such as moving a single file, do not appear in the Actions Status pane.
 
+====
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
+====
+
 The status can be:
 
 * Success - A BlueXP classification action is finished and all items succeeded.
