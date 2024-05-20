@@ -91,7 +91,7 @@ There are some features and functionality that are deprecated in the BlueXP core
 
 |===
 
-* For a limited time
+//* For a limited time
 //* Predefined policies available only in versions 1.30 and earlier include: 
 //** S3 publicly - Exposed private data
 //** PCI DSS - Stale data over 30 days
