@@ -30,9 +30,9 @@ There are some features and functionality that are deprecated in the BlueXP core
 | StorageGRID | Yes | No
 | Azure NetApp Files | Yes | Yes
 | Amazon FSx for ONTAP | Yes | Yes
-| Google Cloud NetApp Volumes * | Yes | Yes
+| Google Cloud NetApp Volumes  | Yes | Yes
 | Cloud Volumes Service for Google Cloud | Yes | Yes
-| Databases | Yes ** | Yes
+| Databases | Yes  | Yes
 | Amazon S3 | Yes | No
 | Google Cloud Storage | Yes | No
 | OneDrive | Yes | No
@@ -42,7 +42,6 @@ There are some features and functionality that are deprecated in the BlueXP core
 
 |===
 
-* Supported by integrating file shares into BlueXP classification.
 
 
 == Compliance features
@@ -58,7 +57,8 @@ There are some features and functionality that are deprecated in the BlueXP core
 | Respond to Data Subject Access Requests (DSAR) | Yes | Yes
 | Create a custom list of "personal data" that is identified | Yes | No
 | Notify users through email when files contain certain PII. (You define this criteria using link:task-using-policies.html[Policies^].)  | Yes | Yes
-| Use Directory level PII analysis and filters | Yes | No
+| Use directory-level filters  | Yes  | Yes
+| Use directory-level PII analysis  | Yes | No
 |===
 
 
@@ -76,25 +76,25 @@ There are some features and functionality that are deprecated in the BlueXP core
 | Assign files to users | Yes | No
 | Rescan data on demand | Yes | No
 | Create custom classifiers | Yes | No
-| Exclude directories from scanning | Yes | No
-| Search for names within files | Yes | No
+| Exclude directories from scanning | Yes | Yes
+| Search for names within files | Yes | Yes
 | Export data to NFS from investigation | Yes | No
 | Support multiple scanners | Yes | No
-| Integrate Active Directory  | Yes | No
-| Use permission analysis and filters | Yes | No
-| Use the file card | Yes | No
-| Use the heatmap | Yes | No
+| Integrate Active Directory  | Yes | Yes
+| Use permission analysis and filters | Yes | Yes
+| Use the file card | Yes | Yes
+| Use the heatmap | Yes | Yes
 | Use actions on Dashboard and file card | Yes | No
 | Use file access audit logging | Yes | No
 | Enable file access from the Configuration page | Yes | No
-| Use certain predefined policies* | Yes | No
+| Use certain predefined policies | Yes | No
 
 |===
 
 * For a limited time
-* Predefined policies available only in versions 1.30 and earlier include: 
-** S3 publicly - Exposed private data
-** PCI DSS - Stale data over 30 days
-** HIPAA - Stale data over 30 days
-** GDPR - European citizens
-** CCPA - California residents
+//* Predefined policies available only in versions 1.30 and earlier include: 
+//** S3 publicly - Exposed private data
+//** PCI DSS - Stale data over 30 days
+//** HIPAA - Stale data over 30 days
+//** GDPR - European citizens
+//** CCPA - California residents
