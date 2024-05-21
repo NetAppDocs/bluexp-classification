@@ -26,6 +26,7 @@ link:reference-free-paid.html[Learn more about the deprecated features].
 //Learn more about https://docs.netapp.com/us-en/bluexp-classification/reference-free-paid.html[A list of deprecated features].
 
 
+
 == 1 April 2024 (Version 1.30)
 
 === Support added for RHEL v8.8 and v9.3 BlueXP classification
@@ -35,6 +36,8 @@ This release provides support for Red Hat Enterprise Linux v8.8 and v9.3 in addi
 The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, and 9.3.
 
 Learn more about https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html[BlueXP classification deployments overview].
+
+BlueXP classification is supported if you install the Connector on a RHEL 8 or 9 host that resides on-premises. It's not supported if the RHEL 8 or 9 host resides in AWS, Azure, or Google Cloud.
 
 === Option to activate audit log collection removed
 
