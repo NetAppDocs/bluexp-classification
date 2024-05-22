@@ -56,7 +56,7 @@ There are some features and functionality that are deprecated in the BlueXP core
 | Identify sensitive personal information | Yes | Yes
 | Respond to Data Subject Access Requests (DSAR) | Yes | Yes
 | Create a custom list of "personal data" that is identified | Yes | No
-| Notify users through email when files contain certain PII. (You define this criteria using link:task-using-policies.html[Policies^].)  | Yes | Yes
+| Notify users through email when files contain certain PII. (You define this criteria using link:task-using-policies.html[Policies^].)  | Yes | No
 | Use directory-level filters  | Yes  | Yes
 | Use directory-level PII analysis  | Yes | No
 |===
@@ -79,6 +79,7 @@ There are some features and functionality that are deprecated in the BlueXP core
 | Exclude directories from scanning | Yes | Yes
 | Search for names within files | Yes | Yes
 | Export data to NFS from investigation | Yes | No
+| Export data to CSV from investigation | Yes | Yes
 | Support multiple scanners | Yes | No
 | Integrate Active Directory  | Yes | Yes
 | Use permission analysis and filters | Yes | Yes
