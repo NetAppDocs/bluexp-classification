@@ -18,7 +18,7 @@ Learn what's new in BlueXP classification (Cloud Data Sense).
 //tag::whats-new[]
 == 15 May 2024 (Version 1.31)
 
-=== Classification is available as a free service within BlueXP
+=== Classification is available as a core service within BlueXP
 
 BlueXP classification is now available as a core capability within BlueXP at no additional charge for up to 500 TiB of scanned data. No Classification license or paid subscription is required. As we focus BlueXP classification functionality on scanning NetApp storage systems with this new version, some legacy functionality will only be available to customers who had previously paid for a license. The use of those legacy features will expire when the paid contract reaches its end date.
 

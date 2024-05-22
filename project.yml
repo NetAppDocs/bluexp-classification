@@ -81,7 +81,7 @@ sidebar:
       entries: 
         - title: List of deprecated features
           url: /reference-free-paid.html 
-        -  title: Deploy BlueXP classification
+        -  title: Deploy BlueXP classification deprecations
            entries: 
              - title: Install BlueXP classification on multiple hosts with no internet access
                url: /task-deploy-multi-host-install-dark-site.html
@@ -89,7 +89,7 @@ sidebar:
                url: /task-deploy-add-scanner-nodes.html
              - title: Set up a free trial or bring your own license
                url: /task-licensing-byol-freetrial.html  
-        - title: Scan data
+        - title: Scan data deprecations
           entries: 
              - title: Scan Amazon S3 buckets
                url: /task-scanning-s3.html
@@ -101,7 +101,7 @@ sidebar:
                url: /task-scanning-google-drive.html
              - title: Scan object storage that uses S3 protocol
                url: /task-scanning-object-storage.html
-        - title: Manage data 
+        - title: Manage data deprecations
           entries: 
              - title: View governance details about data on the Governance dashboard
                url: /task-controlling-governance-dashboard-deprecated.html
