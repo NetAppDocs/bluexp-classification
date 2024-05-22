@@ -55,7 +55,9 @@ BlueXP classification operates as part of BlueXP and supports AWS, Azure, and GC
 
 === Does BlueXP classification have a REST API, and does it work with third-party tools?
 
-BlueXP supports REST API capabilities for its services. If BlueXP isn't the preferred point of management, services such as BlueXP classification can also be used via a REST API. Every user action has a REST API that can be integrated with third-party systems. See link:api-classification.html[BlueXP classification APIs^] for details.
+No, BlueXP classification does not have a REST API. 
+
+//BlueXP supports REST API capabilities for its services. If BlueXP isn't the preferred point of management, services such as BlueXP classification can also be used via a REST API. Every user action has a REST API that can be integrated with third-party systems. See link:api-classification.html[BlueXP classification APIs^] for details.
 
 === Is BlueXP classification available through the marketplaces?
 
@@ -157,17 +159,17 @@ When BlueXP classification scans volumes that have cold data tiered to object st
 
 The scan doesn't heat up the cold data--it stays cold and remains in object storage.
 
-=== Can BlueXP classification send notifications to my organization?
+//=== Can BlueXP classification send notifications to my organization?
 
-Yes. In conjunction with the Policies feature, you can send email alerts to BlueXP users (daily, weekly, or monthly), or any other email address,  when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-using-policies.html[Policies^].
+//Yes. In conjunction with the Policies feature, you can send email alerts to BlueXP users (daily, weekly, or monthly), or any other email address,  when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-using-policies.html[Policies^].
 
-You can also download status reports from the Governance page and Investigation page that you can share internally in your organization.
+//You can also download status reports from the Governance page and Investigation page that you can share internally in your organization.
 
-=== Can BlueXP classification work with the AIP labels I have embedded in my files?
+//=== Can BlueXP classification work with the AIP labels I have embedded in my files?
 
-Yes. You can manage AIP labels in the files that BlueXP classification is scanning if you have subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. You can view the labels that are already assigned to files, add labels to files, and change existing labels.
+//Yes. You can manage AIP labels in the files that BlueXP classification is scanning if you have subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. You can view the labels that are already assigned to files, add labels to files, and change existing labels.
 
-link:task-org-private-data.html#categorize-your-data-using-aip-labels[Learn more^].
+//link:task-org-private-data.html#categorize-your-data-using-aip-labels[Learn more^].
 
 == Types of source systems and data types
 
@@ -177,29 +179,15 @@ The following questions relate to the types of storage that can be scanned, and 
 
 BlueXP classification can scan data from working environments that you've added to the BlueXP Canvas and from many types of structured and unstructured data sources that BlueXP classification can access over your networks.
 
-*Working environments:*
-
-* Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP)
-* On-premises ONTAP clusters
-* Azure NetApp Files
-* Amazon FSx for ONTAP
-* Amazon S3
-
-*Data sources:*
-
-* Non-NetApp file shares
-* Object storage (that uses S3 protocol)
-* Databases (Amazon RDS, MongoDB, MySQL, Oracle, PostgreSQL, SAP HANA, SQL Server)
-* OneDrive accounts
-* SharePoint Online and On-Premises accounts
-* Google Drive accounts
-
-BlueXP classification supports NFS versions 3.x, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
-//BlueXP classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
+See link:concept-cloud-compliance.html[Supported working environments and data sources].
 
 === Are there any restrictions when deployed in a Government region?
 
 BlueXP classification is supported when the Connector is deployed in a Government region (AWS GovCloud, Azure Gov, or Azure DoD) - also known as "Restricted mode". When deployed in this manner, BlueXP classification has the following restrictions:
+
+====
+*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier.
+====
 
 * OneDrive accounts, SharePoint accounts, and Google Drive accounts can't be scanned.
 * Microsoft Azure Information Protection (AIP) label functionality can't be integrated.
@@ -210,9 +198,11 @@ BlueXP classification can only scan data from data sources that are local to the
 
 * On-premises ONTAP systems
 * Database schemas
-* SharePoint On-Premises accounts (SharePoint Server)
-* Non-NetApp NFS or CIFS file shares
+//* SharePoint On-Premises accounts (SharePoint Server)
+//* Non-NetApp NFS or CIFS file shares
 * Object Storage that uses the Simple Storage Service (S3) protocol
+
+See link:concept-cloud-compliance.html[Supported working environments and data sources].
 
 === Which file types are supported?
 
@@ -273,16 +263,18 @@ The following questions relate to licensing and costs to use BlueXP classificati
 
 === How much does BlueXP classification cost?
 
-The cost to use BlueXP classification depends on the amount of data that you're scanning. The first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free for 30 days. After reaching either limit, you'll need one of the following to continue scanning data:
+BlueXP classification is a BlueXP core capability and is not charged. 
 
-* A subscription to the BlueXP Marketplace listing from your cloud provider, or
-* A Bring-your-own-license (BYOL) from NetApp
+//The cost to use BlueXP classification depends on the amount of data that you're scanning. The first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free for 30 days. After reaching either limit, you'll need one of the following to continue scanning data:
 
-See https://bluexp.netapp.com/pricing[pricing^] for details.
+//* A subscription to the BlueXP Marketplace listing from your cloud provider, or
+//* A Bring-your-own-license (BYOL) from NetApp
 
-=== What happens if I have reached the BYOL capacity limit?
+//See https://bluexp.netapp.com/pricing[pricing^] for details.
 
-If you reach a BYOL capacity limit, BlueXP classification continues to run, but access to the Dashboards is blocked so that you can't view information about any of your scanned data. Only the Configuration page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit. You must renew your BYOL license to regain full access to BlueXP classification.
+//=== What happens if I have reached the BYOL capacity limit?
+
+//If you reach a BYOL capacity limit, BlueXP classification continues to run, but access to the Dashboards is blocked so that you can't view information about any of your scanned data. Only the Configuration page is available in case you want to reduce the number of volumes being scanned to potentially bring your capacity usage under the license limit. You must renew your BYOL license to regain full access to BlueXP classification.
 
 == Connector deployment
 

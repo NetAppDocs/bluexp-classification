@@ -80,82 +80,82 @@ The following video shows how to associate a https://console.cloud.google.com/ma
 +
 video::video_subscribing_gcp.mp4[width=848, height=480]
 
-== Use an annual contract
+//== Use an annual contract
 
-Use BlueXP classification annually by getting an annual contract. They're available in 1-, 2-, or 3-year terms.
+//Use BlueXP classification annually by getting an annual contract. They're available in 1-, 2-, or 3-year terms.
 
-If you have an annual contract from a marketplace, all BlueXP classification data scanning is charged against that contract. You can't mix and match an annual marketplace contract with a BYOL.
+//If you have an annual contract from a marketplace, all BlueXP classification data scanning is charged against that contract. You can't mix and match an annual marketplace contract with a BYOL.
 
-* AWS: https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri[Go to the BlueXP Marketplace offering for pricing details^].
-* Azure: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp[Go to the BlueXP Marketplace offering for pricing details^].
-* Google Cloud: Contact your NetApp sales representative to purchase an annual contract. The contract is available as a private offer in the Google Cloud Marketplace. After NetApp shares the private offer with you, you can select the annual plan when you subscribe from the Google Cloud Marketplace during BlueXP classification activation.
+//* AWS: https://aws.amazon.com/marketplace/pp/prodview-q7dg6zwszplri[Go to the BlueXP Marketplace offering for pricing details^].
+//* Azure: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-bluexp[Go to the BlueXP Marketplace offering for pricing details^].
+//* Google Cloud: Contact your NetApp sales representative to purchase an annual contract. The contract is available as a private offer in the Google Cloud Marketplace. After NetApp shares the private offer with you, you can select the annual plan when you subscribe from the Google Cloud Marketplace during BlueXP classification activation.
 
-== Use a BlueXP classification BYOL license
+//== Use a BlueXP classification BYOL license
 
-Bring-your-own licenses from NetApp provide 1-, 2-, or 3-year terms. The BYOL BlueXP classification (Data Sense) license is a _floating_ license where the total capacity is shared among *all* of your working environments and data sources, making initial licensing and renewal easy.
+//Bring-your-own licenses from NetApp provide 1-, 2-, or 3-year terms. The BYOL BlueXP classification (Data Sense) license is a _floating_ license where the total capacity is shared among *all* of your working environments and data sources, making initial licensing and renewal easy.
 
-If you don't have a BlueXP classification license, contact us to get one:
+//If you don't have a BlueXP classification license, contact us to get one:
 
-* mailto:ng-contact-data-sense@netapp.com?subject=Licensing[Send email to purchase a license].
-* Click the chat icon in the lower-right of BlueXP to request a license.
+//* mailto:ng-contact-data-sense@netapp.com?subject=Licensing[Send email to purchase a license].
+//* Click the chat icon in the lower-right of BlueXP to request a license.
 
-Optionally, if you have an unassigned node-based license for Cloud Volumes ONTAP that you won't be using, you can convert it to a BlueXP classification license with the same dollar-equivalence and the same expiration date. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses[Go here for details^].
+//Optionally, if you have an unassigned node-based license for Cloud Volumes ONTAP that you won't be using, you can convert it to a BlueXP classification license with the same dollar-equivalence and the same expiration date. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses[Go here for details^].
 
-You use the BlueXP digital wallet to manage BlueXP classification BYOL licenses. You can add new licenses, update existing licenses, and view license status from the BlueXP digital wallet.
+//You use the BlueXP digital wallet to manage BlueXP classification BYOL licenses. You can add new licenses, update existing licenses, and view license status from the BlueXP digital wallet.
 
-=== Obtain your BlueXP classification license file
+//=== Obtain your BlueXP classification license file
 
-After you've purchased your BlueXP classification (Data Sense) license, you activate the license in BlueXP by entering the BlueXP classification serial number and NetApp Support Site (NSS) account, or by uploading the NetApp License File (NLF). The steps below show how to get the NLF license file if you plan to use that method.
+//After you've purchased your BlueXP classification (Data Sense) license, you activate the license in BlueXP by entering the BlueXP classification serial number and NetApp Support Site (NSS) account, or by uploading the NetApp License File (NLF). The steps below show how to get the NLF license file if you plan to use that method.
 
-If you've deployed BlueXP classification on a host in an on-premises site that doesn't have internet access, meaning that you've deployed the BlueXP Connector in https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#private-mode[private mode^], you'll need to obtain the license file from an internet-connected system. Activating the license using the serial number and NSS account is not available for private mode installations.
+//If you've deployed BlueXP classification on a host in an on-premises site that doesn't have internet access, meaning that you've deployed the BlueXP Connector in https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#private-mode[private mode^], you'll need to obtain the license file from an internet-connected system. Activating the license using the serial number and NSS account is not available for private mode installations.
 
-.Before you begin
+//.Before you begin
 
-You'll need to have the following information before you start:
+//You'll need to have the following information before you start:
 
-* BlueXP classification serial number
-+
-Locate this number from your Sales Order, or contact the account team for this information.
-* BlueXP Account ID
-+
-You can find your BlueXP Account ID by selecting the *Account* drop-down from the top of BlueXP, and then clicking *Manage Account* next to your account. Your Account ID is in the Overview tab. For private mode sites without internet access, use *account-DARKSITE1*.
+//* BlueXP classification serial number
+//+
+//Locate this number from your Sales Order, or contact the account team for this information.
+//* BlueXP Account ID
+//+
+//You can find your BlueXP Account ID by selecting the *Account* drop-down from the top of BlueXP, and then clicking *Manage Account* next to your account. Your Account ID is in the Overview tab. For private mode sites without internet access, use *account-DARKSITE1*.
 
-.Steps
+//.Steps
 
-. Sign in to the https://mysupport.netapp.com[NetApp Support Site^] and click *Systems > Software Licenses*.
+//. Sign in to the https://mysupport.netapp.com[NetApp Support Site^] and click *Systems > Software Licenses*.
 
-. Enter your BlueXP classification license serial number.
-+
-image:screenshot_cloud_tiering_license_step1.gif[A screenshot that shows a table of licenses after searching by serial number.]
+//. Enter your BlueXP classification license serial number.
+//+
+//image:screenshot_cloud_tiering_license_step1.gif[A screenshot that shows a table of licenses after searching by serial number.]
 
-. Under the *License Key* column, click *Get NetApp License File*.
+//. Under the *License Key* column, click *Get NetApp License File*.
 
-. Enter your BlueXP Account ID (this is called a Tenant ID on the support site) and click *Submit* to download the license file.
-+
-image:screenshot_cloud_tiering_license_step2.gif[A screenshot that shows the get license dialog box where you enter your tenant ID and then click Submit to download the license file.]
+//. Enter your BlueXP Account ID (this is called a Tenant ID on the support site) and click *Submit* to download the license file.
+//+
+//image:screenshot_cloud_tiering_license_step2.gif[A screenshot that shows the get license dialog box where you enter your tenant ID and then click Submit to download the license file.]
 
-=== Add BlueXP classification BYOL licenses to your account
+//=== Add BlueXP classification BYOL licenses to your account
 
-After you purchase a BlueXP classification (Data Sense) license for your BlueXP account, you need to add the license to BlueXP to use the BlueXP classification service.
+//After you purchase a BlueXP classification (Data Sense) license for your BlueXP account, you need to add the license to BlueXP to use the BlueXP classification service.
 
-.Steps
+//.Steps
 
-. From the BlueXP menu, click *Governance > Digital wallet* and then select the *Data Services Licenses* tab.
+//. From the BlueXP menu, click *Governance > Digital wallet* and then select the *Data Services Licenses* tab.
 
-. Click *Add License*.
+//. Click *Add License*.
 
-. In the _Add License_ dialog, enter the license information and click *Add License*:
-+
-* If you have the BlueXP classification license serial number and know your NSS account, select the *Enter Serial Number* option and enter that information.
-+
-If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html[add the NSS account to BlueXP^].
-* If you have the BlueXP classification license file (required when installed in a dark site), select the *Upload License File* option and follow the prompts to attach the file.
-+
-image:screenshot_services_license_add.png[A screenshot that shows the page to add the BlueXP classification BYOL license.]
+//. In the _Add License_ dialog, enter the license information and click *Add License*:
+//+
+//* If you have the BlueXP classification license serial number and know your NSS account, select the *Enter Serial Number* option and enter that information.
+//+
+//If your NetApp Support Site account isn't available from the drop-down list, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html[add the NSS account to BlueXP^].
+//* If you have the BlueXP classification license file (required when installed in a dark site), select the *Upload License File* option and follow the prompts to attach the file.
+//+
+//image:screenshot_services_license_add.png[A screenshot that shows the page to add the BlueXP classification BYOL license.]
 
-.Result
+//.Result
 
-BlueXP adds the license so that your BlueXP classification service is active.
+//BlueXP adds the license so that your BlueXP classification service is active.
 
 === Update a BlueXP classification BYOL license
 
