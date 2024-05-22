@@ -64,7 +64,7 @@ BlueXP classification supports AIP labels within the following file types: .DOC,
 
 === Integrate AIP labels in your workspace
 
-Before you can manage AIP labels, you need to integrate the AIP label functionality into BlueXP classification by signing into your existing Azure account. Once enabled, you can manage AIP labels within files for all link:concept-cloud-compliance.html#supported-data-sources[data sources^] in your BlueXP workspace.
+Before you can manage AIP labels, you need to integrate the AIP label functionality into BlueXP classification by signing into your existing Azure account. Once enabled, you can manage AIP labels within files for all link:concept-cloud-compliance.html[data sources^] in your BlueXP workspace.
 
 .Requirements
 
