@@ -232,6 +232,8 @@ The role each user has been assigned provides different capabilities within Blue
 
 * A *Workspace Admin* can manage compliance settings and view compliance information only for systems that they have permissions to access. If a Workspace Admin can't access a working environment in BlueXP, then they can't see any compliance information for the working environment in the BlueXP classification tab.
 
-* Users with the *Compliance Viewer* role can only view compliance information and generate reports for systems that they have permission to access. These users cannot enable/disable scanning of volumes, buckets, or database schemas. These users can't copy, move, or delete files either.
+* Users with the *Compliance Viewer* role can only view compliance information and generate reports for systems that they have permission to access. These users cannot enable/disable scanning of volumes, buckets, or database schemas. 
+
+//These users can't copy, move, or delete files either.
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-user-roles.html[Learn more about BlueXP roles^] and how to https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-netapp-accounts.html#adding-users[add users with specific roles^].
