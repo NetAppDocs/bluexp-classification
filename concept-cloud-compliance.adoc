@@ -58,9 +58,11 @@ BlueXP classification provides tools that can help with your storage total cost 
 * Increase storage efficiency by identifying duplicate or non-business-related data.
 * Save storage costs by identifying inactive data that you can tier to less expensive object storage. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html[Learn more about tiering from Cloud Volumes ONTAP systems^]. https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html[Learn more about tiering from on-premises ONTAP systems^].
 
-== Supported data sources
+== Supported working environments and data sources
 
-BlueXP classification can scan and analyze structured and unstructured data from the following types of data sources:
+BlueXP classification can scan and analyze structured and unstructured data from the following types of working environments and data sources:
+
+*Working environments*
 
 * Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP)
 * On-premises ONTAP clusters
@@ -68,7 +70,10 @@ BlueXP classification can scan and analyze structured and unstructured data from
 * Azure NetApp Files
 * Amazon FSx for ONTAP
 * Google Cloud NetApp Volumes
-* File shares (for example, Dell EMC Isilon, Pure Storage, Nutanix, and so on)
+
+*Data sources*
+
+* NetApp file shares
 * Databases:
 ** Amazon Relational Database Service (Amazon RDS)
 ** MongoDB
@@ -77,13 +82,16 @@ BlueXP classification can scan and analyze structured and unstructured data from
 ** PostgreSQL
 ** SAP HANA
 ** SQL Server (MSSQL)
+//* File shares (for example, Dell EMC Isilon, Pure Storage, Nutanix, and so on)
 
 BlueXP classification supports NFS versions 3.x, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
 //BlueXP classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
 
 == Cost
 
-BlueXP classification is now free to use for up to 500 TiB of data. No Classification license or paid subscription is required. If you have more than 500 TiB of data that you want to scan, you can disable scanning on some of your original systems and scan the new systems that would otherwise bring you over the 500 TiB limit.
+BlueXP classification is now free to use. No Classification license or paid subscription is required. 
+
+//BlueXP classification is now free to use for up to 500 TiB of data. No Classification license or paid subscription is required. If you have more than 500 TiB of data that you want to scan, you can disable scanning on some of your original systems and scan the new systems that would otherwise bring you over the 500 TiB limit.
 
 === Infrastructure costs
 
@@ -232,6 +240,8 @@ The role each user has been assigned provides different capabilities within Blue
 
 * A *Workspace Admin* can manage compliance settings and view compliance information only for systems that they have permissions to access. If a Workspace Admin can't access a working environment in BlueXP, then they can't see any compliance information for the working environment in the BlueXP classification tab.
 
-* Users with the *Compliance Viewer* role can only view compliance information and generate reports for systems that they have permission to access. These users cannot enable/disable scanning of volumes, buckets, or database schemas. These users can't copy, move, or delete files either.
+* Users with the *Compliance Viewer* role can only view compliance information and generate reports for systems that they have permission to access. These users cannot enable/disable scanning of volumes, buckets, or database schemas. 
+
+//These users can't copy, move, or delete files either.
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-user-roles.html[Learn more about BlueXP roles^] and how to https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-netapp-accounts.html#adding-users[add users with specific roles^].
