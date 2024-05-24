@@ -29,7 +29,7 @@ image:diagram_deploy_onprem_cloud_instance.png[A diagram of the required BlueXP 
 
 For very large configurations where you'll be scanning petabytes of data, on versions 1.30 and earlier, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the _Manager node_, and the additional systems that provide extra processing power are called _Scanner nodes_.
 
-For versions 1.30 and earlier, if you need to install BlueXP classification on multiple hosts, refer to link:task-deploy-multi-host-install-dark-site.html[Install BlueXP classification on multiple hosts with no internet access].
+NOTE: For legacy versions 1.30 and earlier, if you need to install BlueXP classification on multiple hosts, refer to link:task-deploy-multi-host-install-dark-site.html[Install BlueXP classification on multiple hosts with no internet access].
 
 
 You can also link:task-deploy-compliance-dark-site.html[install BlueXP classification in an on-premises site that doesn't have internet access] for completely secure sites.
@@ -81,11 +81,11 @@ There are some scenarios where you have to use a Connector that's deployed in a 
 For Azure NetApp Files, it must be deployed in the same region as the volumes you wish to scan.
 * When scanning data in Cloud Volumes ONTAP in GCP, you use a Connector in GCP.
 
-On-prem ONTAP systems, non-NetApp file shares and database accounts can be scanned using any of these cloud Connectors.
+On-prem ONTAP systems, NetApp file shares and database accounts can be scanned using any of these cloud Connectors.
 
 Note that you can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[deploy the Connector on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install BlueXP classification on-prem may also choose to install the Connector on-prem.
 
-As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[multiple Connectors].
+//As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[multiple Connectors].
 
 You'll need the IP address or host name of the Connector system when installing BlueXP classification. You'll have this information if you installed the Connector in your premises. If the Connector is deployed in the cloud, you can find this information from the BlueXP console: click the Help icon, select *Support*, and click *BlueXP Connector*.
 
@@ -215,7 +215,7 @@ You must have the information for the Active Directory:
 
 |===
 
-If you are using multiple BlueXP classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-onprem.html[See the additional port requirements].
+//If you are using multiple BlueXP classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-onprem.html[See the additional port requirements].
 
 == Install BlueXP classification on the Linux host
 
