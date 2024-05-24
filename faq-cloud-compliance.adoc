@@ -34,14 +34,14 @@ BlueXP classification uses AI to provide contextual understanding of data for ac
 
 link:concept-cloud-compliance.html[Learn more about how BlueXP classification works^].
 
-=== What are the common use cases for BlueXP classification?
+//=== What are the common use cases for BlueXP classification?
 
-* Identify Personal Identifiable Information (PII).
-* Easily locate and report on specific data in response to data subjects, as required by GDPR, CCPA, HIPAA, and other data privacy regulations.
-* Comply with new and upcoming data privacy regulations.
-* Comply with data compliance and privacy regulations.
-* Migrate data from legacy systems to the cloud.
-* Comply with data retention policies.
+//* Identify Personal Identifiable Information (PII).
+//* Easily locate and report on specific data in response to data subjects, as required by GDPR, CCPA, HIPAA, and other data privacy regulations.
+//* Comply with new and upcoming data privacy regulations.
+//* Comply with data compliance and privacy regulations.
+//* Migrate data from legacy systems to the cloud.
+//* Comply with data retention policies.
 
 https://bluexp.netapp.com/netapp-cloud-data-sense[Learn more about the use cases for BlueXP classification^].
 
@@ -83,9 +83,9 @@ BlueXP classification offers extensive search capabilities that make it easy to 
 
 Once the files of interest are found, characteristics can be listed, including tags, working environment account, bucket, file path, category (from classification), file size, last modified, permission status, duplicates, sensitivity level, personal data, sensitive data types within the file, owner, file type, file size, created time, file hash, whether the data was assigned to someone seeking their attention, and more. Filters can be applied to screen out characteristics that are not pertinent. BlueXP classification also has RBAC controls to allow files to be moved or deleted, if the right permissions are present. If the right permissions are not present, the tasks can be assigned to someone in the organization who does have the right permissions.
 
-=== What kind of analytics does BlueXP classification provide?
+//=== What kind of analytics does BlueXP classification provide?
 
-Data sources can be represented visually, and relationships defined and depicted graphically. For example, admins can see all stale, duplicate, and non-business-related data across data sources throughout the enterprise (on-premises systems, databases, file shares, S3 stores, OneDrive, etc.). They can then copy, move, delete, and manage data to optimize storage costs and reduce risk. Users can reduce risk by seeing what sensitive data might be exposed, and they can create jobs to manage permissions for strong data protection. BlueXP classification also classifies all the different types of data, so admins can investigate data by type and see what actions have been taken on the data, and when.
+//Data sources can be represented visually, and relationships defined and depicted graphically. For example, admins can see all stale, duplicate, and non-business-related data across data sources throughout the enterprise. They can then copy, move, delete, and manage data to optimize storage costs and reduce risk. Users can reduce risk by seeing what sensitive data might be exposed, and they can create jobs to manage permissions for strong data protection. BlueXP classification also classifies all the different types of data, so admins can investigate data by type and see what actions have been taken on the data, and when.
 
 === Does BlueXP classification offer reports?
 
@@ -125,7 +125,7 @@ NOTE: Activating BlueXP classification on a data source results in an immediate 
 
 === How do I disable BlueXP classification?
 
-You can disable BlueXP classification from scanning an individual working environment, database, file share group, OneDrive account, or SharePoint account from the BlueXP classification Configuration page.
+You can disable BlueXP classification from scanning an individual working environment, database, or file share group from the BlueXP classification Configuration page.
 
 link:task-managing-compliance.html[Learn more^].
 
@@ -286,10 +286,11 @@ The Connector is software running on a compute instance either within your cloud
 
 === Where does the Connector need to be installed?
 
-* When scanning data in Cloud Volumes ONTAP in AWS, Amazon FSx for ONTAP, or in AWS S3 buckets, you use a connector in AWS.
+* When scanning data in Cloud Volumes ONTAP in AWS or Amazon FSx for ONTAP, you use a connector in AWS.
 * When scanning data in Cloud Volumes ONTAP in Azure or in Azure NetApp Files, you use a connector in Azure.
 * When scanning data in Cloud Volumes ONTAP in GCP, you use a Connector in GCP.
-* When scanning data in on-premises ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts, you can use a connector in any of these cloud locations.
+* When scanning data in on-premises ONTAP systems, NetApp file shares, or databases, you can use a connector in any of these cloud locations.
+//* When scanning data in on-premises ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts, you can use a connector in any of these cloud locations.
 
 So if you have data in many of these locations, you may need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Connectors^].
 

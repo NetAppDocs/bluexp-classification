@@ -13,9 +13,11 @@ summary: Complete a few steps to start scanning non-NetApp NFS or CIFS file shar
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to start scanning non-NetApp NFS or CIFS file shares directly with BlueXP classification. These file shares can reside on-premises or in the cloud.
+Complete a few steps to start scanning NFS or CIFS file shares from Google Cloud NetApp Volumes and from older NetApp 7-mode systems. These file shares can reside on-premises or in the cloud.
 
-TIP: Adding file shares is the only way to scan data from Google Cloud NetApp Volumes. 
+NOTE: Scanning data from non-NetApp file shares is not supported in the BlueXP classification core version.
+
+//TIP: Adding file shares is the only way to scan data from Google Cloud NetApp Volumes. 
 
 == Quick start
 
@@ -45,7 +47,7 @@ Add the list of file shares that you want to scan and select the type of scannin
 
 Review the following prerequisites to make sure that you have a supported configuration before you enable BlueXP classification.
 
-* The shares can be hosted anywhere, including in the cloud or on-premises. In most cases these are file shares that reside on non-NetApp storage systems. However, CIFS shares from older NetApp 7-Mode storage systems can be scanned as file shares.
+* The shares can be hosted anywhere, including in the cloud or on-premises. CIFS shares from older NetApp 7-Mode storage systems can be scanned as file shares.
 +
 Note that BlueXP classification can't extract permissions or the "last access time" from 7-Mode systems. Additionally, because of a known issue between some Linux versions and CIFS shares on 7-Mode systems, you must configure the share to use only SMB v1 with NTLM authentication enabled.
 
@@ -66,9 +68,9 @@ include::_include/cifs-permissions.adoc[]
 
 Deploy BlueXP classification if there isn't already an instance deployed.
 
-If you are scanning non-NetApp NFS or CIFS file shares that are accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy BlueXP classification in the cloud^] or link:task-deploy-compliance-onprem.html[deploy BlueXP classification in an on-premises location that has internet access^].
+//If you are scanning non-NetApp NFS or CIFS file shares that are accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy BlueXP classification in the cloud^] or link:task-deploy-compliance-onprem.html[deploy BlueXP classification in an on-premises location that has internet access^].
 
-If you are scanning non-NetApp NFS or CIFS file shares that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy BlueXP classification in the same on-premises location that has no internet access^]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
+//If you are scanning non-NetApp NFS or CIFS file shares that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy BlueXP classification in the same on-premises location that has no internet access^]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
 
 Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
@@ -108,7 +110,7 @@ image:screenshot_compliance_fileshares_add_initial_shares.png[A screenshot showi
 +
 If you are adding file shares to an existing group, click *Add Shares*.
 +
-image:screenshot_compliance_fileshares_add_more_shares.png[A screenshot showing the Add Shares button to add more shares to the group.]
+image:screenshot_compliance_fileshares_add_more_shares2.png[A screenshot showing the Add Shares button to add more shares to the group.]
 
 . Select the protocol for the file shares you are adding, add the file shares that you want to scan - one file share per line - and click *Continue*.
 +
