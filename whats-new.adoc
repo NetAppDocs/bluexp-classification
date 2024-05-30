@@ -16,6 +16,45 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification (Cloud Data Sense).
 
 //tag::whats-new[]
+
+== 1 June 2024 
+
+This release includes the following updates. 
+
+=== Mapping scans gather metadata 
+
+The following metadata is extracted from files during mapping scans and is displayed on the Governance, Compliance, and Investigation dashboards:  
+
+* Working environment 
+* Working environment type 
+* Storage repository 
+* File type 
+* Used capacity 
+* Number of files  
+* File size 
+* File creation 
+* File last access  
+* File last modified 
+* File discovered time 
+* Permissions extraction
+
+=== Additional data in dashboards
+
+This release updates which data appears in the Governance, Compliance, and Investigation dashboards during mapping scans. 
+
+For details, see link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
+
+
+//For details, see https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
+
+=== New Mapping status column in the Configuration page
+
+This release now shows a new Mapping status column in the Configuration page. The new column helps you identify if the mapping is running, queued, paused or more. 
+
+For explanations of the statuses, see link:task-managing-repo-scanning.html[Change scan settings].
+
+//For explanations of the statuses, see https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html[Change scan settings].
+
 == 15 May 2024 (Version 1.31)
 
 === Classification is available as a core service within BlueXP
@@ -64,6 +103,8 @@ If you deployed BlueXP classification on a system with internet access, the syst
 
 If you deployed BlueXP classification without internet access, you'll need to upgrade manually. For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-dark-site.html[Install BlueXP classification on a Linux host with no internet access].
 
+//end::whats-new[]
+
 == 4 March 2024 (version 1.29)
 
 === Now you can exclude scanning data that resides in certain data source directories
@@ -78,7 +119,7 @@ If you need BlueXP classification to scan more than 250 million files, you can u
 
 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#using-a-smaller-instance-type[Learn more].
 
-//end::whats-new[]
+
 
 == 10 January 2024 (version 1.27)
 

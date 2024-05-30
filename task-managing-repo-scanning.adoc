@@ -21,11 +21,24 @@ Some of the things you can change are whether a repository is scanned or not, an
 
 You can view the individual repositories that BlueXP classification is scanning (volumes, buckets, etc.) for each working environment and data source. Additionally, you can see how many have been "Mapped", and how many have been "Classified". Classification takes a longer time as the full AI identification is being performed on all data.
 
-//You can view the scanning status of each work environment on the Configuration page:
-//* Running - green dot
-//* Queued - orange dot
-//* Paused - gray dot
-//* Error - red dot
+You can view the scanning status of each volume or bucket level in a work environment on the Configuration page:
+
+* Running - green dot
+* Queued - orange dot
+* Paused - gray dot
+* Error - red dot 
+
+You can view the scanning status of each work environment on the Configuration page:
+
+* *Initializing* (light blue dot): The map or classify configuration is activated. This appears for few seconds before starting the “pending queue” status.
+* *Pending queue* (orange dot): The scan task is waiting to be listed in the scanning queue. 
+* *Queued* (orange dot): The task was successfully added to the scanning queue. The system will start mapping or classifying the volume when its turn in the queue arrives.
+* *Running* (green dot): The scan task, which was in the queue, is now being done on the selected storage repository.
+* *Finished* (green dot): The scan of the storage repository is complete.
+* *Paused* (gray dot): You selected the “Pause” option to pause scanning. While the changes in the volume are not displayed in the system, the scanned insights are still shown. 
+* *Error* (red dot): The scan cannot complete because it has encountered issues. If you need to complete an action, the error appears in the tooltip under the “Required action” column.  Otherwise, the system shows an “error” status and tries to recover. When it finishes, the status changes.
+* *Not scanning*: The volume configuration of "Off" was selected and the system is not scanning the volume. 
+
 
 //After a scan has completed, you can also see the last full cycle date and time.
 

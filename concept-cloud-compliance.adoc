@@ -188,6 +188,8 @@ The table below shows some of the differences:
 | Mapping
 
 | Scan speed | Slow | Fast
+| Pricing | Free | Free
+| Capacity | Limited to 500 TB | Limited to 500 TB
 | List of file types and used capacity | Yes | Yes
 | Number of files and used capacity | Yes | Yes
 | Age and size of files | Yes | Yes
@@ -196,6 +198,98 @@ The table below shows some of the differences:
 | Search for names within files | Yes | No
 | Create link:task-using-policies.html[policies] that provide custom search results | Yes | No
 | Ability to run other reports | Yes | No
+| Ability to see metadata from files* | No | Yes
+|===
+
+*The following metadata is extracted from files during mapping scans:  
+
+* Working environment 
+* Working environment type 
+* Storage repository 
+* File type 
+* Used capacity 
+* Number of files  
+* File size 
+* File creation 
+* File last access  
+* File last modified 
+* File discovered time 
+* Permissions extraction 
+
+*Governance dashboard differences*:
+
+[cols="47,18,18",width=85%,options="header"]
+|===
+| Feature
+| Map & Classify
+| Map 
+
+| Stale data | Yes | Yes
+| Non-business data | Yes | Yes
+| Duplicated files | Yes | No
+| Predefined policies | Yes | No
+| Custom policies | Yes | Yes
+| DDA report | Yes | Yes
+| Mapping report| Yes | Yes
+|Sensitivity level detection | Yes | No
+| Sensitive data with wide permissions | Yes | No
+| Open permissions | Yes | Yes
+| Age of data | Yes | Yes
+| Size of data | Yes | Yes
+| Categories | Yes | No
+| File types | Yes | Yes
+|===
+
+*Compliance dashboard differences*:
+
+[cols="47,18,18",width=85%,options="header"]
+|===
+| Feature
+| Map & Classify
+| Map 
+
+| Personal information | Yes | No
+| Sensitive personal information | Yes | No
+| Privacy risk assessment report | Yes | No
+| HIPAA report | Yes | No
+| PCI DSS report | Yes | No
+|===
+
+*Investigation filters differences*:
+
+[cols="47,18,18",width=85%,options="header"]
+|===
+| Feature
+| Map & Classify
+| Map 
+
+| Policies | Yes | Yes
+| Working environment type | Yes | Yes
+| Working environment | Yes | Yes
+| Storage repository | Yes | Yes
+| File type | Yes | Yes
+| File size | Yes | Yes
+| Created time | Yes | Yes
+| Discovered time | Yes | Yes
+| Last modified | Yes | Yes
+| Last access | Yes | Yes
+| Open permissions | Yes | Yes
+| File directory path | Yes | Yes
+| Category | Yes | No
+| Sensitivity level | Yes | No
+
+| Number of identifiers | Yes | No
+| Personal data | Yes | No
+| Sensitive personal data | Yes | No
+| Data subject | Yes | No
+| Duplicates | Yes | No
+| Classification status | Yes | Status is always "Limited insights"
+| Scan analysis event | Yes | Yes
+| File hash | Yes | Yes
+| Number of users with access | Yes | Yes
+| File owner | Yes | Yes
+| Directory type | Yes | Yes
+
 |===
 
 === How quickly does BlueXP classification scan data
