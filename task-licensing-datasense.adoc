@@ -18,7 +18,7 @@ A pay-as-you-go (PAYGO) subscription is required to scan data.
 //The first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free for 30 days. A BYOL license from NetApp, or a subscription from your cloud provider's marketplace, is required to continue scanning data after that point.
 
 ====
-*NOTE*    This information is relevant only for BlueXP classification core versions 1.31 and later.
+*NOTE*    This information is relevant only for BlueXP classification core versions 1.31 and later. For legacy versions 1.30 and earlier, you can alternatively use a BYOL license. 
 ====
 
 A few notes before you read any further:
@@ -35,7 +35,7 @@ link:concept-cloud-compliance.html#cost[Learn more about the licensing and costs
 
 == 30-day free trial
 
-A 30-day free trial is available for up to 500 TB of data that BlueXP classification scans in a BlueXP workspace. You'll need to purchase a BYOL license from NetApp, or a sign up for a subscription from your cloud provider's marketplace, to continue scanning data after that point.
+A 30-day free trial is available for up to 500 TB of data that BlueXP classification scans in a BlueXP workspace. You'll need to sign up for a subscription from your cloud provider's marketplace, to continue scanning data after that point.
 
 You can subscribe at any time and you will not be charged even after the 30 day trial ends. You can always see the total amount of data that is being scanned from the BlueXP classification Governance Dashboard. And the _Subscribe Now_ button makes it easy to subscribe when you are ready.
 
@@ -158,7 +158,7 @@ video::video_subscribing_gcp.mp4[width=848, height=480]
 
 //BlueXP adds the license so that your BlueXP classification service is active.
 
-=== Update a BlueXP classification BYOL license
+== Update a BlueXP classification BYOL license for legacy versions
 
 If your licensed term is nearing the expiration date, or if your licensed capacity is reaching the limit, you'll be notified in the Classification UI. 
 
@@ -191,7 +191,7 @@ image:screenshot_services_license_update.png[A screenshot of selecting the Updat
 
 BlueXP updates the license so that your BlueXP classification service continues to be active.
 
-=== BYOL license considerations
+=== BYOL license considerations for legacy versions
 
 When using a BlueXP classification (Data Sense) BYOL license, BlueXP displays a warning in the BlueXP classification UI and in the BlueXP digital wallet UI when the size of all the data you are scanning is nearing the capacity limit or nearing the license expiration date. 
 
