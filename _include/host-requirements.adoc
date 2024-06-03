@@ -15,15 +15,15 @@
 - 5 GiB on /tmp
 | *Large* | 16 CPUs | 64 GB RAM | 500 GiB SSD on /, or
 - 100 GiB available on /opt
-- 395 GiB available on /var/lib/docker
+- 395 GiB available on /var/lib/docker or for Podman /var/lib/containers or for Podman /var/lib/containers
 - 5 GiB on /tmp
 | *Medium* | 8 CPUs | 32 GB RAM | 200 GiB SSD on /, or
 - 50 GiB available on /opt
-- 145 GiB available on /var/lib/docker
+- 145 GiB available on /var/lib/docker or for Podman /var/lib/containers
 - 5 GiB on /tmp
 | *Small* | 8 CPUs | 16 GB RAM | 100 GiB SSD on /, or
 - 50 GiB available on /opt
-- 45 GiB available on /var/lib/docker
+- 45 GiB available on /var/lib/docker or for Podman /var/lib/containers
 - 5 GiB on /tmp
 |===
 +
