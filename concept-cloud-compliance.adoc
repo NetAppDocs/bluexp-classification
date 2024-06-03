@@ -287,6 +287,7 @@ The table below shows some of the differences:
 | Scan analysis event | Yes | Yes
 | File hash | Yes | Yes
 | Number of users with access | Yes | Yes
+| User/group permissions |Yes | Yes
 | File owner | Yes | Yes
 | Directory type | Yes | Yes
 
