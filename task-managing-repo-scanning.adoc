@@ -21,12 +21,12 @@ Some of the things you can change are whether a repository is scanned or not, an
 
 You can view the individual repositories that BlueXP classification is scanning (volumes, buckets, etc.) for each working environment and data source. Additionally, you can see how many have been "Mapped", and how many have been "Classified". Classification takes a longer time as the full AI identification is being performed on all data.
 
-You can view the scanning status of each volume or bucket level in a work environment on the Configuration page:
+//You can view the scanning status of each volume or bucket level in a work environment on the Configuration page:
 
-* Running - green dot
-* Queued - orange dot
-* Paused - gray dot
-* Error - red dot 
+//* Running - green dot
+//* Queued - orange dot
+//* Paused - gray dot
+//* Error - red dot 
 
 You can view the scanning status of each work environment on the Configuration page:
 
