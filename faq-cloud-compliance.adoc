@@ -133,7 +133,7 @@ NOTE: To completely remove the BlueXP classification instance, you can manually 
 
 === Can I customize the service to my organization's needs?
 
-BlueXP classification provides out-of-the-box insights to your data. These insights can be extracted and used for your organization's needs.
+BlueXP classification provides insights to your data. These insights can be extracted and used for your organization's needs.
 
 Additionally, BlueXP classification provides many ways for you to add a custom list of "personal data" that BlueXP classification will identify in scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
 
@@ -149,7 +149,7 @@ Yes. If you want BlueXP classification to exclude scanning data that resides in 
 
 link:task-exclude-scan-paths.html[Learn more^].
 
-=== Are snapshot copies that reside on ONTAP volumes scanned?
+=== Are snapshots that reside on ONTAP volumes scanned?
 
 No. BlueXP classification does not scan snapshots because the content is identical to the content in the volume.
 
@@ -241,7 +241,7 @@ link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn m
 
 === Can anyone access the private data sent between my browser and BlueXP classification?
 
-No. The private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties can't read it. BlueXP classification won't share any data or results with NetApp unless you request and approve access.
+No. The private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption using TLS 1.2, which means NetApp and non-NetApp parties can't read it. BlueXP classification won't share any data or results with NetApp unless you request and approve access.
 
 The data that is scanned stays within your environment. 
 
@@ -267,7 +267,7 @@ BlueXP classification is a BlueXP core capability and is not charged.
 
 //The cost to use BlueXP classification depends on the amount of data that you're scanning. The first 1 TB of data that BlueXP classification scans in a BlueXP workspace is free for 30 days. After reaching either limit, you'll need one of the following to continue scanning data:
 
-//* A subscription to the BlueXP Marketplace listing from your cloud provider, or
+//* A subscription to the BlueXP Marketplace list from your cloud provider, or
 //* A Bring-your-own-license (BYOL) from NetApp
 
 //See https://bluexp.netapp.com/pricing[pricing^] for details.
