@@ -15,7 +15,7 @@ summary: Gain control of the costs related to the data on your organizations' st
 [.lead]
 Gain control of the costs related to the data on your organizations' storage resources. BlueXP classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
 
-Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information prior to moving it.
+Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information before moving it.
 
 ====
 *NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier.
@@ -27,7 +27,7 @@ The _Sensitive Data and Wide Permissions_ area on the Governance dashboard provi
 
 NOTE: This applies to BlueXP classification versions 1.30 and earlier. 
 
-Files are rated based on the number of users with permission to access the files on the X axis (lowest to highest), and the number of sensitive identifiers within the files on the Y axis (lowest to highest). The blocks represent the number of files that match the items from the X and Y axes. The lighter colored block are good; with fewer users able to access the files, and with fewer sensitive identifiers per file. The darker blocks are the items you may want to investigate. For example, the screen below shows the hover text for the dark blue block. It shows that you have 1,500 files where 751-100 users have access, and where there are 501-100 sensitive identifiers per file.
+Files are rated based on the number of users with permission to access the files on the X axis (lowest to highest), and the number of sensitive identifiers within the files on the Y axis (lowest to highest). The blocks represent the number of files that match the items from the X and Y axes. The lighter colored block are good; with fewer users able to access the files, and with fewer sensitive identifiers per file. The darker blocks are the items you may want to investigate. For example, the screen below shows the tooltip text for the dark blue block. It shows that you have 1,500 files where 751-100 users have access, and where there are 501-100 sensitive identifiers per file.
 
 image:screenshot_compliance_sensitive_data.png[A screenshot showing the data displayed when you place your cursor over an element in this panel.]
 
