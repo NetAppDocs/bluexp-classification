@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept-cloud-compliance.html
-keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning, aip labels, governance, cloud data sense, data sense, privacy control, classification, optimization, cloud data sense, bluexp
+keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning,  governance, cloud data sense, data sense, privacy control, classification, optimization, cloud data sense, bluexp
 summary: BlueXP classification is a data governance service for BlueXP that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
 ---
 
@@ -103,7 +103,7 @@ BlueXP classification is now free to use. No Classification license or paid subs
 
 Data transfer costs depend on your setup. If the BlueXP classification instance and data source are in the same Availability Zone and region, then there are no data transfer costs. But if the data source, such as a Cloud Volumes ONTAP system, is in a _different_ Availability Zone or region, then you'll be charged by your cloud provider for data transfer costs. See these links for more details:
 
-* https://aws.amazon.com/ec2/pricing/on-demand/[AWS: Amazon EC2 Pricing^]
+* https://aws.amazon.com/ec2/pricing/on-demand/[AWS: Amazon Elastic Compute Cloud (Amazon EC2) Pricing^]
 * https://azure.microsoft.com/en-us/pricing/details/bandwidth/[Microsoft Azure: Bandwidth Pricing Details^]
 * https://cloud.google.com/storage-transfer/pricing[Google Cloud: Storage Transfer Service pricing^]
 
@@ -315,7 +315,7 @@ Categories:: BlueXP classification takes the data that it scanned and divides it
 Types:: BlueXP classification takes the data that it scanned and breaks it down by file type. link:task-controlling-private-data.html#view-files-by-file-types[Learn more about types^].
 
 Name entity recognition::
-BlueXP classification uses AI to extract natural persons' names from documents. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Learn about responding to Data Subject Access Requests^].
+BlueXP classification uses AI to extract people's natural names from documents. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Learn about responding to Data Subject Access Requests^].
 
 == Networking overview
 

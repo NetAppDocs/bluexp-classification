@@ -1,7 +1,7 @@
 * BlueXP classification is not supported on a host that is shared with other applications - the host must be a dedicated host.
 //This include is used in 3 Linux deploy topics
 
-* When building the host system in your premises, you can choose among three system sizes depending on the size of the data set that you plan to have BlueXP classification scan.
+* When building the host system in your premises, you can choose among three system sizes depending on the size of the dataset that you plan to have BlueXP classification scan.
 +
 [cols="17,17,27,31",width=95%,options="header"]
 |===
@@ -31,7 +31,7 @@ Note that there are limitations when using the smaller systems. See link:concept
 
 * When deploying a compute instance in the cloud for your BlueXP classification installation, we recommend a system that meets the "Large" system requirements above:
 
-** *AWS EC2 instance type*: We recommend "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types[See additional AWS instance types^]. 
+** *Amazon Elastic Compute Cloud (Amazon EC2) instance type*: We recommend "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types[See additional AWS instance types^]. 
 ** *Azure VM size*: We recommend "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types[See additional Azure instance types^].
 ** *GCP machine type*: We recommend "n2-standard-16". link:reference-instance-types.html#gcp-instance-types[See additional GCP instance types^].
 
