@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-managing-repo-scanning.html
-keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan
-summary: You can manage how your data is being scanned in each of your working environments and data sources. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
+keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification, bluexp
+summary: You can manage how your data is being scanned in each of your working environments and data sources in BlueXP classification. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
 ---
 
 = Change the scan settings for your repositories
