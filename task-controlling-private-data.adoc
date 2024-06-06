@@ -81,7 +81,7 @@ image:screenshot_sensitive_personal_files.gif[A screenshot of the sensitive pers
 
 BlueXP classification takes the data that it scanned and divides it into different types of categories. Categories are topics based on AI analysis of the content and metadata of each file. link:reference-private-data-categories.html#types-of-categories[See the list of categories^].
 
-Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like resumes or employee contracts can include sensitive data. When you investigate the results, you might find that employee contracts are stored in an insecure location. You can then correct that issue.
+Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like resumes or employee contracts can include sensitive data. When you investigate the results, you might find that employee contracts are stored in a nonsecure location. You can then correct that issue.
 
 NOTE: English, German, and Spanish are supported for categories. Support for more languages will be added later.
 
