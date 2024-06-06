@@ -180,5 +180,5 @@ You can also see the list of all scanner groups along with the IP address and st
 
 image:screenshot_scanner_groups.png[A screenshot listing all scanner groups along with the IP address for each scanner node in the group.]
 
-You can link:task-licensing-datasense.html[set up licensing for BlueXP classification] at this time. You will not be charged until your 30-day free trial ends.
+
 

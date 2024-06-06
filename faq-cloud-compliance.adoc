@@ -259,7 +259,7 @@ BlueXP classification accesses data stored in Elasticsearch through API calls, w
 
 == Licenses and costs
 
-The following questions relate to licensing and costs to use BlueXP classification.
+The following question relates to licensing and costs to use BlueXP classification.
 
 === How much does BlueXP classification cost?
 
