@@ -49,8 +49,6 @@ sidebar:
               url: /task-scanning-file-shares.html
         - title: Integrate Active Directory
           url: /task-add-active-directory-datasense.html
-        - title: Set up licensing
-          url: /task-licensing-datasense.html
         - title: FAQ
           url: /faq-cloud-compliance.html
     - title: Use BlueXP classification
@@ -89,8 +87,6 @@ sidebar:
                url: /task-deploy-multi-host-install-dark-site.html
              - title: Add scanner nodes to an existing deployment 
                url: /task-deploy-add-scanner-nodes.html
-             - title: Set up a free trial or bring your own license
-               url: /task-licensing-byol-freetrial.html  
         - title: Scan data deprecations
           entries: 
              - title: Scan Amazon S3 buckets

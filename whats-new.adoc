@@ -19,31 +19,31 @@ Learn what's new in BlueXP classification (Cloud Data Sense).
 
 == 5 June 2024 (Version 1.32)
 
-This release includes the following updates. 
+This release includes the following update. 
 
-=== Mapping scans gather metadata 
+//=== Mapping scans gather metadata 
 
-The following metadata is extracted from files during mapping scans and is displayed on the Governance, Compliance, and Investigation dashboards:  
+//The following metadata is extracted from files during mapping scans and is displayed on the Governance, Compliance, and Investigation dashboards:  
 
-* Working environment 
-* Working environment type 
-* Storage repository 
-* File type 
-* Used capacity 
-* Number of files  
-* File size 
-* File creation 
-* File last access  
-* File last modified 
-* File discovered time 
-* Permissions extraction
+//* Working environment 
+//* Working environment type 
+//* Storage repository 
+//* File type 
+//* Used capacity 
+//* Number of files  
+//* File size 
+//* File creation 
+//* File last access  
+//* File last modified 
+//* File discovered time 
+//* Permissions extraction
 
-=== Additional data in dashboards
+//=== Additional data in dashboards
 
-This release updates which data appears in the Governance, Compliance, and Investigation dashboards during mapping scans. 
+//This release updates which data appears in the Governance, Compliance, and Investigation dashboards during mapping scans. 
 
 
-For details, see https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
+//For details, see https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
 
 === New Mapping status column in the Configuration page
 
