@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-deploy-compliance-dark-site.html
-keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification, classification, install
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification, classification, install, cloud data sense
 summary: Complete a few steps to install BlueXP classification on a Linux host in an on-premises site that doesn't have internet access - also known as "private mode". This type of installation is perfect for your secure sites.
 ---
 
@@ -67,10 +67,6 @@ Ensure that your Linux system meets the <<Prepare the Linux host system,host req
 [role="quick-margin-para"]
 Download the BlueXP classification software from the NetApp Support Site and copy the installer file to the Linux host you plan to use. Then launch the installation wizard and follow the prompts to deploy the BlueXP classification instance.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the BlueXP classification service
-
-[role="quick-margin-para"]
-A subscription to your cloud provider Marketplace is required. 
 
 == Install the BlueXP Connector
 
@@ -239,7 +235,6 @@ If there is connectivity over port 8080 between the host machine and the Connect
 .What's Next
 From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and link:task-scanning-databases.html[databases] that you want to scan.
 
-You can also link:task-licensing-datasense.html[set up BYOL licensing for BlueXP classification] from the BlueXP digital wallet page at this time. You will not be charged until your 30-day free trial ends.
 
 
 == Upgrade BlueXP classification software
@@ -283,6 +278,6 @@ start_darksite_upgrade.sh
 
 The BlueXP classification software is upgraded on your host. The update can take 5 to 10 minutes.
 
-Note that no upgrade is required on scanner nodes if you have deployed BlueXP classification on multiple hosts systems for scanning very large configurations.
+//Note that no upgrade is required on scanner nodes if you have deployed BlueXP classification on multiple hosts systems for scanning very large configurations.
 
 You can verify that the software has been updated by checking the version at the bottom of the BlueXP classification UI pages.

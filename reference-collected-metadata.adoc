@@ -47,7 +47,7 @@ By default, if BlueXP classification doesn't have these permissions, the system 
 
 image:screenshot_scan_missing_permissions.png[A screenshot showing the switch you can use to have BlueXP classification scan your files even if it does not have the correct permissions to revert the last access time to the original timestamp.]
 
-This functionality is applicable to On-premises ONTAP systems, Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, and Non-NetApp file shares.
+This functionality is applicable to On-premises ONTAP systems, Cloud Volumes ONTAP, Azure NetApp Files, FSx for ONTAP, and third-party file shares.
 
 Note that there is a filter in the Investigation page called _Scan Analysis Event_ that enables you to display either the files that were not classified because BlueXP classification couldn't revert the last accessed time, or the files that were classified even though BlueXP classification couldn't revert the last access time. 
 
