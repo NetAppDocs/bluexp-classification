@@ -39,11 +39,6 @@ Ensure that your environment can meet the prerequisites. This includes outbound 
 [role="quick-margin-para"]
 Launch the installation wizard to deploy the BlueXP classification instance in the cloud.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Subscribe to the BlueXP classification service
-
-[role="quick-margin-para"]
-A BlueXP subscription through your cloud provider Marketplace is required. 
-
 //The first 500 TB of data that BlueXP classification scans in BlueXP is free for 30 days. A BlueXP subscription through your cloud provider Marketplace, or a BYOL license from NetApp, is required to continue scanning data after that point.
 
 == Create a Connector
@@ -52,7 +47,7 @@ If you don't already have a Connector, create a Connector in your cloud provider
 
 There are some scenarios where you have to use a Connector that's deployed in a specific cloud provider:
 
-//* When scanning data in Cloud Volumes ONTAP in AWS, Amazon FSx for ONTAP, or in AWS S3 buckets, you use a Connector in AWS.
+//* When scanning data in Cloud Volumes ONTAP in AWS, Amazon FSx for ONTAP, or in Amazon Simple Storage Service (Amazon S3) buckets, you use a Connector in AWS.
 * When scanning data in Cloud Volumes ONTAP in AWS or Amazon FSx for ONTAP buckets, you use a Connector in AWS.
 * When scanning data in Cloud Volumes ONTAP in Azure or in Azure NetApp Files, you use a Connector in Azure.
 ** For Azure NetApp Files, it must be deployed in the same region as the volumes you wish to scan.
@@ -311,4 +306,4 @@ Upgrades to the BlueXP Connector and BlueXP classification software is automated
 .What's Next
 From the Configuration page you can select the data sources that you want to scan.
 
-You can also link:task-licensing-datasense.html[set up licensing for BlueXP classification] at this time. You will not be charged until your 30-day free trial ends.
+

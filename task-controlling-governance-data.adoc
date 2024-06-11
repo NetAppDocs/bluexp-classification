@@ -15,7 +15,7 @@ summary: Gain control of the costs related to the data on your organizations' st
 [.lead]
 Gain control of the costs related to the data on your organizations' storage resources. BlueXP classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
 
-Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information prior to moving it.
+Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information before moving it.
 
 == The Governance dashboard
 
@@ -60,7 +60,7 @@ The _Top Data Repositories by Sensitivity Level_ area lists the top four data re
 * Personal data
 * Sensitive Personal data
 
-You can hover over each section to see the total number of items in each category.
+You can position your cursor over each section to see the total number of items in each category.
 
 Click each area to view the filtered results in the Investigation page so that you can investigate further.
 
@@ -75,13 +75,13 @@ The _Open Permissions_ area shows the percentage for each type of permissions th
 * Open to Public
 * Unknown Access
 
-You can hover over each section to see the total number of files in each category. Click each area to view the filtered results in the Investigation page so that you can investigate further.
+You can position your cursor over each section to see the total number of files in each category. Click each area to view the filtered results in the Investigation page so that you can investigate further.
 
 === Age of Data and Size of Data graphs
 
 You may want to investigate the items in the _Age_ and _Size_ graphs to see if there is any data you should delete or tier to less expensive object storage.
 
-You can hover over a point in the charts to see details about the age or size of the data in that category. Click to view all the files filtered by that age or size range.
+You can position your cursor over a point in the charts to see details about the age or size of the data in that category. Click to view all the files filtered by that age or size range.
 
 * *Age of Data graph* - Categorizes data based on the time it was created, the last time it was accessed, or the last time it was modified.
 * *Size of Data graph* - Categorizes data based on size.
@@ -94,7 +94,7 @@ The _Classification_ area provides a list of the most identified link:task-contr
 
 ==== Categories
 
-Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like "resumes" or "employee contracts" can include sensitive data. When you investigate the results, you might find that employee contracts are stored in an insecure location. You can then correct that issue.
+Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like "resumes" or "employee contracts" can include sensitive data. When you investigate the results, you might find that employee contracts are stored in a nonsecure location. You can then correct that issue.
 
 See link:task-controlling-private-data.html#view-files-by-categories[Viewing files by categories^] for more information.
 
@@ -108,7 +108,7 @@ See link:task-controlling-private-data.html#view-files-by-file-types[Viewing fil
 
 == Data Mapping Report
 
-The Data Mapping Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report first lists an overview that summarizes all your working environments and data sources, and then it provides a breakdown for each working environment.
+The Data Mapping Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report first lists an overview that summarizes all your working environments and data sources, and then it provides an analysis for each working environment.
 
 The report includes the following information:
 
@@ -137,15 +137,15 @@ image:screenshot_compliance_data_mapping_report_button.png[A screenshot of the G
 
 .Result
 
-BlueXP classification generates a PDF report that you can review and send to other groups as needed.
+BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
 
-If the report is larger than 1 MB, the PDF file is retained on the BlueXP classification instance and you'll see a pop-up message about the exact location. When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the PDF file. When BlueXP classification is deployed in the cloud, you'll need to SSH to the BlueXP classification instance to download PDF file. link:task-audit-data-sense-actions.html#access-the-log-files[See how to access data on the Classification instance^].
+If the report is larger than 1 MB, the .pdf file is retained on the BlueXP classification instance and you'll see a pop-up message about the exact location. When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the .pdf file. When BlueXP classification is deployed in the cloud, you'll need to SSH to the BlueXP classification instance to download .pdf file. link:task-audit-data-sense-actions.html#access-the-log-files[See how to access data on the Classification instance^].
 
 Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
 
 == Data Discovery Assessment Report
 
-The Data Discovery Assessment Report provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your data set:
+The Data Discovery Assessment Report provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your dataset:
 
 [cols="25,65",width=90%,options="header"]
 |===
@@ -176,6 +176,6 @@ image:screenshot_compliance_data_discovery_report_button.png[A screenshot of the
 
 .Result
 
-BlueXP classification generates a PDF report that you can review and send to other groups as needed.
+BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
 
 //Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
