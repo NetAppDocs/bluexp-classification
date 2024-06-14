@@ -1,7 +1,7 @@
 * BlueXP classification is not supported on a host that is shared with other applications - the host must be a dedicated host.
 //This include is used in 3 Linux deploy topics
 
-* When building the host system in your premises, you can choose among three system sizes depending on the size of the dataset that you plan to have BlueXP classification scan.
+* When building the host system in your premises, you can choose among these system sizes depending on the size of the dataset that you plan to have BlueXP classification scan.
 +
 [cols="17,17,27,31",width=95%,options="header"]
 |===
@@ -17,17 +17,8 @@
 - 100 GiB available on /opt
 - 395 GiB available on /var/lib/docker or for Podman /var/lib/containers or for Podman /var/lib/containers
 - 5 GiB on /tmp
-| *Medium* | 8 CPUs | 32 GB RAM | 200 GiB SSD on /, or
-- 50 GiB available on /opt
-- 145 GiB available on /var/lib/docker or for Podman /var/lib/containers
-- 5 GiB on /tmp
-| *Small* | 8 CPUs | 16 GB RAM | 100 GiB SSD on /, or
-- 50 GiB available on /opt
-- 45 GiB available on /var/lib/docker or for Podman /var/lib/containers
-- 5 GiB on /tmp
 |===
-+
-Note that there are limitations when using the smaller systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
+
 
 * When deploying a compute instance in the cloud for your BlueXP classification installation, we recommend a system that meets the "Large" system requirements above:
 
