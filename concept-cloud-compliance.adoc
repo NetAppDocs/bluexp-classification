@@ -135,7 +135,7 @@ TIP: The instance should remain running at all times because BlueXP classificati
 
 === Deploy on different instance types
 
-You can deploy BlueXP classification on a system with fewer CPUs and less RAM, but there are some limitations when using these less powerful systems.
+You can deploy BlueXP classification on a system with fewer CPUs and less RAM.
 
 [cols="18,31,51",width=95%,options="header"]
 |===
