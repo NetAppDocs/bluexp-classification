@@ -13,13 +13,18 @@ summary: There are many types of private data that BlueXP classification can ide
 :imagesdir: ./media/
 
 [.lead]
-There are many types of private data that BlueXP classification can identify in your volumes and databases. See the categories below.
+There are many types of private data that BlueXP classification can identify in your volumes and databases. 
+
+BlueXP classification identifies two types of personal data: 
+
+* *Personally identifiable information (Pii)*
+* *Sensitive personal information (SPii)*
 
 TIP: If you need BlueXP classification to identify other private data types, such as additional national ID numbers or healthcare identifiers, email ng-contact-data-sense@netapp.com with your request.
 
 == Types of personal data
 
-The personal data found in files can be general personal data or national identifiers. The third column in the table below identifies whether BlueXP classification uses link:task-controlling-private-data.html#view-files-that-contain-personal-data[proximity validation^] to validate its findings for the identifier.
+The personal data, or _personally identifiable information_ (Pii), found in files can be general personal data or national identifiers. The third column in the table below identifies whether BlueXP classification uses link:task-controlling-private-data.html#view-files-that-contain-personal-data[proximity validation^] to validate its findings for the identifier.
 
 The languages in which these items can be recognized are identified in the table.
 
@@ -107,20 +112,20 @@ The languages in which these items can be recognized are identified in the table
 
 == Types of sensitive personal data
 
-The sensitive personal data that BlueXP classification can find in files includes the following list. 
+BlueXP classification can find the following sensitive personal information (SPii) in files. 
 
 The items in this category can be recognized only in English at this time.
 
 // Civil Law Reference:: Data concerning a natural person's civil law suits, offenses, and procedures.
-Criminal Procedures Reference::	Data concerning a natural person's criminal convictions and offenses.
-Ethnicity Reference:: Data concerning a natural person's racial or ethnic origin.
-Health Reference:: Data concerning a natural person's health.
-ICD-9-CM Medical Codes:: Codes used in the medical and health industry.
-ICD-10-CM Medical Codes:: Codes used in the medical and health industry.
-Philosophical Beliefs Reference:: Data concerning a natural person's philosophical beliefs.
-Political Opinions Reference:: Data concerning a natural person's political opinions.
-Religious Beliefs Reference:: Data concerning a natural person's religious beliefs.
-Sex Life or Orientation Reference::	Data concerning a natural person's sex life or sexual orientation.
+* *Criminal Procedures Reference*: Data concerning a natural person's criminal convictions and offenses.
+* *Ethnicity Reference*: Data concerning a natural person's racial or ethnic origin.
+* *Health Reference*: Data concerning a natural person's health.
+* *ICD-9-CM Medical Codes*: Codes used in the medical and health industry.
+* *ICD-10-CM Medical Codes*: Codes used in the medical and health industry.
+* *Philosophical Beliefs Reference*: Data concerning a natural person's philosophical beliefs.
+* *Political Opinions Reference*: Data concerning a natural person's political opinions.
+* *Religious Beliefs Reference*: Data concerning a natural person's religious beliefs.
+* *Sex Life or Orientation Reference*:	Data concerning a natural person's sex life or sexual orientation.
 
 == Types of categories
 
@@ -172,12 +177,12 @@ The following Metadata is also categorized, and are identified in the same suppo
 * Application Data
 * Archive Files
 * Audio
-* Business Application Data
+* Breadcrumbs from BlueXP classification
+Business Application Data
 * CAD Files
 * Code
 * Corrupted
 * Database and index files
-* BlueXP classification Breadcrumbs
 * Design Files
 * Email Application Data
 * Encrypted (files with a high entropy score)
