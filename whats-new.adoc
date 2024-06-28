@@ -69,7 +69,7 @@ BlueXP classification is now available as a core capability within BlueXP at no 
 link:reference-free-paid.html[Learn more about the deprecated features].
 //Learn more about https://docs.netapp.com/us-en/bluexp-classification/reference-free-paid.html[A list of deprecated features].
 
-
+//end::whats-new[]
 
 == 1 April 2024 (Version 1.30)
 
@@ -108,7 +108,7 @@ If you deployed BlueXP classification on a system with internet access, the syst
 
 If you deployed BlueXP classification without internet access, you'll need to upgrade manually. For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-dark-site.html[Install BlueXP classification on a Linux host with no internet access].
 
-//end::whats-new[]
+
 
 == 4 March 2024 (version 1.29)
 
