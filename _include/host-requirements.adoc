@@ -69,7 +69,10 @@ Note that the following features are not currently supported when using RHEL 8.x
 *** Docker Engine version 19.3.1 or greater. https://docs.docker.com/engine/install/[View installation instructions^].
 +
 https://youtu.be/Ogoufel1q6c[Watch this video^] for a quick demo of installing Docker on CentOS.
-*** Podman version 4 or greater. To install Podman, update your system packages (`sudo yum update -y`), and then install Podman (`sudo yum install netavark -y`).
+*** Podman version 4 or greater. To install Podman, enter (`sudo yum install podman netavark -y`).
+
+//*** Podman version 4 or greater. To install Podman, update your system packages (`sudo yum update -y`), and then install Podman (`sudo yum install netavark -y`). PRior to 7/25/2024
+
 //https://podman.io/docs/installation#installing-on-linux[View installation instructions^].
 
 //RHEL 8 and 9 can use "sudo yum install netavark -y" instead of "sudo yum install podman -y" 
