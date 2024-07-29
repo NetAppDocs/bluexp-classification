@@ -15,7 +15,7 @@ summary: You can integrate a global Active Directory with BlueXP classification 
 [.lead]
 You can integrate a global Active Directory with BlueXP classification to enhance the results that BlueXP classification reports about file owners and which users and groups have access to your files.
 
-NOTE: Integration with Active Directory is not supported in the BlueXP classification core version.
+//NOTE: Integration with Active Directory is not supported in the BlueXP classification core version.
 
 When you set up certain data sources (listed below), you need to enter Active Directory credentials in order for BlueXP classification to scan CIFS volumes. This integration provides BlueXP classification with file owner and permissions details for the data that resides in those data sources. The Active Directory entered for those data sources might differ from the global Active Directory credentials you enter here. BlueXP classification will look in all integrated Active Directories for user and permission details.
 
