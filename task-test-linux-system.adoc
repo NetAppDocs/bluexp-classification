@@ -127,7 +127,10 @@ You must ensure that all required ports are open for communication between the C
 |Connector <> BlueXP classification | 8080 (TCP), 443 (TCP), and 80 | The firewall or routing rules for the Connector must allow inbound and outbound traffic over port 443 to and from the BlueXP classification instance.
 
 Make sure port 8080 is open so you can see the installation progress in BlueXP.
+
 |Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, the Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
+
+| If a firewall used on Linux host | 9000 | Needed for internal processes within an Ubuntu server.
 
 |===
 
