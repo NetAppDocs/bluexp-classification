@@ -222,7 +222,7 @@ The table below shows some of the differences:
 ====
 
 
-[cols="47,18,18",width=85%,options="header"]
+[cols="40,25,25",width=85%,options="header"]
 |===
 | Feature
 | Map & Classify
@@ -250,7 +250,7 @@ The table below shows some of the differences:
 
 // Start snippet: collapsible block (open on page load)
 
-.Compliance dashboard differences
+.Compliance dashboard differences:
 [%collapsible]
 ====
 
