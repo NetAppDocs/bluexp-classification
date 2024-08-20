@@ -241,7 +241,7 @@ The table below shows some of the differences:
 
 *Compliance dashboard differences*:
 
-[cols="47,18,18",width=85%,options="header"]
+[cols="44,20,20",width=85%,options="header"]
 |===
 | Feature
 | Map & Classify
@@ -256,7 +256,7 @@ The table below shows some of the differences:
 
 *Investigation filters differences*:
 
-[cols="47,18,18",width=85%,options="header"]
+[cols="44,20,20",width=85%,options="header"]
 |===
 | Feature
 | Map & Classify
