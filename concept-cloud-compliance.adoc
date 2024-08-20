@@ -215,10 +215,9 @@ The table below shows some of the differences:
 * File discovered time 
 * Permissions extraction 
 
-*Governance dashboard differences*:
 
 // Start snippet: collapsible block (open on page load)
-.Title
+.Governance dashboard differences:
 [%collapsible]
 ====
 
@@ -248,12 +247,12 @@ The table below shows some of the differences:
 ====
 // End snippet
 
-*Compliance dashboard differences*:
+
 // Start snippet: collapsible block (open on page load)
-.Compliance dashboard differences2
+
+.Compliance dashboard differences
 [%collapsible]
 ====
-
 
 [cols="40,25,25",width=85%,options="header"]
 |===
@@ -271,10 +270,9 @@ The table below shows some of the differences:
 ====
 // End snippet
 
-*Investigation filters differences*:
 
 // Start snippet: collapsible block (open on page load)
-.Investigation filters differences2:
+.Investigation filters differences:
 [%collapsible]
 ====
 
