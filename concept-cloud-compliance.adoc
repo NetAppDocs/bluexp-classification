@@ -34,7 +34,7 @@ BlueXP classification uses artificial intelligence (AI), natural language proces
 https://bluexp.netapp.com/netapp-cloud-data-sense[Learn more about the use cases for BlueXP classification^].
 
 
-*Maintain compliance*
+.Maintain compliance
 
 BlueXP classification provides several tools that can help with your compliance efforts. You can use BlueXP classification to:
 
@@ -42,7 +42,7 @@ BlueXP classification provides several tools that can help with your compliance 
 * Identify a wide scope of sensitive personal information as required by GDPR, CCPA, PCI, and HIPAA privacy regulations.
 * Respond to Data Subject Access Requests (DSAR) based on name or email address.
 
-*Strengthen security*
+.Strengthen security
 
 BlueXP classification can identify data that is potentially at risk for being accessed for criminal purposes. You can use BlueXP classification to:
 
@@ -51,7 +51,7 @@ BlueXP classification can identify data that is potentially at risk for being ac
 * Comply with data retention policies.
 * Use _Policies_ to automatically detect new security issues so security staff can take action immediately.
 
-*Optimize storage usage*
+.Optimize storage usage
 
 BlueXP classification provides tools that can help with your storage total cost of ownership (TCO). You can use BlueXP classification to:
 
@@ -325,7 +325,7 @@ The scan speed is affected by network latency, disk latency, network bandwidth, 
 
 BlueXP classification collects, indexes, and assigns categories to your data (files). The data that BlueXP classification indexes includes the following:
 
-* *Standard metadata* BlueXP classification collects standard metadata about files: the file type, its size, creation and modification dates, and so on.
+* *Standard metadata* about files: the file type, its size, creation and modification dates, and so on.
 
 * *Personal data*: Personally identifiable information (Pii) such as email addresses, identification numbers, or credit card numbers. link:task-controlling-private-data.html#view-files-that-contain-personal-data[Learn more about personal data^].
 
