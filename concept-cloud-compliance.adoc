@@ -217,6 +217,12 @@ The table below shows some of the differences:
 
 *Governance dashboard differences*:
 
+// Start snippet: collapsible block (open on page load)
+.Title
+[%collapsible]
+====
+
+
 [cols="47,18,18",width=85%,options="header"]
 |===
 | Feature
@@ -239,9 +245,17 @@ The table below shows some of the differences:
 | File types | Yes | Yes
 |===
 
-*Compliance dashboard differences*:
+====
+// End snippet
 
-[cols="44,20,20",width=85%,options="header"]
+*Compliance dashboard differences*:
+// Start snippet: collapsible block (open on page load)
+.Compliance dashboard differences2
+[%collapsible]
+====
+
+
+[cols="40,25,25",width=85%,options="header"]
 |===
 | Feature
 | Map & Classify
@@ -254,9 +268,17 @@ The table below shows some of the differences:
 | PCI DSS report | Yes | No
 |===
 
+====
+// End snippet
+
 *Investigation filters differences*:
 
-[cols="44,20,20",width=85%,options="header"]
+// Start snippet: collapsible block (open on page load)
+.Investigation filters differences2:
+[%collapsible]
+====
+
+[cols="40,25,25",width=85%,options="header"]
 |===
 | Feature
 | Map & Classify
@@ -292,6 +314,8 @@ The table below shows some of the differences:
 
 |===
 
+====
+// End snippet
 === How quickly does BlueXP classification scan data
 
 The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
