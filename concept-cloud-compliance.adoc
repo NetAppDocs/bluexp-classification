@@ -66,7 +66,7 @@ BlueXP classification can scan and analyze structured and unstructured data from
 
 * Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP)
 * On-premises ONTAP clusters
-//* StorageGRID
+* StorageGRID
 * Azure NetApp Files
 * Amazon FSx for ONTAP
 * Google Cloud NetApp Volumes
