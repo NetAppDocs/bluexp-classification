@@ -234,7 +234,7 @@ Yes, BlueXP classification is fully integrated with BlueXP. BlueXP users can onl
 
 Additionally, if you want to allow certain users to just view BlueXP classification scan results without having the ability to manage BlueXP classification settings, you can assign those users the Cloud Compliance Viewer role.
 
-link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn more^].
+link:concept-cloud-compliance.html[Learn more^].
 
 === Can anyone access the private data sent between my browser and BlueXP classification?
 
