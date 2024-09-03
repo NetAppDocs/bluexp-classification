@@ -99,7 +99,7 @@ You need to deploy the instance using a Connector deployed in AWS so that BlueXP
 
 *Note:* Deploying BlueXP classification in an on-premises location is not currently supported when scanning S3 buckets.
 
-Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
+Upgrades to BlueXP classification software are automated as long as the instance has internet connectivity.
 
 == Activating BlueXP classification on your S3 working environment
 
