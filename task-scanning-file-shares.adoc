@@ -5,7 +5,7 @@ keywords: cloud compliance, enable cloud compliance, privacy, compliance, file s
 summary: Complete a few steps to start scanning non-NetApp NFS or CIFS file shares directly with BlueXP classification. These file shares can reside on-premises or in the cloud.
 ---
 
-= Scanning file shares
+= Scan file shares
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -43,7 +43,7 @@ The group is a container for the file shares that you want to scan, and it is us
 [role="quick-margin-para"]
 Add the list of file shares that you want to scan and select the type of scanning. You can add up to 100 file shares at a time.
 
-== Reviewing file share requirements
+== Review file share requirements
 
 Review the following prerequisites to make sure that you have a supported configuration before you enable BlueXP classification.
 
@@ -64,7 +64,7 @@ include::_include/cifs-permissions.adoc[]
 
 * You will need the list of shares you want to add in the format `<host_name>:/<share_path>`. You can enter the shares individually, or you can supply a line-separated list of the file shares you want to scan.
 
-== Deploying the BlueXP classification instance
+== Deploy the BlueXP classification instance
 
 Deploy BlueXP classification if there isn't already an instance deployed.
 
@@ -72,9 +72,9 @@ Deploy BlueXP classification if there isn't already an instance deployed.
 
 //If you are scanning non-NetApp NFS or CIFS file shares that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy BlueXP classification in the same on-premises location that has no internet access^]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
 
-Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
+Upgrades to BlueXP classification software are automated as long as the instance has internet connectivity.
 
-== Creating the group for the file shares
+== Create the group for the file shares
 
 You must add a files shares "group" before you can add your file shares. The group is a container for the file shares that you want to scan, and the group name is used as the working environment name for those file shares.
 
@@ -90,7 +90,7 @@ image:screenshot_compliance_add_fileshares_button.png[A screenshot of the Scan C
 
 The new File Shares Group is added to the list of working environments.
 
-== Adding file shares to a group
+== Add file shares to a group
 
 You add file shares to the File Shares Group so that the files in those shares will be scanned by BlueXP classification. You add the shares in the format `<host_name>:/<share_path>`.
 
@@ -141,7 +141,7 @@ The switch at the top of the page for *Scan when missing "write attributes" perm
 
 BlueXP classification starts scanning the files in the file shares you added, and the results are displayed in the Dashboard and in other locations.
 
-== Removing a file share from compliance scans
+== Remove a file share from compliance scans
 
 If you no longer need to scan certain file shares, you can remove individual file shares from having their files scanned at any time. Just click *Remove Share* from the Configuration page.
 

@@ -66,13 +66,13 @@ Click *Compliance* > *Configuration* > *Edit CIFS Credentials* and provide the c
 [role="quick-margin-para"]
 Select or deselect the volumes you want to scan and BlueXP classification will start or stop scanning them.
 
-== Discovering the FSx for ONTAP file system that you want to scan
+== Discover the FSx for ONTAP file system that you want to scan
 
 If the FSx for ONTAP file system you want to scan is not already in BlueXP as a working environment, you can add it to the canvas at this time.
 
 https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html[See how to discover or create the FSx for ONTAP file system in BlueXP^].
 
-== Deploying the BlueXP classification instance
+== Deploy the BlueXP classification instance
 
 link:task-deploy-cloud-compliance.html[Deploy BlueXP classification^] if there isn't already an instance deployed.
 
@@ -82,7 +82,7 @@ You should deploy BlueXP classification in the same AWS network as the Connector
 
 Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
-== Enabling BlueXP classification in your working environments
+== Enable BlueXP classification in your working environments
 
 You can enable BlueXP classification for FSx for ONTAP volumes.
 
@@ -96,7 +96,7 @@ image:screenshot_fsx_scanning_activate.png[A screenshot of the Configuration tab
 * To map and classify all volumes, click *Map & Classify all Volumes*.
 * To customize scanning for each volume, click *Or select scanning type for each volume*, and then choose the volumes you want to map and/or classify.
 +
-See <<Enabling and disabling compliance scans on volumes,Enabling and disabling compliance scans on volumes>> for details.
+See <<Enable and disable compliance scans on volumes,Enabling and disabling compliance scans on volumes>> for details.
 
 . In the confirmation dialog box, click *Approve* to have BlueXP classification start scanning your volumes.
 
@@ -110,7 +110,7 @@ BlueXP classification starts scanning the volumes you selected in the working en
 * BlueXP classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#bluexp-classification-scans-only-one-share-under-a-volume[See more details about this BlueXP classification limitation^].
 ====
 
-== Verifying that BlueXP classification has access to volumes
+== Verify that BlueXP classification has access to volumes
 
 Make sure BlueXP classification can access volumes by checking your networking, security groups, and export policies.
 
@@ -145,7 +145,7 @@ include::_include/cifs-permissions.adoc[]
 +
 After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.
 
-== Enabling and disabling compliance scans on volumes
+== Enable and disable compliance scans on volumes
 
 You can start or stop mapping-only scans, or mapping and classification scans, in a working environment at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa. We recommend that you scan all volumes.
 
@@ -170,7 +170,7 @@ image:screenshot_volume_compliance_selection.png[A screenshot of the Configurati
 
 NOTE: New volumes added to the working environment are automatically scanned only when you have set the *Map* or *Map & Classify* setting in the heading area. When set to *Custom* or *Off* in the heading area, you'll need to activate mapping and/or full scanning on each new volume you add in the working environment.
 
-== Scanning data protection volumes
+== Scan data protection volumes
 
 By default, data protection (DP) volumes are not scanned because they are not exposed externally and BlueXP classification cannot access them. These are the destination volumes for SnapMirror operations from an FSx for ONTAP file system.
 

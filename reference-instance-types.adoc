@@ -15,7 +15,7 @@ summary: BlueXP classification software must run on a host that meets specific o
 [.lead]
 BlueXP classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. When deploying BlueXP classification in the cloud, we recommend that you use a system with the "large" characteristics for full functionality.
 
-You can deploy BlueXP classification on a system with fewer CPUs and less RAM, but there are some limitations when using these less powerful systems. link:concept-cloud-compliance.html#using-a-smaller-instance-type[Learn about these limitations^].
+You can deploy BlueXP classification on a system with fewer CPUs and less RAM, but there are some limitations when using these less powerful systems. link:concept-cloud-compliance.html[Learn about these limitations^].
 
 In the following tables, if the system marked as "default" is not available in the region where you are installing BlueXP classification, the next system in the table will be deployed.
 

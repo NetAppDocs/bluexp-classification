@@ -17,7 +17,18 @@ Learn what's new in BlueXP classification (Cloud Data Sense).
 
 //tag::whats-new[]
 
-== 5 Aug 2024 (Version 1.34)
+== 2 September 2024 (Version 1.35)
+This BlueXP classification release includes the following update. 
+
+=== Scan StorageGRID data 
+
+BlueXP classification can now scan data in StorageGRID.
+
+//For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-scanning-storagegrid.html[Scan StorageGRID data].
+
+For details, refer to link:task-scanning-storagegrid.html[Scan StorageGRID data].
+
+== 5 August 2024 (Version 1.34)
 
 This BlueXP classification release includes the following update. 
 
@@ -58,6 +69,9 @@ This release updates which data appears in the Governance, Compliance, and Inves
 
 For details, see https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
 
+//end::whats-new[]
+
+
 == 5 June 2024 (Version 1.32)
 
 This release includes the following update. 
@@ -79,7 +93,7 @@ BlueXP classification is now available as a core capability within BlueXP at no 
 link:reference-free-paid.html[Learn more about the deprecated features].
 //Learn more about https://docs.netapp.com/us-en/bluexp-classification/reference-free-paid.html[A list of deprecated features].
 
-//end::whats-new[]
+
 
 == 1 April 2024 (Version 1.30)
 
