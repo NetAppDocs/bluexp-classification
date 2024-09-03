@@ -112,10 +112,12 @@ You must ensure that all required ports are open for communication between the C
 | Ports
 | Description
 
-|Connector <> BlueXP classification | 8080 (TCP), 6000 (TCP), 443 (TCP), and 80 a| The security group for the Connector must allow inbound and outbound traffic over ports 6000 and 443 to and from the BlueXP classification instance.
+|Connector <> BlueXP classification | 8080 (TCP), 6000 (TCP), 443 (TCP), and 80. 9000 a| The security group for the Connector must allow inbound and outbound traffic over ports 6000 and 443 to and from the BlueXP classification instance.
 
 * Port 6000 is required so that the BlueXP classification BYOL license works in a dark site.
 * Port 8080 should be open so you can see the installation progress in BlueXP.
+* If a firewall is used on the Linux host, port 9000 is required for internal processes within an Ubuntu server.
+
 |Connector <> ONTAP cluster (NAS) | 443 (TCP)  a| BlueXP discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
 
 * The Connector host must allow outbound HTTPS access through port 443. If the Connector is in the cloud, all outbound communication is allowed by the predefined security group.
@@ -138,6 +140,7 @@ You must have the information for the Active Directory:
 * Domain Name (Active Directory Name)
 * Whether you are using secure LDAP (LDAPS) or not
 * LDAP Server Port (typically 389 for LDAP, and 636 for secure LDAP)
+| If a firewall used on Linux host | 9000 | Needed for internal processes within an Ubuntu server.
 
 |===
 
