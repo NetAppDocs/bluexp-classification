@@ -5,7 +5,7 @@ keywords: cloud compliance, enable cloud compliance, privacy, compliance, file s
 summary: Complete a few steps to start scanning non-NetApp NFS or CIFS file shares directly with BlueXP classification. These file shares can reside on-premises or in the cloud.
 ---
 
-= Scan file shares
+= Scan file shares with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
