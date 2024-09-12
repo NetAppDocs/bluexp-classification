@@ -5,7 +5,7 @@ keywords: cloud compliance, get started, enable cloud compliance, cloud complian
 summary: Complete a few steps to get started scanning Amazon FSx for ONTAP volume with BlueXP classification.
 ---
 
-= Get started with BlueXP classification for Amazon FSx for ONTAP
+= Scan Amazon FSx for ONTAP volumes with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font

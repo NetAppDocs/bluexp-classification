@@ -5,7 +5,7 @@ keywords: cloud compliance, enable cloud compliance, privacy, compliance, object
 summary: Complete a few steps to start scanning data within StorageGRID directly with BlueXP classification.
 ---
 
-= Get started with scanning StorageGRID data
+= Scan StorageGRID data with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font

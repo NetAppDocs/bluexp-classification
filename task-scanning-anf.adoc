@@ -5,7 +5,7 @@ keywords: cloud compliance, get started, enable cloud compliance, cloud complian
 summary: Complete a few steps to get started with BlueXP classification for Azure NetApp Files.
 ---
 
-= Get started with BlueXP classification for Azure NetApp Files
+= Scan Azure NetApp Files volumes with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
