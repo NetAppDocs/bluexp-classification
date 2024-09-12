@@ -5,7 +5,7 @@ keywords: cloud compliance, enable cloud compliance, outbound internet, endpoint
 summary: Complete a few steps to start scanning your database schemas with BlueXP classification.
 ---
 
-= Scan database schemas
+= Scan database schemas with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font

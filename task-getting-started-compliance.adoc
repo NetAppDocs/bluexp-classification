@@ -5,7 +5,7 @@ keywords: cloud compliance, get started, enable cloud compliance, cifs credentia
 summary: Complete a few steps to start scanning your Cloud Volumes ONTAP and on-premises ONTAP volumes using BlueXP classification.
 ---
 
-= Get started with BlueXP classification for Cloud Volumes ONTAP and on-premises ONTAP
+= Scan Cloud Volumes ONTAP and on-premises ONTAP volumes with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
