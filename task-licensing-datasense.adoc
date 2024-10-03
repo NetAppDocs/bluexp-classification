@@ -35,7 +35,7 @@ link:concept-cloud-compliance.html#cost[Learn more about the licensing and costs
 
 == 30-day free trial
 
-A 30-day free trial is available for up to 500 TB of data that BlueXP classification scans in a BlueXP workspace. You'll need to sign up for a subscription from your cloud provider's marketplace, to continue scanning data after that point.
+A 30-day free trial is available for up to 500 TB of data that BlueXP classification scans in a BlueXP project or workspace. You'll need to sign up for a subscription from your cloud provider's marketplace, to continue scanning data after that point.
 
 You can subscribe at any time and you will not be charged even after the 30 day trial ends. You can always see the total amount of data that is being scanned from the BlueXP classification Governance Dashboard. And the _Subscribe Now_ button makes it easy to subscribe when you are ready.
 
@@ -49,7 +49,7 @@ Subscribing ensures that there's no disruption of service after your free trial 
 
 .Steps
 
-These steps must be completed by a user who has the _Account Admin_ role.
+These steps must be completed by a user who has the _Organization admin_ or _Account admin_ role.
 
 . In the upper right of the BlueXP console, click the Settings icon, and select *Credentials*.
 +
