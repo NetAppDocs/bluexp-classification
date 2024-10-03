@@ -234,7 +234,7 @@ Yes, BlueXP classification is fully integrated with BlueXP. BlueXP users can onl
 
 Additionally, if you want to allow certain users to just view BlueXP classification scan results without having the ability to manage BlueXP classification settings, you can assign those users the *Classification viewer* role (when using BlueXP in standard mode) or the *Compliance Viewer* role (when using BlueXP in restricted mode).
 
-link:concept-cloud-compliance.html#user-access-to-compliance-information[Learn more^].
+link:concept-cloud-compliance.html[Learn more^].
 
 === Can anyone access the private data sent between my browser and BlueXP classification?
 
@@ -326,7 +326,6 @@ When link:task-deploy-cloud-compliance.html[deployed in the cloud]:
 * In Azure, BlueXP classification runs on a Standard_D16s_v3 VM with a 500 GiB disk.
 * In GCP, BlueXP classification runs on an n2-standard-16 VM with a 500 GiB Standard persistent disk.
 
-Note that you can deploy BlueXP classification on a system with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
 
 link:concept-cloud-compliance.html[Learn more about how BlueXP classification works^].
 

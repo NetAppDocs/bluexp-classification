@@ -34,7 +34,7 @@ BlueXP classification uses artificial intelligence (AI), natural language proces
 https://bluexp.netapp.com/netapp-cloud-data-sense[Learn more about the use cases for BlueXP classification^].
 
 
-=== Maintain compliance
+.Maintain compliance
 
 BlueXP classification provides several tools that can help with your compliance efforts. You can use BlueXP classification to:
 
@@ -42,7 +42,7 @@ BlueXP classification provides several tools that can help with your compliance 
 * Identify a wide scope of sensitive personal information as required by GDPR, CCPA, PCI, and HIPAA privacy regulations.
 * Respond to Data Subject Access Requests (DSAR) based on name or email address.
 
-=== Strengthen security
+.Strengthen security
 
 BlueXP classification can identify data that is potentially at risk for being accessed for criminal purposes. You can use BlueXP classification to:
 
@@ -51,7 +51,7 @@ BlueXP classification can identify data that is potentially at risk for being ac
 * Comply with data retention policies.
 * Use _Policies_ to automatically detect new security issues so security staff can take action immediately.
 
-=== Optimize storage usage
+.Optimize storage usage
 
 BlueXP classification provides tools that can help with your storage total cost of ownership (TCO). You can use BlueXP classification to:
 
@@ -66,7 +66,7 @@ BlueXP classification can scan and analyze structured and unstructured data from
 
 * Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP)
 * On-premises ONTAP clusters
-//* StorageGRID
+* StorageGRID
 * Azure NetApp Files
 * Amazon FSx for ONTAP
 * Google Cloud NetApp Volumes
@@ -133,7 +133,7 @@ You can also deploy BlueXP classification on a Linux host on your premises or on
 
 TIP: The instance should remain running at all times because BlueXP classification continuously scans the data.
 
-=== Deploy on different instance types
+*Deploy on different instance types*
 
 You can deploy BlueXP classification on a system with fewer CPUs and less RAM.
 
@@ -160,7 +160,7 @@ At a high-level, BlueXP classification works like this:
 . BlueXP classification scans the data using an AI learning process.
 . You use the provided dashboards and reporting tools to help in your compliance and governance efforts.
 
-== How scans work
+=== How scans work
 
 After you enable BlueXP classification and select the repositories that you want to scan (these are the volumes, database schemas, or other user data), it immediately starts scanning the data to identify personal and sensitive data. You should focus on scanning live production data in most cases instead of backups, mirrors, or DR sites. Then BlueXP classification maps your organizational data, categorizes each file, and identifies and extracts entities and predefined patterns in the data. The result of the scan is an index of personal information, sensitive personal information, data categories, and file types.
 
@@ -215,9 +215,14 @@ The table below shows some of the differences:
 * File discovered time 
 * Permissions extraction 
 
-*Governance dashboard differences*:
 
-[cols="47,18,18",width=85%,options="header"]
+// Start snippet: collapsible block (open on page load)
+.Governance dashboard differences:
+[%collapsible]
+====
+
+
+[cols="40,25,25",width=85%,options="header"]
 |===
 | Feature
 | Map & Classify
@@ -239,9 +244,17 @@ The table below shows some of the differences:
 | File types | Yes | Yes
 |===
 
-*Compliance dashboard differences*:
+====
+// End snippet
 
-[cols="47,18,18",width=85%,options="header"]
+
+// Start snippet: collapsible block (open on page load)
+
+.Compliance dashboard differences:
+[%collapsible]
+====
+
+[cols="40,25,25",width=85%,options="header"]
 |===
 | Feature
 | Map & Classify
@@ -254,9 +267,16 @@ The table below shows some of the differences:
 | PCI DSS report | Yes | No
 |===
 
-*Investigation filters differences*:
+====
+// End snippet
 
-[cols="47,18,18",width=85%,options="header"]
+
+// Start snippet: collapsible block (open on page load)
+.Investigation filters differences:
+[%collapsible]
+====
+
+[cols="40,25,25",width=85%,options="header"]
 |===
 | Feature
 | Map & Classify
@@ -292,6 +312,8 @@ The table below shows some of the differences:
 
 |===
 
+====
+// End snippet
 === How quickly does BlueXP classification scan data
 
 The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
@@ -299,11 +321,11 @@ The scan speed is affected by network latency, disk latency, network bandwidth, 
 * When performing Mapping scans, BlueXP classification can scan between 100-150 TiBs of data per day. 
 * When performing Classification scans, BlueXP classification can scan between 15-40 TiBs of data per day. 
 
-== Information that BlueXP classification indexes
+== Information that BlueXP classification categorizes
 
 BlueXP classification collects, indexes, and assigns categories to your data (files). The data that BlueXP classification indexes includes the following:
 
-* *Standard metadata* BlueXP classification collects standard metadata about files: the file type, its size, creation and modification dates, and so on.
+* *Standard metadata* about files: the file type, its size, creation and modification dates, and so on.
 
 * *Personal data*: Personally identifiable information (Pii) such as email addresses, identification numbers, or credit card numbers. link:task-controlling-private-data.html#view-files-that-contain-personal-data[Learn more about personal data^].
 
@@ -326,7 +348,7 @@ Outbound rules are completely open. Internet access is needed to install and upg
 If you have strict networking requirements, link:task-deploy-cloud-compliance.html#review-prerequisites[learn about the endpoints that BlueXP classification contacts^].
 
 [#user-roles]
-== User access to compliance information
+== User roles in BlueXP classification
 
 The role each user has been assigned provides different capabilities within BlueXP and within BlueXP classification. For details, refer to the following:
 

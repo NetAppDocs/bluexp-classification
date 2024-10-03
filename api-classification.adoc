@@ -40,8 +40,6 @@ For example, you can locate files _without_ specific Personal Identifiable Infor
 ** Update CIFS credentials 
 ** View and cancel actions
 ** Re-scan directories
-** Delete, copy, label, and assign users to data
-** Clone and copy files
 ** Export data
 
 The API is secure and it uses the same authentication method as the UI. You can find information on the authentication in: https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html

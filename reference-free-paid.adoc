@@ -27,7 +27,7 @@ There are some features and functionality that are deprecated in the BlueXP core
 
 | Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP) | Yes | Yes
 | On-premises ONTAP clusters | Yes | Yes
-| StorageGRID | Yes | No
+| StorageGRID | Yes | Yes
 | Azure NetApp Files | Yes | Yes
 | Amazon FSx for ONTAP | Yes | Yes
 | Google Cloud NetApp Volumes  | Yes | Yes

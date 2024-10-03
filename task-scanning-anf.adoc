@@ -5,7 +5,7 @@ keywords: cloud compliance, get started, enable cloud compliance, cloud complian
 summary: Complete a few steps to get started with BlueXP classification for Azure NetApp Files.
 ---
 
-= Getting started with BlueXP classification for Azure NetApp Files
+= Scan Azure NetApp Files volumes with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -54,13 +54,13 @@ Click *Compliance* > *Configuration* > *Edit CIFS Credentials* and provide the c
 [role="quick-margin-para"]
 Select or deselect the volumes that you want to scan and BlueXP classification will start or stop scanning them.
 
-== Discovering the Azure NetApp Files system that you want to scan
+== Discover the Azure NetApp Files system that you want to scan
 
 If the Azure NetApp Files system you want to scan is not already in BlueXP as a working environment, you can add it to the canvas at this time.
 
 https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html[See how to discover the Azure NetApp Files system in BlueXP^].
 
-== Deploying the BlueXP classification instance
+== Deploy the BlueXP classification instance
 
 link:task-deploy-cloud-compliance.html[Deploy BlueXP classification^] if there isn't already an instance deployed.
 
@@ -70,7 +70,7 @@ BlueXP classification must be deployed in the cloud when scanning Azure NetApp F
 
 Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
 
-== Enabling BlueXP classification in your working environments
+== Enable BlueXP classification in your working environments
 
 You can enable BlueXP classification on your Azure NetApp Files volumes.
 
@@ -84,7 +84,7 @@ image:screenshot_cloud_compliance_anf_scan_config.png[A screenshot of the Config
 * To map and classify all volumes, click *Map & Classify all Volumes*.
 * To customize scanning for each volume, click *Or select scanning type for each volume*, and then choose the volumes you want to map and/or classify.
 +
-See <<Enabling and disabling compliance scans on volumes,Enabling and disabling compliance scans on volumes>> for details.
+See <<Enable and disable compliance scans on volumes,Enable and disable compliance scans on volumes>> for details.
 
 . In the confirmation dialog box, click *Approve* to have BlueXP classification start scanning your volumes.
 
@@ -98,7 +98,7 @@ BlueXP classification starts scanning the volumes you selected in the working en
 * BlueXP classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#bluexp-classification-scans-only-one-share-under-a-volume[See more details about this BlueXP classification limitation^].
 ====
 
-== Verifying that BlueXP classification has access to volumes
+== Verify that BlueXP classification has access to volumes
 
 Make sure that BlueXP classification can access volumes by checking your networking, security groups, and export policies. You'll need to provide BlueXP classification with CIFS credentials so it can access CIFS volumes.
 
@@ -135,7 +135,7 @@ For example, the following image shows four volumes; one of which BlueXP classif
 +
 image:screenshot_compliance_volume_details.gif["A screenshot of the View Details page in the scan configuration that shows four volumes; one of which isn't being scanned because of network connectivity between BlueXP classification and the volume."]
 
-== Enabling and disabling compliance scans on volumes
+== Enable and disable compliance scans on volumes
 
 You can start or stop mapping-only scans, or mapping and classification scans, in a working environment at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa. We recommend that you scan all volumes.
 

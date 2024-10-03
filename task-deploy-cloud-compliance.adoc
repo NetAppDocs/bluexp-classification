@@ -212,14 +212,13 @@ See the following links for more details on vCPU limits:
 * https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas[Azure documentation: Virtual machine vCPU quotas^]
 * https://cloud.google.com/compute/quotas[Google Cloud documentation: Resource quotas^]
 
-+
-Note that you can deploy BlueXP classification on an instance in AWS cloud environments with fewer CPUs and less RAM, but there are limitations when using these systems. See link:concept-cloud-compliance.html#using-a-smaller-instance-type[Using a smaller instance type] for details.
+
 
 == Deploy BlueXP classification in the cloud
 
 Follow these steps to deploy an instance of BlueXP classification in the cloud. The Connector will deploy the instance in the cloud, and then install BlueXP classification software on that instance.
 
-Note that when deploying BlueXP classification from a BlueXP Connector in an AWS environment, you can select the default instance size or you can select from two smaller instance types. link:concept-cloud-compliance.html#using-a-smaller-instance-type[See the available instance types and limitations]. In regions where the default instance type isn't available, BlueXP classification runs on an link:reference-instance-types.html[alternate instance type].
+In regions where the default instance type isn't available, BlueXP classification runs on an link:reference-instance-types.html[alternate instance type].
 
 // start tabbed area
 
@@ -239,8 +238,6 @@ image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the
 //image:screenshot_cloud_compliance_deploy_cloud_aws.png[A screenshot of selecting the button to deploy BlueXP classification in the cloud.]
 
 . From the _Installation_ page, click *Deploy > Deploy* to use the "Large" instance size and start the cloud deployment wizard. 
-//+
-//You can also click *Deploy > Configuration* to choose from two smaller instance types if you don't have a lot of data to scan. This can save some cloud costs when using a smaller instance. A "Medium" resource size is shown below.
 //+
 //Then click *Deploy* to start the cloud deployment wizard.
 //+
