@@ -53,7 +53,7 @@ TIP: You can't copy files that reside in databases.
 
 .Requirements
 
-* You must have the Account Admin or Workspace Admin role to copy files.
+* You must have permissions to copy files. link:concept-cloud-compliance.html#user-roles[Learn about user access to compliance information].
 * Copying files requires that the destination NFS share allows access from the BlueXP classification instance.
 * You can copy between 1 and 100,000 files at a time.
 
@@ -92,7 +92,7 @@ The new volume is created in the same aggregate as the source volume. Ensure tha
 
 .Requirements
 
-* You must have the Account Admin or Workspace Admin role to copy files.
+* You must have permissions to copy files. link:concept-cloud-compliance.html#user-roles[Learn about user access to compliance information].
 * You must select a minimum of 20 files.
 * All selected files must be from the same volume, and the volume must be online.
 * The volume must be from a Cloud Volumes ONTAP or on-premises ONTAP system. No other data sources are currently supported.
@@ -141,7 +141,7 @@ TIP: You can't copy and sync files that reside in databases, OneDrive accounts, 
 
 .Requirements
 
-* You must have the Account Admin or Workspace Admin role to copy and sync files.
+* You must have permissions to copy and sync files. link:concept-cloud-compliance.html#user-roles[Learn about user access to compliance information].
 * You must select a minimum of 20 files.
 * All selected files must be from the same source repository (ONTAP volume, S3 bucket, NFS or CIFS share, etc.).
 * You'll need to activate the BlueXP copy and sync service and configure a minimum of one data broker that can be used to transfer files between the source and target systems. Review the BlueXP copy and sync requirements beginning with the https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html[Quick Start description^].
@@ -193,7 +193,7 @@ TIP: You can't move files that reside in databases.
 
 .Requirements
 
-* You must have the Account Admin or Workspace Admin role to move files.
+* You must have permissions to move files. link:concept-cloud-compliance.html#user-roles[Learn about user access to compliance information].
 * The source files can be located in the following data sources: On-premises ONTAP, Cloud Volumes ONTAP, Azure NetApp Files, File Shares, and SharePoint Online.
 * You can move a maximum of 15 million files at a time.
 * Only files which are 50 MB or smaller are moved.
@@ -242,7 +242,7 @@ Deleting files requires the following permissions:
 
 .Requirements
 
-* You must have the Account Admin or Workspace Admin role to delete files.
+* You must have permissions to delete files. link:concept-cloud-compliance.html#user-roles[Learn about user access to compliance information].
 * You can delete a maximum of 100,000 files at a time.
 
 .Steps

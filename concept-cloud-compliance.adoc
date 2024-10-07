@@ -347,16 +347,10 @@ Outbound rules are completely open. Internet access is needed to install and upg
 
 If you have strict networking requirements, link:task-deploy-cloud-compliance.html#review-prerequisites[learn about the endpoints that BlueXP classification contacts^].
 
+[#user-roles]
 == User roles in BlueXP classification
 
-The role each user has been assigned provides different capabilities within BlueXP and within BlueXP classification:
+The role each user has been assigned provides different capabilities within BlueXP and within BlueXP classification. For details, refer to the following:
 
-* An *Account Admin* can manage compliance settings and view compliance information for all working environments.
-
-* A *Workspace Admin* can manage compliance settings and view compliance information only for systems that they have permissions to access. If a Workspace Admin can't access a working environment in BlueXP, then they can't see any compliance information for the working environment in the BlueXP classification tab.
-
-* Users with the *Compliance Viewer* role can only view compliance information and generate reports for systems that they have permission to access. These users cannot enable/disable scanning of volumes, buckets, or database schemas. 
-
-//These users can't copy, move, or delete files either.
-
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-user-roles.html[Learn more about BlueXP roles^] and how to https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-netapp-accounts.html#adding-users[add users with specific roles^].
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[BlueXP IAM roles] (when using BlueXP in standard mode)
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-user-roles.html[BlueXP account roles^] (when using BlueXP in restricted mode or private mode)
