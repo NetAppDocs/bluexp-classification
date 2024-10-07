@@ -54,12 +54,7 @@
 
 ** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater:
 
-*** Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, and 9.3
-+
-Note that the following features are not currently supported when using RHEL 8.x and RHEL 9.x:
-+
-**** Installation in a dark site
-**** Distributed scanning; using a master scanner node and remote scanner nodes
+*** Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, 9.3, 9.4
 
 * *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
 
@@ -68,8 +63,6 @@ Note that the following features are not currently supported when using RHEL 8.x
 ** Depending on the OS you are using, you'll need to install one of the container engines:
 +
 *** Docker Engine version 19.3.1 or greater. https://docs.docker.com/engine/install/[View installation instructions^].
-+
-https://youtu.be/Ogoufel1q6c[Watch this video^] for a quick demo of installing Docker on CentOS.
 *** Podman version 4 or greater. To install Podman, enter (`sudo yum install podman netavark -y`).
 
 //*** Podman version 4 or greater. To install Podman, update your system packages (`sudo yum update -y`), and then install Podman (`sudo yum install netavark -y`). PRior to 7/25/2024
