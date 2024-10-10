@@ -17,6 +17,21 @@ Learn what's new in BlueXP classification (Cloud Data Sense).
 
 //tag::whats-new[]
 
+== 10 October 2024 (Version 1.36)
+This BlueXP classification release includes the following updates.
+
+=== Support for RHEL 9.4
+This release provides support for Red Hat Enterprise Linux v9.4 in addition to previously supported versions. This is applicable to any manual on-premises installation of BlueXP classification, including dark site deployments.
+
+The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, 9.3, and 9.4.
+
+Learn more about https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html[BlueXP classification deployments overview].
+
+=== Improved scan performance
+This release provides improved scan performance.
+
+
+
 == 2 September 2024 (Version 1.35)
 This BlueXP classification release includes the following update. 
 
