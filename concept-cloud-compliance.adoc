@@ -84,7 +84,7 @@ BlueXP classification can scan and analyze structured and unstructured data from
 ** SQL Server (MSSQL)
 //* File shares (for example, Dell EMC Isilon, Pure Storage, Nutanix, and so on)
 
-BlueXP classification supports NFS versions 3.x, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
+BlueXP classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
 //BlueXP classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
 
 == Cost

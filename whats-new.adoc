@@ -5,7 +5,7 @@ keywords: what's new, features, new, release notes, bugs, limitations, known iss
 summary: Learn what's new in BlueXP classification.
 ---
 
-= What's new with BlueXP classification
+= What's new in BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,9 +13,23 @@ summary: Learn what's new in BlueXP classification.
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new in BlueXP classification (Cloud Data Sense).
+Learn what's new in BlueXP classification.
 
 //tag::whats-new[]
+== 4 November 2024 
+Version 1.37
+
+=== Support for RHEL 8.10
+This release provides support for Red Hat Enterprise Linux v8.10 in addition to previously supported versions. This is applicable to any manual on-premises installation of BlueXP classification, including dark site deployments.
+
+The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, and 9.4.
+
+Learn more about https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[BlueXP classification].
+
+=== Support for NFS v4.1 
+This release provides support for NFS v4.1 in addition to previously supported versions.
+
+Learn more about https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[BlueXP classification].
 
 == 10 October 2024 (Version 1.36)
 This BlueXP classification release includes the following updates.
@@ -39,9 +53,11 @@ This BlueXP classification release includes the following update.
 
 BlueXP classification can now scan data in StorageGRID.
 
-//For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-scanning-storagegrid.html[Scan StorageGRID data].
+For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-scanning-storagegrid.html[Scan StorageGRID data].
 
-For details, refer to link:task-scanning-storagegrid.html[Scan StorageGRID data].
+//For details, refer to link:task-scanning-storagegrid.html[Scan StorageGRID data].
+
+//end::whats-new[]
 
 == 5 August 2024 (Version 1.34)
 
@@ -84,7 +100,7 @@ This release updates which data appears in the Governance, Compliance, and Inves
 
 For details, see https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
 
-//end::whats-new[]
+
 
 
 == 5 June 2024 (Version 1.32)
