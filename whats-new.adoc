@@ -296,7 +296,7 @@ You can enable file access audit logs to be collected on your BlueXP classificat
 
 === Data Sense BYOL licenses are now supported in dark sites
 
-Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html[See how to obtain and upload your Data Sense BYOL license].
+Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. 
 
 == 3 April 2023 (version 1.22)
 
