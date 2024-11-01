@@ -35,7 +35,7 @@ NOTE: For legacy versions 1.30 and earlier, if you need to install BlueXP classi
 You can also link:task-deploy-compliance-dark-site.html[install BlueXP classification in an on-premises site that doesn't have internet access] for completely secure sites.
 
 
-NOTE: For legacy versions 1.30 and earlier, to add scanner nodes, refer to link:task-deploy-add-scanner-nodes.html[Add scanner nodes to an existing deployment].
+//NOTE: For legacy versions 1.30 and earlier, to add scanner nodes, refer to link:task-deploy-add-scanner-nodes.html[Add scanner nodes to an existing deployment].
 
 == Quick start
 
