@@ -1,0 +1,10 @@
+
+=== Version 1.35
+
+.Scan StorageGRID data 
+
+BlueXP classification can now scan data in StorageGRID.
+
+//For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-scanning-storagegrid.html[Scan StorageGRID data].
+
+For details, refer to link:task-scanning-storagegrid.html[Scan StorageGRID data].
