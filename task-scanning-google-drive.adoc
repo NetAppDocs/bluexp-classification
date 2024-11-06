@@ -97,8 +97,7 @@ Select the type of scanning that BlueXP classification will perform on the user'
 .Steps
 
 . From the _Configuration_ page, click the *Configuration* button for the Google Drive account.
-+
-image:screenshot_compliance_google_drive_add_sites.png[A screenshot of the Configuration page where you can select the Configuration button.]
+
 //
 //. If this is the first time adding sites for this Google Drive account, click *Add your first Google Drive site*.
 //+

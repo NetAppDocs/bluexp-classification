@@ -187,7 +187,7 @@ If you want to scan these data protection volumes:
 +
 image:screenshot_compliance_dp_cifs_volumes.png[A screenshot of the two options for enabling CIFS data protection volumes.]
 
-. Activate each DP volume that you want to scan <<Enabling and disabling compliance scans on volumes,the same way you enabled other volumes>>.
+. Activate each DP volume that you want to scan.
 
 .Result
 Once enabled, BlueXP classification creates an NFS share from each DP volume that was activated for scanning. The share export policies only allow access from the BlueXP classification instance.
