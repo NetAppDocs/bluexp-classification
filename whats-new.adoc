@@ -4,7 +4,6 @@ permalink: whats-new.html
 keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, data sense, cloud data sense, bluexp, bluexp classification
 summary: Learn what's new in BlueXP classification.
 ---
-
 = What's new in BlueXP classification
 :hardbreaks:
 :nofooter:
@@ -15,74 +14,35 @@ summary: Learn what's new in BlueXP classification.
 [.lead]
 Learn what's new in BlueXP classification.
 
-//tag::whats-new[]
+// tag::whats-new[]
 == 4 November 2024 
-=== Version 1.37
-This BlueXP classification release includes the following updates.
-
-==== Support for RHEL 8.10
-This release provides support for Red Hat Enterprise Linux v8.10 in addition to previously supported versions. This is applicable to any manual on-premises installation of BlueXP classification, including dark site deployments.
-
-The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, and 9.4.
-
-Learn more about https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[BlueXP classification].
-
-==== Support for NFS v4.1 
-This release provides support for NFS v4.1 in addition to previously supported versions.
-
-Learn more about https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[BlueXP classification].
+include::_whatsnew/2024-11-04.adoc[]
 
 == 10 October 2024 
-
-=== Version 1.36
-This BlueXP classification release includes the following updates.
-
-==== Support for RHEL 9.4
-This release provides support for Red Hat Enterprise Linux v9.4 in addition to previously supported versions. This is applicable to any manual on-premises installation of BlueXP classification, including dark site deployments.
-
-The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, 9.3, and 9.4.
-
-Learn more about https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html[BlueXP classification deployments overview].
-
-==== Improved scan performance
-This release provides improved scan performance.
-
-
+include::_whatsnew/2024-10-10.adoc[]
 
 == 2 September 2024
+include::_whatsnew/2024-09-02.adoc[]
 
-=== Version 1.35
+// end::whats-new[]
+
+== 5 August 2024
+=== Version 1.34
 This BlueXP classification release includes the following update. 
 
-==== Scan StorageGRID data 
-
-BlueXP classification can now scan data in StorageGRID.
-
-For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-scanning-storagegrid.html[Scan StorageGRID data].
-
-//For details, refer to link:task-scanning-storagegrid.html[Scan StorageGRID data].
-
-//end::whats-new[]
-
-== 5 August 2024 (Version 1.34)
-
-This BlueXP classification release includes the following update. 
-
-=== Change from CentOS to Ubuntu 
+.Change from CentOS to Ubuntu 
 
 BlueXP classification has updated its Linux operating system for Microsoft Azure and Google Cloud Platform (GCP) from CentOS 7.9 to Ubuntu 22.04.
 
 For deployment details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html#prepare-the-linux-host-system[Install on a Linux host with internet access and prepare the Linux host system].
 
-== 1 July 2024 (Version 1.33)
+== 1 July 2024
+=== Version 1.33
 
-This release includes the following updates. 
-
-=== Ubuntu supported
+.Ubuntu supported
 This release supports the Ubuntu 24.04 Linux platform. 
 
-=== Mapping scans gather metadata 
-
+.Mapping scans gather metadata 
 The following metadata is extracted from files during mapping scans and is displayed on the Governance, Compliance, and Investigation dashboards:  
 
 * Working environment 
@@ -98,42 +58,34 @@ The following metadata is extracted from files during mapping scans and is displ
 * File discovered time 
 * Permissions extraction
 
-=== Additional data in dashboards
-
+.Additional data in dashboards
 This release updates which data appears in the Governance, Compliance, and Investigation dashboards during mapping scans. 
-
 
 For details, see https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
 
+== 5 June 2024
+=== Version 1.32
 
-
-
-== 5 June 2024 (Version 1.32)
-
-This release includes the following update. 
-
-
-
-=== New Mapping status column in the Configuration page
+.New Mapping status column in the Configuration page
 
 This release now shows a new Mapping status column in the Configuration page. The new column helps you identify if the mapping is running, queued, paused or more. 
 
 For explanations of the statuses, see https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html[Change scan settings].
 
-== 15 May 2024 (Version 1.31)
+== 15 May 2024
+=== Version 1.31
 
-=== Classification is available as a core service within BlueXP
+.Classification is available as a core service within BlueXP
 
 BlueXP classification is now available as a core capability within BlueXP at no additional charge for up to 500 TiB of scanned data. No Classification license or paid subscription is required. As we focus BlueXP classification functionality on scanning NetApp storage systems with this new version, some legacy functionality will only be available to customers who had previously paid for a license. The use of those legacy features will expire when the paid contract reaches its end date.
 
 link:reference-free-paid.html[Learn more about the deprecated features].
 //Learn more about https://docs.netapp.com/us-en/bluexp-classification/reference-free-paid.html[A list of deprecated features].
 
+== 1 April 2024
+=== Version 1.30
 
-
-== 1 April 2024 (Version 1.30)
-
-=== Support added for RHEL v8.8 and v9.3 BlueXP classification
+.Support added for RHEL v8.8 and v9.3 BlueXP classification
 
 This release provides support for Red Hat Enterprise Linux v8.8 and v9.3 in addition to previously supported 9.x, which requires Podman, rather than the Docker engine. This is applicable to any manual on-premises installation of BlueXP classification.
 
@@ -143,7 +95,7 @@ Learn more about https://docs.netapp.com/us-en/bluexp-classification/task-deploy
 
 BlueXP classification is supported if you install the Connector on a RHEL 8 or 9 host that resides on-premises. It's not supported if the RHEL 8 or 9 host resides in AWS, Azure, or Google Cloud.
 
-=== Option to activate audit log collection removed
+.Option to activate audit log collection removed
 
 The option to activate audit log collection has been disabled. 
 
@@ -158,41 +110,39 @@ The option to activate audit log collection has been disabled.
 
 //https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html[Learn more].
 
-=== Scan speed improved
+.Scan speed improved
 
 Scan performance on secondary scanner nodes has been improved. You can add more scanner nodes if you need additional processing power for your scans. For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[Install BlueXP classification on a host that has internet access].
 
-=== Automatic upgrades 
+.Automatic upgrades 
 
 If you deployed BlueXP classification on a system with internet access, the system upgrades automatically. Previously, the upgrade occurred after a specific time elapsed since the last user activity. With this release, BlueXP classification upgrades automatically if the local time is between 1:00 AM and 5:00 AM. If the local time is outside of these hours, the upgrade occurs after a specific time elapses since the last user activity. For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[Install on a Linux host with internet access].
 
 If you deployed BlueXP classification without internet access, you'll need to upgrade manually. For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-dark-site.html[Install BlueXP classification on a Linux host with no internet access].
 
-
-
-== 4 March 2024 (version 1.29)
-
-=== Now you can exclude scanning data that resides in certain data source directories
+== 4 March 2024
+=== Version 1.29
+.Now you can exclude scanning data that resides in certain data source directories
 
 If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can add these directory names to a configuration file that BlueXP classification processes. This feature enables you to avoid scanning directories that are unnecessary, or that would result in returning false positive personal data results.
 
 https://docs.netapp.com/us-en/bluexp-classification/task-exclude-scan-paths.html[Learn more].
 
-=== Extra Large instance support is now qualified
+.Extra Large instance support is now qualified
 
 If you need BlueXP classification to scan more than 250 million files, you can use an Extra Large instance in your cloud deployment or on-premises installation. This type of system can scan up to 500 million files.
 
 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#using-a-smaller-instance-type[Learn more].
 
 
+== 10 January 2024
+=== Version 1.27
 
-== 10 January 2024 (version 1.27)
-
-=== Investigation page results now display the total size in addition to total number of items
+.Investigation page results now display the total size in addition to total number of items
 
 The filtered results in the Investigation page now shows the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
 
-=== Configure additional Group IDs as "Open to Organization"
+.Configure additional Group IDs as "Open to Organization"
 
 Now you can configure Group IDs in NFS to be considered as "Open to Organization" directly from BlueXP classification if the group had not initially been set with that permission. Any files and folders that have these group IDs attached will show as "Open to Organization" in the Investigation Details page. See how to https://docs.netapp.com/us-en/bluexp-classification/task-add-group-id-as-open.html[add additional Group IDs as "open to organization"].
 
@@ -200,7 +150,9 @@ Now you can configure Group IDs in NFS to be considered as "Open to Organization
 //  
 //In the past when reports had over 10,000 rows you needed to download the report in JSON format to an external server. Now you can download the report to a local directory with up to 500k rows of data.
 
-== 14 December 2023 (version 1.26.6) 
+== 14 December 2023
+
+=== Version 1.26.6
 
 This release included some minor enhancements.
 
@@ -210,38 +162,42 @@ The release also removed the following options:
 * During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. Refer to link:task-investigate-data.html#filter-data-by-sensitivity-and-content[Investigate the data stored in your organization].
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled. Refer to link:task-org-private-data.html[Organize your private data].
 
-== 6 November 2023 (version 1.26.3)
+== 6 November 2023
+=== Version 1.26.3
 
-=== The following issues have been fixed in this release
+The following issues have been fixed in this release
 
 * Fixed an inconsistency when presenting the number of files scanned by the system in dashboards.
 * Improved the scanning behavior by handling and reporting on files and directories with special characters in the name and metadata.
 
-== 4 October 2023 (version 1.26)
+== 4 October 2023
+=== Version 1.26
 
-=== Support for on-premises installations of BlueXP classification on RHEL version 9
+.Support for on-premises installations of BlueXP classification on RHEL version 9
 
 Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; which was required for the BlueXP classification installation. We now support BlueXP classification installation on RHEL 9.0, 9.1, and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification (version 1.26 or greater) when using Podman.
 
 At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes) when using RHEL 9.x.
 
-== 5 September 2023 (version 1.25)
+== 5 September 2023
+=== Version 1.25
 
-=== Small and medium deployments temporarily unavailable
+.Small and medium deployments temporarily unavailable
 
 When you deploy an instance of BlueXP classification in AWS, the option to select *Deploy > Configuration* and choose a small or medium-sized instance is unavailable at this time. You can still deploy the instance using the large instance size by selecting *Deploy > Deploy*.
 
-=== Apply tags on up to 100,000 items from the Investigation Results page
+.Apply tags on up to 100,000 items from the Investigation Results page
 
 In the past you could only apply tags to a single page at a time in the Investigation Results page (20 items). Now you can select *all* items in the Investigation Results pages and apply tags to all the items - up to 100,000 items at a time. https://docs.netapp.com/us-en/bluexp-classification/task-org-private-data.html#assign-tags-to-files[See how].
 
-=== Identify duplicated files with a minimum file size of 1 MB
+.Identify duplicated files with a minimum file size of 1 MB
 
 BlueXP classification used to identify duplicated files only when files were 50 MB or larger. Now duplicated files starting with 1 MB can be identified. You can use the Investigation page filters "File Size" along with "Duplicates" to see which files of a certain size are duplicated in your environment.
 
-== 17 July 2023 (version 1.24)
+== 17 July 2023
+=== Version 1.24
 
-=== Two new types of German personal data are identified by BlueXP classification
+.Two new types of German personal data are identified by BlueXP classification
 
 BlueXP classification can identify and categorize files that contain the following types of data:
 
@@ -254,15 +210,15 @@ https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categ
 //
 //Rocky Linux 9 (9.0, 9.1, and 9.2) has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Rocky Linux host in your network, or on a Linux host in the cloud when using version 1.24 of the installer. https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Rocky Linux installed].
 
-=== BlueXP classification is fully supported in Restricted mode and Private mode
+.BlueXP classification is fully supported in Restricted mode and Private mode
 
 BlueXP classification is now fully supported in sites with no internet access (Private mode) and with limited outbound internet access (Restricted mode). https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn more about BlueXP deployment modes for the Connector^].
 
-=== Ability to skip versions when upgrading a Private mode installation of BlueXP classification
+.Ability to skip versions when upgrading a Private mode installation of BlueXP classification
 
 Now you can upgrade to a newer version of BlueXP classification even if it is not sequential. This means that the current limitation of upgrading BlueXP classification by one version at a time is no longer required. This feature is relevant starting from version 1.24 onwards.
 
-=== The BlueXP classification API is now available
+.The BlueXP classification API is now available
 
 The BlueXP classification API enables you to perform actions, create queries, and export information about the data you are scanning. The interactive documentation is available using Swagger. The documentation is separated into multiple categories, including Investigation, Compliance, Governance, and Configuration. Each category is a reference to the tabs in the BlueXP classification UI.
 
@@ -276,57 +232,60 @@ https://docs.netapp.com/us-en/bluexp-classification/api-classification.html[Lear
 //
 //SharePoint sites include a single document library by default. In the past, BlueXP classification could scan files only from that default library. Now files from additional libraries will also be scanned. 
 
-== 6 June 2023 (version 1.23)
+== 6 June 2023
+=== Version 1.23
 
-=== Japanese is now supported when searching for data subject names
+.Japanese is now supported when searching for data subject names
 
 Japanese names can now be entered when searching for a subject's name in response to a Data Subject Access Request (DSAR). You can generate a https://docs.netapp.com/us-en/bluexp-classification/task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Data Subject Access Request report] with the resulting information. You can also enter Japanese names in the https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#filter-data-by-sensitivity-and-content["Data Subject" filter in the Data Investigation page] to identify files that contain the subject's name.
 
-=== Ubuntu is now a supported Linux distribution on which you can install BlueXP classification
+.Ubuntu is now a supported Linux distribution on which you can install BlueXP classification
 
 Ubuntu 22.04 has been qualified as a supported operating system for BlueXP classification. You can install BlueXP classification on a Ubuntu Linux host in your network, or on a Linux host in the cloud when using version 1.23 of the installer. https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html[See how to install BlueXP classification on a host with Ubuntu installed].
 
-=== Red Hat Enterprise Linux 8.6 and 8.7 are no longer supported with new BlueXP classification installations
+.Red Hat Enterprise Linux 8.6 and 8.7 are no longer supported with new BlueXP classification installations
 
 These versions are not supported with new deployments because Red Hat no longer supports Docker, which is a prerequisite. If you have an existing BlueXP classification machine running on RHEL 8.6 or 8.7, NetApp will continue to support your configuration.
 
-=== BlueXP classification can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
+.BlueXP classification can be configured as an FPolicy Collector to receive FPolicy events from ONTAP systems
 
 You can enable file access audit logs to be collected on your BlueXP classification system for file access events detected on volumes in your working environments. BlueXP classification can capture the following types of FPolicy events and the users who performed the actions on your files: Create, Read, Write, Delete, Rename, Change owner/permissions, and Change SACL/DACL. 
 
-=== Data Sense BYOL licenses are now supported in dark sites
+.Data Sense BYOL licenses are now supported in dark sites
 
-Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. 
+Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
 
-== 3 April 2023 (version 1.22)
+== 3 April 2023
 
-=== New Data Discovery Assessment Report
+=== Version 1.22
+.New Data Discovery Assessment Report
 
 The Data Discovery Assessment Report provides a high-level analysis of your scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The goal of this report is to raise awareness of data governance concerns, data security exposures, and data compliance gaps of your data set. https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html#data-discovery-assessment-report[See how to generate and use the Data Discovery Assessment Report].
 
-=== Ability to deploy BlueXP classification on smaller instances in the cloud
+.Ability to deploy BlueXP classification on smaller instances in the cloud
 
 When deploying BlueXP classification from a BlueXP Connector in an AWS environment, now you can select from two smaller instance types than what is available with the default instance. If you are scanning a small environment this can help you save on cloud costs. However, there are some restrictions when using the smaller instance. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#using-a-smaller-instance-type[See the available instance types and limitations].
 
-=== Standalone script is now available to qualify your Linux system prior to BlueXP classification installation
+.Standalone script is now available to qualify your Linux system prior to BlueXP classification installation
 
 If you would like to verify that your Linux system meets all prerequisites independently of running the BlueXP classification installation, there is a separate script you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/bluexp-classification/task-test-linux-system.html[See how to check if your Linux host is ready to install BlueXP classification].
 
-== 7 March 2023 (version 1.21)
+== 7 March 2023
+=== Version 1.21
 
-=== New functionality to add your own custom categories from the BlueXP classification UI
+.New functionality to add your own custom categories from the BlueXP classification UI
 
 BlueXP classification now enables you to add your own custom categories so that BlueXP classification will identify the files that fit into those categories. BlueXP classification has many https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-categories[predefined categories], so this feature enables you to add custom categories to identify where information that is unique to your organization are found in your data.
 
 https://docs.netapp.com/us-en/bluexp-classification/task-managing-data-fusion.html#add-custom-categories[Learn more^].
 
-=== Now you can add custom keywords from the BlueXP classification UI
+.Now you can add custom keywords from the BlueXP classification UI
 
 BlueXP classification has had the ability to add custom keywords that BlueXP classification will identify in future scans for a while. However, you needed to log into the BlueXP classification Linux host and use a command line interface to add the keywords. In this release, the ability to add custom keywords is in the BlueXP classification UI, making it very easy to add and edit these keywords.
 
 https://docs.netapp.com/us-en/bluexp-classification/task-managing-data-fusion.html#add-custom-keywords-from-a-list-of-words[Learn more about adding custom keywords from the BlueXP classification UI^].
 
-=== Ability to have BlueXP classification *not* scan files when the "last access time" will be changed
+.Ability to have BlueXP classification *not* scan files when the "last access time" will be changed
 
 By default, if BlueXP classification doesn't have adequate "write" permissions, the system won't scan files in your volumes because BlueXP classification can't revert the "last access time" to the original timestamp. However, if you don't care if the last access time is reset to the original time in your files, you can override this behavior in the Configuration page so that BlueXP classification will scan the volumes regardless of permissions.
 
@@ -334,7 +293,7 @@ In conjunction with this capability, and new filter named "Scan Analysis Event" 
 
 https://docs.netapp.com/us-en/bluexp-classification/reference-collected-metadata.html#last-access-time-timestamp[Learn more about the "Last access time timestamp" and the permissions BlueXP classification requires].
 
-=== Three new types of personal data are identified by BlueXP classification
+.Three new types of personal data are identified by BlueXP classification
 
 BlueXP classification can identify and categorize files that contain the following types of data:
 
@@ -344,50 +303,52 @@ BlueXP classification can identify and categorize files that contain the followi
 
 https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
 
-=== Updated functionality for directories
+.Updated functionality for directories
 
 * The "Light CSV Report" option for Data Investigation Reports now includes information from directories.
 * The "Last Accessed" time filter now shows the last accessed time for both files and directories.
 
-=== Installation enhancements
+.Installation enhancements
 
 //* BlueXP classification can be installed on Linux hosts that are running CentOS Stream 8.
 * The BlueXP classification installer for sites without internet access (dark sites) now performs a pre-check to make sure your system and networking requirements are in place for a successful installation.
 * Installation audit log files are saved now; they are written to `/ops/netapp/install_logs`.
 
-== 5 February 2023 (version 1.20)
+== 5 February 2023
+=== Version 1.20
 
-=== Ability to send Policy-based notification emails to any email address
+.Ability to send Policy-based notification emails to any email address
 
 In earlier versions of BlueXP classification you could send email alerts to the BlueXP users in your account when certain critical Policies return results. This feature enables you to get notifications to protect your data when you're not online. Now you can also send email alerts from Policies to any other users - up to 20 email addresses - who are not in your BlueXP account. 
 
 https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html#send-email-alerts-when-non-compliant-data-is-found[Learn more about sending email alerts based on Policy results].
 
-=== Now you can add personal patterns from the BlueXP classification UI
+.Now you can add personal patterns from the BlueXP classification UI
 
 BlueXP classification has had the ability to add custom "personal data" that BlueXP classification will identify in future scans for a while. However, you needed to log into the BlueXP classification Linux host and use a command line to add the custom patterns. In this release, the ability to add personal patterns using a regex is in the BlueXP classification UI, making it very easy to add and edit these custom patterns.
 
 https://docs.netapp.com/us-en/bluexp-classification/task-managing-data-fusion.html#add-custom-personal-data-identifiers-using-a-regex[Learn more about adding custom patterns from the BlueXP classification UI^].
 
-=== Ability to move 15 million files using BlueXP classification
+.Ability to move 15 million files using BlueXP classification
 
 In the past you could have BlueXP classification move a maximum of 100,000 source files to any NFS share. Now you can move up to 15 million files at a time. https://docs.netapp.com/us-en/bluexp-classification/task-managing-highlights.html#move-source-files-to-an-nfs-share[Learn more about moving source files using BlueXP classification].
 
-=== Ability to see the number of users who have access to SharePoint Online files
+.Ability to see the number of users who have access to SharePoint Online files
 
 The filter "Number of users with access" now supports files stored in SharePoint Online repositories. In the past only files on CIFS shares were supported. Note that SharePoint groups that are not active directory based will not be counted in this filter at this time.
 
-=== New "Partial Success" status has been added to the Action Status panel
+.New "Partial Success" status has been added to the Action Status panel
 
 The new "Partial Success" status indicates that a BlueXP classification action is finished and some items failed and some items succeeded, for example, when you are moving or deleting 100 files. Additionally, the "Finished" status has been renamed to "Success". In the past, the "Finished" status might list actions that succeeded and that failed. Now the "Success" status means that all actions succeeded on all items. https://docs.netapp.com/us-en/bluexp-classification/task-view-compliance-actions.html[See how to view the Actions Status panel].
 
-== 9 January 2023 (version 1.19)
+== 9 January 2023
+=== Version 1.19
 
-=== Ability to view a chart of files that contain sensitive data and that are overly permissive
+.Ability to view a chart of files that contain sensitive data and that are overly permissive
 
 The Governance dashboard has added a new _Sensitive Data and Wide Permissions_ area that provides a heatmap of files that contain sensitive data (including both sensitive and sensitive personal data) and that are overly permissive. This can help you to see where you may have some risks with sensitive data. https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html#data-listed-by-sensitivity-and-wide-permissions[Learn more].
 
-=== Three new filters are available in the Data Investigation page
+.Three new filters are available in the Data Investigation page
 
 New filters are available to refine the results that display in the Data Investigation page:
 
@@ -397,6 +358,6 @@ New filters are available to refine the results that display in the Data Investi
 
 https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#filter-data-in-the-data-investigation-page[See the list of all the filters you can use to investigate your data].
 
-=== BlueXP classification can identify the Japanese Individual Number
+.BlueXP classification can identify the Japanese Individual Number
 
 BlueXP classification can identify and categorize files that contain the Japanese Individual Number (also known as My Number). This includes both the Personal and Corporate My Number. https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
