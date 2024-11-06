@@ -14,17 +14,16 @@ summary: Learn what's new in BlueXP classification.
 [.lead]
 Learn what's new in BlueXP classification (Cloud Data Sense).
 
+// tag::whats-new[]
 == 10 October 2024 
-
 include::_whatsnew/2024-10-10.adoc[]
 
 == 2 September 2024
-
 include::_whatsnew/2024-09-02.adoc[]
 
 == 5 August 2024
-
 include::_whatsnew/2024-08-05.adoc[]
+// end::whats-new[]
 
 == 1 July 2024
 
