@@ -144,7 +144,7 @@ You must have the information for the Active Directory:
 
 |===
 
-If you are using multiple BlueXP classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-dark-site.html[See the additional port requirements].
+//If you are using multiple BlueXP classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-dark-site.html[See the additional port requirements].
 
 == Install BlueXP classification on the on-premises Linux host
 
@@ -154,7 +154,7 @@ image:diagram_deploy_onprem_single_host_no_internet.png[A diagram showing the lo
 
 //For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. 
 
-image:diagram_deploy_onprem_multi_host_no_internet.png[A diagram showing the location of the data sources you can scan when using multiple BlueXP classification instances deployed on-prem without internet access.]
+//image:diagram_deploy_onprem_multi_host_no_internet.png[A diagram showing the location of the data sources you can scan when using multiple BlueXP classification instances deployed on-prem without internet access.]
 
 === Single-host installation for typical configurations
 
