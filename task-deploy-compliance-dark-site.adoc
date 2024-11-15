@@ -13,7 +13,7 @@ summary: Complete a few steps to install BlueXP classification on a Linux host i
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to install BlueXP classification on a Linux host in an on-premises site that doesn't have internet access - also known as _private mode_. This type of installation is perfect for your secure sites.
+Complete a few steps to install BlueXP classification on a Linux host in an on-premises site that doesn't have internet access - also known as _private mode_. This type of installation, which uses an installation script, has no connectivity to the BlueXP SaaS layer. 
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn about the different deployment modes for the BlueXP Connector and BlueXP classification^].
 
