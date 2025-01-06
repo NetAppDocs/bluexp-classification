@@ -5,4 +5,6 @@ Previously, the Data Investigation report export was limited to 10,000 rows. Wit
 
 You can choose the working environment, volumes, destination folder, and either JSON or CSV format. The exported filename includes a timestamp to help you identify when the data was exported.
 
-For details about data investigation and the report, see https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html[Investigate data stored in your organization].
+//For details about data investigation and the report, see https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html[Investigate data stored in your organization].
+
+For details about data investigation and the report, see link:../task-investigate-data.html[Investigate data stored in your organization].
