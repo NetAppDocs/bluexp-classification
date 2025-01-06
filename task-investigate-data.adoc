@@ -219,13 +219,13 @@ BlueXP classification uses hashing technology to determine duplicate files. If a
 
 You can download the list of duplicate files and send it to your storage admin so they can decide which files, if any, can be deleted. Or you can link:task-managing-highlights.html#delete-source-files[delete the file] yourself if you are confident that a specific version of the file is not needed.
 
-=== View all duplicated files
+*View all duplicated files*
 
 If you want a list of all files that are duplicated in the working environments and data sources you are scanning, you can use the filter called *Duplicates > Has duplicates* in the Data Investigation page.
 
 All duplicated files are displayed in the Results page.
 
-=== View if a specific file is duplicated
+*View if a specific file is duplicated*
 
 If you want to see if a single file has duplicates, in the Data Investigation results pane you can click image:button_down_caret.png[down-caret] for any single file to view the file metadata. If there are duplicates of a certain file, this information appears next to the _Duplicates_ field.
 
