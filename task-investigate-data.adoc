@@ -13,7 +13,7 @@ summary: You can investigate the data from your organization by viewing details 
 :imagesdir: ./media/
 
 [.lead]
-You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the BlueXP classification UI, including the Governance and Compliance dashboards.
+You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the BlueXP classification UI, including the Governance and Compliance dashboards. You can export the data into a CSV or JSON file for further analysis or to share with others.
 
 NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
 
@@ -239,9 +239,9 @@ TIP: You can use the "file hash" value provided in this page and enter it direct
 
 The Data Investigation Report is a download of the filtered contents of the Data Investigation page. 
 
-The report is available as a .CSV file that you can save to the local machine. 
+The report is available as a .CSV or .JSON file that you can save to the local machine. 
 
-//This report can include a maximum of 10,000 rows of data.
+
 //* As a .JSON file that you export to an NFS Share. 
 //+
 //If there are more than 250,000 rows of data, additional .JSON files are created. 
@@ -250,25 +250,7 @@ The report is available as a .CSV file that you can save to the local machine.
 
 There can be up to three report files downloaded if BlueXP classification is scanning files (unstructured data), directories (folders and file shares), and databases (structured data).
 
-=== Generate the Data Investigation Report
-
-.Steps
-
-. From the Data Investigation page, click the image:button_download.png[download button] button on the top, right of the page.
-
-. Select to download a .CSV report of the data, and click *Download Report*.
-//+
-//When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
-+
-image:screenshot_compliance_investigation_report.png[A screenshot of the Download Investigation Report page with multiple options.]
-
-.Result
-
-A dialog displays a message that the reports are being downloaded.
-
-//You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
-
-=== What's included in the Data Investigation Report
+*What's included in the Data Investigation Report*
 
 The *Unstructured Files Data Report* includes the following information about your files:
 
@@ -317,3 +299,21 @@ The *Structured Data Report* includes the following information about your datab
 * Row count
 * Personal information
 * Sensitive personal information
+
+
+.Steps to generate the report
+
+. From the Data Investigation page, click the image:button_download.png[download button] button on the top, right of the page.
+
+. Select to download a .CSV or .JSON report of the data, and click *Download Report*.
+//+
+//When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
++
+image:screenshot_compliance_investigation_report2.png[A screenshot of the Download Investigation Report page with multiple options.]
+
+.Result
+
+A dialog displays a message that the reports are being downloaded.
+
+//You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
+
