@@ -20,7 +20,7 @@ BlueXP classification identifies two types of personal data:
 * *Personally identifiable information (Pii)*
 * *Sensitive personal information (SPii)*
 
-TIP: If you need BlueXP classification to identify other private data types, such as additional national ID numbers or healthcare identifiers, email ng-contact-data-sense@netapp.com with your request.
+TIP: If you need BlueXP classification to identify other private data types, such as additional national ID numbers or healthcare identifiers, contact your account manager. 
 
 == Types of personal data
 
