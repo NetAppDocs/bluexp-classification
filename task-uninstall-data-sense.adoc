@@ -41,7 +41,7 @@ image:screenshot_compliance_uninstall.png[A screenshot of the button to uninstal
 
 . In the _Uninstall Data Sense_ dialog, type *uninstall* to confirm that you want to disconnect the BlueXP classification instance from the BlueXP Connector, and then click *Uninstall*.
 
-. To uninstall the software from the host, run the `cleanup.sh` script on the host machine, for example:
+. To uninstall the software from the host, run the `cleanup.sh` script on the BlueXP classification host machine, for example:
 +
 [source,cli]
 cleanup.sh
