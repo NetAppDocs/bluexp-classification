@@ -19,7 +19,7 @@ NOTE: The capabilities described in this section are available only if you have 
 
 == Filter data in the Data Investigation page
 
-You can filter the contents of the investigation page to display only the results you want to see. This is a very powerful feature because after you've refined the data, you can use the button bar at the top of the page to perform a variety of actions, including copying files, moving files, adding a tag or AIP label to the files, and more.
+You can filter the contents of the investigation page to display only the results you want to see. 
 
 If you want to download the contents of the page as a report after you've refined it, click the image:button_download.png[download button] button. <<Data Investigation Report,Go here for details about the Data Investigation report>>.
 
