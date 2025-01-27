@@ -9,14 +9,18 @@
 | CPU
 | RAM (swap memory must be disabled)
 | Disk
-| *Extra Large* | 32 CPUs | 128 GB RAM | 1 TiB SSD on /, or
-- 100 GiB available on /opt
-- 895 GiB available on /var/lib/docker
-- 5 GiB on /tmp
-| *Large* | 16 CPUs | 64 GB RAM | 500 GiB SSD on /, or
-- 100 GiB available on /opt
-- 395 GiB available on /var/lib/docker or for Podman /var/lib/containers or for Podman /var/lib/containers
-- 5 GiB on /tmp
+| *Extra Large* | 32 CPUs | 128 GB RAM 
+a|* 1 TiB SSD on /, or 100 GiB available on /opt
+* 895 GiB available on /var/lib/docker
+* 5 GiB on /tmp
+* *For Podman, 5 GB on /tmp*
+* *For Podman, 30 GB on /var/tmp* 
+| *Large* | 16 CPUs | 64 GB RAM 
+a|* 500 GiB SSD on /, or 100 GiB available on /opt
+* 395 GiB available on /var/lib/docker or for Podman /var/lib/containers or for Podman /var/lib/containers
+* 5 GiB on /tmp
+* *For Podman, 5 GB on /tmp*
+* *For Podman, 30 GB on /var/tmp* 
 |===
 
 

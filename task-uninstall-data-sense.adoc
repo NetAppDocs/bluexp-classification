@@ -13,7 +13,7 @@ summary: You can uninstall the BlueXP classification software to troubleshoot is
 :imagesdir: ./media/
 
 [.lead]
-You can uninstall the BlueXP classification software to troubleshoot issues or to permanently remove the software from the host. Deleting the instance also deletes the associated disks where the indexed data resides - all the information BlueXP classification has scanned will be permanently deleted.
+Uninstall the BlueXP classification software to troubleshoot issues or to permanently remove the software from the host. Deleting the instance also deletes the associated disks where the indexed data resides - all the information BlueXP classification has scanned will be permanently deleted.
 
 The steps that you need to use depend on whether you deployed BlueXP classification in the cloud or on an on-premises host.
 
