@@ -15,7 +15,7 @@ summary: Complete a few steps to install BlueXP classification on a Linux host i
 [.lead]
 Complete a few steps to install BlueXP classification on a Linux host in your network, or on a Linux host in the cloud, that has internet access. You'll need to deploy the Linux host manually in your network or in the cloud as part of this installation.
 
-The on-prem installation may be a good option if you prefer to scan on-premises ONTAP systems using a BlueXP classification instance that's also located on premises -- but this is not a requirement. The software functions exactly the same way regardless of which installation method you choose.
+The on-premises installation may be a good option if you prefer to scan on-premises ONTAP systems using a BlueXP classification instance that's also located on premises -- but this is not a requirement. The software functions exactly the same way regardless of which installation method you choose.
 
 The BlueXP classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the BlueXP classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install BlueXP classification].
 
