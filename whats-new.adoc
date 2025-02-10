@@ -16,18 +16,22 @@ Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
 
+== 10 February 2025
+include::_whatsnew/2025-02-10.adoc[]
+
 == 22 January 2025
 include::_whatsnew/2025-01-13.adoc[]
 
 == 16 December 2024
 include::_whatsnew/2024-12-16.adoc[]
 
+// end::whats-new[]
 
 == 4 November 2024 
 include::_whatsnew/2024-11-04.adoc[]
 
 
-// end::whats-new[]
+
 
 == 10 October 2024 
 include::_whatsnew/2024-10-10.adoc[]

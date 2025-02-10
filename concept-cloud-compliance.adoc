@@ -175,17 +175,21 @@ You can enable and disable scans at the volume level or at the database schema l
 
 === What's the difference between Mapping and Classification scans
 
-BlueXP classification enables you to run a general "mapping" scan on selected data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
+BlueXP classification uses two types of scans: 
 
-Many users like this functionality because they want to quickly scan their data to identify the data sources that require more research - and then they can enable classification scans only on those required data sources or volumes.
+* A general "mapping-only" scan on selected data sources. Mapping-only scans provide only a high-level overview of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
+
+* Map and Classify scans provide deep-level scanning of your data. 
+
+You might benefit from using Mapping-only scans to quickly scan your data to identify the data sources that require more research and then later enable Map and Classify scans only on those required data sources or volumes.
 
 The table below shows some of the differences:
 
 [cols="47,18,18",width=85%,options="header"]
 |===
 | Feature
-| Classification
-| Mapping
+| Map & classify scans
+| Mapping-only scans
 
 | Scan speed | Slow | Fast
 | Pricing | Free | Free
@@ -319,8 +323,8 @@ The table below shows some of the differences:
 
 The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
 
-* When performing Mapping scans, BlueXP classification can scan between 100-150 TiBs of data per day. 
-* When performing Classification scans, BlueXP classification can scan between 15-40 TiBs of data per day. 
+* When performing Mapping-only scans, BlueXP classification can scan between 100-150 TiBs of data per day. 
+* When performing Map & classify scans, BlueXP classification can scan between 15-40 TiBs of data per day. 
 
 == Information that BlueXP classification categorizes
 
