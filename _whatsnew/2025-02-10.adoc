@@ -30,7 +30,7 @@ To change the priority, do the following:
 //image:../screenshot-configuration-scans-prioritize.png[Configuration page where you can prioritize scans]
 
 . From the Actions ... option, select *Prioritize scan*.
-
+//. Select the image://button-actions.png[Actions] option and select *Prioritize scan*.
 
 .Retry scans
 
@@ -47,7 +47,7 @@ To retry a scan, do the following:
 
 The scan is retried with the same configuration as the original scan. If the scan fails again, you can retry it as many times as needed.
 
-
+For details, refer to xxx. 
 
 
 
