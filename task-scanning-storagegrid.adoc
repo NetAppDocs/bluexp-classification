@@ -19,32 +19,6 @@ Complete a few steps to start scanning data within StorageGRID directly with Blu
 //Azure Blob (using MinIO),  
 
 
-== Quick start
-
-Get started quickly by following these steps, or scroll down to the remaining sections for full details.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Review StorageGRID prerequisites
-
-[role="quick-margin-para"]
-You need to have the endpoint URL to connect with the StorageGRID service.
-
-[role="quick-margin-para"]
-You need to have the Access Key and Secret Key from StorageGRID so that BlueXP classification can access the buckets.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the BlueXP classification instance
-
-[role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html[Deploy BlueXP classification^] if there isn't already an instance deployed.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add the StorageGRID Service
-
-[role="quick-margin-para"]
-Add the StorageGRID service to BlueXP classification.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Select the buckets to scan
-
-[role="quick-margin-para"]
-Select the buckets that you'd like to scan and BlueXP classification will start scanning them.
 
 == Review StorageGRID requirements
 
@@ -72,9 +46,10 @@ Add the StorageGRID service.
 
 .Steps
 
-. From the Working Environments Configuration page, click *Add Data Source* > *Add StorageGRID*.
-+
-image:screenshot-scanning-add-storagegrid.png[A screenshot of the Scan Configuration page where you can click the Add StorageGRID button.]
+. From the BlueXP classification menu, select the *Configuration* option. 
+
+. From the Configuration page, select *Add Working Environment* > *Add StorageGRID*.
+
 
 . In the Add StorageGRID Service dialog, enter the details for the StorageGRID service and click *Continue*.
 .. Enter the name you want to use for the Working Environment. This name should reflect the name of the StorageGRID service to which you are connecting.
@@ -93,24 +68,21 @@ After you enable BlueXP classification on StorageGRID, the next step is to confi
 
 .Steps
 
-. In the Configuration page, click *Configuration* from the StorageGRID working environment.
-+
-image:screenshot-scanning-storagegrid-configuration.png[A screenshot of clicking Configuration for the working environment so you can choose the buckets that you want to scan.]
+. In the Configuration page, locate the StorageGRID working environment. 
 
-. Enable mapping-only scans, or mapping and classification scans, on your buckets.
+. On the StorageGRID working environment tile, select *Configuration*.
+
+
 +
 image:screenshot-scanning-add-storagegrid-buckets.png[A screenshot of selecting the StorageGRID buckets you want to scan.]
+
+. Complete one of the following steps to enable or disable scanning:
 +
-[cols="45,45",width=90%,options="header"]
-|===
-| To:
-| Do this:
+* To enable mapping-only scans on a bucket, select *Map*. 
+* To enable full scans on a bucket, select *Map & Classify*. 
+* To disable scanning on a bucket, select *Off*.
 
-| Enable mapping-only scans on a bucket | Click *Map*
-| Enable full scans on a bucket | Click *Map & Classify*
-| Disable scanning on a bucket | Click *Off*
 
-|===
 
 .Result
 

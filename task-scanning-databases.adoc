@@ -17,29 +17,6 @@ Complete a few steps to start scanning your database schemas with BlueXP classif
 
 //Note that after you have enabled database scanning that you can add unique identifiers that BlueXP classification will identify in all your data sources based on specific columns in your databases. This is called the _Data Fusion_ feature. link:task-managing-data-fusion.html#add-custom-personal-data-identifiers-from-your-databases[Learn how to add custom personal data identifiers from your databases^].
 
-== Quick start
-
-Get started quickly by following these steps, or scroll down to the remaining sections for full details.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Review database prerequisites
-
-[role="quick-margin-para"]
-Ensure that your database is supported and that you have the information necessary to connect to the database.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the BlueXP classification instance
-
-[role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html[Deploy BlueXP classification^] if there isn't already an instance deployed.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add the database server
-
-[role="quick-margin-para"]
-Add the database server that you want to access.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Select the schemas
-
-[role="quick-margin-para"]
-Select the schemas that you want to scan.
 
 == Review prerequisites
 
@@ -86,9 +63,9 @@ Upgrades to BlueXP classification software is automated as long as the instance 
 
 Add the database server where the schemas reside.
 
-. From the Working Environments Configuration page, click *Add Data Source* > *Add Database Server*.
-+
-image:screenshot_compliance_add_db_server_button.png[A screenshot of the Scan Configuration page where you can click the Add DB Server button.]
+. From the BlueXP classification menu, select *Configuration*. 
+
+. From the Configuration page, select *Add Working Environment* > *Add Database Server*.
 
 . Enter the required information to identify the database server.
 .. Select the database type.
@@ -107,7 +84,7 @@ You can stop or start full scanning of your schemas at any time.
 
 TIP: There is no option to select mapping-only scans for database schemas.
 
-. From the _Configuration_ page, click the *Configuration* button for the database you want to configure.
+. From the _Configuration_ page, select the *Configuration* button for the database you want to configure.
 +
 image:screenshot_compliance_db_server_config.png[A screenshot of the Scan Configuration page where you can select the Configuration button.]
 
