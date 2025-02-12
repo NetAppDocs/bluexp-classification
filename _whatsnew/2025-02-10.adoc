@@ -14,7 +14,7 @@ By default, scans are queued based on the order in which they are initiated. Wit
 
 Priority is granted on a one-time basis. Automatic rescans of mapping data occur in the default order. 
 
-You can only prioritize link:concept-cloud-compliance.md#whats-the-difference-between-mapping-and-classification-scans[mapping-only scans], not map and classify scans. 
+Prioritization is limited to link:concept-cloud-compliance.md#whats-the-difference-between-mapping-and-classification-scans[mapping-only scans]; it's not available for map and classify scans. 
 // https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans
 
 To change the priority: 
@@ -23,24 +23,18 @@ To change the priority:
 . Select the resources you want to prioritize.
 //+
 //image:../screenshot-configuration-scans-prioritize.png[Configuration page where you can prioritize scans]
-
 . From the Actions ... option, select *Prioritize scan*.
-
 
 .Retry all scans
 
 BlueXP classification now supports the ability to batch retry all failed scans. 
 
-You can now reattempt scans in a batch operation with the **Retry all** function. If classification scans are failing due to a temporary issue such as a network outage, you can retry all scans at the same time with one button instead of retrying them individually. 
+You can now reattempt scans in a batch operation with the **Retry all** function. If classification scans are failing due to a temporary issue such as a network outage, you can retry all scans at the same time with one button instead of retrying them individually. Scans can be retried as many times as needed. 
 
 To retry all scans:
 
 . From the BlueXP classification menu, select *Configuration*.
 //+
 //image:../screenshot-configuration-scans-retry.png[Configuration page where you can retry scans]
-. Do one of the following: 
 . To retry all failed scans, select *Retry all scans*.
 // ** To retry a specific scan, select the resource and select *Retry scan* from the Actions ... option.
-
-The scan is retried with the same configuration as the original scan. If the scan fails again, you can retry it as many times as needed.
-
