@@ -11,16 +11,10 @@ The following operating systems require using the Podman container engine, and t
 
 When scanning configuration, you can prioritize the most important scans so that they are done before other scans. This feature helps when you have many working environments and you want to make sure the high priority scans are being done successfully at first.
 
-There are two types of scans: 
+You can only prioritize link:concept-cloud-compliance.md#whats-the-difference-between-mapping-and-classification-scans[mapping-only scans], not map and classify scans. 
+// https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans
 
-* *Mapping-only scans* provide only a high-level overview of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
-* *Map and classify* scans provide deep-level scanning of your data. 
-
-You might benefit from using Mapping-only scans to quickly scan your data to identify the data sources that require more research and then  later enable Map and classify scans only on those required data sources or volumes.
-
-The priority is assigned only to Mapping-only scans, not Map and classify scans. 
-
-The priority is set to 1 by default, and you can change it to any number between 1 and 10. The lower the number, the higher the priority. If you don’t set a priority, the scan is assigned a priority of 5.
+The priority is set to 1 by default, and you can change it to any number between 1 and 10. The lower the number, the higher the priority. If you don't set a priority, the scan is assigned a priority of 5.
 
 To change the priority, do the following: 
 
@@ -34,6 +28,7 @@ To change the priority, do the following:
 
 .Retry scans
 
+BlueXP classification now supports the ability to batch retry all failed scans. 
 With this release, you can retry scans that have failed. This feature is useful when you have a scan that failed because of a temporary issue, such as a network outage. You can retry the scan without having to reconfigure it.
 
 To retry a scan, do the following:
