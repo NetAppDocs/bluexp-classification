@@ -15,8 +15,6 @@ summary: Complete a few steps to start scanning your database schemas with BlueX
 [.lead]
 Complete a few steps to start scanning your database schemas with BlueXP classification.
 
-//Note that after you have enabled database scanning that you can add unique identifiers that BlueXP classification will identify in all your data sources based on specific columns in your databases. This is called the _Data Fusion_ feature. link:task-managing-data-fusion.html#add-custom-personal-data-identifiers-from-your-databases[Learn how to add custom personal data identifiers from your databases^].
-
 
 == Review prerequisites
 
@@ -57,7 +55,7 @@ If you are scanning database schemas that are accessible over the internet, you 
 
 If you are scanning database schemas that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy BlueXP classification in the same on-premises location that has no internet access^]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
 
-Upgrades to BlueXP classification software is automated as long as the instance has internet connectivity.
+
 
 == Add the database server
 
@@ -84,7 +82,7 @@ You can stop or start full scanning of your schemas at any time.
 
 TIP: There is no option to select mapping-only scans for database schemas.
 
-. From the _Configuration_ page, select the *Configuration* button for the database you want to configure.
+. From the Configuration page, select the *Configuration* button for the database you want to configure.
 +
 image:screenshot_compliance_db_server_config.png[A screenshot of the Scan Configuration page where you can select the Configuration button.]
 
@@ -96,4 +94,4 @@ image:screenshot_compliance_select_schemas.png[A screenshot of the Scan Configur
 
 BlueXP classification starts scanning the database schemas that you enabled. If there are any errors, they'll appear in the Status column, alongside the required action to fix the error.
 
-Note that BlueXP classification scans your databases once per day - databases are not continuously scanned like other data sources.
+BlueXP classification scans your databases once per day; databases are not continuously scanned like other data sources.
