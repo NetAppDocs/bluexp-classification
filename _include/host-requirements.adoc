@@ -60,6 +60,7 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 
 *** Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, 9.3, 9.4
 
+** AVX must be enabled on your operating system.
 * *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
 
 * *Additional software*: You must install the following software on the host before you install BlueXP classification:
