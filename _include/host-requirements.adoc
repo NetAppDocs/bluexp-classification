@@ -58,7 +58,7 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 
 ** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater:
 
-*** Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, 9.3, 9.4
+*** Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, 9.3, 9.4, and 9.5
 
 * *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
 
