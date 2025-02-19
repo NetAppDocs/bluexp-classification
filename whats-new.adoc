@@ -16,18 +16,22 @@ Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
 
+== 19 February 2025
+include::_whatsnew/2025-02-19.adoc[]
+
 == 22 January 2025
 include::_whatsnew/2025-01-13.adoc[]
 
 == 16 December 2024
 include::_whatsnew/2024-12-16.adoc[]
 
+// end::whats-new[]
 
 == 4 November 2024 
 include::_whatsnew/2024-11-04.adoc[]
 
 
-// end::whats-new[]
+
 
 == 10 October 2024 
 include::_whatsnew/2024-10-10.adoc[]
@@ -73,7 +77,7 @@ The following metadata is extracted from files during mapping scans and is displ
 .Additional data in dashboards
 This release updates which data appears in the Governance, Compliance, and Investigation dashboards during mapping scans. 
 
-For details, see https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
+For details, see link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
 
 == 5 June 2024
 === Version 1.32
@@ -265,7 +269,7 @@ You can enable file access audit logs to be collected on your BlueXP classificat
 
 .Data Sense BYOL licenses are now supported in dark sites
 
-Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
+Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-byol-freetrial.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
 
 == 3 April 2023
 
