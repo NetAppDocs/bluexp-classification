@@ -38,7 +38,7 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 ** Videos
 ** Miscellaneous (general "other" category)
 
-* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#view-all-duplicated-files[See what types of duplicate files are displayed].
+* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#filter-data-by-duplicates[See what types of duplicate files are displayed].
 
 NOTE: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Stale Data_ category.
 
