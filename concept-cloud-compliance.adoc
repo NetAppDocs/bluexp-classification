@@ -175,13 +175,12 @@ You can enable and disable scans at the volume level or at the database schema l
 
 === What's the difference between Mapping and Classification scans
 
-BlueXP classification uses two types of scans: 
+You can conduct two types of scans in BlueXP classification:
 
-* A general "mapping-only" scan on selected data sources. Mapping-only scans provide only a high-level overview of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
+- **Mapping-only** scans provide only a high-level overview of your data and are performed on selected data sources. Mapping-only scans take less time than map and classify scans because the do not access files to see the data inside. 
+- **Map and Classify** scans provide deep-level scanning of your data. 
 
-* Map and Classify scans provide deep-level scanning of your data. 
-
-You might benefit from using Mapping-only scans to quickly scan your data to identify the data sources that require more research and then later enable Map and Classify scans only on those required data sources or volumes.
+Mapping-only scans enable you to quickly scan your data and identify data sources that might require more research, which you can then perform a Map & Classify scan on. 
 
 The table below shows some of the differences:
 

@@ -16,8 +16,8 @@ Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
 
-== 10 February 2025
-include::_whatsnew/2025-02-10.adoc[]
+== 19 February 2025
+include::_whatsnew/2025-02-19.adoc[]
 
 == 22 January 2025
 include::_whatsnew/2025-01-13.adoc[]
@@ -269,7 +269,7 @@ You can enable file access audit logs to be collected on your BlueXP classificat
 
 .Data Sense BYOL licenses are now supported in dark sites
 
-Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-datasense.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
+Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-byol-freetrial.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
 
 == 3 April 2023
 
