@@ -58,9 +58,9 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 
 ** The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater:
 
-*** Red Hat Enterprise Linux version 8.8, 9.0, 9.1, 9.2, 9.3, 9.4
+*** Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4
 
-** Ensure that AVX is enabled for BlueXP classification. 
+** Advanced Vector Extensions (AVX) must be enabled on the host system.
 
 * *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
 
@@ -80,3 +80,5 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 ** Python version 3.6 or greater. https://www.python.org/downloads/[View installation instructions^].
 
 * *NTP considerations*: NetApp recommends configuring the BlueXP classification system to use a Network Time Protocol (NTP) service. The time must be synchronized between the BlueXP classification system and the BlueXP Connector system.
+
+//2024/02/21, BLUEXPDOC-262 & BLUEXPDOC-264
