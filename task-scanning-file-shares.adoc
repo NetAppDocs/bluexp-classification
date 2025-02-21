@@ -19,29 +19,7 @@ NOTE: Scanning data from non-NetApp file shares is not supported in the BlueXP c
 
 //TIP: Adding file shares is the only way to scan data from Google Cloud NetApp Volumes. 
 
-== Quick start
 
-Get started quickly by following these steps, or scroll down to the remaining sections for full details.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Review file share prerequisites
-
-[role="quick-margin-para"]
-For CIFS (SMB) shares, ensure that you have credentials to access the shares.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the BlueXP classification instance
-
-[role="quick-margin-para"]
-link:task-deploy-cloud-compliance.html[Deploy BlueXP classification^] if there isn't already an instance deployed.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a group to hold the file shares
-
-[role="quick-margin-para"]
-The group is a container for the file shares that you want to scan, and it is used as the working environment name for those file shares.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the file shares to the group
-
-[role="quick-margin-para"]
-Add the list of file shares that you want to scan and select the type of scanning. You can add up to 100 file shares at a time.
 
 == Review file share requirements
 
@@ -72,7 +50,6 @@ Deploy BlueXP classification if there isn't already an instance deployed.
 
 //If you are scanning non-NetApp NFS or CIFS file shares that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy BlueXP classification in the same on-premises location that has no internet access^]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
 
-Upgrades to BlueXP classification software are automated as long as the instance has internet connectivity.
 
 == Create the group for the file shares
 
@@ -82,11 +59,13 @@ You can mix NFS and CIFS shares in the same group, however, all CIFS file shares
 
 .Steps
 
-. From the Working Environments Configuration page, click *Add Data Source* > *Add File Shares Group*.
-+
-image:screenshot_compliance_add_fileshares_button.png[A screenshot of the Scan Configuration page where you can click the Add File Shares Group button.]
+. From the BlueXP classification menu, select *Configuration*. 
 
-. In the Add Files Shares Group dialog, enter the name for the group of shares and click *Continue*.
+. From the Configuration page, select *Add Working Environment* > *Add File Shares Group*.
+
+. In the Add Files Shares Group dialog, enter the name for the group of shares and select *Continue*.
+
+.Result
 
 The new File Shares Group is added to the list of working environments.
 
@@ -100,19 +79,21 @@ When adding both NFS and CIFS shares in a single group, you'll need to run throu
 
 .Steps
 
-. From the _Working Environments_ page, click the *Configuration* button for the File Shares Group.
+. From the BlueXP classification menu, select *Configuration*. 
+
+. From the Working Environments tile on the Configuration page, select the *Configuration* button for the File Shares Group.
 +
 image:screenshot_compliance_fileshares_add_shares.png[A screenshot of the Scan Configuration page where you can select the Configuration button.]
 
-. If this is the first time adding file shares for this File Shares Group, click *Add your first Shares*.
+. If this is the first time adding file shares for this File Shares Group, select *Add your first Shares*.
 +
 image:screenshot_compliance_fileshares_add_initial_shares.png[A screenshot showing the Add your first Shares button to add initial shares to the group.]
 +
-If you are adding file shares to an existing group, click *Add Shares*.
+If you are adding file shares to an existing group, select *Add Shares*.
 +
 image:screenshot_compliance_fileshares_add_more_shares2.png[A screenshot showing the Add Shares button to add more shares to the group.]
 
-. Select the protocol for the file shares you are adding, add the file shares that you want to scan - one file share per line - and click *Continue*.
+. Select the protocol for the file shares you are adding, add the file shares that you want to scan (one file share per line) and select *Continue*.
 +
 When adding CIFS (SMB) shares, you need to enter the Active Directory credentials that provide read access to the shares. Admin credentials are preferred.
 +
@@ -123,18 +104,13 @@ A confirmation dialog displays the number of shares that were added.
 If the dialog lists any shares that could not be added, capture this information so that you can resolve the issue. In some cases you can re-add the share with a corrected host name or share name.
 
 . Enable mapping-only scans, or mapping and classification scans, on each file share.
-+
-[cols="45,45",width=90%,options="header"]
-|===
-| To:
-| Do this:
 
-| Enable mapping-only scans on file shares | Click *Map*
-| Enable full scans on file shares | Click *Map & Classify*
-| Disable scanning on file shares | Click *Off*
-
-|===
+. Do one of the following to enable or disable scans: 
 +
+* To enable mapping-only scans on file shares, select *Map*.
+* To enable full scans on file shares, select *Map & Classify*.
+* To disable scanning on file shares, select *Off*.
+
 The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't scan the files because BlueXP classification can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, turn the switch ON and all files are scanned regardless of the permissions. link:reference-collected-metadata.html#last-access-time-timestamp[Learn more^].
 
 .Result
@@ -143,6 +119,10 @@ BlueXP classification starts scanning the files in the file shares you added, an
 
 == Remove a file share from compliance scans
 
-If you no longer need to scan certain file shares, you can remove individual file shares from having their files scanned at any time. Just click *Remove Share* from the Configuration page.
+If you no longer need to scan certain file shares, you can remove individual file shares from having their files scanned at any time. 
 
+.Steps
+. From the BlueXP classification menu, select *Configuration*.
+. From the Configuration page, select *Remove Share*.
++
 image:screenshot_compliance_fileshares_remove_share.png[A screenshot showing how to remove a single file share from having its files scanned.]
