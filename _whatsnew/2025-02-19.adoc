@@ -38,3 +38,7 @@ To retry all scans:
 //image:../screenshot-configuration-scans-retry.png[Configuration page where you can retry scans]
 . To retry all failed scans, select *Retry all scans*.
 // ** To retry a specific scan, select the resource and select *Retry scan* from the Actions ... option.
+
+.Improved categorization model accuracy 
+
+The accuracy of the machine learning model for link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories[predefined categories] has improved by 11%. 
