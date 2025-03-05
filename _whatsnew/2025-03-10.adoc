@@ -1,4 +1,4 @@
-=== Version 1.40
+=== Version 1.41
 This BlueXP classification release includes general improvements and bug fixes. It also includes:
 
 .Scan status
