@@ -1,0 +1,10 @@
+=== Version 1.40
+This BlueXP classification release includes general improvements and bug fixes and:
+
+.Scan status
+
+When you an initiate mapping or classification-only scans on a volume, BlueXP classification now reports the progress of the scan. BlueXP presents separate progress bars for mapping and classification scans. 
+
+You can hover over the scan to see the number of files scanned relative to the total file count in the volume. 
+
+To view the status of your scans, navigate to **Governance** then **Classification** then **Configuration**. Select the **Working Environment configuration** then the volume you want to track the progress of.  
