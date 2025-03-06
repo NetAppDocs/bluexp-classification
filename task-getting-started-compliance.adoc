@@ -51,7 +51,7 @@ See <<Enable and disable compliance scans on volumes,Enable and disable complian
 
 .Result
 
-BlueXP classification starts scanning the volumes you selected in the working environment. Results will be available in the Compliance dashboard as soon as BlueXP classification finishes the initial scans. The time that it takes depends on the amount of data--it could be a few minutes or hours.
+BlueXP classification starts scanning the volumes you selected in the working environment. Results are available in the Compliance dashboard as soon as BlueXP classification finishes the initial scans. The time that it takes depends on the amount of data--it could be a few minutes or hours. You can track the progress of the initial scan by navigating to the **Configuration** menu then selecting the **Working Environment configuration**. The progress of each scan is show as a progress bar. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. 
 
 [NOTE]
 ====
