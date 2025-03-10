@@ -115,7 +115,7 @@ The switch at the top of the page for *Scan when missing "write attributes" perm
 
 .Result
 
-BlueXP classification starts scanning the files in the file shares you added, and the results are displayed in the Dashboard and in other locations.
+BlueXP classification starts scanning the files in the file shares you added, and the results are displayed in the Dashboard and in other locations. You can track the progress of the initial scan by navigating to the **Configuration** menu then selecting the **Working Environment configuration**. The progress of each scan is show as a progress bar. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. 
 
 == Remove a file share from compliance scans
 
