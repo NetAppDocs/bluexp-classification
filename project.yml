@@ -38,6 +38,8 @@ sidebar:
               url: /task-test-linux-system.html
         - title: Activate scanning on your data sources
           entries:
+            - title: Scan your data sources overview  
+              url: /task-scanning-overview.html
             - title: Azure NetApp Files
               url: /task-scanning-anf.html
             - title: Amazon FSx for ONTAP
