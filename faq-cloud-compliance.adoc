@@ -22,17 +22,17 @@ The following questions provide a general understanding of BlueXP classification
 
 === What is BlueXP classification?
 
-BlueXP classification is a cloud offering that uses Artificial Intelligence (AI) driven technology to help you understand data context and identify sensitive data across your storage systems. The systems can be working environments that you've added to the BlueXP Canvas and many types of data sources that BlueXP classification can access over your networks. link:faq-cloud-compliance.html#what-sources-of-data-can-be-scanned-with-bluexp-classification[See the full list below].
+BlueXP classification is a cloud offering that uses Artificial Intelligence (AI) driven technology to help you understand data context and identify sensitive data across your storage systems. The systems can be working environments that you've added to the BlueXP Canvas and many types of data sources that BlueXP classification can access over your networks. link:concept-cloud-compliance.html[See the full list of data sources].
 
 BlueXP classification provides pre-defined parameters (such as sensitive information types and categories) to address new data compliance regulations for data privacy and sensitivity, such as GDPR, CCPA, HIPAA, and more.
 
 === How does BlueXP classification work?
 
-BlueXP classification deploys another layer of Artificial Intelligence alongside your BlueXP system and storage systems. It then scans the data on volumes, buckets, databases, and other storage accounts and indexes the data insights that are found. BlueXP classification leverages both artificial intelligence and natural language processing, as opposed to alternative solutions that are commonly built around regular expressions and pattern matching. 
+BlueXP classification deploys another layer of AI alongside your BlueXP system and storage systems. It then scans the data on volumes, buckets, databases, and other storage accounts and indexes the data insights that are found. BlueXP classification leverages both artificial intelligence and natural language processing, as opposed to alternative solutions that are commonly built around regular expressions and pattern matching. 
 
 BlueXP classification uses AI to provide contextual understanding of data for accurate detection and classification. It is driven by AI because it is designed for modern data types and scale. It also understands data context in order to provide strong, accurate, discovery and classification.
 
-link:concept-cloud-compliance.html[Learn more about how BlueXP classification works^].
+link:concept-cloud-compliance.html[Learn more about how BlueXP classification works].
 
 //=== What are the common use cases for BlueXP classification?
 
@@ -43,15 +43,12 @@ link:concept-cloud-compliance.html[Learn more about how BlueXP classification wo
 //* Migrate data from legacy systems to the cloud.
 //* Comply with data retention policies.
 
-https://bluexp.netapp.com/netapp-cloud-data-sense[Learn more about the use cases for BlueXP classification^].
 
 === What about the architecture of BlueXP classification?
 
 BlueXP classification deploys a single server, or cluster, wherever you choose — in the cloud or on premises. The servers connect via standard protocols to the data sources and index the findings in an Elasticsearch cluster, which is also deployed on the same servers. This allows support for multi-cloud, cross-cloud, private cloud, and on-premises environments.
 
-=== Which cloud providers are supported?
 
-BlueXP classification operates as part of BlueXP and supports AWS, Azure, and GCP. This provides your organization with unified privacy visibility across different cloud providers.
 
 === Does BlueXP classification have a REST API, and does it work with third-party tools?
 
@@ -71,17 +68,21 @@ The following questions relate to BlueXP classification scanning performance and
 
 While the initial scan of your data might take a little bit of time, subsequent scans only inspect the incremental changes, which reduces system scan times. BlueXP classification scans your data continuously in a round-robin fashion, six repositories at a time, so that all changed data is classified very quickly.
 
-link:concept-cloud-compliance.html#how-scans-work[Learn how scans work].
+link:task-scanning-overview.html[Learn how scans work].
 
-Note that BlueXP classification scans databases only once per day - databases are not continuously scanned like other data sources.
+BlueXP classification scans databases only once per day; databases are not continuously scanned like other data sources.
 
-Data scans have a negligible impact on your storage systems and on your data. However, if you are concerned with even a very small impact, you can configure BlueXP classification to perform "slow" scans. link:task-reduce-scan-speed.html[See how to reduce the scan speed].
+Data scans have a negligible impact on your storage systems and on your data. 
+
+//However, if you are concerned with even a very small impact, you can configure BlueXP classification to perform "slow" scans. link:task-reduce-scan-speed.html[See how to reduce the scan speed].
 
 === Can I search my data using BlueXP classification?
 
 BlueXP classification offers extensive search capabilities that make it easy to search for a specific file or piece of data across all connected sources. BlueXP classification empowers users to search deeper than just what the metadata reflects. It is a language-agnostic service that can also read the files and analyze a multitude of sensitive data types, such as names and IDs. For example, users can search across both structured and unstructured data stores to find data that may have leaked from databases to user files, in violation of corporate policy. Searches can be saved for later, and policies can be created to search and take action on the results at a set frequency.
 
-Once the files of interest are found, characteristics can be listed, including tags, working environment account, bucket, file path, category (from classification), file size, last modified, permission status, duplicates, sensitivity level, personal data, sensitive data types within the file, owner, file type, file size, created time, file hash, whether the data was assigned to someone seeking their attention, and more. Filters can be applied to screen out characteristics that are not pertinent. BlueXP classification also has RBAC controls to allow files to be moved or deleted, if the right permissions are present. If the right permissions are not present, the tasks can be assigned to someone in the organization who does have the right permissions.
+Once the files of interest are found, characteristics can be listed, including tags, working environment account, bucket, file path, category (from classification), file size, last modified, permission status, duplicates, sensitivity level, personal data, sensitive data types within the file, owner, file type, file size, created time, file hash, whether the data was assigned to someone seeking their attention, and more. Filters can be applied to screen out characteristics that are not pertinent. 
+
+BlueXP classification also has role-based access control (RBAC) to allow files to be moved or deleted, if the right permissions are present. If the right permissions are not present, the tasks can be assigned to someone in the organization who does have the right permissions.
 
 //=== What kind of analytics does BlueXP classification provide?
 
@@ -89,21 +90,10 @@ Once the files of interest are found, characteristics can be listed, including t
 
 === Does BlueXP classification offer reports?
 
-Yes. The information offered by BlueXP classification can be relevant to other stakeholders in your organizations, so we enable you to generate reports to share the insights. The following reports are available for BlueXP classification:
+Yes. The information offered by BlueXP classification can be relevant to other stakeholders in your organizations, so we enable you to generate reports to share the insights. 
 
-Privacy Risk Assessment report:: Provides privacy insights from your data and a privacy risk score. link:task-generating-compliance-reports.html#privacy-risk-assessment-report[Learn more^].
+link:task-generating-compliance-reports.html[Learn about reports].
 
-Data Subject Access Request report:: Enables you to extract a report of all files that contain information regarding a data subject's specific name or personal identifier. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Learn more^].
-
-PCI DSS report:: Helps you identify the distribution of credit card information across your files. link:task-generating-compliance-reports.html#pci-dss-report[Learn more^].
-
-HIPAA report:: Helps you identify the distribution of health information across your files. link:task-generating-compliance-reports.html#hipaa-report[Learn more^].
-
-Data Mapping report:: Provides information about the size and number of files in your working environments. This includes usage capacity, age of data, size of data, and file types. link:task-controlling-governance-data.html#data-mapping-report[Learn more^].
-
-Data Discovery Assessment report:: Provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. link:task-controlling-governance-data.html#data-discovery-assessment-report[Learn mode^].
-
-Reports on a specific information type:: Reports are available that include details about the identified files that contain personal data and sensitive personal data. You can also see files broken down by category and file type. link:task-controlling-private-data.html[Learn more^].
 
 === Does scan performance vary?
 
