@@ -78,8 +78,8 @@ There are some features and functionality that are deprecated in the BlueXP core
 | Create custom classifiers | Yes | No
 | Exclude directories from scanning | Yes | Yes
 | Search for names within files | Yes | Yes
-| Export data to NFS from investigation | Yes | No
-| Export data to CSV from investigation | Yes | Yes
+| Export data to NFS/CIFS from investigation | Yes | Yes
+| Export data to CSV from investigation | Yes | No
 | Support multiple scanners | Yes | No
 | Integrate Active Directory  | Yes | Yes
 | Use permission analysis and filters | Yes | Yes
