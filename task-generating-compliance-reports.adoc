@@ -15,7 +15,7 @@ summary: BlueXP classification provides reports that you can use to better under
 [.lead]
 BlueXP classification provides reports that you can use to better understand the status of your organization's data privacy program.
 
-By default, the BlueXP classification dashboards display compliance and governance data for all working environments, databases, and data sources. If you want to view reports that contain data for only some of the working environments, <<Select the working environments for reports,select those working environments>>.
+By default, the BlueXP classification dashboards display compliance and governance data for all working environments, databases, and data sources. If you want to view reports that contain data for only some of the working environments, you can filter to see just them.
 
 [NOTE]
 ====
@@ -55,7 +55,7 @@ When you filter the dashboard, BlueXP classification scopes the compliance data 
 +
 image:screenshot_cloud_compliance_filter.gif[A screen shot of selecting the working environments for the reports you want to run.]
 
-== What is a Data Subject Access Request?
+== Data Subject Access Request Report
 
 Privacy regulations such as the European GDPR grant data subjects (such as customers or employees) the right to access their personal data. When a data subject requests this information, this is known as a DSAR (data subject access request). Organizations are required to respond to these requests "without undue delay", and at the latest within one month of receipt.
 
@@ -94,7 +94,7 @@ image:screenshot_dsar_search.gif[A screenshot that shows a search for the name "
 +
 NOTE: If there are more than 10,000 results, only the top 10,000 appear in the file list.
 
-== HIPAA Report
+== Health Insurance Portability and Accountability Act (HIPAA) Report
 
 The Health Insurance Portability and Accountability Act (HIPAA) Report can help you identify files containing health information. It is designed to aid in your organization's requirement to comply with HIPAA data privacy laws. The information BlueXP classification looks for includes:
 
@@ -131,6 +131,40 @@ image:screenshot_hipaa.gif[A screen shot of the Compliance tab in BlueXP that sh
 .Result
 
 BlueXP classification generates a PDF report that you can review and send to other groups as needed.
+
+
+== Payment Card Industry Data Security Standard (PCI DSS) Report
+
+The Payment Card Industry Data Security Standard (PCI DSS) Report can help you identify the distribution of credit card information across your files. 
+
+The report includes the following information:
+
+* Overview: How many files contain credit card information and in which working environments.
+
+* Encryption: The percentage of files containing credit card information that are on encrypted or unencrypted working environments. This information is specific to Cloud Volumes ONTAP.
+
+* Ransomware Protection: The percentage of files containing credit card information that are on working environments that do or don't have ransomware protection enabled. This information is specific to Cloud Volumes ONTAP.
+
+* Retention: The timeframe in which the files were last modified. This is helpful because you shouldn't keep credit card information for longer than you need to process it.
+
+* Distribution of Credit Card Information: The working environments where the credit card information was found and whether encryption and ransomware protection are enabled.
+
+*Generate the PCI DSS Report*
+
+Go to the Compliance tab to generate the report.
+
+.Steps
+
+. From the BlueXP menu, select *Governance > Classification*.
+
+. Select *Compliance*, and then select the download icon next to *PCI DSS Report* under *Reports*.
++
+image:screenshot_pci_dss.gif[A screen shot of the Compliance tab in BlueXP that shows the Reports pane where you can click Privacy Risk Assessment.]
+
+.Result
+
+BlueXP classification generates a PDF report that you can review and send to other groups as needed.
+
 
 
 == Privacy Risk Assessment Report
@@ -190,38 +224,6 @@ The logic used to determine the score is as follows:
 | 10 | Three of the variables are larger than 15%
 
 |===
-
-== PCI DSS Report
-
-The Payment Card Industry Data Security Standard (PCI DSS) Report can help you identify the distribution of credit card information across your files. 
-
-The report includes the following information:
-
-* Overview: How many files contain credit card information and in which working environments.
-
-* Encryption: The percentage of files containing credit card information that are on encrypted or unencrypted working environments. This information is specific to Cloud Volumes ONTAP.
-
-* Ransomware Protection: The percentage of files containing credit card information that are on working environments that do or don't have ransomware protection enabled. This information is specific to Cloud Volumes ONTAP.
-
-* Retention: The timeframe in which the files were last modified. This is helpful because you shouldn't keep credit card information for longer than you need to process it.
-
-* Distribution of Credit Card Information: The working environments where the credit card information was found and whether encryption and ransomware protection are enabled.
-
-*Generate the PCI DSS Report*
-
-Go to the Compliance tab to generate the report.
-
-.Steps
-
-. From the BlueXP menu, select *Governance > Classification*.
-
-. Select *Compliance*, and then select the download icon next to *PCI DSS Report* under *Reports*.
-+
-image:screenshot_pci_dss.gif[A screen shot of the Compliance tab in BlueXP that shows the Reports pane where you can click Privacy Risk Assessment.]
-
-.Result
-
-BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
 
 

@@ -20,11 +20,6 @@ This FAQ can help if you're just looking for a quick answer to a question.
 
 The following questions provide a general understanding of BlueXP classification.
 
-=== What is BlueXP classification?
-
-BlueXP classification is a cloud offering that uses Artificial Intelligence (AI) driven technology to help you understand data context and identify sensitive data across your storage systems. The systems can be working environments that you've added to the BlueXP Canvas and many types of data sources that BlueXP classification can access over your networks. link:concept-cloud-compliance.html[See the full list of data sources].
-
-BlueXP classification provides pre-defined parameters (such as sensitive information types and categories) to address new data compliance regulations for data privacy and sensitivity, such as GDPR, CCPA, HIPAA, and more.
 
 === How does BlueXP classification work?
 
@@ -44,9 +39,6 @@ link:concept-cloud-compliance.html[Learn more about how BlueXP classification wo
 //* Comply with data retention policies.
 
 
-=== What about the architecture of BlueXP classification?
-
-BlueXP classification deploys a single server, or cluster, wherever you choose â€” in the cloud or on premises. The servers connect via standard protocols to the data sources and index the findings in an Elasticsearch cluster, which is also deployed on the same servers. This allows support for multi-cloud, cross-cloud, private cloud, and on-premises environments.
 
 
 
@@ -54,7 +46,7 @@ BlueXP classification deploys a single server, or cluster, wherever you choose â
 
 No, BlueXP classification does not have a REST API. 
 
-//BlueXP supports REST API capabilities for its services. If BlueXP isn't the preferred point of management, services such as BlueXP classification can also be used via a REST API. Every user action has a REST API that can be integrated with third-party systems. See link:api-classification.html[BlueXP classification APIs^] for details.
+
 
 === Is BlueXP classification available through the marketplaces?
 
@@ -62,7 +54,7 @@ Yes, BlueXP and BlueXP classification are available from the AWS, Azure, and GCP
 
 == BlueXP classification scanning and analytics
 
-The following questions relate to BlueXP classification scanning performance and the analytics available to users.
+The following questions relate to BlueXP classification scanning performance and the analytics.
 
 === How often does BlueXP classification scan my data?
 
@@ -97,7 +89,7 @@ link:task-generating-compliance-reports.html[Learn about reports].
 
 === Does scan performance vary?
 
-Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size characteristics of the host system (either in the cloud or on-premises). See link:concept-cloud-compliance.html#the-bluexp-classification-instance[The BlueXP classification instance^] and link:task-deploy-cloud-compliance.html[Deploying BlueXP classification^] for more information.
+Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size characteristics of the host system (either in the cloud or on-premises). See link:concept-cloud-compliance.html[The BlueXP classification instance] and link:task-deploy-overview.html[Deploying BlueXP classification] for more information.
 
 When initially adding new data sources you can also choose to only perform a "mapping" scan instead of a full "classification" scan. Mapping can be done on your data sources very quickly because it does not access files to see the data inside. link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[See the difference between a mapping and classification scan^].
 
@@ -105,39 +97,25 @@ When initially adding new data sources you can also choose to only perform a "ma
 
 The following questions provide information on how to manage BlueXP classification and privacy settings.
 
-=== How do I enable BlueXP classification?
+=== How do I enable or disable BlueXP classification?
 
 First you need to deploy an instance of BlueXP classification in BlueXP, or on an on-premises system. Once the instance is running, you can enable the service on existing working environments, databases, and other data sources from the *Configuration* tab or by selecting a specific working environment.
 
-link:task-getting-started-compliance.html[Learn how to get started^].
+link:task-getting-started-compliance.html[Learn how to get started].
 
 NOTE: Activating BlueXP classification on a data source results in an immediate initial scan. Scan results display shortly after.
 
-=== How do I disable BlueXP classification?
 
-You can disable BlueXP classification from scanning an individual working environment, database, or file share group from the BlueXP classification Configuration page.
-
-link:task-managing-compliance.html[Learn more^].
+You can disable BlueXP classification from scanning an individual working environment, database, or file share group from the BlueXP classification Configuration page. See link:task-managing-compliance.html[Remove data sources from BlueXP classification].
 
 NOTE: To completely remove the BlueXP classification instance, you can manually remove the BlueXP classification instance from your cloud provider's portal or on-prem location.
 
-=== Can I customize the service to my organization's needs?
 
-BlueXP classification provides insights to your data. These insights can be extracted and used for your organization's needs.
-
-Additionally, BlueXP classification provides many ways for you to add a custom list of "personal data" that BlueXP classification will identify in scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
-
-* You can add unique identifiers based on specific columns in databases you are scanning -- we call this *Data Fusion*.
-* You can add custom keywords from a text file.
-* You can add custom patterns using a regular expression (regex).
-
-link:task-managing-data-fusion.html[Learn more^].
-
-=== Can I instruct the service to exclude scanning data in certain directories?
+=== Can the service exclude scanning data in certain directories?
 
 Yes. If you want BlueXP classification to exclude scanning data that resides in certain data source directories, you can provide that list to the classification engine. After you apply that change, BlueXP classification will exclude scanning data in the specified directories.
 
-link:task-exclude-scan-paths.html[Learn more^].
+link:task-exclude-scan-paths.html[Learn more].
 
 === Are snapshots that reside on ONTAP volumes scanned?
 
@@ -165,11 +143,6 @@ The scan doesn't heat up the cold data--it stays cold and remains in object stor
 
 The following questions relate to the types of storage that can be scanned, and the types of data that is scanned.
 
-=== What sources of data can be scanned with BlueXP classification?
-
-BlueXP classification can scan data from working environments that you've added to the BlueXP Canvas and from many types of structured and unstructured data sources that BlueXP classification can access over your networks.
-
-See link:concept-cloud-compliance.html[Supported working environments and data sources].
 
 === Are there any restrictions when deployed in a Government region?
 
@@ -206,11 +179,11 @@ When BlueXP classification detects Personal Identifiable Information (PII), or w
 
 BlueXP classification enables you to run a general "mapping" scan or a full "classification" scan on your data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
 
-* *Data mapping scan*: BlueXP classification scans the metadata only. This is useful for overall data management and governance, quick project scoping, very large estates, and prioritization. Data mapping is based on metadata and is considered a *fast* scan.
+* *Data mapping scan (Mapping only scan)*: BlueXP classification scans the metadata only. This is useful for overall data management and governance, quick project scoping, very large estates, and prioritization. Data mapping is based on metadata and is considered a *fast* scan.
 +
 After a fast scan, you can generate a Data Mapping Report. This report is an overview of the data stored in your corporate data sources to assist you with decisions about resource utilization, migration, backup, security, and compliance processes.
 
-* *Data classification (deep) scan*: BlueXP classification scans using standard protocols and read-only permission throughout your environments. Select files are opened and scanned for sensitive business-related data, private information, and issues related to ransomware.
+* *Data classification (deep) scan (Map & Classify scan)*: BlueXP classification scans using standard protocols and read-only permission throughout your environments. Select files are opened and scanned for sensitive business-related data, private information, and issues related to ransomware.
 +
 After a full scan there are many additional BlueXP classification features you can apply to your data, such as view and refine data in the Data Investigation page, search for names within files, copy, move, and delete source files, and more.
 
@@ -224,7 +197,7 @@ Yes, BlueXP classification is fully integrated with BlueXP. BlueXP users can onl
 
 Additionally, if you want to allow certain users to just view BlueXP classification scan results without having the ability to manage BlueXP classification settings, you can assign those users the *Classification viewer* role (when using BlueXP in standard mode) or the *Compliance Viewer* role (when using BlueXP in restricted mode).
 
-link:concept-cloud-compliance.html[Learn more^].
+link:concept-cloud-compliance.html[Learn more].
 
 === Can anyone access the private data sent between my browser and BlueXP classification?
 
@@ -317,7 +290,7 @@ When link:task-deploy-cloud-compliance.html[deployed in the cloud]:
 * In GCP, BlueXP classification runs on an n2-standard-16 VM with a 500 GiB Standard persistent disk.
 
 
-link:concept-cloud-compliance.html[Learn more about how BlueXP classification works^].
+link:concept-cloud-compliance.html[Learn more about how BlueXP classification works].
 
 === Can I deploy the BlueXP classification on my own host?
 
