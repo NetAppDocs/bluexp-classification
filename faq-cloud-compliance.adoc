@@ -44,13 +44,13 @@ link:concept-cloud-compliance.html[Learn more about how BlueXP classification wo
 
 === Does BlueXP classification have a REST API, and does it work with third-party tools?
 
-No, BlueXP classification does not have a REST API. 
+Yes, BlueXP classification has a REST API for the supported features in the BlueXP classification version that is part of the BlueXP core platform.  See link:api-classification.html[API documentation].
 
 
 
-=== Is BlueXP classification available through the marketplaces?
+=== Is BlueXP classification available through the cloud marketplaces?
 
-Yes, BlueXP and BlueXP classification are available from the AWS, Azure, and GCP marketplaces.
+Yes, BlueXP and BlueXP classification are available from the Amazon Web Services, Microsoft Azure, and Google Cloud Platform marketplaces.
 
 == BlueXP classification scanning and analytics
 
@@ -180,7 +180,7 @@ After a fast scan, you can generate a Data Mapping Report. This report is an ove
 +
 After a full scan there are many additional BlueXP classification features you can apply to your data, such as view and refine data in the Data Investigation page, search for names within files, copy, move, and delete source files, and more.
 
-BlueXP classification captures metadata such as: file name, permissions, creation time, last access, and last modification. This includes all of the metadata that appears in the Data Investigation Details page and in Data Investigation Reports.  
+BlueXP classification captures metadata such as: file name, permissions, creation time, last access, and last modification. This includes all of the metadata that appears in the Data Investigatcdion Details page and in Data Investigation Reports.  
 
 BlueXP classification can identify many types of private data such as personal information (PII) and sensitive personal information (SPII). For details about private data, refer to https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html[Categories of private data that BlueXP classification scans].
 
