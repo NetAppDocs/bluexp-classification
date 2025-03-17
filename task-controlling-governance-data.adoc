@@ -17,15 +17,20 @@ Gain control of the costs related to the data on your organizations' storage res
 
 Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information before moving it.
 
-== The Governance dashboard
+
+== Review the Governance dashboard
 
 The Governance dashboard provides information so that you can increase the efficiency and control the costs related to the data stored on your storage resources.
 
 image:screenshot_compliance_governance_dashboard.png[A screenshot of the BlueXP classification Governance dashboard.]
 
-=== Save Opportunities
+=== Review savings opportunities
 
-You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. Click each item to view the filtered results in the Investigation page.
+You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. 
+
+.Steps 
+
+. Within each Savings Opportunities tile, select *Optimize Storage* to view the filtered results in the Investigation page.
 
 * *Stale Data* - Data that was last modified over 3 years ago.
 * *Non-Business Data* - Data considered not to be business related, based on their Category or File Type. This includes:
@@ -40,75 +45,59 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 
 * *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#filter-data-by-duplicates[See what types of duplicate files are displayed].
 
-NOTE: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Stale Data_ category.
+NOTE: If any of your data sources implement data tiering, old data that already resides in object storage ccan be identified in the _Stale Data_ category.
 
-=== Policies with the largest number of results
+=== Review policies with the largest number of results
 
-In the _Policies_ area, the Policies with the greatest number of results appear at the top of the list. Click the name of a Policy to display the results in the Investigation page. Click *View All* to view the list of all available Policies.
+In the _Policies_ area, the policies with the greatest number of results appear at the top of the list. 
 
-Click link:task-using-policies.html[here] to learn more about Policies.
+.Steps 
 
-=== Data Overview
+. Select the name of a policy to display the results in the Investigation page. 
+. Select *View All* to view the list of all available policies.
 
-The _Data Overview_ section provides a quick overview of all the data that is being scanned. Click the button to download a full data mapping report that includes Usage Capacity, Age of Data, Size of Data, and File Types for all of your working environments and data sources. See <<Data Mapping Report,Data Mapping Report>> for complete details about this report.
-
-=== Top data repositories listed by data sensitivity
-
-The _Top Data Repositories by Sensitivity Level_ area lists the top four data repositories (working environments and data sources) that contain the most sensitive items. The bar chart for each working environment is divided into:
-
-* Non-Sensitive data
-* Personal data
-* Sensitive Personal data
-
-You can position your cursor over each section to see the total number of items in each category.
-
-Click each area to view the filtered results in the Investigation page so that you can investigate further.
+For details about policies, see link:task-using-policies.html[Assign policies to your data].
 
 
+== Create the Data Discovery Assessment Report
 
-=== Data listed by types of Open Permissions
+The Data Discovery Assessment Report provides a high-level analysis of the scanned environment to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your dataset:
 
-The _Open Permissions_ area shows the percentage for each type of permissions that exist for all files that are being scanned. The chart shows the following types of permissions:
+[cols="25,65",width=90%,options="header"]
+|===
+| Feature
+| Description
+| Data governance concerns | A detailed picture of all the data you own and areas where you may be able to reduce the amount of data to save costs.
+| Data security exposures | Areas where your data is accessible to internal or external attacks because of broad access permissions.
+| Data compliance gaps | Where your personal or sensitive personal information is located for both security and for DSARs (data subject access requests).
+|===
 
-* No Open Permissions
-* Open to Organization
-* Open to Public
-* Unknown Access
+Using this report, you might take the following actions:
 
-You can position your cursor over each section to see the total number of files in each category. Click each area to view the filtered results in the Investigation page so that you can investigate further.
-
-=== Age of Data and Size of Data graphs
-
-You may want to investigate the items in the _Age_ and _Size_ graphs to see if there is any data you should delete or tier to less expensive object storage.
-
-You can position your cursor over a point in the charts to see details about the age or size of the data in that category. Click to view all the files filtered by that age or size range.
-
-* *Age of Data graph* - Categorizes data based on the time it was created, the last time it was accessed, or the last time it was modified.
-* *Size of Data graph* - Categorizes data based on size.
-
-NOTE: If any of your data sources implement data tiering, old data that already resides in object storage may be identified in the _Age of Data_ graph.
-
-=== Most identified data Classifications
-
-The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#view-files-by-categories[Categories^] and link:task-controlling-private-data.html#view-files-by-file-types[File types^] in your scanned data.
-
-==== Categories
-
-Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like "resumes" or "employee contracts" can include sensitive data. When you investigate the results, you might find that employee contracts are stored in a nonsecure location. You can then correct that issue.
-
-See link:task-controlling-private-data.html#view-files-by-categories[Viewing files by categories^] for more information.
-
-==== File types
-
-Reviewing your file types can help you control your sensitive data because you might find that certain file types are not stored correctly.
-
-See link:task-controlling-private-data.html#view-files-by-file-types[Viewing file types^] for more information.
+* Reduce storage costs by changing your retention policy, or by moving or deleting certain data (stale, duplicate, or non-business data).
+* Protect your data that has broad permissions by revising global group management policies.
+* Protect your data that has personal or sensitive personal information by moving PII to more secure data stores.
 
 
 
-== Data Mapping Report
+.Steps
 
-The Data Mapping Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report first lists an overview that summarizes all your working environments and data sources, and then it provides an analysis for each working environment.
+. From the BlueXP menu, select *Governance > Classification*.
+
+. Select *Governance*.
+. Select the *Data Discovery Assessment Report* button.
++
+image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Discovery Assessment Report.]
+
+.Result
+
+BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
+
+//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
+
+== Create the Data Mapping Overview Report
+
+The Data Mapping Overview Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report first lists an overview that summarizes all your working environments and data sources, and then it provides an analysis for each working environment.
 
 The report includes the following information:
 
@@ -123,17 +112,16 @@ For single working environments: Lists the files that are using the most capacit
 | File Types | Lists the total number of files and the used capacity for each type of file being stored in your working environments.
 |===
 
-=== Generate the Data Mapping Report
-
-You generate this report from the Governance tab in BlueXP classification.
 
 .Steps
 
-. From the BlueXP menu, click *Governance > Classification*.
+. From the BlueXP menu, select *Governance > Classification*.
 
-. Click *Governance*, and then click the *Data Mapping Report* button.
+. Select *Governance*.
+. Select the *Full Data Mapping Overview Report* button.
 +
-image:screenshot_compliance_data_mapping_report_button.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
+image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
+. To customize the company name that appears on the first page of the report, from the top of the BlueXP classification page select image:screenshot_gallery_options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
 
 .Result
 
@@ -141,41 +129,89 @@ BlueXP classification generates a .pdf report that you can review and send to ot
 
 If the report is larger than 1 MB, the .pdf file is retained on the BlueXP classification instance and you'll see a pop-up message about the exact location. When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the .pdf file. When BlueXP classification is deployed in the cloud, you'll need to SSH to the BlueXP classification instance to download .pdf file. link:task-audit-data-sense-actions.html#access-the-log-files[See how to access data on the Classification instance^].
 
-Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
 
-== Data Discovery Assessment Report
 
-The Data Discovery Assessment Report provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your dataset:
 
-[cols="25,65",width=90%,options="header"]
-|===
-| Feature
-| Description
-| Data governance concerns | A detailed picture of all the data you own and areas where you may be able to reduce the amount of data to save costs.
-| Data security exposures | Areas where your data is accessible to internal or external attacks because of broad access permissions.
-| Data compliance gaps | Where your personal or sensitive personal information is located for both security and for DSARs (data subject access requests).
-|===
+=== Review the top data repositories listed by data sensitivity
 
-After the assessment, this report identifies areas where you can:
+The _Top Data Repositories by Sensitivity Level_ area lists the top four data repositories (working environments and data sources) that contain the most sensitive items. The bar chart for each working environment is divided into:
 
-* Reduce storage costs by changing your retention policy, or by moving or deleting certain data (stale, duplicate, or non-business data)
-* Protect your data that has broad permissions by revising global group management policies
-* Protect your data that has personal or sensitive personal information by moving PII to more secure data stores
-
-=== Generate the Data Discovery Assessment Report
-
-You generate this report from the Governance tab in BlueXP classification.
+* Non-Sensitive data
+* Personal data
+* Sensitive Personal data
 
 .Steps
 
-. From the BlueXP menu, click *Governance > Classification*.
+. To see the total number of items in each category, position your cursor over each section of the bar.
 
-. Click *Governance*, and then click the *Data Discovery Assessment Report* button.
-+
-image:screenshot_compliance_data_discovery_report_button.png[A screenshot of the Governance Dashboard that shows how to launch the Data Discovery Assessment Report.]
+. To filter results that will appear in the Investigation page, select each area ib the bar and investigate further.
 
-.Result
+=== Review sensitive data and wide permissions
 
-BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
+The _Sensitive Data and Wide Permissions_ area shows the percentage of files that contain sensitive data and have wide permissions. The chart shows the following types of permissions: 
 
-//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
+* From the nost restrictive permissions to the most permissive restrictions on the horizontal axix. 
+* From the least sensitve data to the most sensitive data on the vertical axis.
+
+.Steps
+. To see the total number of files in each category, position your cursor over each box. 
+
+. To filter results that will appear in the Investigation page, select a box and investigate further.
+
+
+=== Review data listed by types of open permissions
+
+The _Open Permissions_ area shows the percentage for each type of permissions that exist for all files that are being scanned. The chart shows the following types of permissions:
+
+* No Open Permissions
+* Open to Organization
+* Open to Public
+* Unknown Access
+
+.Steps 
+
+. To see the total number of files in each category, position your cursor over each box. 
+
+. To filter results that will appear in the Investigation page, select a box and investigate further.
+
+=== Review the age and size of data
+
+You might want to investigate the items in the _Age_ and _Size_ graphs to see if there is any data you should delete or tier to less expensive object storage.
+
+.Steps
+
+. In the Age of Data chart, to see details about the age of the data, position your cursor over a point in the chart. 
+
+. To filter by an age or size range, select that age or size.
+
+* *Age of Data graph* - Categorizes data based on the time it was created, the last time it was accessed, or the last time it was modified.
+* *Size of Data graph* - Categorizes data based on size.
+
+NOTE: If any of your data sources implement data tiering, old data that already resides in object storage might be identified in the _Age of Data_ graph.
+
+=== Review the most identified data classifications in your data
+
+The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#view-files-by-categories[Categories^] and link:task-controlling-private-data.html#view-files-by-file-types[File types^] in your scanned data.
+
+==== Review the most identified classification categories
+
+Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like "resumes" or "employee contracts" can include sensitive data. When you investigate the results, you might find that employee contracts are stored in a nonsecure location. You can then correct that issue.
+
+See link:task-controlling-private-data.html#view-files-by-categories[Viewing files by categories^] for more information.
+
+.Steps
+
+. To see details about a category, select it. The Investigation page provides data that is filtered for just that category. 
+
+. To display all categories, select *View All*.
+
+==== Review the most identified file types 
+
+Reviewing your file types can help you control your sensitive data because you might find that certain file types are not stored correctly.
+
+See link:task-controlling-private-data.html#view-files-by-file-types[Viewing file types^] for more information.
+
+.Steps
+. To see details about a file type, select it. The Investigation page provides data that is filtered for just that file type. 
+
+. To display all file types, select *View All*.
