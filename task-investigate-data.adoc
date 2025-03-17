@@ -30,9 +30,8 @@ You can filter the contents of the investigation page to display only the result
 . On the Data Investigation page, do any of the following: 
 
 . To download the contents of the page as a report after you've refined it, select the image:button_download.png[download button] button. <<Data Investigation Report,Go here for details about the Data Investigation report>>.
-
 //Note that the actions available in the button bar and Policies are not currently supported at the "Directory" level.
-
++
 image:screenshot_compliance_investigation_filtered.png[A screenshot of the filters available when refining the results in the investigation page.]
 
 . To view the data from files (unstructured data), directories (folders and file shares), or from databases (structured data), select one of the tabs at the top. 
@@ -187,13 +186,18 @@ Use the following filter to view files that are duplicated in your storage.
 
 == View file metadata
 
-In the Data Investigation results pane, select the down-caret image:button_down_caret.png[down-caret] button for any single file to view the file metadata.
-
-image:screenshot_compliance_file_details.png[A screenshot showing the metadata details for a file in the Data Investigation page.]
-
 In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html#create-custom-policies[create Policies] because you can see all the information that you can use to filter your data.
 
-Note that not all information is available for all data sources - just what is appropriate for that data source. For example, volume name and permissions are not relevant for database files.
+Not all information is available for all data sources - just what is appropriate for that data source. For example, volume name and permissions are not relevant for database files.
+
+.Steps
+
+. From the BlueXP classification menu, select *Investigation*.
+. In the Data Investigation list on the right, select the down-caret image:button_down_caret.png[down-caret] on the right for any single file to view the file metadata.
++
+image:screenshot_compliance_file_details.png[A screenshot showing the metadata details for a file in the Data Investigation page.]
+
+
 
 //When viewing the details for a single file there are a few actions you can take on the file:
 
@@ -213,37 +217,55 @@ To view a list of all users or groups who have access to a file or to a director
 
 Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into BlueXP classification. link:task-add-active-directory-datasense.html[See how to do this].
 
+.Steps
+
+. From the BlueXP classification menu, select *Investigation*.
+. In the Data Investigation list on the right, select the down-caret image:button_down_caret.png[down-caret] on the right for any single file to view the file metadata.
+. To view a list of all users or groups who have access to a file or to a directory and the types of permissions they have, in the Open Permissions field, select *View all Permissions*. 
++
 image:screenshot_compliance_permissions.png[A screenshot showing detailed file permissions.]
 //replace screenshot later with Role and Department headings using screenshot_compliance_permissions_future.png in repo
 
-Select the down-caret image:button_down_caret.png[down-caret] button for any group to see the list of users who are part of the group.
+. Select the down-caret image:button_down_caret.png[down-caret] button for any group to see the list of users who are part of the group.
 
-Selecting the name of a user or group refreshes the Investigation page so you can see all the files and directories that the user or group has access to.
+. Select the name of a user or group to refresh the Investigation page so you can see all the files and directories that the user or group has access to.
 
 == Check for duplicate files in your storage systems
 
 You can view if duplicate files are being stored in your storage systems. This is useful if you want to identify areas where you can save storage space. It can also be helpful to make sure certain files that have specific permissions or sensitive information are not unnecessarily duplicated in your storage systems.
 
-All of your files (not including databases) that are 1 MB or larger, and that contain personal or sensitive personal information, are compared to see if there are duplicates. You can use the Investigation page filters "File Size" along with "Duplicates" to see which files of a certain size range are duplicated in your environment.
+All of your files (not including databases) that are 1 MB or larger, and that contain personal or sensitive personal information, are compared to see if there are duplicates. 
 
 BlueXP classification uses hashing technology to determine duplicate files. If any file has the same hash code as another file, we can be 100% sure that the files are exact duplicates -- even if the file names are different.
 
-You can download the list of duplicate files and send it to your storage admin so they can decide which files, if any, can be deleted. Or you can link:task-managing-highlights.html#delete-source-files[delete the file] yourself if you are confident that a specific version of the file is not needed.
+.Steps
 
-*View all duplicated files*
+. From the BlueXP classification menu, select *Investigation*.
 
-If you want a list of all files that are duplicated in the working environments and data sources you are scanning, you can use the filter called *Duplicates > Has duplicates* in the Data Investigation page.
+. In the Investigation page Filters pane on the left, select "File Size" along with "Duplicates" ("Has duplicates") to see which files of a certain size range are duplicated in your environment.
 
-All duplicated files are displayed in the Results page.
+. Optionally, download the list of duplicate files and send it to your storage admin so they can decide which files, if any, can be deleted. 
+
+. Optionally, link:task-managing-highlights.html#delete-source-files[delete the file] yourself if you are confident that a specific version of the file is not needed.
+
 
 *View if a specific file is duplicated*
 
-If you want to see if a single file has duplicates, in the Data Investigation results pane, select image:button_down_caret.png[down-caret] for any single file to view the file metadata. If there are duplicates of a certain file, this information appears next to the _Duplicates_ field.
+You can see if a single file has duplicates. 
 
-To view the list of duplicate files and where they are located, select *View Details*. In the next page select *View Duplicates* to view the files in the Investigation page.
+.Steps
 
+. From the BlueXP classification menu, select *Investigation*.
+
+. In the Data Investigation list, select image:button_down_caret.png[down-caret] on the right for any single file to view the file metadata. 
++
+If duplicates exist for a file, this information appears next to the _Duplicates_ field.
+
+. To view the list of duplicate files and where they are located, select *View Details*. 
+. In the next page select *View Duplicates* to view the files in the Investigation page.
++
 image:screenshot_compliance_duplicate_file.png[A screenshot showing how to view where duplicated files are located.]
-
++
 TIP: You can use the "file hash" value provided in this page and enter it directly in the Investigation page to search for a specific duplicate file at any time - or you can use it in a Policy.
 
 == Create the Data Investigation Report
@@ -315,7 +337,13 @@ The *Structured Data Report* includes the following information about your datab
 .Steps to generate the report
 
 . From the Data Investigation page, select the image:button_download.png[download button] button on the top, right of the page.
-. Choose the report type: CSV or JSON and provide a **Report name**. Select a **Working environment** and **Volume** then provide a **Destination folder path**. 
+. Choose the report type: CSV or JSON.
+
+. Provide a **Report name**. 
+
+. Select a **Working environment** and **Volume** 
+
+. Provide a **Destination folder path**. 
 . Select **Download Report**.
 //+
 //When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
@@ -330,6 +358,9 @@ A dialog displays a message that the reports are being downloaded.
 
 == Create a policy based on selected filters
 
+It might be helpful to you to save the filters you've selected in the Data Investigation page as a policy. This way, you can run the same filters at any time without having to reselect them.
+
+.Steps
 
 . From the BlueXP classification menu, select *Investigation*. 
 . On the Data Investigation page, select the filters you want to use to create a policy.
@@ -342,5 +373,5 @@ A dialog displays a message that the reports are being downloaded.
 
 . Select *Create Policy*.
 
-TIP: This might take up to 15 minutes for the results to appear on the Policies page. 
+TIP: It might take up to 15 minutes for the results to appear on the Policies page. 
 
