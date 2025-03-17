@@ -34,7 +34,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 * The left-pane filters enable you to refine the results by selecting the attributes described in the next sections.
 
 [NOTE]
-You can only view the first 10,000 (or 500 pages) of results for a scan on the Data Investigation page. 
+You can only view the first 10,000 results—or 500 pages—for a scan on the Data Investigation page. 
 
 === Filter data by sensitivity and content
 
