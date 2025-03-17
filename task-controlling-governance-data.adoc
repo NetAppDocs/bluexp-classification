@@ -140,7 +140,7 @@ If the report is larger than 1 MB, the .pdf file is retained on the BlueXP class
 
 
 
-=== Review the top data repositories listed by data sensitivity
+== Review the top data repositories listed by data sensitivity
 
 The _Top Data Repositories by Sensitivity Level_ area lists the top four data repositories (working environments and data sources) that contain the most sensitive items. The bar chart for each working environment is divided into:
 
@@ -155,7 +155,7 @@ The _Top Data Repositories by Sensitivity Level_ area lists the top four data re
 
 . To filter results that will appear in the Investigation page, select each area ib the bar and investigate further.
 
-=== Review sensitive data and wide permissions
+== Review sensitive data and wide permissions
 
 The _Sensitive Data and Wide Permissions_ area shows the percentage of files that contain sensitive data and have wide permissions. The chart shows the following types of permissions: 
 
@@ -170,7 +170,7 @@ The _Sensitive Data and Wide Permissions_ area shows the percentage of files tha
 . To filter results that will appear in the Investigation page, select a box and investigate further.
 
 
-=== Review data listed by types of open permissions
+== Review data listed by types of open permissions
 
 The _Open Permissions_ area shows the percentage for each type of permissions that exist for all files that are being scanned. The chart shows the following types of permissions:
 
@@ -187,7 +187,7 @@ The _Open Permissions_ area shows the percentage for each type of permissions th
 
 . To filter results that will appear in the Investigation page, select a box and investigate further.
 
-=== Review the age and size of data
+== Review the age and size of data
 
 You might want to investigate the items in the _Age_ and _Size_ graphs to see if there is any data you should delete or tier to less expensive object storage.
 
@@ -204,11 +204,11 @@ You might want to investigate the items in the _Age_ and _Size_ graphs to see if
 
 NOTE: If any of your data sources implement data tiering, old data that already resides in object storage might be identified in the _Age of Data_ graph.
 
-=== Review the most identified data classifications in your data
+== Review the most identified data classifications in your data
 
 The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#view-files-by-categories[Categories^] and link:task-controlling-private-data.html#view-files-by-file-types[File types^] in your scanned data.
 
-==== Review the most identified classification categories
+=== Review the most identified classification categories
 
 Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like "resumes" or "employee contracts" can include sensitive data. When you investigate the results, you might find that employee contracts are stored in a nonsecure location. You can then correct that issue.
 
@@ -222,7 +222,7 @@ See link:task-controlling-private-data.html#view-files-by-categories[Viewing fil
 
 . To display all categories, select *View All*.
 
-==== Review the most identified file types 
+=== Review the most identified file types 
 
 Reviewing your file types can help you control your sensitive data because you might find that certain file types are not stored correctly.
 
