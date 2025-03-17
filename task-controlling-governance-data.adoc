@@ -24,13 +24,22 @@ The Governance dashboard provides information so that you can increase the effic
 
 image:screenshot_compliance_governance_dashboard.png[A screenshot of the BlueXP classification Governance dashboard.]
 
+.Steps 
+
+. From the BlueXP menu, select *Governance > Classification*.
+. Select *Governance*.
++
+The Governance dashboard appears. 
+
 === Review savings opportunities
 
 You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. 
 
 .Steps 
 
-. Within each Savings Opportunities tile, select *Optimize Storage* to view the filtered results in the Investigation page.
+. From the BlueXP classification menu, select *Governance*.
+
+. Within each Savings Opportunities tile of the Governance dashboard, select *Optimize Storage* to view the filtered results in the Investigation page.
 
 * *Stale Data* - Data that was last modified over 3 years ago.
 * *Non-Business Data* - Data considered not to be business related, based on their Category or File Type. This includes:
@@ -53,7 +62,9 @@ In the _Policies_ area, the policies with the greatest number of results appear 
 
 .Steps 
 
-. Select the name of a policy to display the results in the Investigation page. 
+
+. From the BlueXP classification menu, select *Governance*.
+. In the Goverance dashboard > Policies tile, select the name of a policy in the to display the results in the Investigation page. 
 . Select *View All* to view the list of all available policies.
 
 For details about policies, see link:task-using-policies.html[Assign policies to your data].
@@ -82,10 +93,8 @@ Using this report, you might take the following actions:
 
 .Steps
 
-. From the BlueXP menu, select *Governance > Classification*.
-
-. Select *Governance*.
-. Select the *Data Discovery Assessment Report* button.
+. From the BlueXP classification menu, select *Governance*.
+. In the Governance dashboard > Data Overview section, select the *Data Discovery Assessment Report* button.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Discovery Assessment Report.]
 
@@ -115,10 +124,9 @@ For single working environments: Lists the files that are using the most capacit
 
 .Steps
 
-. From the BlueXP menu, select *Governance > Classification*.
 
-. Select *Governance*.
-. Select the *Full Data Mapping Overview Report* button.
+. From the BlueXP classification menu, select *Governance*.
+. Within the Governance dashboard > Data Overview section, select the *Full Data Mapping Overview Report* button.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
 . To customize the company name that appears on the first page of the report, from the top of the BlueXP classification page select image:screenshot_gallery_options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
@@ -142,7 +150,8 @@ The _Top Data Repositories by Sensitivity Level_ area lists the top four data re
 
 .Steps
 
-. To see the total number of items in each category, position your cursor over each section of the bar.
+. From the BlueXP classification menu, select *Governance*.
+. In the Governance dashboard > Data Overview section, to see the total number of items in each category, position your cursor over each section of the bar.
 
 . To filter results that will appear in the Investigation page, select each area ib the bar and investigate further.
 
@@ -154,7 +163,9 @@ The _Sensitive Data and Wide Permissions_ area shows the percentage of files tha
 * From the least sensitve data to the most sensitive data on the vertical axis.
 
 .Steps
-. To see the total number of files in each category, position your cursor over each box. 
+
+. From the BlueXP classification menu, select *Governance*.
+. In the Governance dashboard > Sensitive Data and Wide Permissions section, to see the total number of files in each category, position your cursor over each box. 
 
 . To filter results that will appear in the Investigation page, select a box and investigate further.
 
@@ -170,7 +181,9 @@ The _Open Permissions_ area shows the percentage for each type of permissions th
 
 .Steps 
 
-. To see the total number of files in each category, position your cursor over each box. 
+
+. From the BlueXP classification menu, select *Governance*.
+. In the Governance dashboard > Open Permissions section, to see the total number of files in each category, position your cursor over each box. 
 
 . To filter results that will appear in the Investigation page, select a box and investigate further.
 
@@ -180,7 +193,9 @@ You might want to investigate the items in the _Age_ and _Size_ graphs to see if
 
 .Steps
 
-. In the Age of Data chart, to see details about the age of the data, position your cursor over a point in the chart. 
+
+. From the BlueXP classification menu, select *Governance*.
+. In the Age of Data chart in the Governance dashboard, to see details about the age of the data, position your cursor over a point in the chart. 
 
 . To filter by an age or size range, select that age or size.
 
@@ -201,7 +216,9 @@ See link:task-controlling-private-data.html#view-files-by-categories[Viewing fil
 
 .Steps
 
-. To see details about a category, select it. The Investigation page provides data that is filtered for just that category. 
+
+. From the BlueXP classification menu, select *Governance*.
+. In the Governance dashboard > Classification section > Categories tile, to see details about a category, select it. The Investigation page provides data that is filtered for just that category. 
 
 . To display all categories, select *View All*.
 
@@ -212,6 +229,9 @@ Reviewing your file types can help you control your sensitive data because you m
 See link:task-controlling-private-data.html#view-files-by-file-types[Viewing file types^] for more information.
 
 .Steps
-. To see details about a file type, select it. The Investigation page provides data that is filtered for just that file type. 
+
+
+. From the BlueXP classification menu, select *Governance*.
+. In the Governance dashboard > Classification section > File Types tile, to see details about a file type, select it in the File Types section of the Governance dashboard. The Investigation page provides data that is filtered for just that file type. 
 
 . To display all file types, select *View All*.
