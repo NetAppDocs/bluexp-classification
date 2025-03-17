@@ -13,7 +13,9 @@ summary: You can investigate the data from your organization by viewing details 
 :imagesdir: ./media/
 
 [.lead]
-You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the BlueXP classification UI, including the Governance and Compliance dashboards. You can export the data into a CSV or JSON file for further analysis or to share with others.
+You can investigate the data from your organization by viewing details in the Data Investigation page. Here is where you can continue your research after looking at the Governance dashboard. On the Investigation page, you can filter the data using one of the many filters to show only the results you want to see. You can also view file metadata, permissions for files and directories, and check for duplicate files in your storage systems.
+
+You can navigate to this page from many areas of the BlueXP classification UI, including the Governance and Compliance dashboards with the filters selected already on those pages. You can export the data into a CSV or JSON file for further analysis or to share with others.
 
 NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
 
@@ -21,22 +23,28 @@ NOTE: The capabilities described in this section are available only if you have 
 
 You can filter the contents of the investigation page to display only the results you want to see. 
 
-If you want to download the contents of the page as a report after you've refined it, select the image:button_download.png[download button] button. <<Data Investigation Report,Go here for details about the Data Investigation report>>.
+.Steps 
+
+. From the BlueXP classification menu, select *Investigation*.
+
+. On the Data Investigation page, do any of the following: 
+
+. To download the contents of the page as a report after you've refined it, select the image:button_download.png[download button] button. <<Data Investigation Report,Go here for details about the Data Investigation report>>.
 
 //Note that the actions available in the button bar and Policies are not currently supported at the "Directory" level.
 
 image:screenshot_compliance_investigation_filtered.png[A screenshot of the filters available when refining the results in the investigation page.]
 
-* The top-level tabs enable you to view data from files (unstructured data), directories (folders and file shares), or from databases (structured data).
+. To view the data from files (unstructured data), directories (folders and file shares), or from databases (structured data), select one of the tabs at the top. 
 
-* The controls at the top of each column enable you to sort the results in numerical or alphabetical order.
+. To sort the results in numerical or alphabetical order, select the control at the top of each column.
 
-* The left-pane filters enable you to refine the results by selecting the attributes described in the next sections.
+. To refine the results even more, select one of the many filters in the left Filter pane. 
 
 [NOTE]
 You can only view the first 10,000 results—or 500 pages—for a scan on the Data Investigation page. 
 
-=== Filter data by sensitivity and content
+*Filter data by sensitivity and content*
 
 Use the following filters to view how much sensitive information is contained in your data. 
 
@@ -58,7 +66,7 @@ NOTE: The December 2023 (version 1.26.6) release removed the option to calculate
 
 |===
 
-=== Filter data by user owner and user permissions 
+*Filter data by user owner and user permissions* 
 
 Use the following filters to view file owners and permissions to access your data.
 
@@ -75,7 +83,7 @@ Use the following filters to view file owners and permissions to access your dat
 
 |===
 
-=== Filter data by time
+*Filter data by time*
 
 Use the following filters to view data based on time criteria. 
 
@@ -94,7 +102,7 @@ Note that BlueXP classification does not extract the "last accessed time" from t
 
 |===
 
-=== Filter data by metadata
+*Filter data by metadata*
 
 Use the following filters to view data based on location, size, and directory or file type. 
 
@@ -112,7 +120,7 @@ Use the following filters to view data based on location, size, and directory or
 
 |===
 
-=== Filter data by storage type
+*Filter data by storage type*
 
 Use the following filters to view data by storage type. 
 
@@ -128,7 +136,7 @@ Use the following filters to view data by storage type.
 
 |===
 
-=== Filter data by policies
+*Filter data by policies*
 
 Use the following filter to view data by policies.
 
@@ -146,7 +154,7 @@ Use the following filter to view data by policies.
 
 |===
 
-=== Filter data by analysis status
+*Filter data by analysis status*
 
 Use the following filter to view data by the BlueXP classification scan status.
 
@@ -163,7 +171,7 @@ Use the following filter to view data by the BlueXP classification scan status.
 
 link:reference-collected-metadata.html#last-access-time-timestamp[See details about the "last accessed time" timestamp] for more information about the items that appear in the Investigation page when filtering using the Scan Analysis Event.
 
-=== Filter data by duplicates
+*Filter data by duplicates*
 
 Use the following filter to view files that are duplicated in your storage.
 
@@ -238,7 +246,7 @@ image:screenshot_compliance_duplicate_file.png[A screenshot showing how to view 
 
 TIP: You can use the "file hash" value provided in this page and enter it directly in the Investigation page to search for a specific duplicate file at any time - or you can use it in a Policy.
 
-== Data Investigation Report
+== Create the Data Investigation Report
 
 The Data Investigation Report is a download of the filtered contents of the Data Investigation page. 
 
@@ -319,4 +327,20 @@ image:screenshot_compliance_investigation_report2.png[A screenshot of the Downlo
 A dialog displays a message that the reports are being downloaded.
 
 //You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
+
+== Create a policy based on selected filters
+
+
+. From the BlueXP classification menu, select *Investigation*. 
+. On the Data Investigation page, select the filters you want to use to create a policy.
+. At the bottom of the Filter pane, select *Create policy from this search*.
+. Enter a name and a description for the policy.
+. Choose any of the following: 
+* *Automatically delete files that match this policy (every day): Select this if you want to delete the files that match the policy.
+* *Send email updates about this policy to BlueXP users on this account every <day/week/month>*: Select this if you want to send email updates about the policy to BlueXP users on this account.
+* *Send email every <Day> to <email address>*: Select this if you want to send an email every <Day> to a specific email address.
+
+. Select *Create Policy*.
+
+TIP: This might take up to 15 minutes for the results to appear on the Policies page. 
 
