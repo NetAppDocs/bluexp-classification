@@ -5,7 +5,7 @@ keywords: personal files, personal data, sensitive personal files, sensitive per
 summary: There are many types of private data that BlueXP classification can identify in your volumes, Amazon S3 buckets, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts.
 ---
 
-= Categories of private data
+= Categories of private data in BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font

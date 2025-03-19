@@ -5,7 +5,7 @@ keywords: compliance, privacy, filter data, highlights, policies, email alerts, 
 summary: Policies are like a favorites list of custom filters that provide search results in the Investigation page for commonly requested compliance queries. BlueXP classification provides a set of predefined Policies based on common customer requests. You can create custom Policies that provide results for searches specific to your organization.
 ---
 
-= Assign policies to your data
+= Assign policies to your data with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
