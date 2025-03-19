@@ -5,7 +5,7 @@ keywords: personal files, personal data, sensitive personal files, sensitive per
 summary: You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the BlueXP classification UI, including the Governance and Compliance dashboards.
 ---
 
-= Investigate the data stored in your organization
+= Investigate the data stored in your organization with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
