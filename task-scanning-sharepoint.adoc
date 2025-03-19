@@ -5,7 +5,7 @@ keywords: cloud compliance, enable cloud compliance, privacy, compliance, sharep
 summary: Complete a few steps to start scanning files in your SharePoint Online and SharePoint On-Premise accounts with BlueXP classification.
 ---
 
-= Scan SharePoint accounts
+= Scan SharePoint accounts with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
