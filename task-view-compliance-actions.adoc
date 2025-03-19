@@ -5,7 +5,7 @@ keywords: compliance, actions, view progress
 summary: When you run an action from the Investigation Results pane across many files, for example, deleting 100 files, the process can take some time. You can monitor the status of these asynchronous actions in the Action Status pane so you'll know when it has been applied to all files.
 ---
 
-= Viewing the status of your compliance actions in BlueXP classification
+= View the status of your compliance actions in BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font

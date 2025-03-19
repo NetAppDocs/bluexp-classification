@@ -5,7 +5,7 @@ keywords: savings, stale data, non-business data, duplicate data, age or data, s
 summary: Gain control of the costs related to the data on your organizations' storage resources. BlueXP classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
 ---
 
-= View governance details about your data using the Governance dashboard in BlueXP classification
+= View governance details about your data using the BlueXP classification Governance dashboard
 :hardbreaks:
 :nofooter:
 :icons: font
