@@ -211,7 +211,7 @@ image:screenshot_compliance_file_details.png[A screenshot showing the metadata d
 
 //* If you have integrated AIP labels with BlueXP classification, you can assign a label to this file, or change to a different label if one already exists. See link:task-org-private-data.html#assign-aip-labels-manually[Assigning AIP labels manually] for details.
 
-== View permissions for files and directories
+== View users' permissions for files and directories
 
 To view a list of all users or groups who have access to a file or to a directory and the types of permissions they have, select *View all Permissions*. This button is available only for data in CIFS shares.
 
@@ -223,10 +223,14 @@ Note that if you see SIDs (Security IDentifiers) instead of user and group names
 . In the Data Investigation list on the right, select the down-caret image:button_down_caret.png[down-caret] on the right for any single file to view the file metadata.
 . To view a list of all users or groups who have access to a file or to a directory and the types of permissions they have, in the Open Permissions field, select *View all Permissions*. 
 +
+NOTE: BlueXP classification shows up to 100 users in the list. 
++
 image:screenshot_compliance_permissions.png[A screenshot showing detailed file permissions.]
 //replace screenshot later with Role and Department headings using screenshot_compliance_permissions_future.png in repo
 
 . Select the down-caret image:button_down_caret.png[down-caret] button for any group to see the list of users who are part of the group.
++
+TIP: You can expand one level of the group to see the users who are part of the group.
 
 . Select the name of a user or group to refresh the Investigation page so you can see all the files and directories that the user or group has access to.
 
@@ -234,7 +238,7 @@ image:screenshot_compliance_permissions.png[A screenshot showing detailed file p
 
 You can view if duplicate files are being stored in your storage systems. This is useful if you want to identify areas where you can save storage space. It can also be helpful to make sure certain files that have specific permissions or sensitive information are not unnecessarily duplicated in your storage systems.
 
-All of your files (not including databases) that are 1 MB or larger, and that contain personal or sensitive personal information, are compared to see if there are duplicates. 
+All of your files (not including databases) that are 1 MB or larger, or that contain personal or sensitive personal information, are compared to see if there are duplicates. 
 
 BlueXP classification uses hashing technology to determine duplicate files. If any file has the same hash code as another file, we can be 100% sure that the files are exact duplicates -- even if the file names are different.
 
