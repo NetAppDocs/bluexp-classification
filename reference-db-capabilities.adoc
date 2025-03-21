@@ -5,7 +5,7 @@ keywords: database actions, database filters, supported, unsupported
 summary: There are some features and functionality that are unavailable with BlueXP classification when you are scanning database schemas.
 ---
 
-= Supported and unsupported database capabilities
+= Supported and unsupported database capabilities in BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
