@@ -35,16 +35,19 @@ You can enable BlueXP classification scanning on Cloud Volumes ONTAP systems in 
 .Steps
 
 . From the BlueXP left navigation menu, select *Governance > Classification*.
+. From the BlueXP classification menu, select *Configuration*.
++
+The Configuration page shows multiple working environments. 
 +
 image:screen-cl-config-cvo.png[A screenshot of the Configuration tab showing a Cloud Volumes ONTAP working environment.]
 
-. From the BlueXP classification menu, select *Configuration*.
+. Choose a working environment and select *Configuration*. 
 +
 image:screen-cl-config-cvo-map-options.png[A screenshot of the Configuration tab showing the options for mapping and classifying repositories.]
 
 . If you don't care if the last access time is reset, turn the *Scan when missing "write attributes" permissions* switch ON and all files are scanned regardless of the permissions. 
 +
-The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't scan the files because BlueXP classification can't revert the "last access time" to the original timestamp. link:reference-collected-metadata.html#last-access-time-timestamp[Learn more^].
+The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't classify the files because BlueXP classification can't revert the "last access time" to the original timestamp. link:reference-collected-metadata.html[Learn more^].
 
 
 . Select how you want to scan the volumes in each working environment. link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[Learn about mapping and classification scans]:
@@ -58,24 +61,11 @@ The switch at the top of the page for *Scan when missing "write attributes" perm
 
 .Result
 
-BlueXP classification starts scanning the volumes you selected in the working environment. Results are available in the Compliance dashboard as soon as BlueXP classification finishes the initial scans. The time that it takes depends on the amount of data--it could be a few minutes or hours.  
+BlueXP classification starts scanning the volumes you selected in the working environment. Results start to appear in the Compliance dashboard as soon as BlueXP classification starts the scan. The time that it takes to complete depends on the amount of data--it could be a few minutes or hours.  
 
-[NOTE]
-====
-* By default, if BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system won't scan the files in your volumes because BlueXP classification can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, click *Or select scanning type for each volume*. The resulting page has a setting you can enable so that BlueXP classification will scan the volumes regardless of permissions.
-* BlueXP classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#bluexp-classification-scans-only-one-share-under-a-volume[See more details about this BlueXP classification limitation^].
-====
+NOTE: BlueXP classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#bluexp-classification-scans-only-one-share-under-a-volume[See more details about this BlueXP classification limitation^].
 
-== Track the scanning progress
 
-You can track the progress of the initial scan.
-
-. Select **Configuration** menu.
-. Select the **Working Environment configuration**. 
-+
-The progress of each scan is shown as a progress bar. 
-
-. Hover over the progress bar to see the number of files scanned relative to the total files in the volume.
 
 == Verify that BlueXP classification has access to volumes
 
@@ -107,14 +97,9 @@ The credentials can be read-only, but providing admin credentials ensures that B
 include::_include/cifs-permissions.adoc[]
 +
 After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.
-+
-image:screenshot_cifs_status.gif[A screenshot that shows the Configuration page and one Cloud Volumes ONTAP system for which CIFS credentials were successfully provided.]
 
-. On the Configuration page, select *View Details* to review the status for each CIFS and NFS volume and correct any errors.
-+
-For example, the following image shows four volumes; one of which BlueXP classification can't scan due to network connectivity issues between the BlueXP classification instance and the volume.
-+
-image:screenshot_compliance_volume_details.gif["A screenshot of the View Details page in the scan configuration that shows four volumes; one of which isn't being scanned because of network connectivity between BlueXP classification and the volume."]
+. On the Configuration page, select *Configuration* to review the status for each CIFS and NFS volume and correct any errors.
+
 
 == Disable compliance scans on volumes
 
