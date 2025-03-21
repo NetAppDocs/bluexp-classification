@@ -5,7 +5,7 @@ keywords: personal files, personal data, sensitive personal files, sensitive per
 summary: You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the BlueXP classification UI, including the Governance and Compliance dashboards.
 ---
 
-= Investigate the data stored in your organization
+= Investigate the data stored in your organization with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -21,7 +21,7 @@ NOTE: The capabilities described in this section are available only if you have 
 
 You can filter the contents of the investigation page to display only the results you want to see. 
 
-If you want to download the contents of the page as a report after you've refined it, click the image:button_download.png[download button] button. <<Data Investigation Report,Go here for details about the Data Investigation report>>.
+If you want to download the contents of the page as a report after you've refined it, select the image:button_download.png[download button] button. <<Data Investigation Report,Go here for details about the Data Investigation report>>.
 
 //Note that the actions available in the button bar and Policies are not currently supported at the "Directory" level.
 
@@ -32,6 +32,9 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 * The controls at the top of each column enable you to sort the results in numerical or alphabetical order.
 
 * The left-pane filters enable you to refine the results by selecting the attributes described in the next sections.
+
+[NOTE]
+You can only view the first 10,000 results—or 500 pages—for a scan on the Data Investigation page. 
 
 === Filter data by sensitivity and content
 
@@ -176,7 +179,7 @@ Use the following filter to view files that are duplicated in your storage.
 
 == View file metadata
 
-In the Data Investigation results pane you can click image:button_down_caret.png[down-caret] for any single file to view the file metadata.
+In the Data Investigation results pane, select the down-caret image:button_down_caret.png[down-caret] button for any single file to view the file metadata.
 
 image:screenshot_compliance_file_details.png[A screenshot showing the metadata details for a file in the Data Investigation page.]
 
@@ -198,16 +201,16 @@ Note that not all information is available for all data sources - just what is a
 
 == View permissions for files and directories
 
-To view a list of all users or groups who have access to a file or to a directory, and the types of permissions they have, click *View all Permissions*. This button is available only for data in CIFS shares.
+To view a list of all users or groups who have access to a file or to a directory and the types of permissions they have, select *View all Permissions*. This button is available only for data in CIFS shares.
 
 Note that if you see SIDs (Security IDentifiers) instead of user and group names, you should integrate your Active Directory into BlueXP classification. link:task-add-active-directory-datasense.html[See how to do this].
 
 image:screenshot_compliance_permissions.png[A screenshot showing detailed file permissions.]
 //replace screenshot later with Role and Department headings using screenshot_compliance_permissions_future.png in repo
 
-You can click image:button_down_caret.png[down-caret] for any group to see the list of users who are part of the group.
+Select the down-caret image:button_down_caret.png[down-caret] button for any group to see the list of users who are part of the group.
 
-Additionally, you can click the name of a user or a group and the Investigation page is displayed with the name of that user or group populated in the “User / Group Permissions” filter so you can see all the files and directories that the user or group has access to.
+Selecting the name of a user or group refreshes the Investigation page so you can see all the files and directories that the user or group has access to.
 
 == Check for duplicate files in your storage systems
 
@@ -227,9 +230,9 @@ All duplicated files are displayed in the Results page.
 
 *View if a specific file is duplicated*
 
-If you want to see if a single file has duplicates, in the Data Investigation results pane you can click image:button_down_caret.png[down-caret] for any single file to view the file metadata. If there are duplicates of a certain file, this information appears next to the _Duplicates_ field.
+If you want to see if a single file has duplicates, in the Data Investigation results pane, select image:button_down_caret.png[down-caret] for any single file to view the file metadata. If there are duplicates of a certain file, this information appears next to the _Duplicates_ field.
 
-To view the list of duplicate files and where they are located, click *View Details*. In the next page click *View Duplicates* to view the files in the Investigation page.
+To view the list of duplicate files and where they are located, select *View Details*. In the next page select *View Duplicates* to view the files in the Investigation page.
 
 image:screenshot_compliance_duplicate_file.png[A screenshot showing how to view where duplicated files are located.]
 
@@ -303,9 +306,9 @@ The *Structured Data Report* includes the following information about your datab
 
 .Steps to generate the report
 
-. From the Data Investigation page, click the image:button_download.png[download button] button on the top, right of the page.
-
-. Select to download a .CSV or .JSON report of the data, and click *Download Report*.
+. From the Data Investigation page, select the image:button_download.png[download button] button on the top, right of the page.
+. Choose the report type: CSV or JSON and provide a **Report name**. Select a **Working environment** and **Volume** then provide a **Destination folder path**. 
+. Select **Download Report**.
 //+
 //When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
 +
