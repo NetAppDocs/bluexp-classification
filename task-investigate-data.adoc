@@ -253,6 +253,11 @@ The report is available as a .CSV or .JSON file that you can save to the local m
 
 There can be up to three report files downloaded if BlueXP classification is scanning files (unstructured data), directories (folders and file shares), and databases (structured data).
 
+The files are split into files with a fixed number of rows or records:
+
+* CSV - 200,000 records
+* JSON - 100,000 records
+
 *What's included in the Data Investigation Report*
 
 The *Unstructured Files Data Report* includes the following information about your files:
