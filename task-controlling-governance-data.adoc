@@ -44,9 +44,7 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 . Within each Savings Opportunities tile of the Governance dashboard, select *Optimize Storage* to view the filtered results in the Investigation page.
 You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. 
 
-.Steps 
 
-. Within each Savings Opportunities tile, select *Optimize Storage* to view the filtered results in the Investigation page.
 
 * *Stale Data* - Data that was last modified over 3 years ago.
 * *Non-Business Data* - Data considered not to be business related, based on their Category or File Type. This includes:
@@ -67,6 +65,9 @@ NOTE: If any of your data sources implement data tiering, old data that already 
 
 In the _Policies_ area, the policies with the greatest number of results appear at the top of the list. 
 
+
+For details about policies, see link:task-using-policies.html[Assign policies to your data].
+
 .Steps 
 
 
@@ -76,7 +77,6 @@ In the _Policies_ area, the policies with the greatest number of results appear 
 In the _Policies_ area, the policies with the greatest number of results appear at the top of the list. 
 
 
-For details about policies, see link:task-using-policies.html[Assign policies to your data].
 
 
 == Create the Data Discovery Assessment Report
@@ -105,7 +105,7 @@ Using this report, you might take the following actions:
 . From the BlueXP menu, select *Governance > Classification*.
 
 . Select *Governance*.
-. Select the *Data Discovery Assessment Report* button.
+. Select *Data Discovery Assessment Report*.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Discovery Assessment Report.]
 
@@ -142,7 +142,7 @@ For single working environments: Lists the files that are using the most capacit
 . Select *Full Data Mapping Overview Report*.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
-. To customize the company name that appears on the first page of the report, from the top right of the BlueXP classification page select image:screenshot_gallery_options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
+. To customize the company name that appears on the first page of the report, from the top right of the BlueXP classification page, select image:screenshot_gallery_options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
 
 
 .Result
