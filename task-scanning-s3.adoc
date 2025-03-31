@@ -5,7 +5,7 @@ keywords: cloud compliance, amazon s3, s3 buckets, amazon s3 buckets, scan s3 bu
 summary: BlueXP classification can scan your Amazon S3 buckets to identify the personal and sensitive data that resides in S3 object storage. BlueXP classification can scan any bucket in the account, regardless if it was created for a NetApp solution.
 ---
 
-= Scan Amazon S3 buckets
+= Scan Amazon S3 buckets with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font

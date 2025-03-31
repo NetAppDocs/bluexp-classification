@@ -5,7 +5,7 @@ keywords: report, privacy, risk, privacy risk assessment, compliance status, sev
 summary: BlueXP classification provides reports that you can use to better understand the status of your organization's data privacy program.
 ---
 
-= View compliance reports
+= View BlueXP classification compliance reports
 :hardbreaks:
 :nofooter:
 :icons: font
