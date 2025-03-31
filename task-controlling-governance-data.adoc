@@ -15,8 +15,9 @@ summary: Gain control of the costs related to the data on your organizations' st
 [.lead]
 Gain control of the costs related to the data on your organizations' storage resources. BlueXP classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
 
-Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information before moving it.
+This is where you should begin your research. From the Governance dashboard, you can select an area for further investigation.
 
+Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information before moving it.
 
 == Review the Governance dashboard
 
@@ -31,6 +32,7 @@ image:screenshot_compliance_governance_dashboard.png[A screenshot of the BlueXP 
 +
 The Governance dashboard appears. 
 
+
 === Review savings opportunities
 
 You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. 
@@ -40,6 +42,9 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 . From the BlueXP classification menu, select *Governance*.
 
 . Within each Savings Opportunities tile of the Governance dashboard, select *Optimize Storage* to view the filtered results in the Investigation page.
+You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. 
+
+
 
 * *Stale Data* - Data that was last modified over 3 years ago.
 * *Non-Business Data* - Data considered not to be business related, based on their Category or File Type. This includes:
@@ -54,20 +59,24 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 
 * *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html#filter-data-by-duplicates[See what types of duplicate files are displayed].
 
-NOTE: If any of your data sources implement data tiering, old data that already resides in object storage ccan be identified in the _Stale Data_ category.
+NOTE: If any of your data sources implement data tiering, old data that already resides in object storage can be identified in the _Stale Data_ category.
 
 === Review policies with the largest number of results
 
 In the _Policies_ area, the policies with the greatest number of results appear at the top of the list. 
 
+
+For details about policies, see link:task-using-policies.html[Assign policies to your data].
+
 .Steps 
 
 
 . From the BlueXP classification menu, select *Governance*.
-. In the Goverance dashboard > Policies tile, select the name of a policy in the to display the results in the Investigation page. 
+. In the Goverance dashboard > Policies tile, select the name of a policy to display the results in the Investigation page. 
 . Select *View All* to view the list of all available policies.
+In the _Policies_ area, the policies with the greatest number of results appear at the top of the list. 
 
-For details about policies, see link:task-using-policies.html[Assign policies to your data].
+
 
 
 == Create the Data Discovery Assessment Report
@@ -85,16 +94,18 @@ The Data Discovery Assessment Report provides a high-level analysis of the scann
 
 Using this report, you might take the following actions:
 
-* Reduce storage costs by changing your retention policy, or by moving or deleting certain data (stale, duplicate, or non-business data).
-* Protect your data that has broad permissions by revising global group management policies.
-* Protect your data that has personal or sensitive personal information by moving PII to more secure data stores.
+* Reduce storage costs by changing your retention policy, or by moving or deleting certain data (stale, duplicate, or non-business data)
+* Protect your data that has broad permissions by revising global group management policies
+* Protect your data that has personal or sensitive personal information by moving PII to more secure data stores
 
 
 
 .Steps
 
-. From the BlueXP classification menu, select *Governance*.
-. In the Governance dashboard > Data Overview section, select the *Data Discovery Assessment Report* button.
+. From the BlueXP menu, select *Governance > Classification*.
+
+. Select *Governance*.
+. Select *Data Discovery Assessment Report*.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Discovery Assessment Report.]
 
@@ -107,6 +118,7 @@ BlueXP classification generates a .pdf report that you can review and send to ot
 == Create the Data Mapping Overview Report
 
 The Data Mapping Overview Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report first lists an overview that summarizes all your working environments and data sources, and then it provides an analysis for each working environment.
+
 
 The report includes the following information:
 
@@ -124,12 +136,14 @@ For single working environments: Lists the files that are using the most capacit
 
 .Steps
 
+. From the BlueXP menu, select *Governance > Classification*.
 
-. From the BlueXP classification menu, select *Governance*.
-. Within the Governance dashboard > Data Overview section, select the *Full Data Mapping Overview Report* button.
+. Select *Governance*.
+. Select *Full Data Mapping Overview Report*.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
-. To customize the company name that appears on the first page of the report, from the top of the BlueXP classification page select image:screenshot_gallery_options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
+. To customize the company name that appears on the first page of the report, from the top right of the BlueXP classification page, select image:screenshot_gallery_options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
+
 
 .Result
 
@@ -140,7 +154,7 @@ If the report is larger than 1 MB, the .pdf file is retained on the BlueXP class
 
 
 
-== Review the top data repositories listed by data sensitivity
+=== Review the top data repositories listed by data sensitivity
 
 The _Top Data Repositories by Sensitivity Level_ area lists the top four data repositories (working environments and data sources) that contain the most sensitive items. The bar chart for each working environment is divided into:
 
@@ -150,12 +164,11 @@ The _Top Data Repositories by Sensitivity Level_ area lists the top four data re
 
 .Steps
 
-. From the BlueXP classification menu, select *Governance*.
-. In the Governance dashboard > Data Overview section, to see the total number of items in each category, position your cursor over each section of the bar.
+. To see the total number of items in each category, position your cursor over each section of the bar.
 
 . To filter results that will appear in the Investigation page, select each area ib the bar and investigate further.
 
-== Review sensitive data and wide permissions
+=== Review sensitive data and wide permissions
 
 The _Sensitive Data and Wide Permissions_ area shows the percentage of files that contain sensitive data and have wide permissions. The chart shows the following types of permissions: 
 
@@ -163,14 +176,12 @@ The _Sensitive Data and Wide Permissions_ area shows the percentage of files tha
 * From the least sensitve data to the most sensitive data on the vertical axis.
 
 .Steps
-
-. From the BlueXP classification menu, select *Governance*.
-. In the Governance dashboard > Sensitive Data and Wide Permissions section, to see the total number of files in each category, position your cursor over each box. 
+. To see the total number of files in each category, position your cursor over each box. 
 
 . To filter results that will appear in the Investigation page, select a box and investigate further.
 
 
-== Review data listed by types of open permissions
+=== Review data listed by types of open permissions
 
 The _Open Permissions_ area shows the percentage for each type of permissions that exist for all files that are being scanned. The chart shows the following types of permissions:
 
@@ -181,21 +192,17 @@ The _Open Permissions_ area shows the percentage for each type of permissions th
 
 .Steps 
 
-
-. From the BlueXP classification menu, select *Governance*.
-. In the Governance dashboard > Open Permissions section, to see the total number of files in each category, position your cursor over each box. 
+. To see the total number of files in each category, position your cursor over each box. 
 
 . To filter results that will appear in the Investigation page, select a box and investigate further.
 
-== Review the age and size of data
+=== Review the age and size of data
 
 You might want to investigate the items in the _Age_ and _Size_ graphs to see if there is any data you should delete or tier to less expensive object storage.
 
 .Steps
 
-
-. From the BlueXP classification menu, select *Governance*.
-. In the Age of Data chart in the Governance dashboard, to see details about the age of the data, position your cursor over a point in the chart. 
+. In the Age of Data chart, to see details about the age of the data, position your cursor over a point in the chart. 
 
 . To filter by an age or size range, select that age or size.
 
@@ -204,11 +211,9 @@ You might want to investigate the items in the _Age_ and _Size_ graphs to see if
 
 NOTE: If any of your data sources implement data tiering, old data that already resides in object storage might be identified in the _Age of Data_ graph.
 
-== Review the most identified data classifications in your data
+=== Review the most identified data classifications in your data
 
 The _Classification_ area provides a list of the most identified link:task-controlling-private-data.html#view-files-by-categories[Categories^] and link:task-controlling-private-data.html#view-files-by-file-types[File types^] in your scanned data.
-
-=== Review the most identified classification categories
 
 Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like "resumes" or "employee contracts" can include sensitive data. When you investigate the results, you might find that employee contracts are stored in a nonsecure location. You can then correct that issue.
 
@@ -216,22 +221,12 @@ See link:task-controlling-private-data.html#view-files-by-categories[Viewing fil
 
 .Steps
 
+. From the BlueXP menu, click *Governance > Classification*.
 
-. From the BlueXP classification menu, select *Governance*.
-. In the Governance dashboard > Classification section > Categories tile, to see details about a category, select it. The Investigation page provides data that is filtered for just that category. 
+. Click *Governance*, and then click the *Data Discovery Assessment Report* button.
 
-. To display all categories, select *View All*.
+.Result
 
-=== Review the most identified file types 
+BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
 
-Reviewing your file types can help you control your sensitive data because you might find that certain file types are not stored correctly.
-
-See link:task-controlling-private-data.html#view-files-by-file-types[Viewing file types^] for more information.
-
-.Steps
-
-
-. From the BlueXP classification menu, select *Governance*.
-. In the Governance dashboard > Classification section > File Types tile, to see details about a file type, select it in the File Types section of the Governance dashboard. The Investigation page provides data that is filtered for just that file type. 
-
-. To display all file types, select *View All*.
+//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
