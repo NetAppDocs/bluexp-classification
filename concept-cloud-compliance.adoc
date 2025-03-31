@@ -18,7 +18,7 @@ BlueXP classification (Cloud Data Sense) is a data governance service for BlueXP
 ====
 IMPORTANT
 
-Starting in May 2024 with version 1.31, BlueXP classification is now available as a core capability within BlueXP at no additional charge. No Classification license or subscription is required. We have also focused BlueXP classification functionality on NetApp storage systems, so some unused, or underused, features have been deprecated.
+Starting in May 2024 with version 1.31, BlueXP classification is now available as a core capability within BlueXP at no additional charge. No Classification license or subscription is required. We have focused BlueXP classification functionality on NetApp storage systems, so some unused or underused features have been deprecated.
 
 link:reference-free-paid.html[See a list of deprecated features].
 //https://docs.netapp.com/us-en/bluexp-classification/reference-free-paid.html[See a list of deprecated features].
@@ -152,16 +152,15 @@ You can deploy BlueXP classification on a system with fewer CPUs and less RAM.
 When deploying BlueXP classification in Azure or GCP, email ng-contact-data-sense@netapp.com for assistance if you want to use a smaller instance type. 
 
 
-== How BlueXP classification works
+== How BlueXP classification scanning works
 
-At a high-level, BlueXP classification works like this:
+At a high-level, BlueXP classification scanning works like this:
 
 . You deploy an instance of BlueXP classification in BlueXP.
-. You enable high-level mapping or deep-level scanning on one or more data sources.
+. You enable high-level mapping (called _Mapping only_ scans) or deep-level scanning (called _Map & Classify_ scans) on one or more data sources.
 . BlueXP classification scans the data using an AI learning process.
 . You use the provided dashboards and reporting tools to help in your compliance and governance efforts.
 
-=== How scans work
 
 After you enable BlueXP classification and select the repositories that you want to scan (these are the volumes, database schemas, or other user data), it immediately starts scanning the data to identify personal and sensitive data. You should focus on scanning live production data in most cases instead of backups, mirrors, or DR sites. Then BlueXP classification maps your organizational data, categorizes each file, and identifies and extracts entities and predefined patterns in the data. The result of the scan is an index of personal information, sensitive personal information, data categories, and file types.
 
@@ -169,161 +168,18 @@ BlueXP classification connects to the data like any other client by mounting NFS
 
 image:diagram_cloud_compliance_scan.png["A diagram that shows a BlueXP instance and a BlueXP classification instance running in your cloud provider. The BlueXP classification instance connects to NFS and CIFS volumes and databases to scan them."]
 
-After the initial scan, BlueXP classification continuously scans your data in a round-robin fashion to detect incremental changes (this is why it's important to keep the instance running).
+After the initial scan, BlueXP classification continuously scans your data in a round-robin fashion to detect incremental changes. This is why it's important to keep the instance running.
 
 You can enable and disable scans at the volume level or at the database schema level.
 
-=== What's the difference between Mapping and Classification scans
+== What's the difference between Mapping and Classification scans
 
 You can conduct two types of scans in BlueXP classification:
 
-- **Mapping-only** scans provide only a high-level overview of your data and are performed on selected data sources. Mapping-only scans take less time than map and classify scans because the do not access files to see the data inside. 
-- **Map and Classify** scans provide deep-level scanning of your data. 
+- **Mapping-only scans** provide only a high-level overview of your data and are performed on selected data sources. Mapping-only scans take less time than map and classify scans because the do not access files to see the data inside. You might want to do this initially to identify areas of research and then perform a Map & Classify scan on those areas.
+- **Map & Classify scans** provide deep-level scanning of your data. 
 
-Mapping-only scans enable you to quickly scan your data and identify data sources that might require more research, which you can then perform a Map & Classify scan on. 
-
-The table below shows some of the differences:
-
-[cols="47,18,18",width=85%,options="header"]
-|===
-| Feature
-| Map & classify scans
-| Mapping-only scans
-
-| Scan speed | Slow | Fast
-| Pricing | Free | Free
-| Capacity | Limited to 500 TB | Limited to 500 TB
-| List of file types and used capacity | Yes | Yes
-| Number of files and used capacity | Yes | Yes
-| Age and size of files | Yes | Yes
-| Ability to run a link:task-controlling-governance-data.html#data-mapping-report[Data Mapping Report] | Yes | Yes
-| Data Investigation page to view file details | Yes | No
-| Search for names within files | Yes | No
-| Create link:task-using-policies.html[policies] that provide custom search results | Yes | No
-| Ability to run other reports | Yes | No
-| Ability to see metadata from files* | No | Yes
-|===
-
-*The following metadata is extracted from files during mapping scans:  
-
-* Working environment 
-* Working environment type 
-* Storage repository 
-* File type 
-* Used capacity 
-* Number of files  
-* File size 
-* File creation 
-* File last access  
-* File last modified 
-* File discovered time 
-* Permissions extraction 
-
-
-// Start snippet: collapsible block (open on page load)
-.Governance dashboard differences:
-[%collapsible]
-====
-
-
-[cols="40,25,25",width=85%,options="header"]
-|===
-| Feature
-| Map & Classify
-| Map 
-
-| Stale data | Yes | Yes
-| Non-business data | Yes | Yes
-| Duplicated files | Yes | Yes
-| Predefined policies | Yes | No
-| Custom policies | Yes | Yes
-| DDA report | Yes | Yes
-| Mapping report| Yes | Yes
-|Sensitivity level detection | Yes | No
-| Sensitive data with wide permissions | Yes | No
-| Open permissions | Yes | Yes
-| Age of data | Yes | Yes
-| Size of data | Yes | Yes
-| Categories | Yes | No
-| File types | Yes | Yes
-|===
-
-====
-// End snippet
-
-
-// Start snippet: collapsible block (open on page load)
-
-.Compliance dashboard differences:
-[%collapsible]
-====
-
-[cols="40,25,25",width=85%,options="header"]
-|===
-| Feature
-| Map & Classify
-| Map 
-
-| Personal information | Yes | No
-| Sensitive personal information | Yes | No
-| Privacy risk assessment report | Yes | No
-| HIPAA report | Yes | No
-| PCI DSS report | Yes | No
-|===
-
-====
-// End snippet
-
-
-// Start snippet: collapsible block (open on page load)
-.Investigation filters differences:
-[%collapsible]
-====
-
-[cols="40,25,25",width=85%,options="header"]
-|===
-| Feature
-| Map & Classify
-| Map 
-
-| Policies | Yes | Yes
-| Working environment type | Yes | Yes
-| Working environment | Yes | Yes
-| Storage repository | Yes | Yes
-| File type | Yes | Yes
-| File size | Yes | Yes
-| Created time | Yes | Yes
-| Discovered time | Yes | Yes
-| Last modified | Yes | Yes
-| Last access | Yes | Yes
-| Open permissions | Yes | Yes
-| File directory path | Yes | Yes
-| Category | Yes | No
-| Sensitivity level | Yes | No
-
-| Number of identifiers | Yes | No
-| Personal data | Yes | No
-| Sensitive personal data | Yes | No
-| Data subject | Yes | No
-| Duplicates | Yes | Yes
-| Classification status | Yes | Status is always "Limited insights"
-| Scan analysis event | Yes | Yes
-| File hash | Yes | Yes
-| Number of users with access | Yes | Yes
-| User/group permissions |Yes | Yes
-| File owner | Yes | Yes
-| Directory type | Yes | Yes
-
-|===
-
-====
-// End snippet
-=== How quickly does BlueXP classification scan data
-
-The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
-
-* When performing Mapping-only scans, BlueXP classification can scan between 100-150 TiBs of data per day. 
-* When performing Map & classify scans, BlueXP classification can scan between 15-40 TiBs of data per day. 
+For details about the differences between Mapping and Classification scans, see link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].
 
 == Information that BlueXP classification categorizes
 
@@ -331,9 +187,9 @@ BlueXP classification collects, indexes, and assigns categories to your data (fi
 
 * *Standard metadata* about files: the file type, its size, creation and modification dates, and so on.
 
-* *Personal data*: Personally identifiable information (Pii) such as email addresses, identification numbers, or credit card numbers. link:task-controlling-private-data.html#view-files-that-contain-personal-data[Learn more about personal data^].
+* *Personal data*: Personally identifiable information (PII) such as email addresses, identification numbers, or credit card numbers. link:task-controlling-private-data.html#view-files-that-contain-personal-data[Learn more about personal data^].
 
-* *Sensitive personal data*: Special types of sensitive personal information (SPii), such as health data, ethnic origin, or political opinions, as defined by GDPR and other privacy regulations. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data[Learn more about sensitive personal data^].
+* *Sensitive personal data*: Special types of sensitive personal information (SPII), such as health data, ethnic origin, or political opinions, as defined by GDPR and other privacy regulations. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data[Learn more about sensitive personal data^].
 
 * *Categories*: BlueXP classification takes the data that it scanned and divides it into different types of categories. Categories are topics based on AI analysis of the content and metadata of each file. link:task-controlling-private-data.html#view-files-by-categories[Learn more about categories^].
 
@@ -343,9 +199,11 @@ BlueXP classification collects, indexes, and assigns categories to your data (fi
 
 == Networking overview
 
+BlueXP classification deploys a single server, or cluster, wherever you choose — in the cloud or on premises. The servers connect via standard protocols to the data sources and index the findings in an Elasticsearch cluster, which is also deployed on the same servers. This enables support for multi-cloud, cross-cloud, private cloud, and on-premises environments.
+
 BlueXP deploys the BlueXP classification instance with a security group that enables inbound HTTP connections from the Connector instance.
 
-When using BlueXP in SaaS mode, the connection to BlueXP is served over HTTPS, and the private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties can't read it.
+When you use BlueXP in SaaS mode, the connection to BlueXP is served over HTTPS, and the private data sent between your browser and the BlueXP classification instance are secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties can't read it.
 
 Outbound rules are completely open. Internet access is needed to install and upgrade the BlueXP classification software and to send usage metrics.
 
