@@ -80,7 +80,7 @@ The following metadata is extracted from files during mapping scans and is displ
 .Additional data in dashboards
 This release updates which data appears in the Governance, Compliance, and Investigation dashboards during mapping scans. 
 
-For details, see link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[What's the difference between mapping and classification scans]
+For details, see link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[What's the difference between mapping and classification scans].
 
 == 5 June 2024
 === Version 1.32
@@ -256,7 +256,7 @@ https://docs.netapp.com/us-en/bluexp-classification/api-classification.html[Lear
 
 .Japanese is now supported when searching for data subject names
 
-Japanese names can now be entered when searching for a subject's name in response to a Data Subject Access Request (DSAR). You can generate a https://docs.netapp.com/us-en/bluexp-classification/task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Data Subject Access Request report] with the resulting information. You can also enter Japanese names in the https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#filter-data-by-sensitivity-and-content["Data Subject" filter in the Data Investigation page] to identify files that contain the subject's name.
+Japanese names can now be entered when searching for a subject's name in response to a Data Subject Access Request (DSAR). You can generate a https://docs.netapp.com/us-en/bluexp-classification/task-generating-compliance-reports.html[Data Subject Access Request report] with the resulting information. You can also enter Japanese names in the https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Data Subject" filter in the Data Investigation page] to identify files that contain the subject's name.
 
 .Ubuntu is now a supported Linux distribution on which you can install BlueXP classification
 
@@ -272,14 +272,14 @@ You can enable file access audit logs to be collected on your BlueXP classificat
 
 .Data Sense BYOL licenses are now supported in dark sites
 
-Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-byol-freetrial.html#obtain-your-bluexp-classification-license-file[See how to obtain and upload your Data Sense BYOL license].
+Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. https://docs.netapp.com/us-en/bluexp-classification/task-licensing-byol-freetrial.html[See how to obtain and upload your Data Sense BYOL license].
 
 == 3 April 2023
 
 === Version 1.22
 .New Data Discovery Assessment Report
 
-The Data Discovery Assessment Report provides a high-level analysis of your scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The goal of this report is to raise awareness of data governance concerns, data security exposures, and data compliance gaps of your data set. https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html#data-discovery-assessment-report[See how to generate and use the Data Discovery Assessment Report].
+The Data Discovery Assessment Report provides a high-level analysis of your scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. The goal of this report is to raise awareness of data governance concerns, data security exposures, and data compliance gaps of your data set. https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html[See how to generate and use the Data Discovery Assessment Report].
 
 .Ability to deploy BlueXP classification on smaller instances in the cloud
 
