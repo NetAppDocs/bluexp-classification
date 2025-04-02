@@ -133,7 +133,7 @@ If a firewall is used on the Linux host, port 9000 is required for internal proc
 
 Follow these steps to run the BlueXP classification Prerequisites script.
 
-https://youtu.be/_RCYpuLXiV0?si=QLGUw8mqPrz9qs4B[Watch this video^] to see how to run the Prerequisites script and interpret the results.
+https://youtu.be/5ONowfPWkFs?si=QLGUw8mqPrz9qs4B[Watch this video^] to see how to run the Prerequisites script and interpret the results.
 
 .What you'll need
 
