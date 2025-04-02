@@ -42,7 +42,7 @@ The table below shows some of the differences:
 | List of file types and used capacity | Yes | Yes
 | Number of files and used capacity | Yes | Yes
 | Age and size of files | Yes | Yes
-| Ability to run a link:task-controlling-governance-data.html#data-mapping-report[Data Mapping Report] | Yes | Yes
+| Ability to run a link:task-controlling-governance-data.html[Data Mapping Report] | Yes | Yes
 | Data Investigation page to view file details | Yes | No
 | Search for names within files | Yes | No
 | Create link:task-using-policies.html[policies] that provide custom search results | Yes | No

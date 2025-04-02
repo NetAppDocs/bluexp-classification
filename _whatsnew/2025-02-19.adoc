@@ -14,8 +14,8 @@ By default, scans are queued based on the order in which they are initiated. Wit
 
 Priority is granted on a one-time basis. Automatic rescans of mapping data occur in the default order. 
 
-Prioritization is limited to link:concept-cloud-compliance.md#whats-the-difference-between-mapping-and-classification-scans[mapping-only scans]; it's not available for map and classify scans. 
-// https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans
+Prioritization is limited to link:concept-cloud-compliance.html[mapping-only scans]; it's not available for map and classify scans. 
+// https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[What's the difference between Mapping and Classification scans?]
 
 To change the priority: 
 

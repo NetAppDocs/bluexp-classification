@@ -47,7 +47,7 @@ indexpage:
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
         - title: Respond to a Data Subject Access Request
-          url: task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports    
+          url: task-generating-compliance-reports.html  
     - title: Deprecated features 
       links:
         - title: Deprecated features list
