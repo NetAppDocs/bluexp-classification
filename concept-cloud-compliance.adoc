@@ -195,7 +195,7 @@ BlueXP classification collects, indexes, and assigns categories to your data (fi
 
 * *Types*: BlueXP classification takes the data that it scanned and breaks it down by file type. link:task-controlling-private-data.html#view-files-by-file-types[Learn more about types^].
 
-* *Name entity recognition*: BlueXP classification uses AI to extract people's natural names from documents. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Learn about responding to Data Subject Access Requests^].
+* *Name entity recognition*: BlueXP classification uses AI to extract people's natural names from documents. link:task-generating-compliance-reports.html[Learn about responding to Data Subject Access Requests^].
 
 == Networking overview
 
@@ -212,7 +212,4 @@ If you have strict networking requirements, link:task-deploy-cloud-compliance.ht
 [#user-roles]
 == User roles in BlueXP classification
 
-The role each user has been assigned provides different capabilities within BlueXP and within BlueXP classification. For details, refer to the following:
-
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[BlueXP IAM roles] (when using BlueXP in standard mode)
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-user-roles.html[BlueXP account roles^] (when using BlueXP in restricted mode or private mode)
+The role each user has been assigned provides different capabilities within BlueXP and within BlueXP classification. For details, refer to https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[BlueXP IAM roles] (when using BlueXP in standard mode).
