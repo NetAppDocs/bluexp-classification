@@ -146,7 +146,7 @@ You can deploy BlueXP classification on a system with fewer CPUs and less RAM.
 | Extra Large | 32 CPUs, 128 GB RAM, 1 TiB SSD | Can scan up to 500 million files.
 | Large (default) | 16 CPUs, 64 GB RAM, 500 GiB SSD | Can scan up to 250 million files.
 //| Medium | 8 CPUs, 32 GB RAM, 200 GiB SSD | Slower scanning, and can only scan up to 1 million files.
-//| Small | 8 CPUs, 16 GB RAM, 100 GiB SSD | Same limitations as "Medium", plus the ability to identify link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[data subject names] inside files is disabled.
+//| Small | 8 CPUs, 16 GB RAM, 100 GiB SSD | Same limitations as "Medium", plus the ability to identify link:task-generating-compliance-reports.html[data subject names] inside files is disabled.
 |===
 
 When deploying BlueXP classification in Azure or GCP, email ng-contact-data-sense@netapp.com for assistance if you want to use a smaller instance type. 
@@ -195,7 +195,7 @@ BlueXP classification collects, indexes, and assigns categories to your data (fi
 
 * *Types*: BlueXP classification takes the data that it scanned and breaks it down by file type. link:task-controlling-private-data.html#view-files-by-file-types[Learn more about types^].
 
-* *Name entity recognition*: BlueXP classification uses AI to extract people's natural names from documents. link:task-generating-compliance-reports.html#what-is-a-data-subject-access-request[Learn about responding to Data Subject Access Requests^].
+* *Name entity recognition*: BlueXP classification uses AI to extract people's natural names from documents. link:task-generating-compliance-reports.html[Learn about responding to Data Subject Access Requests^].
 
 == Networking overview
 
@@ -212,7 +212,4 @@ If you have strict networking requirements, link:task-deploy-cloud-compliance.ht
 [#user-roles]
 == User roles in BlueXP classification
 
-The role each user has been assigned provides different capabilities within BlueXP and within BlueXP classification. For details, refer to the following:
-
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[BlueXP IAM roles] (when using BlueXP in standard mode)
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-user-roles.html[BlueXP account roles^] (when using BlueXP in restricted mode or private mode)
+The role each user has been assigned provides different capabilities within BlueXP and within BlueXP classification. For details, refer to https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[BlueXP IAM roles] (when using BlueXP in standard mode).
