@@ -231,7 +231,7 @@ NOTE: BlueXP classification is currently unable to scan S3 buckets, Azure NetApp
 
 Review the requirements and follow these steps when installing BlueXP classification software on a single on-premises host.
 
-https://youtu.be/rFpmekdbORc[Watch this video^] to see how to install BlueXP classification.
+https://youtu.be/XiPLaJpfJEI[Watch this video^] to see how to install BlueXP classification.
 
 Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html[See more details here].
 
@@ -274,7 +274,7 @@ image:screenshot_cloud_compliance_deploy_onprem.png[A screenshot of selecting th
 . On the host machine, enter the command you copied and then follow a series of prompts, or you can provide the full command including all required parameters as command line arguments.
 
 +
-Note that the installer performs a pre-check to make sure your system and networking requirements are in place for a successful installation. https://youtu.be/_RCYpuLXiV0[Watch this video^] to understand the pre-check messages and implications.
+Note that the installer performs a pre-check to make sure your system and networking requirements are in place for a successful installation. https://youtu.be/5ONowfPWkFs[Watch this video^] to understand the pre-check messages and implications.
 
 +
 [cols="50a,50",options="header"]
