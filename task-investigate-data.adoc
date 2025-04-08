@@ -5,7 +5,7 @@ keywords: personal files, personal data, sensitive personal files, sensitive per
 summary: You can investigate the data from your organization by viewing details in the Data Investigation page. Here is where you can continue your research after looking at the Governance dashboard.
 ---
 
-= Investigate the data stored in your organization
+= Investigate the data stored in your organization with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -62,6 +62,7 @@ NOTE: The December 2023 (version 1.26.6) release removed the option to calculate
 | Personal Data | Select the link:reference-private-data-categories.html[types of personal data].
 | Sensitive Personal Data | Select the link:reference-private-data-categories.html[types of sensitive personal data].
 | Data Subject | Enter a data subject's full name or known identifier. link:task-generating-compliance-reports.html[Learn more about data subjects here].
+
 
 |===
 
@@ -286,6 +287,11 @@ The report is available as a .CSV or .JSON file that you can save to the local m
 //When exporting to a file share, make sure BlueXP classification has the correct permissions for export access.
 
 There can be up to three report files downloaded if BlueXP classification is scanning files (unstructured data), directories (folders and file shares), and databases (structured data).
+
+The files are split into files with a fixed number of rows or records:
+
+* CSV - 200,000 records
+* JSON - 100,000 records
 
 *What's included in the Data Investigation Report*
 

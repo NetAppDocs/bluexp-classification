@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: task-controlling-private-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies
-summary: Gain control of your private data by viewing details about the personal data and sensitive personal data in your organization. You can also gain visibility by reviewing the categories and file types that BlueXP classification found in your data.
+summary: Gain control of your private data by viewing details about the personal data (PII) and sensitive personal data (SPII) in your organization. You can also gain visibility by reviewing the categories and file types that BlueXP classification found in your data.
 ---
 
-= View compliance details about the private data stored in your organization
+= View compliance details about the private data stored in your organization with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,41 +13,40 @@ summary: Gain control of your private data by viewing details about the personal
 :imagesdir: ./media/
 
 [.lead]
-Gain control of your private data by viewing details about the personal data (Pii) and sensitive personal (SPii) data in your organization. You can also gain visibility by reviewing the categories and file types that BlueXP classification found in your data.
+Gain control of your private data by viewing details about the personal data (PII) and sensitive personal data (SPII) in your organization. You can also gain visibility by reviewing the categories and file types that BlueXP classification found in your data.
 
 NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
 
-By default, the BlueXP classification dashboard displays compliance data for all working environments and databases.
+By default, the BlueXP classification dashboard displays compliance data for all working environments and databases. To see data for only some of the working environments, select them.
 
 image:screenshot_compliance_dashboard.png[A screenshot of the BlueXP classification dashboard]
 
-If you want to see data for only some of the working environments, <<View Dashboard data for specific working environments,select those working environments>>.
 
-You can also filter the results from the Data Investigation page and download a report of the results as a CSV file. See link:task-investigate-data.html#filter-data-in-the-data-investigation-page[Filtering data in the Data Investigation page] for details.
+Filter the results from the Data Investigation page and download a report of the results as a CSV file. See link:task-investigate-data.html[Filtering data in the Data Investigation page] for details.
 
 == View files that contain personal data
 
-BlueXP classification automatically identifies specific words, strings, and patterns (Regex) inside the data. For example, Personal Identification Information (PII), credit card numbers, social security numbers, bank account numbers, passwords, and more. link:reference-private-data-categories.html#types-of-personal-data[See the full list^]. BlueXP classification identifies this type of information in individual files, in files within directories (shares and folders), and in database tables.
+BlueXP classification automatically identifies specific words, strings, and patterns (Regex) inside the data. For example, Personal Identification Information (PII), credit card numbers, social security numbers, bank account numbers, passwords, and more. link:reference-private-data-categories.html[See the full list]. BlueXP classification identifies this type of information in individual files, in files within directories (shares and folders), and in database tables.
 
-Additionally, if you have added a database server to be scanned, the _Data Fusion_ feature allows you to scan your files to identify whether unique identifiers from your databases are found in those files or other databases. See link:task-managing-data-fusion.html[Adding personal data identifiers using Data Fusion^] for details.
+Additionally, if you have added a database server to be scanned, the _Data Fusion_ feature scans your files to identify whether unique identifiers from your databases are found in those files or other databases. See link:task-managing-data-fusion.html[Adding personal data identifiers using Data Fusion] for details.
 
-For some types of personal data, BlueXP classification uses _proximity validation_ to validate its findings. The validation occurs by looking for one or more predefined keywords in proximity to the personal data that was found. For example, BlueXP classification identifies a U.S. social security number (SSN) as a SSN if it sees a proximity word next to it--for example, _SSN_ or _social security_. link:reference-private-data-categories.html#types-of-personal-data[The table of personal data^] shows when BlueXP classification uses proximity validation.
+For some types of personal data, BlueXP classification uses _proximity validation_ to validate its findings. The validation occurs by looking for one or more predefined keywords in proximity to the personal data that was found. For example, BlueXP classification identifies a U.S. social security number (SSN) as an SSN if it sees a proximity word next to it--for example, _SSN_ or _social security_. link:reference-private-data-categories.html[The table of personal data] shows when BlueXP classification uses proximity validation.
 
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification* and then click the *Compliance* tab.
+. From the BlueXP classification menu, select the *Compliance* tab.
 
-. To investigate the details for all personal data, click the icon next to the personal data percentage.
+. To investigate the details for all personal data, select the icon next to the personal data percentage.
 +
-image:screenshot_compliance_personal.gif[A screenshot of selecting the personal data percentage.]
+image:screenshot_compliance_dashboard.png[A screenshot of the BlueXP classification dashboard]
 
-. To investigate the details for a specific type of personal data, click *View All* and then click the *Investigate Results* icon for a specific type of personal data; for example, email addresses.
+. To investigate the details for a specific type of personal data, select *View All* and then select the *Investigate Results* arrow icon for a specific type of personal data, for example, email addresses.
 +
-image:screenshot_personal_files.gif[A screenshot of the personal files dialog box where you can click the Investigate Results icon next to a personal data type.]
+image:screenshot_personal_files.png[A screenshot of the personal files dialog box where you can click the Investigate Results icon next to a personal data type.]
 
-. Investigate the data by searching, sorting, expanding details for a specific file, clicking *Investigate Results* to see masked information, or by downloading the file list.
+. Investigate the data by searching, sorting, expanding details for a specific file, selecting the *Investigate Results* arrow to see masked information, or by downloading the file list.
 +
-The 2 screenshots below show personal data found in individual files, and found in files within directories (shares and folders). You can also select the *Structured* tab to view personal data found in databases.
+The two screenshots below show personal data found in individual files, and found in files within directories (shares and folders). You can also select the *Structured* tab to view personal data found in databases.
 +
 image:screenshot_compliance_investigation_page.png[A screenshot of details information found in files after clicking Investigate Results.]
 +
@@ -55,7 +54,7 @@ image:screenshot_compliance_investigation_page_directory.png[A screenshot of det
 
 == View files that contain sensitive personal data
 
-BlueXP classification automatically identifies special types of sensitive personal information, as defined by privacy regulations such as https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN#d1e2051-1-1[articles 9 and 10 of the GDPR^]. For example, information regarding a person's health, ethnic origin, or sexual orientation. link:reference-private-data-categories.html#types-of-sensitive-personal-data[See the full list^]. BlueXP classification identifies this type of information in individual files, in files within directories (shares and folders), and in database tables.
+BlueXP classification automatically identifies special types of sensitive personal information, as defined by privacy regulations such as https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN#d1e2051-1-1[articles 9 and 10 of the GDPR^]. For example, information regarding a person's health, ethnic origin, or sexual orientation. link:reference-private-data-categories.html[See the full list]. BlueXP classification identifies this type of information in individual files, in files within directories (shares and folders), and in database tables.
 
 BlueXP classification uses artificial intelligence (AI), natural language processing (NLP), machine learning (ML), and cognitive computing (CC) to understand the meaning of the content that it scans in order to extract entities and categorize it accordingly.
 
@@ -65,21 +64,21 @@ NOTE: Only English is supported when scanning for sensitive personal data. Suppo
 
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification* and then click the *Compliance* tab.
+. From the BlueXP classification menu, select *Compliance*.
 
-. To investigate the details for all sensitive personal data, click the icon next to the sensitive personal data percentage.
+. To investigate the details for all sensitive personal data, select the icon next to the sensitive personal data percentage.
 +
-image:screenshot_compliance_sensitive_personal.gif[A screenshot of selecting the sensitive personal data percentage.]
+image:screenshot_compliance_sensitive_personal.png[A screenshot of selecting the sensitive personal data percentage.]
 
-. To investigate the details for a specific type of sensitive personal data, click *View All* and then click the *Investigate Results* icon for a specific type of sensitive personal data.
+. To investigate the details for a specific type of sensitive personal data, select *View All* and then select the *Investigate Results* arrow icon for a specific type of sensitive personal data.
 +
-image:screenshot_sensitive_personal_files.gif[A screenshot of the sensitive personal files dialog box where you can click the Investigate Results icon next to a personal data type.]
+image:screenshot_sensitive_personal_files.png[A screenshot of the sensitive personal files dialog box where you can click the Investigate Results icon next to a personal data type.]
 
 . Investigate the data by searching, sorting, expanding details for a specific file, clicking *Investigate Results* to see masked information, or by downloading the file list.
 
 == View files by categories
 
-BlueXP classification takes the data that it scanned and divides it into different types of categories. Categories are topics based on AI analysis of the content and metadata of each file. link:reference-private-data-categories.html#types-of-categories[See the list of categories^].
+BlueXP classification takes the data that it scanned and divides it into different types of categories. Categories are topics based on AI analysis of the content and metadata of each file. link:reference-private-data-categories.html[See the list of categories].
 
 Categories can help you understand what's happening with your data by showing you the types of information that you have. For example, a category like resumes or employee contracts can include sensitive data. When you investigate the results, you might find that employee contracts are stored in a nonsecure location. You can then correct that issue.
 
@@ -87,38 +86,27 @@ NOTE: English, German, and Spanish are supported for categories. Support for mor
 
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification* and then click the *Compliance* tab.
+. From the BlueXP classification menu, select the *Compliance* tab.
 
-. Click the *Investigate Results* icon for one of the top 4 categories directly from the main screen, or click *View All* and then click the icon for any of the categories.
+. Select the *Investigate Results* arrow icon for one of the top 4 categories directly from the main screen, or select *View All* and then select the icon for any of the categories.
 +
-image:screenshot_categories.gif[A screenshot of the categories dialog box where you can click the Investigate Results icon next to a category.]
+image:screenshot_categories.png[A screenshot of the categories dialog box where you can click the Investigate Results icon next to a category.]
 
-. Investigate the data by searching, sorting, expanding details for a specific file, clicking *Investigate Results* to see masked information, or by downloading the file list.
+. Investigate the data by searching, sorting, expanding details for a specific file, selecting the *Investigate Results* arrow to see masked information, or by downloading the file list.
 
 == View files by file types
 
-BlueXP classification takes the data that it scanned and breaks it down by file type. Reviewing your file types can help you control your sensitive data because you might find that certain file types are not stored correctly. link:reference-private-data-categories.html#types-of-files[See the list of file types^].
+BlueXP classification takes the data that it scanned and breaks it down by file type. Reviewing your file types can help you control your sensitive data because you might find that certain file types are not stored correctly. link:reference-private-data-categories.html[See the list of file types].
 
 For example, you might be storing CAD files that include very sensitive information about your organization. If they are unsecured, you can take control of the sensitive data by restricting permissions or moving the files to another location.
 
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification* and then click the *Compliance* tab.
+. From the BlueXP classification memu, select the *Compliance* tab.
 
-. Click the *Investigate Results* icon for one of the top 4 file types directly from the main screen, or click *View All* and then click the icon for any of the file types.
+. Select the *Investigate Results* arrow icon for one of the top 4 file types directly from the main screen, or select *View All* and then select the icon for any of the file types.
 +
-image:screenshot_file_types.gif[A screenshot of the file types dialog box where you can click the Investigate Results icon next to a file type.]
+image:screenshot_file_types.png[A screenshot of the file types dialog box where you can click the Investigate Results icon next to a file type.]
 
-. Investigate the data by searching, sorting, expanding details for a specific file, clicking *Investigate Results* to see masked information, or by downloading the file list.
+. Investigate the data by searching, sorting, expanding details for a specific file, selecting the *Investigate Results* arrow to see masked information, or by downloading the file list.
 
-== View Dashboard data for specific working environments
-
-You can filter the contents of the BlueXP classification dashboard to see compliance data for all working environments and databases, or for just specific working environments.
-
-When you filter the dashboard, BlueXP classification scopes the compliance data and reports to just those working environments that you selected.
-
-.Steps
-
-. Click the filter drop-down, select the working environments that you'd like to view data for, and click *View*.
-+
-image:screenshot_cloud_compliance_filter.gif[A screenshot showing how to filter the investigation results for specific working environments.]

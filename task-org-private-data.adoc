@@ -5,7 +5,7 @@ keywords: compliance, privacy, filter data, highlights, policies, email alerts, 
 summary: BlueXP classification provides many ways for you to manage and organize your private data. This makes it easier to see the data that is most important to you.
 ---
 
-= Organize your private data
+= Organize your private data with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
