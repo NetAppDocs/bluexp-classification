@@ -5,7 +5,7 @@ keywords: compliance, stop scan, start scan, map scan, classify scan, data sense
 summary: You can manage how your data is being scanned in each of your working environments and data sources in BlueXP classification. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
 ---
 
-= Change the scan settings for your repositories
+= Change the BlueXP classification scan settings for your repositories
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,18 +15,12 @@ summary: You can manage how your data is being scanned in each of your working e
 [.lead]
 You can manage how your data is being scanned in each of your working environments and data sources. You can make the changes on a "repository" basis; meaning you can make changes for each volume, schema, user, etc. depending on the type of data source you are scanning.
 
-Some of the things you can change are whether a repository is scanned or not, and whether BlueXP classification is performing a link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[mapping scan or a mapping & classification scan]. You can also pause and resume scanning, for example, if you need to stop scanning a volume for a period of time.
+Some of the things you can change are whether a repository is scanned or not, and whether BlueXP classification is performing a link:concept-cloud-compliance.html[mapping scan or a mapping & classification scan]. You can also pause and resume scanning, for example, if you need to stop scanning a volume for a period of time.
 
 == View the scan status for your repositories
 
 You can view the individual repositories that BlueXP classification is scanning (volumes, buckets, etc.) for each working environment and data source. Additionally, you can see how many have been "Mapped", and how many have been "Classified". Classification takes a longer time as the full AI identification is being performed on all data.
 
-//You can view the scanning status of each volume or bucket level in a work environment on the Configuration page:
-
-//* Running - green dot
-//* Queued - orange dot
-//* Paused - gray dot
-//* Error - red dot 
 
 You can view the scanning status of each work environment on the Configuration page:
 
@@ -44,15 +38,17 @@ You can view the scanning status of each work environment on the Configuration p
 
 .Steps
 
-. From the Configuration tab, click the *Configuration* button for the working environment.
+. From the BlueXP classification menu, select *Configuration*.
 +
-image:screenshot_compliance_config_button.png[A screenshot showing how to click the Configuration button for a working environment.]
+image:screenshot_compliance_config_button.png[A screenshot showing how to click the Configuration button for a working environment.] 
+. From the Configuration tab, select the *Configuration* button for the working environment.
 
-. In the Scan Configuration page you can view the scan settings for all repositories.
+
+. In the Scan Configuration page, view the scan settings for all repositories.
 +
 image:screenshot_compliance_repo_scan_settings.png["A screenshot showing whether your buckets are being scanned, and the current scan status."]
 
-You can hover your cursor over the chart in the _Mapping Status_ column to see the number of files that remain to be mapped or classified in each repository (bucket in this example).
+. Hover your cursor over the chart in the _Mapping Status_ column to see the number of files that remain to be mapped or classified in each repository (bucket in this example).
 
 == Change the type of scanning for a repository
 
@@ -62,18 +58,19 @@ TIP: Databases can't be set to mapping-only scans. Database scanning can be Off 
 
 .Steps
 
-. From the Configuration tab, click the *Configuration* button for the working environment.
+. From the BlueXP classification menu, select *Configuration*. 
+. From the Configuration tab, select the *Configuration* button for the working environment.
 +
 image:screenshot_compliance_config_button.png[A screenshot showing how to click the Configuration button for a working environment.]
 
-. In the Scan Configuration page you can change any of the repositories (buckets in this example) to perform *Map* or *Map & Classify* scans.
+. In the Scan Configuration page, change any of the repositories (buckets in this example) to perform *Map* or *Map & Classify* scans.
 +
 image:screenshot_compliance_repo_scan_settings.png[A screenshot showing how to select the type of scanning for a bucket.]
-
++
 Certain types of working environments enable you to change the type of scanning globally for all repositories using a button bar at the top of the page. This is valid for Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, and Amazon FSx for ONTAP systems.
-
++
 The example below shows this button bar for an Azure NetApp Files system.
-
++
 image:screenshot_compliance_repo_scan_all.png[A screenshot showing how to configure the same scan setting for all volumes in a working environment.]
 
 == Stop scanning for a repository
@@ -82,13 +79,14 @@ You can stop scanning a repository (for example, a volume) if you no longer need
 
 .Steps
 
-. From the Configuration tab, click the *Configuration* button for the working environment.
+. From the BlueXP classification menu, select *Configuration*. 
+. From the Configuration tab, select the *Configuration* button for the working environment.
 +
 image:screenshot_compliance_config_button.png[A screenshot showing how to click the Configuration button for a working environment.]
 
 . In the Scan Configuration page select *Off* to stop scanning for a particular bucket.
 +
-image:screenshot_compliance_stop_repo_scanning.png[A screenshot showing how to select the type of scanning for a bucket.]
+image:screenshot_compliance_repo_scan_settings.png[A screenshot showing how to select the type of scanning for a bucket.]
 
 == Pause and resume scanning for a repository
 
@@ -98,15 +96,13 @@ You can "resume" scanning at any time.
 
 .Steps
 
-. From the Configuration tab, click the *Configuration* button for the working environment.
+. From the BlueXP classification menu, select *Configuration*. 
+. From the Configuration tab, select the *Configuration* button for the working environment.
 +
 image:screenshot_compliance_config_button.png[A screenshot showing how to click the Configuration button for a working environment.]
 
-. In the Scan Configuration page, click the Pause button to pause scanning for a volume, or press the Resume button to resume scanning for a volume that had been previously paused.
-+
-image:screenshot_compliance_repo_pause_resume.png[A screenshot showing how to pause and resume scanning on a volume.]
-+
-Note that some data sources provide the Pause and Resume functionality in a menu, as shown below for SharePoint sites.
-+
-image:screenshot_compliance_repo_pause_resume2.png[A screenshot showing how to pause and resume scanning on a SharePoint site.]
+. In the Scan Configuration page, select the Actions image:button-actions-horizontal.png[Actions icon] icon. 
+
+. Select *Pause* to pause scanning for a volume, or select *Resume* to resume scanning for a volume that had been previously paused.
+
 

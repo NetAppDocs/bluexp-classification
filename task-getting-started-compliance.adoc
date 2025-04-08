@@ -16,48 +16,56 @@ summary: Complete a few steps to start scanning your Cloud Volumes ONTAP and on-
 Complete a few steps to start scanning your Cloud Volumes ONTAP and on-premises ONTAP volumes using BlueXP classification.
 
 
-== Deploy the BlueXP classification instance
+== Prerequisites
 
-Deploy BlueXP classification if there isn't already an instance deployed.
+Before you enable BlueXP classification, make sure you have a supported configuration.
 
-If you are scanning Cloud Volumes ONTAP and on-premises ONTAP systems that are accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy BlueXP classification in the cloud^] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^].
+* If you are scanning Cloud Volumes ONTAP and on-premises ONTAP systems that are accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy BlueXP classification in the cloud] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access].
 
-If you are scanning on-premises ONTAP systems that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy BlueXP classification in the same on-premises location that has no internet access^]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
+* If you are scanning on-premises ONTAP systems that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy BlueXP classification in the same on-premises location that has no internet access]. This also requires that the BlueXP Connector is deployed in that same on-premises location.
 
-Ensure the following ports are open to the BlueXP classification instance:
 
-* For NFS - ports 111 and 2049.
-* For CIFS - ports 139 and 445.
 
-== Enable BlueXP classification in your working environments
+== Enable BlueXP classification scanning in your working environments
 
-You can enable BlueXP classification on Cloud Volumes ONTAP systems in any supported cloud provider, and on on-premises ONTAP clusters.
+You can enable BlueXP classification scanning on Cloud Volumes ONTAP systems in any supported cloud provider, and on on-premises ONTAP clusters.
+
+
+
+.Steps
 
 . From the BlueXP left navigation menu, select *Governance > Classification*.
-
 . From the BlueXP classification menu, select *Configuration*.
 +
-image:screenshot_cloud_compliance_we_scan_config.png[A screenshot of the Configuration tab immediately after deploying the BlueXP classification instance.]
+The Configuration page shows multiple working environments. 
++
+image:screen-cl-config-cvo.png[A screenshot of the Configuration tab showing a Cloud Volumes ONTAP working environment.]
+
+. Choose a working environment and select *Configuration*. 
++
+image:screen-cl-config-cvo-map-options.png[A screenshot of the Configuration tab showing the options for mapping and classifying repositories.]
+
+. If you don't care if the last access time is reset, turn the *Scan when missing "write attributes" permissions* switch ON and all files are scanned regardless of the permissions. 
++
+The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't classify the files because BlueXP classification can't revert the "last access time" to the original timestamp. link:reference-collected-metadata.html[Learn more^].
+
 
 . Select how you want to scan the volumes in each working environment. link:concept-cloud-compliance.html#whats-the-difference-between-mapping-and-classification-scans[Learn about mapping and classification scans]:
 
-* To map all volumes, select *Map all Volumes*.
-* To map and classify all volumes, select *Map & Classify all Volumes*.
-* To customize scanning for each volume, select *Or select scanning type for each volume*, and then choose the volumes you want to map and/or classify.
-+
-See <<Enable and disable compliance scans on volumes,Enable and disable compliance scans on volumes>> for details.
+* To map all volumes, select *Map*.
+* To map and classify all volumes, select *Map & Classify*.
+* To customize scanning for each volume, select *Custom*, and then choose the volumes you want to map and/or classify.
 
-. In the confirmation dialog box, click *Approve* to have BlueXP classification start scanning your volumes.
+
+. In the confirmation dialog box, select *Approve* to have BlueXP classification start scanning your volumes.
 
 .Result
 
-BlueXP classification starts scanning the volumes you selected in the working environment. Results are available in the Compliance dashboard as soon as BlueXP classification finishes the initial scans. The time that it takes depends on the amount of data--it could be a few minutes or hours. You can track the progress of the initial scan by navigating to the **Configuration** menu then selecting the **Working Environment configuration**. The progress of each scan is show as a progress bar. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. 
+BlueXP classification starts scanning the volumes you selected in the working environment. Results start to appear in the Compliance dashboard as soon as BlueXP classification starts the scan. The time that it takes to complete depends on the amount of data--it could be a few minutes or hours.  
 
-[NOTE]
-====
-* By default, if BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system won't scan the files in your volumes because BlueXP classification can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, click *Or select scanning type for each volume*. The resulting page has a setting you can enable so that BlueXP classification will scan the volumes regardless of permissions.
-* BlueXP classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#bluexp-classification-scans-only-one-share-under-a-volume[See more details about this BlueXP classification limitation^].
-====
+NOTE: BlueXP classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#bluexp-classification-scans-only-one-share-under-a-volume[See more details about this BlueXP classification limitation^].
+
+
 
 == Verify that BlueXP classification has access to volumes
 
@@ -79,9 +87,9 @@ You can either open the security group for traffic from the IP address of the Bl
 
 .. From the BlueXP left navigation menu, select *Governance > Classification*.
 
-. From the BlueXP classification menu, select *Configuration*.
+.. From the BlueXP classification menu, select *Configuration*.
 +
-image:screenshot_cifs_credentials_cvo.png[A screenshot of the Compliance tab that shows the Scan Status button that's available in the top right of the content pane.]
+image:screen-cl-config-cvo-map-options.png[A screenshot of the Configuration tab showing the options for mapping and classifying repositories.]
 
 .. For each working environment, select *Edit CIFS Credentials* and enter the user name and password that BlueXP classification needs to access CIFS volumes on the system.
 +
@@ -89,59 +97,55 @@ The credentials can be read-only, but providing admin credentials ensures that B
 include::_include/cifs-permissions.adoc[]
 +
 After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.
-+
-image:screenshot_cifs_status.gif[A screenshot that shows the Configuration page and one Cloud Volumes ONTAP system for which CIFS credentials were successfully provided.]
 
-. On the Configuration page, select *View Details* to review the status for each CIFS and NFS volume and correct any errors.
-+
-For example, the following image shows four volumes; one of which BlueXP classification can't scan due to network connectivity issues between the BlueXP classification instance and the volume.
-+
-image:screenshot_compliance_volume_details.gif["A screenshot of the View Details page in the scan configuration that shows four volumes; one of which isn't being scanned because of network connectivity between BlueXP classification and the volume."]
+. On the Configuration page, select *Configuration* to review the status for each CIFS and NFS volume and correct any errors.
 
-== Enable and disable compliance scans on volumes
+
+== Disable compliance scans on volumes
 
 You can start or stop mapping-only scans, or mapping and classification scans, in a working environment at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa. We recommend that you scan all volumes.
 
-The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't scan the files because BlueXP classification can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, turn the switch ON and all files are scanned regardless of the permissions. link:reference-collected-metadata.html#last-access-time-timestamp[Learn more^].
-
-image:screenshot_volume_compliance_selection.png[A screenshot of the Configuration page where you can enable or disable scanning of individual volumes.]
-
-.Steps
-. From the BlueXP classification menu, select *Configuration*.
-. Do one of the following: 
-+
-* To enable mapping-only scans on a volume, in the volume area, select *Map*. Or, to enable on all volumes, in the heading area, select *Map*.
-To enable full scanning on a volume, in the volume area, select *Map & Classify*. Or, to enable on all volumes, in the heading area, select *Map & Classify*.
-* To disable scanning on a volume, in the volume area, select *Off*. To disable scanning on all volumes, in the heading area, select *Off*.
-
 NOTE: New volumes added to the working environment are automatically scanned only when you have set the *Map* or *Map & Classify* setting in the heading area. When the option is set to *Custom* or *Off* in the heading area, you'll need to activate mapping and/or full scanning on each new volume you add in the working environment.
 
-== Scan data protection volumes
-
-By default, data protection (DP) volumes are not scanned because they are not exposed externally and BlueXP classification cannot access them. These are the destination volumes for SnapMirror operations from an on-premises ONTAP system or from a Cloud Volumes ONTAP system.
-
-Initially, the volume list identifies these volumes as _Type_ *DP* with the _Status_ *Not Scanning* and the _Required Action_ *Enable Access to DP volumes*.
-
-image:screenshot_cloud_compliance_dp_volumes.png[A screenshot showing the Enable Access to DP Volumes button that you can select to scan data protection volumes.]
-
 .Steps
-
-If you want to scan these data protection volumes:
-
 . From the BlueXP classification menu, select *Configuration*.
-. Click *Enable Access to DP volumes* at the top of the page.
-
-. Review the confirmation message and select *Enable Access to DP volumes* again.
-- Volumes that were initially created as NFS volumes in the source ONTAP system are enabled.
-- Volumes that were initially created as CIFS volumes in the source ONTAP system require that you enter CIFS credentials to scan those DP volumes. If you already entered Active Directory credentials so that BlueXP classification can scan CIFS volumes you can use those credentials, or you can specify a different set of Admin credentials.
+. Select the *Configuration* button for the working environment that you want to change.
 +
-image:screenshot_compliance_dp_cifs_volumes.png[A screenshot of the two options for enabling CIFS data protection volumes.]
+image:screen-cl-config-cvo-map-options.png[A screenshot of the Configuration tab showing the options for mapping and classifying repositories.]
 
-. Activate each DP volume that you want to scan.
+. Do one of the following: 
 
-.Result
-Once enabled, BlueXP classification creates an NFS share from each DP volume that was activated for scanning. The share export policies only allow access from the BlueXP classification instance.
+* To disable scanning on a volume, in the volume area, select *Off*. 
+* To disable scanning on all volumes, in the heading area, select *Off*.
 
-If you had no CIFS data protection volumes when you initially enabled access to DP volumes, and later add some, the button *Enable Access to CIFS DP* appears at the top of the Configuration page. Click this button and add CIFS credentials to enable access to these CIFS DP volumes.
 
-NOTE: Active Directory credentials are registered only in the storage VM of the first CIFS DP volume, so all DP volumes on that SVM will be scanned. Any volumes that reside on other SVMs will not have the Active Directory credentials registered, so those DP volumes won't be scanned.
+
+//== Scan data protection volumes
+
+//By default, data protection (DP) volumes are not scanned because they are not exposed externally and BlueXP classification cannot access them. These are the destination volumes for SnapMirror operations from an on-premises ONTAP system or from a Cloud Volumes ONTAP system.
+
+//Initially, the volume list identifies these volumes as _Type_ *DP* with the _Status_ *Not Scanning* and the _Required Action_ *Enable Access to DP volumes*.
+
+//image:screenshot_cloud_compliance_dp_volumes.png[A screenshot showing the Enable Access to DP Volumes button that you can select to scan data protection volumes.]
+
+//.Steps
+
+//If you want to scan these data protection volumes:
+
+//. From the BlueXP classification menu, select *Configuration*.
+//. Click *Enable Access to DP volumes* at the top of the page.
+
+//. Review the confirmation message and select *Enable Access to DP volumes* again.
+//- Volumes that were initially created as NFS volumes in the source ONTAP system are enabled.
+//- Volumes that were initially created as CIFS volumes in the source ONTAP system require that you enter CIFS credentials to scan those DP volumes. If you already entered Active Directory credentials so that BlueXP classification can scan CIFS volumes you can use those credentials, or you can specify a different set of Admin credentials.
+//+
+//image:screenshot_compliance_dp_cifs_volumes.png[A screenshot of the two options for enabling CIFS data protection volumes.]
+
+//. Activate each DP volume that you want to scan.
+
+//.Result
+//Once enabled, BlueXP classification creates an NFS share from each DP volume that was activated for scanning. The share export policies only allow access from the BlueXP classification instance.
+
+//If you had no CIFS data protection volumes when you initially enabled access to DP volumes, and later add some, the button *Enable Access to CIFS DP* appears at the top of the Configuration page. Click this button and add CIFS credentials to enable access to these CIFS DP volumes.
+
+//NOTE: Active Directory credentials are registered only in the storage VM of the first CIFS DP volume, so all DP volumes on that SVM will be scanned. Any volumes that reside on other SVMs will not have the Active Directory credentials registered, so those DP volumes won't be scanned.
