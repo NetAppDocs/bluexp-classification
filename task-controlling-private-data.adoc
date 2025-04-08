@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-controlling-private-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies
-summary: Gain control of your private data by viewing details about the personal data and sensitive personal data in your organization. You can also gain visibility by reviewing the categories and file types that BlueXP classification found in your data.
+summary: Gain control of your private data by viewing details about the personal data (PII) and sensitive personal data (SPII) in your organization. You can also gain visibility by reviewing the categories and file types that BlueXP classification found in your data.
 ---
 
 = View compliance details about the private data stored in your organization with BlueXP classification
@@ -13,7 +13,7 @@ summary: Gain control of your private data by viewing details about the personal
 :imagesdir: ./media/
 
 [.lead]
-Gain control of your private data by viewing details about the personal data (PII) and sensitive personal (SPII) data in your organization. You can also gain visibility by reviewing the categories and file types that BlueXP classification found in your data.
+Gain control of your private data by viewing details about the personal data (PII) and sensitive personal data (SPII) in your organization. You can also gain visibility by reviewing the categories and file types that BlueXP classification found in your data.
 
 NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
 
