@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-investigate-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies
-summary: You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the BlueXP classification UI, including the Governance and Compliance dashboards.
+summary: You can investigate the data from your organization by viewing details in the Data Investigation page. Here is where you can continue your research after looking at the Governance dashboard.
 ---
 
 = Investigate the data stored in your organization
@@ -53,15 +53,15 @@ Use the following filters to view how much sensitive information is contained in
 | Filter
 | Details
 
-| Category | Select the link:reference-private-data-categories.html#types-of-categories[types of categories^].
+| Category | Select the link:reference-private-data-categories.html[types of categories].
 | Sensitivity Level | Select the sensitivity level: Personal, Sensitive personal, or Non sensitive.
 | Number of identifiers | Select the range of detected sensitive identifiers per file. Includes personal data and sensitive personal data. When filtering in Directories, BlueXP classification totals the matches from all files in each folder (and sub-folders).
 
-NOTE: The December 2023 (version 1.26.6) release removed the option to calculate the number of personal identifiable information  (PII) data by Directories. 
+NOTE: The December 2023 (version 1.26.6) release removed the option to calculate the number of personal identifiable information (PII) data by Directories. 
 
-| Personal Data | Select the link:reference-private-data-categories.html#types-of-personal-data[types of personal data^].
-| Sensitive Personal Data | Select the link:reference-private-data-categories.html#types-of-sensitive-personal-data[types of sensitive personal data^].
-| Data Subject | Enter a data subject's full name or known identifier. link:task-generating-compliance-reports.html#search-for-data-subjects-and-download-reports[Learn more about data subjects here^].
+| Personal Data | Select the link:reference-private-data-categories.html[types of personal data].
+| Sensitive Personal Data | Select the link:reference-private-data-categories.html[types of sensitive personal data].
+| Data Subject | Enter a data subject's full name or known identifier. link:task-generating-compliance-reports.html[Learn more about data subjects here].
 
 |===
 
@@ -97,7 +97,7 @@ Use the following filters to view data based on time criteria.
 | Last Modified | Select a time range when the file was last modified. You can also specify a custom time range to further refine the search results.
 | Last Accessed a| Select a time range when the file, or directory (CIFS or NFS only), was last accessed. You can also specify a custom time range to further refine the search results. For the types of files that BlueXP classification scans, this is the last time BlueXP classification scanned the file.
 
-Note that BlueXP classification does not extract the "last accessed time" from the following data sources: SharePoint Online, SharePoint On-premises (SharePoint Server), OneDrive, Google Drive, and Amazon S3.
+BlueXP classification does not extract the "last accessed time" from the following data sources: SharePoint Online, SharePoint On-premises (SharePoint Server), OneDrive, Google Drive, and Amazon S3.
 
 |===
 
@@ -113,7 +113,7 @@ Use the following filters to view data based on location, size, and directory or
 
 | File Path | Enter up to 20 partial or full paths that you want to include or exclude from the query. If you enter both include paths and exclude paths, BlueXP classification finds all files in the included paths first, then it removes files from excluded paths, and then it displays the results. Note that using "*" in this filter has no effect, and that you can't exclude specific folders from the scan - all the directories and files under a configured share will be scanned.
 | Directory Type | Select the directory type; either "Share" or "Folder".
-| File Type | Select the link:reference-private-data-categories.html#types-of-files[types of files^].
+| File Type | Select the link:reference-private-data-categories.html[types of files].
 | File Size | Select the file size range.
 | File Hash | Enter the file's hash to find a specific file, even if the name is different.
 
@@ -147,8 +147,8 @@ Use the following filter to view data by policies.
 | Details
 
 | Policies | Select a policy or policies. Go link:task-using-policies.html[here^] to view the list of existing policies and to create your own custom policies.
-//| Label | Select link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP labels] that are assigned to your files.
-//| Tags | Select link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files[the tag or tags] that are assigned to your files.
+//| Label | Select link:task-org-private-data.html[AIP labels] that are assigned to your files.
+//| Tags | Select link:task-org-private-data.html[the tag or tags] that are assigned to your files.
 //| Assigned To | Select the name of the person to which the file is assigned.
 
 |===
@@ -168,7 +168,7 @@ Use the following filter to view data by the BlueXP classification scan status.
 
 |===
 
-link:reference-collected-metadata.html#last-access-time-timestamp[See details about the "last accessed time" timestamp] for more information about the items that appear in the Investigation page when filtering using the Scan Analysis Event.
+link:reference-collected-metadata.html[See details about the "last accessed time" timestamp] for more information about the items that appear in the Investigation page when filtering using the Scan Analysis Event.
 
 *Filter data by duplicates*
 
@@ -186,7 +186,7 @@ Use the following filter to view files that are duplicated in your storage.
 
 == View file metadata
 
-In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html#create-custom-policies[create Policies] because you can see all the information that you can use to filter your data.
+In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html[create Policies] because you can see all the information that you can use to filter your data.
 
 Not all information is available for all data sources - just what is appropriate for that data source. For example, volume name and permissions are not relevant for database files.
 
@@ -201,7 +201,7 @@ image:screenshot_compliance_file_details.png[A screenshot showing the metadata d
 
 //When viewing the details for a single file there are a few actions you can take on the file:
 
-//* You can move or copy the file to any NFS share. See link:task-managing-highlights.html#move-source-files-to-an-nfs-share[Moving source files to an NFS share] and link:task-managing-highlights.html#copy-source-files[Copying source files to an NFS share] for details.
+//* You can move or copy the file to any NFS share. See link:task-managing-highlights.html[Moving source files to an NFS share] and link:task-managing-highlights.html[Copying source files to an NFS share] for details.
 
 //* You can delete the file. See link:task-managing-highlights.html#delete-source-files[Deleting source files] for details.
 
@@ -226,7 +226,7 @@ Note that if you see SIDs (Security IDentifiers) instead of user and group names
 NOTE: BlueXP classification shows up to 100 users in the list. 
 +
 image:screenshot_compliance_permissions.png[A screenshot showing detailed file permissions.]
-//replace screenshot later with Role and Department headings using screenshot_compliance_permissions_future.png in repo
+//replace screenshot with Role and Department headings using screenshot_compliance_permissions_future.png in repo
 
 . Select the down-caret image:button_down_caret.png[down-caret] button for any group to see the list of users who are part of the group.
 +
@@ -250,7 +250,7 @@ BlueXP classification uses hashing technology to determine duplicate files. If a
 
 . Optionally, download the list of duplicate files and send it to your storage admin so they can decide which files, if any, can be deleted. 
 
-. Optionally, link:task-managing-highlights.html#delete-source-files[delete the file] yourself if you are confident that a specific version of the file is not needed.
+. Optionally, link:task-managing-highlights.html[delete the file] yourself if you are confident that a specific version of the file is not needed.
 
 
 *View if a specific file is duplicated*
