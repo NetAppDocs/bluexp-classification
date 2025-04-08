@@ -1,0 +1,16 @@
+=== Version 1.42
+
+This BlueXP classification release includes:
+
+.Bulk operations
+
+Bulk operations - we added an option in to preform bulk operation for other working environments (located in Configuration page for each environment) - S3, DB and share group (we used to have this option only for CVO). this means the user can choose between "off", "Map", or "Map & Classify" above the table and apply his selection on all scans (see image attached). if the user chooses "Custom" or changes the selection in one scan or more, that means the scans won't necessary be with the same selection. 
+
+this one should to be updated only in "What's New"
+
+.Download investigation report locally
+Download investigation report locally - we added an option to download the investigation report locally in limited version. customers asked for an option to download the report directly to the browser (and not choosing a location). we enabled this option for them with a few limitations - they can download it only in CSV format, and they can download only 10K rows. they can still download the report to this saved working environments as before without those limitations. we added option to choose in the UI. 
+this one should be updated  both in "What's New" and in the "Data Investigation Report"
+
+.Classication prioritization 
+Classification prioritization - we released in version 1.40 the "Prioritize scans" feature, which allow user to prioritize scans but only the mapping part of the scan. now we added an option to prioritize the classification part as well. this means the user can prioritize scan before it started and also during the scan, the both mapping and classification will get priority. the user action to prioritize will be the same as before (choose 3 dots of the scan and select Prioritize scan). if the action succeeded the user will see the scan marked with a star in the scan column. 
