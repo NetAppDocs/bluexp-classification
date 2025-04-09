@@ -17,13 +17,7 @@ Priority is granted on a one-time basis. Automatic rescans of mapping data occur
 Prioritization is limited to link:concept-cloud-compliance.html[mapping-only scans]; it's not available for map and classify scans. 
 // https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[What's the difference between Mapping and Classification scans?]
 
-To change the priority: 
-
-. From the BlueXP classification menu, select *Configuration*. 
-. Select the resources you want to prioritize.
-//+
-//image:../screenshot-configuration-scans-prioritize.png[Configuration page where you can prioritize scans]
-. From the Actions ... option, select *Prioritize scan*.
+For more information, see link:task-managing-repo-scanning.html#prioritize-scans[Prioritize scans].
 
 .Retry all scans
 
