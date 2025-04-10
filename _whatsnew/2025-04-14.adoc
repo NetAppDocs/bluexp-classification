@@ -8,7 +8,7 @@ BlueXP classification now supports bulk operations for working environments. You
 
 .Download investigation report locally
 
-BlueXP classification now supports the ability download data investigation reports to view in the browser. If you choose this option, the data investigation report is limited to the CSV format and the first 10,000 results. 
+BlueXP classification now supports the ability download data investigation reports to view in the browser. If you choose the local option, the data investigation is only available in the CSV format and only displays the first 10,000 rows of data. 
 
 For more information, see link:task-investigate-data.html#create-the-data-investigation-report[Investigate the data stored in your organization with BlueXP classification].
 
