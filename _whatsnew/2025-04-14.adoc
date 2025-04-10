@@ -14,6 +14,6 @@ For more information, see link:task-investigate-data.html#create-the-data-invest
 
 .Prioritize classification scans
 
-BlueXP classification now supports the ability to prioritize classification only scans in addition to Map & Classify scans. Prioritization of classification scans is supported during and before the scans begin. If you choose to prioritize a scan while it's progress, both the mapping and classification scans are prioritized. 
+BlueXP classification now supports the ability to prioritize Map & Classify scans in addition to Mapping-only scans. Prioritization of Map & Classify scans is supported during and before the scans begin. If you choose to prioritize a scan while it's in progress, both the mapping and classification scans are prioritized. 
 
 For more information, see link:task-managing-repo-scanning.html#prioritize-scans[Prioritize scans].
