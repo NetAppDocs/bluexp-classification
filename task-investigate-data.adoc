@@ -354,9 +354,10 @@ The *Structured Data Report* includes the following information about your datab
 
 . Enter a **Report name**. 
 
-. If you chose CSV for report type, select **Local** to download the report in the browser. Note this option limits the report to the first 10,000 rows. No other options are required with this option.
-+
-For the complete report, select **Working environment** then choose the **Working Environment** and **Volume** from the respective dropdown menus. Provide a **Destination folder path**. 
+. TO download the complete report, select **Working environment** then choose the **Working Environment** and **Volume** from the respective dropdown menus. Provide a **Destination folder path**. 
++ 
+To download the report in the browser, select **Local** . Note this option limits the report to the first 10,000 rows and is limited to the **CSV** format. No other options are required with this option.
+
 . Select **Download Report**.
 //+
 //When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
