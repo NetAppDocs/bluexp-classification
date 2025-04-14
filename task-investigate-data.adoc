@@ -4,7 +4,6 @@ permalink: task-investigate-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies
 summary: You can investigate the data from your organization by viewing details in the Data Investigation page. Here is where you can continue your research after looking at the Governance dashboard.
 ---
-
 = Investigate the data stored in your organization with BlueXP classification
 :hardbreaks:
 :nofooter:
@@ -291,8 +290,11 @@ There can be up to three report files downloaded if BlueXP classification is sca
 
 The files are split into files with a fixed number of rows or records:
 
-* CSV - 200,000 records
 * JSON - 100,000 records
+* CSV - 200,000 records
+[NOTE]
+You can download a version of the CSV file to view in this browser. This version is limited to 10,000 records. 
+
 
 *What's included in the Data Investigation Report*
 
@@ -350,11 +352,11 @@ The *Structured Data Report* includes the following information about your datab
 . From the Data Investigation page, select the image:button_download.png[download button] button on the top, right of the page.
 . Choose the report type: CSV or JSON.
 
-. Provide a **Report name**. 
+. Enter a **Report name**. 
 
-. Select a **Working environment** and **Volume** 
-
-. Provide a **Destination folder path**. 
+. If you chose CSV for report type, select **Local** to download the report in the browser. Note this option limits the report to the first 10,000 rows. No other options are required with this option.
++
+For the complete report, select **Working environment** then choose the **Working Environment** and **Volume** from the respective dropdown menus. Provide a **Destination folder path**. 
 . Select **Download Report**.
 //+
 //When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.

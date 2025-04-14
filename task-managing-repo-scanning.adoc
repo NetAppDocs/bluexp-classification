@@ -73,6 +73,19 @@ The example below shows this button bar for an Azure NetApp Files system.
 +
 image:screenshot_compliance_repo_scan_all.png[A screenshot showing how to configure the same scan setting for all volumes in a working environment.]
 
+== Prioritize scans
+
+You can prioritize the most important scans--Mapping-only or Map and Classification. The ability to prioritize scans enables you to ensure high priority scans are completed first.
+
+By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can now move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. 
+
+Priority is granted on a one-time basis. Automatic rescans of mapping data occur in the default order. 
+
+.Steps
+. From the BlueXP classification menu, select *Configuration*. 
+. Select the resources you want to prioritize.
+. From the Actions `...` option, select *Prioritize scan*.
+
 == Stop scanning for a repository
 
 You can stop scanning a repository (for example, a volume) if you no longer need to monitor it for compliance. You do this by turning scanning "off". When scanning is turned off, all the indexing and information about that volume is removed from the system, and charging for scanning the data is stopped.
