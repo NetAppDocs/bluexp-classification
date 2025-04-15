@@ -6,7 +6,7 @@ This release provides support for Red Hat Enterprise Linux v9.5 in addition to p
 
 The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, and 9.5.
 
-.Prioritize scans 
+.Prioritize mapping-only scans 
 
 When conducting Mapping-only scans, you can prioritize the most important scans. This feature helps when you have many working environments and want to ensure high priority scans are completed first. 
 
