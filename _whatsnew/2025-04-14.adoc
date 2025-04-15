@@ -11,9 +11,3 @@ BlueXP classification now supports bulk operations for working environments. You
 BlueXP classification now supports the ability to download data investigation reports locally to view in the browser. If you choose the local option, the data investigation is only available in the CSV format and only displays the first 10,000 rows of data. 
 
 For more information, see link:task-investigate-data.html#create-the-data-investigation-report[Investigate the data stored in your organization with BlueXP classification].
-
-.Prioritize classification scans
-
-BlueXP classification now supports the ability to prioritize Map & Classify scans in addition to Mapping-only scans. Prioritization of Map & Classify scans is supported during and before the scans begin. If you choose to prioritize a scan while it's in progress, both the mapping and classification scans are prioritized. 
-
-For more information, see link:task-managing-repo-scanning.html#prioritize-scans[Prioritize scans].
