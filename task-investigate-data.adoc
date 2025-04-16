@@ -28,7 +28,7 @@ You can filter the contents of the investigation page to display only the result
 
 . On the Data Investigation page, do any of the following: 
 
-. To download the contents of the page as a report after you've refined it, select the image:button_download.png[download button] button. <<Data Investigation Report,Go here for details about the Data Investigation report>>.
+. To download the contents of the page as a report after you've refined it, select the image:button_download.png[download button] button. 
 //Note that the actions available in the button bar and Policies are not currently supported at the "Directory" level.
 +
 image:screenshot_compliance_investigation_filtered.png[A screenshot of the filters available when refining the results in the investigation page.]
@@ -147,7 +147,7 @@ Use the following filter to view data by policies.
 | Filter
 | Details
 
-| Policies | Select a policy or policies. Go link:task-using-policies.html[here^] to view the list of existing policies and to create your own custom policies.
+| Policies | Select a policy or policies. Go link:task-using-policies.html[here] to view the list of existing policies and to create your own custom policies.
 //| Label | Select link:task-org-private-data.html[AIP labels] that are assigned to your files.
 //| Tags | Select link:task-org-private-data.html[the tag or tags] that are assigned to your files.
 //| Assigned To | Select the name of the person to which the file is assigned.
@@ -187,7 +187,7 @@ Use the following filter to view files that are duplicated in your storage.
 
 == View file metadata
 
-In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html[create Policies] because you can see all the information that you can use to filter your data.
+In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html[create policies] because you can see all the information that you can use to filter your data.
 
 Not all information is available for all data sources - just what is appropriate for that data source. For example, volume name and permissions are not relevant for database files.
 
@@ -204,13 +204,13 @@ image:screenshot_compliance_file_details.png[A screenshot showing the metadata d
 
 //* You can move or copy the file to any NFS share. See link:task-managing-highlights.html[Moving source files to an NFS share] and link:task-managing-highlights.html[Copying source files to an NFS share] for details.
 
-//* You can delete the file. See link:task-managing-highlights.html#delete-source-files[Deleting source files] for details.
+//* You can delete the file. See link:task-managing-highlights.html[Delete source files] for details.
 
-//* You can assign a certain Status to the file. See link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files[Applying tags] for details.
+//* You can assign a certain Status to the file. See link:task-org-private-data.html[Apply tags] for details.
 
-//* You can assign the file to a BlueXP user to be responsible for any follow-up actions that need to be done on the file. See link:task-org-private-data.html#assign-users-to-manage-certain-files[Assigning users to a file] for details.
+//* You can assign the file to a BlueXP user to be responsible for any follow-up actions that need to be done on the file. See link:task-org-private-data.html[Assign users to a file] for details.
 
-//* If you have integrated AIP labels with BlueXP classification, you can assign a label to this file, or change to a different label if one already exists. See link:task-org-private-data.html#assign-aip-labels-manually[Assigning AIP labels manually] for details.
+//* If you have integrated AIP labels with BlueXP classification, you can assign a label to this file, or change to a different label if one already exists. See link:task-org-private-data.html[Assigning AIP labels manually] for details.
 
 == View users' permissions for files and directories
 
