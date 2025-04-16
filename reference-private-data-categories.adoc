@@ -59,6 +59,37 @@ The languages in which these items can be recognized are identified in the table
 | Brazilian ID (CPF) | Yes | ✓ | ✓ | ✓ |  | 
 | British Passport | Yes | ✓ | ✓ | ✓ |  | 
 | Bulgarian ID (UCN) | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Banking Information Numbers - Account Number | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Banking Information Numbers - Transit Number | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Citizenship/Permanent Resident Number - PR Card Number (UCI) | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Alberta | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - British Columbia | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Manitoba | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - New Brunswick | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Newfoundland and Labrador | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Northwest Territories | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Nova Scotia | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Nunavut | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Ontario | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Prince Edward Island | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Quebec | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Saskatchewan | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Driver's License - Yukon | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Alberta PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - British Columbia PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Manitoba PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Newfoundland and Labrador PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Northwest Territories PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Nova Scotia PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Nunavut PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Ontario PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Prince Edward Island PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Quebec PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Saskatchewan PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Health Card Number - Yukon PHIN | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Passport Number | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Social Insurance Number (SIN) | Yes | ✓ | ✓ | ✓ |  | 
 | Croatian ID (OIB) | Yes | ✓ | ✓ | ✓ |  | 
 | Cyprus Tax Identification Number (TIC) | Yes | ✓ | ✓ | ✓ |  | 
 | Czech/Slovak ID | Yes | ✓ | ✓ | ✓ |  | 
@@ -102,11 +133,11 @@ The languages in which these items can be recognized are identified in the table
 | Spanish Tax Identification Number | Yes | ✓ | ✓ | ✓ |  | 
 | Swedish ID | Yes | ✓ | ✓ | ✓ |  | 
 // | Swedish Social Security Number | Yes | ✓ | ✓ | ✓ |  | 
-| Texas Driver's License | Yes | ✓ | ✓ | ✓ |  | 
-| U.K. ID (NINO) | Yes | ✓ | ✓ | ✓ |  | 
+| UK ID (NINO) | Yes | ✓ | ✓ | ✓ |  | 
 | USA California Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | USA Indiana Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | USA New York Driver's License | Yes | ✓ | ✓ | ✓ |  | 
+| USA Texas Driver's License | Yes | ✓ | ✓ | ✓ |  | 
 | USA Social Security Number (SSN) | Yes | ✓ | ✓ | ✓ |  | 
 |===
 
@@ -231,3 +262,5 @@ We are constantly improving the accuracy of our results. Those improvements will
 | Sensitive personal data | 80%-95% | 20%-30%
 | Categories | 90%-97% | 60%-80%
 |===
+
+// 2025 16 april, BLUEXPDOC-402
