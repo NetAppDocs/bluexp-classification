@@ -183,13 +183,13 @@ For details about the differences between Mapping and Classification scans, see 
 
 == Information that BlueXP classification categorizes
 
-BlueXP classification collects, indexes, and assigns categories to your data (files). The data that BlueXP classification indexes includes the following:
+BlueXP classification collects, indexes, and assigns categories to the following data:
 
 * *Standard metadata* about files: the file type, its size, creation and modification dates, and so on.
 
-* *Personal data*: Personally identifiable information (PII) such as email addresses, identification numbers, or credit card numbers. link:task-controlling-private-data.html#view-files-that-contain-personal-data[Learn more about personal data^].
+* *Personal data*: Personally identifiable information (PII) such as email addresses, identification numbers, or credit card numbers, which BlueXP classification identifies using specific words, strings, and patterns in the files. link:task-controlling-private-data.html#view-files-that-contain-personal-data[Learn more about personal data^].
 
-* *Sensitive personal data*: Special types of sensitive personal information (SPII), such as health data, ethnic origin, or political opinions, as defined by GDPR and other privacy regulations. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data[Learn more about sensitive personal data^].
+* *Sensitive personal data*: Special types of sensitive personal information (SPII), such as health data, ethnic origin, or political opinions, as defined by General Data Protection Regulation (GDPR) and other privacy regulations. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data[Learn more about sensitive personal data^].
 
 * *Categories*: BlueXP classification takes the data that it scanned and divides it into different types of categories. Categories are topics based on AI analysis of the content and metadata of each file. link:task-controlling-private-data.html#view-files-by-categories[Learn more about categories^].
 
