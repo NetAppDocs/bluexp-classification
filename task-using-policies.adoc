@@ -72,7 +72,7 @@ You cannot modify predefined policies.
 
 .Steps
 
-. From the Policies List page, select *Edit* for the Policy that you want to change.
+. From the Policies List page, select *Edit Policy* for the Policy that you want to change.
 +
 image:screenshot_compliance_edit_policy_button.png[A screenshot showing how to initiate an edit to an existing Policy.]
 
