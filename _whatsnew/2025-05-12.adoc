@@ -2,40 +2,41 @@
 
 This BlueXP classification release includes:
 
-
-
-.Dashboard performance improvements
-we improved loading time of the dashboard significantly.
-
 .Prioritize classification scans
 
 BlueXP classification now supports the ability to prioritize Map & Classify scans in addition to Mapping-only scans. Prioritization of Map & Classify scans is supported during and before the scans begin. If you choose to prioritize a scan while it's in progress, both the mapping and classification scans are prioritized. 
 
 For more information, see link:task-managing-repo-scanning.html#prioritize-scans[Prioritize scans].
 
-.Custom classification 
-Custom classification - link to PRD. check if screenshots need to be updated.
-
-.Policies tab name change
-Change "Policies" tab name to "Saved Searches" - name changed, same functionality. check if screenshots need to be updated.
-
-.Send scan events to audit log
-Send scan events to audit log - send classification events to BXP timeline - start scan and end scan (in working environment level).
-
-.Security updates 
-Update keras package
-The Docker containers configuration has been updated - this change ensures that the container no longer has access to the host's network interfaces for crafting raw network packets, thereby mitigating the associated security risks
-Resource uitilization -
-Upgrade scheduler - we saved approximately 20MB of RAM by using simpler python module "schedule" which does not schedule celery tasks.
-Scanner node monitor task and worker conversion - we reduced RAM usage by convert both of them to simple scheduler.
-Optimization of the celery worker - we saved approximately 3 GB of RAM in empty CDS installations.
-Elastic duplication fix - Duplication in the elastic that cause the elastic to use more space than needed, after the fix the elastic uses less space than before.
-Container merging - we merged similar containers into one to improve performance and reduce memory usage.
-
-.Bug fixes
-Bug fixed - investigation page filter options sometimes failed to load.
-Bug fixed - storage grid scan fails
-
 .Support for Canadian personally identifiable information (PII) data categories
 
 BlueXP classification scans now identify Canadian PII data categories for banking information, passport number, social insurance number, and driver's license number and health card number for all provinces and territories. For more detail information, see xref:reference-private-data-categories.adoc#types-of-personal-data[Personal data categories].
+
+.Custom classification 
+
+<!-- support for custom classification + change in legacy version -->
+
+For more information, see xref:task-managing-data-fusion.adoc[Add personal data identifiers to your BlueXP classification scans].
+
+.Saved Searches tab
+The **Policies** tab has been renamed **Saved Searches**. The functionality is the same. 
+
+.Send scan events to audit log
+
+BlueXP scan events can now be sent to the audit log. BlueXP classification also supports sending classification events (when a scan is initiated and when it ends) to the link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline[BlueXP timeline]. Sending classification scan events to the BlueXP timeline is only supported for working environments.
+
+.Security updates 
+
+. Updated Keras package <!-- impact? --> 
+. The Docker containers configuration has been updated. The container no longer has access to the host's network interfaces for crafting raw network packets. By reducing unnecessary access, the update mitigates potential security risks.
+
+.Performance enhancements 
+. The load time for the performance dashboard has been improved. 
+. The Python module has been simplified and no longer schedules Celery tasks, saving approximately 20 MB of RAM. Additionally, the scanner node monitor task and worker conversion have been simplified, reducing RAM usage. 
+. The celery worker has been optimized to save approximately 3 GB of RAM. 
+. Duplication has been eliminated in the elastic, which has reduced the size of the elastic. 
+. Similar containers have been merged to improve performance and reduce memory usage.
+
+.Bug fixes
+
+Bugs that caused StorageGRID scans to fail and the investigation page filter options to not load have been fixed. 
