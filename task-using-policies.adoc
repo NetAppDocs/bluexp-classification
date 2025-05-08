@@ -32,7 +32,7 @@ In addition, policies appear in the list of filters in the Investigation page.
 
 == View Policy results in the Investigation page
 
-To display the results for a policy in the Investigation page, click the image:screenshot_gallery_options.gif[More button] button for a specific policy, and then select *Investigate Results*.
+To display the results for a policy in the Investigation page, select the image:screenshot_gallery_options.gif[More button] button for a specific policy, and then select *Investigate Results*.
 
 image:screenshot_compliance_highlights_investigate.png[A screenshot of selecting Investigate Results for a specific policy from the Policies tab.]
 
@@ -46,7 +46,7 @@ You can create your own custom Policies that provide results for searches specif
 
 . From the Data Investigation page, define your search by selecting all the filters you want to use. See link:task-investigate-data.html[Filtering data in the Data Investigation page^] for details.
 
-. Once you have all the filter characteristics just the way you want them, click *Create Policy from this search*.
+. Once you have all the filter characteristics set to your liking, select *Create Policy from this search*.
 +
 image:screenshot_compliance_save_as_highlight.png[A screenshot showing how to save a filtered query as a Policy.]
 
@@ -56,7 +56,7 @@ image:screenshot_compliance_save_as_highlight.png[A screenshot showing how to sa
 //.. Optionally, check the box if you want notification emails sent to BlueXP users in your account, and choose the interval at which the email is sent. Learn more about <<Send email alerts when non-compliant data is found,sending email alerts based on policy results>>.
 //.. Optionally, check the box if you want notification emails sent to other users, enter up to 20 email addresses, and choose the interval at which the email is sent.
 //.. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html[AIP labels].)
-.. Click *Create Policy*.
+.. Select *Create Policy*.
 +
 image:screenshot_compliance_save_highlight2.png[A screenshot that shows how to configure the Policy and save it.]
 
@@ -73,17 +73,17 @@ For Predefined Policies, you can only modify whether email notifications are sen
 
 .Steps
 
-. From the Policies List page, click *Edit* for the Policy that you want to change.
+. From the Policies List page, select *Edit* for the Policy that you want to change.
 +
 image:screenshot_compliance_edit_policy_button.png[A screenshot showing how to initiate an edit to an existing Policy.]
 
-. If you just want to change the items on this page (the Name, Description, whether email notifications are sent, and whether AIP labels are added), make the change and click *Save Policy*.
+. You can alter the name and the description. To limit the changes to these fields, select *Save Policy*.
 +
-If you want to change the filters for the saved query, click *Edit Query*.
+If you want to change the filters for the saved query, select *Edit Query*.
 +
 image:screenshot_compliance_edit_policy_dialog.png[A screenshot of selecting the Edit Query button on the Edit Policy page.]
 
-. In the Investigation page that defines that query, edit the query by adding, removing, or customizing the filters, and click *Save Changes* .
+. In the Investigation page that defines that query, edit the query by adding, removing, or customizing the filters, and select *Save Changes* .
 +
 image:screenshot_compliance_edit_policy_query.png[A screenshot showing how to edit the query by changing filter settings.]
 
@@ -95,7 +95,7 @@ The policy is changed immediately. Any actions defined for that policy to send a
 
 You can delete any custom policy that you created if you no longer need it. You can't delete any of the predefined policies.
 
-To delete a policy, click the image:screenshot_gallery_options.gif[More button] button for a specific Policy, click *Delete Policy*, and then click *Delete Policy* again in the confirmation dialog.
+To delete a policy, select the image:screenshot_gallery_options.gif[More button] button for a specific Policy, select *Delete Policy*, then select *Delete Policy* again in the confirmation dialog.
 
 == List of predefined policies
 
