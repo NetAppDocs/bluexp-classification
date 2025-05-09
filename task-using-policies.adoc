@@ -94,21 +94,19 @@ To delete a policy, select the image:screenshot_gallery_options.gif[More button]
 
 == List of predefined policies
 
-BlueXP classification provides the following system-defined policies:
-
 [cols="25,40,40",width=90%,options="header"]
-|===
+// |===
 | Name
 | Description
 | Logic
-//| S3 publicly - Exposed private data | S3 Objects containing personal or sensitive personal information, with open Public read access. | S3 Public AND contains personal OR sensitive personal info
-//| PCI DSS - Stale data over 30 days | Files containing Credit Card information, last modified over 30 days ago. | Contains credit card AND last modified over 30 days
-//| HIPAA - Stale data over 30 days | Files containing Health information, last modified over 30 days ago. | Contains health data (defined same way as in HIPAA report) AND last modified over 30 days
+// | S3 publicly - Exposed private data | S3 Objects containing personal or sensitive personal information, with open Public read access. | S3 Public AND contains personal OR sensitive personal info
+// | PCI DSS - Stale data over 30 days | Files containing Credit Card information, last modified over 30 days ago. | Contains credit card AND last modified over 30 days
+// | HIPAA - Stale data over 30 days | Files containing Health information, last modified over 30 days ago. | Contains health data (defined same way as in HIPAA report) AND last modified over 30 days
 | Private data - Stale over 7 years | Files containing personal or sensitive personal information, last modified over 7 years ago. | Files containing personal or sensitive personal information, last modified over 7 years ago
-//| GDPR - European citizens | Files containing more than 5 identifiers of an EU country's citizens or DB Tables containing identifiers of an EU country's citizens. | Files containing over 5 identifiers of an (one) EU citizens or DB Tables containing rows with over 15% of columns with one country's EU identifiers. (any one of the national identifiers of the European countries. Does not include Brazil, California, USA SSN, Israel, South Africa)
-//| CCPA - California residents | Files containing over 10 California Driver's License identifiers or DB Tables with this identifier. | Files containing over 10 California Driver's License identifiers OR DB Tables containing California Driver's license
+// | GDPR - European citizens | Files containing more than 5 identifiers of an EU country's citizens or DB Tables containing identifiers of an EU country's citizens. | Files containing over 5 identifiers of an (one) EU citizens or DB Tables containing rows with over 15% of columns with one country's EU identifiers. (any one of the national identifiers of the European countries. Does not include Brazil, California, USA SSN, Israel, South Africa)
+// | CCPA - California residents | Files containing over 10 California Driver's License identifiers or DB Tables with this identifier. | Files containing over 10 California Driver's License identifiers OR DB Tables containing California Driver's license
 | Data Subject names - High risk | Files with over 50 Data Subject names. | Files with over 50 Data Subject names
 | Email Addresses - High risk | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses
 | Personal data - High risk | Files with over 20 Personal data identifiers, or DB Columns with over 50% of their rows containing Personal data identifiers. | Files with over 20 personal, or DB Columns with over 50% of their rows containing personal
 | Sensitive Personal data - High risk | Files with over 20 Sensitive Personal data identifiers, or DB Columns with over 50% of their rows containing Sensitive Personal data. | Files with over 20 sensitive personal, or DB Columns with over 50% of their rows containing sensitive personal
-|===
+// |===

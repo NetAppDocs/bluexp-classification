@@ -42,8 +42,8 @@ indexpage:
           url: task-investigate-data.html#check-for-duplicate-files-in-your-storage-systems
         - title: Filter your data to view specific files
           url: task-investigate-data.html
-        - title: Create policies to view results from your top searches
-          url: task-using-policies.html
+        - title: Create a saved search
+          url: task-saved-searches.html
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
         - title: Respond to a Data Subject Access Request

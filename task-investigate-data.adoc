@@ -370,22 +370,22 @@ A dialog displays a message that the reports are being downloaded.
 
 //You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
 
-== Create a policy based on selected filters
+== Create a saved search based on selected filters
 
-It might be helpful to you to save the filters you've selected in the Data Investigation page as a policy. This way, you can run the same filters at any time without having to reselect them.
+You can create a saved search for frequently used search filters in the Data Investigation page to easily replicate those search queries. 
 
 .Steps
 
 . From the BlueXP classification menu, select *Investigation*. 
-. On the Data Investigation page, select the filters you want to use to create a policy.
-. At the bottom of the Filter pane, select *Create policy from this search*.
-. Enter a name and a description for the policy.
+. On the Data Investigation page, select the filters you want to use to create a saved search.
+. At the bottom of the Filter pane, select *Create saved search from this search*.
+. Enter a name and a description for the saved search.
 . Choose any of the following: 
-* *Automatically delete files that match this policy (every day): Select this if you want to delete the files that match the policy.
-* *Send email updates about this policy to BlueXP users on this account every <day/week/month>*: Select this if you want to send email updates about the policy to BlueXP users on this account.
-* *Send email every <Day> to <email address>*: Select this if you want to send an email every <Day> to a specific email address.
+// * *Automatically delete files that match this policy (every day): Select this if you want to delete the files that match the policy.
+// * *Send email updates about this policy to BlueXP users on this account every <day/week/month>*: Select this if you want to send email updates about the policy to BlueXP users on this account.
+// * *Send email every <Day> to <email address>*: Select this if you want to send an email every <Day> to a specific email address.
 
-. Select *Create Policy*.
+. Select *Create Saved Search*.
 
-TIP: It might take up to 15 minutes for the results to appear on the Policies page. 
+TIP: It might take up to 15 minutes for the results to appear on the Saved Searches page. 
 

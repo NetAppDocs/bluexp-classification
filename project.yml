@@ -68,8 +68,8 @@ sidebar:
           url: /task-custom-classification.html
         - title: Investigate your data
           url: /task-investigate-data.html
-        - title: Assign policies to your data
-          url: /task-using-policies.html 
+        - title: Create a saved search
+          url: task-saved-searches.html
         - title: Change scan settings
           url: /task-managing-repo-scanning.html
         - title: Generate compliance reports
@@ -115,7 +115,9 @@ sidebar:
              - title: Add custom personal data identifiers
                url: /task-managing-data-fusion.html
              - title: View the status of BlueXP classification actions
-               url: /task-view-compliance-actions.html    
+               url: /task-view-compliance-actions.html  
+             - title: Assign policies to your data
+               url: /task-using-policies.html 
              - title: Audit the history of BlueXP classification actions
                url: /task-audit-data-sense-actions.html                
              - title: Reduce the BlueXP classification scan speed
