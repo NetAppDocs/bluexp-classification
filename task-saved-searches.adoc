@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-saved-searches.html
 keywords: default searches, policies, private data, edit query
-summary: Policies arecustom filters that provide search results in the Investigation page for commonly requested compliance queries. BlueXP classification provides a set of predefined Policies based on common requests or you can create your own. 
+summary: Saved searches (previously known as policies) enable you to easily access custom queries for your classification scans. 
 ---
 = Create saved searches in BlueXP classification
 :hardbreaks:
@@ -16,6 +16,15 @@ BlueXP classification supports saving your search queries. With a saved search, 
 
 [NOTE]
 In versions of BlueXP classification earlier than 1.43, saved searches were called xref:task-using-policies.adoc[policies].
+
+
+== Create a saved search 
+
+
+== Edit a saved search 
+
+
+== Delete a saved search
 
 
 == Default searches
