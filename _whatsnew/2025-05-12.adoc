@@ -16,14 +16,15 @@ BlueXP classification scans now identify Canadian PII data categories for bankin
 
 BlueXP classification now supports custom classifications for Map & Classify scans. With custom classifications, you can tailor BlueXP scans to capture data specific to your organization to ensure compliance with regular expressions and custom proximity keywords. 
 
-For more information, see xref:task-custom-classification.adoc[Add personal data identifiers to your BlueXP classification scans].
+For more information, see xref:task-custom-classification.adoc[Add custom classifications].
 
 .Saved Searches tab
-The **Policies** tab has been renamed **Saved Searches**. The functionality is the same. 
+
+The **Policies** tab has been renamed **Saved searches**. The functionality is the same. 
 
 .Send scan events to audit log
 
-BlueXP scan events can now be sent to the audit log. BlueXP classification also supports sending classification events (when a scan is initiated and when it ends) to the link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline[BlueXP timeline]. Sending classification scan events to the BlueXP timeline is only supported for working environments.
+BlueXP scan events can now be sent to the xref:task-audit-data-sense-actions.html[audit log]. BlueXP classification also supports sending classification events (when a scan is initiated and when it ends) to the link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline[BlueXP timeline]. Sending classification scan events to the BlueXP timeline is only supported for working environments.
 
 .Security updates 
 
