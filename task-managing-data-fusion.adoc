@@ -13,11 +13,13 @@ summary: BlueXP classification provides many ways for you to add a custom list o
 :imagesdir: ./media/
 
 [.lead]
+With BlueXP classification, you can customize your search for personal data. 
 BlueXP classification provides many ways for you to add a custom list of "personal data" that BlueXP classification will identify in future scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
 
-====
-*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
-====
+[IMPORTANT]
+To create a custom classification in version 1.43 and later, see xref:task-custom-classification.adoc[Create a custom classification].
+
+include::_include/legacy-version-130.adoc[]
 
 * You can add unique identifiers based on specific columns in databases you are scanning.
 * You can add custom keywords from a text file -- these words are identified within your data.
@@ -30,7 +32,7 @@ NOTE: The capabilities described in this section are available only if you have 
 
 == Add custom personal data identifiers from your databases
 
-A feature we call _Data Fusion_ allows you to scan your organizations' data to identify whether unique identifiers from your databases are found in any of your other data sources. You can choose the additional identifiers that BlueXP classification will look for in its' scans by selecting a specific column, or columns, in a database table. For example, the diagram below shows how data fusion is used to scan your volumes, buckets, and databases for occurrences of all your Customer IDs from your Oracle database.
+_Data Fusion_ allows you to scan your organization's data to identify whether unique identifiers from your databases are found in any of your other data sources. You can choose the additional identifiers that BlueXP classification will look for in its scans by selecting a specific column or columns in a database table. For example, the diagram below shows how data fusion is used to scan your volumes, buckets, and databases for occurrences of all your Customer IDs from your Oracle database.
 
 image:diagram_compliance_data_fusion.png[A diagram showing how content from your databases can be used as a source to identify files that contain the same data.]
 

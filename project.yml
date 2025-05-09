@@ -64,6 +64,8 @@ sidebar:
           url: /task-controlling-private-data.html
         - title: Categories of private data
           url: /reference-private-data-categories.html
+        - title: Create custom scan 
+          url: /task-custom-classification.html
         - title: Investigate your data
           url: /task-investigate-data.html
         - title: Assign policies to your data

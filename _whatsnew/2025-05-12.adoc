@@ -14,9 +14,9 @@ BlueXP classification scans now identify Canadian PII data categories for bankin
 
 .Custom classification 
 
-<!-- support for custom classification + change in legacy version -->
+BlueXP classification now supports custom classifications for Map & Classify scans. With custom classifications, you can tailor BlueXP scans to capture data specific to your organization to ensure compliance with regular expressions and custom proximity keywords. 
 
-For more information, see xref:task-managing-data-fusion.adoc[Add personal data identifiers to your BlueXP classification scans].
+For more information, see xref:task-custom-classification.adoc[Add personal data identifiers to your BlueXP classification scans].
 
 .Saved Searches tab
 The **Policies** tab has been renamed **Saved Searches**. The functionality is the same. 

@@ -1,0 +1,35 @@
+---
+sidebar: sidebar
+permalink: task-custom-classification.html
+keywords: custom classification, customize, regular expression, keyword, regex
+summary: BlueXP classification enables you to customize a search for sensitive information, tailoring the service to individual patterns and keywords relevant to your organization.
+---
+= Create a custom classification in BlueXP classification
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+With BlueXP classification, you can create a custom search for sensitive information. The search can be scoped to a regular expression or a set of proximity keywords. 
+
+== Create a custom classificaiton 
+
+// You must have created a working environment to enable a custom classification. 
+// Custom classification is only available for Map & Classify scans, not mapping-only scans. 
+
+.Steps
+. Select the **Custom classification** tab. 
+. Select the **Add New Classifier**.
+. Add Name and Description for the new classifier. 
+. To add the customization as a regular expression, select **Custom regular expression** then  **Next**. 
+
+.. For a regular expression, add the pattern to detect the specific information of your data. For example, 12-digit ID beginning with 201 would be \b201\f\d(9)b. Select **Validate** to confirm your the syntax of your entry. 
++
+To add proximity words to improve detection, insert the phrases in the Proximity words field. Enter each phrase on its own line. There is a maximum of 500,000 characters and words must be at least three characters in length.
+ 
+. To add the customization as a keyword, select **Custom keywords** then **Next**.
+.. Insert the phrases in the Proximity words field. Enter each phrase on its own line. There is a maximum of 500,000 characters and words must be at least three characters in length.
+. Select **Done**. 
+
+The new customization will be captured in subsequent scans. To view results, seeef:task-generating-compliance-reports.html[Generate compliance reports].

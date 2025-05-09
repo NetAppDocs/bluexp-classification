@@ -17,9 +17,7 @@ BlueXP classification logs management activities that have been performed on fil
 
 You can view the contents of the BlueXP classification audit log files, or download them, to see what file changes have occurred, and when. For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
 
-====
-*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
-====
+include::_include/legacy-version-130.adoc[]
 
 == Log file contents
 

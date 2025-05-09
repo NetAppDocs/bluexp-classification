@@ -68,8 +68,6 @@ In the _Saved Searches_ tab, the policies with the greatest number of results ap
 For details about policies, see link:task-using-policies.html[Assign policies to your data].
 
 .Steps 
-
-
 . From the BlueXP classification menu, select *Governance*.
 . In the Goverance dashboard > Policies tile, select the name of a policy to display the results in the Investigation page. 
 . Select *View All* to view the list of all available policies.
