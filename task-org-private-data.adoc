@@ -22,8 +22,7 @@ include::_include/legacy-version-130.adoc[]
 * You can add Tags to files that you want to mark for organization or for some type of follow-up.
 * You can assign a BlueXP user to a specific file, or to multiple files, so that person can be responsible for managing the file.
 * With the saved search functionality, you can create your own custom search queries so that you can easily see the results by clicking one button.
-//* You can send email alerts to BlueXP users, or any other email address, when certain critical Policies return results.
-// v1.43 policies - still valid? 
+* You can send email alerts to BlueXP users, or any other email address, when certain critical Policies return results.
 
 NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
 
