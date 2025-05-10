@@ -226,7 +226,7 @@ image:screenshot_compliance_move_file.png[A screenshot showing selection of the 
 
 You can permanently remove source files that seem insecure or too risky to leave in your storage system, or that you've identified as a duplicate. This action is permanent and there is no undo or restore.
 
-You can delete files manually from the Investigation pane, or link:task-using-policies.html[automatically using Policies^].
+//You can delete files manually from the Investigation pane, or link:task-using-policies.html[automatically using Policies^].
 // v1.43 policies - still valid? 
 
 TIP: You can't delete files that reside in databases. All other data sources are supported.

@@ -52,7 +52,6 @@ image:screenshot_compliance_save_highlight2.png[A screenshot that shows how to c
 
 The new saved search appears in the Saved Searches tab.
 
-
 == Edit saved searches
 
 You can modify the criteria for a custom-created saved search to change the query (the items you defined using Filters) to add or remove certain parameters.
