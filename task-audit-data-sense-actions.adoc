@@ -27,11 +27,11 @@ Each line in the audit log contains information in this format:
 
 * Date and time - full timestamp for the event
 * Status - INFO, WARNING
-* Action type (delete, copy, move, create policy, update policy, rescan files, download JSON report, etc.)
+* Action type (delete, copy, move, create saved search, update saved search, rescan files, download JSON report, etc.)
 * File name (if the action is relevant to a file)
 * Details for the action - what was done: depends on the action
 
-** Policy name
+** Saved search name
 ** For move - Source and destination
 ** For copy - Source and destination
 ** For tag - tag name

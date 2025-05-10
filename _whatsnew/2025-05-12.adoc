@@ -10,7 +10,9 @@ For more information, see link:task-managing-repo-scanning.html#prioritize-scans
 
 .Support for Canadian personally identifiable information (PII) data categories
 
-BlueXP classification scans now identify Canadian PII data categories for banking information, passport number, social insurance number, and driver's license number and health card number for all provinces and territories. For more detail information, see xref:reference-private-data-categories.adoc#types-of-personal-data[Personal data categories].
+BlueXP classification scans now identify Canadian PII data categories for banking information, passport number, social insurance number, and driver's license number and health card number for all provinces and territories.
+
+For more detail information, see xref:reference-private-data-categories.adoc#types-of-personal-data[Personal data categories].
 
 .Custom classification 
 
@@ -28,14 +30,15 @@ BlueXP scan events can now be sent to the xref:task-audit-data-sense-actions.htm
 
 .Security updates 
 
-. Updated Keras package <!-- impact? --> 
+// keras pkg update impact? 
+. Updated Keras package.
 . The Docker containers configuration has been updated. The container no longer has access to the host's network interfaces for crafting raw network packets. By reducing unnecessary access, the update mitigates potential security risks.
 
 .Performance enhancements 
 . The load time for the performance dashboard has been improved. 
 . The Python module has been simplified and no longer schedules Celery tasks, saving approximately 20 MB of RAM. Additionally, the scanner node monitor task and worker conversion have been simplified, reducing RAM usage. 
 . The celery worker has been optimized to save approximately 3 GB of RAM. 
-. Duplication has been eliminated in the elastic, which has reduced the size of the elastic. 
+. Duplication has been eliminated in the elastic, reducing its size.  
 . Similar containers have been merged to improve performance and reduce memory usage.
 
 .Bug fixes

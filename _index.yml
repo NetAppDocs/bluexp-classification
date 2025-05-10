@@ -43,7 +43,7 @@ indexpage:
         - title: Filter your data to view specific files
           url: task-investigate-data.html
         - title: Create a saved search
-          url: task-saved-searches.html
+          url: task-using-policies.html
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
         - title: Respond to a Data Subject Access Request

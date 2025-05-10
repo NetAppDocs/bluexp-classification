@@ -32,4 +32,4 @@ To add proximity words to improve detection, insert the phrases in the Proximity
 .. Insert the phrases in the Proximity words field. Enter each phrase on its own line. There is a maximum of 500,000 characters and words must be at least three characters in length.
 . Select **Done**. 
 
-The new customization will be captured in subsequent scans. To view results, seeef:task-generating-compliance-reports.html[Generate compliance reports].
+The new customization will be captured in subsequent scans. To view results, see xref:task-generating-compliance-reports.html[Generate compliance reports].

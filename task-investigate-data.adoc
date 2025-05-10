@@ -147,7 +147,7 @@ Use the following filter to view data by saved searches.
 | Filter
 | Details
 
-| Saved search | Select one saved search or multiples. Go link:task-saved-searches.html[here] to view the list of existing saved searches and create others.
+| Saved search | Select one saved search or multiples. Go to the link:task-using-policies.html[saved searches tab] to view the list of existing saved searches and create new ones.
 //| Label | Select link:task-org-private-data.html[AIP labels] that are assigned to your files.
 //| Tags | Select link:task-org-private-data.html[the tag or tags] that are assigned to your files.
 //| Assigned To | Select the name of the person to which the file is assigned.
@@ -187,7 +187,7 @@ Use the following filter to view files that are duplicated in your storage.
 
 == View file metadata
 
-In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-saved-searches.html[create saved searches] because you can see all the information that you can use to filter your data.
+In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html[create saved searches] because you can see all the information that you can use to filter your data.
 
 Not all information is available for all data sources - just what is appropriate for that data source. For example, volume name and permissions are not relevant for database files.
 

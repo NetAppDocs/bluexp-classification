@@ -65,7 +65,7 @@ NOTE: If any of your data sources implement data tiering, old data that already 
 
 In the _Saved Searches_ tab, the searches with the greatest number of results appear at the top of the list. 
 
-For details about saved searches, see link:task-saved-searches.html[Create saved searches].
+For details about saved searches, see link:task-using-policies.html[Create saved searches].
 
 .Steps 
 . From the BlueXP classification menu, select *Governance*.
