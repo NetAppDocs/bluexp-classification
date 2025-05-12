@@ -63,7 +63,7 @@ NOTE: If any of your data sources implement data tiering, old data that already 
 
 === Review saved searches with the largest number of results
 
-In the _Saved Searches_ tab, the searches with the greatest number of results appear at the top of the list. 
+In the _Saved searches_ tab, the searches with the greatest number of results appear at the top of the list. 
 
 For details about saved searches, see link:task-using-policies.html[Create saved searches].
 
