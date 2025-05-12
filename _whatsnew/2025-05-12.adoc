@@ -16,7 +16,7 @@ For more detail information, see xref:reference-private-data-categories.adoc#typ
 
 .Custom classification 
 
-BlueXP classification now supports custom classifications for Map & Classify scans. With custom classifications, you can tailor BlueXP scans to capture data specific to your organization to ensure compliance with regular expressions and custom proximity keywords. 
+BlueXP classification now supports custom classifications for Map & Classify scans. With custom classifications, you can tailor BlueXP scans to capture data specific to your organization to ensure compliance with regular expressions. This feature is currently in preview. 
 
 For more information, see xref:task-custom-classification.adoc[Add custom classifications].
 
@@ -31,12 +31,12 @@ BlueXP scan events can now be sent to the xref:task-audit-data-sense-actions.htm
 .Security updates 
 
 // keras pkg update impact? 
-* Updated Keras package.
+* The Keras pacakage has been updated, mitigating potential vulnerabilities. 
 * The Docker containers configuration has been updated. The container no longer has access to the host's network interfaces for crafting raw network packets. By reducing unnecessary access, the update mitigates potential security risks.
 
 .Performance enhancements 
 
-* The load time for the performance dashboard has been improved. 
+//* The load time for the performance dashboard has been improved. 
 * The Python module has been simplified and no longer schedules Celery tasks, saving approximately 20 MB of RAM. Additionally, the scanner node monitor task and worker conversion have been simplified, reducing RAM usage. 
 * The Celery worker has been optimized to save approximately 3 GB of RAM. 
 * Duplication has been eliminated in the elastic, reducing its size.  
