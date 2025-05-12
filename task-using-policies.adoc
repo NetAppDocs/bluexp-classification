@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: task-using-policies.html
 keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense
-summary: Policies arecustom filters that provide search results in the Investigation page for commonly requested compliance queries. BlueXP classification provides a set of predefined Policies based on common requests or you can create your own. 
+summary: Saved searches are custom filters that provide search results in the Investigation page for commonly requested compliance queries. BlueXP classification provides a set of default saved searches based on common requests or you can create your own. 
 ---
-= Assign policies to your data with BlueXP classification
+= Manage saved searches with BlueXP classification
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,103 +12,106 @@ summary: Policies arecustom filters that provide search results in the Investiga
 :imagesdir: ./media/
 
 [.lead]
-Policies are like a favorites list of custom filters that provide search results in the Investigation page for commonly requested compliance queries. BlueXP classification provides a set of predefined policies based on common customer requests. You can create custom policies that provide results for searches specific to your organization.
+BlueXP classification supports saving your search queries. With a saved search, you can create custom filters to sort through frequent queries of your data Investigation page. BlueXP classification also includes predefined saved searches based on common requests. 
 
-Policies provide the following functionality:
+[NOTE]
+In versions of BlueXP classification earlier than 1.43, saved searches were called xref:task-using-policies-deprecated.adoc[policies].
 
-* <<List of predefined policies,Predefined policies>> from NetApp based on user requests
-* Ability to create your own custom policies
-* Launch the Investigation page with the results from your Policies in one click
-//* Send email alerts to BlueXP users, or any other email addresses, when certain critical Policies return results so you can get notifications to protect your data
-//* Assign AIP (Azure Information Protection) labels automatically to all files that match the criteria defined in a Policy
-//* Delete files automatically (once per day) when certain Policies return results so you can protect your data automatically
+The *Saved searches* tab in the Compliance Dashboard lists all the predefined and custom saved searches available on this instance of BlueXP classification.
 
-The *Policies* tab in the Compliance Dashboard lists all the predefined and custom policies available on this instance of BlueXP classification.
+Saved searches also appear in the list of filters in the Investigation page.
 
-Policies also appear in the list of filters in the Investigation page.
+image:screenshot_compliance_highlights_tab.png[A screenshot of the Saved searches tab in the BlueXP classification dashboard.]
 
-image:screenshot_compliance_highlights_tab.png[A screenshot of the Policies tab in the BlueXP classification dashboard.]
+== View saved searches results in the Investigation page
 
-== View Policy results in the Investigation page
+To display the results for a saved search in the Investigation page, select the image:screenshot_gallery_options.gif[More button] button for a specific search then select *Investigate Results*.
 
-To display the results for a policy in the Investigation page, select the image:screenshot_gallery_options.gif[More button] button for a specific policy then select *Investigate Results*.
+image:screenshot_compliance_highlights_investigate.png[A screenshot of selecting Investigate Results for a specific search from the Saced Search tab.]
 
-image:screenshot_compliance_highlights_investigate.png[A screenshot of selecting Investigate Results for a specific policy from the Policies tab.]
+== Create custom saved searches
 
-== Create custom policies
-
-You can create your own custom Policies that provide results for searches specific to your organization. Results are returned for all files and directories (shares and folders) that match the search criteria.
-
-//Note that the actions for deleting data and assigning AIP labels based on the policy results are valid only for files. Directories that match the search criteria can't be deleted automatically or assigned AIP labels.
+You can create your own custom saved searches that provide results for queries specific to your organization. Results are returned for all files and directories (shares and folders) that match the search criteria.
 
 .Steps
 
 . In the Investigation tab, define a search by selecting the filters you want to use. See link:task-investigate-data.html[Filtering data in the Investigation page] for details.
 
-. Once you have all the filter characteristics set to your liking, select *Create Policy from this search*.
+. Once you have all the filter characteristics set to your liking, select *Create saved search*.
 +
-image:screenshot_compliance_save_as_highlight.png[Screenshot showing how to save a filtered query as a Policy.]
-
-. Name the policy and select other actions that can be performed by the policy:
-.. Enter a unique name and description.
-.. Optionally, check the box to automatically delete files that match the policy parameters. 
+image:screenshot_compliance_save_as_highlight.png[Screenshot showing how to save a filtered query as a Saved search.]
+. Name the saved search and add a description. The name must be unique. 
 //.. Optionally, check the box if you want notification emails sent to BlueXP users in your account, and choose the interval at which the email is sent. Learn more about <<Send email alerts when non-compliant data is found,sending email alerts based on policy results>>.
 //.. Optionally, check the box if you want notification emails sent to other users, enter up to 20 email addresses, and choose the interval at which the email is sent.
 //.. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html[AIP labels].)
-.. Select *Create Policy*.
+. Select *Create Saved Search*.
 +
-image:screenshot_compliance_save_highlight2.png[A screenshot that shows how to configure the Policy and save it.]
+image:screenshot_compliance_save_highlight2.png[A screenshot that shows how to configure the Saved search and save it.]
 
 .Result
 
-The new Policy appears in the Policies tab.
+The new saved search appears in the Saved searches tab.
 
+== Edit saved searches
 
-== Edit Policies
+You can modify the criteria for a custom-created saved search to change the query (the items you defined using Filters) to add or remove certain parameters.
 
-You can modify the criteria for an existing policy to change the query (the items you defined using Filters) to add or remove certain parameters.
-
-You cannot modify predefined policies. 
+You cannot modify default saved searches. 
 
 .Steps
 
-. From the Policies List page, select *Edit Policy* for the Policy that you want to change.
+. From the Saved searches page, select *Edit Saved Search* for the search that you want to change.
 +
-image:screenshot_compliance_edit_policy_button.png[A screenshot showing how to initiate an edit to an existing Policy.]
+image:screenshot_compliance_edit_policy_button.png[A screenshot showing Edit Saved Search.]
 
-. Make the changes to the name and description fields. To only changes these fields, select *Save Policy*.
+. Make the changes to the name and description fields. To only changes these fields, select *Save*.
 +
 To change the filters for the saved query, select *Edit Query*.
 +
-image:screenshot_compliance_edit_policy_dialog.png[A screenshot of selecting the Edit Query button on the Edit Policy page.]
+image:screenshot_compliance_edit_policy_dialog.png[A screenshot of selecting the Edit Query button on the Edit Saved Search page.]
 
 . In the Investigation page that defines that query, edit the query by adding, removing, or customizing the filters, then select *Save Changes* .
 +
 image:screenshot_compliance_edit_policy_query.png[A screenshot showing how to edit the query by changing filter settings.]
 
-== Delete Policies
+== Delete saved searches
 
-You can delete any custom policy that you created if you no longer need it. You can't delete any of the predefined policies.
+You can delete any custom saved search if you no longer need it. You can't delete default saved searches
 
-To delete a policy, select the image:screenshot_gallery_options.gif[More button] button for a specific Policy, select *Delete Policy*, then select *Delete Policy* again in the confirmation dialog.
+To delete a saved search, select the image:screenshot_gallery_options.gif[More button] button for a specific search, select *Delete saved search*, then select *Delete search* again in the confirmation dialog.
 
-== List of predefined policies
+== Default searches
 
-BlueXP classification provides the following system-defined policies:
+BlueXP classification provides the following system-defined search queries:
 
-[cols="25,40,40",width=90%,options="header"]
-|===
-| Name
-| Description
-| Logic
-//| S3 publicly - Exposed private data | S3 Objects containing personal or sensitive personal information, with open Public read access. | S3 Public AND contains personal OR sensitive personal info
-//| PCI DSS - Stale data over 30 days | Files containing Credit Card information, last modified over 30 days ago. | Contains credit card AND last modified over 30 days
-//| HIPAA - Stale data over 30 days | Files containing Health information, last modified over 30 days ago. | Contains health data (defined same way as in HIPAA report) AND last modified over 30 days
-| Private data - Stale over 7 years | Files containing personal or sensitive personal information, last modified over 7 years ago. | Files containing personal or sensitive personal information, last modified over 7 years ago
-//| GDPR - European citizens | Files containing more than 5 identifiers of an EU country's citizens or DB Tables containing identifiers of an EU country's citizens. | Files containing over 5 identifiers of an (one) EU citizens or DB Tables containing rows with over 15% of columns with one country's EU identifiers. (any one of the national identifiers of the European countries. Does not include Brazil, California, USA SSN, Israel, South Africa)
-//| CCPA - California residents | Files containing over 10 California Driver's License identifiers or DB Tables with this identifier. | Files containing over 10 California Driver's License identifiers OR DB Tables containing California Driver's license
-| Data Subject names - High risk | Files with over 50 Data Subject names. | Files with over 50 Data Subject names
-| Email Addresses - High risk | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses | Files with over 50 Email Addresses, or DB Columns with over 50% of their rows containing Email Addresses
-| Personal data - High risk | Files with over 20 Personal data identifiers, or DB Columns with over 50% of their rows containing Personal data identifiers. | Files with over 20 personal, or DB Columns with over 50% of their rows containing personal
-| Sensitive Personal data - High risk | Files with over 20 Sensitive Personal data identifiers, or DB Columns with over 50% of their rows containing Sensitive Personal data. | Files with over 20 sensitive personal, or DB Columns with over 50% of their rows containing sensitive personal
-|===
+* **Data Subject names - High risk**
++
+Files with more than 50 data subject names
+
+* **Email Addresses - High risk**
++
+Files with more than 50 email addresses or database columns with more than 50% of their rows containing email addresses 
+
+* **Personal data - High risk**
++
+Files with more than 20 personal data identifiers or database columns with more than 50% of their rows containing personal data identifiers
+
+* **Private data - Stale over 7 years**
++
+Files containing personal or sensitive personal information, last modified more than 7 years ago
+
+* **Protect - High** 
++
+Files or database columns that contain a password, credit card information, IBAN number, or social security number
+
+* **Protect - Low**
++
+Files that have not been accessed for more than 3 years
+
+* **Protect - Medium**
++
+Files that contain files or database columns with personal data identifiers including ID numbers, tax identification numbers, drivers license numbers, medicinal IDs, or passport numbers
+
+* **Sensitive Personal data - High risk**
++
+Files with more than 20 sensitive personal data identifiers or database columns with greater than 50% of their rows containing sensitive personal data

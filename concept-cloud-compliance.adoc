@@ -49,7 +49,8 @@ BlueXP classification can identify data that is potentially at risk for being ac
 * Identify all the files and directories (shares and folders) with open permissions that are exposed to your entire organization or to the public.
 * Identify sensitive data that resides outside of the initial, dedicated location.
 * Comply with data retention policies.
-* Use _Policies_ to automatically detect new security issues so security staff can take action immediately.
+* Use __Policies__ to automatically detect new security issues so security staff can take action immediately.
+// v1.43 policies -- is above still valid? 
 
 .Optimize storage usage
 

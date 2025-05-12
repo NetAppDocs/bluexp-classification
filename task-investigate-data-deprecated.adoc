@@ -24,9 +24,9 @@ NOTE: The capabilities described in this section are available only if you have 
 You can filter the contents of the investigation page to display only the results you want to see. This is a very powerful feature because after you've refined the data, you can use the button bar at the top of the page to perform a variety of actions, including copying files, moving files, adding a tag or AIP label to the files, and more.
 
 
-=== Filter data by tags, labels, assigned users, and policies
+=== Filter data by tags, labels, assigned users, and saved searches
 
-Use the following filters to view data by tags, AIP labels, assigned users, or policies.
+Use the following filters to view data by tags, AIP labels, assigned users, or saved searches.
 
 ====
 *NOTE*    The ability to filter by tags, labels, and assigned users is relevant only for BlueXP classification versions 1.30 and earlier.
@@ -38,7 +38,7 @@ Use the following filters to view data by tags, AIP labels, assigned users, or p
 | Filter
 | Details
 
-| Policies | Select a policy or policies. Go link:task-using-policies.html[here^] to view the list of existing policies and to create your own custom policies.
+| Saved searches | Select one or multiple saved search. Go link:task-using-policies.html[here^] to view the list of existing searches or create a new one.
 | Label | Select link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP labels] that are assigned to your files.
 | Tags | Select link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files[the tag or tags] that are assigned to your files.
 | Assigned To | Select the name of the person to which the file is assigned.

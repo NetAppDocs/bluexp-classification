@@ -20,9 +20,7 @@ When enabled, slow scanning is used on all data sources - you can't configure sl
 
 TIP: The scan speed can't be reduced when scanning databases.
 
-====
-*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
-====
+include::_include/legacy-version-130.adoc[]
 
 .Steps
 

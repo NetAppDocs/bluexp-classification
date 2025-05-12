@@ -135,9 +135,9 @@ Use the following filters to view data by storage type.
 
 |===
 
-*Filter data by policies*
+*Filter data by saved searches*
 
-Use the following filter to view data by policies.
+Use the following filter to view data by saved searches.
 
 
 [cols=2*,options="header",cols="30,60"]
@@ -146,7 +146,7 @@ Use the following filter to view data by policies.
 | Filter
 | Details
 
-| Policies | Select a policy or policies. Go link:task-using-policies.html[here] to view the list of existing policies and to create your own custom policies.
+| Saved search | Select one saved search or multiples. Go to the link:task-using-policies.html[saved searches tab] to view the list of existing saved searches and create new ones.
 //| Label | Select link:task-org-private-data.html[AIP labels] that are assigned to your files.
 //| Tags | Select link:task-org-private-data.html[the tag or tags] that are assigned to your files.
 //| Assigned To | Select the name of the person to which the file is assigned.
@@ -186,7 +186,7 @@ Use the following filter to view files that are duplicated in your storage.
 
 == View file metadata
 
-In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html[create policies] because you can see all the information that you can use to filter your data.
+In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html[create saved searches] because you can see all the information that you can use to filter your data.
 
 Not all information is available for all data sources - just what is appropriate for that data source. For example, volume name and permissions are not relevant for database files.
 
@@ -270,7 +270,7 @@ If duplicates exist for a file, this information appears next to the _Duplicates
 +
 image:screenshot_compliance_duplicate_file.png[A screenshot showing how to view where duplicated files are located.]
 +
-TIP: You can use the "file hash" value provided in this page and enter it directly in the Investigation page to search for a specific duplicate file at any time - or you can use it in a Policy.
+TIP: You can use the "file hash" value provided in this page and enter it directly in the Investigation page to search for a specific duplicate file at any time - or you can use it in a saved search.
 
 == Create the Data Investigation Report
 
@@ -369,22 +369,22 @@ A dialog displays a message that the reports are being downloaded.
 
 //You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
 
-== Create a policy based on selected filters
+== Create a saved search based on selected filters
 
-It might be helpful to you to save the filters you've selected in the Data Investigation page as a policy. This way, you can run the same filters at any time without having to reselect them.
+You can create a saved search for frequently used search filters in the Data Investigation page to easily replicate those search queries. 
 
 .Steps
 
 . From the BlueXP classification menu, select *Investigation*. 
-. On the Data Investigation page, select the filters you want to use to create a policy.
-. At the bottom of the Filter pane, select *Create policy from this search*.
-. Enter a name and a description for the policy.
+. On the Data Investigation page, select the filters you want to use to create a saved search.
+. At the bottom of the Filter pane, select *Create saved search from this search*.
+. Enter a name and a description for the saved search.
 . Choose any of the following: 
-* *Automatically delete files that match this policy (every day): Select this if you want to delete the files that match the policy.
-* *Send email updates about this policy to BlueXP users on this account every <day/week/month>*: Select this if you want to send email updates about the policy to BlueXP users on this account.
-* *Send email every <Day> to <email address>*: Select this if you want to send an email every <Day> to a specific email address.
+// * *Automatically delete files that match this policy (every day): Select this if you want to delete the files that match the policy.
+// * *Send email updates about this policy to BlueXP users on this account every <day/week/month>*: Select this if you want to send email updates about the policy to BlueXP users on this account.
+// * *Send email every <Day> to <email address>*: Select this if you want to send an email every <Day> to a specific email address.
 
-. Select *Create Policy*.
+. Select *Create Saved Search*.
 
-TIP: It might take up to 15 minutes for the results to appear on the Policies page. 
+TIP: It might take up to 15 minutes for the results to appear on the Saved Searches page. 
 
