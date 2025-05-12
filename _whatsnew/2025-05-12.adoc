@@ -22,7 +22,7 @@ For more information, see xref:task-custom-classification.adoc[Add custom classi
 
 .Saved Searches tab
 
-The **Policies** tab has been renamed xref:task-using-policies.html[**Saved searches**]. The functionality is the same. 
+The **Policies** tab has been renamed xref:task-using-policies.html[**Saved Searches**]. The functionality is the same. 
 
 .Send scan events to audit log
 
