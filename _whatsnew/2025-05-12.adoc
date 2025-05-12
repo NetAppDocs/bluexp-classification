@@ -14,7 +14,7 @@ BlueXP classification scans now identify Canadian PII data categories for bankin
 
 For more detail information, see xref:reference-private-data-categories.adoc#types-of-personal-data[Personal data categories].
 
-.Custom classification 
+.Custom classification (preview)
 
 BlueXP classification now supports custom classifications for Map & Classify scans. With custom classifications, you can tailor BlueXP scans to capture data specific to your organization to ensure compliance with regular expressions. This feature is currently in preview. 
 
@@ -30,18 +30,13 @@ BlueXP scan events can now be sent to the xref:task-audit-data-sense-actions.htm
 
 .Security updates 
 
-// keras pkg update impact? 
-* The Keras pacakage has been updated, mitigating potential vulnerabilities. 
+* The Keras package has been updated, mitigating vulnerabilities (BDSA-2025-0107 and BDSA-2025-1984). 
 * The Docker containers configuration has been updated. The container no longer has access to the host's network interfaces for crafting raw network packets. By reducing unnecessary access, the update mitigates potential security risks.
 
 .Performance enhancements 
 
-//* The load time for the performance dashboard has been improved. 
-* The Python module has been simplified and no longer schedules Celery tasks, saving approximately 20 MB of RAM. Additionally, the scanner node monitor task and worker conversion have been simplified, reducing RAM usage. 
-* The Celery worker has been optimized to save approximately 3 GB of RAM. 
-* Duplication has been eliminated in the elastic, reducing its size.  
-* Similar containers have been merged to improve performance and reduce memory usage.
+Code enhancements have been implemented to reduce RAM usage and improve the overall performance of BlueXP classification. 
 
 .Bug fixes
 
-Bugs that caused StorageGRID scans to fail and the investigation page filter options to not load have been fixed. 
+Bugs that caused StorageGRID scans to fail, the investigation page filter options to not load, and the Data Discovery Assessment to not download for high volume assessments have been fixed. 

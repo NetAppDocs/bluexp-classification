@@ -13,11 +13,9 @@ summary: BlueXP classification enables you to customize a search for sensitive i
 [.lead]
 With BlueXP classification, you can create a custom search for sensitive information. The search can be scoped to a regular expression or a set of proximity keywords. 
 
-== Create a custom classificaiton 
+== Create a custom classification
 
-// You must have created a working environment to enable a custom classification. 
-// Custom classification is only available for Map & Classify scans, not mapping-only scans. 
-// This feature is currently in preview. 
+Custom classification is only available for Map & Classify scans, not mapping-only scans. This feature is currently in preview. 
 
 .Steps
 . Select the **Custom classification** tab. 
