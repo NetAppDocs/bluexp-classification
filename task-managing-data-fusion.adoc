@@ -13,7 +13,6 @@ summary: BlueXP classification provides many ways for you to add a custom list o
 :imagesdir: ./media/
 
 [.lead]
-With BlueXP classification, you can customize your search for personal data. 
 BlueXP classification provides many ways for you to add a custom list of "personal data" that BlueXP classification will identify in future scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
 
 [IMPORTANT]
