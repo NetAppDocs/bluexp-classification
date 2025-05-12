@@ -24,9 +24,9 @@ For more information, see xref:task-custom-classification.adoc[Add custom classi
 
 The **Policies** tab has been renamed xref:task-using-policies.html[**Saved searches**]. The functionality is the same. 
 
-.Send scan events to audit log
+.Send scan events to BlueXP timeline
 
-BlueXP scan events can now be sent to the xref:task-audit-data-sense-actions.html[audit log]. BlueXP classification also supports sending classification events (when a scan is initiated and when it ends) to the link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline[BlueXP timeline^]. Sending classification scan events to the BlueXP timeline is only supported for working environments.
+BlueXP classification now supports sending classification events (when a scan is initiated and when it ends) to the link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline[BlueXP timeline^].
 
 .Security updates 
 
