@@ -75,9 +75,9 @@ image:screenshot_compliance_repo_scan_all.png[A screenshot showing how to config
 
 == Prioritize scans
 
-You can prioritize the most important mapping-only scans to ensure high priority scans are completed first. 
+You can prioritize the most important mapping-only scans or map & classify scans to ensure high priority scans are completed first. 
 
-By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can now move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. This feature is limited to mapping-only scans. It's not available for Map & Classify scans. 
+By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can now move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. 
 
 Priority is granted on a one-time basis. Automatic rescans of mapping data occur in the default order. 
 

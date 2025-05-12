@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-controlling-governance-data.html
-keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies, data discovery assessment report, data mapping overview report, data repositories, data sensitivity, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data
+keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data
 summary: Gain control of the costs related to the data on your organizations' storage resources. BlueXP classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
 ---
 
@@ -61,23 +61,17 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 
 NOTE: If any of your data sources implement data tiering, old data that already resides in object storage can be identified in the _Stale Data_ category.
 
-=== Review policies with the largest number of results
+=== Review saved searches with the largest number of results
 
-In the _Policies_ area, the policies with the greatest number of results appear at the top of the list. 
+In the _Saved searches_ tab, the searches with the greatest number of results appear at the top of the list. 
 
-
-For details about policies, see link:task-using-policies.html[Assign policies to your data].
+For details about saved searches, see link:task-using-policies.html[Create saved searches].
 
 .Steps 
-
-
 . From the BlueXP classification menu, select *Governance*.
-. In the Goverance dashboard > Policies tile, select the name of a policy to display the results in the Investigation page. 
-. Select *View All* to view the list of all available policies.
-In the _Policies_ area, the policies with the greatest number of results appear at the top of the list. 
-
-
-
+. In the Goverance dashboard, locate the Saved searches tile. Select the name of a saved search to display the results in the Investigation page. 
+. Select *View All* to view the list of all available saved searches.
+In the _Saved searches_ area, the searches with the greatest number of results appear at the top of the list. 
 
 == Create the Data Discovery Assessment Report
 
@@ -98,8 +92,6 @@ Using this report, you might take the following actions:
 * Protect your data that has broad permissions by revising global group management policies
 * Protect your data that has personal or sensitive personal information by moving PII to more secure data stores
 
-
-
 .Steps
 
 . From the BlueXP menu, select *Governance > Classification*.
@@ -111,7 +103,7 @@ image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Da
 
 .Result
 
-BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
+BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
 //Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
 
