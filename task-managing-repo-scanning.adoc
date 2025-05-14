@@ -27,7 +27,7 @@ You can view the scanning status of each work environment on the Configuration p
 * *Initializing* (light blue dot): The map or classify configuration is activated. This appears for few seconds before starting the “pending queue” status.
 * *Pending queue* (orange dot): The scan task is waiting to be listed in the scanning queue. 
 * *Queued* (orange dot): The task was successfully added to the scanning queue. The system will start mapping or classifying the volume when its turn in the queue arrives.
-* *Running* (green dot): The scan task, which was in the queue, is now being done on the selected storage repository.
+* *Running* (green dot): The scan task, which was in the queue, is actively in progress on the selected storage repository.
 * *Finished* (green dot): The scan of the storage repository is complete.
 * *Paused* (gray dot): You selected the “Pause” option to pause scanning. While the changes in the volume are not displayed in the system, the scanned insights are still shown. 
 * *Error* (red dot): The scan cannot complete because it has encountered issues. If you need to complete an action, the error appears in the tooltip under the “Required action” column.  Otherwise, the system shows an “error” status and tries to recover. When it finishes, the status changes.
@@ -77,7 +77,7 @@ image:screenshot_compliance_repo_scan_all.png[A screenshot showing how to config
 
 You can prioritize the most important mapping-only scans or map & classify scans to ensure high priority scans are completed first. 
 
-By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can now move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. 
+By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. 
 
 Priority is granted on a one-time basis. Automatic rescans of mapping data occur in the default order. 
 

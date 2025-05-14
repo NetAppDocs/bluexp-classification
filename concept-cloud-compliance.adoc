@@ -15,17 +15,10 @@ summary: BlueXP classification is a data governance service for BlueXP that scan
 [.lead]
 BlueXP classification (Cloud Data Sense) is a data governance service for BlueXP that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
 
-====
-IMPORTANT
-
-Starting in May 2024 with version 1.31, BlueXP classification is now available as a core capability within BlueXP at no additional charge. No Classification license or subscription is required. We have focused BlueXP classification functionality on NetApp storage systems, so some unused or underused features have been deprecated.
-
-link:reference-free-paid.html[See a list of deprecated features].
-//https://docs.netapp.com/us-en/bluexp-classification/reference-free-paid.html[See a list of deprecated features].
-
-Users who have been using legacy versions 1.30 or earlier will continue to be able to use that version until their subscription expires.
-
-====
+[IMPORTANT]
+Beginning with version 1.31, BlueXP classification is available as a core capability with BlueXP. There's no additional charge. No Classification license or subscription is required. 
++
+If you've been using legacy version 1.30 or earlier, that version is available until your subscription expires. link:reference-free-paid.html[See a list of deprecated features].
 
 == Features
 
@@ -91,9 +84,7 @@ BlueXP classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions
 
 == Cost
 
-BlueXP classification is now free to use. No Classification license or paid subscription is required. 
-
-//BlueXP classification is now free to use for up to 500 TiB of data. No Classification license or paid subscription is required. If you have more than 500 TiB of data that you want to scan, you can disable scanning on some of your original systems and scan the new systems that would otherwise bring you over the 500 TiB limit.
+BlueXP classification is free to use. No Classification license or paid subscription is required. 
 
 === Infrastructure costs
 
