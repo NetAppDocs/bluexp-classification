@@ -244,7 +244,7 @@ Note that all installation activities are logged when installing BlueXP classifi
 * If you're using a proxy for access to the internet:
 ** You'll need the proxy server information (IP address or host name, connection port, connection scheme: https or http, user name and password).
 ** If the proxy is performing TLS interception, you'll need to know the path on the BlueXP classification Linux system where the TLS CA certificates are stored.
-** The proxy must be non-transparent - we don't currently support transparent proxies.
+** The proxy must be non-transparent. BlueXP classificaiton does not currently support transparent proxies.
 ** The user must be a local user. Domain users are not supported.
 * Verify that your offline environment meets the required <<Enable outbound internet access from BlueXP classification,permissions and connectivity>>.
 

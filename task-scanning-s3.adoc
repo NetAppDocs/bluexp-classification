@@ -197,8 +197,8 @@ Be sure to do the following:
 }
 
 . Go to the source AWS account where the BlueXP classification instance resides and select the IAM role that is attached to the instance.
-.. Change the *Maximum CLI/API session duration* from 1 hour to 12 hours and save that change.
-.. Click *Attach policies* and then click *Create policy*.
+.. Change the *Maximum CLI/API session duration* from 1 hour to 12 hours. Save the change.
+.. Select *Attach policies* then *Create policy*.
 .. Create a policy that includes the "sts:AssumeRole" action and specify the ARN of the role that you created in the target account.
 +
 [source,json]
@@ -225,9 +225,9 @@ Be sure to do the following:
     ]
 }
 +
-The BlueXP classification instance profile account now has access to the additional AWS account.
+The BlueXP classification instance profile account receives access to the additional AWS account.
 
-. Go to the *Amazon S3 Configuration* page and the new AWS account is displayed. Note that it can take a few minutes for BlueXP classification to sync the new account's working environment and show this information.
+. Navigate to the *Amazon S3 Configuration* page and the new AWS account is displayed. Note that it can take a few minutes for BlueXP classification to sync the new account's working environment and show this information.
 +
 image:screenshot_activate_and_select_buckets.png[A screenshot showing how to activate BlueXP classification.]
 
