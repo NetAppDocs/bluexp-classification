@@ -158,7 +158,7 @@ After adding the regex, BlueXP classification will restart scanning all data sou
 If you need assistance in building the regular expression, refer to https://regex101.com/[Regular expressions 101^]. Choose *Python* for the Flavor to see the types of results BlueXP classification will match from the regular expression. The https://pythonium.net/regex[Python Regex Tester page^] is also useful by displaying a graphical representation of your patterns.
 
 [NOTE]
-BlueXP classification doesn't currently allow pattern flags when creating a regex. This means you should not use "/".
+BlueXP classification doesn't support pattern flags when creating a regex. This means you should not use "/".
 
 .Steps
 
