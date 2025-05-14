@@ -163,9 +163,9 @@ https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.htm
 == 10 January 2024
 === Version 1.27
 
-.Investigation page results now display the total size in addition to total number of items
+.Investigation page results display the total size in addition to total number of items
 
-The filtered results in the Investigation page now shows the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
+The filtered results in the Investigation page display the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
 
 .Configure additional Group IDs as "Open to Organization"
 
