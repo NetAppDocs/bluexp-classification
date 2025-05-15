@@ -121,9 +121,9 @@ image:screenshot_s3_enable_compliance.png[A screenshot of enabling the BlueXP cl
 +
 image:screenshot_s3_compliance_iam_role.png[A screenshot of entering the AWS IAM role for BlueXP classification]
 
-. Click *Enable*.
+. Select *Enable*.
 
-TIP: You can also enable compliance scans for a working environment from the Configuration page by clicking the image:screenshot_gallery_options.gif[three dots] button and selecting *Activate BlueXP classification*.
+TIP: You can also enable compliance scans for a working environment from the Configuration page by selecting the image:button-gallery-options.gif[three dots] button then *Activate BlueXP classification*.
 
 .Result
 

@@ -21,7 +21,6 @@ Complete a few steps to start scanning data within object storage directly with 
 The following information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
 +
 Beginning with version 1.31, BlueXP classification is part of the core BlueXP offering. For more information, see link:task-scanning-storagegrid.html[Scan StorageGRID data]. 
-====
 
 == Quick start
 

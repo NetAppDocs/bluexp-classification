@@ -10,13 +10,13 @@ For more information, see link:task-managing-repo-scanning.html#prioritize-scans
 
 .Support for Canadian personally identifiable information (PII) data categories
 
-BlueXP classification scans identify Canadian PII data categories for banking information, passport number, social insurance number, and driver's license number and health card number for all provinces and territories.
+BlueXP classification scans identify Canadian PII data categories. These categories include banking information, passport numbers, social insurance numbers, driver's license numbers and health card numbers for all Canadian provinces and territories.
 
-For more detail information, see xref:reference-private-data-categories.adoc#types-of-personal-data[Personal data categories].
+For more information, see xref:reference-private-data-categories.adoc#types-of-personal-data[Personal data categories].
 
 .Custom classification (preview)
 
-BlueXP classification supports custom classifications for Map & Classify scans. With custom classifications, you can tailor BlueXP scans to capture data specific to your organization to ensure compliance with regular expressions. This feature is currently in preview. 
+BlueXP classification supports custom classifications for Map & Classify scans. With custom classifications, you can tailor BlueXP scans to capture data specific to your organization using regular expressions. This feature is currently in preview. 
 
 For more information, see xref:task-custom-classification.adoc[Add custom classifications].
 
