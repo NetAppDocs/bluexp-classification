@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-using-policies.html
-keywords: compliance, privacy, filter data, highlights, policies, email alerts, notifications, aip labels, azure information protection, add labels, change labels, tags, data sense
+keywords: compliance, privacy, filter data, highlights, policies, notifications, saved search, tags, data sense, edit query
 summary: Saved searches are custom filters that provide search results in the Investigation page for commonly requested compliance queries. BlueXP classification provides a set of default saved searches based on common requests or you can create your own. 
 ---
 = Manage saved searches with BlueXP classification
@@ -25,9 +25,9 @@ image:screenshot_compliance_highlights_tab.png[A screenshot of the Saved searche
 
 == View saved searches results in the Investigation page
 
-To display the results for a saved search in the Investigation page, select the image:screenshot_gallery_options.gif[More button] button for a specific search then select *Investigate Results*.
+To display the results for a saved search in the Investigation page, select the image:button-gallery-options.gif[More button] button for a specific search then select *Investigate Results*.
 
-image:screenshot_compliance_highlights_investigate.png[A screenshot of selecting Investigate Results for a specific search from the Saced Search tab.]
+image:screenshot_compliance_highlights_investigate.png[A screenshot of selecting Investigate Results for a specific search from the Saved search tab.]
 
 == Create custom saved searches
 
@@ -41,16 +41,11 @@ You can create your own custom saved searches that provide results for queries s
 +
 image:screenshot_compliance_save_as_highlight.png[Screenshot showing how to save a filtered query as a Saved search.]
 . Name the saved search and add a description. The name must be unique. 
-//.. Optionally, check the box if you want notification emails sent to BlueXP users in your account, and choose the interval at which the email is sent. Learn more about <<Send email alerts when non-compliant data is found,sending email alerts based on policy results>>.
-//.. Optionally, check the box if you want notification emails sent to other users, enter up to 20 email addresses, and choose the interval at which the email is sent.
-//.. Optionally, check the box to automatically assign AIP labels to files that match the Policy parameters, and select the label. (Only if you have already integrated AIP labels. Learn more about link:task-org-private-data.html[AIP labels].)
 . Select *Create Saved Search*.
 +
 image:screenshot_compliance_save_highlight2.png[A screenshot that shows how to configure the Saved search and save it.]
 
-.Result
-
-The new saved search appears in the Saved searches tab.
+Once you've created the search, you can view it in the **Saved searches** tab. 
 
 == Edit saved searches
 
@@ -62,23 +57,23 @@ You cannot modify default saved searches.
 
 . From the Saved searches page, select *Edit Saved Search* for the search that you want to change.
 +
-image:screenshot_compliance_edit_policy_button.png[A screenshot showing Edit Saved Search.]
+image:screenshot-edit-search.png[A screenshot showing Edit Saved Search.]
 
 . Make the changes to the name and description fields. To only changes these fields, select *Save*.
 +
 To change the filters for the saved query, select *Edit Query*.
 +
-image:screenshot_compliance_edit_policy_dialog.png[A screenshot of selecting the Edit Query button on the Edit Saved Search page.]
+image:screenshot-edit-search-dialog.png[A screenshot of the Edit Query button on the Edit Saved Search page.]
 
 . In the Investigation page that defines that query, edit the query by adding, removing, or customizing the filters, then select *Save Changes* .
 +
-image:screenshot_compliance_edit_policy_query.png[A screenshot showing how to edit the query by changing filter settings.]
+image:screenshot-edit-query.png[A screenshot showing how to edit the query by changing filter settings.]
 
 == Delete saved searches
 
 You can delete any custom saved search if you no longer need it. You can't delete default saved searches
 
-To delete a saved search, select the image:screenshot_gallery_options.gif[More button] button for a specific search, select *Delete saved search*, then select *Delete search* again in the confirmation dialog.
+To delete a saved search, select the image:button-gallery-options.gif[More button] button for a specific search, select *Delete saved search*, then select *Delete search* again in the confirmation dialog.
 
 == Default searches
 

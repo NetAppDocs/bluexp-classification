@@ -23,7 +23,7 @@ If you need to, you can stop BlueXP classification from scanning one or more wor
 
 When you deactivate scans, BlueXP classification no longer scans the data on the working environment and it removes the indexed compliance insights from the BlueXP classification instance (the data from the working environment itself isn't deleted).
 
-. From the _Configuration_ page, click the image:screenshot_gallery_options.gif[More button] button in the row for the working environment, and then click *Deactivate Data Sense*.
+. From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the working environment then *Deactivate Data Sense*.
 
 image:screenshot_deactivate_compliance_scan.png[A screenshot of the action icon where you can select Deactivate BlueXP classification. This option is available after you select a working environment from the Canvas page.]
 
@@ -33,11 +33,9 @@ TIP: You can also disable compliance scans for a working environment from the Se
 
 If you no longer want to scan a certain database, you can delete it from the BlueXP classification interface and stop all scans.
 
-. From the _Configuration_ page, click the image:screenshot_gallery_options.gif[More button] button in the row for the database, and then click *Remove DB Server*.
+. From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the database then *Remove DB Server*.
 
 image:screenshot_compliance_remove_db.png[A screenshot of the Remove DB Server button from the Scan Configuration page.]
-
-
 
 == Remove a group of file shares from BlueXP classification
 
@@ -45,7 +43,7 @@ If you no longer want to scan user files from a file shares group, you can delet
 
 .Steps
 
-. From the _Configuration_ page, click the image:screenshot_gallery_options.gif[More button] button in the row for the File Shares Group, and then click *Remove File Shares Group*.
+. From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the File Shares Group then *Remove File Shares Group*.
 +
 image:screenshot_compliance_remove_fileshare_group.png[A screenshot of the Remove File Share Group button from the Scan Configuration page.]
 

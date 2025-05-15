@@ -17,7 +17,7 @@ If you no longer want to scan user files from a certain OneDrive account, from a
 
 .Steps
 
-. From the _Configuration_ page, click the image:screenshot_gallery_options.gif[More button] button in the row for the OneDrive, SharePoint, or Google Drive account, and then click *Remove OneDrive Account*, *Remove SharePoint Account*, or *Remove Google Drive account*.
+. From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the OneDrive, SharePoint, or Google Drive account, then select *Remove OneDrive Account*, *Remove SharePoint Account*, or *Remove Google Drive account*.
 +
 image:screenshot_compliance_remove_onedrive.png[A screenshot of the Remove OneDrive button from the Scan Configuration page.]
 
