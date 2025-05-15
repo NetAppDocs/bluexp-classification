@@ -49,31 +49,31 @@ Once you've created the search, you can view it in the **Saved searches** tab.
 
 == Edit saved searches
 
-You can modify the criteria for a custom-created saved search to change the query (the items you defined using Filters) to add or remove certain parameters.
+You can modify the query criteria for a saved search (that is, the defined filters) to add or remove certain parameters.
 
 You cannot modify default saved searches. 
 
 .Steps
 
-. From the Saved searches page, select *Edit Saved Search* for the search that you want to change.
+. From the Saved searches page, select *Edit Search* for the search that you want to change.
 +
 image:screenshot-edit-search.png[A screenshot showing Edit Saved Search.]
 
-. Make the changes to the name and description fields. To only changes these fields, select *Save*.
+. Make the changes to the name and description fields. To only change the name and description fields, select *Save search*.
 +
-To change the filters for the saved query, select *Edit Query*.
+To change the filters for the saved search, select *Edit query*.
 +
 image:screenshot-edit-search-dialog.png[A screenshot of the Edit Query button on the Edit Saved Search page.]
 
-. In the Investigation page that defines that query, edit the query by adding, removing, or customizing the filters, then select *Save Changes* .
+. In the Investigation page, edit the query. You can add, remove, or modify filters. To complete your changes, select *Save query for this search*.
 +
 image:screenshot-edit-query.png[A screenshot showing how to edit the query by changing filter settings.]
 
 == Delete saved searches
 
-You can delete any custom saved search if you no longer need it. You can't delete default saved searches
+You can delete any custom saved search if you no longer need it. You can't delete default saved searches.
 
-To delete a saved search, select the image:button-gallery-options.gif[More button] button for a specific search, select *Delete saved search*, then select *Delete search* again in the confirmation dialog.
+To delete a saved search, select the image:button-gallery-options.gif[More button] button for a specific search, select *Delete search*, then select *Delete search* again in the confirmation dialog.
 
 == Default searches
 
