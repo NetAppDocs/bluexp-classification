@@ -105,7 +105,7 @@ image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Da
 
 BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
-//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
+//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:button-gallery-options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
 
 == Create the Data Mapping Overview Report
 
@@ -134,7 +134,7 @@ For single working environments: Lists the files that are using the most capacit
 . Select *Full Data Mapping Overview Report*.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
-. To customize the company name that appears on the first page of the report, from the top right of the BlueXP classification page, select image:screenshot_gallery_options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
+. To customize the company name that appears on the first page of the report, from the top right of the BlueXP classification page, select image:button-gallery-options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
 
 
 .Result
@@ -223,4 +223,4 @@ See link:task-controlling-private-data.html[Viewing files by categories] for mor
 
 BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
 
-//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
+//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:button-gallery-options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
