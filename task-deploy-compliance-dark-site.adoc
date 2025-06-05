@@ -162,7 +162,7 @@ Follow these steps when installing BlueXP classification software on a single on
 
 Note that all installation activities are logged when installing BlueXP classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html[See more details here].
 
-.What you'll need
+.Before you begin
 
 * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
 * Verify that you have installed the two prerequisite software packages (Docker Engine or Podman, and Python 3).
