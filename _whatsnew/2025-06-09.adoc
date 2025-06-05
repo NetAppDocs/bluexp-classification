@@ -1,6 +1,6 @@
 === Version 1.44
 
-This BlueXP classification release includes general bug fixes and performance enhancements: 
+This BlueXP classification release includes:
 
 .Performance and security improvements 
 
