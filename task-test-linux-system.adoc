@@ -135,7 +135,7 @@ Follow these steps to run the BlueXP classification Prerequisites script.
 
 https://youtu.be/5ONowfPWkFs?si=QLGUw8mqPrz9qs4B[Watch this video^] to see how to run the Prerequisites script and interpret the results.
 
-.What you'll need
+.Before you begin
 
 * Verify that your Linux system meets the <<Verify host requirements,host requirements>>.
 * Verify that the system has the two prerequisite software packages installed (Docker Engine or Podman, and Python 3).

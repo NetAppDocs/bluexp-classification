@@ -6,7 +6,7 @@ summary: BlueXP classification is a data governance service for BlueXP that scan
 ---
 
 = Learn about BlueXP classification
-:hardbreaks:
+:no-hardbreaks:
 :nofooter:
 :icons: font
 :linkattrs:
@@ -16,8 +16,7 @@ summary: BlueXP classification is a data governance service for BlueXP that scan
 BlueXP classification (Cloud Data Sense) is a data governance service for BlueXP that scans your corporate on-premises and cloud data sources to map and classify data, and to identify private information. This can help reduce your security and compliance risk, decrease storage costs, and assist with your data migration projects.
 
 [IMPORTANT]
-Beginning with version 1.31, BlueXP classification is available as a core capability with BlueXP. There's no additional charge. No Classification license or subscription is required. 
-+
+Beginning with version 1.31, BlueXP classification is available as a core capability with BlueXP. There's no additional charge. No Classification license or subscription is required. +
 If you've been using legacy version 1.30 or earlier, that version is available until your subscription expires. link:reference-free-paid.html[See a list of deprecated features].
 
 == Features
