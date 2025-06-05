@@ -201,7 +201,7 @@ For example, you may want to see where compressed installation files in .gz form
 
 After updating the custom categories, BlueXP classification will restart scanning all data sources. After the scan has completed, the new results will appear in the BlueXP classification Compliance Dashboard under the "Categories" section, and in the Investigation page in the "Category" filter. link:task-controlling-private-data.html#view-files-by-categories[See how to view files by categories].
 
-.What you'll need
+.Before you begin
 
 You'll need to create a minimum of 25 training files that contain samples of the categories of data that you want BlueXP classification to recognize. The following file types are supported:
 
