@@ -1,0 +1,7 @@
+=== Version 1.44
+
+This BlueXP classification release includes general bug fixes and performance enhancements: 
+
+.Performance and security improvements 
+
+The load times for the Governance dashboard has been improved. Other enhancements have been made to improve the performance and security of BlueXP classification. 
