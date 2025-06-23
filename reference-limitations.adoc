@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-limitations.html
 keywords: limitations, data sense, classification, bluexp, scan shares
-summary: Known limitations identify functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+summary: Known limitations identify functions that are not supported by this release of the product or that do not interoperate correctly with it. Review these limitations carefully.
 ---
 
 = Known limitations in BlueXP classification
@@ -13,19 +13,20 @@ summary: Known limitations identify functions that are not supported by this rel
 :imagesdir: ./media/
 
 [.lead]
-Known limitations identify functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+Known limitations identify functions that are not supported by this release of the product or that do not interoperate correctly with it. Review these limitations carefully.
 
 
-== BlueXP classification release removed options
+== BlueXP classification disabled options
 
 The December 2023 (version 1.26.6) release removed the following options: 
 
 * The option to activate audit log collection has been disabled. 
-* During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. 
+* During the Directories investigation, the option to calculate the number of personally identifiable information  (PII) data by Directories is not available. 
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled. 
 
-== BlueXP classification scanning limitations
+== BlueXP classification scanning
 
+The following limitations occur with BlueXP classifications scans. 
 
 === BlueXP classification scans only one share under a volume
 
@@ -55,3 +56,7 @@ You'll need to add all the shares individually, for example:
  /D
  
 . Perform these steps for each volume in the working environment that has multiple shares.
+
+=== Last accessed timestamp  
+
+BlueXP classification scans update the **Last accessed** metadata on files and directories when scanned. When viewing individual files or directories in the BlueXP classification Investigation tab, the **Last accessed** time may display either the last time a user access the file/directory, or when the last scan was completed. 
