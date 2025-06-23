@@ -60,3 +60,5 @@ You'll need to add all the shares individually, for example:
 === Last accessed timestamp  
 
 BlueXP classification scans update the **Last accessed** metadata on files and directories when scanned. When viewing individual files or directories in the BlueXP classification Investigation tab, the **Last accessed** time may display either the last time a user access the file/directory, or when the last scan was completed. 
+
+// 2025 june 23, DSENSE-1337
