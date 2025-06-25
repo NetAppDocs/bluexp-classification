@@ -13,8 +13,7 @@ summary: Known limitations identify functions that are not supported by this rel
 :imagesdir: ./media/
 
 [.lead]
-Known limitations identify functions that are not supported by this release of the product or that do not interoperate correctly with it. Review these limitations carefully.
-
+Known limitations identify functions that are not supported or do not interoperate correctly in this release. Review these limitations carefully.
 
 == BlueXP classification disabled options
 
@@ -37,7 +36,7 @@ If you have multiple file shares under a single volume, BlueXP classification sc
 * /C
 * /D/E
 
-Then the data in /A will be scanned. The data in /C and /D will not be scanned.
+In this configuration, only the data in /A is scanned. The data in /C and /D is not scanned.
 
 .Workaround
 
@@ -46,11 +45,11 @@ There is a workaround to make sure you are scanning data from all the shares in 
 . In the working environment, add the volume to be scanned.
 . After BlueXP classification has completed scanning the volume, go to the _Data Investigation_ page and create a filter to see which share is being scanned:
 +
-You'll filter the data by "Working Environment Name" and "Directory Type = Share" to see which share is being scanned.
+Filter the data by "Working Environment Name" and "Directory Type = Share" to see which share is being scanned.
 . Get the complete list of shares that exist in the volume so you can see which shares are not being scanned.
 . link:task-scanning-file-shares.html[Add the remaining shares to a share group].
 +
-You'll need to add all the shares individually, for example:
+Add all the shares individually, for example:
 +
  /C
  /D
@@ -59,6 +58,6 @@ You'll need to add all the shares individually, for example:
 
 === Last accessed timestamp  
 
-BlueXP classification scans update the **Last accessed** metadata on files and directories when scanned. When viewing individual files or directories in the BlueXP classification Investigation tab, the **Last accessed** time may display either the last time a user access the file/directory, or when the last scan was completed. 
+When BlueXP classification conducts a scan of a directory, the scan impacts the directory's **Last accessed** field. When you view the **Last accessed** field, that metadata reflects either the date and time of the scan or the last time a user accessed the directory. 
 
 // 2025 june 23, DSENSE-1337
