@@ -28,7 +28,7 @@ The personal data, or _personally identifiable information_ (PII), found in file
 
 The languages in which these items can be recognized are identified in the table.
 
-//Note that you can add to the list of personal data that is found in your files. If you are scanning a database server, the _Data Fusion_ feature enables you to choose additional identifiers that BlueXP classification will look for in its' scans by selecting columns in a database table. You can also add custom keywords from a text file, or custom patterns using a regular expression. See link:task-managing-data-fusion.html[Adding personal data identifiers to your BlueXP classification scans^] for details.
+//Note that you can add to the list of personal data that is found in your files. If you are scanning a database server, the _Data Fusion_ feature enables you to choose additional identifiers that BlueXP classification will look for in its scans by selecting columns in a database table. You can also add custom keywords from a text file, or custom patterns using a regular expression. See link:task-managing-data-fusion.html[Adding personal data identifiers to your BlueXP classification scans^] for details.
 
 [cols="13,37,10,8,8,8,8,8",width=90%,options="header"]
 |===
@@ -41,7 +41,7 @@ The languages in which these items can be recognized are identified in the table
 | French
 | Japanese
 
-.6+| General | Credit card number | No | ✓ | ✓ | ✓ |  | ✓
+.6+| General | Credit card number | Yes | ✓ | ✓ | ✓ |  | ✓
 | Data Subjects | No | ✓ | ✓ | ✓ |  | 
 | Email Address | No | ✓ | ✓ | ✓ |  | ✓
 | IBAN Number (International Bank Account Number) | No | ✓ | ✓ | ✓ |  | ✓
@@ -203,7 +203,7 @@ Most of these categories can be recognized in English, German, and Spanish.
 
 |===
 
-The following Metadata is also categorized, and are identified in the same supported languages:
+The following metadata is also categorized and identified in the same supported languages:
 
 * Application Data
 * Archive Files
@@ -233,9 +233,7 @@ Business Application Data
 
 == Types of files
 
-BlueXP classification scans all files for category and metadata insights and displays all file types in the file types section of the dashboard.
-
-But when BlueXP classification detects Personal Identifiable Information (PII), or when it performs a DSAR search, only the following file formats are supported:
+BlueXP classification scans all files for category and metadata insights and displays all file types in the file types section of the dashboard. When BlueXP classification detects Personal Identifiable Information (PII) or when it performs a DSAR search, only the following file formats are supported:
 
 `+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
 
