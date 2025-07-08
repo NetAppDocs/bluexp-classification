@@ -121,13 +121,13 @@ Note the following about the default instance:
 
 * Only one BlueXP classification instance is deployed per Connector.
 
-You can also deploy BlueXP classification on a Linux host on your premises or on a host in your preferred cloud provider. The software functions exactly the same way regardless of which installation method you choose. Upgrades of BlueXP classification software is automated as long as the instance has internet access.
+You can also deploy BlueXP classification on a Linux host on your premises or on a host in your preferred cloud provider. The software functions exactly the same way regardless of which installation method you choose. Upgrades of BlueXP classification software are automated as long as the instance has internet access.
 
 TIP: The instance should remain running at all times because BlueXP classification continuously scans the data.
 
 *Deploy on different instance types*
 
-You can deploy BlueXP classification on a system with fewer CPUs and less RAM.
+Review the following specifications for instance types:
 
 [cols="18,31,51",width=95%,options="header"]
 |===
@@ -161,13 +161,13 @@ image:diagram_cloud_compliance_scan.png["A diagram that shows a BlueXP instance 
 
 After the initial scan, BlueXP classification continuously scans your data in a round-robin fashion to detect incremental changes. This is why it's important to keep the instance running.
 
-You can enable and disable scans at the volume level or at the database schema level.
+You can enable and disable scans at the volume level or the database schema level.
 
 == What's the difference between Mapping and Classification scans
 
 You can conduct two types of scans in BlueXP classification:
 
-- **Mapping-only scans** provide only a high-level overview of your data and are performed on selected data sources. Mapping-only scans take less time than map and classify scans because the do not access files to see the data inside. You might want to do this initially to identify areas of research and then perform a Map & Classify scan on those areas.
+- **Mapping-only scans** provide only a high-level overview of your data and are performed on selected data sources. Mapping-only scans take less time than map and classify scans because they do not access files to see the data inside. You might want to do this initially to identify areas of research and then perform a Map & Classify scan on those areas.
 - **Map & Classify scans** provide deep-level scanning of your data. 
 
 For details about the differences between Mapping and Classification scans, see link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].
