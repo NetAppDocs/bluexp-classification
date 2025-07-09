@@ -44,7 +44,8 @@ The file shares group is a container for the file shares you want to scan. You m
 
 * You can add both NFS and CIFS shares in the same group. All CIFS file shares in a group need to be using the same Active Directory credentials. If you plan to add CIFS shares that use different credentials, you must create a separate group for that share. 
 
-* If you're adding CIFS shares with Kerberos authentication, you must have first configured something.
+// complete this
+//* If you're adding CIFS shares with Kerberos authentication, 
 
 .Steps
 
@@ -52,7 +53,9 @@ The file shares group is a container for the file shares you want to scan. You m
 
 . From the Configuration page, select *Add Working Environment* > *Add File Shares Group*.
 
-. In the Add Files Shares Group dialog, enter the name for the group of shares then select *Continue* to complete creating the file share group. 
+. In the Add Files Shares Group dialog, enter the name for the group of shares then select *Continue*.
+
+// these workflows combine? 
 
 == Add file shares to a group
 
