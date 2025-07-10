@@ -6,7 +6,7 @@ This BlueXP classification release includes code changes that optimize resource 
 
 The process to add file shares to a group now differentiates CIFS protocol support based on authentication type (Kerberos or NTLM). The workload to add file shares has also been streamlined. 
 
-For more information, see xref:task-scanning-file-share.html[Scan file shares].
+For more information, see xref:task-scanning-file-shares.html[Scan file shares].
 
 .Enhanced file owner information
 
