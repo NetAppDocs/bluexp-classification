@@ -34,18 +34,19 @@ Review the following prerequisites to make sure that you have a supported config
 * For CIFS (SMB) shares, ensure that you have Active Directory credentials that provide read access to the shares. Admin credentials are preferred in case BlueXP classification needs to scan any data that requires elevated permissions.
 include::_include/cifs-permissions.adoc[]
 
-* Shares you want to add need to use the format `<host_name>:/<share_path>`. You can enter the shares individually, or you can supply a line-separated list of the file shares you want to scan.
+* All CIFS file shares in a group must use the same Active Directory credentials. 
 
-== Create the group for the file shares
-
-The file shares group is a container for the file shares you want to scan. You must create a file shares group before you can add file shares to it. The group name is used as the working environment name for those file shares.
-
-.Before you begin 
-
-* You can add both NFS and CIFS shares in the same group. All CIFS file shares in a group need to be using the same Active Directory credentials. If you plan to add CIFS shares that use different credentials, you must create a separate group for that share. 
+* You can mix NFS and CIFS (using either Kerberos or NTLM) shares. You must add the shares to the group separately. That is, you must complete the process twice—once per protocol. 
+** You cannot create a file shares group that mixes CIFS authentication types (Kerberos and NTLM).
 
 // complete this
 //* If you're adding CIFS shares with Kerberos authentication, 
+
+== Create a file shares group
+
+When you add file shares to the group, you must use the format `<host_name>:/<share_path>`.
++
+You can add file shares individually or you can enter a line-separated list of the file shares you want to scan. You can add up to 100 shares at a time.
 
 .Steps
 
@@ -53,56 +54,33 @@ The file shares group is a container for the file shares you want to scan. You m
 
 . From the Configuration page, select *Add Working Environment* > *Add File Shares Group*.
 
-. In the Add Files Shares Group dialog, enter the name for the group of shares then select *Continue*.
-
-// these workflows combine? 
-
-== Add file shares to a group
-
-You add file shares to the file shares group so that the files in those shares will be scanned by BlueXP classification. You add the shares in the format `<host_name>:/<share_path>`.
-
-You can add file shares individually or you can enter a line-separated list of the file shares you want to scan. You can add up to 100 shares at a time.
-
-* You can mix NFS and CIFS (using either Kerberos or NTLM) shares. You must add the shares to the group separately. That is, you must complete the process twice, once per protocol. 
-* You cannot create a share with both CIFS shares using Kerberos and CIFS share using NTLM. 
-
-.Steps
-
-. From the BlueXP classification menu, select *Configuration*. 
-
-. From the Working Environments tile on the Configuration page, select the *Configuration* button for the File Shares Group.
-+
-image:screen-cl-config-file-shares.png[A screenshot showing the Configuration button for the File Shares Group.]
-
-. If this is the first time adding file shares for this File Shares Group, select *Add your first Shares*.
-+
-image:screen-cl-config-file-shares-addshares.png[A screenshot showing the Add your first Shares button to add initial shares to the group.]
-
-+
-If you are adding file shares to an existing group, select the group, select *Configuration* and select *Add Shares*.
+. In the Add File Shares Group dialog, enter the name for the group of shares then select *Continue*.
 
 . Select the protocol for the file shares you are adding.
 +
 image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, showing options to select protocols and shares]
 
-..If you're adding CIFS shares with NTLM authentication, you're prompted to enter Active Directory to access the CIFS volumes. Although read-only credentials are supported, it's recommended you provide full access with administrator credentials. Select **Save**.
+..If you're adding CIFS shares with NTLM authentication, enter the Active Directory credentials to access the CIFS volumes. Although read-only credentials are supported, it's recommended you provide full access with administrator credentials. Select **Save**.
 
 . Add the file shares that you want to scan (one file share per line). Then select **Continue**. 
 
 . A confirmation dialog displays the number of shares that were added.
 +
-If the dialog lists any shares that could not be added, capture this information so that you can resolve the issue. In some cases you can re-add the share with a corrected host name or share name.
+If the dialog lists any shares that could not be added, capture this information so that you can resolve the issue. If the issue pertains to a naming convention, you can re-add the share with a corrected name.
 
 . Do one of the following to enable or disable scans: 
 +
 * To enable mapping-only scans on file shares, select *Map*.
 * To enable full scans on file shares, select *Map & Classify*.
 * To disable scanning on file shares, select *Off*.
-
-// rewrite
-. If you don't care if the last access time is reset, turn the *Scan when missing "write attributes" permissions* switch ON and all files are scanned regardless of the permissions. 
 +
-The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't scan the files because BlueXP classification can't revert the "last access time" to the original timestamp. link:reference-collected-metadata.html#last-access-time-timestamp[Learn more^].
+. The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because BlueXP classification can't revert the "last access time" to the original timestamp. 
++
+If you switch *Scan when missing "write attributes" permissions* to *On*, the scan resets the last accessed time and scans all files regardless of permissions. 
++
+To learn more about the last accessed time stamp, see link:link:reference-collected-metadata.html#last-access-time-timestamp[Metadata collected from data sources in BlueXP classification].
+
+You can xref:#track-the-scanning-progress[Track the scanning progress] and view the results of the scan in the **Dashboard**.
 
 .Result
 
@@ -110,26 +88,49 @@ BlueXP classification starts scanning the files in the file shares you added, an
 
 //edit workflow
 
+== Edit a file shares group
+
+After you create a file shares group, you can edit the CIFS protocol or add and remove file shares. 
+
+.Edit the CIFS protocol configuration 
+. From the BlueXP classification menu, select *Configuration*. 
+. From the Configuration page, select the file shares group you want to modify. 
+. Select **Edit CIFS Credentials**. 
++
+image:screenshot-edit-cifs-credential.png[Screenshot of the Edit CIFS credentials menu.]
+. Choose the authentication method: **NTLM** or **Kerberos**. 
+. Enter the Active Directory **Username** and **Password**. 
+. Select **Save** to complete the process.
+
+.Add file shares to compliance scans
+. From the BlueXP classification menu, select *Configuration*. 
+. From the Configuration page, select the file shares group you want to modify. 
+. Select **+ Add shares**. 
+. Select the protocol for the file shares you are adding.
++
+image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, showing options to select protocols and shares]
++
+If you're adding file shares to a protocol you've already configured, no changes are required. 
++
+If you're adding file shares with a second protocol, ensure you've properly configured the authentication prperly as detailed in the link:#prerequisites[prerequisites].
+. Add the file shares you want to scan (one file share per line) using the format `<host_name>:/<share_path>`.
+. Select **Continue** to complete adding the file shares. 
+
+.Remove a file share from compliance scans
+. From the BlueXP classification menu, select *Configuration*.
+. Select the working environment from which you want to remove file shares.
+. Select *Configuration*. 
+. From the Configuration page, select the Actions image:button-actions-horizontal.png[Actions icon] for the file share you want to remove.
+. From the Actions menu, select *Remove Share*.
+
 == Track the scanning progress
 
 You can track the progress of the initial scan.
 
-. Select **Configuration** menu.
-. Select the **Working Environment configuration**. 
+. Select the **Configuration** menu.
+. Select the **Working Environment Configuration**. 
 +
 The progress of each scan is shown as a progress bar. 
 
 . Hover over the progress bar to see the number of files scanned relative to the total files in the volume.
 
-== Remove a file share from compliance scans
-
-If you no longer need to scan certain file shares, you can remove individual file shares from having their files scanned at any time. 
-
-.Steps
-. From the BlueXP classification menu, select *Configuration*.
-. Select the working environment. 
-. Select *Configuration*. 
-
-. From the Configuration page, select the Actions image:button-actions-horizontal.png[Actions icon] for the file share you want to remove.
-
-. From the Actions menu, select *Remove Share*.
