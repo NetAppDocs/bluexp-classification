@@ -37,7 +37,7 @@ image:screenshot_compliance_investigation_filtered.png[A screenshot of the filte
 
 . To sort the results in numerical or alphabetical order, select the control at the top of each column.
 
-. To refine the results even more, select one of the many filters in the left Filter pane. 
+. To refine the results even more, select one of the filters in the Filter pane. 
 
 [NOTE]
 You can only view the first 10,000 results—or 500 pages—for a scan on the Data Investigation page. 
@@ -188,7 +188,7 @@ Use the following filter to view files that are duplicated in your storage.
 
 In addition to showing you the working environment and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html[create saved searches] because you can see all the information that you can use to filter your data.
 
-Not all information is available for all data sources - just what is appropriate for that data source. For example, volume name and permissions are not relevant for database files.
+The availability of information depends on the data source. For example, volume name and permissions are not shared for database files.
 
 .Steps
 
@@ -236,11 +236,11 @@ TIP: You can expand one level of the group to see the users who are part of the 
 
 == Check for duplicate files in your storage systems
 
-You can view if duplicate files are being stored in your storage systems. This is useful if you want to identify areas where you can save storage space. It can also be helpful to make sure certain files that have specific permissions or sensitive information are not unnecessarily duplicated in your storage systems.
+You can check whether duplicate files are being stored in your storage systems. This is useful if you want to identify areas where you can save storage space. It's also good to ensure certain files that have specific permissions or sensitive information are not unnecessarily duplicated in your storage systems.
 
 All of your files (not including databases) that are 1 MB or larger, or that contain personal or sensitive personal information, are compared to see if there are duplicates. 
 
-BlueXP classification uses hashing technology to determine duplicate files. If any file has the same hash code as another file, we can be 100% sure that the files are exact duplicates -- even if the file names are different.
+BlueXP classification uses hashing technology to determine duplicate files. If any file has the same hash code as another file, you can be 100% sure that the files are exact duplicates—even if the file names are different.
 
 .Steps
 
@@ -276,7 +276,7 @@ TIP: You can use the "file hash" value provided in this page and enter it direct
 
 The Data Investigation Report is a download of the filtered contents of the Data Investigation page. 
 
-The report is available as a .CSV or .JSON file that you can save to the local machine. 
+The report is available as a CSV or JSON file you can save to your local machine. 
 
 
 //* As a .JSON file that you export to an NFS Share. 
@@ -311,6 +311,7 @@ The *Unstructured Files Data Report* includes the following information about yo
 * Last modified
 * Last accessed
 * File owner
+** File owner data encompasses account name, SAM account name, and e-mail address when Active Directory is configured. 
 * Category
 * Personal information
 * Sensitive personal information
@@ -318,7 +319,7 @@ The *Unstructured Files Data Report* includes the following information about yo
 * Scan Analysis Error
 * Deletion detection date
 +
-A deletion detection date identifies the date that the file was deleted or moved. This enables you to identify when sensitive files have been moved. Deleted files aren't part of the file number count that appears in the dashboard or on the Investigation page. The files only appear in the CSV reports.
+The deletion detection date identifies the date that the file was deleted or moved. This enables you to identify when sensitive files have been moved. Deleted files don't contribute to the file number count that appears in the dashboard or on the Investigation page. The files only appear in the CSV reports.
 
 The *Unstructured Directories Data Report* includes the following information about your folders and file shares:
 
