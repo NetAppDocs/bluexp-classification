@@ -39,8 +39,8 @@ include::_include/cifs-permissions.adoc[]
 * You can mix NFS and CIFS (using either Kerberos or NTLM) shares. You must add the shares to the group separately. That is, you must complete the process twice—once per protocol. 
 ** You cannot create a file shares group that mixes CIFS authentication types (Kerberos and NTLM).
 
-// complete this
-//* If you're adding CIFS shares with Kerberos authentication, 
+* If you're using CIFS with Kerberos authentication, ensure the IP address provided is accessible to the BlueXP classification service. The files shares can't be added if the IP address is unreachable.
+
 
 == Create a file shares group
 
@@ -68,23 +68,23 @@ image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, s
 +
 If the dialog lists any shares that could not be added, capture this information so that you can resolve the issue. If the issue pertains to a naming convention, you can re-add the share with a corrected name.
 
-. Do one of the following to enable or disable scans: 
+. Configure scanning on the volume: 
 +
 * To enable mapping-only scans on file shares, select *Map*.
 * To enable full scans on file shares, select *Map & Classify*.
 * To disable scanning on file shares, select *Off*.
 +
-. The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because BlueXP classification can't revert the "last access time" to the original timestamp. 
-+
-If you switch *Scan when missing "write attributes" permissions* to *On*, the scan resets the last accessed time and scans all files regardless of permissions. 
-+
+[NOTE]
+The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if BlueXP classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because BlueXP classification can't revert the "last access time" to the original timestamp. +
+If you switch *Scan when missing "write attributes" permissions* to *On*, the scan resets the last accessed time and scans all files regardless of permissions. +
 To learn more about the last accessed time stamp, see link:link:reference-collected-metadata.html#last-access-time-timestamp[Metadata collected from data sources in BlueXP classification].
-
-You can xref:#track-the-scanning-progress[Track the scanning progress] and view the results of the scan in the **Dashboard**.
 
 .Result
 
-BlueXP classification starts scanning the files in the file shares you added, and the results are displayed in the Dashboard and in other locations. 
+BlueXP classification starts scanning the files in the file shares you added. You can xref:#track-the-scanning-progress[Track the scanning progress] and view the results of the scan in the **Dashboard**.
+
+[NOTE]
+If the scan doesn't complete successfully for a CIFS configuration with Kerberos authentication, check the **Configuration** tab for errors. 
 
 == Edit a file shares group
 
