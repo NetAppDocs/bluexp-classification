@@ -86,8 +86,6 @@ You can xref:#track-the-scanning-progress[Track the scanning progress] and view 
 
 BlueXP classification starts scanning the files in the file shares you added, and the results are displayed in the Dashboard and in other locations. 
 
-//edit workflow
-
 == Edit a file shares group
 
 After you create a file shares group, you can edit the CIFS protocol or add and remove file shares. 
