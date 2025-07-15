@@ -61,7 +61,7 @@ Note that you can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-qui
 As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors[multiple Connectors].
 
 [TIP]
-include::_include/connector-limit.adoc
+include::_include/connector-limit.adoc[]
 
 === Government region support
 

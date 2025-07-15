@@ -50,7 +50,7 @@ The table below shows some of the differences:
 | Ability to see metadata from files* | No | Yes
 |===
 
-{asterisk} include::_include/connector-limit.adoc
+{asterisk} include::_include/connector-limit.adoc[]
 
 *The following metadata is extracted from files during mapping scans:  
 
