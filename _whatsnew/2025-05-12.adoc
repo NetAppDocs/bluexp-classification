@@ -6,23 +6,23 @@ This BlueXP classification release includes:
 
 BlueXP classification supports the ability to prioritize Map & Classify scans in addition to Mapping-only scans, enabling you to select which scans are completed first. Prioritization of Map & Classify scans is supported during and before the scans begin. If you choose to prioritize a scan while it's in progress, both the mapping and classification scans are prioritized. 
 
-For more information, see link:task-managing-repo-scanning.html#prioritize-scans[Prioritize scans].
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans[Prioritize scans].
 
 .Support for Canadian personally identifiable information (PII) data categories
 
 BlueXP classification scans identify Canadian PII data categories. These categories include banking information, passport numbers, social insurance numbers, driver's license numbers and health card numbers for all Canadian provinces and territories.
 
-For more information, see xref:reference-private-data-categories.adoc#types-of-personal-data[Personal data categories].
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data[Personal data categories].
 
 .Custom classification (preview)
 
 BlueXP classification supports custom classifications for Map & Classify scans. With custom classifications, you can tailor BlueXP scans to capture data specific to your organization using regular expressions. This feature is currently in preview. 
 
-For more information, see xref:task-custom-classification.adoc[Add custom classifications].
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-custom-classification.html[Add custom classifications].
 
 .Saved searches tab
 
-The **Policies** tab has been renamed xref:task-using-policies.html[**Saved searches**]. The functionality is the same. 
+The **Policies** tab has been renamed link:https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html[**Saved searches**]. The functionality is unchanged. 
 
 .Send scan events to BlueXP timeline
 
