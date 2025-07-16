@@ -1,5 +1,2 @@
-BlueXP classification does not impose a limit on the amount of data it can scan, however the Connector is limited to scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation[install another Connector^] then link:task-deploy-overview.html[deploy another Classification instance^]. +
-The BlueXP UI displays data from only one connector. For tips on viewing data from multiple Connectors, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors[Work with multiple Connectors^].
-
-// also in concept-cloud-compliance.adoc
-
+BlueXP classification does not impose a limit on the amount of data it can scan. Each Connector supports scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation[install another Connector^] then link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html[deploy another classification instance]. +
+The BlueXP UI displays data from a single connector. For tips on viewing data from multiple Connectors, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors[Work with multiple Connectors^].
