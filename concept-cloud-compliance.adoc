@@ -163,6 +163,9 @@ After the initial scan, BlueXP classification continuously scans your data in a 
 
 You can enable and disable scans at the volume level or the database schema level.
 
+[NOTE]
+include::_include/connector-limit.adoc[]
+
 == What's the difference between Mapping and Classification scans
 
 You can conduct two types of scans in BlueXP classification:

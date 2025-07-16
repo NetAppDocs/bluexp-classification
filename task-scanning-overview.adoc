@@ -38,7 +38,7 @@ The table below shows some of the differences:
 
 | Scan speed | Slow | Fast
 | Pricing | Free | Free
-| Capacity | Limited to 500 TB | Limited to 500 TB
+| Capacity | Limited to 500 TiB* | Limited to 500 TiB*
 | List of file types and used capacity | Yes | Yes
 | Number of files and used capacity | Yes | Yes
 | Age and size of files | Yes | Yes
@@ -49,6 +49,8 @@ The table below shows some of the differences:
 | Ability to run other reports | Yes | No
 | Ability to see metadata from files* | No | Yes
 |===
+
+{asterisk} include::_include/connector-limit.adoc[]
 
 *The following metadata is extracted from files during mapping scans:  
 
