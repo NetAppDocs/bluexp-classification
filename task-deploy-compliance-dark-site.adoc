@@ -190,9 +190,9 @@ tar -xzf cc_onprem_installer.tar.gz
 
 . Launch BlueXP and select *Governance > Classification*.
 
-. Click *Activate Data Sense*.
+. Select *Deploy Classification On-Premises or Cloud*.
 +
-image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate BlueXP classification.]
+image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate BlueXP classification.]
 
 . Click *Deploy* to start the on-prem installation.
 +
