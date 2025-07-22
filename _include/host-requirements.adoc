@@ -60,7 +60,7 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 
 *** Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, and 9.5
 
-** Advanced Vector Extensions (AVX) must be enabled on the host system.
+** Advanced Vector Extensions (AVX2) must be enabled on the host system.
 
 * *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
 
@@ -82,3 +82,4 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 * *NTP considerations*: NetApp recommends configuring the BlueXP classification system to use a Network Time Protocol (NTP) service. The time must be synchronized between the BlueXP classification system and the BlueXP Connector system.
 
 //2024/02/21, BLUEXPDOC-262 & BLUEXPDOC-264
+// 2025 June 12, CPE-9494

@@ -30,7 +30,7 @@ You can add your databases schemas to BlueXP classification to be scanned link:t
 | Amazon RDS
 
 .9+| Actions 
-| Create policy | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Create saved search | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Tag | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Assign to | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Export data | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
@@ -41,7 +41,7 @@ You can add your databases schemas to BlueXP classification to be scanned link:t
 | Label | x | x | x | x | x | x | x
 
 .25+| Filters 
-| Policies | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Saved searches | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Scan analysis status | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Working environment type | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Working environment | ✓ | ✓ | ✓ | ✓ | ✓ |  | 

@@ -22,6 +22,8 @@ When you set up certain data sources (listed below), you need to enter Active Di
 This integration provides additional information in the following locations in BlueXP classification:
 
 * You can use the "File Owner" link:task-investigate-data.html[filter] and see results in the file's metadata in the Investigation pane. Instead of the file owner containing the SID (Security IDentifier), it is populated with the actual user name.
++
+You can also view more details about the file owner: account name, email address, and SAM account name, or view items owned by that user.
 * You can see link:task-investigate-data.html[full file permissions] for each file and directory when you click the "View all Permissions" button.
 * In the link:task-controlling-governance-data.html[Governance dashboard], the Open Permissions panel will show a greater level of detail about your data.
 
@@ -100,4 +102,4 @@ image:screenshot_compliance_active_directory_added.png[A screenshot showing the 
 
 If you need to modify any values in your Active Directory integration, click the *Edit* button and make the changes.
 
-You can also delete the integration if you no longer need it by clicking the image:screenshot_gallery_options.gif[More button] button and then *Remove Active Directory*.
+You can also delete the integration selecting the image:button-gallery-options.gif[More button] button then *Remove Active Directory*.

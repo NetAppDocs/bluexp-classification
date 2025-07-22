@@ -15,9 +15,10 @@ summary: BlueXP classification provides many ways for you to add a custom list o
 [.lead]
 BlueXP classification provides many ways for you to add a custom list of "personal data" that BlueXP classification will identify in future scans, giving you the full picture about where potentially sensitive data resides in _all_ your organizations' files.
 
-====
-*NOTE*    This information is relevant only for BlueXP classification legacy versions 1.30 and earlier. 
-====
+[IMPORTANT]
+To create a custom classification in version 1.43 and later, see xref:task-custom-classification.adoc[Create a custom classification].
+
+include::_include/legacy-version-130.adoc[]
 
 * You can add unique identifiers based on specific columns in databases you are scanning.
 * You can add custom keywords from a text file -- these words are identified within your data.
@@ -30,7 +31,7 @@ NOTE: The capabilities described in this section are available only if you have 
 
 == Add custom personal data identifiers from your databases
 
-A feature we call _Data Fusion_ allows you to scan your organizations' data to identify whether unique identifiers from your databases are found in any of your other data sources. You can choose the additional identifiers that BlueXP classification will look for in its' scans by selecting a specific column, or columns, in a database table. For example, the diagram below shows how data fusion is used to scan your volumes, buckets, and databases for occurrences of all your Customer IDs from your Oracle database.
+_Data Fusion_ allows you to scan your organization's data to identify whether unique identifiers from your databases are found in any of your other data sources. You can choose the additional identifiers that BlueXP classification will look for in its scans by selecting a specific column or columns in a database table. For example, the diagram below shows how data fusion is used to scan your volumes, buckets, and databases for occurrences of all your Customer IDs from your Oracle database.
 
 image:diagram_compliance_data_fusion.png[A diagram showing how content from your databases can be used as a source to identify files that contain the same data.]
 
@@ -156,7 +157,8 @@ After adding the regex, BlueXP classification will restart scanning all data sou
 
 If you need assistance in building the regular expression, refer to https://regex101.com/[Regular expressions 101^]. Choose *Python* for the Flavor to see the types of results BlueXP classification will match from the regular expression. The https://pythonium.net/regex[Python Regex Tester page^] is also useful by displaying a graphical representation of your patterns.
 
-NOTE: Currently we do not allow the use of pattern flags when creating a regex - this means you should not use "/".
+[NOTE]
+BlueXP classification doesn't support pattern flags when creating a regex. This means you should not use "/".
 
 .Steps
 
@@ -199,7 +201,7 @@ For example, you may want to see where compressed installation files in .gz form
 
 After updating the custom categories, BlueXP classification will restart scanning all data sources. After the scan has completed, the new results will appear in the BlueXP classification Compliance Dashboard under the "Categories" section, and in the Investigation page in the "Category" filter. link:task-controlling-private-data.html#view-files-by-categories[See how to view files by categories].
 
-.What you'll need
+.Before you begin
 
 You'll need to create a minimum of 25 training files that contain samples of the categories of data that you want BlueXP classification to recognize. The following file types are supported:
 

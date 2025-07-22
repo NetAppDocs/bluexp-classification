@@ -20,7 +20,7 @@ You might benefit from using Mapping-only scans to quickly scan your data to ide
 
 The priority is assigned only to Mapping-only scans, not Map and classify scans. 
 
-The priority is set to 1 by default, and you can change it to any number between 1 and 10. The lower the number, the higher the priority. If you don’t set a priority, the scan is assigned a priority of 5.
+The priority is set to 1 by default, and you can change it to any number between 1 and 10. The lower the number, the higher the priority. If you don't set a priority, the scan is assigned a priority of 5.
 
 To change the priority, do the following: 
 

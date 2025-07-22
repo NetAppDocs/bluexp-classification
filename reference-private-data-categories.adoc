@@ -17,18 +17,18 @@ There are many types of private data that BlueXP classification can identify in 
 
 BlueXP classification identifies two types of personal data: 
 
-* *Personally identifiable information (Pii)*
-* *Sensitive personal information (SPii)*
+* *Personally identifiable information (PII)*
+* *Sensitive personal information (SPII)*
 
 TIP: If you need BlueXP classification to identify other private data types, such as additional national ID numbers or healthcare identifiers, contact your account manager. 
 
 == Types of personal data
 
-The personal data, or _personally identifiable information_ (Pii), found in files can be general personal data or national identifiers. The third column in the table below identifies whether BlueXP classification uses link:task-controlling-private-data.html#view-files-that-contain-personal-data[proximity validation^] to validate its findings for the identifier.
+The personal data, or _personally identifiable information_ (PII), found in files can be general personal data or national identifiers. The third column in the table below identifies whether BlueXP classification uses link:task-controlling-private-data.html#view-files-that-contain-personal-data[proximity validation^] to validate its findings for the identifier.
 
 The languages in which these items can be recognized are identified in the table.
 
-//Note that you can add to the list of personal data that is found in your files. If you are scanning a database server, the _Data Fusion_ feature enables you to choose additional identifiers that BlueXP classification will look for in its' scans by selecting columns in a database table. You can also add custom keywords from a text file, or custom patterns using a regular expression. See link:task-managing-data-fusion.html[Adding personal data identifiers to your BlueXP classification scans^] for details.
+//Note that you can add to the list of personal data that is found in your files. If you are scanning a database server, the _Data Fusion_ feature enables you to choose additional identifiers that BlueXP classification will look for in its scans by selecting columns in a database table. You can also add custom keywords from a text file, or custom patterns using a regular expression. See link:task-managing-data-fusion.html[Adding personal data identifiers to your BlueXP classification scans^] for details.
 
 [cols="13,37,10,8,8,8,8,8",width=90%,options="header"]
 |===
@@ -41,7 +41,7 @@ The languages in which these items can be recognized are identified in the table
 | French
 | Japanese
 
-.6+| General | Credit card number | No | ✓ | ✓ | ✓ |  | ✓
+.6+| General | Credit card number | Yes | ✓ | ✓ | ✓ |  | ✓
 | Data Subjects | No | ✓ | ✓ | ✓ |  | 
 | Email Address | No | ✓ | ✓ | ✓ |  | ✓
 | IBAN Number (International Bank Account Number) | No | ✓ | ✓ | ✓ |  | ✓
@@ -143,7 +143,7 @@ The languages in which these items can be recognized are identified in the table
 
 == Types of sensitive personal data
 
-BlueXP classification can find the following sensitive personal information (SPii) in files. 
+BlueXP classification can find the following sensitive personal information (SPII) in files. 
 
 The items in this category can be recognized only in English at this time.
 
@@ -203,7 +203,7 @@ Most of these categories can be recognized in English, German, and Spanish.
 
 |===
 
-The following Metadata is also categorized, and are identified in the same supported languages:
+The following metadata is also categorized and identified in the same supported languages:
 
 * Application Data
 * Archive Files
@@ -233,9 +233,7 @@ Business Application Data
 
 == Types of files
 
-BlueXP classification scans all files for category and metadata insights and displays all file types in the file types section of the dashboard.
-
-But when BlueXP classification detects Personal Identifiable Information (PII), or when it performs a DSAR search, only the following file formats are supported:
+BlueXP classification scans all files for category and metadata insights and displays all file types in the file types section of the dashboard. When BlueXP classification detects Personal Identifiable Information (PII) or when it performs a DSAR search, only the following file formats are supported:
 
 `+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
 

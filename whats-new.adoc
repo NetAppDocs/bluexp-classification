@@ -15,6 +15,14 @@ summary: Learn what's new in BlueXP classification.
 Learn what's new in BlueXP classification.
 
 // tag::whats-new[]
+== 14 July 2025
+include::_whatsnew/2025-07-14.adoc[]
+
+== 10 June 2025
+include::_whatsnew/2025-06-09.adoc[]
+
+== 12 May 2025
+include::_whatsnew/2025-05-12.adoc[]
 
 == 14 April 2025
 include::_whatsnew/2025-04-14.adoc[]
@@ -48,7 +56,7 @@ include::_whatsnew/2024-09-02.adoc[]
 
 
 
-== 5 August 2024
+== 05 August 2024
 === Version 1.34
 This BlueXP classification release includes the following update. 
 
@@ -58,7 +66,7 @@ BlueXP classification has updated its Linux operating system for Microsoft Azure
 
 For deployment details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-onprem.html#prepare-the-linux-host-system[Install on a Linux host with internet access and prepare the Linux host system].
 
-== 1 July 2024
+== 01 July 2024
 === Version 1.33
 
 .Ubuntu supported
@@ -85,7 +93,7 @@ This release updates which data appears in the Governance, Compliance, and Inves
 
 For details, see link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[What's the difference between mapping and classification scans].
 
-== 5 June 2024
+== 05 June 2024
 === Version 1.32
 
 .New Mapping status column in the Configuration page
@@ -99,12 +107,15 @@ For explanations of the statuses, see https://docs.netapp.com/us-en/bluexp-class
 
 .Classification is available as a core service within BlueXP
 
-BlueXP classification is now available as a core capability within BlueXP at no additional charge for up to 500 TiB of scanned data. No Classification license or paid subscription is required. As we focus BlueXP classification functionality on scanning NetApp storage systems with this new version, some legacy functionality will only be available to customers who had previously paid for a license. The use of those legacy features will expire when the paid contract reaches its end date.
+BlueXP classification is now available as a core capability within BlueXP at no additional charge for up to 500 TiB of scanned data per connector. No Classification license or paid subscription is required. As we focus BlueXP classification functionality on scanning NetApp storage systems with this new version, some legacy functionality will only be available to customers who had previously paid for a license. The use of those legacy features will expire when the paid contract reaches its end date.
+
+[NOTE]
+include::_include/connector-limit.adoc[]
 
 link:reference-free-paid.html[Learn more about the deprecated features].
 //Learn more about https://docs.netapp.com/us-en/bluexp-classification/reference-free-paid.html[A list of deprecated features].
 
-== 1 April 2024
+== 01 April 2024
 === Version 1.30
 
 .Support added for RHEL v8.8 and v9.3 BlueXP classification
@@ -142,7 +153,7 @@ If you deployed BlueXP classification on a system with internet access, the syst
 
 If you deployed BlueXP classification without internet access, you'll need to upgrade manually. For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-deploy-compliance-dark-site.html[Install BlueXP classification on a Linux host with no internet access].
 
-== 4 March 2024
+== 04 March 2024
 === Version 1.29
 .Now you can exclude scanning data that resides in certain data source directories
 
@@ -160,9 +171,9 @@ https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.htm
 == 10 January 2024
 === Version 1.27
 
-.Investigation page results now display the total size in addition to total number of items
+.Investigation page results display the total size in addition to total number of items
 
-The filtered results in the Investigation page now shows the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
+The filtered results in the Investigation page display the total size of the items in addition to the total number of files. This can help when moving files, deleting files, and more.
 
 .Configure additional Group IDs as "Open to Organization"
 
@@ -184,7 +195,7 @@ The release also removed the following options:
 * During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. Refer to link:task-investigate-data.html[Investigate the data stored in your organization].
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled. Refer to link:task-org-private-data.html[Organize your private data].
 
-== 6 November 2023
+== 06 November 2023
 === Version 1.26.3
 
 The following issues have been fixed in this release
@@ -192,7 +203,7 @@ The following issues have been fixed in this release
 * Fixed an inconsistency when presenting the number of files scanned by the system in dashboards.
 * Improved the scanning behavior by handling and reporting on files and directories with special characters in the name and metadata.
 
-== 4 October 2023
+== 04 October 2023
 === Version 1.26
 
 .Support for on-premises installations of BlueXP classification on RHEL version 9
@@ -201,7 +212,7 @@ Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine; whic
 
 At this time we don't supported dark site installations or distributed scanning environments (using a master and remote scanner nodes) when using RHEL 9.x.
 
-== 5 September 2023
+== 05 September 2023
 === Version 1.25
 
 .Small and medium deployments temporarily unavailable
@@ -254,7 +265,7 @@ https://docs.netapp.com/us-en/bluexp-classification/api-classification.html[Lear
 //
 //SharePoint sites include a single document library by default. In the past, BlueXP classification could scan files only from that default library. Now files from additional libraries will also be scanned. 
 
-== 6 June 2023
+== 06 June 2023
 === Version 1.23
 
 .Japanese is now supported when searching for data subject names
@@ -277,7 +288,7 @@ You can enable file access audit logs to be collected on your BlueXP classificat
 
 Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. 
 
-== 3 April 2023
+== 03 April 2023
 
 === Version 1.22
 .New Data Discovery Assessment Report
@@ -292,7 +303,7 @@ When deploying BlueXP classification from a BlueXP Connector in an AWS environme
 
 If you would like to verify that your Linux system meets all prerequisites independently of running the BlueXP classification installation, there is a separate script you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/bluexp-classification/task-test-linux-system.html[See how to check if your Linux host is ready to install BlueXP classification].
 
-== 7 March 2023
+== 07 March 2023
 === Version 1.21
 
 .New functionality to add your own custom categories from the BlueXP classification UI
@@ -336,7 +347,7 @@ https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categ
 * The BlueXP classification installer for sites without internet access (dark sites) now performs a pre-check to make sure your system and networking requirements are in place for a successful installation.
 * Installation audit log files are saved now; they are written to `/ops/netapp/install_logs`.
 
-== 5 February 2023
+== 05 February 2023
 === Version 1.20
 
 .Ability to send Policy-based notification emails to any email address
@@ -363,7 +374,7 @@ The filter "Number of users with access" now supports files stored in SharePoint
 
 The new "Partial Success" status indicates that a BlueXP classification action is finished and some items failed and some items succeeded, for example, when you are moving or deleting 100 files. Additionally, the "Finished" status has been renamed to "Success". In the past, the "Finished" status might list actions that succeeded and that failed. Now the "Success" status means that all actions succeeded on all items. https://docs.netapp.com/us-en/bluexp-classification/task-view-compliance-actions.html[See how to view the Actions Status panel].
 
-== 9 January 2023
+== 09 January 2023
 === Version 1.19
 
 .Ability to view a chart of files that contain sensitive data and that are overly permissive

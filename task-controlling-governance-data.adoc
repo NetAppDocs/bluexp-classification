@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-controlling-governance-data.html
-keywords: savings, stale data, non-business data, duplicate data, age or data, size of data, highlights, policies, data discovery assessment report, data mapping overview report, data repositories, data sensitivity, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data
+keywords: savings, stale data, non-business data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, categories, file types, costs of data
 summary: Gain control of the costs related to the data on your organizations' storage resources. BlueXP classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
 ---
 
@@ -13,7 +13,7 @@ summary: Gain control of the costs related to the data on your organizations' st
 :imagesdir: ./media/
 
 [.lead]
-Gain control of the costs related to the data on your organizations' storage resources. BlueXP classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
+Gain control of the costs related to the data on your organization's storage resources. BlueXP classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
 
 This is where you should begin your research. From the Governance dashboard, you can select an area for further investigation.
 
@@ -35,14 +35,13 @@ The Governance dashboard appears.
 
 === Review savings opportunities
 
-You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. 
+The _Saving Opportunities_ component shows data that you can delete or tier to less expensive object storage. The data in _Saving Opportunities_ update every 2 hours and can be manually updated. 
 
 .Steps 
 
 . From the BlueXP classification menu, select *Governance*.
 
-. Within each Savings Opportunities tile of the Governance dashboard, select *Optimize Storage* to view the filtered results in the Investigation page.
-You may want to investigate the items in the _Saving Opportunities_ area to see if there is any data you should delete or tier to less expensive object storage. 
+. Within each Savings Opportunities tile of the Governance dashboard, select *Optimize Storage* to view the filtered results in the Investigation page. To discover any data you should delete or tier to less expensive storage, investigate the the _Saving Opportunities_.
 
 
 
@@ -61,23 +60,17 @@ You may want to investigate the items in the _Saving Opportunities_ area to see 
 
 NOTE: If any of your data sources implement data tiering, old data that already resides in object storage can be identified in the _Stale Data_ category.
 
-=== Review policies with the largest number of results
+=== Review saved searches with the largest number of results
 
-In the _Policies_ area, the policies with the greatest number of results appear at the top of the list. 
+In the _Saved searches_ tab, the searches with the greatest number of results appear at the top of the list. This data updates every two hours. 
 
-
-For details about policies, see link:task-using-policies.html[Assign policies to your data].
+For details about saved searches, see link:task-using-policies.html[Create saved searches].
 
 .Steps 
-
-
 . From the BlueXP classification menu, select *Governance*.
-. In the Goverance dashboard > Policies tile, select the name of a policy to display the results in the Investigation page. 
-. Select *View All* to view the list of all available policies.
-In the _Policies_ area, the policies with the greatest number of results appear at the top of the list. 
-
-
-
+. In the Governance dashboard, locate the Saved Searches tile. Select the name of a saved search to display the results in the Investigation page. 
+. Select *View All* to view the list of all available saved searches.
+In the _Saved searches_ area, the searches with the greatest number of results appear at the top of the list. 
 
 == Create the Data Discovery Assessment Report
 
@@ -98,8 +91,6 @@ Using this report, you might take the following actions:
 * Protect your data that has broad permissions by revising global group management policies
 * Protect your data that has personal or sensitive personal information by moving PII to more secure data stores
 
-
-
 .Steps
 
 . From the BlueXP menu, select *Governance > Classification*.
@@ -111,14 +102,13 @@ image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Da
 
 .Result
 
-BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
+BlueXP classification generates a PDF report that you can review and send to other groups as needed.
 
-//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
+//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by selecting image:button-gallery-options.gif[the More button] and then selecting *Change company name*. The next time you generate the report it will include the new name.
 
 == Create the Data Mapping Overview Report
 
-The Data Mapping Overview Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report first lists an overview that summarizes all your working environments and data sources, and then it provides an analysis for each working environment.
-
+The Data Mapping Overview Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report summarizes all working environments and data sources. It also provides an analysis for each working environment.
 
 The report includes the following information:
 
@@ -142,14 +132,14 @@ For single working environments: Lists the files that are using the most capacit
 . Select *Full Data Mapping Overview Report*.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
-. To customize the company name that appears on the first page of the report, from the top right of the BlueXP classification page, select image:screenshot_gallery_options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
+. To customize the company name that appears on the first page of the report, from the top right of the BlueXP classification page, select image:button-gallery-options.gif[the More button]. Then select *Change company name*. The next time you generate the report, it will include the new name.
 
 
 .Result
 
 BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
 
-If the report is larger than 1 MB, the .pdf file is retained on the BlueXP classification instance and you'll see a pop-up message about the exact location. When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the .pdf file. When BlueXP classification is deployed in the cloud, you'll need to SSH to the BlueXP classification instance to download .pdf file. 
+If the report is larger than 1 MB, the .pdf file is retained on the BlueXP classification instance and you'll see a pop-up message about the exact location. When BlueXP classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the .pdf file. When BlueXP classification is deployed in the cloud, you'll need to SSH to the BlueXP classification instance to download the .pdf file. 
 
 //link:task-audit-data-sense-actions.html[See how to access data on the Classification instance].
 
@@ -164,18 +154,20 @@ The _Top Data Repositories by Sensitivity Level_ area of the Data Mapping Overvi
 * Personal data
 * Sensitive Personal data
 
+This data refreshes every two hours and can be manually refreshed. 
+
 .Steps
 
 . To see the total number of items in each category, position your cursor over each section of the bar.
 
-. To filter results that will appear in the Investigation page, select each area ib the bar and investigate further.
+. To filter results that will appear in the Investigation page, select each area in the bar and investigate further.
 
 === Review sensitive data and wide permissions
 
 The _Sensitive Data and Wide Permissions_ area of the Data Mapping Overview report shows the percentage of files that contain sensitive data and have wide permissions. The chart shows the following types of permissions: 
 
-* From the nost restrictive permissions to the most permissive restrictions on the horizontal axix. 
-* From the least sensitve data to the most sensitive data on the vertical axis.
+* From the most restrictive permissions to the most permissive restrictions on the horizontal axis. 
+* From the least sensitive data to the most sensitive data on the vertical axis.
 
 .Steps
 . To see the total number of files in each category, position your cursor over each box. 
@@ -223,12 +215,12 @@ See link:task-controlling-private-data.html[Viewing files by categories] for mor
 
 .Steps
 
-. From the BlueXP menu, click *Governance > Classification*.
+. From the BlueXP menu, select *Governance > Classification*.
 
-. Click *Governance*, and then click the *Data Discovery Assessment Report* button.
+. Select *Governance* then the *Data Discovery Assessment Report* button.
 
 .Result
 
 BlueXP classification generates a .pdf report that you can review and send to other groups as needed.
 
-//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by clicking image:screenshot_gallery_options.gif[the More button] and then clicking *Change company name*. The next time you generate the report it will include the new name.
+//Note that you can customize the company name that appears on the first page of the report from the top of the BlueXP classification page by selecting image:button-gallery-options.gif[the More button] and then selecting *Change company name*. The next time you generate the report it will include the new name.

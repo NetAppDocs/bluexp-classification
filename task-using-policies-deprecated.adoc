@@ -21,7 +21,7 @@ Follow these steps to add email updates to an existing policy.
 
 .Steps
 
-. From the Policies List page, click *Edit* for the policy where you want to add (or change) the email setting.
+. From the Policies List page, select *Edit* for the policy where you want to add (or change) the email setting.
 +
 image:screenshot_compliance_add_email_alert_1.png[A screenshot showing how to edit an existing policy.]
 
@@ -31,11 +31,11 @@ image:screenshot_compliance_add_email_alert_1.png[A screenshot showing how to ed
 +
 image:screenshot_compliance_add_email_alert_2.png[A screenshot showing how to choose the email criterial to be sent for the Policy.]
 
-. Click *Save Policy* and the interval at which the email is sent appears in the policy description.
+. Select *Save Policy* and the interval at which the email is sent appears in the policy description.
 
 .Result
 
-The first email is sent now if there are any results from the policy - but only if any files meet the policy criteria. No personal information is sent in the notification emails. The email indicates that there are files that match the policy criteria, and it provides a link to the policy results.
+An email is sent if any files meet the policy criteria. No personal information is sent in the notification emails. The email indicates that there are files that match the policy criteria, and it provides a link to the policy results.
 
 == Delete source files automatically using policies
 
