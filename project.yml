@@ -1,6 +1,5 @@
 settings:
   name: BlueXP classification
-  platform: cloud
   internal:
     pdf_enabled: true
     termcheck_enabled: true
