@@ -43,7 +43,7 @@ link:concept-cloud-compliance.html[Learn more about how BlueXP classification wo
 
 === Does BlueXP classification have a REST API, and does it work with third-party tools?
 
-Yes, BlueXP classification has a REST API for the supported features in the BlueXP classification version that is part of the BlueXP core platform.  See link:api-classification.html[API documentation].
+Yes, BlueXP classification has a REST API for the supported features in the BlueXP classification version that is part of the BlueXP core platform. See link:api-classification.html[API documentation].
 
 
 

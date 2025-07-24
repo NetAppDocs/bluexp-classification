@@ -60,6 +60,9 @@ Note that you can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-qui
 
 As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors[multiple Connectors].
 
+[TIP]
+include::_include/connector-limit.adoc[]
+
 === Government region support
 
 BlueXP classification is supported when the Connector is deployed in a Government region (AWS GovCloud, Azure Gov, or Azure DoD). When deployed in this manner, BlueXP classification has the following restrictions:
@@ -229,17 +232,15 @@ In regions where the default instance type isn't available, BlueXP classificatio
 --
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification*.
+. From the BlueXP left navigation menu, select *Governance > Classification*.
+
+. Select *Deploy Classification On-Premises or Cloud*.
 +
-image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate BlueXP classification.]
+image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate BlueXP classification.]
 
-. Click *Activate Data Sense*.
+. From the _Installation_ page, select *Deploy > Deploy* to use the "Large" instance size and start the cloud deployment wizard. 
 //+
-//image:screenshot_cloud_compliance_deploy_cloud_aws.png[A screenshot of selecting the button to deploy BlueXP classification in the cloud.]
-
-. From the _Installation_ page, click *Deploy > Deploy* to use the "Large" instance size and start the cloud deployment wizard. 
-//+
-//Then click *Deploy* to start the cloud deployment wizard.
+//Then select *Deploy* to start the cloud deployment wizard.
 //+
 //image:screenshot_cloud_deploy_resource_size.png[A screenshot of the deployment page to pick the size of the instance that BlueXP classification will be deployed on.]
 
@@ -247,20 +248,21 @@ image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the
 +
 image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the BlueXP classification wizard to deploy a new instance.]
 
-. When the instance is deployed and BlueXP classification is installed, click *Continue to configuration* to go to the _Configuration_ page.
+. When the instance is deployed and BlueXP classification is installed, select *Continue to configuration* to go to the _Configuration_ page.
 --
 
 .Deploy in Azure
 --
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification*.
+. From the BlueXP left navigation menu, select *Governance > Classification*.
 
-. Click *Activate Data Sense*.
+
+. Select *Deploy Classification On-Premises or Cloud*.
 +
-image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate BlueXP classification.]
+image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate BlueXP classification.]
 
-. Click *Deploy* to start the cloud deployment wizard.
+. Select *Deploy* to start the cloud deployment wizard.
 +
 image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy BlueXP classification in the cloud.]
 
@@ -268,20 +270,20 @@ image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the
 +
 image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the BlueXP classification wizard to deploy a new instance.]
 
-. When the instance is deployed and BlueXP classification is installed, click *Continue to configuration* to go to the _Configuration_ page.
+. When the instance is deployed and BlueXP classification is installed, select *Continue to configuration* to go to the _Configuration_ page.
 --
 
 .Deploy in Google Cloud
 --
 .Steps
 
-. From the BlueXP left navigation menu, click *Governance > Classification*.
+. From the BlueXP left navigation menu, select *Governance > Classification*.
 
-. Click *Activate Data Sense*.
+. Select *Deploy Classification On-Premises or Cloud*.
 +
-image:screenshot_cloud_compliance_deploy_start.png[A screenshot of selecting the button to activate BlueXP classification.]
+image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate BlueXP classification.]
 
-. Click *Deploy* to start the cloud deployment wizard.
+. Select *Deploy* to start the cloud deployment wizard.
 +
 image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy BlueXP classification in the cloud.]
 
@@ -289,7 +291,7 @@ image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the
 +
 image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the BlueXP classification wizard to deploy a new instance.]
 
-. When the instance is deployed and BlueXP classification is installed, click *Continue to configuration* to go to the _Configuration_ page.
+. When the instance is deployed and BlueXP classification is installed, select *Continue to configuration* to go to the _Configuration_ page.
 --
 
 ====

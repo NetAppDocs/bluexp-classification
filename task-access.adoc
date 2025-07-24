@@ -1,0 +1,39 @@
+---
+sidebar: sidebar
+permalink: task-access.html
+keywords: log in, sign in
+summary: Get started with BlueXP classification by accessing the service in BlueXP.
+---
+= Access BlueXP classification
+:hardbreaks:
+:icons: font
+:imagesdir: ../media/get-started/
+
+[.lead]
+You can access the BlueXP classification service through NetApp BlueXP. 
+
+To sign in to BlueXP, you can use your NetApp Support Site credentials or you can sign up for a NetApp cloud login using your email and a password. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html[Learn more about logging in to BlueXP^].
+
+Specific tasks require specific BlueXP user roles. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[Learn about BlueXP access roles for all services^].
+
+.Before you begin
+
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[You should add a BlueXP Connector.^]
+* link:task-deploy-cloud-compliance.html[Understand which BlueXP classification deployment style suits your workload.]
+
+.Steps
+
+. In a web browser, navigate to the link:https://console.bluexp.netapp.com/[BlueXP console^].
++ 
+The NetApp BlueXP login page appears.
+
+. Sign in to BlueXP. 
+. From the BlueXP left navigation menu, select *Governance* > *Classification*. 
++
+. If this is your first time accessing BlueXP classification, the landing page appears.
++
+Select *Deploy Classification On-Premises or Cloud* to begin deploying your classification instance. For more information, see link:task-deploy-cloud-compliance.html[Which BlueXP classification deployment should you use?]
++
+image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate BlueXP classification.]
++ 
+Otherwise, the BlueXP classification Dashboard appears. 
