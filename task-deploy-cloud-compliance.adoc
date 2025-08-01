@@ -189,7 +189,11 @@ Review the appropriate table below depending on whether you are deploying BlueXP
 // end tabbed area
 
 Ensure that BlueXP has the required permissions::
-Ensure that BlueXP has permissions to deploy resources and create security groups for the BlueXP classification instance. You can find the latest BlueXP permissions in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html[the policies provided by NetApp^].
+Ensure that BlueXP has permissions to deploy resources and create security groups for the BlueXP classification instance.
+
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html[Google Cloud permissions^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#classification[AWS permissions^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#classification[Azure permissions^]
 
 Ensure that the BlueXP Connector can access BlueXP classification::
 Ensure connectivity between the Connector and the BlueXP classification instance. The security group for the Connector must allow inbound and outbound traffic over port 443 to and from the BlueXP classification instance. This connection enables deployment of the BlueXP classification instance and enables you to view information in the Compliance and Governance tabs. BlueXP classification is supported in Government regions in AWS and Azure.
