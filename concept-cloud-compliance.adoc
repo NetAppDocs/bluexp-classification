@@ -202,8 +202,3 @@ When you use BlueXP in SaaS mode, the connection to BlueXP is served over HTTPS,
 Outbound rules are completely open. Internet access is needed to install and upgrade the BlueXP classification software and to send usage metrics.
 
 If you have strict networking requirements, link:task-deploy-cloud-compliance.html#review-prerequisites[learn about the endpoints that BlueXP classification contacts^].
-
-[#user-roles]
-== User roles in BlueXP classification
-
-The role each user has been assigned provides different capabilities within BlueXP and within BlueXP classification. For details, refer to https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[BlueXP IAM roles] (when using BlueXP in standard mode).
