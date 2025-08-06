@@ -7,7 +7,7 @@ summary: Get started with BlueXP classification by accessing the service in Blue
 = Access BlueXP classification
 :hardbreaks:
 :icons: font
-:imagesdir: ../media/get-started/
+:imagesdir: ./media/
 
 [.lead]
 You can access the BlueXP classification service through NetApp BlueXP. 
